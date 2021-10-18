@@ -190,7 +190,7 @@ object KotlinUtils {
             DeviceConfig.getBoolean(
                 DeviceConfig.NAMESPACE_PRIVACY,
                 PROPERTY_LOCATION_INDICATORS_ENABLED,
-                false,
+                true,
             )
     }
 
