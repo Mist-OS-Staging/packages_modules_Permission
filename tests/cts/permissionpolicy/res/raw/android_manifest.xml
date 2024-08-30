@@ -8965,7 +8965,7 @@
         <p>Protection level: signature|role
     -->
     <permission android:name="android.permission.RECEIVE_SENSITIVE_NOTIFICATIONS"
-        android:protectionLevel="signature|role" />
+        android:protectionLevel="signature|preinstalled|knownSigner|role" />
 
     <!-- @SystemApi
          @FlaggedApi("android.app.bic_client")

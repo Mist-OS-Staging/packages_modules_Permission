@@ -159,6 +159,9 @@
         <app-op-permissions>
             <app-op-permission name="android.permission.SYSTEM_ALERT_WINDOW" />
         </app-op-permissions>
+        <app-ops>
+            <app-op name="android:receive_sensitive_notifications" mode="allowed" minSdkVersion="35"/>
+        </app-ops>
     </role>
 
     <!---
@@ -270,6 +273,7 @@
               -->
             <app-op name="android:run_in_background" maxTargetSdkVersion="25" mode="allowed" />
             <app-op name="android:run_any_in_background" mode="allowed" />
+            <app-op name="android:receive_sensitive_notifications" mode="allowed" minSdkVersion="35"/>
         </app-ops>
         <preferred-activities>
             <preferred-activity>
@@ -361,6 +365,7 @@
             <app-op name="android:run_in_background" maxTargetSdkVersion="25" mode="allowed" />
             <app-op name="android:run_any_in_background" mode="allowed" />
             <app-op name="android:read_device_identifiers" mode="allowed" />
+            <app-op name="android:receive_sensitive_notifications" mode="allowed" minSdkVersion="35"/>
         </app-ops>
         <preferred-activities>
             <preferred-activity>
@@ -905,6 +910,9 @@
             <permission name="android.permission.READ_BLOCKED_NUMBERS"
                 featureFlag="android.permission.flags.Flags.grantReadBlockedNumbersToSystemUiIntelligence" />
         </permissions>
+        <app-ops>
+            <app-op name="android:receive_sensitive_notifications" mode="allowed" minSdkVersion="35"/>
+        </app-ops>
     </role>
 
     <!---
@@ -1973,6 +1981,9 @@
             <permission-set name="notifications" />
             <permission name="android.permission.CREATE_VIRTUAL_DEVICE"/>
         </permissions>
+        <app-ops>
+            <app-op name="android:receive_sensitive_notifications" mode="allowed" minSdkVersion="35"/>
+        </app-ops>
     </role>
 
 </roles>
