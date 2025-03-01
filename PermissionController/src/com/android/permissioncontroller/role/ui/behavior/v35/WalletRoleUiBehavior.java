@@ -42,6 +42,7 @@ import androidx.core.util.Pair;
 import androidx.preference.Preference;
 
 import com.android.launcher3.icons.IconFactory;
+import com.android.permissioncontroller.role.ui.RequestRoleItemView;
 import com.android.permissioncontroller.role.ui.TwoTargetPreference;
 import com.android.permissioncontroller.role.ui.behavior.RoleUiBehavior;
 import com.android.role.controller.model.Role;
@@ -73,6 +74,21 @@ public class WalletRoleUiBehavior implements RoleUiBehavior {
     }
 
     @Override
+    public void prepareRequestRoleItemViewAsUser(@NonNull Role role,
+            @NonNull RequestRoleItemView itemView, @NonNull ApplicationInfo applicationInfo,
+            @NonNull UserHandle user, @NonNull Context context) {
+        if (isSystemApplication(applicationInfo)) {
+            Pair<Drawable, CharSequence> bannerAndLabel = getLabelAndIconIfItExists(
+                    applicationInfo, user, context);
+
+            if (bannerAndLabel != null) {
+                itemView.getIconImageView().setImageDrawable(bannerAndLabel.first);
+                itemView.getTitleTextView().setText(bannerAndLabel.second);
+            }
+        }
+    }
+
+    @Override
     public void prepareApplicationPreferenceAsUser(@NonNull Role role,
             @NonNull Preference preference, @NonNull ApplicationInfo applicationInfo,
             @NonNull UserHandle user, @NonNull Context context) {
@@ -84,21 +100,8 @@ public class WalletRoleUiBehavior implements RoleUiBehavior {
             @NonNull ApplicationInfo applicationInfo, boolean setTitle, @NonNull UserHandle user,
             @NonNull Context context) {
         if (isSystemApplication(applicationInfo)) {
-            List<ApduServiceInfo> serviceInfos = getNfcServicesForPackage(
-                    applicationInfo.packageName, user, context);
-
-            Pair<Drawable, CharSequence> bannerAndLabel = null;
-            // If the flag is enabled , attempt to fetch it from property
-            if (Flags.walletRoleIconPropertyEnabled()) {
-                bannerAndLabel =
-                        getBannerAndLabelFromPackageProperty(context, user,
-                                applicationInfo.packageName);
-            }
-            // If it's null, indicating that the property is not set, perform a legacy icon lookup.
-            if (bannerAndLabel == null) {
-                bannerAndLabel =
-                        getNonPaymentServiceBannerAndLabelIfExists(serviceInfos, user, context);
-            }
+            Pair<Drawable, CharSequence> bannerAndLabel = getLabelAndIconIfItExists(
+                    applicationInfo, user, context);
             if (bannerAndLabel != null) {
                 preference.setIcon(bannerAndLabel.first);
                 if (setTitle) {
@@ -108,6 +111,26 @@ public class WalletRoleUiBehavior implements RoleUiBehavior {
                 }
             }
         }
+    }
+
+    @Nullable
+    private Pair<Drawable, CharSequence> getLabelAndIconIfItExists(
+            @NonNull ApplicationInfo applicationInfo,
+            @NonNull UserHandle user,
+            @NonNull Context context) {
+        Pair<Drawable, CharSequence> result = null;
+        // If the flag is enabled , attempt to fetch it from property
+        if (Flags.walletRoleIconPropertyEnabled()) {
+            result = getBannerAndLabelFromPackageProperty(context, user,
+                    applicationInfo.packageName);
+        }
+        if (result != null) {
+            return result;
+        }
+        List<ApduServiceInfo> serviceInfos = getNfcServicesForPackage(
+                applicationInfo.packageName, user, context);
+        // If it's null, indicating that the property is not set, perform a legacy icon lookup.
+        return getNonPaymentServiceBannerAndLabelIfExists(serviceInfos, user, context);
     }
 
 

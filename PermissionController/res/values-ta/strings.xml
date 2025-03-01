@@ -440,10 +440,8 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"இணைப்புகளைத் திறத்தல்"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"பணிக்கான இயல்பு நிலை ஆப்ஸ்"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"ரகசிய இடத்திற்கான இயல்பு"</string>
-    <!-- no translation found for default_app_recommended (5669584821778942909) -->
-    <skip />
-    <!-- no translation found for default_app_others (7793029848126079876) -->
-    <skip />
+    <string name="default_app_recommended" msgid="5669584821778942909">"சாதனத்திற்காக மேம்படுத்தப்பட்டவை"</string>
+    <string name="default_app_others" msgid="7793029848126079876">"மற்றவை"</string>
     <string name="default_app_none" msgid="9084592086808194457">"ஏதுமில்லை"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(சிஸ்டத்தின் இயல்புநிலை)"</string>
     <string name="default_app_no_apps" msgid="115720991680586885">"ஆப்ஸ் இல்லை"</string>
@@ -682,7 +680,7 @@
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"உங்கள் பாதுகாப்பிற்காக, இந்த அமைப்பு தற்போது இல்லை."</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"அழைப்பின்போது செயலை நிறைவுசெய்ய முடியாது"</string>
     <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="5049619986796367451">"<xliff:g id="SETTING_DESCRIPTION">%1$s</xliff:g>\n\n உங்கள் சாதனத்தையும் தரவையும் பாதுகாப்பதற்காக இந்த அமைப்பு தடுக்கப்பட்டுள்ளது"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_install_desc_prefix" msgid="7153600694011441796">"புதிய ஆவணத்தில் இருந்து அறியப்படாத ஆப்ஸை நிறுவுமாறு கேட்பதன் மூலம் மோசடி செய்பவர்கள் தீங்கு விளைவிக்கும் ஆப்ஸை நிறுவ முயலலாம்."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc_prefix" msgid="7153600694011441796">"புதிய மூலத்தில் இருந்து அறியப்படாத ஆப்ஸை நிறுவுமாறு கேட்பதன் மூலம் மோசடி செய்பவர்கள் தீங்கு விளைவிக்கும் ஆப்ஸை நிறுவ முயலலாம்."</string>
     <string name="enhanced_confirmation_phone_state_dialog_a11y_desc_prefix" msgid="1086282331085551407">"ஆப்ஸுக்கான அணுகல்தன்மை அம்சங்களை அனுமதிக்குமாறு கேட்பதன் மூலம் மோசடி செய்பவர்கள் உங்கள் சாதனத்தைக் கட்டுப்படுத்த முயலலாம்."</string>
     <string name="enhanced_confirmation_phone_state_dialog_generic_desc_prefix" msgid="8141411486179553156">"இந்த அமைப்பு மூலம் மோசடி செய்பவர்கள் உங்கள் சாதனத்திற்குத் தீங்கு விளைவிக்க முயலலாம்."</string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"<xliff:g id="PERMISSION_NAME">%1$s</xliff:g>க்கான ஆப்ஸ் அணுகல் நிராகரிக்கப்பட்டது"</string>

@@ -38,6 +38,7 @@ import android.provider.DeviceConfig
 import android.provider.Settings
 import android.text.Spanned
 import android.text.style.ClickableSpan
+import android.util.Log
 import android.view.View
 import android.view.accessibility.AccessibilityNodeInfo
 import androidx.test.uiautomator.By
@@ -51,6 +52,7 @@ import com.android.compatibility.common.util.SystemUtil
 import com.android.compatibility.common.util.SystemUtil.callWithShellPermissionIdentity
 import com.android.compatibility.common.util.SystemUtil.eventually
 import com.android.compatibility.common.util.SystemUtil.runWithShellPermissionIdentity
+import com.android.compatibility.common.util.UiDumpUtils
 import com.android.modules.utils.build.SdkLevel
 import java.util.concurrent.CompletableFuture
 import java.util.concurrent.TimeUnit
@@ -64,6 +66,7 @@ import org.junit.Before
 
 abstract class BaseUsePermissionTest : BasePermissionTest() {
     companion object {
+        const val LOG_TAG = "BaseUsePermissionTest"
         const val APP_APK_NAME_31 = "CtsUsePermissionApp31.apk"
         const val APP_APK_NAME_31_WITH_ASL = "CtsUsePermissionApp31WithAsl.apk"
         const val APP_APK_NAME_LATEST = "CtsUsePermissionAppLatest.apk"
@@ -791,6 +794,9 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
             )
 
         if (timeoutOccurred) {
+            val uiDump = StringBuilder()
+            UiDumpUtils.dumpNodes(uiDump)
+            Log.w(LOG_TAG, "Timed out waiting for window transition, UI dump: $uiDump")
             throw RuntimeException("Timed out waiting for window transition.")
         }
     }

@@ -52,7 +52,7 @@
     <string name="permission_revoked_none" msgid="9213345075484381180">"କୌଣସି ଅନୁମତି ଅକ୍ଷମ କରାଯାଇନାହିଁ"</string>
     <string name="grant_dialog_button_allow" msgid="5314677880021102550">"ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="grant_dialog_button_allow_always" msgid="4485552579273565981">"ସବୁବେଳେ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
-    <string name="grant_dialog_button_allow_foreground" msgid="501896824973636533">"ଆପ୍ ବ୍ୟବହାର କରିବା ସମୟରେ"</string>
+    <string name="grant_dialog_button_allow_foreground" msgid="501896824973636533">"ଆପ ବ୍ୟବହାର କରିବା ସମୟରେ"</string>
     <string name="grant_dialog_button_change_to_precise_location" msgid="3273115879467236033">"ସଠିକ୍ ଲୋକେସନକୁ ପରିବର୍ତ୍ତନ କରନ୍ତୁ"</string>
     <string name="grant_dialog_button_keey_approximate_location" msgid="438025182769080011">"ଆନୁମାନିକ ଲୋକେସନ୍ ରଖନ୍ତୁ"</string>
     <string name="grant_dialog_button_allow_one_time" msgid="2618088516449706391">"କେବଳ ଏହି ସମୟ ପାଇଁ"</string>
@@ -440,10 +440,8 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"ଓପନିଂ ଲିଙ୍କ୍"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"କାର୍ଯ୍ୟ ପାଇଁ ଡିଫଲ୍ଟ ଅଛି"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"ପ୍ରାଇଭେଟ ସ୍ପେସ ପାଇଁ ଡିଫଲ୍ଟ"</string>
-    <!-- no translation found for default_app_recommended (5669584821778942909) -->
-    <skip />
-    <!-- no translation found for default_app_others (7793029848126079876) -->
-    <skip />
+    <string name="default_app_recommended" msgid="5669584821778942909">"ଡିଭାଇସ ପାଇଁ ଅପ୍ଟିମାଇଜ କରାଯାଇଛି"</string>
+    <string name="default_app_others" msgid="7793029848126079876">"ଅନ୍ୟ"</string>
     <string name="default_app_none" msgid="9084592086808194457">"କିଛି ଆପ ସେଟ କରାଯାଇନାହିଁ"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(ସିଷ୍ଟମ୍ ଡିଫଲ୍ଟ)"</string>
     <string name="default_app_no_apps" msgid="115720991680586885">"କୌଣସି ଆପ୍‌ ନାହିଁ"</string>
@@ -493,7 +491,7 @@
     <string name="permgrouprequest_device_aware_fineupgrade" msgid="4453775952305587571">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;ରେ <xliff:g id="APP_NAME">&lt;b&gt;%1$s&lt;/b&gt;</xliff:g>ର ଲୋକେସନ ଆକ୍ସେସକୁ ଆନୁମାନିକରୁ ସଠିକକୁ ପରିବର୍ତ୍ତନ କରିବେ?"</string>
     <string name="permgrouprequest_coarselocation" msgid="7244605063736425232">"ଏହି ଡିଭାଇସର ଆନୁମାନିକ ଲୋକେସନ୍ ଆକ୍ସେସ୍ କରିବା ପାଇଁ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;କୁ ଅନୁମତି ଦେବେ?"</string>
     <string name="permgrouprequest_device_aware_coarselocation" msgid="8367540370912066757">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;ର ଆନୁମାନିକ ଲୋକେସନକୁ ଆକ୍ସେସ କରିବା ପାଇଁ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;କୁ ଅନୁମତି ଦେବେ?"</string>
-    <string name="permgrouprequest_finelocation_imagetext" msgid="1313062433398914334">"ସଠିକ୍"</string>
+    <string name="permgrouprequest_finelocation_imagetext" msgid="1313062433398914334">"ସଠିକ"</string>
     <string name="permgrouprequest_coarselocation_imagetext" msgid="8650605041483025297">"(ଆନୁମାନିକ)"</string>
     <string name="permgrouprequest_calendar" msgid="1493150855673603806">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;କୁ ଆପଣଙ୍କ କ୍ୟାଲେଣ୍ଡର୍‌କୁ ଆକ୍ସେସ୍‍ କରିବା ପାଇଁ ଅନୁମତି ଦେବେ କି?"</string>
     <string name="permgrouprequest_device_aware_calendar" msgid="7161929851377463612">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;ରେ ଆପଣଙ୍କ କେଲେଣ୍ଡରକୁ ଆକ୍ସେସ କରିବା ପାଇଁ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;କୁ ଅନୁମତି ଦେବେ?"</string>

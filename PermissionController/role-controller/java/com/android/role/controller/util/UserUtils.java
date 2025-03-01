@@ -139,14 +139,16 @@ public final class UserUtils {
     /**
      * Returns all the enabled user profiles on the device
      *
+     * @param user the {@link UserHandle} to get profiles for
      * @param context the {@link Context}
      * @param excludePrivate {@code true} to exclude private profiles from returned list of users
      */
     @NonNull
-    public static List<UserHandle> getUserProfiles(@NonNull Context context,
-            boolean excludePrivate) {
-        UserManager userManager = context.getSystemService(UserManager.class);
-        List<UserHandle> profiles = userManager.getUserProfiles();
+    public static List<UserHandle> getUserProfiles(@NonNull UserHandle user,
+            @NonNull Context context, boolean excludePrivate) {
+        Context userContext = getUserContext(context, user);
+        UserManager userUserManager = userContext.getSystemService(UserManager.class);
+        List<UserHandle> profiles = userUserManager.getUserProfiles();
         if (!excludePrivate) {
             return profiles;
         }
@@ -154,7 +156,7 @@ public final class UserUtils {
         final int profilesSize = profiles.size();
         for (int i = 0; i < profilesSize; i++) {
             UserHandle profile = profiles.get(i);
-            if (!isPrivateProfile(profile, context)) {
+            if (!isPrivateProfile(profile, userContext)) {
                 filteredProfiles.add(profile);
             }
         }

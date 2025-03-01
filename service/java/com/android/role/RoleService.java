@@ -564,8 +564,7 @@ public class RoleService extends SystemService implements RoleUserState.Callback
                     + " for role");
             return;
         }
-        Context userContext = UserUtils.getUserContext(userId, getContext());
-        List<UserHandle> profiles = UserUtils.getUserProfiles(userContext, true);
+        List<UserHandle> profiles = UserUtils.getUserProfiles(userId, getContext(), true);
         if (!profiles.contains(UserHandle.of(activeUserId))) {
             Log.e(LOG_TAG, "User " + activeUserId + " is not in the same profile-group as "
                     + userId);

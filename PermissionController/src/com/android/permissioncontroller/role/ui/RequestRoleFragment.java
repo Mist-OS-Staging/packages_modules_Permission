@@ -59,6 +59,7 @@ import com.android.permissioncontroller.role.utils.UiUtils;
 import com.android.permissioncontroller.role.utils.UserUtils;
 import com.android.role.controller.model.Role;
 import com.android.role.controller.model.Roles;
+import com.android.settingslib.utils.applications.AppUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -698,6 +699,7 @@ public class RequestRoleFragment extends DialogFragment {
             Drawable icon;
             String title;
             String subtitle;
+            String contentDescription;
             if (applicationItem == null) {
                 applicationInfo = null;
                 restricted = false;
@@ -706,6 +708,7 @@ public class RequestRoleFragment extends DialogFragment {
                 title = context.getString(R.string.default_app_none);
                 subtitle = mHolderUserPackage == null ? context.getString(
                         R.string.request_role_current_default) : null;
+                contentDescription = null;
             } else {
                 applicationInfo = applicationItem.getApplicationInfo();
                 UserPackage userPackage = UserPackage.from(applicationInfo);
@@ -717,14 +720,18 @@ public class RequestRoleFragment extends DialogFragment {
                 subtitle = applicationItem.isHolderApplication()
                         ? context.getString(R.string.request_role_current_default)
                         : checked ? context.getString(mRole.getRequestDescriptionResource()) : null;
+                contentDescription = AppUtils.getAppContentDescription(context,
+                        userPackage.packageName, userPackage.user.getIdentifier());
             }
 
             boolean enabled = isEnabled(position);
             UiUtils.setViewTreeEnabled(view, enabled && !restricted);
             view.setEnabled(enabled);
             view.setChecked(checked);
+
             holder.iconImage.setImageDrawable(icon);
             holder.titleText.setText(title);
+            holder.titleText.setContentDescription(contentDescription);
             holder.subtitleText.setVisibility(!TextUtils.isEmpty(subtitle) ? View.VISIBLE
                     : View.GONE);
             holder.subtitleText.setText(subtitle);

@@ -34,6 +34,24 @@ object SafetyCenterTouchTarget {
      */
     @JvmStatic
     fun configureSize(view: View, @DimenRes minTouchTargetSizeResource: Int) {
+        configureSize(view, minTouchTargetSizeResource, useWidthHeightFix = false)
+    }
+
+    @JvmStatic
+    fun configureSize(
+        view: View,
+        @DimenRes minTouchTargetSizeResource: Int,
+        useWidthHeightFix: Boolean,
+    ) {
+        // TODO: b/399872661 - Look into fixing all call sites and remove this boolean.
+        if (useWidthHeightFix) {
+            configureSizeUsingBothWidthAndHeight(view, minTouchTargetSizeResource)
+        } else {
+            configureSizeUsingWidthOnly(view, minTouchTargetSizeResource)
+        }
+    }
+
+    private fun configureSizeUsingWidthOnly(view: View, @DimenRes minTouchTargetSizeResource: Int) {
         val parent = view.parent as View
         val res = view.context.resources
         val minTouchTargetSize = res.getDimensionPixelSize(minTouchTargetSizeResource)
@@ -49,6 +67,39 @@ object SafetyCenterTouchTarget {
 
                 // Inset adjustment is applied to top, bottom, left, right
                 hitRect.inset(-adjustInsetBy, -adjustInsetBy)
+                parent.touchDelegate = TouchDelegate(hitRect, view)
+            }
+        }
+    }
+
+    private fun configureSizeUsingBothWidthAndHeight(
+        view: View,
+        @DimenRes minTouchTargetSizeResource: Int,
+    ) {
+        val parent = view.parent as View
+        val res = view.context.resources
+        val minTouchTargetSize = res.getDimensionPixelSize(minTouchTargetSizeResource)
+
+        // Defer getHitRect so that it's called after the parent's children are laid out.
+        parent.post {
+            val hitRect = Rect()
+            view.getHitRect(hitRect)
+            val currentTouchTargetWidth = hitRect.width()
+            val adjustWidthInsetBy =
+                if (currentTouchTargetWidth < minTouchTargetSize) {
+                    (minTouchTargetSize - currentTouchTargetWidth) / 2
+                } else {
+                    0
+                }
+            val currentTouchTargetHeight = hitRect.height()
+            val adjustHeightInsetBy =
+                if (currentTouchTargetHeight < minTouchTargetSize) {
+                    (minTouchTargetSize - currentTouchTargetHeight) / 2
+                } else {
+                    0
+                }
+            if (adjustWidthInsetBy != 0 || adjustHeightInsetBy != 0) {
+                hitRect.inset(-adjustWidthInsetBy, -adjustHeightInsetBy)
                 parent.touchDelegate = TouchDelegate(hitRect, view)
             }
         }

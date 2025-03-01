@@ -61,7 +61,6 @@ abstract class SafetyCenterFragment : SettingsBasePreferenceFragment() {
             } else {
                 super.onCreateAdapter(preferenceScreen)
             }
-
         /* By default, the PreferenceGroupAdapter does setHasStableIds(true). Since each Preference
          * is internally allocated with an auto-incremented ID, it does not allow us to gracefully
          * update only changed preferences based on SafetyPreferenceComparisonCallback. In order to
@@ -77,10 +76,15 @@ abstract class SafetyCenterFragment : SettingsBasePreferenceFragment() {
                 .split(",")
         safetyCenterSessionId = requireArguments().getLong(EXTRA_SESSION_ID, INVALID_SESSION_ID)
 
+        val activity = requireActivity()
         safetyCenterViewModel =
             ViewModelProvider(
-                    requireActivity(),
-                    LiveSafetyCenterViewModelFactory(requireActivity().getApplication()),
+                    activity,
+                    LiveSafetyCenterViewModelFactory(
+                        activity.application,
+                        activity.taskId,
+                        sameTaskSourceIds,
+                    ),
                 )
                 .get(SafetyCenterViewModel::class.java)
         safetyCenterViewModel.safetyCenterUiLiveData.observe(this) { uiData: SafetyCenterUiData? ->
@@ -91,8 +95,7 @@ abstract class SafetyCenterFragment : SettingsBasePreferenceFragment() {
             displayErrorDetails(errorDetails)
         }
 
-        val safetyCenterIntent: ParsedSafetyCenterIntent =
-            requireActivity().intent.toSafetyCenterIntent()
+        val safetyCenterIntent: ParsedSafetyCenterIntent = activity.intent.toSafetyCenterIntent()
         val isQsFragment =
             getArguments()?.getBoolean(QUICK_SETTINGS_SAFETY_CENTER_FRAGMENT, false) ?: false
         collapsableIssuesCardHelper =

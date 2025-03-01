@@ -75,6 +75,7 @@ import com.android.safetycenter.internaldata.SafetyCenterIds
 import com.android.safetycenter.resources.SafetyCenterResourcesApk
 import com.android.safetycenter.testing.Coroutines.TIMEOUT_LONG
 import com.android.safetycenter.testing.Coroutines.TIMEOUT_SHORT
+import com.android.safetycenter.testing.Coroutines.assertWithTimeout
 import com.android.safetycenter.testing.Coroutines.waitForWithTimeout
 import com.android.safetycenter.testing.SafetyCenterApisWithShellPermissions.dismissSafetyCenterIssueWithPermission
 import com.android.safetycenter.testing.SafetyCenterApisWithShellPermissions.getSafetyCenterConfigWithPermission
@@ -2356,18 +2357,14 @@ class SafetyCenterManagerTest {
                     groupId = MULTIPLE_SOURCES_GROUP_ID_2,
                 )
             )
-        waitForWithTimeout(timeout = RESURFACE_TIMEOUT, checkPeriod = RESURFACE_CHECK) {
-            val hasResurfaced =
-                safetyCenterManager
-                    .getSafetyCenterDataWithPermission()
-                    .issues
-                    .contains(
-                        safetyCenterTestData.safetyCenterIssueCritical(
-                            SOURCE_ID_5,
-                            groupId = MULTIPLE_SOURCES_GROUP_ID_2,
-                        )
+        assertWithTimeout(timeout = RESURFACE_TIMEOUT, checkPeriod = RESURFACE_CHECK) {
+            assertThat(safetyCenterManager.getSafetyCenterDataWithPermission().issues)
+                .contains(
+                    safetyCenterTestData.safetyCenterIssueCritical(
+                        SOURCE_ID_5,
+                        groupId = MULTIPLE_SOURCES_GROUP_ID_2,
                     )
-            hasResurfaced
+                )
         }
     }
 
@@ -3986,9 +3983,9 @@ class SafetyCenterManagerTest {
     companion object {
         private val RESURFACE_DELAY = Duration.ofMillis(500)
 
-        // Wait 3 times the RESURFACE_DELAY before asserting whether an issue has or has not
+        // Wait 5 times the RESURFACE_DELAY before asserting whether an issue has or has not
         // resurfaced. Use a constant additive error buffer if we increase the delay considerably.
-        private val RESURFACE_TIMEOUT = RESURFACE_DELAY.multipliedBy(3)
+        private val RESURFACE_TIMEOUT = RESURFACE_DELAY.multipliedBy(5)
 
         // Check more than once during a RESURFACE_DELAY before asserting whether an issue has or
         // has not resurfaced. Use a different check logic (focused at the expected resurface time)

@@ -440,10 +440,8 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"За отворање линкови"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"Стандардно за работа"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"Стандардно за „Приватен простор“"</string>
-    <!-- no translation found for default_app_recommended (5669584821778942909) -->
-    <skip />
-    <!-- no translation found for default_app_others (7793029848126079876) -->
-    <skip />
+    <string name="default_app_recommended" msgid="5669584821778942909">"Оптимизирано за уредот"</string>
+    <string name="default_app_others" msgid="7793029848126079876">"Други"</string>
     <string name="default_app_none" msgid="9084592086808194457">"Нема"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(Стандардно за системот)"</string>
     <string name="default_app_no_apps" msgid="115720991680586885">"Нема апликации"</string>
@@ -630,7 +628,7 @@
     <string name="safety_center_background_location_access_reminder_summary" msgid="7431657777510537658">"Апликацијава може секогаш да пристапува до вашата локација, дури и кога е затворена.\n\nНа одредени апликации за безбедност и итни случаи им е потребен пристап до вашата локација во заднината за правилно да функционираат."</string>
     <string name="safety_center_background_location_access_revoked" msgid="6972274943343442213">"Пристапот е променет"</string>
     <string name="safety_center_view_recent_location_access" msgid="3524391299490678243">"Погледнете го неодамнешното користење на локацијата"</string>
-    <string name="privacy_controls_title" msgid="7605929972256835199">"Контроли на приватноста"</string>
+    <string name="privacy_controls_title" msgid="7605929972256835199">"Контроли за приватност"</string>
     <string name="camera_toggle_title" msgid="1251201397431837666">"Пристап до камерата"</string>
     <string name="mic_toggle_title" msgid="2649991093496110162">"Пристап до микрофонот"</string>
     <string name="perm_toggle_description" msgid="7801326363741451379">"За апликации и услуги"</string>

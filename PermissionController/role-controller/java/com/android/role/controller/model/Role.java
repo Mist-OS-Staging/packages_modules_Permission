@@ -26,7 +26,6 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.SharedLibraryInfo;
-import android.content.pm.Signature;
 import android.content.res.Resources;
 import android.os.Build;
 import android.os.UserHandle;
@@ -505,8 +504,14 @@ public class Role {
                 && Build.VERSION.SDK_INT <= mMaxSdkVersion;
     }
 
-    public boolean isStatic() {
-        return mStatic;
+    /**
+     * Check whether this role is static, which may change due to bypassing qualification.
+     *
+     * @param context the {@code Context} to retrieve system services
+     * @return whether this role is static
+     */
+    public boolean isStatic(@NonNull Context context) {
+        return mStatic && !isBypassingQualification(context);
     }
 
     /**
@@ -621,6 +626,12 @@ public class Role {
         return mAllowBypassingQualification;
     }
 
+    private boolean isBypassingQualification(@NonNull Context context) {
+        RoleManager roleManager = context.getSystemService(RoleManager.class);
+        return shouldAllowBypassingQualification(context)
+                && RoleManagerCompat.isBypassingRoleQualification(roleManager);
+    }
+
     /**
      * Check whether a package is qualified for this role, i.e. whether it contains all the required
      * components (plus meeting some other general restrictions).
@@ -633,9 +644,7 @@ public class Role {
      */
     public boolean isPackageQualifiedAsUser(@NonNull String packageName, @NonNull UserHandle user,
             @NonNull Context context) {
-        RoleManager roleManager = context.getSystemService(RoleManager.class);
-        if (shouldAllowBypassingQualification(context)
-                && RoleManagerCompat.isBypassingRoleQualification(roleManager)) {
+        if (isBypassingQualification(context)) {
             return true;
         }
 
@@ -983,7 +992,14 @@ public class Role {
      */
     public void onHolderAddedAsUser(@NonNull String packageName, @NonNull UserHandle user,
             @NonNull Context context) {
-        RoleManagerCompat.setRoleFallbackEnabledAsUser(this, true, user, context);
+        if (RoleFlags.isProfileGroupExclusivityAvailable()
+                && com.android.permission.flags.Flags.crossUserRoleUxBugfixEnabled()
+                && getExclusivity() == Role.EXCLUSIVITY_PROFILE_GROUP) {
+            UserHandle profileParent = UserUtils.getProfileParentOrSelf(user, context);
+            RoleManagerCompat.setRoleFallbackEnabledAsUser(this, true, profileParent, context);
+        } else {
+            RoleManagerCompat.setRoleFallbackEnabledAsUser(this, true, user, context);
+        }
     }
 
     /**
@@ -1107,7 +1123,8 @@ public class Role {
             // all users
             List<UserHandle> profiles =
                     (crossUserRoleUxBugfixEnabled && getExclusivity() == EXCLUSIVITY_PROFILE_GROUP)
-                            ? UserUtils.getUserProfiles(context, true) : List.of(user);
+                            ? UserUtils.getUserProfiles(user, context, true)
+                            : List.of(user);
             final int profilesSize = profiles.size();
             for (int i = 0; i < profilesSize; i++) {
                 UserHandle profile = profiles.get(i);

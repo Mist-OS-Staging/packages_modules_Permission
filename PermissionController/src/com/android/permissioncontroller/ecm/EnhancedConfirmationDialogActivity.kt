@@ -153,8 +153,8 @@ class EnhancedConfirmationDialogActivity : FragmentActivity() {
                 var message: CharSequence?
                 if (settingType == SettingType.BLOCKED_DUE_TO_PHONE_STATE) {
                     title = settingType.titleRes?.let { context.getString(it) }
-                    val messagePrefix = getPhoneStateMessagePrefix(context, settingIdentifier)
-                    message = settingType.messageRes?.let { context.getString(it, messagePrefix) }
+                    val settingMessage = getPhoneStateSettingMessage(context, settingIdentifier)
+                    message = settingType.messageRes?.let { context.getString(it, settingMessage) }
                 } else {
                     val url =
                         context.getString(R.string.help_url_action_disabled_by_restricted_settings)
@@ -165,18 +165,17 @@ class EnhancedConfirmationDialogActivity : FragmentActivity() {
                 return Setting(title, message)
             }
 
-            private fun getPhoneStateMessagePrefix(
+            private fun getPhoneStateSettingMessage(
                 context: Context,
                 settingsIdentifier: String,
             ): String {
                 return context.getString(
                     when (settingsIdentifier) {
                         AppOpsManager.OPSTR_BIND_ACCESSIBILITY_SERVICE ->
-                            R.string.enhanced_confirmation_phone_state_dialog_a11y_desc_prefix
+                            R.string.enhanced_confirmation_phone_state_dialog_a11y_desc
                         AppOpsManager.OPSTR_REQUEST_INSTALL_PACKAGES ->
-                            R.string.enhanced_confirmation_phone_state_dialog_install_desc_prefix
-                        else ->
-                            R.string.enhanced_confirmation_phone_state_dialog_generic_desc_prefix
+                            R.string.enhanced_confirmation_phone_state_dialog_install_desc
+                        else -> R.string.enhanced_confirmation_phone_state_dialog_generic_desc
                     }
                 )
             }
@@ -278,7 +277,7 @@ class EnhancedConfirmationDialogActivity : FragmentActivity() {
 
             return AlertDialog.Builder(dialogActivity)
                 .setView(createDialogView(dialogActivity, title, message))
-                .setPositiveButton(R.string.enhanced_confirmation_dialog_ok) { _, _ ->
+                .setPositiveButton(R.string.dialog_close) { _, _ ->
                     dialogActivity.onDialogResult(DialogResult.Okay)
                 }
                 .create()
