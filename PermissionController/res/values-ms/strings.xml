@@ -460,7 +460,8 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> mahu memuat naik maklumat penyahpepijatan."</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"Kongsi data penyahpepijatan?"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"Sistem telah mengesan masalah."</string>
-    <string name="incident_report_dialog_text" msgid="5675553296891757523">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> mahu memuat naik laporan pepijat daripada peranti ini yang diambil pada <xliff:g id="DATE">%2$s</xliff:g> pada <xliff:g id="TIME">%3$s</xliff:g>. Laporan pepijat termasuk maklumat peribadi tentang peranti anda atau yang dilog oleh apl, contohnya, nama pengguna, data lokasi, pengecam peranti dan maklumat rangkaian. Kongsi laporan pepijat dengan orang dan apl yang anda percayai sahaja berhubung maklumat ini. Benarkan <xliff:g id="APP_NAME_1">%4$s</xliff:g> memuat naik laporan pepijat?"</string>
+    <!-- no translation found for incident_report_dialog_text (1819244417678973362) -->
+    <skip />
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"Ralat telah berlaku semasa memproses laporan pepijat untuk <xliff:g id="APP_NAME">%1$s</xliff:g>. Oleh sebab itu, perkongsian data penyahpepijatan yang terperinci telah ditolak. Kami memohon maaf kerana gangguan ini."</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"Benarkan"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"Tolak"</string>
@@ -679,10 +680,13 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"Tetapan terhad"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"Untuk keselamatan anda, tetapan ini tidak tersedia pada masa ini."</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"Tidak dapat melengkapkan tindakan semasa panggilan"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="5049619986796367451">"<xliff:g id="SETTING_DESCRIPTION">%1$s</xliff:g>\n\n Tetapan ini disekat untuk melindungi peranti dan data anda"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_install_desc_prefix" msgid="7153600694011441796">"Penipu mungkin cuba untuk memasang apl berbahaya dengan meminta anda memasang apl yang tidak diketahui daripada sumber baharu."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc_prefix" msgid="1086282331085551407">"Penipu mungkin cuba mengawal peranti anda dengan meminta anda membenarkan akses kebolehaksesan untuk apl."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_generic_desc_prefix" msgid="8141411486179553156">"Penipu mungkin cuba untuk memudaratkan peranti anda dengan tetapan ini."</string>
+    <!-- no translation found for enhanced_confirmation_phone_state_dialog_desc (3803423079498712549) -->
+    <skip />
+    <!-- no translation found for enhanced_confirmation_phone_state_dialog_install_desc (6400007048943674066) -->
+    <skip />
+    <!-- no translation found for enhanced_confirmation_phone_state_dialog_a11y_desc (6567523001053288057) -->
+    <skip />
+    <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"Akses apl kepada <xliff:g id="PERMISSION_NAME">%1$s</xliff:g> telah ditolak"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"Apl meminta akses kepada kebenaran sensitif yang boleh mengakibatkan risiko terhadap maklumat peribadi dan kewangan anda.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Apl tersebut mungkin tidak dapat berfungsi dengan betul tanpa kebenaran terhad ini. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Ketahui cara membenarkan akses&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"Akses apl untuk menjadi <xliff:g id="ROLE_NAME">%1$s</xliff:g> lalai telah ditolak"</string>

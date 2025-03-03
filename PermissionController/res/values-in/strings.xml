@@ -440,10 +440,8 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Membuka link"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"Default untuk kerja"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"Default untuk ruang privasi"</string>
-    <!-- no translation found for default_app_recommended (5669584821778942909) -->
-    <skip />
-    <!-- no translation found for default_app_others (7793029848126079876) -->
-    <skip />
+    <string name="default_app_recommended" msgid="5669584821778942909">"Dioptimalkan untuk perangkat"</string>
+    <string name="default_app_others" msgid="7793029848126079876">"Lainnya"</string>
     <string name="default_app_none" msgid="9084592086808194457">"Tidak ada"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(Default sistem)"</string>
     <string name="default_app_no_apps" msgid="115720991680586885">"Tidak ada aplikasi"</string>
@@ -462,7 +460,8 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ingin mengupload informasi proses debug."</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"Bagikan data proses debug?"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"Sistem mendeteksi adanya masalah."</string>
-    <string name="incident_report_dialog_text" msgid="5675553296891757523">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> meminta untuk mengupload laporan bug dari perangkat ini yang diambil pada <xliff:g id="DATE">%2$s</xliff:g> pukul <xliff:g id="TIME">%3$s</xliff:g>. Laporan bug mencakup informasi pribadi tentang perangkat Anda atau yang dicatat dalam log oleh aplikasi, misalnya, nama pengguna, data lokasi, ID perangkat, dan informasi jaringan. Bagikan laporan bug hanya kepada orang dan aplikasi yang Anda percayai dengan informasi ini. Izinkan <xliff:g id="APP_NAME_1">%4$s</xliff:g> mengupload laporan bug?"</string>
+    <!-- no translation found for incident_report_dialog_text (1819244417678973362) -->
+    <skip />
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"Terjadi error saat memproses laporan bug untuk <xliff:g id="APP_NAME">%1$s</xliff:g>. Jadi, tindakan membagikan detail data proses debug telah ditolak. Mohon maaf atas gangguan ini."</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"Izinkan"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"Tolak"</string>
@@ -680,11 +679,14 @@
     <string name="allow_restricted_settings" msgid="8073000189478396881">"Izinkan setelan terbatas"</string>
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"Setelan terbatas"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"Demi keamanan Anda, setelan ini tidak tersedia untuk saat ini."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"Tidak dapat menyelesaikan tindakan selama panggilan"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="5049619986796367451">"<xliff:g id="SETTING_DESCRIPTION">%1$s</xliff:g>\n\n Setelan ini diblokir untuk melindungi perangkat dan data Anda"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_install_desc_prefix" msgid="7153600694011441796">"Penipu mungkin mencoba menginstal aplikasi berbahaya dengan meminta Anda menginstal aplikasi tidak dikenal dari sumber baru."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc_prefix" msgid="1086282331085551407">"Penipu mungkin mencoba mengambil kendali perangkat Anda dengan meminta Anda mengizinkan akses aksesibilitas untuk suatu aplikasi."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_generic_desc_prefix" msgid="8141411486179553156">"Penipu mungkin mencoba membahayakan perangkat Anda dengan setelan ini."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"Tidak bisa selesaikan tindakan selama panggilan"</string>
+    <!-- no translation found for enhanced_confirmation_phone_state_dialog_desc (3803423079498712549) -->
+    <skip />
+    <!-- no translation found for enhanced_confirmation_phone_state_dialog_install_desc (6400007048943674066) -->
+    <skip />
+    <!-- no translation found for enhanced_confirmation_phone_state_dialog_a11y_desc (6567523001053288057) -->
+    <skip />
+    <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"Aplikasi ditolak aksesnya ke <xliff:g id="PERMISSION_NAME">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"Aplikasi meminta akses ke izin sensitif yang dapat membahayakan info pribadi dan keuangan Anda.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Aplikasi mungkin tidak dapat berfungsi dengan baik tanpa izin terbatas ini. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&amp;gtPelajari cara mengizinkan akses&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"Aplikasi ditolak aksesnya untuk menjadi <xliff:g id="ROLE_NAME">%1$s</xliff:g> default"</string>

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 The Android Open Source Project
+ * Copyright (C) 2025 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,5 +14,14 @@
  * limitations under the License.
  */
 
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.S)
-package com.android.permissioncontroller.permission.model.livedatatypes.v31;
+package com.android.permissioncontroller.safetycenter.ui.model
+
+import android.safetycenter.SafetyCenterIssue
+
+/** UI model representation of [SafetyCenterIssue] */
+data class IssueUiData(
+    val issue: SafetyCenterIssue,
+    val isDismissed: Boolean,
+    val resolvedIssueActionId: String? = null,
+    val launchTaskId: Int? = null,
+)

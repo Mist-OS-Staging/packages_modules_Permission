@@ -19,12 +19,14 @@ package com.android.permissioncontroller.tests.mocking.permission.utils
 import android.app.admin.DevicePolicyManager
 import android.content.Context
 import android.health.connect.HealthPermissions
+import android.os.Build
 import android.permission.flags.Flags
 import android.platform.test.annotations.AsbSecurityTest
 import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.filters.SdkSuppress
 import com.android.modules.utils.build.SdkLevel
 import com.android.permissioncontroller.permission.utils.v31.AdminRestrictedPermissionsUtils
 import org.junit.Assert.assertEquals
@@ -74,12 +76,12 @@ object AdminRestrictedPermissionsUtilsTest {
 
         companion object {
             /**
-            * Returns a list of arrays containing the following values:
-            * 0. Permission name (String)
-            * 1. Permission group name (String)
-            * 2. Can admin grant sensors permissions (Boolean)
-            * 3. Expected return from mayAdminGrantPermission method (Boolean)
-            */
+             * Returns a list of arrays containing the following values:
+             * 0. Permission name (String)
+             * 1. Permission group name (String)
+             * 2. Can admin grant sensors permissions (Boolean)
+             * 3. Expected return from mayAdminGrantPermission method (Boolean)
+             */
             @JvmStatic
             @Parameterized.Parameters(name = "{index}: validate({0}, {1}, {3}) = {4}")
             fun getParameters(): List<Array<out Any?>> {
@@ -109,6 +111,7 @@ object AdminRestrictedPermissionsUtilsTest {
     class AdminRestrictedPermissionsUtilsSingleTest {
 
         @Test
+        @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
         @RequiresFlagsEnabled(Flags.FLAG_REPLACE_BODY_SENSOR_PERMISSION_ENABLED)
         fun addAdminRestrictedPermission_addsPermissionToRestrictedList() {
             var canGrant =

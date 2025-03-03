@@ -16,6 +16,7 @@
 
 package android.permissionui.cts
 
+import android.content.pm.PackageManager
 import android.health.connect.HealthPermissions
 import android.os.Build
 import android.permission.flags.Flags.FLAG_REPLACE_BODY_SENSOR_PERMISSION_ENABLED
@@ -25,6 +26,7 @@ import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import androidx.test.filters.FlakyTest
 import androidx.test.filters.SdkSuppress
 import org.junit.Assume.assumeFalse
+import org.junit.Assume.assumeTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -32,6 +34,12 @@ import org.junit.Test
 /** Runtime permission behavior tests for permission splits. */
 @FlakyTest
 class PermissionSplitTest : BaseUsePermissionTest() {
+
+    companion object {
+        @JvmStatic
+        private val supportHeartrate =
+            packageManager.hasSystemFeature(PackageManager.FEATURE_SENSOR_HEART_RATE)
+    }
 
     @Rule @JvmField val mCheckFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
 
@@ -146,6 +154,7 @@ class PermissionSplitTest : BaseUsePermissionTest() {
     @RequiresFlagsEnabled(FLAG_REPLACE_BODY_SENSOR_PERMISSION_ENABLED)
     @Test
     fun testBodySensorSplitOnBaklava_splitToReadHeartRate() {
+        assumeTrue(supportHeartrate)
         installPackage(APP_APK_PATH_30_WITH_BACKGROUND)
         assertAppHasPermission(android.Manifest.permission.BODY_SENSORS, false)
         assertAppHasPermission(HealthPermissions.READ_HEART_RATE, false)
@@ -195,6 +204,7 @@ class PermissionSplitTest : BaseUsePermissionTest() {
     }
 
     private fun testBodySensorPermissionSplitToBodySensorsBackground(expectSplit: Boolean) {
+        assumeTrue(supportHeartrate)
         assertAppHasPermission(android.Manifest.permission.BODY_SENSORS, false)
         assertAppHasPermission(android.Manifest.permission.BODY_SENSORS_BACKGROUND, false)
 

@@ -902,6 +902,8 @@
             <permission name="android.permission.READ_SMS" minSdkVersion="33" />
             <permission name="android.permission.READ_PEOPLE_DATA" />
             <permission name="android.permission.READ_GLOBAL_APP_SEARCH_DATA" />
+            <permission name="android.permission.READ_BLOCKED_NUMBERS"
+                featureFlag="android.permission.flags.Flags.grantReadBlockedNumbersToSystemUiIntelligence" />
         </permissions>
     </role>
 

@@ -72,6 +72,8 @@ class LocationAccuracyTest : BaseUsePermissionTest() {
     }
 
     @Test
+    @Ignore("b/396478581")
+    // Ignore this test until the cause of flakiness is identified.
     fun testPrecisePermissionIsGranted() {
         installPackage(APP_APK_PATH_31)
 

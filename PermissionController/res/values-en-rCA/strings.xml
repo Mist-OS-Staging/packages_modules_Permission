@@ -460,7 +460,7 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> would like to upload debugging information."</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"Share debugging data?"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"The system has detected a problem."</string>
-    <string name="incident_report_dialog_text" msgid="5675553296891757523">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> is requesting to upload a bug report from this device taken on <xliff:g id="DATE">%2$s</xliff:g> at <xliff:g id="TIME">%3$s</xliff:g>. Bug reports include personal information about your device or logged by apps, for example, user names, location data, device identifiers, and network information. Only share bug reports with people and apps you trust with this information. Allow <xliff:g id="APP_NAME_1">%4$s</xliff:g> to upload a bug report?"</string>
+    <string name="incident_report_dialog_text" msgid="1819244417678973362">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> is requesting to upload a bug report from this device taken on <xliff:g id="DATE">%2$s</xliff:g> at <xliff:g id="TIME">%3$s</xliff:g>. Bug reports include personal information about your device or logged by apps, for example, user names, location data, device identifiers, and network information. Only share bug reports with people and apps you trust with this information.\n\nAllow <xliff:g id="APP_NAME_1">%4$s</xliff:g> to upload a bug report?"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"There was an error processing the bug report for <xliff:g id="APP_NAME">%1$s</xliff:g>. So sharing the detailed debugging data has been denied. Sorry for the interruption."</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"Allow"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"Deny"</string>
@@ -679,10 +679,14 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"Restricted setting"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"For your security, this setting is currently unavailable."</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"Can’t complete action during call"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="5049619986796367451">"<xliff:g id="SETTING_DESCRIPTION">%1$s</xliff:g>\n\n This setting is blocked to protect your device and data"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_install_desc_prefix" msgid="7153600694011441796">"Scammers may try to install harmful apps by asking you to install unknown apps from a new source."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc_prefix" msgid="1086282331085551407">"Scammers may try to take control of your device by asking you to allow accessibility access for an app."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_generic_desc_prefix" msgid="8141411486179553156">"Scammers may attempt to harm your device with this setting."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"This setting is blocked to protect your device and data.<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Scammers may try to install harmful apps by asking you to install unknown apps from a new source."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Scammers may try to take control of your device by asking you to allow accessibility access for an app."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"App was denied access to <xliff:g id="PERMISSION_NAME">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"The app requested access to a sensitive permission which can put your personal and financial info at risk.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>It\'s possible the app won\'t work properly without this restricted permission. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Learn how to allow access&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"App was denied access to be default <xliff:g id="ROLE_NAME">%1$s</xliff:g>"</string>

@@ -23,7 +23,6 @@ import androidx.compose.foundation.layout.requiredSizeIn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.Hyphens
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -112,11 +111,7 @@ internal fun WearPermissionButtonInternal(
                     text = label,
                     modifier = Modifier.fillMaxWidth(),
                     maxLines = labelMaxLines ?: LocalTextConfiguration.current.maxLines,
-                    style =
-                        LocalTextStyle.current.copy(
-                            fontWeight = FontWeight.W600,
-                            hyphens = Hyphens.Auto,
-                        ),
+                    style = LocalTextStyle.current.copy(hyphens = Hyphens.Auto),
                 )
             }
         }

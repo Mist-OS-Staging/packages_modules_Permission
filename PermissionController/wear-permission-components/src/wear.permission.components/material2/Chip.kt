@@ -33,7 +33,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.Hyphens
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -194,11 +193,7 @@ fun Chip(
             textAlign = if (hasSecondaryLabel || hasIcon) TextAlign.Start else TextAlign.Center,
             overflow = TextOverflow.Ellipsis,
             maxLines = labelMaxLines ?: if (hasSecondaryLabel) 1 else 2,
-            style =
-                MaterialTheme.typography.button.copy(
-                    fontWeight = FontWeight.W600,
-                    hyphens = Hyphens.Auto,
-                ),
+            style = MaterialTheme.typography.button.copy(hyphens = Hyphens.Auto),
         )
     }
 

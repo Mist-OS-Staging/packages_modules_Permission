@@ -40,10 +40,12 @@ import androidx.preference.PreferenceScreen;
 import com.android.modules.utils.build.SdkLevel;
 import com.android.permissioncontroller.R;
 import com.android.permissioncontroller.permission.utils.Utils;
+import com.android.permissioncontroller.role.UserPackage;
 import com.android.permissioncontroller.role.utils.PackageUtils;
 import com.android.permissioncontroller.role.utils.RoleUiBehaviorUtils;
 import com.android.role.controller.model.Role;
 import com.android.role.controller.model.Roles;
+import com.android.settingslib.utils.applications.AppUtils;
 
 import java.util.List;
 
@@ -241,10 +243,16 @@ public class DefaultAppListChildFragment<PF extends PreferenceFragmentCompat
             if (holderApplicationInfos.isEmpty()) {
                 preference.setIcon(null);
                 preference.setSummary(R.string.default_app_none);
+                rolePreference.setSummaryContentDescription(null);
             } else {
                 ApplicationInfo holderApplicationInfo = holderApplicationInfos.get(0);
                 preference.setIcon(Utils.getBadgedIcon(context, holderApplicationInfo));
                 preference.setSummary(Utils.getAppLabel(holderApplicationInfo, context));
+                UserPackage userPackage = UserPackage.from(holderApplicationInfo);
+                rolePreference.setSummaryContentDescription(
+                        AppUtils.getAppContentDescription(context,
+                                userPackage.packageName,
+                                userPackage.user.getIdentifier()));
             }
             RoleUiBehaviorUtils.preparePreferenceAsUser(role, holderApplicationInfos,
                     rolePreference, user, context);
