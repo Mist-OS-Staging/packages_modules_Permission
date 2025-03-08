@@ -340,15 +340,19 @@ public class Role {
             Integer exclusivity = mBehavior.getExclusivity();
             if (exclusivity != null) {
                 if (!sExclusivityValues.get(exclusivity)) {
-                    throw new IllegalArgumentException("Invalid exclusivity: " + exclusivity);
+                    throw new IllegalArgumentException(
+                        "Role " + mName + " has invalid exclusivity: "
+                            + exclusivity);
                 }
                 if (mShowNone && exclusivity == EXCLUSIVITY_NONE) {
                     throw new IllegalArgumentException(
-                        "Role cannot be non-exclusive when showNone is true: " + exclusivity);
+                        "Role " + mName + " cannot be non-exclusive when showNone is true: "
+                            + exclusivity);
                 }
                 if (!mPreferredActivities.isEmpty() && exclusivity == EXCLUSIVITY_PROFILE_GROUP) {
                     throw new IllegalArgumentException(
-                        "Role cannot have preferred activities when exclusivity is profileGroup");
+                        "Role " + mName + " cannot have preferred activities when exclusivity is "
+                            + "profileGroup");
                 }
                 return exclusivity;
             }

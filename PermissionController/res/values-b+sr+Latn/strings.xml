@@ -355,7 +355,7 @@
     <string name="accessibility_service_dialog_title_multiple" msgid="5527879210683548175">"Aplikacije pristupačnosti (<xliff:g id="NUM_SERVICES">%s</xliff:g>) imaju potpun pristup uređaju"</string>
     <string name="accessibility_service_dialog_bottom_text_single" msgid="1128666197822205958">"<xliff:g id="SERVICE_NAME">%s</xliff:g> može da pregleda sadržaj ekrana, radnje i unose, obavlja radnje i upravlja ekranom."</string>
     <string name="accessibility_service_dialog_bottom_text_multiple" msgid="7009848932395519852">"Ove aplikacije mogu da pregledaju sadržaj ekrana, radnje i unose, kao i da obavljaju radnje i upravljaju ekranom."</string>
-    <string name="role_assistant_label" msgid="4727586018198208128">"Podrazumev. digitalni pomoćnik"</string>
+    <string name="role_assistant_label" msgid="4727586018198208128">"Podrazumevani digitalni pomoćnik"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"Aplikacija digitalnog pomoćnika"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"Aplikacije za pomoć mogu da vam pomognu na osnovu informacija sa ekrana koji gledate. Neke aplikacije podržavaju usluge pokretača i glasovnog unosa da bi vam pružile integrisanu pomoć."</string>
     <string name="role_browser_label" msgid="2877796144554070207">"Podrazumevana apl. pregledača"</string>
@@ -460,7 +460,7 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> želi da otpremi informacije za otklanjanje grešaka."</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"Želite da delite podatke o otklanjanju grešaka?"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"Sistem je otkrio problem."</string>
-    <string name="incident_report_dialog_text" msgid="5675553296891757523">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> traži da otpremi izveštaj o greškama sa ovog uređaja koji je napravljen <xliff:g id="DATE">%2$s</xliff:g> u <xliff:g id="TIME">%3$s</xliff:g>. Izveštaji o greškama obuhvataju lične podatke o uređaju ili podatke koje su evidentirale aplikacije, na primer, korisnička imena, podatke o lokaciji, identifikatore uređaja i informacije o mreži. Delite izveštaje o greškama samo sa ljudima i aplikacijama koje smatrate pouzdanim za te informacije. Želite li da dozvolite da <xliff:g id="APP_NAME_1">%4$s</xliff:g> otpremi izveštaj o grešci?"</string>
+    <string name="incident_report_dialog_text" msgid="1819244417678973362">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> traži da otpremi izveštaj o grešci sa ovog uređaja koji je napravljen <xliff:g id="DATE">%2$s</xliff:g> u <xliff:g id="TIME">%3$s</xliff:g>. Izveštaji o greškama obuhvataju lične podatke o uređaju ili podatke koje su evidentirale aplikacije, na primer, korisnička imena, podatke o lokaciji, identifikatore uređaja i informacije o mreži. Delite izveštaje o greškama samo sa ljudima i aplikacijama kojima možete da poverite te informacije.\n\nŽelite li da dozvolite da <xliff:g id="APP_NAME_1">%4$s</xliff:g> otpremi izveštaj o grešci?"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"Došlo je do greške pri obradi izveštaja o grešci za aplikaciju <xliff:g id="APP_NAME">%1$s</xliff:g>. Zato je odbijeno deljenje detaljnih podataka o otklanjanju grešaka. Izvinjavamo se zbog prekida."</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"Dozvoli"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"Odbij"</string>
@@ -679,10 +679,14 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"Ograničeno podešavanje"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"Ovo podešavanje je trenutno nedostupno radi vaše bezbednosti."</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"Radnja ne može da se završi tokom poziva"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="5049619986796367451">"<xliff:g id="SETTING_DESCRIPTION">%1$s</xliff:g>\n\n Ovo podešavanje je blokirano da bi se zaštitili uređaj i podaci"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_install_desc_prefix" msgid="7153600694011441796">"Prevaranti mogu da pokušaju da instaliraju štetne aplikacije tako što će tražiti da instalirate nepoznate aplikacije iz novog izvora."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc_prefix" msgid="1086282331085551407">"Prevaranti mogu da pokušaju da preuzmu kontrolu nad uređajem tako što će tražiti da za aplikaciju dozvolite pristup za pristupačnost."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_generic_desc_prefix" msgid="8141411486179553156">"Prevaranti mogu da pokušaju da naškode uređaju pomoću ovog podešavanja."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"Ovo podešavanje je blokirano da bi se zaštitili uređaj i podaci.<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Prevaranti mogu da pokušaju da instaliraju štetne aplikacije tako što će tražiti da instalirate nepoznate aplikacije iz novog izvora."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Prevaranti mogu da pokušaju da preuzmu kontrolu nad uređajem tako što će tražiti da za aplikaciju dozvolite pristup za pristupačnost."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"Aplikaciji nije dozvoljen pristup dozvoli: <xliff:g id="PERMISSION_NAME">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"Aplikacija je zatražila pristup osetljivoj dozvoli, što može da ugrozi bezbednost ličnih i finansijskih podataka.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Aplikacija možda neće raditi ispravno bez ove ograničene dozvole. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Saznajte kako da dozvolite pristup&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"Aplikaciji nije dozvoljen pristup da postane podrazumevana: <xliff:g id="ROLE_NAME">%1$s</xliff:g>"</string>

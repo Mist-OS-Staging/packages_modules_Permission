@@ -460,7 +460,7 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> алдаа засах мэдээллийг байршуулах хүсэлтэй байна."</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"Дебаг хийх өгөгдлийг хуваалцах уу?"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"Систем асуудал илрүүллээ."</string>
-    <string name="incident_report_dialog_text" msgid="5675553296891757523">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> энэ төхөөрөмжөөс <xliff:g id="DATE">%2$s</xliff:g>-н <xliff:g id="TIME">%3$s</xliff:g>-д авсан алдааны мэдээг байршуулах хүсэлт тавьж байна. Алдааны мэдээнд таны төхөөрөмжийн талаарх эсвэл хэрэглэгчийн нэр, байршлын өгөгдөл, төхөөрөмжийн танигч болон сүлжээний мэдээлэл зэрэг аппуудын бүртгэсэн хувийн мэдээллийг агуулна. Та алдааны мэдээг зөвхөн энэ мэдээллийг хуваалцахдаа итгэлтэй байгаа хүмүүс болон аппуудтай хуваалцана уу. <xliff:g id="APP_NAME_1">%4$s</xliff:g>-д алдааны мэдээг байршуулахыг зөвшөөрөх үү?"</string>
+    <string name="incident_report_dialog_text" msgid="1819244417678973362">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> энэ төхөөрөмжөөс <xliff:g id="DATE">%2$s</xliff:g>-ны <xliff:g id="TIME">%3$s</xliff:g>-нд авсан алдааны мэдээг байршуулахыг хүсэж байна. Алдааны мэдээнд таны төхөөрөмж болон хэрэглэгчийн нэр, байршлын өгөгдөл, төхөөрөмж танигч, сүлжээний мэдээлэл зэрэг аппын бүртгэсэн хувийн мэдээлэл багтдаг. Та алдааны мэдээг зөвхөн итгэдэг хүн, апптайгаа хуваалцаарай.\n\n<xliff:g id="APP_NAME_1">%4$s</xliff:g>-д алдааны мэдээ байршуулахыг зөвшөөрөх үү?"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"<xliff:g id="APP_NAME">%1$s</xliff:g>-н алдааны мэдээг боловсруулахад алдаа гарсан тул алдаа засах дэлгэрэнгүй өгөгдлийг хуваалцахаас татгалзлаа. Төвөг удсанд хүлцэл өчье."</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"Зөвшөөрөх"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"Татгалзах"</string>
@@ -679,10 +679,14 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"Хязгаарлагдсан тохиргоо"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"Таны аюулгүй байдлын үүднээс энэ тохиргоо одоогоор боломжгүй байна."</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"Дуудлагын үеэр үйлдэл гүйцэтгэх боломжгүй"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="5049619986796367451">"<xliff:g id="SETTING_DESCRIPTION">%1$s</xliff:g>\n\n Энэ тохиргоог таны төхөөрөмж, өгөгдлийг хамгаалахын тулд блоклосон"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_install_desc_prefix" msgid="7153600694011441796">"Залилагч танаас шинэ эх сурвалжаас тодорхойгүй апп суулгахыг хүсэж хор хөнөөлтэй апп суулгахаар оролдож болзошгүй."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc_prefix" msgid="1086282331085551407">"Залилагч танаас аппын хандалтын эрхийг зөвшөөрөхийг хүсэж таны төхөөрөмжийн хяналтыг гартаа авахаар оролдож болзошгүй."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_generic_desc_prefix" msgid="8141411486179553156">"Залилагч энэ тохиргоогоор таны төхөөрөмжид хор хөнөөл учруулахаар оролдож болзошгүй."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"Таны төхөөрөмж, өгөгдлийг хамгаалахын тулд энэ тохиргоог блоклосон.<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Залилагч танаас шинэ эх сурвалжаас тодорхойгүй апп суулгахыг хүсэж хор хөнөөлтэй апп суулгахаар оролдож магадгүй."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Залилагч танаас аппын хандалтын эрхийг зөвшөөрөхийг хүсэж таны төхөөрөмжийн хяналтыг гартаа авахаар оролдож магадгүй."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"Аппад <xliff:g id="PERMISSION_NAME">%1$s</xliff:g>-д хандах эрх олгохоос татгалзсан"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"Апп нь таны хувийн болон санхүүгийн мэдээллийг эрсдэлд оруулж болох эмзэг зөвшөөрөлд хандах эрх хүссэн.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Энэ хязгаарлагдмал зөвшөөрөлгүйгээр уг апп зохих ёсоор ажиллахгүй байх боломжтой. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Хандах эрхийг хэрхэн зөвшөөрөх талаар мэдэж авах&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"Аппад өгөгдмөл <xliff:g id="ROLE_NAME">%1$s</xliff:g> болох эрх олгохоос татгалзсан"</string>

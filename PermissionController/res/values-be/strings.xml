@@ -460,7 +460,7 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"Праграма \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" спрабуе запампаваць звесткі пра адладку."</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"Абагуліць даныя адладкі?"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"Сістэма выявіла праблему."</string>
-    <string name="incident_report_dialog_text" msgid="5675553296891757523">"Праграма \"<xliff:g id="APP_NAME_0">%1$s</xliff:g>\" запытвае запампоўку справаздачы пра памылкі з гэтай прылады ад <xliff:g id="DATE">%2$s</xliff:g> у <xliff:g id="TIME">%3$s</xliff:g>. Справаздача пра памылкі ўключае персанальную інфармацыю пра вашу прыладу ці зарэгістраваныя праграмы, напрыклад імёны карыстальнікаў, звесткі пра месцазнаходжанне, ідэнтыфікатары прылады і даныя пра сетку. Абагульвайце справаздачы пра памылкі толькі з людзьмі і праграмамі, якім давяраеце. Дазволіць праграме \"<xliff:g id="APP_NAME_1">%4$s</xliff:g>\" запампаваць справаздачу пра памылкі?"</string>
+    <string name="incident_report_dialog_text" msgid="1819244417678973362">"Праграма \"<xliff:g id="APP_NAME_0">%1$s</xliff:g>\" запытвае дазволу запампаваць з гэтай прылады справаздачу пра памылку ад <xliff:g id="DATE">%2$s</xliff:g> (<xliff:g id="TIME">%3$s</xliff:g>). Справаздачы пра памылку ўключаюць асабістую інфармацыю пра вашу прыладу або інфармацыю, зарэгістраваную праграмамі, напрыклад імёны карыстальнікаў, даныя пра месцазнаходжанне, ідэнтыфікатары прылады і інфармацыю пра сетку. Абагульвайце справаздачы пра памылкі толькі з карыстальнікамі і праграмамі, якім давяраеце.\n\nДазволіць праграме \"<xliff:g id="APP_NAME_1">%4$s</xliff:g>\" запампаваць справаздачу пра памылку?"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"Узнікла памылка пры апрацоўцы справаздачы пра памылкі для праграмы \"<xliff:g id="APP_NAME">%1$s</xliff:g>\". Абагульванне падрабязных звестак пра адладку адхілена. Просім прабачэння за збой."</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"Дазволіць"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"Адмовіць"</string>
@@ -679,10 +679,14 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"Налада з абмежаваным доступам"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"У мэтах бяспекі гэта налада цяпер недаступная."</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"Нельга выканаць гэта дзеянне падчас выкліку"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="5049619986796367451">"<xliff:g id="SETTING_DESCRIPTION">%1$s</xliff:g>\n\n Гэта налада заблакіравана для абароны вашай прылады і даных"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_install_desc_prefix" msgid="7153600694011441796">"Каб паспрабаваць усталяваць шкодныя праграмы, махляры могуць прасіць вас усталяваць невядомыя праграмы з новай крыніцы."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc_prefix" msgid="1086282331085551407">"Каб атрымаць кантроль над вашай прыладай, махляры могуць запытаць для праграмы доступ да спецыяльных магчымасцей."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_generic_desc_prefix" msgid="8141411486179553156">"Махляры могуць выкарыстаць гэту наладу, каб нанесці шкоду прыладзе."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"Гэта налада заблакіравана для абароны вашай прылады і даных. <xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Каб паспрабаваць усталяваць шкодныя праграмы, махляры могуць прасіць вас усталяваць невядомыя праграмы з новай крыніцы."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Каб атрымаць кантроль над вашай прыладай, махляры могуць запытаць для праграмы доступ да спецыяльных магчымасцей."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"Праграме адмоўлена ў дазволе \"<xliff:g id="PERMISSION_NAME">%1$s</xliff:g>\""</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"Праграма запытала дазвол на доступ да канфідэнцыяльнай інфармацыі. Калі вы яго дасце, ваша асабістая і фінансавая інфармацыя можа аказацца ў небяспецы.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Магчыма, без гэтага абмежаванага дазволу праграма не будзе працаваць належным чынам. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Даведацца, як дазволіць доступ&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"Праграме адмоўлена ў дазволе стандартна выконваць наступную ролю: <xliff:g id="ROLE_NAME">%1$s</xliff:g>"</string>

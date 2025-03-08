@@ -253,7 +253,7 @@
     <string name="app_permission_never_accessed_summary" msgid="401346181461975090">"Nigdy nie użyto"</string>
     <string name="app_permission_never_accessed_denied_summary" msgid="6596000497490905146">"Odmowa / nigdy nie użyto"</string>
     <string name="allowed_header" msgid="7769277978004790414">"Ma dostęp"</string>
-    <string name="allowed_always_header" msgid="6455903312589013545">"Mają ciągły dostęp"</string>
+    <string name="allowed_always_header" msgid="6455903312589013545">"Ciągły dostęp"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Mają dostęp tylko podczas używania"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Zezwolono na dostęp tylko do multimediów"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Zezwolono na zarządzanie wszystkimi plikami"</string>
@@ -460,7 +460,7 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> chce przesłać informacje debugowania."</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"Udostępnić dane debugowania?"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"System wykrył problem."</string>
-    <string name="incident_report_dialog_text" msgid="5675553296891757523">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> prosi o zezwolenie na przesłanie raportu o błędzie z tego urządzenia. Raport utworzono <xliff:g id="DATE">%2$s</xliff:g> o <xliff:g id="TIME">%3$s</xliff:g>. Raporty o błędach zawierają dane prywatne powiązane z Twoim urządzeniem lub zarejestrowane w aplikacjach, na przykład nazwy użytkowników, dane o lokalizacji, identyfikatory urządzeń i informacje o sieciach. Raporty o błędach zawierające te informacje udostępniaj tylko osobom i aplikacjom, którym ufasz. Zezwolić aplikacji <xliff:g id="APP_NAME_1">%4$s</xliff:g> na przesłanie raportu o błędzie?"</string>
+    <string name="incident_report_dialog_text" msgid="1819244417678973362">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> prosi o zezwolenie na przesłanie raportu o błędzie z tego urządzenia, który utworzono <xliff:g id="DATE">%2$s</xliff:g> o <xliff:g id="TIME">%3$s</xliff:g>. Raporty o błędach zawierają dane osobowe powiązane z Twoim urządzeniem lub zarejestrowane w aplikacjach, na przykład nazwy użytkowników, dane o lokalizacji, identyfikatory urządzeń i informacje o sieciach. Udostępniaj je wyłącznie zaufanym osobom i aplikacjom.\n\nZezwolić aplikacji <xliff:g id="APP_NAME_1">%4$s</xliff:g> na przesłanie raportu o błędzie?"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"Podczas przetwarzania zgłoszenia błędu w aplikacji <xliff:g id="APP_NAME">%1$s</xliff:g> wystąpił błąd. Odmówiono udostępnienia szczegółowych danych debugowania. Przepraszamy za niedogodności."</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"Zezwól"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"Odmów"</string>
@@ -678,11 +678,15 @@
     <string name="allow_restricted_settings" msgid="8073000189478396881">"Zezwól na ustawienia z ograniczonym dostępem"</string>
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"Ustawienie z ograniczonym dostępem"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"Ze względów bezpieczeństwa to ustawienie jest obecnie niedostępne."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"Nie można wykonać działania podczas połączenia"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="5049619986796367451">"<xliff:g id="SETTING_DESCRIPTION">%1$s</xliff:g>\n\n To ustawienie jest zablokowane, aby chronić Twoje urządzenie i dane"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_install_desc_prefix" msgid="7153600694011441796">"Oszuści mogą próbować zainstalować szkodliwe aplikacje, prosząc o instalację nieznanych programów z nowego źródła."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc_prefix" msgid="1086282331085551407">"Oszuści mogą próbować przejąć kontrolę nad Twoim urządzeniem, prosząc o przyznanie uprawnień do ułatwień dostępu aplikacji."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_generic_desc_prefix" msgid="8141411486179553156">"Oszuści mogą próbować wyrządzić szkody na Twoim urządzeniu, wykorzystując to ustawienie."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"Nie można wykonywać działania podczas połączenia"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"To ustawienie jest zablokowane, aby chronić Twoje urządzenie i dane.<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Oszuści mogą próbować zainstalować szkodliwe aplikacje, prosząc o instalację nieznanych programów z nowego źródła."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Oszuści mogą próbować przejąć kontrolę nad Twoim urządzeniem, prosząc o przyznanie uprawnień do ułatwień dostępu aplikacji."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"Aplikacja nie otrzymała dostępu do uprawnień <xliff:g id="PERMISSION_NAME">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"Aplikacja wymaga dostępu do uprawnień newralgicznych, co może zagrażać Twoim danym osobowym i informacjom finansowym.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Możliwe, że bez tego uprawnienia z ograniczeniami aplikacja nie będzie działać poprawnie. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Jak zezwolić na dostęp&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"Aplikacja nie otrzymała dostępu jako domyślna <xliff:g id="ROLE_NAME">%1$s</xliff:g>"</string>

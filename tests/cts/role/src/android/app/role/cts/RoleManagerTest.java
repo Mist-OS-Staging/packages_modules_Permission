@@ -105,7 +105,6 @@ public class RoleManagerTest {
 
     private static final String ROLE_NAME = RoleManager.ROLE_BROWSER;
     private static final String ROLE_PHONE_NAME = RoleManager.ROLE_DIALER;
-    private static final String ROLE_SMS_NAME = RoleManager.ROLE_SMS;
     private static final String PROFILE_GROUP_EXCLUSIVE_ROLE_NAME =
             RoleManager.ROLE_RESERVED_FOR_TESTING_PROFILE_GROUP_EXCLUSIVITY;
     private static final String ROLE_SHORT_LABEL = "Browser app";
@@ -288,8 +287,11 @@ public class RoleManagerTest {
     @RequiresFlagsEnabled(Flags.FLAG_ENHANCED_CONFIRMATION_MODE_APIS_ENABLED)
     @FlakyTest(bugId = 288468003, detail = "CtsRoleTestCases is breaching 20min SLO")
     public void requestRoleThenBlockRequestRoleDialogByRestrictedSettingDialog() throws Exception {
-        assumeTrue(sRoleManager.isRoleAvailable(RoleManager.ROLE_SMS));
         assumeFalse(sIsWatch || sIsAutomotive || sIsTelevision);
+        assumeTrue(sRoleManager.isRoleAvailable(RoleManager.ROLE_SMS));
+        assumeFalse(callWithShellPermissionIdentity(
+                () -> getRoleHolders(RoleManager.ROLE_SMS)).contains(APP_PACKAGE_NAME));
+
         // TODO: b/388960315 - Remove wait after addressing race condition
         runWithShellPermissionIdentity(
                 () -> waitForEnhancedConfirmationRestrictedAppOpMode(sContext, APP_PACKAGE_NAME,
@@ -298,7 +300,7 @@ public class RoleManagerTest {
                 () -> setEnhancedConfirmationRestrictedAppOpMode(sContext, APP_PACKAGE_NAME,
                         AppOpsManager.MODE_ERRORED));
 
-        requestRole(ROLE_SMS_NAME);
+        requestRole(RoleManager.ROLE_SMS);
         waitFindObject(ENHANCED_CONFIRMATION_DIALOG_SELECTOR, TIMEOUT_MILLIS);
 
         pressBack();
@@ -829,6 +831,13 @@ public class RoleManagerTest {
     @FlakyTest
     @Test
     public void openDefaultAppListThenIsNotDefaultAppInList() throws Exception {
+        assumeFalse(callWithShellPermissionIdentity(
+                () -> getRoleHolders(RoleManager.ROLE_BROWSER)).contains(APP_PACKAGE_NAME));
+        assumeFalse(callWithShellPermissionIdentity(
+                () -> getRoleHolders(RoleManager.ROLE_DIALER)).contains(APP_PACKAGE_NAME));
+        assumeFalse(callWithShellPermissionIdentity(
+                () -> getRoleHolders(RoleManager.ROLE_SMS)).contains(APP_PACKAGE_NAME));
+
         sContext.startActivity(new Intent(Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS)
                 .addCategory(Intent.CATEGORY_DEFAULT)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
@@ -1193,6 +1202,8 @@ public class RoleManagerTest {
     @Test
     public void removeSmsRoleHolderThenPermissionIsRevoked() throws Exception {
         assumeTrue(sRoleManager.isRoleAvailable(RoleManager.ROLE_SMS));
+        assumeFalse(callWithShellPermissionIdentity(
+                () -> getRoleHolders(RoleManager.ROLE_SMS)).contains(APP_PACKAGE_NAME));
 
         String smsRoleHolder = getRoleHolders(RoleManager.ROLE_SMS).get(0);
         addRoleHolder(RoleManager.ROLE_SMS, APP_PACKAGE_NAME);

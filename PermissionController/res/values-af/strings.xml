@@ -460,7 +460,7 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil graag ontfoutingsinligting oplaai."</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"Deel ontfoutingsdata?"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"Die stelsel het \'n probleem bespeur."</string>
-    <string name="incident_report_dialog_text" msgid="5675553296891757523">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> versoek tans om \'n foutverslag wat op <xliff:g id="DATE">%2$s</xliff:g> om <xliff:g id="TIME">%3$s</xliff:g> op hierdie toestel gegenereer is, op te laai. Foutverslae sluit persoonlike inligting oor jou toestel of wat deur programme aangemeld is in, byvoorbeeld gebruikername, liggingdata, toestelidentifiseerders en netwerkinligting. Deel foutverslae net met mense en programme wat jy met hierdie inligting vertrou. Laat <xliff:g id="APP_NAME_1">%4$s</xliff:g> toe om \'n foutverslag op te laai?"</string>
+    <string name="incident_report_dialog_text" msgid="1819244417678973362">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> versoek tans om \'n foutverslag wat op <xliff:g id="DATE">%2$s</xliff:g> om <xliff:g id="TIME">%3$s</xliff:g> op hierdie toestel gegenereer is, op te laai. Foutverslae sluit in: Persoonlike inligting oor jou toestel of inligting wat deur apps aangeteken is, byvoorbeeld gebruikername, liggingdata, toestelidentifiseerders en netwerkinligting. Deel foutverslae net met mense en apps wat jy met hierdie inligting vertrou.\n\nLaat <xliff:g id="APP_NAME_1">%4$s</xliff:g> toe om ’n foutverslag op te laai?"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"Kon nie die foutverslag vir <xliff:g id="APP_NAME">%1$s</xliff:g> verwerk nie. Die deel van die gedetailleerde ontfoutingdata is geweier. Jammer oor die onderbreking."</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"Laat toe"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"Weier"</string>
@@ -679,10 +679,14 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"Beperkte instelling"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"Hierdie instelling is vir jou veiligheid tans onbeskikbaar."</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"Kan nie handeling tydens oproep voltooi nie"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="5049619986796367451">"<xliff:g id="SETTING_DESCRIPTION">%1$s</xliff:g>\n\n Hierdie instelling is geblokkeer om jou toestel en data te beskerm"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_install_desc_prefix" msgid="7153600694011441796">"Swendelaars kan probeer om skadelike apps te installeer deur jou te vra om onbekende apps van ’n nuwe bron af te installeer."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc_prefix" msgid="1086282331085551407">"Swendelaars kan probeer om beheer oor jou toestel te neem deur jou te vra om toeganklikheidtoegang vir ’n app toe te laat."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_generic_desc_prefix" msgid="8141411486179553156">"Swendelaars kan probeer om jou toestel met hierdie instelling te beskadig."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"Hierdie instelling is geblokkeer om jou toestel en data te beskerm.<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Swendelaars kan probeer om skadelike apps te installeer deur jou te vra om onbekende apps van ’n nuwe bron af te installeer."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Swendelaars kan probeer om beheer oor jou toestel te neem deur jou te vra om toeganklikheidtoegang vir ’n app toe te laat."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"Toegang tot <xliff:g id="PERMISSION_NAME">%1$s</xliff:g> is geweier vir die app"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"Die app het toegang tot toestemming vir sensitiewe inligting versoek wat jou persoonlike en finansiële inligting in gevaar kan stel.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Dit is moontlik dat die app nie reg sal werk sonder hierdie beperkte toestemming nie. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Kry meer inligting oor hoe om toegang toe te laat&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"Toegang is geweier vir app om die verstek <xliff:g id="ROLE_NAME">%1$s</xliff:g> te wees"</string>

@@ -715,6 +715,18 @@ public class GrantPermissionsActivity extends SettingsActivity
             onRequestInfoLoad(mRequestInfos);
             return;
         } else if (info.getPrompt() == Prompt.NO_UI_HEALTH_REDIRECT) {
+            // Clear UI on current PermissionController screen to avoid flashing back to previous
+            // permission group UI when returned from Health&Fitness.
+            mViewHandler.updateUi(
+                /* groupName= */ "",
+                /* groupCount= */ 0,
+                /* groupIndex= */ 0,
+                /* icon= */ null,
+                /* message= */ "",
+                /* detailMessage= */ "",
+                /* permissionRationaleMessage= */ "",
+                /* buttonVisibilities= */ new boolean[] {},
+                /* locationVisibilities=*/ new boolean[] {});
             mViewModel.handleHealthConnectPermissions(this);
             return;
         }

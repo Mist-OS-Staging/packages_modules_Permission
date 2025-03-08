@@ -460,7 +460,7 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> vill hlaða inn upplýsingum um villuleit."</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"Viltu deila villuleitargögnum?"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"Kerfið greindi vandamál."</string>
-    <string name="incident_report_dialog_text" msgid="5675553296891757523">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> biður um að hlaða inn villutilkynningu úr þessu tæki frá <xliff:g id="DATE">%2$s</xliff:g> kl. <xliff:g id="TIME">%3$s</xliff:g>. Villutilkynningar innihalda persónuupplýsingar um tækið eða upplýsingar sem forrit skrá, til dæmis notendanöfn, staðsetningargögn, auðkenni tækis og upplýsingar um netkerfi. Deildu aðeins villutilkynningum með fólki og forritum sem þú treystir fyrir þessum upplýsingum. Leyfa <xliff:g id="APP_NAME_1">%4$s</xliff:g> að hlaða inn villutilkynningu?"</string>
+    <string name="incident_report_dialog_text" msgid="1819244417678973362">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> biður um að fá að hlaða upp villutilkynningu úr þessu tæki sem skráð var þann <xliff:g id="DATE">%2$s</xliff:g> kl. <xliff:g id="TIME">%3$s</xliff:g>. Villutilkynningar innihalda persónuupplýsingar um tækið þitt eða sem forrit skrá, til dæmis notendanöfn, staðsetningargögn, auðkenni tækja og upplýsingar um netkerfi. Gættu þess að deila villutilkynningum eingöngu með fólki og forritum sem þú treystir fyrir þessum upplýsingum.\n\nLeyfa <xliff:g id="APP_NAME_1">%4$s</xliff:g> að hlaða upp villutilkynningu?"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"Villa kom upp við vinnslu villuskýrslu fyrir <xliff:g id="APP_NAME">%1$s</xliff:g> og því er ekki hægt að deila ítarlegum villuleitargögnum. Afsakaðu truflunina."</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"Leyfa"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"Hafna"</string>
@@ -678,11 +678,15 @@
     <string name="allow_restricted_settings" msgid="8073000189478396881">"Leyfa takmarkaðar stillingar"</string>
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"Takmörkuð stilling"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"Til að tryggja öryggi þitt er þessi stilling ekki tiltæk eins og er."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"Ekki hægt að ljúka við aðgerð á meðan á símtali stendur"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="5049619986796367451">"<xliff:g id="SETTING_DESCRIPTION">%1$s</xliff:g>\n\n Lokað er á þessa stillingu til að gæta að öryggi tækisins þíns og gagna"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_install_desc_prefix" msgid="7153600694011441796">"Svindlarar gætu reynt að setja upp skaðleg forrit með því að biðja þig um að setja upp óþekkt forrit af nýjum uppruna."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc_prefix" msgid="1086282331085551407">"Svindlarar gætu reynt að ná stjórn yfir tækinu þínu með því að biðja um aðgang að aðgengi forrits."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_generic_desc_prefix" msgid="8141411486179553156">"Svindlarar gætu reynt að valda tækinu þínu skaða með þessari stillingu."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"Ekki hægt að ljúka við aðgerð meðan á símtali stendur"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"Lokað er á þessa stillingu til að gæta að öryggi tækisins þíns og gagna.<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Svindlarar gætu reynt að setja upp skaðleg forrit með því að biðja þig um að setja upp óþekkt forrit af nýjum uppruna."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Svindlarar gætu reynt að ná stjórn yfir tækinu þínu með því að biðja um aðgang að aðgengi forrits."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"Forritið fékk ekki aðgang að <xliff:g id="PERMISSION_NAME">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"Forritið bað um aðgang að heimild fyrir viðkvæmu efni sem getur stofnað persónu- og fjármálaupplýsingum þínum í hættu.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Forritið virkar hugsanlega ekki sem skyldi án þessarar takmörkuðu heimildar. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Kynntu þér hvernig þú leyfir aðgang&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"Forritið fékk ekki aðgang að sjálfgefnu <xliff:g id="ROLE_NAME">%1$s</xliff:g>"</string>

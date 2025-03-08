@@ -460,7 +460,7 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> က အမှားရှာပြင်သည့် အချက်အလက်ကို အပ်လုဒ်လုပ်လိုသည်။"</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"အမှားရှာပြင်သည့် ဒေတာ မျှဝေမှာလား။"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"စနစ်သည် ပြဿနာတစ်ခု တွေ့ရှိထားသည်။"</string>
-    <string name="incident_report_dialog_text" msgid="5675553296891757523">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> သည် ဤကိရိယာက <xliff:g id="DATE">%2$s</xliff:g> <xliff:g id="TIME">%3$s</xliff:g> တွင် ရယူထားသည့် ချွတ်ယွင်းမှု အစီရင်ခံစာကို အပ်လုဒ်လုပ်ရန် တောင်းဆိုနေသည်။ ချွတ်ယွင်းမှု အစီရင်ခံစာတွင် သင့်ကိရိယာ သို့မဟုတ် အက်ပ်များဖြင့် အကောင့်ဝင်ရောက်ထားသည့် အသုံးပြုသူအမည်၊ တည်နေရာဒေတာ၊ ကိရိယာ သတ်မှတ်မှုစနစ်များနှင့် ကွန်ရက်အချက်အလက်တို့ကဲ့သို့ ကိုယ်ရေးကိုယ်တာအချက်လက်များ ပါဝင်သည်။ ဤအချက်အလက်နှင့် ပတ်သက်ပြီး သင်ယုံကြည်ရသည့် လူ၊ အက်ပ်များနှင့်သာ ချွတ်ယွင်းမှု အစီရင်ခံစာကို မျှဝေပါ။ <xliff:g id="APP_NAME_1">%4$s</xliff:g> ကို ချွတ်ယွင်းမှု အစီရင်ခံစာ အပ်လုဒ်လုပ်ခွင့်ပေးမလား။"</string>
+    <string name="incident_report_dialog_text" msgid="1819244417678973362">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> သည် <xliff:g id="DATE">%2$s</xliff:g>၊ <xliff:g id="TIME">%3$s</xliff:g> တွင် ဤစက်မှ ရယူထားသည့် ချွတ်ယွင်းချက်အစီရင်ခံစာကို အပ်လုဒ်လုပ်ရန် တောင်းဆိုနေသည်။ ချွတ်ယွင်းချက်အစီရင်ခံစာများတွင် အသုံးပြုသူအမည်၊ တည်နေရာဒေတာ၊ စက်သတ်မှတ်မှုစနစ်နှင့် ကွန်ရက်အချက်အလက်ကဲ့သို့သော သင့်စက်နှင့်ပတ်သက်သည့် (သို့) အက်ပ်များက မှတ်တမ်းတင်ထားသည့် ကိုယ်ရေးအချက်အလက်များ ပါဝင်သည်။ ဤအချက်အလက်နှင့် ပတ်သက်ပြီး သင်ယုံကြည်ရသော လူ၊ အက်ပ်များနှင့်သာ ချွတ်ယွင်းချက်အစီရင်ခံစာကို မျှဝေပါ။\n\n<xliff:g id="APP_NAME_1">%4$s</xliff:g> ကို ချွတ်ယွင်းချက်အစီရင်ခံစာ အပ်လုဒ်လုပ်ခွင့်ပြုမလား။"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"<xliff:g id="APP_NAME">%1$s</xliff:g> အတွက် ချွတ်ယွင်းမှု အစီရင်ခံစာ လုပ်ဆောင်ရာတွင် အမှားဖြစ်သွားသည်။ ထို့ကြောင့် အသေးစိတ် အမှားရှာပြင်သည့် ဒေတာ မျှဝေခြင်းကို ငြင်းဆိုထားပါသည်။ အနှောင့်အယှက်ဖြစ်သွားသည့်အတွက် ဝမ်းနည်းပါသည်။"</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"ခွင့်ပြုရန်"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"ငြင်းပယ်ရန်"</string>
@@ -679,10 +679,14 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"ကန့်သတ်ဆက်တင်"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"သင့်လုံခြုံရေးအတွက် ဤဆက်တင်ကို လောလောဆယ် မရနိုင်ပါ။"</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"ခေါ်ဆိုနေစဉ် လုပ်ဆောင်ချက်ကို အပြီးသတ်၍မရပါ"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="5049619986796367451">"<xliff:g id="SETTING_DESCRIPTION">%1$s</xliff:g>\n\n သင့်စက်နှင့် ဒေတာကို ကာကွယ်ရန်အတွက် ဤဆက်တင်ကို ပိတ်ထားသည်"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_install_desc_prefix" msgid="7153600694011441796">"လူလိမ်များသည် သတင်းအရင်းအမြစ်မှ အမျိုးအမည်မသိအက်ပ်များကို သင့်အား ထည့်သွင်းခိုင်းခြင်းဖြင့် အန္တရာယ်အက်ပ်များ ထည့်သွင်းရန် ကြိုးပမ်းနိုင်သည်။"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc_prefix" msgid="1086282331085551407">"လူလိမ်များသည် အက်ပ်အတွက် အများသုံးနိုင်ခွင့်ပြုရန် တောင်းဆိုခြင်းဖြင့် သင့်စက်ကို ထိန်းချုပ်ရန် ကြိုးပမ်းနိုင်သည်။"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_generic_desc_prefix" msgid="8141411486179553156">"လူလိမ်များသည် ဤဆက်တင်ဖြင့် သင့်စက်ကို ထိခိုက်စေရန် ကြိုးပမ်းနိုင်သည်။"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"သင့်စက်နှင့် ဒေတာကို ကာကွယ်ရန်အတွက် ဤဆက်တင်ကို ပိတ်ထားသည်။ <xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>လူလိမ်များသည် အရင်းအမြစ်အသစ်မှ အမျိုးအမည်မသိအက်ပ်များကို သင့်အား ထည့်သွင်းခိုင်းခြင်းဖြင့် အန္တရာယ်အက်ပ်များ ထည့်သွင်းရန် ကြိုးပမ်းနိုင်သည်။"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>လူလိမ်များသည် အက်ပ်အတွက် အများသုံးနိုင်ခွင့်ပြုရန် တောင်းဆိုခြင်းဖြင့် သင့်စက်ကို ထိန်းချုပ်ရန် ကြိုးပမ်းနိုင်သည်။"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"အက်ပ်ကို <xliff:g id="PERMISSION_NAME">%1$s</xliff:g> သုံးခွင့် ငြင်းပယ်ထားသည်"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"အက်ပ်သည် သင်၏ ပုဂ္ဂိုလ်ရေးနှင့် ငွေကြေးဆိုင်ရာ အချက်အလက်များကို အန္တရာယ်ဖြစ်စေနိုင်သော သတိထားရမည့် ခွင့်ပြုချက်သုံးရန် တောင်းဆိုထားသည်။<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>အက်ပ်သည် ဤကန့်သတ်ထားသော ခွင့်ပြုချက်မရှိပါက ကောင်းစွာမလုပ်ဆောင်ခြင်း ဖြစ်နိုင်သည်။ &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;သုံးခွင့်ပြုနည်းကို လေ့လာရန်&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"အက်ပ်အား မူရင်း <xliff:g id="ROLE_NAME">%1$s</xliff:g> အဖြစ် လုပ်ဆောင်ခွင့် ငြင်းပယ်ထားသည်"</string>

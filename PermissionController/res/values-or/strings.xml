@@ -355,9 +355,9 @@
     <string name="accessibility_service_dialog_title_multiple" msgid="5527879210683548175">"<xliff:g id="NUM_SERVICES">%s</xliff:g>ଟି ଆକ୍ସେସିବିଲିଟୀ ଆପ୍ସର ଆପଣଙ୍କ ଡିଭାଇସ୍‌କୁ ସମ୍ପୂର୍ଣ୍ଣ ଆକ୍ସେସ୍‌ ଅଛି"</string>
     <string name="accessibility_service_dialog_bottom_text_single" msgid="1128666197822205958">"<xliff:g id="SERVICE_NAME">%s</xliff:g> ଆପଣଙ୍କର ସ୍କ୍ରିନ୍‌, କାର୍ଯ୍ୟ ଏବଂ ଇନ୍‌ପୁଟ୍‍ ଦେଖିପାରିବ ଏବଂ କାର୍ଯ୍ୟ ସମ୍ପାଦନ କରିପାରିବ ଏବଂ ଡିସ୍‌ପ୍ଲେ ନିୟନ୍ତ୍ରଣ କରିପାରିବ।"</string>
     <string name="accessibility_service_dialog_bottom_text_multiple" msgid="7009848932395519852">"ଏହି ଆପ୍ସ ଆପଣଙ୍କର ସ୍କ୍ରିନ୍‌, କାର୍ଯ୍ୟକଳାପ ଏବଂ ଇନ୍‌ପୁଟ୍‍ ଦେଖିପାରିବ ଏବଂ କାର୍ଯ୍ୟ ସମ୍ପାଦନ କରିପାରିବ ଏବଂ ଡିସ୍‌ପ୍ଲେ ନିୟନ୍ତ୍ରଣ କରିପାରିବ।"</string>
-    <string name="role_assistant_label" msgid="4727586018198208128">"ଡିଫଲ୍ଟ ଡିଜିଟାଲ୍ Assistant ଆପ୍"</string>
+    <string name="role_assistant_label" msgid="4727586018198208128">"ଡିଫଲ୍ଟ ଡିଜିଟାଲ ସହାୟକ ଆପ"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"ଡିଜିଟାଲ୍ Assistant ଆପ୍"</string>
-    <string name="role_assistant_description" msgid="6622458130459922952">"ଆପଣ ଦେଖୁଥିବା ସ୍କ୍ରିନ୍‌ ସୂଚନାକୁ ଆଧାର କରି ସହାୟକ ଆପ୍‌ ଆପଣଙ୍କୁ ସାହାଯ୍ୟ କରିପାରିବ। କେତେକ ଆପ୍‌, ଆପଣଙ୍କୁ ଉତ୍ତମ ସହାୟତା ଦେବା ପାଇଁ, ଉଭୟ ଲଞ୍ଚର୍ ଓ ଭଏସ୍‍ ଇନପୁଟ୍‍ ସେବାକୁ ସମର୍ଥନ କରେ।"</string>
+    <string name="role_assistant_description" msgid="6622458130459922952">"ଆପଣ ଭ୍ୟୁ କରୁଥିବା ସ୍କ୍ରିନ ସୂଚନାକୁ ଆଧାର କରି ସହାୟକ ଆପ ଆପଣଙ୍କୁ ସାହାଯ୍ୟ କରିପାରିବ। କେତେକ ଆପ ଆପଣଙ୍କୁ ସମ୍ପୂର୍ଣ୍ଣ ସହାୟତା ଦେବା ପାଇଁ ଉଭୟ ଲଞ୍ଚର ଓ ଭଏସ ଇନପୁଟ ସେବାକୁ ସମର୍ଥନ କରେ।"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"ଡିଫଲ୍ଟ ବ୍ରାଉଜର୍‌ ଆପ୍‌"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"ବ୍ରାଉଜର୍‌ ଆପ୍‌"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"ଆପ୍ସ ଯାହା ଆପଣଙ୍କୁ ଇଣ୍ଟର୍ନେଟ ପାଇଁ ଆକ୍ସେସ ଦିଏ ଏବଂ ଆପଣ ଟାପ କରୁଥିବା ଲିଙ୍କଗୁଡ଼ିକୁ ଡିସପ୍ଲେ କରେ"</string>
@@ -460,7 +460,7 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ଡିବଗିଂ ସୂଚନା ଅପ୍‌ଲୋଡ୍ କରିବାକୁ ଚାହାନ୍ତି।"</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"ଡିବଗିଂ ଡାଟା ସେୟାର୍ କରିବେ?"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"ସିଷ୍ଟମ୍ ଗୋଟିଏ ସମସ୍ୟା ଚିହ୍ନଟ କରିଛି"</string>
-    <string name="incident_report_dialog_text" msgid="5675553296891757523">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> <xliff:g id="DATE">%2$s</xliff:g> <xliff:g id="TIME">%3$s</xliff:g>ରେ ଏହି ଡିଭାଇସ୍‌ରୁ ନିଆଯାଇଥିବା ଏକ ବଗ୍ ରିପୋର୍ଟ ଅପ୍‌ଲୋଡ୍ କରିବାକୁ ଅନୁରୋଧ କରୁଛି। ବଗ୍ ରିପୋର୍ଟରେ ଆପଣଙ୍କ ଡିଭାଇସ୍ ସମ୍ବନ୍ଧରେ ବ୍ୟକ୍ତିଗତ ସୂଚନା ବା ଆପ୍ସ ଲଗ୍ କରିଥିବା ବ୍ୟକ୍ତିଗତ ସୂଚନା, ଉଦାହରଣ ସ୍ୱରୂପ ଉପଯୋଗକର୍ତ୍ତାଙ୍କ ନାମ, ଲୋକେସନ୍ ଡାଟା, ଡିଭାଇସ୍ ଚିହ୍ନଟକାରୀ, ଏବଂ ନେଟୱାର୍କ ସୂଚନା ଅନ୍ତର୍ଭୁକ୍ତ ରହିଛି। ଏହି ସୂଚନା ସେୟାର୍ କରିବା ପାଇଁ ଆପଣ ଯାହାକୁ ଭରସା କରୁଛନ୍ତି କେବଳ ସେହି ଲୋକ ଏବଂ ଆପ୍ସ ସହିତ ବଗ୍ ରିପୋର୍ଟ ସେୟାର୍ କରନ୍ତୁ। ଏକ ବଗ୍ ରିପୋର୍ଟ ଅପ୍‌ଲୋଡ୍ କରିବା ପାଇଁ <xliff:g id="APP_NAME_1">%4$s</xliff:g>କୁ ଅନୁମତି ଦେବେ?"</string>
+    <string name="incident_report_dialog_text" msgid="1819244417678973362">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> ଏହି ଡିଭାଇସରୁ <xliff:g id="DATE">%2$s</xliff:g> <xliff:g id="TIME">%3$s</xliff:g>ରେ ନିଆଯାଇଥିବା ଏକ ବଗ ରିପୋର୍ଟ ଅପଲୋଡ କରିବାକୁ ଅନୁରୋଧ କରୁଛି। ବଗ ରିପୋର୍ଟରେ ଆପଣଙ୍କ ଡିଭାଇସ ସମ୍ବନ୍ଧୀୟ ବା ଆପ୍ସ ଲଗ କରିଥିବା ବ୍ୟକ୍ତିଗତ ସୂଚନା, ଉଦାହରଣ ସ୍ୱରୂପ ୟୁଜରନେମ, ଲୋକେସନ ଡାଟା, ଡିଭାଇସ ଚିହ୍ନଟକାରୀ ଏବଂ ନେଟୱାର୍କ ସୂଚନା ଅନ୍ତର୍ଭୁକ୍ତ ରହିଛି। ଏହି ସୂଚନା ସେୟାର କରିବା ପାଇଁ ଆପଣ ଯାହାକୁ ବିଶ୍ୱାସ କରୁଛନ୍ତି କେବଳ ସେହି ଲୋକ ଏବଂ ଆପ୍ସ ସହିତ ବଗ ରିପୋର୍ଟ ସେୟାର କରନ୍ତୁ।\n\nଏକ ବଗ ରିପୋର୍ଟ ଅପଲୋଡ କରିବା ପାଇଁ <xliff:g id="APP_NAME_1">%4$s</xliff:g>କୁ ଅନୁମତି ଦେବେ?"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"<xliff:g id="APP_NAME">%1$s</xliff:g> ପାଇଁ ବଗ୍ ରିପୋର୍ଟ ପ୍ରକ୍ରିୟାକରଣରେ ଏକ ତ୍ରୁଟି ହୋଇଛି। ତେଣୁ ଡିବଗିଂ ବିବରଣୀ ଡାଟା ସେୟାରିଂ ପ୍ରତ୍ୟାକ୍ଷାନ ହୋଇଛି। ଅସୁବିଧା ପାଇଁ ଦୁଃଖିତ।"</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"ଅଗ୍ରାହ୍ୟ କରନ୍ତୁ"</string>
@@ -679,10 +679,14 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"ପ୍ରତିବନ୍ଧିତ ସେଟିଂ"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"ଆପଣଙ୍କ ସୁରକ୍ଷା ପାଇଁ ଏହି ସେଟିଂ ବର୍ତ୍ତମାନ ଅନୁପଲବ୍ଧ ଅଟେ।"</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"କଲ ସମୟରେ କାର୍ଯ୍ୟ ସମ୍ପୂର୍ଣ୍ଣ କରାଯାଇପାରିବ ନାହିଁ"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="5049619986796367451">"<xliff:g id="SETTING_DESCRIPTION">%1$s</xliff:g>\n\n ଆପଣଙ୍କ ଡିଭାଇସ ଏବଂ ଡାଟାକୁ ସୁରକ୍ଷିତ ରଖିବା ପାଇଁ ଏହି ସେଟିଂକୁ ବ୍ଲକ କରାଯାଇଛି"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_install_desc_prefix" msgid="7153600694011441796">"ସ୍କାମରମାନେ ଆପଣଙ୍କୁ ଏକ ନୂଆ ସୋର୍ସରୁ ଅଜଣା ଆପ୍ସ ଇନଷ୍ଟଲ କରିବାକୁ କହି କ୍ଷତିକାରକ ଆପ୍ସ ଇନଷ୍ଟଲ କରିବାକୁ ଚେଷ୍ଟା କରିପାରନ୍ତି।"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc_prefix" msgid="1086282331085551407">"ସ୍କାମରମାନେ ଆପଣଙ୍କୁ ଏକ ଆପ ପାଇଁ ଆକ୍ସେସିବିଲିଟୀ ଆକ୍ସେସ ଅନୁମତି ଦେବାକୁ କହି ଆପଣଙ୍କ ଡିଭାଇସକୁ ନିୟନ୍ତ୍ରଣ କରିବାକୁ ଚେଷ୍ଟା କରିପାରନ୍ତି।"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_generic_desc_prefix" msgid="8141411486179553156">"ଏହି ସେଟିଂ ମାଧ୍ୟମରେ ସ୍କାମରମାନେ ଆପଣଙ୍କ ଡିଭାଇସକୁ କ୍ଷତି ପହଞ୍ଚାଇବାକୁ ପ୍ରଚେଷ୍ଟା କରିପାରନ୍ତି।"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"ଆପଣଙ୍କ ଡିଭାଇସ ଏବଂ ଡାଟାକୁ ସୁରକ୍ଷିତ ରଖିବା ପାଇଁ ଏହି ସେଟିଂକୁ ବ୍ଲକ କରାଯାଇଛି।<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>ସ୍କାମରମାନେ ଆପଣଙ୍କୁ ଏକ ନୂଆ ସୋର୍ସରୁ ଅଜଣା ଆପ୍ସ ଇନଷ୍ଟଲ କରିବାକୁ କହି କ୍ଷତିକାରକ ଆପ୍ସ ଇନଷ୍ଟଲ କରିବାକୁ ଚେଷ୍ଟା କରିପାରନ୍ତି।"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>ସ୍କାମରମାନେ ଆପଣଙ୍କୁ ଏକ ଆପ ପାଇଁ ଆକ୍ସେସିବିଲିଟୀ ଆକ୍ସେସ ଅନୁମତି ଦେବାକୁ କହି ଆପଣଙ୍କ ଡିଭାଇସକୁ ନିୟନ୍ତ୍ରଣ କରିବାକୁ ଚେଷ୍ଟା କରିପାରନ୍ତି।"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"<xliff:g id="PERMISSION_NAME">%1$s</xliff:g>କୁ ଆପର ଆକ୍ସେସକୁ ଅଗ୍ରାହ୍ୟ କରାଯାଇଛି"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"ଆପଣଙ୍କ ବ୍ୟକ୍ତିଗତ ଏବଂ ଆର୍ଥିକ ସୂଚନାକୁ ବିପଦରେ ପକାଇପାରୁଥିବା ଏକ ସମ୍ବେଦନଶୀଳ ଅନୁମତିକୁ ଆକ୍ସେସ କରିବା ପାଇଁ ଏହି ଆପଟି ଅନୁରୋଧ କରିଛି।<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>ଏହା ସମ୍ଭବ ଯେ ଏହି ପ୍ରତିବନ୍ଧିତ ଅନୁମତି ବିନା ଆପ ସଠିକ ଭାବେ କାର୍ଯ୍ୟ କରିବ ନାହିଁ। &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;ଆକ୍ସେସକୁ କିପରି ଅନୁମତି ଦେବେ ତାହା ଜାଣନ୍ତୁ&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"ଡିଫଲ୍ଟ <xliff:g id="ROLE_NAME">%1$s</xliff:g> ହେବା ପାଇଁ ଆପର ଆକ୍ସେସକୁ ଅଗ୍ରାହ୍ୟ କରାଯାଇଛି"</string>

@@ -460,7 +460,7 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ਡੀਬੱਗਿੰਗ ਜਾਣਕਾਰੀ ਨੂੰ ਅੱਪਲੋਡ ਕਰਨਾ ਚਾਹੁੰਦੀ ਹੈ।"</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"ਕੀ ਡੀਬੱਗਿੰਗ ਡਾਟਾ ਸਾਂਝਾ ਕਰਨਾ ਹੈ?"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"ਸਿਸਟਮ ਵਿੱਚ ਕਿਸੇ ਸਮੱਸਿਆ ਦਾ ਪਤਾ ਲੱਗਿਆ।"</string>
-    <string name="incident_report_dialog_text" msgid="5675553296891757523">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> ਇਸ ਡੀਵਾਈਸ ਤੋਂ <xliff:g id="DATE">%2$s</xliff:g> ਨੂੰ <xliff:g id="TIME">%3$s</xliff:g> ਵਜੇ ਬਣਾਈ ਗਈ ਬੱਗ ਰਿਪੋਰਟ ਨੂੰ ਅੱਪਲੋਡ ਕਰਨ ਲਈ ਬੇਨਤੀ ਕਰ ਰਹੀ ਹੈ। ਬੱਗ ਰਿਪੋਰਟਾਂ ਵਿੱਚ ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਬਾਰੇ ਜਾਂ ਐਪਾਂ ਵੱਲੋਂ ਲੌਗ ਕੀਤੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਸ਼ਾਮਲ ਹੁੰਦੀ ਹੈ, ਉਦਾਹਰਨ ਲਈ, ਵਰਤੋਂਕਾਰ ਨਾਮ, ਟਿਕਾਣਾ ਡਾਟਾ, ਡੀਵਾਈਸ ਪਛਾਣਕਰਤਾ ਅਤੇ ਨੈੱਟਵਰਕ ਜਾਣਕਾਰੀ। ਬੱਗ ਰਿਪੋਰਟਾਂ ਸਿਰਫ਼ ਉਹਨਾਂ ਲੋਕਾਂ ਅਤੇ ਐਪਾਂ ਨਾਲ ਸਾਂਝੀਆਂ ਕਰੋ ਜਿਨ੍ਹਾਂ \'ਤੇ ਤੁਸੀਂ ਇਸ ਜਾਣਕਾਰੀ ਨੂੰ ਲੈ ਕੇ ਭਰੋਸਾ ਕਰਦੇ ਹੋ। ਕੀ <xliff:g id="APP_NAME_1">%4$s</xliff:g> ਨੂੰ ਬੱਗ ਰਿਪੋਰਟ ਅੱਪਲੋਡ ਕਰਨ ਦੇਣੀ ਹੈ?"</string>
+    <string name="incident_report_dialog_text" msgid="1819244417678973362">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> ਇਸ ਡੀਵਾਈਸ ਤੋਂ <xliff:g id="DATE">%2$s</xliff:g> ਨੂੰ <xliff:g id="TIME">%3$s</xliff:g> ਵਜੇ ਬਣਾਈ ਗਈ ਬੱਗ ਰਿਪੋਰਟ ਨੂੰ ਅੱਪਲੋਡ ਕਰਨ ਲਈ ਬੇਨਤੀ ਕਰ ਰਹੀ ਹੈ। ਬੱਗ ਰਿਪੋਰਟਾਂ ਵਿੱਚ ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਬਾਰੇ ਜਾਂ ਐਪਾਂ ਵੱਲੋਂ ਲੌਗ ਕੀਤੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਸ਼ਾਮਲ ਹੁੰਦੀ ਹੈ, ਉਦਾਹਰਨ ਲਈ, ਵਰਤੋਂਕਾਰ ਨਾਮ, ਟਿਕਾਣੇ ਦਾ ਡਾਟਾ, ਡੀਵਾਈਸ ਪਛਾਣਕਰਤਾ ਅਤੇ ਨੈੱਟਵਰਕ ਜਾਣਕਾਰੀ। ਬੱਗ ਰਿਪੋਰਟਾਂ ਸਿਰਫ਼ ਉਨ੍ਹਾਂ ਲੋਕਾਂ ਅਤੇ ਐਪਾਂ ਨਾਲ ਸਾਂਝੀਆਂ ਕਰੋ, ਜਿਨ੍ਹਾਂ \'ਤੇ ਤੁਸੀਂ ਇਸ ਜਾਣਕਾਰੀ ਨੂੰ ਲੈ ਕੇ ਭਰੋਸਾ ਕਰਦੇ ਹੋ।\n\nਕੀ <xliff:g id="APP_NAME_1">%4$s</xliff:g> ਨੂੰ ਬੱਗ ਰਿਪੋਰਟ ਅੱਪਲੋਡ ਕਰਨ ਦੇਣੀ ਹੈ?"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"<xliff:g id="APP_NAME">%1$s</xliff:g> ਦੀ ਬੱਗ ਰਿਪੋਰਟ \'ਤੇ ਪ੍ਰਕਿਰਿਆ ਕਰਨ ਵੇਲੇ ਗੜਬੜ ਹੋ ਗਈ। ਇਸ ਕਰਕੇ ਵੇਰਵੇ-ਸਹਿਤ ਡੀਬੱਗ ਡਾਟੇ ਨੂੰ ਸਾਂਝਾ ਕਰਨ ਤੋਂ ਮਨ੍ਹਾ ਕੀਤਾ ਗਿਆ। ਰੁਕਾਵਟ ਲਈ ਮਾਫ਼ੀ।"</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"ਕਰਨ ਦਿਓ"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"ਨਾ ਕਰਨ ਦਿਓ"</string>
@@ -679,10 +679,14 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"ਪ੍ਰਤਿਬੰਧਿਤ ਸੈਟਿੰਗਾਂ"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"ਤੁਹਾਡੀ ਸੁਰੱਖਿਆ ਲਈ, ਫ਼ਿਲਹਾਲ ਇਹ ਸੈਟਿੰਗ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।"</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"ਕਾਲ ਦੌਰਾਨ ਇਹ ਕਾਰਵਾਈ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="5049619986796367451">"<xliff:g id="SETTING_DESCRIPTION">%1$s</xliff:g>\n\n ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਅਤੇ ਡਾਟੇ ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੱਖਣ ਲਈ ਇਸ ਸੈਟਿੰਗ ਨੂੰ ਬਲਾਕ ਕੀਤਾ ਗਿਆ ਹੈ"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_install_desc_prefix" msgid="7153600694011441796">"ਘਪਲੇਬਾਜ਼ ਤੁਹਾਨੂੰ ਕਿਸੇ ਨਵੇਂ ਸਰੋਤ ਤੋਂ ਅਗਿਆਤ ਐਪਾਂ ਸਥਾਪਤ ਕਰਨ ਲਈ ਕਹਿ ਕੇ ਨੁਕਸਾਨਦੇਹ ਐਪਾਂ ਸਥਾਪਤ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਸਕਦੇ ਹਨ।"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc_prefix" msgid="1086282331085551407">"ਘਪਲੇਬਾਜ਼ ਤੁਹਾਡੇ ਤੋਂ ਕਿਸੇ ਐਪ ਲਈ ਪਹੁੰਚਯੋਗਤਾ ਤੱਕ ਪਹੁੰਚ ਦੀ ਮੰਗ ਕਰ ਕੇ ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਨੂੰ ਕੰਟਰੋਲ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਸਕਦੇ ਹਨ।"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_generic_desc_prefix" msgid="8141411486179553156">"ਘਪਲੇਬਾਜ਼ ਇਸ ਸੈਟਿੰਗ ਨਾਲ ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਨੂੰ ਨੁਕਸਾਨ ਪਹੁੰਚਾਉਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਸਕਦੇ ਹਨ।"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਅਤੇ ਡਾਟੇ ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੱਖਣ ਲਈ ਇਸ ਸੈਟਿੰਗ ਨੂੰ ਬਲਾਕ ਕੀਤਾ ਗਿਆ ਹੈ।<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>ਘਪਲੇਬਾਜ਼ ਤੁਹਾਨੂੰ ਕਿਸੇ ਨਵੇਂ ਸਰੋਤ ਤੋਂ ਅਗਿਆਤ ਐਪਾਂ ਸਥਾਪਤ ਕਰਨ ਲਈ ਕਹਿ ਕੇ ਨੁਕਸਾਨਦੇਹ ਐਪਾਂ ਸਥਾਪਤ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਸਕਦੇ ਹਨ।"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>ਘਪਲੇਬਾਜ਼ ਤੁਹਾਡੇ ਤੋਂ ਕਿਸੇ ਐਪ ਲਈ ਪਹੁੰਚਯੋਗਤਾ ਤੱਕ ਪਹੁੰਚ ਦੀ ਮੰਗ ਕਰ ਕੇ ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਨੂੰ ਕੰਟਰੋਲ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਸਕਦੇ ਹਨ।"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"ਐਪ ਨੂੰ <xliff:g id="PERMISSION_NAME">%1$s</xliff:g> ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੀ ਆਗਿਆ ਨਹੀਂ ਦਿੱਤੀ ਗਈ"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"ਐਪ ਨੇ ਸੰਵੇਦਨਸ਼ੀਲ ਇਜਾਜ਼ਤ ਤੱਕ ਪਹੁੰਚ ਦੀ ਬੇਨਤੀ ਕੀਤੀ ਹੈ, ਜਿਸ ਨਾਲ ਤੁਹਾਡੀ ਨਿੱਜੀ ਅਤੇ ਵਿੱਤੀ ਜਾਣਕਾਰੀ ਜੋਖਮ ਵਿੱਚ ਪੈ ਸਕਦੀ ਹੈ।<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>ਇਹ ਸੰਭਵ ਹੈ, ਕਿ ਐਪ ਇਸ ਪ੍ਰਤਿਬੰਧਿਤ ਇਜਾਜ਼ਤ ਤੋਂ ਬਿਨਾਂ ਸਹੀ ਢੰਗ ਨਾਲ ਕੰਮ ਨਾ ਕਰੇ। &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;ਪਹੁੰਚ ਕਰਨ ਦੀ ਆਗਿਆ ਦੇਣ ਦੇ ਤਰੀਕੇ ਬਾਰੇ ਜਾਣੋ&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"ਐਪ ਨੂੰ ਪੂਰਵ-ਨਿਰਧਾਰਿਤ <xliff:g id="ROLE_NAME">%1$s</xliff:g> ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੀ ਆਗਿਆ ਨਹੀਂ ਦਿੱਤੀ ਗਈ"</string>

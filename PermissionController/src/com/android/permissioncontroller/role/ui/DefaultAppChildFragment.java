@@ -25,6 +25,7 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Process;
 import android.os.UserHandle;
 import android.util.ArrayMap;
 
@@ -351,6 +352,8 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
     public boolean onPreferenceClick(@NonNull Preference preference) {
         String key = preference.getKey();
         if (Objects.equals(key, PREFERENCE_KEY_NONE)) {
+            PermissionControllerStatsLog.write(
+                    ROLE_SETTINGS_FRAGMENT_ACTION_REPORTED, Process.INVALID_UID, null, mRoleName);
             mViewModel.setNoneDefaultApp();
         } else {
             String packageName =

@@ -27,6 +27,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeightIn
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
@@ -194,6 +195,11 @@ private fun WearPermissionScaffoldInternal(
 
     val scalingListState = rememberScalingLazyListState()
     val transformingLazyColumnState = rememberTransformingLazyColumnState()
+    LaunchedEffect(title, subtitle) {
+        // When the title/subtitle changes go to the top. Ex: A chain of permission requests.
+        scalingListState.scrollToItem(index = 0)
+        transformingLazyColumnState.scrollToItem(index = 0)
+    }
     val listState = if (asScalingList) scalingListState else transformingLazyColumnState
     val scrollInfoProvider =
         if (asScalingList) ScrollInfoProvider(scalingListState)

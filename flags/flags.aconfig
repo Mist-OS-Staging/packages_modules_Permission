@@ -165,3 +165,12 @@ flag {
     bug: "388234667"
     is_fixed_read_only: true
 }
+
+flag {
+    name: "fix_safety_center_touch_target"
+    is_exported: true
+    namespace: "permissions"
+    description: "This flag fixes an issue with the SafetyCenterTouchTarget code"
+    bug: "399872661"
+    is_fixed_read_only: true
+}

@@ -22,6 +22,7 @@ import android.view.TouchDelegate
 import android.view.View
 import androidx.annotation.DimenRes
 import androidx.annotation.RequiresApi
+import com.android.permission.flags.Flags
 
 /** Class to configure touch targets for Safety Center. */
 @RequiresApi(Build.VERSION_CODES.TIRAMISU)
@@ -43,8 +44,7 @@ object SafetyCenterTouchTarget {
         @DimenRes minTouchTargetSizeResource: Int,
         useWidthHeightFix: Boolean,
     ) {
-        // TODO: b/399872661 - Look into fixing all call sites and remove this boolean.
-        if (useWidthHeightFix) {
+        if (useWidthHeightFix || Flags.fixSafetyCenterTouchTarget()) {
             configureSizeUsingBothWidthAndHeight(view, minTouchTargetSizeResource)
         } else {
             configureSizeUsingWidthOnly(view, minTouchTargetSizeResource)

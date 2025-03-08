@@ -123,7 +123,6 @@ class CameraMicIndicatorsPermissionTest : StsExtraBusinessLogicTestCase {
             .toString()
     private val cameraLabel = originalCameraLabel.lowercase()
     private val micLabel = originalMicLabel.lowercase()
-    private var wasEnabled = false
     private var isScreenOn = false
     private var screenTimeoutBeforeTest: Long = 0L
     private lateinit var carMicPrivacyChipId: String
@@ -181,7 +180,6 @@ class CameraMicIndicatorsPermissionTest : StsExtraBusinessLogicTestCase {
             isScreenOn = true
         }
         uiDevice.findObject(By.text("Close"))?.click()
-        wasEnabled = setIndicatorsEnabledStateIfNeeded(true)
         // If the change Id is not present, then isChangeEnabled will return true. To bypass this,
         // the change is set to "false" if present.
         assumeFalse(
@@ -191,23 +189,6 @@ class CameraMicIndicatorsPermissionTest : StsExtraBusinessLogicTestCase {
             },
         )
         install()
-    }
-
-    private fun setIndicatorsEnabledStateIfNeeded(shouldBeEnabled: Boolean): Boolean {
-        var currentlyEnabled = false
-        runWithShellPermissionIdentity {
-            currentlyEnabled =
-                DeviceConfig.getBoolean(DeviceConfig.NAMESPACE_PRIVACY, INDICATORS_FLAG, true)
-            if (currentlyEnabled != shouldBeEnabled) {
-                DeviceConfig.setProperty(
-                    DeviceConfig.NAMESPACE_PRIVACY,
-                    INDICATORS_FLAG,
-                    shouldBeEnabled.toString(),
-                    false,
-                )
-            }
-        }
-        return currentlyEnabled
     }
 
     @After
@@ -225,9 +206,6 @@ class CameraMicIndicatorsPermissionTest : StsExtraBusinessLogicTestCase {
             { assertIndicatorsShown(false, false, false) },
             AUTO_MIC_INDICATOR_DISMISSAL_TIMEOUT_MS,
         )
-        if (!wasEnabled) {
-            setIndicatorsEnabledStateIfNeeded(false)
-        }
         runWithShellPermissionIdentity {
             Settings.System.putLong(
                 context.contentResolver,

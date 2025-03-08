@@ -357,7 +357,7 @@
     <string name="accessibility_service_dialog_bottom_text_multiple" msgid="7009848932395519852">"Estas aplicaciones pueden ver tu pantalla, lo que haces y lo que introduces; realizar acciones; y controlar la pantalla."</string>
     <string name="role_assistant_label" msgid="4727586018198208128">"Aplicación de asistente digital predeterminada"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"Aplicación de asistente digital"</string>
-    <string name="role_assistant_description" msgid="6622458130459922952">"Las aplicaciones de asistencia te ayudan según la información que aparezca en la pantalla. Algunas aplicaciones admiten tanto el menú de aplicaciones como los servicios de entrada de voz para ofrecerte asistencia integrada."</string>
+    <string name="role_assistant_description" msgid="6622458130459922952">"Las aplicaciones de asistencia te ayudan a partir de la información que aparezca en la pantalla. Algunas aplicaciones admiten tanto el menú de aplicaciones como los servicios de entrada de voz para ofrecerte asistencia integrada."</string>
     <string name="role_browser_label" msgid="2877796144554070207">"Aplicación de navegador predeterminada"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"Aplicación de navegador"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"Son las aplicaciones que te permiten acceder a Internet y abren los enlaces que tocas"</string>
@@ -460,7 +460,7 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> quiere subir información de depuración."</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"¿Quieres compartir datos de depuración?"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"El sistema ha detectado un problema."</string>
-    <string name="incident_report_dialog_text" msgid="5675553296891757523">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> solicita subir el informe de errores de este dispositivo generado el <xliff:g id="DATE">%2$s</xliff:g> a las <xliff:g id="TIME">%3$s</xliff:g>. Los informes de errores incluyen información personal sobre el dispositivo o datos registrados por las aplicaciones, como nombres de usuario, datos de ubicación, identificadores del dispositivo e información de red. Comparte estos informes únicamente con personas y aplicaciones de confianza. ¿Permitir que <xliff:g id="APP_NAME_1">%4$s</xliff:g> suba un informe de errores?"</string>
+    <string name="incident_report_dialog_text" msgid="1819244417678973362">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> solicita subir el informe de errores de este dispositivo generado el <xliff:g id="DATE">%2$s</xliff:g> a las <xliff:g id="TIME">%3$s</xliff:g>. Los informes de errores incluyen información personal sobre el dispositivo o datos registrados por las aplicaciones, como nombres de usuario, datos de ubicación, identificadores del dispositivo e información de red. Comparte estos informes únicamente con personas y aplicaciones de confianza.\n\n¿Permitir que <xliff:g id="APP_NAME_1">%4$s</xliff:g> suba un informe de errores?"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"No se ha podido procesar el informe de errores de <xliff:g id="APP_NAME">%1$s</xliff:g>, por lo que no se han podido compartir los datos de depuración detallados. Sentimos las molestias."</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"Permitir"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"Denegar"</string>
@@ -678,11 +678,15 @@
     <string name="allow_restricted_settings" msgid="8073000189478396881">"Permitir ajustes restringidos"</string>
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"Ajuste restringido"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"Por seguridad, este ajuste no está disponible actualmente."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"No se puede completar la acción durante la llamada"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="5049619986796367451">"<xliff:g id="SETTING_DESCRIPTION">%1$s</xliff:g>\n\n Este ajuste está bloqueado para proteger tu dispositivo y tus datos"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_install_desc_prefix" msgid="7153600694011441796">"Los estafadores pueden pedirte que instales aplicaciones de una fuente nueva para instalar aplicaciones dañinas."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc_prefix" msgid="1086282331085551407">"Los estafadores pueden solicitarte acceso a los ajustes de accesibilidad de una aplicación para intentar tomar el control de tu dispositivo."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_generic_desc_prefix" msgid="8141411486179553156">"Los estafadores pueden intentar dañar tu dispositivo con este ajuste."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"No se puede completar la acción durante una llamada"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"Este ajuste está bloqueado para proteger tu dispositivo y tus datos.<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Los estafadores pueden pedirte que instales aplicaciones de una fuente nueva para instalar aplicaciones dañinas."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Los estafadores pueden solicitarte acceso a los ajustes de accesibilidad de una aplicación para intentar tomar el control de tu dispositivo."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"Se ha denegado el acceso a <xliff:g id="PERMISSION_NAME">%1$s</xliff:g> a la aplicación"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"La aplicación ha solicitado acceso a un permiso sensible que puede poner en riesgo tu información personal y financiera.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Es posible que la aplicación no funcione correctamente sin este permiso restringido. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Consulta cómo permitir el acceso&lt;/a&gt;."</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"Se ha denegado el acceso para que la aplicación sea <xliff:g id="ROLE_NAME">%1$s</xliff:g> predeterminada"</string>

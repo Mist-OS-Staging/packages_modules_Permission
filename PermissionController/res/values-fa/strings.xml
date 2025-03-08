@@ -275,7 +275,7 @@
     <string name="unused_apps_notification_content" msgid="9195026773244581246">"اجازه‌ها و فایل‌های موقت حذف شده‌اند و اعلان‌ها متوقف شده‌اند. برای مرور، تک‌ضرب بزنید."</string>
     <string name="unused_apps_safety_center_card_title" msgid="5638409355530099149">"مرور برنامه‌هایی که اجازه‌های آن‌ها برداشته شده است"</string>
     <string name="unused_apps_safety_center_card_content" msgid="1088557243627427820">"اجازه‌ها و فایل‌های موقت مربوط به برنامه‌هایی که مدتی از آن‌ها استفاده نکرده‌اید برداشته شدند و اعلان‌ها متوقف شدند."</string>
-    <string name="unused_apps_safety_center_action_title" msgid="8865914432518993194">"مرور برنامه‌ها"</string>
+    <string name="unused_apps_safety_center_action_title" msgid="8865914432518993194">"بازبینی برنامه‌ها"</string>
     <string name="post_drive_permission_decision_reminder_title" msgid="1290697371418139976">"بررسی اجازه‌های اخیر"</string>
     <string name="post_drive_permission_decision_reminder_summary_1_app_1_permission" msgid="670521503734140711">"درحین رانندگی، به <xliff:g id="APP">%1$s</xliff:g> اجازه دسترسی به <xliff:g id="PERMISSION">%2$s</xliff:g> را دادید"</string>
     <string name="post_drive_permission_decision_reminder_summary_1_app_2_permissions" msgid="671791184670801301">"درحین رانندگی، به <xliff:g id="APP">%1$s</xliff:g> اجازه دسترسی به <xliff:g id="PERMISSION_1">%2$s</xliff:g> و <xliff:g id="PERMISSION_2">%3$s</xliff:g> را دادید"</string>
@@ -460,7 +460,7 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> می‌خواهد اطلاعات اشکال‌زدایی را بارگذاری کند."</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"داده‌های اشکال‌زدایی هم‌رسانی شود؟"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"سیستم مشکلی را تشخیص داده است."</string>
-    <string name="incident_report_dialog_text" msgid="5675553296891757523">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> درخواست بارگذاری گزارش اشکالی را دارد که در <xliff:g id="DATE">%2$s</xliff:g> ساعت <xliff:g id="TIME">%3$s</xliff:g> در این دستگاه پیش آمده است. گزارش‌های اشکال شامل اطلاعات شخصی درباره دستگاه شما است یا اطلاعاتی که توسط برنامه‌ها گزارش شده است، برای مثال نام‌های کاربر، داده‌های مکان، شناسه‌های دستگاه و اطلاعات شبکه. گزارش‌های اشکال را تنها با افراد و برنامه‌هایی هم‌رسانی کنید که به آن‌ها در این‌باره اعتماد دارید. به <xliff:g id="APP_NAME_1">%4$s</xliff:g> اجازه بارگذاری گزارش اشکال داده شود؟"</string>
+    <string name="incident_report_dialog_text" msgid="1819244417678973362">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> درخواست بارگذاری گزارش اشکالی را دارد که در <xliff:g id="DATE">%2$s</xliff:g> ساعت <xliff:g id="TIME">%3$s</xliff:g> در این دستگاه پیش آمده است. گزارش‌های اشکال شامل اطلاعات شخصی درباره دستگاه شما است یا اطلاعاتی که توسط برنامه‌ها گزارش شده است، برای مثال، نام‌های کاربری، داده‌های مکان، شناسه‌های دستگاه و اطلاعات شبکه. گزارش‌های اشکال را فقط با افراد و برنامه‌هایی هم‌رسانی کنید که به آن‌ها در این‌باره اعتماد دارید.\n\nبه <xliff:g id="APP_NAME_1">%4$s</xliff:g> اجازه بارگذاری گزارش اشکال داده شود؟"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"هنگام پردازش گزارش اشکال برای <xliff:g id="APP_NAME">%1$s</xliff:g> خطایی رخ داد. بنابراین هم‌رسانی داده‌های اشکال‌زدایی دقیق رد شد. از وقفه پیش‌آمده پوزش می‌طلبیم."</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"اجازه دادن"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"مجاز نبودن"</string>
@@ -679,10 +679,14 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"تنظیم محدودشده"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"برای حفظ امنیت شما، درحال‌حاضر این تنظیم دردسترس نیست."</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"این کنش درطول تماس تکمیل نمی‌شود"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="5049619986796367451">"<xliff:g id="SETTING_DESCRIPTION">%1$s</xliff:g>\n\n برای محافظت از دستگاه و داده‌های شما، این تنظیم مسدود شده است"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_install_desc_prefix" msgid="7153600694011441796">"کلاهبرداران ممکن است با درخواست نصب برنامه‌های ناشناس از منبعی جدید، تلاش کنند برنامه‌های مضر نصب کنند."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc_prefix" msgid="1086282331085551407">"کلاهبرداران ممکن است با درخواست مجاز کردن دسترسی به تنظیم دسترس‌پذیری برنامه‌ای، تلاش کنند کنترل دستگاهتان را به‌دست بگیرند."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_generic_desc_prefix" msgid="8141411486179553156">"کلاهبرداران ممکن است بخواهند بااستفاده از این تنظیم به دستگاهتان آسیب برسانند."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"برای محافظت از دستگاه و داده‌های شما، این تنظیم مسدود شده است.<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>کلاهبرداران ممکن است با درخواست نصب برنامه‌های ناشناس از منبعی جدید تلاش کنند برنامه‌های مضر نصب کنند."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>کلاهبرداران ممکن است با درخواست مجاز کردن دسترسی به تنظیم دسترس‌پذیری یکی از برنامه‌ها تلاش کنند کنترل دستگاهتان را به‌دست بگیرند."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"درخواست برنامه برای دسترسی به <xliff:g id="PERMISSION_NAME">%1$s</xliff:g> رد شد"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"‏این برنامه درخواست دسترسی به اجازه‌ای حساس را داشته است که می‌تواند اطلاعات شخصی و مالی‌تان را درمعرض خطر قرار دهد.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>ممکن است برنامه بدون این اجازه محدودشده به‌درستی کار نکند. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;با نحوه اعطای دسترسی آشنا شوید&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"درخواست دسترسی برنامه برای تبدیل شدن به <xliff:g id="ROLE_NAME">%1$s</xliff:g> پیش‌فرض رد شد"</string>

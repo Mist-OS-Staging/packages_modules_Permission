@@ -21,6 +21,9 @@ import android.os.Build
 import android.os.Build.VERSION_CODES.TIRAMISU
 import android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE
 import android.os.Bundle
+import android.platform.test.annotations.RequiresFlagsDisabled
+import android.platform.test.flag.junit.CheckFlagsRule
+import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import android.safetycenter.SafetyCenterManager.EXTRA_SAFETY_SOURCE_ID
 import android.safetycenter.SafetyCenterManager.EXTRA_SAFETY_SOURCE_ISSUE_ID
 import android.safetycenter.SafetySourceData.SEVERITY_LEVEL_CRITICAL_WARNING
@@ -74,6 +77,7 @@ import com.android.safetycenter.testing.UiTestHelper.waitPageTitleDisplayed
 import com.android.safetycenter.testing.UiTestHelper.waitSourceDataDisplayed
 import com.android.safetycenter.testing.UiTestHelper.waitSourceIssueDisplayed
 import com.android.safetycenter.testing.UiTestHelper.waitSourceIssueNotDisplayed
+import com.android.settingslib.widget.theme.flags.Flags as SettingsThemeFlags
 import java.util.regex.Pattern
 import org.junit.After
 import org.junit.Assume.assumeFalse
@@ -95,6 +99,8 @@ class SafetyCenterActivityTest {
     @get:Rule(order = 2) val safetyCenterTestRule = SafetyCenterTestRule(safetyCenterTestHelper)
     @get:Rule(order = 3) val disableAnimationRule = DisableAnimationRule()
     @get:Rule(order = 4) val freezeRotationRule = FreezeRotationRule()
+    @get:Rule(order = 5)
+    val checkFlagsRule: CheckFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
 
     @After
     fun clearDataAfterTest() {
@@ -567,6 +573,8 @@ class SafetyCenterActivityTest {
     }
 
     @Test
+    // TODO: b/398188361 - Update this for expressive theme
+    @RequiresFlagsDisabled(SettingsThemeFlags.FLAG_IS_EXPRESSIVE_DESIGN_ENABLED)
     fun issueCard_noAttribution_hasProperContentDescriptions() {
         safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.issueOnlySourceNoGroupTitleConfig)
 
@@ -581,6 +589,8 @@ class SafetyCenterActivityTest {
 
     @Test
     @SdkSuppress(minSdkVersion = UPSIDE_DOWN_CAKE)
+    // TODO: b/398188361 - Update this for expressive theme
+    @RequiresFlagsDisabled(SettingsThemeFlags.FLAG_IS_EXPRESSIVE_DESIGN_ENABLED)
     fun issueCard_withAttribution_hasProperContentDescriptions() {
         safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.singleSourceConfig)
 
@@ -693,7 +703,7 @@ class SafetyCenterActivityTest {
 
     @Test
     fun issueCard_resolveIssue_successConfirmationShown() {
-        SafetyCenterFlags.hideResolvedIssueUiTransitionDelay = TIMEOUT_LONG
+        SafetyCenterFlags.setHideResolvedIssueUiTransitionDelay(context, TIMEOUT_LONG)
         safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.singleSourceConfig)
 
         // Set the initial data for the source
@@ -829,7 +839,7 @@ class SafetyCenterActivityTest {
 
     @Test
     fun issueCard_resolveIssue_noSuccessMessage_noResolutionUiShown_issueDismisses() {
-        SafetyCenterFlags.hideResolvedIssueUiTransitionDelay = TIMEOUT_LONG
+        SafetyCenterFlags.setHideResolvedIssueUiTransitionDelay(context, TIMEOUT_LONG)
         safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.singleSourceConfig)
 
         // Set the initial data for the source
@@ -954,6 +964,8 @@ class SafetyCenterActivityTest {
     }
 
     @Test
+    // TODO: b/379849464 - Fix this for expressive design and stop disabling this flag
+    @RequiresFlagsDisabled(SettingsThemeFlags.FLAG_IS_EXPRESSIVE_DESIGN_ENABLED)
     fun launchActivity_fromQuickSettings_issuesExpanded() {
         safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.multipleSourcesConfig)
         safetyCenterTestHelper.setData(
@@ -978,6 +990,8 @@ class SafetyCenterActivityTest {
     }
 
     @Test
+    // TODO: b/379849464 - Fix this for expressive design and stop disabling this flag
+    @RequiresFlagsDisabled(SettingsThemeFlags.FLAG_IS_EXPRESSIVE_DESIGN_ENABLED)
     fun launchActivity_fromNotification_targetIssueAlreadyFirstIssue() {
         safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.multipleSourcesConfig)
         safetyCenterTestHelper.setData(
@@ -1003,6 +1017,8 @@ class SafetyCenterActivityTest {
     }
 
     @Test
+    // TODO: b/379849464 - Fix this for expressive design and stop disabling this flag
+    @RequiresFlagsDisabled(SettingsThemeFlags.FLAG_IS_EXPRESSIVE_DESIGN_ENABLED)
     fun launchActivity_fromNotification_targetIssueSamePriorityAsFirstIssue_reorderedFirstIssue() {
         safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.multipleSourcesConfig)
         safetyCenterTestHelper.setData(
@@ -1028,6 +1044,8 @@ class SafetyCenterActivityTest {
     }
 
     @Test
+    // TODO: b/379849464 - Fix this for expressive design and stop disabling this flag
+    @RequiresFlagsDisabled(SettingsThemeFlags.FLAG_IS_EXPRESSIVE_DESIGN_ENABLED)
     fun launchActivity_fromNotification_targetLowerPriorityAsFirstIssue_reorderedSecondIssue() {
         safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.multipleSourcesConfig)
         safetyCenterTestHelper.setData(
@@ -1052,6 +1070,8 @@ class SafetyCenterActivityTest {
     }
 
     @Test
+    // TODO: b/379849464 - Fix this for expressive design and stop disabling this flag
+    @RequiresFlagsDisabled(SettingsThemeFlags.FLAG_IS_EXPRESSIVE_DESIGN_ENABLED)
     fun launchActivity_fromNotification_targetIssueNotFound() {
         safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.multipleSourcesConfig)
         safetyCenterTestHelper.setData(
@@ -1091,6 +1111,8 @@ class SafetyCenterActivityTest {
     }
 
     @Test
+    // TODO: b/379849464 - Fix this for expressive design and stop disabling this flag
+    @RequiresFlagsDisabled(SettingsThemeFlags.FLAG_IS_EXPRESSIVE_DESIGN_ENABLED)
     fun moreIssuesCard_moreIssuesCardShown_additionalIssueCardsCollapsed() {
         safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.multipleSourcesConfig)
         safetyCenterTestHelper.setData(
@@ -1113,6 +1135,8 @@ class SafetyCenterActivityTest {
     }
 
     @Test
+    // TODO: b/379849464 - Fix this for expressive design and stop disabling this flag
+    @RequiresFlagsDisabled(SettingsThemeFlags.FLAG_IS_EXPRESSIVE_DESIGN_ENABLED)
     fun moreIssuesCard_expandAdditionalIssueCards() {
         safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.multipleSourcesConfig)
         safetyCenterTestHelper.setData(
@@ -1139,6 +1163,8 @@ class SafetyCenterActivityTest {
     }
 
     @Test
+    // TODO: b/379849464 - Fix this for expressive design and stop disabling this flag
+    @RequiresFlagsDisabled(SettingsThemeFlags.FLAG_IS_EXPRESSIVE_DESIGN_ENABLED)
     fun moreIssuesCard_rotation_cardsStillExpanded() {
         safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.multipleSourcesConfig)
         safetyCenterTestHelper.setData(
@@ -1173,6 +1199,8 @@ class SafetyCenterActivityTest {
     }
 
     @Test
+    // TODO: b/379849464 - Fix this for expressive design and stop disabling this flag
+    @RequiresFlagsDisabled(SettingsThemeFlags.FLAG_IS_EXPRESSIVE_DESIGN_ENABLED)
     fun moreIssuesCard_withThreeIssues_showsTopIssuesAndMoreIssuesCard() {
         safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.multipleSourcesConfig)
         safetyCenterTestHelper.setData(
@@ -1197,6 +1225,8 @@ class SafetyCenterActivityTest {
     }
 
     @Test
+    // TODO: b/379849464 - Fix this for expressive design and stop disabling this flag
+    @RequiresFlagsDisabled(SettingsThemeFlags.FLAG_IS_EXPRESSIVE_DESIGN_ENABLED)
     fun moreIssuesCard_twoIssuesAlreadyShown_expandAdditionalIssueCards() {
         safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.multipleSourcesConfig)
         safetyCenterTestHelper.setData(

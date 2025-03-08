@@ -460,7 +460,7 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> डीबग करने की जानकारी अपलोड करना चाहता है."</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"डीबग करने से जुड़ा डेटा शेयर करना चाहते हैं?"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"सिस्टम को किसी समस्या का पता चला है."</string>
-    <string name="incident_report_dialog_text" msgid="5675553296891757523">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> इस डिवाइस से <xliff:g id="DATE">%2$s</xliff:g> को <xliff:g id="TIME">%3$s</xliff:g> बजे ली गई गड़बड़ी की रिपोर्ट अपलोड करने की मंज़ूरी मांग रहा है. गड़बड़ी की रिपोर्ट में आपके डिवाइस के बारे में या ऐप्लिकेशन की ओर से लॉग की गई निजी जानकारी शामिल होती है, जैसे कि उपयोगकर्ता नाम, जगह की जानकारी का डेटा, डिवाइस पहचानकर्ता, और नेटवर्क की जानकारी. गड़बड़ी की रिपोर्ट सिर्फ़ उन लोगों और ऐप्लिकेशन के साथ शेयर करें जिन पर आप इस जानकारी को लेकर भरोसा करते हैं. क्या आप <xliff:g id="APP_NAME_1">%4$s</xliff:g> को गड़बड़ी की रिपोर्ट अपलोड करने देना चाहते हैं?"</string>
+    <string name="incident_report_dialog_text" msgid="1819244417678973362">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> इस डिवाइस से <xliff:g id="DATE">%2$s</xliff:g> को <xliff:g id="TIME">%3$s</xliff:g> बजे ली गई गड़बड़ी की रिपोर्ट अपलोड करने की मंज़ूरी मांग रहा है. गड़बड़ी की रिपोर्ट में आपके डिवाइस के बारे में या ऐप्लिकेशन की ओर से लॉग की गई निजी जानकारी शामिल होती है, जैसे कि उपयोगकर्ता नाम, जगह की जानकारी का डेटा, डिवाइस आइडेंटिफ़ायर, और नेटवर्क की जानकारी. गड़बड़ी की रिपोर्ट सिर्फ़ उन लोगों और ऐप्लिकेशन के साथ शेयर करें जिन पर आपको इस जानकारी को लेकर भरोसा हो.\n\nक्या <xliff:g id="APP_NAME_1">%4$s</xliff:g> को गड़बड़ी की रिपोर्ट अपलोड करने की अनुमति देनी है?"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"<xliff:g id="APP_NAME">%1$s</xliff:g> के लिए गड़बड़ी की रिपोर्ट तैयार करने में दिक्कत हुई. इसलिए, डीबग करने के बारे में ज़्यादा जानकारी का डेटा शेयर नहींं किया जा सका. रुकावट के लिए खेद है."</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"अनुमति दें"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"अनुमति न दें"</string>
@@ -679,10 +679,14 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"इस सेटिंग पर पाबंदी लगाई गई है"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"आपकी सुरक्षा के लिए, यह सेटिंग फ़िलहाल उपलब्ध नहीं है."</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"कॉल के दौरान कार्रवाई पूरी नहीं की जा सकती"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="5049619986796367451">"<xliff:g id="SETTING_DESCRIPTION">%1$s</xliff:g>\n\n आपके डिवाइस और डेटा को सुरक्षित रखने के लिए, यह सेटिंग ब्लॉक की गई है"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_install_desc_prefix" msgid="7153600694011441796">"धोखाधड़ी करने वाले लोग, आपको नए सोर्स से अनजान ऐप्लिकेशन इंस्टॉल करने के लिए कहकर, नुकसान पहुंचाने वाले ऐप्लिकेशन इंस्टॉल करने की कोशिश कर सकते हैं."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc_prefix" msgid="1086282331085551407">"धोखाधड़ी करने वाले लोग, आपके डिवाइस में मौजूद किसी ऐप्लिकेशन को ऐक्सेस करने की अनुमति लेकर, आपके डिवाइस को कंट्रोल करने की कोशिश कर सकते हैं."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_generic_desc_prefix" msgid="8141411486179553156">"इस सेटिंग से, धोखाधड़ी करने वाले लोग आपके डिवाइस को नुकसान पहुंचाने की कोशिश कर सकते हैं."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"आपके डिवाइस और डेटा को सुरक्षित रखने के लिए, यह सेटिंग ब्लॉक की गई है. <xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>धोखाधड़ी करने वाले लोग, आपको नए सोर्स से अनजान ऐप्लिकेशन इंस्टॉल करने के लिए कहकर, आपके डिवाइस पर नुकसान पहुंचाने वाले ऐप्लिकेशन इंस्टॉल कराने की कोशिश कर सकते हैं."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>धोखाधड़ी करने वाले लोग, आपके डिवाइस में मौजूद किसी ऐप्लिकेशन को ऐक्सेस करने की अनुमति लेकर, आपके डिवाइस को कंट्रोल करने की कोशिश कर सकते हैं."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"ऐप्लिकेशन को, <xliff:g id="PERMISSION_NAME">%1$s</xliff:g> को ऐक्सेस करने की अनुमति नहीं मिली"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"इस ऐप्लिकेशन ने संवेदनशील जानकारी ऐक्सेस करने का अनुरोध किया है. इसे अनुमति देने पर, आपकी निजी और वित्तीय जानकारी की सुरक्षा को खतरा हो सकता है.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>हालांकि, हो सकता है कि पाबंदी वाली अनुमति न मिलने पर, ऐप्लिकेशन सही तरह से काम न करें. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;ऐक्सेस देने का तरीका जानें&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"ऐप्लिकेशन को डिफ़ॉल्ट <xliff:g id="ROLE_NAME">%1$s</xliff:g> के तौर पर सेट करने की अनुमति नहीं दी गई"</string>
