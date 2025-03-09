@@ -460,8 +460,7 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> soovib üles laadida silumisteavet."</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"Kas soovite silumisandmeid jagada?"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"Süsteem tuvastas probleemi."</string>
-    <!-- no translation found for incident_report_dialog_text (1819244417678973362) -->
-    <skip />
+    <string name="incident_report_dialog_text" msgid="1819244417678973362">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> palub luba sellest seadmest veaaruande üleslaadimiseks (loodi <xliff:g id="DATE">%2$s</xliff:g> kell <xliff:g id="TIME">%3$s</xliff:g>). Veaaruanded hõlmavad teie seadmega seotud või rakenduste logitud isiklikke andmeid (nt kasutajanimed, asukohaandmed, seadme ID-d ja võrguteave). Jagage veaaruandeid ainult inimeste ja rakendustega, keda/mida usaldate.\n\nKas lubada rakendusel <xliff:g id="APP_NAME_1">%4$s</xliff:g> veaaruanne üles laadida?"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"Rakenduse <xliff:g id="APP_NAME">%1$s</xliff:g> veaaruande töötlemisel ilmnes viga. Seetõttu keelati üksikasjalike silumisandmete jagamine. Vabandage katkestuse pärast!"</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"Luba"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"Keela"</string>
@@ -680,12 +679,13 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"Piiratud seade"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"Teie turvalisuse huvides pole see seade praegu saadaval."</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"Seda toimingut ei saa kõne ajal teha"</string>
-    <!-- no translation found for enhanced_confirmation_phone_state_dialog_desc (3803423079498712549) -->
-    <skip />
-    <!-- no translation found for enhanced_confirmation_phone_state_dialog_install_desc (6400007048943674066) -->
-    <skip />
-    <!-- no translation found for enhanced_confirmation_phone_state_dialog_a11y_desc (6567523001053288057) -->
-    <skip />
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"See säte on teie seadme ja andmete kaitsmiseks blokeeritud.<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Petised võivad proovida installida kahjulikke rakendusi, paludes teil installida uuest allikast tundmatuid rakendusi."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Petised võivad proovida teie seadet oma kontrolli alla haarata, paludes teil lubada rakenduse jaoks juurdepääsu juurdepääsetavusfunktsioonidele."</string>
     <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"Rakendusele ei antud luba <xliff:g id="PERMISSION_NAME">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"Rakendus taotles tundlikku luba, mis võib teie isikuandmed ja finantsteabe ohtu seada.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Võimalik, et rakendus ei tööta ilma selle piiratud loata korralikult. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt; Teave juurdepääsu andmise kohta&lt;/a&gt;"</string>

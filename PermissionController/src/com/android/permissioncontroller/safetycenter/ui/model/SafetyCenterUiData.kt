@@ -39,9 +39,7 @@ data class SafetyCenterUiData(
 
     val issueUiDatas: List<IssueUiData> by
         lazy(LazyThreadSafetyMode.NONE) {
-            safetyCenterData.issues.map {
-                IssueUiData(it, false, resolvedIssues[it.id], getLaunchTaskIdForIssue(it))
-            }
+            safetyCenterData.issues.map { toIssueUiData(it, isDismissed = false) }
         }
 
     fun getMatchingIssue(issueKey: SafetyCenterIssueKey): SafetyCenterIssue? {
@@ -92,8 +90,12 @@ data class SafetyCenterUiData(
 
     /** Returns the [SafetyCenterData.getDismissedIssues] that are meant to be visible in the UI. */
     @RequiresApi(UPSIDE_DOWN_CAKE)
-    fun SafetyCenterData.visibleDismissedIssues() =
+    private fun SafetyCenterData.visibleDismissedIssues() =
         dismissedIssues.filter { it.severityLevel > ISSUE_SEVERITY_LEVEL_OK }
+
+    /** Converts a [SafetyCenterIssue] into [IssueUiData]. */
+    private fun toIssueUiData(issue: SafetyCenterIssue, isDismissed: Boolean) =
+        IssueUiData(issue, isDismissed, resolvedIssues[issue.id], getLaunchTaskIdForIssue(issue))
 
     private fun getLaunchTaskIdForIssue(issue: SafetyCenterIssue): Int? {
         val sourceId: String =

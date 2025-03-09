@@ -460,8 +460,7 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"பிழைதிருத்தத் தகவலை <xliff:g id="APP_NAME">%1$s</xliff:g> பதிவேற்ற விரும்புகிறது."</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"பிழைதிருத்தத் தரவைப் பகிர வேண்டுமா?"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"சிக்கல் இருப்பதை சிஸ்டம் கண்டறிந்துள்ளது."</string>
-    <!-- no translation found for incident_report_dialog_text (1819244417678973362) -->
-    <skip />
+    <string name="incident_report_dialog_text" msgid="1819244417678973362">"இந்தச் சாதனத்திலிருந்து <xliff:g id="DATE">%2$s</xliff:g> அன்று <xliff:g id="TIME">%3$s</xliff:g>க்கு எடுக்கப்பட்ட பிழை அறிக்கையைப் பதிவேற்றுமாறு <xliff:g id="APP_NAME_0">%1$s</xliff:g> கேட்கிறது. இதில் பயனர் பெயர்கள், இருப்பிடத் தரவு, சாதன அடையாளங்காட்டிகள் மற்றும் நெட்வொர்க் தகவல்கள் போன்ற உங்கள் சாதனம் அல்லது உள்நுழைந்துள்ள ஆப்ஸ் பற்றிய தனிப்பட்ட தகவல்களும் உள்ளடங்கும். இந்தத் தகவல்களுடனான பிழை அறிக்கைகளை நீங்கள் நம்பும் நபர்கள் மற்றும் ஆப்ஸுடன் மட்டுமே பகிரவும்.\n\nபிழை அறிக்கையைப் பதிவேற்ற <xliff:g id="APP_NAME_1">%4$s</xliff:g> ஆப்ஸை அனுமதிக்கவா?"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"<xliff:g id="APP_NAME">%1$s</xliff:g> ஆப்ஸிற்கான பிழை அறிக்கையைச் செயல்படுத்துவதில் பிழை ஏற்பட்டுள்ளது. பிழைதிருத்தத்திற்கான தரவைப் பகிர்வது மறுக்கப்பட்டுள்ளது. தடங்கலுக்கு வருந்துகிறோம்."</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"அனுமதி"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"நிராகரி"</string>
@@ -680,12 +679,13 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"கட்டுப்படுத்தப்பட்ட அமைப்பு"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"உங்கள் பாதுகாப்பிற்காக, இந்த அமைப்பு தற்போது இல்லை."</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"அழைப்பின்போது செயலை நிறைவுசெய்ய முடியாது"</string>
-    <!-- no translation found for enhanced_confirmation_phone_state_dialog_desc (3803423079498712549) -->
-    <skip />
-    <!-- no translation found for enhanced_confirmation_phone_state_dialog_install_desc (6400007048943674066) -->
-    <skip />
-    <!-- no translation found for enhanced_confirmation_phone_state_dialog_a11y_desc (6567523001053288057) -->
-    <skip />
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"உங்கள் சாதனத்தையும் தரவையும் பாதுகாப்பதற்காக இந்த அமைப்பு தடுக்கப்பட்டுள்ளது.<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>புதிய மூலத்தில் இருந்து அறியப்படாத ஆப்ஸை நிறுவுமாறு கேட்பதன் மூலம் மோசடி செய்பவர்கள் தீங்கு விளைவிக்கும் ஆப்ஸை நிறுவ முயலலாம்."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>ஆப்ஸுக்கான அணுகல்தன்மை அம்சங்களை அனுமதிக்குமாறு கேட்பதன் மூலம் மோசடி செய்பவர்கள் உங்கள் சாதனத்தைக் கட்டுப்படுத்த முயலலாம்."</string>
     <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"<xliff:g id="PERMISSION_NAME">%1$s</xliff:g>க்கான ஆப்ஸ் அணுகல் நிராகரிக்கப்பட்டது"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"பாதுகாக்க வேண்டிய தகவல்களுக்கான அனுமதியை வழங்க ஆப்ஸ் கேட்டுள்ளது, இது உங்கள் தனிப்பட்ட மற்றும் நிதித் தகவல்களை ஆபத்துக்குள்ளாக்கலாம்.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>இந்தக் கட்டுப்படுத்தப்பட்ட அனுமதி இல்லாமல் ஆப்ஸ் சரியாக வேலை செய்யாமல் போகக்கூடும். &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;எப்படி அணுகல் வழங்குவதென அறிக&lt;/a&gt;"</string>

@@ -460,8 +460,7 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"ഡീബഗ്ഗ് ചെയ്യൽ വിവരങ്ങൾ അപ്‌ലോഡ് ചെയ്യാൻ <xliff:g id="APP_NAME">%1$s</xliff:g> താൽപ്പര്യപ്പെടുന്നു."</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"ഡീബഗ്ഗ് ചെയ്യൽ ഡാറ്റ പങ്കിടണോ?"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"സിസ്‌റ്റം ഒരു പ്രശ്‌നം കണ്ടെത്തി."</string>
-    <!-- no translation found for incident_report_dialog_text (1819244417678973362) -->
-    <skip />
+    <string name="incident_report_dialog_text" msgid="1819244417678973362">"<xliff:g id="DATE">%2$s</xliff:g>, <xliff:g id="TIME">%3$s</xliff:g>-ന് എടുത്ത ഈ ഉപകരണത്തിൽ നിന്ന് ഒരു ബഗ് റിപ്പോർട്ട് അപ്‌ലോഡ് ചെയ്യാൻ <xliff:g id="APP_NAME_0">%1$s</xliff:g> അഭ്യർത്ഥിക്കുന്നു. നിങ്ങളുടെ ഉപകരണത്തെക്കുറിച്ചുള്ള വ്യക്തിപരമായ വിവരങ്ങളോ ആപ്പുകൾ ലോഗ് ചെയ്യുമ്പോൾ നൽകുന്ന വിവരമോ, ഉദാഹരണത്തിന് നെറ്റ്‌വർക്ക് വിവരങ്ങൾ, ഉപകരണ ഐഡന്റിഫയറുകൾ, ലൊക്കേഷൻ ഡാറ്റ, ഉപയോക്തൃനാമങ്ങൾ എന്നിവ ബഗ് റിപ്പോർട്ടുകളിൽ ഉൾപ്പെടുന്നു. ഈ വിവരം ഉപയോഗിച്ച് നിങ്ങൾ വിശ്വസിക്കുന്ന ആപ്പുകൾക്കും ആളുകൾക്കും മാത്രം ബഗ് റിപ്പോർട്ടുകൾ പങ്കിടുക. \n\n <xliff:g id="APP_NAME_1">%4$s</xliff:g> എന്നതിനെ ഒരു ബഗ് റിപ്പോർട്ട് അപ്‌ലോഡ് ചെയ്യാൻ അനുവദിക്കണോ?"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"<xliff:g id="APP_NAME">%1$s</xliff:g> എന്ന ആപ്പിൻ്റെ ബഗ് റിപ്പോർട്ട് പ്രോസസ് ചെയ്യുന്നതിൽ ഒരു പിശകുണ്ടായി. അതിനാൽ വിശദമായ ഡീബഗ്ഗ് ചെയ്യൽ ഡാറ്റ പങ്കിടുന്നത് തടഞ്ഞു. തടസ്സം നേരിട്ടതിൽ ഖേദിക്കുന്നു."</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"അനുവദിക്കുക"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"നിരസിക്കുക"</string>
@@ -680,12 +679,13 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"നിയന്ത്രിത ക്രമീകരണം"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"നിങ്ങളുടെ സുരക്ഷയ്ക്ക്, ഈ ക്രമീകരണം നിലവിൽ ലഭ്യമല്ല."</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"കോളിനിടെ പ്രവർത്തനം പൂർത്തിയാക്കാനാവില്ല"</string>
-    <!-- no translation found for enhanced_confirmation_phone_state_dialog_desc (3803423079498712549) -->
-    <skip />
-    <!-- no translation found for enhanced_confirmation_phone_state_dialog_install_desc (6400007048943674066) -->
-    <skip />
-    <!-- no translation found for enhanced_confirmation_phone_state_dialog_a11y_desc (6567523001053288057) -->
-    <skip />
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"നിങ്ങളുടെ ഉപകരണവും ഡാറ്റയും പരിരക്ഷിക്കാൻ ഈ ക്രമീകരണം ബ്ലോക്ക് ചെയ്തിരിക്കുന്നു.<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>പുതിയൊരു ഉറവിടത്തിൽ നിന്നുള്ള അജ്ഞാതമായ ആപ്പുകൾ ഇൻസ്റ്റാൾ ചെയ്യാൻ നിങ്ങളോട് അവശ്യപ്പെട്ടുകൊണ്ട് സ്‌കാമർമാർ ദോഷകരമായ ആപ്പുകൾ ഇൻസ്റ്റാൾ ചെയ്യാൻ ശ്രമിച്ചേക്കാം."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>ഒരു ആപ്പിനായുള്ള ഉപയോഗസഹായി ആക്സസ് അനുവദിക്കാൻ നിങ്ങളോട് ആവശ്യപ്പെട്ടുകൊണ്ട് സ്‌കാമർമാർ നിങ്ങളുടെ ഉപകരണത്തിന്റെ നിയന്ത്രണം ഏറ്റെടുക്കാൻ ശ്രമിച്ചേക്കാം."</string>
     <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"ആപ്പിന് <xliff:g id="PERMISSION_NAME">%1$s</xliff:g> എന്നതിലേക്കുള്ള ആക്‌സസ് നിരസിച്ചു"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"ആപ്പ് സെൻസിറ്റീവ് വിവരങ്ങൾക്കുള്ള അനുമതിയിലേക്ക് ആക്‌സസ് അഭ്യർത്ഥിച്ചു, ഇത് നിങ്ങളുടെ വ്യക്തിപരവും സാമ്പത്തികവുമായ വിവരങ്ങളെ അപകടത്തിലാക്കിയേക്കാം.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>ഈ നിയന്ത്രിത അനുമതിയില്ലാതെ ആപ്പ് ശരിയായി പ്രവർത്തിച്ചേക്കില്ല. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;ആക്സസ് എങ്ങനെ അനുവദിക്കുന്നുവെന്നറിയുക&lt;/a&gt;"</string>

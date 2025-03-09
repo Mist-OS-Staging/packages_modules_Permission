@@ -19,6 +19,9 @@ package com.android.ecm;
 import static android.app.ecm.EnhancedConfirmationManager.REASON_PACKAGE_RESTRICTED;
 import static android.app.ecm.EnhancedConfirmationManager.REASON_PHONE_STATE;
 
+import static com.android.permission.PermissionStatsLog.CALL_WITH_ECM_INTERACTION_REPORTED;
+import static com.android.permissioncontroller.PermissionControllerStatsLog.ECM_RESTRICTION_QUERY_IN_CALL_REPORTED;
+
 import android.Manifest;
 import android.accessibilityservice.AccessibilityServiceInfo;
 import android.annotation.FlaggedApi;
@@ -34,6 +37,7 @@ import android.app.ecm.IEnhancedConfirmationManager;
 import android.app.role.RoleManager;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.InstallSourceInfo;
 import android.content.pm.PackageInstaller;
@@ -44,7 +48,9 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Binder;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Looper;
+import android.os.SystemClock;
 import android.os.SystemConfigManager;
 import android.os.UserHandle;
 import android.permission.flags.Flags;
@@ -65,6 +71,7 @@ import androidx.annotation.RequiresApi;
 import com.android.internal.annotations.GuardedBy;
 import com.android.internal.util.Preconditions;
 import com.android.permission.util.UserUtils;
+import com.android.permissioncontroller.PermissionControllerStatsLog;
 import com.android.server.LocalManagerRegistry;
 import com.android.server.SystemService;
 
@@ -73,8 +80,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -91,12 +100,56 @@ import java.util.concurrent.ConcurrentHashMap;
 public class EnhancedConfirmationService extends SystemService {
     private static final String LOG_TAG = EnhancedConfirmationService.class.getSimpleName();
 
+    /** A map of ECM states to their corresponding app op states */
+    @Retention(java.lang.annotation.RetentionPolicy.SOURCE)
+    @IntDef(prefix = {"ECM_STATE_"}, value = {EcmState.ECM_STATE_NOT_GUARDED,
+            EcmState.ECM_STATE_GUARDED, EcmState.ECM_STATE_GUARDED_AND_ACKNOWLEDGED,
+            EcmState.ECM_STATE_IMPLICIT})
+    private @interface EcmState {
+        int ECM_STATE_NOT_GUARDED = AppOpsManager.MODE_ALLOWED;
+        int ECM_STATE_GUARDED = AppOpsManager.MODE_ERRORED;
+        int ECM_STATE_GUARDED_AND_ACKNOWLEDGED = AppOpsManager.MODE_IGNORED;
+        int ECM_STATE_IMPLICIT = AppOpsManager.MODE_DEFAULT;
+    }
+
+    private static final ArraySet<String> PER_PACKAGE_PROTECTED_SETTINGS = new ArraySet<>();
+
+    // Settings restricted when an untrusted call is ongoing. These must also be added to
+    // PROTECTED_SETTINGS
+    private static final ArraySet<String> UNTRUSTED_CALL_RESTRICTED_SETTINGS = new ArraySet<>();
+
+    static {
+        // Runtime permissions
+        PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.SEND_SMS);
+        PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.RECEIVE_SMS);
+        PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.READ_SMS);
+        PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.RECEIVE_MMS);
+        PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.RECEIVE_WAP_PUSH);
+        PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.READ_CELL_BROADCASTS);
+        PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission_group.SMS);
+
+        PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.BIND_DEVICE_ADMIN);
+        // App ops
+        PER_PACKAGE_PROTECTED_SETTINGS.add(AppOpsManager.OPSTR_BIND_ACCESSIBILITY_SERVICE);
+        PER_PACKAGE_PROTECTED_SETTINGS.add(AppOpsManager.OPSTR_ACCESS_NOTIFICATIONS);
+        PER_PACKAGE_PROTECTED_SETTINGS.add(AppOpsManager.OPSTR_SYSTEM_ALERT_WINDOW);
+        PER_PACKAGE_PROTECTED_SETTINGS.add(AppOpsManager.OPSTR_GET_USAGE_STATS);
+        PER_PACKAGE_PROTECTED_SETTINGS.add(AppOpsManager.OPSTR_LOADER_USAGE_STATS);
+        // Default application roles.
+        PER_PACKAGE_PROTECTED_SETTINGS.add(RoleManager.ROLE_DIALER);
+        PER_PACKAGE_PROTECTED_SETTINGS.add(RoleManager.ROLE_SMS);
+
+        if (Flags.unknownCallPackageInstallBlockingEnabled()) {
+            // Requesting package installs, limited during phone calls
+            UNTRUSTED_CALL_RESTRICTED_SETTINGS.add(
+                    AppOpsManager.OPSTR_REQUEST_INSTALL_PACKAGES);
+            UNTRUSTED_CALL_RESTRICTED_SETTINGS.add(
+                    AppOpsManager.OPSTR_BIND_ACCESSIBILITY_SERVICE);
+        }
+    }
+
     private Map<String, List<byte[]>> mTrustedPackageCertDigests;
     private Map<String, List<byte[]>> mTrustedInstallerCertDigests;
-    // A map of call ID to call type. Thread safe because it is queried on the main thread, but
-    // added/removed on a background thread.
-    private final Map<String, Integer> mOngoingCalls = new ConcurrentHashMap<>();
-
     private static final int CALL_TYPE_UNTRUSTED = 0;
     private static final int CALL_TYPE_TRUSTED = 1;
     private static final int CALL_TYPE_EMERGENCY = 1 << 1;
@@ -114,8 +167,10 @@ public class EnhancedConfirmationService extends SystemService {
                 new EnhancedConfirmationManagerLocalImpl(this));
     }
 
-    private ContentResolver mContentResolver;
-    private TelephonyManager mTelephonyManager;
+    private PackageManager mPackageManager;
+
+    // A helper which tracks the calls received by the system, and information about them.
+    private CallTracker mCallTracker;
 
     @GuardedBy("mUserAccessibilityManagers")
     private final Map<Integer, AccessibilityManager> mUserAccessibilityManagers =
@@ -132,8 +187,11 @@ public class EnhancedConfirmationService extends SystemService {
                 systemConfigManager.getEnhancedConfirmationTrustedInstallers());
 
         publishBinderService(Context.ECM_ENHANCED_CONFIRMATION_SERVICE, new Stub());
-        mContentResolver = getContext().getContentResolver();
-        mTelephonyManager = getContext().getSystemService(TelephonyManager.class);
+
+        if (Flags.unknownCallPackageInstallBlockingEnabled()) {
+            mCallTracker = new CallTracker(getContext());
+        }
+        mPackageManager = getContext().getPackageManager();
     }
 
     private Map<String, List<byte[]>> toTrustedPackageMap(Set<SignedPackage> signedPackages) {
@@ -148,104 +206,31 @@ public class EnhancedConfirmationService extends SystemService {
 
     void addOngoingCall(Call call) {
         assertNotMainThread();
-        if (!Flags.unknownCallPackageInstallBlockingEnabled()) {
-            return;
+        if (mCallTracker != null) {
+            mCallTracker.addCall(call);
         }
-        if (call.getDetails() == null) {
-            return;
-        }
-        mOngoingCalls.put(call.getDetails().getId(), getCallType(call));
     }
 
     @WorkerThread
     void removeOngoingCall(String callId) {
         assertNotMainThread();
-        if (!Flags.unknownCallPackageInstallBlockingEnabled()) {
-            return;
-        }
-        Integer returned = mOngoingCalls.remove(callId);
-        if (returned == null) {
-            // TODO b/379941144: Capture a bug report whenever this happens.
+        if (mCallTracker != null) {
+            mCallTracker.endCall(callId);
         }
     }
 
     @WorkerThread
     void clearOngoingCalls() {
         assertNotMainThread();
-        mOngoingCalls.clear();
-    }
 
-    @WorkerThread
-    private @CallType int getCallType(Call call) {
-        assertNotMainThread();
-        String number = getPhoneNumber(call);
-        try {
-            if (number != null && mTelephonyManager.isEmergencyNumber(number)) {
-                return CALL_TYPE_EMERGENCY;
-            }
-        } catch (IllegalStateException | UnsupportedOperationException e) {
-            // If either of these are thrown, the telephony service is not available on the current
-            // device, either because the device lacks telephony calling, or the telephony service
-            // is unavailable.
-        }
-        if (number != null) {
-            return hasContactWithPhoneNumber(number) ? CALL_TYPE_TRUSTED : CALL_TYPE_UNTRUSTED;
-        } else {
-            return hasContactWithDisplayName(call.getDetails().getCallerDisplayName())
-                    ? CALL_TYPE_TRUSTED : CALL_TYPE_UNTRUSTED;
+        if (mCallTracker != null) {
+            mCallTracker.endAllCalls();
         }
     }
 
-    private String getPhoneNumber(Call call) {
-        Uri handle = call.getDetails().getHandle();
-        if (handle == null || handle.getScheme() == null) {
-            return null;
-        }
-        if (!handle.getScheme().equals(PhoneAccount.SCHEME_TEL)) {
-            return null;
-        }
-        return handle.getSchemeSpecificPart();
-    }
-
-    @WorkerThread
-    private boolean hasContactWithPhoneNumber(String phoneNumber) {
-        assertNotMainThread();
-        if (phoneNumber == null) {
-            return false;
-        }
-        Uri uri = Uri.withAppendedPath(PhoneLookup.CONTENT_FILTER_URI,
-                Uri.encode(phoneNumber));
-        String[] projection = new String[]{
-                PhoneLookup.DISPLAY_NAME,
-                ContactsContract.PhoneLookup._ID
-        };
-        try (Cursor res = mContentResolver.query(uri, projection, null, null)) {
-            return res != null && res.getCount() > 0;
-        }
-    }
-
-    @WorkerThread
-    private boolean hasContactWithDisplayName(String displayName) {
-        assertNotMainThread();
-        if (displayName == null) {
-            return false;
-        }
-        Uri uri = ContactsContract.Data.CONTENT_URI;
-        String[] projection = new String[]{PhoneLookup._ID};
-        String selection = StructuredName.DISPLAY_NAME + " = ?";
-        String[] selectionArgs = new String[]{displayName};
-        try (Cursor res = mContentResolver.query(uri, projection, selection, selectionArgs, null)) {
-            return res != null && res.getCount() > 0;
-        }
-    }
-
-    private boolean hasCallOfType(@CallType int callType) {
-        for (int ongoingCallType : mOngoingCalls.values()) {
-            if (ongoingCallType == callType) {
-                return true;
-            }
-        }
-        return false;
+    static int getPackageUid(PackageManager pm, String packageName,
+            int userId) throws NameNotFoundException {
+        return pm.getPackageUidAsUser(packageName, PackageManager.PackageInfoFlags.of(0), userId);
     }
 
     private void assertNotMainThread() throws IllegalStateException {
@@ -256,65 +241,15 @@ public class EnhancedConfirmationService extends SystemService {
 
     private class Stub extends IEnhancedConfirmationManager.Stub {
 
-        /** A map of ECM states to their corresponding app op states */
-        @Retention(java.lang.annotation.RetentionPolicy.SOURCE)
-        @IntDef(prefix = {"ECM_STATE_"}, value = {EcmState.ECM_STATE_NOT_GUARDED,
-                EcmState.ECM_STATE_GUARDED, EcmState.ECM_STATE_GUARDED_AND_ACKNOWLEDGED,
-                EcmState.ECM_STATE_IMPLICIT})
-        private @interface EcmState {
-            int ECM_STATE_NOT_GUARDED = AppOpsManager.MODE_ALLOWED;
-            int ECM_STATE_GUARDED = AppOpsManager.MODE_ERRORED;
-            int ECM_STATE_GUARDED_AND_ACKNOWLEDGED = AppOpsManager.MODE_IGNORED;
-            int ECM_STATE_IMPLICIT = AppOpsManager.MODE_DEFAULT;
-        }
-
-        private static final ArraySet<String> PER_PACKAGE_PROTECTED_SETTINGS = new ArraySet<>();
-
-        // Settings restricted when an untrusted call is ongoing. These must also be added to
-        // PROTECTED_SETTINGS
-        private static final ArraySet<String> UNTRUSTED_CALL_RESTRICTED_SETTINGS = new ArraySet<>();
-
-        static {
-            // Runtime permissions
-            PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.SEND_SMS);
-            PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.RECEIVE_SMS);
-            PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.READ_SMS);
-            PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.RECEIVE_MMS);
-            PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.RECEIVE_WAP_PUSH);
-            PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.READ_CELL_BROADCASTS);
-            PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission_group.SMS);
-
-            PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.BIND_DEVICE_ADMIN);
-            // App ops
-            PER_PACKAGE_PROTECTED_SETTINGS.add(AppOpsManager.OPSTR_BIND_ACCESSIBILITY_SERVICE);
-            PER_PACKAGE_PROTECTED_SETTINGS.add(AppOpsManager.OPSTR_ACCESS_NOTIFICATIONS);
-            PER_PACKAGE_PROTECTED_SETTINGS.add(AppOpsManager.OPSTR_SYSTEM_ALERT_WINDOW);
-            PER_PACKAGE_PROTECTED_SETTINGS.add(AppOpsManager.OPSTR_GET_USAGE_STATS);
-            PER_PACKAGE_PROTECTED_SETTINGS.add(AppOpsManager.OPSTR_LOADER_USAGE_STATS);
-            // Default application roles.
-            PER_PACKAGE_PROTECTED_SETTINGS.add(RoleManager.ROLE_DIALER);
-            PER_PACKAGE_PROTECTED_SETTINGS.add(RoleManager.ROLE_SMS);
-
-            if (Flags.unknownCallPackageInstallBlockingEnabled()) {
-                // Requesting package installs, limited during phone calls
-                UNTRUSTED_CALL_RESTRICTED_SETTINGS.add(
-                        AppOpsManager.OPSTR_REQUEST_INSTALL_PACKAGES);
-                UNTRUSTED_CALL_RESTRICTED_SETTINGS.add(
-                        AppOpsManager.OPSTR_BIND_ACCESSIBILITY_SERVICE);
-            }
-        }
-
         private final @NonNull Context mContext;
         private final String mAttributionTag;
         private final AppOpsManager mAppOpsManager;
-        private final PackageManager mPackageManager;
 
         Stub() {
             Context context = getContext();
             mContext = context;
             mAttributionTag = context.getAttributionTag();
             mAppOpsManager = context.getSystemService(AppOpsManager.class);
-            mPackageManager = context.getPackageManager();
         }
 
         public boolean isRestricted(@NonNull String packageName, @NonNull String settingIdentifier,
@@ -369,7 +304,7 @@ public class EnhancedConfirmationService extends SystemService {
                 }
                 setAppEcmState(packageName, EcmState.ECM_STATE_NOT_GUARDED, userId);
                 EnhancedConfirmationStatsLogUtils.INSTANCE.logRestrictionCleared(
-                        getPackageUid(packageName, userId));
+                        getPackageUid(mPackageManager, packageName, userId));
             } catch (NameNotFoundException e) {
                 throw new IllegalArgumentException(e);
             }
@@ -408,18 +343,6 @@ public class EnhancedConfirmationService extends SystemService {
             } catch (NameNotFoundException e) {
                 throw new IllegalArgumentException(e);
             }
-        }
-
-        private boolean isUntrustedCallOngoing() {
-            if (!Flags.unknownCallPackageInstallBlockingEnabled()) {
-                return false;
-            }
-
-            if (hasCallOfType(CALL_TYPE_EMERGENCY)) {
-                // If we have an emergency call, return false always.
-                return false;
-            }
-            return hasCallOfType(CALL_TYPE_UNTRUSTED);
         }
 
         private void enforcePermissions(@NonNull String methodName, @UserIdInt int userId) {
@@ -529,7 +452,7 @@ public class EnhancedConfirmationService extends SystemService {
         @SuppressLint("WrongConstant")
         private void setAppEcmState(@NonNull String packageName, @EcmState int ecmState,
                 @UserIdInt int userId) throws NameNotFoundException {
-            int packageUid = getPackageUid(packageName, userId);
+            int packageUid = getPackageUid(mPackageManager, packageName, userId);
             final long identityToken = Binder.clearCallingIdentity();
             try {
                 mAppOpsManager.setMode(AppOpsManager.OPSTR_ACCESS_RESTRICTED_SETTINGS, packageUid,
@@ -541,7 +464,7 @@ public class EnhancedConfirmationService extends SystemService {
 
         private @EcmState int getAppEcmState(@NonNull String packageName, @UserIdInt int userId)
                 throws NameNotFoundException {
-            int packageUid = getPackageUid(packageName, userId);
+            int packageUid = getPackageUid(mPackageManager, packageName, userId);
             final long identityToken = Binder.clearCallingIdentity();
             try {
                 return mAppOpsManager.noteOpNoThrow(AppOpsManager.OPSTR_ACCESS_RESTRICTED_SETTINGS,
@@ -567,19 +490,28 @@ public class EnhancedConfirmationService extends SystemService {
             return false;
         }
 
+        // Generate a global protection reason for why the setting may be blocked. Note, this
+        // method will result in a metric being logged, representing a blocked/allowed setting
         private String getGlobalProtectionReason(@NonNull String settingIdentifier,
                 @NonNull String packageName, @UserIdInt int userId) {
-            if (UNTRUSTED_CALL_RESTRICTED_SETTINGS.contains(settingIdentifier)
-                    && isUntrustedCallOngoing()) {
-                if (!AppOpsManager.OPSTR_BIND_ACCESSIBILITY_SERVICE.equals(settingIdentifier)) {
-                    return REASON_PHONE_STATE;
-                }
-                if (!isAccessibilityTool(packageName, userId)) {
-                    return REASON_PHONE_STATE;
-                }
+            if (!UNTRUSTED_CALL_RESTRICTED_SETTINGS.contains(settingIdentifier)) {
                 return null;
             }
-            return null;
+            if (mCallTracker == null) {
+                return null;
+            }
+            String reason = null;
+            if (mCallTracker.isUntrustedCallOngoing()) {
+                if (!AppOpsManager.OPSTR_BIND_ACCESSIBILITY_SERVICE.equals(settingIdentifier)) {
+                    reason = REASON_PHONE_STATE;
+                }
+                if (!isAccessibilityTool(packageName, userId)) {
+                    reason = REASON_PHONE_STATE;
+                }
+            }
+            mCallTracker.onEcmInteraction(packageName, userId, settingIdentifier, reason == null);
+
+            return reason;
         }
 
         private boolean isAccessibilityTool(@NonNull String packageName, @UserIdInt int userId) {
@@ -622,11 +554,295 @@ public class EnhancedConfirmationService extends SystemService {
                 return null;
             }
         }
+    }
 
-        private int getPackageUid(@NonNull String packageName, @UserIdInt int userId)
-                throws NameNotFoundException {
-            return mPackageManager.getApplicationInfoAsUser(packageName, /* flags */ 0,
-                    UserHandle.of(userId)).uid;
+    private static class CallTracker {
+        // The time we will remember an untrusted call
+        private static final long UNTRUSTED_CALL_STORAGE_TIME_MS = TimeUnit.HOURS.toMillis(1);
+        // The minimum time that must pass between individual logs of the same call, uid, trusted
+        // status, and allowed setting.
+        private static final long MAX_LOGGING_FREQUENCY_MS = TimeUnit.SECONDS.toMillis(30);
+        // A map of call ID to ongoing or recently removed calls. Concurrent because
+        // additions/removals happen on background threads, but queries on main thread.
+        private final Map<String, TrackedCall> mCalls = new ConcurrentHashMap<>();
+
+        // A cache of hashed callers, uids, trusted status, and allowed status. Ensures that we
+        // do not log the same interaction too many times
+        private final Map<Integer, Long> mLogCache = new ConcurrentHashMap<>();
+
+        private class TrackedCall {
+            public @CallType Integer callType;
+            public String caller;
+
+            public long startTime = SystemClock.elapsedRealtime();
+
+            public long endTime = -1;
+
+            public boolean incoming;
+
+            public boolean blockedDuringCall = false;
+
+            public boolean ecmInteractionDuringCall = false;
+
+            public boolean isFinished() {
+                return endTime > 0;
+            }
+
+            TrackedCall(@NonNull Call call) {
+                caller = getPhoneNumber(call);
+                if (caller == null) {
+                    caller = getDisplayName(call);
+                }
+                callType = getCallType(call);
+                incoming = call.getDetails().getCallDirection() == Call.Details.DIRECTION_INCOMING;
+            }
+        }
+
+        private Context mContext;
+        private TelephonyManager mTelephonyManager;
+        private PackageManager mPackageManager;
+
+        CallTracker(Context context) {
+            mContext = context;
+            mTelephonyManager = context.getSystemService(TelephonyManager.class);
+            mPackageManager = context.getPackageManager();
+        }
+
+        public void addCall(@NonNull Call call) {
+            if (call.getDetails() == null) {
+                return;
+            }
+            pruneOldFinishedCalls();
+            pruneOldLogs();
+            mCalls.put(call.getDetails().getId(), new TrackedCall(call));
+        }
+
+        public void endCall(@NonNull String callId) {
+            TrackedCall trackedCall = mCalls.get(callId);
+            if (trackedCall == null) {
+                // TODO b/379941144: Capture a bug report whenever this happens.
+                return;
+            }
+            if (trackedCall.isFinished()) {
+                return;
+            }
+            if (!Flags.unknownCallSettingBlockedLoggingEnabled()) {
+                mCalls.remove(callId);
+                return;
+            }
+
+            trackedCall.endTime = SystemClock.elapsedRealtime();
+            if (trackedCall.callType != CALL_TYPE_UNTRUSTED) {
+                // We only hang onto a finished call if the call was untrusted
+                mCalls.remove(callId);
+            }
+
+            if (trackedCall.ecmInteractionDuringCall) {
+                long duration = TimeUnit.MILLISECONDS.toSeconds(
+                        trackedCall.endTime - trackedCall.startTime);
+                int durationInt =  (int) Math.min(duration, Integer.MAX_VALUE);
+                PermissionControllerStatsLog.write(CALL_WITH_ECM_INTERACTION_REPORTED,
+                        trackedCall.blockedDuringCall, durationInt);
+            }
+
+            pruneOldFinishedCalls();
+            pruneOldLogs();
+        }
+
+        public void endAllCalls() {
+            for (String callId: mCalls.keySet()) {
+                endCall(callId);
+            }
+        }
+
+        public void onEcmInteraction(@NonNull String packageName, int userId,
+                @NonNull String settingIdentifier, boolean allowed) {
+            if (!Flags.unknownCallSettingBlockedLoggingEnabled()) {
+                return;
+            }
+
+            boolean hasOngoingCall = false;
+            for (TrackedCall current: mCalls.values()) {
+                if (current.isFinished()) {
+                    // We only care about ongoing calls
+                    continue;
+                }
+                hasOngoingCall = true;
+                // Mark that the current call had a setting interaction during it
+                current.ecmInteractionDuringCall = true;
+                current.blockedDuringCall = !allowed;
+                logInCallRestrictionEvent(packageName, userId, settingIdentifier, allowed, current);
+            }
+            if (!hasOngoingCall) {
+                logInCallRestrictionEvent(packageName, userId, settingIdentifier, allowed, null);
+            }
+
+        }
+
+        private @CallType int getCallType(@NonNull Call call) {
+            String number = getPhoneNumber(call);
+            try {
+                if (number != null && mTelephonyManager.isEmergencyNumber(number)) {
+                    return CALL_TYPE_EMERGENCY;
+                }
+            } catch (IllegalStateException | UnsupportedOperationException e) {
+                // If either of these are thrown, the telephony service is not available on the
+                // current device, either because the device lacks telephony calling, or the
+                // telephony service is unavailable.
+            }
+            UserHandle user = mContext.getUser();
+            Bundle extras = call.getDetails().getExtras();
+            if (extras != null) {
+                user = extras.getParcelable(Intent.EXTRA_USER_HANDLE, UserHandle.class);
+            }
+            if (number != null) {
+                return hasContactWithPhoneNumber(number, user)
+                        ? CALL_TYPE_TRUSTED : CALL_TYPE_UNTRUSTED;
+            } else {
+                return hasContactWithDisplayName(getDisplayName(call), user)
+                        ? CALL_TYPE_TRUSTED : CALL_TYPE_UNTRUSTED;
+            }
+        }
+
+        private static String getPhoneNumber(@NonNull Call call) {
+            Uri handle = call.getDetails().getHandle();
+            if (handle == null || handle.getScheme() == null) {
+                return null;
+            }
+            if (!handle.getScheme().equals(PhoneAccount.SCHEME_TEL)) {
+                return null;
+            }
+            return handle.getSchemeSpecificPart();
+        }
+
+        private static String getDisplayName(@NonNull Call call) {
+            return call.getDetails().getCallerDisplayName();
+        }
+
+        private boolean hasContactWithPhoneNumber(@Nullable String phoneNumber, UserHandle user) {
+            if (phoneNumber == null) {
+                return false;
+            }
+            Uri uri = Uri.withAppendedPath(PhoneLookup.CONTENT_FILTER_URI,
+                    Uri.encode(phoneNumber));
+            String[] projection = new String[]{
+                    PhoneLookup.DISPLAY_NAME,
+                    ContactsContract.PhoneLookup._ID
+            };
+            try (Cursor res = getUserContentResolver(user).query(uri, projection, null, null)) {
+                return res != null && res.getCount() > 0;
+            }
+        }
+
+        private boolean hasContactWithDisplayName(@Nullable String displayName, UserHandle user) {
+            if (displayName == null) {
+                return false;
+            }
+            Uri uri = ContactsContract.Data.CONTENT_URI;
+            String[] projection = new String[]{PhoneLookup._ID};
+            String selection = StructuredName.DISPLAY_NAME + " = ?";
+            String[] selectionArgs = new String[]{displayName};
+            try (Cursor res = getUserContentResolver(user)
+                         .query(uri, projection, selection, selectionArgs, null)) {
+                return res != null && res.getCount() > 0;
+            }
+        }
+
+        private ContentResolver getUserContentResolver(UserHandle user) {
+            return mContext.createContextAsUser(user, 0).getContentResolver();
+        }
+
+        private TrackedCall getOngoingCallOfType(@CallType int callType) {
+            for (TrackedCall call : mCalls.values()) {
+                if (!call.isFinished() && call.callType == callType) {
+                    return call;
+                }
+            }
+            return null;
+        }
+
+        public boolean isUntrustedCallOngoing() {
+            if (!Flags.unknownCallPackageInstallBlockingEnabled()) {
+                return false;
+            }
+
+            if (getOngoingCallOfType(CALL_TYPE_EMERGENCY) != null) {
+                // If we have an emergency call, return false always.
+                return false;
+            }
+            return getOngoingCallOfType(CALL_TYPE_UNTRUSTED) != null;
+        }
+
+        void pruneOldFinishedCalls() {
+            if (!Flags.unknownCallSettingBlockedLoggingEnabled()) {
+                return;
+            }
+            long cutoff = SystemClock.elapsedRealtime() - UNTRUSTED_CALL_STORAGE_TIME_MS;
+            mCalls.entrySet().removeIf(
+                    e -> e.getValue().isFinished() && e.getValue().endTime < cutoff);
+        }
+
+        void pruneOldLogs() {
+            if (!Flags.unknownCallSettingBlockedLoggingEnabled()) {
+                return;
+            }
+            long cutoff = SystemClock.elapsedRealtime() - MAX_LOGGING_FREQUENCY_MS;
+            mLogCache.entrySet().removeIf(e -> e.getValue() < cutoff);
+        }
+
+        private void logInCallRestrictionEvent(@NonNull String packageName, int userId,
+                @NonNull String settingIdentifier, boolean allowed, @Nullable TrackedCall call) {
+            if (!Flags.unknownCallSettingBlockedLoggingEnabled()) {
+                return;
+            }
+
+            if (!UNTRUSTED_CALL_RESTRICTED_SETTINGS.contains(settingIdentifier)) {
+                return;
+            }
+
+            int uid;
+            try {
+                uid = mPackageManager.getPackageUid(packageName, userId);
+            } catch (NameNotFoundException e) {
+                return;
+            }
+
+            boolean callInProgress = call != null && !call.isFinished();
+            boolean trusted = true;
+            boolean incoming = false;
+            boolean callBackAfterBlock = false;
+            if (callInProgress) {
+                trusted = call.callType != CALL_TYPE_UNTRUSTED;
+                incoming = call.incoming;
+
+                // Look for a previous call from the same caller, that had a blocked ecm interaction
+                for (TrackedCall otherCall : mCalls.values()) {
+                    if (!otherCall.isFinished()) {
+                        continue;
+                    }
+                    if (!Objects.equals(otherCall.caller, call.caller)) {
+                        continue;
+                    }
+                    if (!otherCall.blockedDuringCall) {
+                        continue;
+                    }
+                    callBackAfterBlock = true;
+                }
+            }
+
+            String caller = callInProgress ? call.caller : null;
+            int logHash = Objects.hash(caller, uid, settingIdentifier, allowed, trusted);
+            Long lastLogTime = mLogCache.get(logHash);
+            long now = SystemClock.elapsedRealtime();
+            long cutoff = now - MAX_LOGGING_FREQUENCY_MS;
+            if (lastLogTime != null && lastLogTime > cutoff) {
+                return;
+            }
+            mLogCache.put(logHash, now);
+
+            PermissionControllerStatsLog.write(ECM_RESTRICTION_QUERY_IN_CALL_REPORTED, uid,
+                    settingIdentifier, allowed, callInProgress, incoming, trusted,
+                    callBackAfterBlock);
         }
     }
 }

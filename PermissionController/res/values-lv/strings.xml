@@ -460,8 +460,7 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> vēlas augšupielādēt atkļūdošanas informāciju."</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"Vai kopīgot atkļūdošanas datus?"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"Sistēmā tika konstatēta problēma."</string>
-    <!-- no translation found for incident_report_dialog_text (1819244417678973362) -->
-    <skip />
+    <string name="incident_report_dialog_text" msgid="1819244417678973362">"Lietotne <xliff:g id="APP_NAME_0">%1$s</xliff:g> pieprasa augšupielādēt kļūdas pārskatu no šīs ierīces, kas izveidots šajā datumā: <xliff:g id="DATE">%2$s</xliff:g>, plkst. <xliff:g id="TIME">%3$s</xliff:g>. Kļūdu pārskatos ir ietverta personas informācija, kas saistīta ar jūsu ierīci, vai lietotnēs reģistrēta informācija, piemēram, lietotājvārdi, atrašanās vietas dati, ierīču identifikatori un tīkla informācija. Kopīgojiet kļūdu pārskatus tikai ar uzticamiem lietotājiem un lietotnēm.\n\nVai atļaut lietotnei <xliff:g id="APP_NAME_1">%4$s</xliff:g> augšupielādēt kļūdas pārskatu?"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"Apstrādājot lietotnes <xliff:g id="APP_NAME">%1$s</xliff:g> kļūdas pārskatu, radās problēma. Tāpēc detalizēto atkļūdošanas datu kopīgošana tika liegta. Atvainojiet par traucējumu!"</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"Atļaut"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"Neatļaut"</string>
@@ -680,12 +679,13 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"Ierobežots iestatījums"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"Drošības apsvērumu dēļ šis iestatījums pašlaik nav pieejams."</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"Nevar pabeigt darbību zvana laikā"</string>
-    <!-- no translation found for enhanced_confirmation_phone_state_dialog_desc (3803423079498712549) -->
-    <skip />
-    <!-- no translation found for enhanced_confirmation_phone_state_dialog_install_desc (6400007048943674066) -->
-    <skip />
-    <!-- no translation found for enhanced_confirmation_phone_state_dialog_a11y_desc (6567523001053288057) -->
-    <skip />
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"Šis iestatījums ir bloķēts, lai aizsargātu jūsu ierīci un datus.<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Krāpnieki var mēģināt instalēt kaitīgas lietotnes, lūdzot jums instalēt nezināmas lietotnes no jauna avota."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Krāpnieki var mēģināt pārņemt kontroli pār jūsu ierīci, lūdzot jums atļaut piekļuvi pieejamības funkcijām lietotnē."</string>
     <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"Lietotnes piekļuve atļaujai “<xliff:g id="PERMISSION_NAME">%1$s</xliff:g>” tika liegta"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"Lietotne ir pieprasījusi piekļuvi sensitīvai atļaujai, kas var apdraudēt jūsu personas un finanšu informāciju.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Iespējams, lietotne nedarbosies pareizi bez šīs ierobežotās atļaujas. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Uzziniet, kā piešķirt piekļuvi.&lt;/a&gt;"</string>

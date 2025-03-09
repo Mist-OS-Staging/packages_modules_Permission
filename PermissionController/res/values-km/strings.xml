@@ -460,8 +460,7 @@
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ចង់​បង្ហោះ​ព័ត៌មាននៃ​ការជួសជុល។"</string>
     <string name="incident_report_dialog_title" msgid="669104389325204095">"ចែករំលែក​ទិន្នន័យ​នៃការ​ជួសជុល​ឬ?"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"ប្រព័ន្ធ​បានរកឃើញ​បញ្ហា​មួយ។"</string>
-    <!-- no translation found for incident_report_dialog_text (1819244417678973362) -->
-    <skip />
+    <string name="incident_report_dialog_text" msgid="1819244417678973362">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> កំពុងស្នើសុំ​បង្ហោះ​របាយការណ៍​អំពី​បញ្ហាពី​ឧបករណ៍​នេះ ដែល​បាន​ធ្វើឡើង​នៅថ្ងៃទី <xliff:g id="DATE">%2$s</xliff:g> នៅម៉ោង <xliff:g id="TIME">%3$s</xliff:g>។ របាយការណ៍​អំពី​បញ្ហា​រួមមាន​ព័ត៌មានផ្ទាល់ខ្លួន​អំពី​ឧបករណ៍​របស់អ្នក​ ឬ​ដែលបាន​កត់ត្រា​ដោយ​កម្មវិធី​ដូចជា ឈ្មោះ​អ្នកប្រើប្រាស់ ទិន្នន័យទីតាំង លេខកូដសម្គាល់​ឧបករណ៍ និង​ព័ត៌មាន​បណ្ដាញ​ជាដើម។ ចែករំលែក​របាយការណ៍​អំពី​បញ្ហា​ជាមួយ​មនុស្ស និងកម្មវិធីដែល​អ្នកទុកចិត្តតែ​ប៉ុណ្ណោះ ពាក់ព័ន្ធនឹង​ព័ត៌មាន​នេះ។\n\nអនុញ្ញាត​ឱ្យ <xliff:g id="APP_NAME_1">%4$s</xliff:g> បង្ហោះ​របាយការណ៍​អំពី​បញ្ហាដែរទេ?"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"មាន​បញ្ហា​ក្នុងការ​ដំណើរការ​របាយការណ៍អំពីបញ្ហា​សម្រាប់ <xliff:g id="APP_NAME">%1$s</xliff:g> ។ ដូច្នេះ ការចែករំលែក​ទិន្នន័យ​ជួសជុល​លម្អិត​ត្រូវបានបដិសេធ។ សូមអភ័យទោស​ចំពោះ​ការរំខាន។"</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"អនុញ្ញាត"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"បដិសេធ"</string>
@@ -680,12 +679,13 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"ការកំណត់​ដែលបានដាក់កំហិត"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"ដើម្បីសុវត្ថិភាព​របស់អ្នក បច្ចុប្បន្នមិនអាចប្រើការកំណត់នេះបានទេ។"</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"មិនអាចបញ្ចប់សកម្មភាពក្នុងអំឡុងពេលហៅទូរសព្ទបានទេ"</string>
-    <!-- no translation found for enhanced_confirmation_phone_state_dialog_desc (3803423079498712549) -->
-    <skip />
-    <!-- no translation found for enhanced_confirmation_phone_state_dialog_install_desc (6400007048943674066) -->
-    <skip />
-    <!-- no translation found for enhanced_confirmation_phone_state_dialog_a11y_desc (6567523001053288057) -->
-    <skip />
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"ការកំណត់នេះត្រូវបានទប់ស្កាត់ ដើម្បីការពារឧបករណ៍ និងទិន្នន័យរបស់អ្នក។<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>ជនឆបោកអាចនឹងព្យាយាមដំឡើងកម្មវិធីបង្កគ្រោះថ្នាក់ ដោយស្នើសុំឱ្យអ្នកដំឡើងកម្មវិធីមិនស្គាល់ពីប្រភពថ្មី។"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
+
+</xliff:g>ជនឆបោកអាចនឹងព្យាយាមគ្រប់គ្រងឧបករណ៍របស់អ្នក ដោយស្នើសុំឱ្យអ្នកអនុញ្ញាតសិទ្ធិចូលប្រើប្រាស់មុខងារភាពងាយស្រួលសម្រាប់កម្មវិធី។"</string>
     <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"កម្មវិធីត្រូវបានបដិសេធមិនឱ្យចូលប្រើ<xliff:g id="PERMISSION_NAME">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"កម្មវិធីបានស្នើសុំសិទ្ធិចូលប្រើការអនុញ្ញាត​ដែលមានលក្ខណៈរសើប ដែលអាចធ្វើឱ្យព័ត៌មានហិរញ្ញវត្ថុ និងព័ត៌មានផ្ទាល់ខ្លួនរបស់អ្នកប្រឈមនឹងហានិភ័យ។<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>កម្មវិធីអាចនឹងមិនដំណើរការបានត្រឹមត្រូវទេ ប្រសិនបើគ្មានការអនុញ្ញាតដែលមានការរឹតបន្តឹងនេះ។ &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;ស្វែងយល់អំពីរបៀបផ្ដល់សិទ្ធិចូលប្រើ&lt;/a&gt;"</string>
