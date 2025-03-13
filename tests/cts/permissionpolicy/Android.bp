@@ -40,6 +40,7 @@ android_test {
         "android.app.flags-aconfig",
         "android.permission.flags-aconfig-java-export",
         "update_engine_exported_flags_java_lib",
+        "appsearch_flags_java_exported_lib",
     ],
     srcs: [
         "src/**/*.java",
