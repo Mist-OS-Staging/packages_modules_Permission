@@ -205,7 +205,7 @@ fun Chip(
                     color = secondaryTextColor,
                     overflow = TextOverflow.Ellipsis,
                     maxLines = secondaryLabelMaxLines ?: 1,
-                    style = MaterialTheme.typography.caption2,
+                    style = MaterialTheme.typography.caption2.copy(hyphens = Hyphens.Auto),
                 )
             }
         }

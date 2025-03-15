@@ -67,6 +67,7 @@
                 titleForWork="@com.android.safetycenter.resources:string/biometrics_title_for_work"
                 titleForPrivateProfile="@com.android.safetycenter.resources:string/biometrics_title_for_private_profile"
                 searchTerms="@com.android.safetycenter.resources:string/biometrics_search_terms"
+                refreshOnPageOpenAllowed="true"
                 initialDisplayState="hidden"/>
         </safety-sources-group>
         <safety-sources-group

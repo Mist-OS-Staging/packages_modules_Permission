@@ -123,6 +123,7 @@ internal fun WearPermissionButtonInternal(
                     text = secondaryLabel,
                     modifier = Modifier.fillMaxWidth(),
                     maxLines = secondaryLabelMaxLines ?: LocalTextConfiguration.current.maxLines,
+                    style = LocalTextStyle.current.copy(hyphens = Hyphens.Auto),
                 )
             }
         }

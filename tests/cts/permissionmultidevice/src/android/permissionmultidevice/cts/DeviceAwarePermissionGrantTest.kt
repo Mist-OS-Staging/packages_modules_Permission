@@ -24,11 +24,11 @@ import android.companion.virtual.VirtualDeviceParams.DEVICE_POLICY_CUSTOM
 import android.companion.virtual.VirtualDeviceParams.DEVICE_POLICY_DEFAULT
 import android.companion.virtual.VirtualDeviceParams.POLICY_TYPE_CAMERA
 import android.content.ComponentName
+import android.content.Context
 import android.content.Intent
 import android.content.Intent.EXTRA_RESULT_RECEIVER
 import android.content.pm.PackageManager
 import android.content.pm.PackageManager.ACTION_REQUEST_PERMISSIONS
-import android.hardware.display.DisplayManager
 import android.hardware.display.VirtualDisplay
 import android.os.Build
 import android.os.Bundle
@@ -41,7 +41,6 @@ import android.permissionmultidevice.cts.UiAutomatorUtils.click
 import android.permissionmultidevice.cts.UiAutomatorUtils.findTextForView
 import android.permissionmultidevice.cts.UiAutomatorUtils.waitFindObject
 import android.platform.test.annotations.AppModeFull
-import android.platform.test.annotations.RequiresFlagsDisabled
 import android.platform.test.annotations.RequiresFlagsEnabled
 import android.provider.Settings
 import android.view.Display
@@ -65,13 +64,19 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 @SdkSuppress(minSdkVersion = Build.VERSION_CODES.VANILLA_ICE_CREAM, codeName = "VanillaIceCream")
 @AppModeFull(reason = "VirtualDeviceManager cannot be accessed by instant apps")
-class DeviceAwarePermissionGrantTest {
+@RequiresFlagsEnabled(
+    Flags.FLAG_DEVICE_AWARE_PERMISSION_APIS_ENABLED,
+    Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED,
+    Flags.FLAG_ALLOW_HOST_PERMISSION_DIALOGS_ON_VIRTUAL_DEVICES,
+)
+open class DeviceAwarePermissionGrantTest {
     private val instrumentation: Instrumentation = InstrumentationRegistry.getInstrumentation()
     private val defaultDeviceContext = instrumentation.targetContext
+    private lateinit var defaultDeviceName: String
     private lateinit var virtualDeviceManager: VirtualDeviceManager
     private lateinit var virtualDevice: VirtualDeviceManager.VirtualDevice
     private lateinit var virtualDisplay: VirtualDisplay
-    private lateinit var deviceDisplayName: String
+    private lateinit var virtualDeviceName: String
     private val permissionManager =
         defaultDeviceContext.getSystemService(PermissionManager::class.java)!!
 
@@ -88,28 +93,12 @@ class DeviceAwarePermissionGrantTest {
         installPackage(APP_APK_PATH_STREAMING)
         virtualDeviceManager =
             defaultDeviceContext.getSystemService(VirtualDeviceManager::class.java)!!
-        virtualDevice =
-            virtualDeviceRule.createManagedVirtualDevice(
-                VirtualDeviceParams.Builder()
-                    .setDevicePolicy(POLICY_TYPE_CAMERA, DEVICE_POLICY_CUSTOM)
-                    .build()
+
+        defaultDeviceName =
+            Settings.Global.getString(
+                defaultDeviceContext.contentResolver,
+                Settings.Global.DEVICE_NAME,
             )
-
-        val displayConfigBuilder =
-            VirtualDeviceRule.createDefaultVirtualDisplayConfigBuilder(
-                    DISPLAY_WIDTH,
-                    DISPLAY_HEIGHT,
-                )
-                .setFlags(
-                    DisplayManager.VIRTUAL_DISPLAY_FLAG_PUBLIC or
-                        DisplayManager.VIRTUAL_DISPLAY_FLAG_TRUSTED or
-                        DisplayManager.VIRTUAL_DISPLAY_FLAG_OWN_CONTENT_ONLY
-                )
-
-        virtualDisplay =
-            virtualDeviceRule.createManagedVirtualDisplay(virtualDevice, displayConfigBuilder)!!
-        deviceDisplayName =
-            virtualDeviceManager.getVirtualDevice(virtualDevice.deviceId)!!.displayName.toString()
     }
 
     @After
@@ -118,164 +107,435 @@ class DeviceAwarePermissionGrantTest {
         Thread.sleep(2000)
     }
 
-    @RequiresFlagsEnabled(
-        Flags.FLAG_DEVICE_AWARE_PERMISSION_APIS_ENABLED,
-        Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED,
-    )
-    @Test
-    fun onHostDevice_requestPermissionForHostDevice_shouldGrantPermission() {
-        assertAppHasPermissionForDevice(DEVICE_ID_DEFAULT, false)
-        assertAppHasPermissionForDevice(virtualDevice.deviceId, false)
-
-        testGrantPermissionForDevice(
-            Display.DEFAULT_DISPLAY,
-            DEVICE_ID_DEFAULT,
-            false,
-            "",
-            expectPermissionGrantedOnDefaultDevice = true,
-            expectPermissionGrantedOnRemoteDevice = false,
-        )
-    }
-
-    @RequiresFlagsEnabled(
-        Flags.FLAG_DEVICE_AWARE_PERMISSION_APIS_ENABLED,
-        Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED,
-    )
-    @Test
-    fun onHostDevice_requestPermissionForRemoteDevice_shouldGrantPermission() {
-        assertAppHasPermissionForDevice(DEVICE_ID_DEFAULT, false)
-        assertAppHasPermissionForDevice(virtualDevice.deviceId, false)
-
-        testGrantPermissionForDevice(
-            Display.DEFAULT_DISPLAY,
-            virtualDevice.deviceId,
-            true,
-            deviceDisplayName,
-            expectPermissionGrantedOnDefaultDevice = false,
-            expectPermissionGrantedOnRemoteDevice = true,
-        )
-    }
-
-    @Test
-    fun onHostDevice_requestPermissionForRemoteDeviceAfterPermissionGrantedToHostDevice() {
-        instrumentation.uiAutomation.grantRuntimePermission(APP_PACKAGE_NAME, PERMISSION)
-
-        assertAppHasPermissionForDevice(DEVICE_ID_DEFAULT, true)
-        assertAppHasPermissionForDevice(virtualDevice.deviceId, false)
-
-        testGrantPermissionForDevice(
-            Display.DEFAULT_DISPLAY,
-            virtualDevice.deviceId,
-            true,
-            deviceDisplayName,
-            expectPermissionGrantedOnDefaultDevice = true,
-            expectPermissionGrantedOnRemoteDevice = true,
-        )
-    }
-
-    @Test
-    fun onHostDevice_requestPermissionForHostDeviceAfterPermissionGrantedToRemoteDevice() {
-        permissionManager.grantRuntimePermission(
-            APP_PACKAGE_NAME,
-            PERMISSION,
-            virtualDevice.persistentDeviceId!!,
-        )
-
-        assertAppHasPermissionForDevice(DEVICE_ID_DEFAULT, false)
-        assertAppHasPermissionForDevice(virtualDevice.deviceId, true)
-
-        testGrantPermissionForDevice(
-            Display.DEFAULT_DISPLAY,
-            DEVICE_ID_DEFAULT,
-            false,
-            "",
-            expectPermissionGrantedOnDefaultDevice = true,
-            expectPermissionGrantedOnRemoteDevice = true,
-        )
-    }
-
-    @RequiresFlagsEnabled(
-        Flags.FLAG_DEVICE_AWARE_PERMISSION_APIS_ENABLED,
-        Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED,
-    )
-    @RequiresFlagsDisabled(Flags.FLAG_ALLOW_HOST_PERMISSION_DIALOGS_ON_VIRTUAL_DEVICES)
-    @Test
-    fun onRemoteDevice_requestPermissionForHostDevice_shouldShowWarningDialog() {
-        assertAppHasPermissionForDevice(DEVICE_ID_DEFAULT, false)
-        assertAppHasPermissionForDevice(virtualDevice.deviceId, false)
-
-        requestPermissionOnDevice(virtualDisplay.display.displayId, DEVICE_ID_DEFAULT)
-
-        val displayId = virtualDisplay.display.displayId
-        waitFindObject(By.displayId(displayId).textContains("Permission request suppressed"))
-    }
-
-    @RequiresFlagsEnabled(
-        Flags.FLAG_DEVICE_AWARE_PERMISSION_APIS_ENABLED,
-        Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED,
-        Flags.FLAG_ALLOW_HOST_PERMISSION_DIALOGS_ON_VIRTUAL_DEVICES,
-    )
-    @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA, codeName = "Baklava")
-    @Test
-    fun onRemoteDevice_requestPermissionForHostDevice_shouldGrantPermission() {
-        assertAppHasPermissionForDevice(DEVICE_ID_DEFAULT, false)
-        assertAppHasPermissionForDevice(virtualDevice.deviceId, false)
-        // Create a virtual device with default policy, so that camera permission request will
-        // correspond to default device camera access.
+    private fun createVirtualDevice(cameraPolicy: Int = DEVICE_POLICY_DEFAULT) {
         virtualDevice =
             virtualDeviceRule.createManagedVirtualDevice(
                 VirtualDeviceParams.Builder()
-                    .setDevicePolicy(POLICY_TYPE_CAMERA, DEVICE_POLICY_DEFAULT)
+                    .setDevicePolicy(POLICY_TYPE_CAMERA, cameraPolicy)
                     .build()
             )
-        testGrantPermissionForDevice(
-            virtualDisplay.display.displayId,
-            virtualDevice.deviceId,
-            true,
-            Settings.Global.getString(
-                defaultDeviceContext.contentResolver,
-                Settings.Global.DEVICE_NAME,
-            ),
-            expectPermissionGrantedOnDefaultDevice = true,
-            expectPermissionGrantedOnRemoteDevice = false,
-        )
+        virtualDisplay =
+            virtualDeviceRule.createManagedVirtualDisplay(
+                virtualDevice,
+                VirtualDeviceRule.createTrustedVirtualDisplayConfigBuilder(),
+            )!!
+        virtualDeviceName =
+            virtualDeviceManager.getVirtualDevice(virtualDevice.deviceId)!!.displayName.toString()
     }
 
-    @RequiresFlagsEnabled(
-        Flags.FLAG_DEVICE_AWARE_PERMISSION_APIS_ENABLED,
-        Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED,
-    )
     @Test
-    fun onRemoteDevice_requestPermissionForRemoteDevice_shouldGrantPermission() {
-        assertAppHasPermissionForDevice(DEVICE_ID_DEFAULT, false)
-        assertAppHasPermissionForDevice(virtualDevice.deviceId, false)
-
-        testGrantPermissionForDevice(
-            virtualDisplay.display.displayId,
-            virtualDevice.deviceId,
-            true,
-            deviceDisplayName,
-            expectPermissionGrantedOnDefaultDevice = false,
-            expectPermissionGrantedOnRemoteDevice = true,
+    fun deviceAwarePermission_onHost_requestHostPermission() {
+        createVirtualDevice(cameraPolicy = DEVICE_POLICY_CUSTOM)
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.CAMERA,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = DEVICE_ID_DEFAULT,
+            requestingForDevice = DEVICE_ID_DEFAULT,
+            dialogDeviceName = DEVICE_ID_INVALID,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = false,
         )
     }
 
-    private fun testGrantPermissionForDevice(
-        displayId: Int,
-        targetDeviceId: Int,
-        showDeviceName: Boolean,
-        expectedDeviceNameInDialog: String,
-        expectPermissionGrantedOnDefaultDevice: Boolean,
-        expectPermissionGrantedOnRemoteDevice: Boolean,
-    ) {
-        val future = requestPermissionOnDevice(displayId, targetDeviceId)
+    @Test
+    fun deviceAwarePermission_onHost_withRemotePermission_requestHostPermission() {
+        createVirtualDevice(cameraPolicy = DEVICE_POLICY_CUSTOM)
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.CAMERA,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = true,
+            requestingFromDevice = DEVICE_ID_DEFAULT,
+            requestingForDevice = DEVICE_ID_DEFAULT,
+            dialogDeviceName = DEVICE_ID_INVALID,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
 
-        if (showDeviceName) {
+    @Test
+    fun deviceAwarePermission_onHost_requestPermissionWithoutDeviceId() {
+        createVirtualDevice(cameraPolicy = DEVICE_POLICY_CUSTOM)
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.CAMERA,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = DEVICE_ID_DEFAULT,
+            requestingForDevice = DEVICE_ID_INVALID,
+            dialogDeviceName = DEVICE_ID_INVALID,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = false,
+        )
+    }
+
+    @Test
+    fun deviceAwarePermission_onHost_withRemotePermission_requestPermissionWithoutDeviceId() {
+        createVirtualDevice(cameraPolicy = DEVICE_POLICY_CUSTOM)
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.CAMERA,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = true,
+            requestingFromDevice = DEVICE_ID_DEFAULT,
+            requestingForDevice = DEVICE_ID_INVALID,
+            dialogDeviceName = DEVICE_ID_INVALID,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    @Test
+    fun deviceAwarePermission_onHost_requestRemotePermission() {
+        createVirtualDevice(cameraPolicy = DEVICE_POLICY_CUSTOM)
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.CAMERA,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = DEVICE_ID_DEFAULT,
+            requestingForDevice = virtualDevice.deviceId,
+            dialogDeviceName = virtualDevice.deviceId,
+            expectPermissionGrantedOnDefaultDevice = false,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    @Test
+    fun deviceAwarePermission_onHost_withHostPermission_requestRemotePermission() {
+        createVirtualDevice(cameraPolicy = DEVICE_POLICY_CUSTOM)
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.CAMERA,
+            initialDefaultDevicePermission = true,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = DEVICE_ID_DEFAULT,
+            requestingForDevice = virtualDevice.deviceId,
+            dialogDeviceName = virtualDevice.deviceId,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    @Test
+    fun deviceAwarePermission_onRemote_requestRemotePermission() {
+        createVirtualDevice(cameraPolicy = DEVICE_POLICY_CUSTOM)
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.CAMERA,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = virtualDevice.deviceId,
+            requestingForDevice = virtualDevice.deviceId,
+            dialogDeviceName = virtualDevice.deviceId,
+            expectPermissionGrantedOnDefaultDevice = false,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    @Test
+    fun deviceAwarePermission_onRemote_withHostPermission_requestRemotePermission() {
+        createVirtualDevice(cameraPolicy = DEVICE_POLICY_CUSTOM)
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.CAMERA,
+            initialDefaultDevicePermission = true,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = virtualDevice.deviceId,
+            requestingForDevice = virtualDevice.deviceId,
+            dialogDeviceName = virtualDevice.deviceId,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    @Test
+    fun deviceAwarePermission_onRemote_requestPermissionWithoutDeviceId() {
+        createVirtualDevice(cameraPolicy = DEVICE_POLICY_CUSTOM)
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.CAMERA,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = virtualDevice.deviceId,
+            requestingForDevice = DEVICE_ID_INVALID,
+            dialogDeviceName = virtualDevice.deviceId,
+            expectPermissionGrantedOnDefaultDevice = false,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    @Test
+    fun deviceAwarePermission_onRemote_withHostPermission_requestPermissionWithoutDeviceId() {
+        createVirtualDevice(cameraPolicy = DEVICE_POLICY_CUSTOM)
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.CAMERA,
+            initialDefaultDevicePermission = true,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = virtualDevice.deviceId,
+            requestingForDevice = DEVICE_ID_INVALID,
+            dialogDeviceName = virtualDevice.deviceId,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    // TODO: Receives PERMISSION_DENIED but it's fine if remote permission is held??
+    @Test
+    fun deviceAwarePermission_onRemote_requestHostPermission() {
+        createVirtualDevice(cameraPolicy = DEVICE_POLICY_CUSTOM)
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.CAMERA,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = virtualDevice.deviceId,
+            requestingForDevice = DEVICE_ID_DEFAULT,
+            dialogDeviceName = DEVICE_ID_DEFAULT,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = false,
+        )
+    }
+
+    @Test
+    fun deviceAwarePermission_onRemote_withRemotePermission_requestHostPermission() {
+        createVirtualDevice(cameraPolicy = DEVICE_POLICY_CUSTOM)
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.CAMERA,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = true,
+            requestingFromDevice = virtualDevice.deviceId,
+            requestingForDevice = DEVICE_ID_DEFAULT,
+            dialogDeviceName = DEVICE_ID_DEFAULT,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    @Test
+    fun deviceAwarePermissionWithoutCapability_onHost_requestHostPermission() {
+        createVirtualDevice(cameraPolicy = DEVICE_POLICY_DEFAULT)
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.CAMERA,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = DEVICE_ID_DEFAULT,
+            requestingForDevice = DEVICE_ID_DEFAULT,
+            dialogDeviceName = DEVICE_ID_INVALID,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    @Test
+    fun deviceAwarePermissionWithoutCapability_onHost_requestPermissionWithoutDeviceId() {
+        createVirtualDevice(cameraPolicy = DEVICE_POLICY_DEFAULT)
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.CAMERA,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = DEVICE_ID_DEFAULT,
+            requestingForDevice = DEVICE_ID_INVALID,
+            dialogDeviceName = DEVICE_ID_INVALID,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    @Test
+    fun deviceAwarePermissionWithoutCapability_onHost_requestRemotePermission() {
+        createVirtualDevice(cameraPolicy = DEVICE_POLICY_DEFAULT)
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.CAMERA,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = DEVICE_ID_DEFAULT,
+            requestingForDevice = virtualDevice.deviceId,
+            dialogDeviceName = DEVICE_ID_INVALID,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    @Test
+    fun deviceAwarePermissionWithoutCapability_onRemote_requestRemotePermission() {
+        createVirtualDevice(cameraPolicy = DEVICE_POLICY_DEFAULT)
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.CAMERA,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = virtualDevice.deviceId,
+            requestingForDevice = virtualDevice.deviceId,
+            dialogDeviceName = DEVICE_ID_DEFAULT,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    @Test
+    fun deviceAwarePermissionWithoutCapability_onRemote_requestPermissionWithoutDeviceId() {
+        createVirtualDevice(cameraPolicy = DEVICE_POLICY_DEFAULT)
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.CAMERA,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = virtualDevice.deviceId,
+            requestingForDevice = DEVICE_ID_INVALID,
+            dialogDeviceName = DEVICE_ID_DEFAULT,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    @Test
+    fun deviceAwarePermissionWithoutCapability_onRemote_requestHostPermission() {
+        createVirtualDevice(cameraPolicy = DEVICE_POLICY_DEFAULT)
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.CAMERA,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = virtualDevice.deviceId,
+            requestingForDevice = DEVICE_ID_DEFAULT,
+            dialogDeviceName = DEVICE_ID_DEFAULT,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    @Test
+    fun nonDeviceAwarePermission_onHost_requestHostPermission() {
+        createVirtualDevice()
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.READ_CONTACTS,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = DEVICE_ID_DEFAULT,
+            requestingForDevice = DEVICE_ID_DEFAULT,
+            dialogDeviceName = DEVICE_ID_INVALID,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    @Test
+    fun nonDeviceAwarePermission_onHost_requestPermissionWithoutDeviceId() {
+        createVirtualDevice()
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.READ_CONTACTS,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = DEVICE_ID_DEFAULT,
+            requestingForDevice = DEVICE_ID_INVALID,
+            dialogDeviceName = DEVICE_ID_INVALID,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    @Test
+    fun nonDeviceAwarePermission_onHost_requestRemotePermission() {
+        createVirtualDevice()
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.READ_CONTACTS,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = DEVICE_ID_DEFAULT,
+            requestingForDevice = virtualDevice.deviceId,
+            dialogDeviceName = DEVICE_ID_INVALID,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    @Test
+    fun nonDeviceAwarePermission_onRemote_requestRemotePermission() {
+        createVirtualDevice()
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.READ_CONTACTS,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = virtualDevice.deviceId,
+            requestingForDevice = virtualDevice.deviceId,
+            dialogDeviceName = DEVICE_ID_DEFAULT,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    @Test
+    fun nonDeviceAwarePermission_onRemote_requestPermissionWithoutDeviceId() {
+        createVirtualDevice()
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.READ_CONTACTS,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = virtualDevice.deviceId,
+            requestingForDevice = DEVICE_ID_INVALID,
+            dialogDeviceName = DEVICE_ID_DEFAULT,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    @Test
+    fun nonDeviceAwarePermission_onRemote_requestHostPermission() {
+        createVirtualDevice()
+        testMultiDevicePermissionGrant(
+            permission = Manifest.permission.READ_CONTACTS,
+            initialDefaultDevicePermission = false,
+            initialVirtualDevicePermission = false,
+            requestingFromDevice = virtualDevice.deviceId,
+            requestingForDevice = DEVICE_ID_DEFAULT,
+            dialogDeviceName = DEVICE_ID_DEFAULT,
+            expectPermissionGrantedOnDefaultDevice = true,
+            expectPermissionGrantedOnVirtualDevice = true,
+        )
+    }
+
+    private fun testMultiDevicePermissionGrant(
+        permission: String,
+        initialDefaultDevicePermission: Boolean,
+        initialVirtualDevicePermission: Boolean,
+        requestingFromDevice: Int,
+        requestingForDevice: Int,
+        dialogDeviceName: Int,
+        expectPermissionGrantedOnDefaultDevice: Boolean,
+        expectPermissionGrantedOnVirtualDevice: Boolean,
+    ) {
+        if (initialDefaultDevicePermission) {
+            instrumentation.uiAutomation.grantRuntimePermission(APP_PACKAGE_NAME, permission)
+        }
+        if (initialVirtualDevicePermission) {
+            grantRuntimePermissionOnVirtualDevice(permission)
+        }
+        assertAppHasPermissionForDevice(
+            DEVICE_ID_DEFAULT,
+            permission,
+            initialDefaultDevicePermission,
+        )
+        assertAppHasPermissionForDevice(
+            virtualDevice.deviceId,
+            permission,
+            initialVirtualDevicePermission,
+        )
+
+        val displayId =
+            if (requestingFromDevice == DEVICE_ID_DEFAULT) {
+                Display.DEFAULT_DISPLAY
+            } else {
+                virtualDisplay.display.displayId
+            }
+
+        val future = requestPermissionOnDevice(displayId, requestingForDevice, permission)
+
+        if (dialogDeviceName != DEVICE_ID_INVALID) {
+            val expectedDeviceNameInDialog =
+                if (dialogDeviceName == DEVICE_ID_DEFAULT) {
+                    defaultDeviceName
+                } else {
+                    virtualDeviceName
+                }
             assertPermissionMessageContainsDeviceName(displayId, expectedDeviceNameInDialog)
+        } else {
+            assertPermissionMessageDoesNotContainDeviceName(displayId)
         }
 
         // Click the allow button in the dialog to grant permission
-        SystemUtil.eventually { click(By.displayId(displayId).res(ALLOW_BUTTON)) }
+        val allowButton =
+            if (permission == Manifest.permission.CAMERA) ALLOW_BUTTON_FOREGROUND else ALLOW_BUTTON
+        SystemUtil.eventually { click(By.displayId(displayId).res(allowButton)) }
 
         // Validate permission grant result returned from callback
         val grantPermissionResult = future.get(TIMEOUT, TimeUnit.MILLISECONDS)
@@ -284,34 +544,49 @@ class DeviceAwarePermissionGrantTest {
                     TestConstants.PERMISSION_RESULT_KEY_PERMISSIONS
                 )
             )
-            .isEqualTo(arrayOf(PERMISSION))
+            .isEqualTo(arrayOf(permission))
         assertThat(
                 grantPermissionResult.getIntArray(TestConstants.PERMISSION_RESULT_KEY_GRANT_RESULTS)
             )
             .isEqualTo(arrayOf(PackageManager.PERMISSION_GRANTED).toIntArray())
+
+        val expectedPermissionResultDeviceId =
+            if (requestingForDevice == DEVICE_ID_INVALID) {
+                requestingFromDevice
+            } else {
+                requestingForDevice
+            }
         assertThat(grantPermissionResult.getInt(TestConstants.PERMISSION_RESULT_KEY_DEVICE_ID))
-            .isEqualTo(targetDeviceId)
+            .isEqualTo(expectedPermissionResultDeviceId)
 
         // Validate whether permission is granted as expected
-        assertAppHasPermissionForDevice(DEVICE_ID_DEFAULT, expectPermissionGrantedOnDefaultDevice)
+        assertAppHasPermissionForDevice(
+            DEVICE_ID_DEFAULT,
+            permission,
+            expectPermissionGrantedOnDefaultDevice,
+        )
         assertAppHasPermissionForDevice(
             virtualDevice.deviceId,
-            expectPermissionGrantedOnRemoteDevice,
+            permission,
+            expectPermissionGrantedOnVirtualDevice,
         )
     }
 
     private fun requestPermissionOnDevice(
         displayId: Int,
         targetDeviceId: Int,
+        permission: String,
     ): CompletableFuture<Bundle> {
         val future = CompletableFuture<Bundle>()
         val callback = RemoteCallback { result: Bundle? -> future.complete(result) }
+        val permissions = mutableListOf(permission).toTypedArray()
         val intent =
             Intent()
                 .setComponent(
                     ComponentName(APP_PACKAGE_NAME, "$APP_PACKAGE_NAME.RequestPermissionActivity")
                 )
                 .putExtra(PackageManager.EXTRA_REQUEST_PERMISSIONS_DEVICE_ID, targetDeviceId)
+                .putExtra(PackageManager.EXTRA_REQUEST_PERMISSIONS_NAMES, permissions)
                 .putExtra(EXTRA_RESULT_RECEIVER, callback)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
 
@@ -327,12 +602,23 @@ class DeviceAwarePermissionGrantTest {
         assertThat(text).contains(deviceName)
     }
 
-    private fun assertAppHasPermissionForDevice(deviceId: Int, expectPermissionGranted: Boolean) {
+    private fun assertPermissionMessageDoesNotContainDeviceName(displayId: Int) {
+        waitFindObject(By.displayId(displayId).res(PERMISSION_MESSAGE_ID))
+        val text = findTextForView(By.displayId(displayId).res(PERMISSION_MESSAGE_ID))
+        assertThat(text).doesNotContain(virtualDeviceName)
+        assertThat(text).doesNotContain(defaultDeviceName)
+    }
+
+    private fun assertAppHasPermissionForDevice(
+        deviceId: Int,
+        permission: String,
+        expectPermissionGranted: Boolean,
+    ) {
         val checkPermissionResult =
             defaultDeviceContext
                 .createDeviceContext(deviceId)
                 .packageManager
-                .checkPermission(PERMISSION, APP_PACKAGE_NAME)
+                .checkPermission(permission, APP_PACKAGE_NAME)
 
         if (expectPermissionGranted) {
             Assert.assertEquals(PackageManager.PERMISSION_GRANTED, checkPermissionResult)
@@ -347,18 +633,25 @@ class DeviceAwarePermissionGrantTest {
         return intent.resolveActivity(defaultDeviceContext.packageManager)
     }
 
+    private fun grantRuntimePermissionOnVirtualDevice(permission: String) {
+        permissionManager.grantRuntimePermission(
+            APP_PACKAGE_NAME,
+            permission,
+            virtualDevice.persistentDeviceId!!,
+        )
+    }
+
     companion object {
         const val APK_DIRECTORY = "/data/local/tmp/cts-permissionmultidevice"
         const val APP_APK_PATH_STREAMING = "${APK_DIRECTORY}/CtsAccessRemoteDeviceCamera.apk"
         const val APP_PACKAGE_NAME = "android.permissionmultidevice.cts.accessremotedevicecamera"
         const val PERMISSION_MESSAGE_ID = "com.android.permissioncontroller:id/permission_message"
-        const val ALLOW_BUTTON =
+        const val ALLOW_BUTTON_FOREGROUND =
             "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
-        const val DEVICE_ID_DEFAULT = 0
+        const val ALLOW_BUTTON = "com.android.permissioncontroller:id/permission_allow_button"
+        const val DEVICE_ID_DEFAULT = Context.DEVICE_ID_DEFAULT
+        const val DEVICE_ID_INVALID = Context.DEVICE_ID_INVALID
         const val PERSISTENT_DEVICE_ID_DEFAULT = VirtualDeviceManager.PERSISTENT_DEVICE_ID_DEFAULT
-        const val PERMISSION = Manifest.permission.CAMERA
         const val TIMEOUT = 5000L
-        private const val DISPLAY_HEIGHT = 1920
-        private const val DISPLAY_WIDTH = 1080
     }
 }

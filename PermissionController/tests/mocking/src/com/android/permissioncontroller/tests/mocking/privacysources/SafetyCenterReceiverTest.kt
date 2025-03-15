@@ -55,7 +55,7 @@ import org.mockito.ArgumentMatchers.eq
 import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.Mockito.verify
-import org.mockito.Mockito.verifyZeroInteractions
+import org.mockito.Mockito.verifyNoMoreInteractions
 import org.mockito.Mockito.`when` as whenever
 import org.mockito.MockitoAnnotations
 import org.mockito.MockitoSession
@@ -199,8 +199,8 @@ class SafetyCenterReceiverTest {
             safetyCenterReceiver.onReceive(application, intent)
             advanceUntilIdle()
 
-            verifyZeroInteractions(mockPrivacySource)
-            verifyZeroInteractions(mockPrivacySource2)
+            verifyNoMoreInteractions(mockPrivacySource)
+            verifyNoMoreInteractions(mockPrivacySource2)
         }
 
     @Test
@@ -214,7 +214,7 @@ class SafetyCenterReceiverTest {
 
             verify(mockPrivacySource)
                 .rescanAndPushSafetyCenterData(application, intent, EVENT_REFRESH_REQUESTED)
-            verifyZeroInteractions(mockPrivacySource2)
+            verifyNoMoreInteractions(mockPrivacySource2)
         }
 
     @Test
@@ -225,8 +225,8 @@ class SafetyCenterReceiverTest {
             safetyCenterReceiver.onReceive(application, intent)
             advanceUntilIdle()
 
-            verifyZeroInteractions(mockPrivacySource)
-            verifyZeroInteractions(mockPrivacySource2)
+            verifyNoMoreInteractions(mockPrivacySource)
+            verifyNoMoreInteractions(mockPrivacySource2)
         }
 
     @Test
@@ -238,7 +238,7 @@ class SafetyCenterReceiverTest {
             safetyCenterReceiver.onReceive(application, intent)
             advanceUntilIdle()
 
-            verifyZeroInteractions(mockPrivacySource)
-            verifyZeroInteractions(mockPrivacySource2)
+            verifyNoMoreInteractions(mockPrivacySource)
+            verifyNoMoreInteractions(mockPrivacySource2)
         }
 }

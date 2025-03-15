@@ -311,10 +311,8 @@ public class GrantPermissionsActivity extends SettingsActivity
                     PackageManager.EXTRA_REQUEST_PERMISSIONS_DEVICE_ID,
                     ContextCompat.DEVICE_ID_DEFAULT);
 
-            if (mTargetDeviceId != ContextCompat.DEVICE_ID_DEFAULT) {
-                mPackageManager = ContextCompat.createDeviceContext(this, mTargetDeviceId)
-                        .getPackageManager();
-            }
+            mPackageManager = ContextCompat.createDeviceContext(this, mTargetDeviceId)
+                    .getPackageManager();
 
             // When the permission grant dialog is streamed to a virtual device, and when requested
             // permissions include both device-aware permissions and non-device aware permissions,
@@ -336,21 +334,6 @@ public class GrantPermissionsActivity extends SettingsActivity
                     mShowWarningDialog.launch(
                             new Intent(this, PermissionDialogStreamingBlockedActivity.class));
                     return;
-                }
-            } else if (mTargetDeviceId != ContextCompat.DEVICE_ID_DEFAULT) {
-                // On the default device, when requested permissions are for a remote device,
-                // filter out non-device aware permissions.
-                for (int i = mRequestedPermissions.size() - 1; i >= 0; i--) {
-                    if (!MultiDeviceUtils.isPermissionDeviceAware(
-                            getApplicationContext(),
-                            mTargetDeviceId,
-                            mRequestedPermissions.get(i))) {
-                        Log.e(
-                                LOG_TAG,
-                                "non-device aware permission is requested for a remote device: "
-                                        + mRequestedPermissions.get(i));
-                        mRequestedPermissions.remove(i);
-                    }
                 }
             }
         }
@@ -740,7 +723,7 @@ public class GrantPermissionsActivity extends SettingsActivity
         int dialogDisplayDeviceId = ContextCompat.getDeviceId(this);
         boolean isMessageDeviceAware =
                 dialogDisplayDeviceId != ContextCompat.DEVICE_ID_DEFAULT
-                        || dialogDisplayDeviceId != mTargetDeviceId;
+                        || dialogDisplayDeviceId != info.getDeviceId();
 
         int messageId = getMessageId(info.getGroupName(), info.getPrompt(), isMessageDeviceAware);
         CharSequence message =
@@ -1132,17 +1115,9 @@ public class GrantPermissionsActivity extends SettingsActivity
 
             if ((mDelegated || (mViewModel != null && mViewModel.shouldReturnPermissionState()))
                     && mTargetPackage != null) {
-                PackageManager defaultDevicePackageManager = SdkLevel.isAtLeastV()
-                        && mTargetDeviceId != ContextCompat.DEVICE_ID_DEFAULT
-                        ? createDeviceContext(ContextCompat.DEVICE_ID_DEFAULT).getPackageManager()
-                        : mPackageManager;
-                PackageManager targetDevicePackageManager = mPackageManager;
                 for (int i = 0; i < resultPermissions.length; i++) {
                     String permission = resultPermissions[i];
-                    PackageManager pm = MultiDeviceUtils.isPermissionDeviceAware(
-                            getApplicationContext(), mTargetDeviceId, permission)
-                            ? targetDevicePackageManager : defaultDevicePackageManager;
-                    grantResults[i] = pm.checkPermission(resultPermissions[i], mTargetPackage);
+                    grantResults[i] = mPackageManager.checkPermission(permission, mTargetPackage);
                 }
             } else {
                 grantResults = new int[0];

@@ -139,7 +139,7 @@ public class UserUtils {
      */
     private static boolean isPrivateProfile(@NonNull UserHandle userHandle,
             @NonNull Context context) {
-        if (!SdkLevel.isAtLeastV() || !android.os.Flags.allowPrivateProfile()) {
+        if (!SdkLevel.isAtLeastV()) {
             return false;
         }
         Context userContext = context.createContextAsUser(userHandle, /* flags= */ 0);

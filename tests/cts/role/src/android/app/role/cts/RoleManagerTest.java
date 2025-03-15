@@ -878,7 +878,6 @@ public class RoleManagerTest {
     }
 
     @Test
-    @RequiresFlagsEnabled(android.os.Flags.FLAG_ALLOW_PRIVATE_PROFILE)
     @EnsureHasPrivateProfile(installInstrumentedApp = OptionalBoolean.TRUE)
     @SdkSuppress(minSdkVersion = Build.VERSION_CODES.VANILLA_ICE_CREAM,
             codeName = "VanillaIceCream")

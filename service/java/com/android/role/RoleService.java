@@ -40,6 +40,7 @@ import android.os.Binder;
 import android.os.Build;
 import android.os.Handler;
 import android.os.ParcelFileDescriptor;
+import android.os.Process;
 import android.os.RemoteCallback;
 import android.os.RemoteCallbackList;
 import android.os.RemoteException;
@@ -725,6 +726,35 @@ public class RoleService extends SystemService implements RoleUserState.Callback
 
             Preconditions.checkStringNotEmpty(roleName, "roleName cannot be null or empty");
             Objects.requireNonNull(callback, "callback cannot be null");
+
+            // Work around VoiceInteractionManagerService resetting default assistant upon force
+            // stop on pre-V platforms (b/191743558).
+            if (!SdkLevel.isAtLeastV() && Objects.equals(roleName, RoleManager.ROLE_ASSISTANT)
+                    && Binder.getCallingUid() == Process.myUid()) {
+                StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+                boolean isCallFromForceStop = false;
+                for (StackTraceElement stackTraceElement : stackTraceElements) {
+                    if (stackTraceElement.getClassName().contains(
+                            "com.android.server.voiceinteraction.VoiceInteractionManagerService")
+                            && stackTraceElement.getMethodName().equals("onHandleForceStop")) {
+                        isCallFromForceStop = true;
+                        break;
+                    }
+                }
+                if (isCallFromForceStop) {
+                    Log.i(LOG_TAG, "Ignoring clearRoleHoldersAsUser() call from"
+                            + " VoiceInteractionManagerService due to force stopping the current"
+                            + " assistant");
+                    ForegroundThread.getHandler().post(() -> {
+                        // Notify the callback as if this call has failed for some reason.
+                        callback.sendResult(null);
+                        // Announce a role holder change to trigger the default assistant to be
+                        // re-configured in VoiceInteractionManagerService.
+                        onRoleHoldersChanged(roleName, userId);
+                    });
+                    return;
+                }
+            }
 
             getOrCreateController(userId).onClearRoleHolders(roleName, flags, callback);
         }
