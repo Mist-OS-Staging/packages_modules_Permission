@@ -47,7 +47,7 @@ import org.mockito.ArgumentMatchers.eq
 import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.Mockito.verify
-import org.mockito.Mockito.verifyZeroInteractions
+import org.mockito.Mockito.verifyNoMoreInteractions
 import org.mockito.Mockito.`when` as whenever
 import org.mockito.MockitoAnnotations
 import org.mockito.MockitoSession
@@ -169,7 +169,7 @@ class WorkPolicyInfoTest {
     fun safetyCenterEnabledChanged_safetyCenterDisabled() {
         workPolicyInfo.safetyCenterEnabledChanged(context, false)
 
-        verifyZeroInteractions(mockSafetyCenterManager)
+        verifyNoMoreInteractions(mockSafetyCenterManager)
     }
 
     @Test
@@ -196,7 +196,7 @@ class WorkPolicyInfoTest {
 
         workPolicyInfo.safetyCenterEnabledChanged(context, false)
 
-        verifyZeroInteractions(mockSafetyCenterManager)
+        verifyNoMoreInteractions(mockSafetyCenterManager)
     }
 
     @Test

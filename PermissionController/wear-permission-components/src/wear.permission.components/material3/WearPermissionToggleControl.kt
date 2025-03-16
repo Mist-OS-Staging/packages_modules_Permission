@@ -23,8 +23,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
+import androidx.compose.ui.text.style.Hyphens
 import androidx.wear.compose.material3.CheckboxButton
 import androidx.wear.compose.material3.LocalTextConfiguration
+import androidx.wear.compose.material3.LocalTextStyle
 import androidx.wear.compose.material3.RadioButton
 import androidx.wear.compose.material3.SwitchButton
 import androidx.wear.compose.material3.Text
@@ -112,6 +114,7 @@ private fun WearPermissionToggleControlInternal(
             text = label,
             modifier = Modifier.fillMaxWidth(),
             maxLines = labelMaxLines ?: LocalTextConfiguration.current.maxLines,
+            style = LocalTextStyle.current.copy(hyphens = Hyphens.Auto),
         )
     }
 
@@ -122,6 +125,7 @@ private fun WearPermissionToggleControlInternal(
                     text = it,
                     modifier = Modifier.fillMaxWidth(),
                     maxLines = secondaryLabelMaxLines ?: LocalTextConfiguration.current.maxLines,
+                    style = LocalTextStyle.current.copy(hyphens = Hyphens.Auto),
                 )
             }
         }

@@ -108,7 +108,7 @@ class AppPermissionsTest {
 
     @RequiresFlagsEnabled(
         Flags.FLAG_DEVICE_AWARE_PERMISSION_APIS_ENABLED,
-        Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED
+        Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED,
     )
     @Test
     fun externalDevicePermissionGrantTest() {
@@ -123,7 +123,7 @@ class AppPermissionsTest {
         verifyRadioButtonStates(
             allowForegroundChecked = true,
             askChecked = false,
-            denyChecked = false
+            denyChecked = false,
         )
 
         UiAutomatorUtils2.getUiDevice().pressBack()
@@ -131,14 +131,14 @@ class AppPermissionsTest {
             mapOf(
                 "Allowed" to listOf(externalDeviceCameraText),
                 "Ask every time" to emptyList(),
-                "Not allowed" to listOf("Camera")
+                "Not allowed" to listOf("Camera", "Contacts"),
             )
         assertEquals(expectedGrantInfoMap, getGrantInfoMap())
     }
 
     @RequiresFlagsEnabled(
         Flags.FLAG_DEVICE_AWARE_PERMISSION_APIS_ENABLED,
-        Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED
+        Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED,
     )
     @Test
     fun externalDevicePermissionChangeToAskTest() {
@@ -153,7 +153,7 @@ class AppPermissionsTest {
 
     @RequiresFlagsEnabled(
         Flags.FLAG_DEVICE_AWARE_PERMISSION_APIS_ENABLED,
-        Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED
+        Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED,
     )
     @Test
     fun externalDevicePermissionChangeToDenyTest() {
@@ -168,7 +168,7 @@ class AppPermissionsTest {
 
     @RequiresFlagsEnabled(
         Flags.FLAG_DEVICE_AWARE_PERMISSION_APIS_ENABLED,
-        Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED
+        Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED,
     )
     @Test
     fun externalDevicePermissionChangeToAllowTest() {
@@ -180,7 +180,7 @@ class AppPermissionsTest {
         verifyRadioButtonStates(
             allowForegroundChecked = false,
             askChecked = true,
-            denyChecked = false
+            denyChecked = false,
         )
 
         clickAllowForegroundButton()
@@ -189,7 +189,7 @@ class AppPermissionsTest {
 
     @RequiresFlagsEnabled(
         Flags.FLAG_DEVICE_AWARE_PERMISSION_APIS_ENABLED,
-        Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED
+        Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED,
     )
     @Test
     fun externalDevicePermissionNotDisplayedInitiallyTest() {
@@ -200,14 +200,14 @@ class AppPermissionsTest {
             mapOf(
                 "Allowed" to emptyList(),
                 "Ask every time" to emptyList(),
-                "Not allowed" to listOf("Camera")
+                "Not allowed" to listOf("Camera", "Contacts"),
             )
         assertEquals(expectedGrantInfoMap, getGrantInfoMap())
     }
 
     @RequiresFlagsEnabled(
         Flags.FLAG_DEVICE_AWARE_PERMISSION_APIS_ENABLED,
-        Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED
+        Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED,
     )
     @Test
     fun externalDevicePermissionStickyOnGrantTest() {
@@ -219,7 +219,7 @@ class AppPermissionsTest {
         verifyRadioButtonStates(
             allowForegroundChecked = true,
             askChecked = false,
-            denyChecked = false
+            denyChecked = false,
         )
 
         clickDenyButton()
@@ -232,7 +232,7 @@ class AppPermissionsTest {
             mapOf(
                 "Allowed" to emptyList(),
                 "Ask every time" to emptyList(),
-                "Not allowed" to listOf("Camera", externalDeviceCameraText)
+                "Not allowed" to listOf("Camera", externalDeviceCameraText, "Contacts"),
             )
         assertEquals(expectedGrantInfoMap, getGrantInfoMap())
     }
@@ -243,7 +243,7 @@ class AppPermissionsTest {
         verifyRadioButtonStates(
             allowForegroundChecked = false,
             askChecked = true,
-            denyChecked = false
+            denyChecked = false,
         )
 
         UiAutomatorUtils2.getUiDevice().pressBack()
@@ -252,7 +252,7 @@ class AppPermissionsTest {
             mapOf(
                 "Allowed" to emptyList(),
                 "Ask every time" to listOf(externalDeviceCameraText),
-                "Not allowed" to listOf("Camera")
+                "Not allowed" to listOf("Camera", "Contacts"),
             )
         assertEquals(expectedGrantInfoMap, getGrantInfoMap())
 
@@ -270,7 +270,7 @@ class AppPermissionsTest {
         verifyRadioButtonStates(
             allowForegroundChecked = false,
             askChecked = false,
-            denyChecked = true
+            denyChecked = true,
         )
 
         UiAutomatorUtils2.getUiDevice().pressBack()
@@ -279,7 +279,7 @@ class AppPermissionsTest {
             mapOf(
                 "Allowed" to emptyList(),
                 "Ask every time" to emptyList(),
-                "Not allowed" to listOf("Camera", externalDeviceCameraText)
+                "Not allowed" to listOf("Camera", externalDeviceCameraText, "Contacts"),
             )
         assertEquals(expectedGrantInfoMap, getGrantInfoMap())
 
@@ -297,7 +297,7 @@ class AppPermissionsTest {
         verifyRadioButtonStates(
             allowForegroundChecked = true,
             askChecked = false,
-            denyChecked = false
+            denyChecked = false,
         )
 
         UiAutomatorUtils2.getUiDevice().pressBack()
@@ -306,7 +306,7 @@ class AppPermissionsTest {
             mapOf(
                 "Allowed" to listOf(externalDeviceCameraText),
                 "Ask every time" to emptyList(),
-                "Not allowed" to listOf("Camera")
+                "Not allowed" to listOf("Camera", "Contacts"),
             )
         assertEquals(expectedGrantInfoMap, getGrantInfoMap())
 
@@ -327,7 +327,7 @@ class AppPermissionsTest {
             mapOf(
                 "Allowed" to mutableListOf<String>(),
                 "Ask every time" to mutableListOf(),
-                "Not allowed" to mutableListOf()
+                "Not allowed" to mutableListOf(),
             )
         val outOfScopeTitles = setOf("Unused app settings", "Manage app if unused")
 
@@ -360,21 +360,21 @@ class AppPermissionsTest {
     private fun verifyRadioButtonStates(
         allowForegroundChecked: Boolean,
         askChecked: Boolean,
-        denyChecked: Boolean
+        denyChecked: Boolean,
     ) {
         eventually {
             assertEquals(
                 allowForegroundChecked,
                 UiAutomatorUtils2.waitFindObject(By.res(ALLOW_FOREGROUND_ONLY_RADIO_BUTTON))
-                    .isChecked
+                    .isChecked,
             )
             assertEquals(
                 askChecked,
-                UiAutomatorUtils2.waitFindObject(By.res(ASK_RADIO_BUTTON)).isChecked
+                UiAutomatorUtils2.waitFindObject(By.res(ASK_RADIO_BUTTON)).isChecked,
             )
             assertEquals(
                 denyChecked,
-                UiAutomatorUtils2.waitFindObject(By.res(DENY_RADIO_BUTTON)).isChecked
+                UiAutomatorUtils2.waitFindObject(By.res(DENY_RADIO_BUTTON)).isChecked,
             )
         }
     }
@@ -392,7 +392,7 @@ class AppPermissionsTest {
                     )
                 },
                 Until.newWindow(),
-                NEW_WINDOW_TIMEOUT_MILLIS
+                NEW_WINDOW_TIMEOUT_MILLIS,
             )
     }
 
@@ -418,7 +418,7 @@ class AppPermissionsTest {
         permissionManager.grantRuntimePermission(
             APP_PACKAGE_NAME,
             DEVICE_AWARE_PERMISSION,
-            persistentDeviceId
+            persistentDeviceId,
         )
 
     private fun getPermState(): Map<String, PermissionManager.PermissionState> =

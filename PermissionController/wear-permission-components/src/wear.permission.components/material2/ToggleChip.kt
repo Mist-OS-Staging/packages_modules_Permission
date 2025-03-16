@@ -33,6 +33,7 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
+import androidx.compose.ui.text.style.Hyphens
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.wear.compose.material.ChipDefaults
@@ -78,7 +79,7 @@ fun ToggleChip(
             textAlign = TextAlign.Start,
             overflow = TextOverflow.Ellipsis,
             maxLines = labelMaxLine ?: if (hasSecondaryLabel) 1 else 2,
-            style = MaterialTheme.typography.button,
+            style = MaterialTheme.typography.button.copy(hyphens = Hyphens.Auto),
         )
     }
 
@@ -89,7 +90,7 @@ fun ToggleChip(
                     text = secondaryLabel,
                     overflow = TextOverflow.Ellipsis,
                     maxLines = secondaryLabelMaxLine ?: 1,
-                    style = MaterialTheme.typography.caption2,
+                    style = MaterialTheme.typography.caption2.copy(hyphens = Hyphens.Auto),
                 )
             }
         }

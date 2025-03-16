@@ -331,9 +331,7 @@ class SafetyCenterSearchIndexablesProvider : BaseSearchIndexablesProvider() {
         get() = SafetyCenterIds.entryIdFromString(id)
 
     private fun isPrivateProfileSupported(): Boolean {
-        return SdkLevel.isAtLeastV() &&
-            com.android.permission.flags.Flags.privateProfileSupported() &&
-            android.os.Flags.allowPrivateProfile()
+        return SdkLevel.isAtLeastV() && com.android.permission.flags.Flags.privateProfileSupported()
     }
 
     companion object {

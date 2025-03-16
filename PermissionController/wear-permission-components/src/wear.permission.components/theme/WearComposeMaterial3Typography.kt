@@ -24,6 +24,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontVariation
 import androidx.compose.ui.unit.sp
+import androidx.wear.compose.foundation.CurvedTextStyle
 import androidx.wear.compose.material3.Typography
 import com.android.permissioncontroller.wear.permission.components.R
 
@@ -48,6 +49,18 @@ internal object WearComposeMaterial3Typography {
                 Font(familyName = DeviceFontFamilyName(typefaceName))
             }
         return FontFamily(font)
+    }
+
+    private fun CurvedTextStyle.updatedTextStyle(
+        context: Context,
+        @StringRes fontRes: Int,
+        variationSettings: FontVariation.Settings? = null,
+        @DimenRes fontSizeRes: Int,
+    ): CurvedTextStyle {
+        val fontFamily =
+            fontFamily(context = context, id = fontRes, variationSettings = variationSettings)
+        val fontSize = ResourceHelper.getDimen(context = context, id = fontSizeRes)?.sp ?: fontSize
+        return copy(fontFamily = fontFamily, fontSize = fontSize)
     }
 
     private fun TextStyle.updatedTextStyle(

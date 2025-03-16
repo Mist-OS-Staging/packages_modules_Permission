@@ -16,6 +16,7 @@
 package com.android.permissioncontroller.wear.permission.components.material3
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.wear.compose.material.ChipColors
 import androidx.wear.compose.material.ChipDefaults
 import androidx.wear.compose.material3.ButtonColors
@@ -26,6 +27,7 @@ import com.android.permissioncontroller.wear.permission.components.material3.Wea
 import com.android.permissioncontroller.wear.permission.components.material3.WearPermissionButtonStyle.Primary
 import com.android.permissioncontroller.wear.permission.components.material3.WearPermissionButtonStyle.Secondary
 import com.android.permissioncontroller.wear.permission.components.material3.WearPermissionButtonStyle.Transparent
+import com.android.permissioncontroller.wear.permission.components.material3.WearPermissionButtonStyle.Warning
 
 /**
  * This component is wrapper on material control colors, It applies the right colors based material
@@ -36,6 +38,7 @@ enum class WearPermissionButtonStyle {
     Secondary,
     Transparent,
     DisabledLike,
+    Warning,
 }
 
 @Composable
@@ -45,6 +48,11 @@ internal fun WearPermissionButtonStyle.material2ChipColors(): ChipColors {
         Secondary -> ChipDefaults.secondaryChipColors()
         Transparent -> ChipDefaults.childChipColors()
         DisabledLike -> chipDisabledColors()
+        Warning ->
+            ChipDefaults.secondaryChipColors(
+                backgroundColor =
+                    Color(red = 65, green = 14, blue = 11, alpha = (0.8f * 255).toInt())
+            )
     }
 }
 
@@ -55,6 +63,11 @@ internal fun WearPermissionButtonStyle.material3ButtonColors(): ButtonColors {
         Secondary -> ButtonDefaults.filledTonalButtonColors()
         Transparent -> ButtonDefaults.childButtonColors()
         DisabledLike -> ButtonDefaults.disabledLikeColors()
+        Warning ->
+            ButtonDefaults.buttonColors(
+                containerColor =
+                    Color(red = 65, green = 14, blue = 11, alpha = (0.8f * 255).toInt())
+            )
     }
 }
 
