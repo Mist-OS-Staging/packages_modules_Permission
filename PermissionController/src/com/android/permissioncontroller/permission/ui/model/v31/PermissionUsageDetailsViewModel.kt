@@ -30,7 +30,6 @@ import android.graphics.drawable.Drawable
 import android.location.LocationManager
 import android.os.Build
 import android.os.UserHandle
-import android.permission.flags.Flags
 import androidx.annotation.RequiresApi
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.AndroidViewModel
@@ -406,8 +405,7 @@ class PermissionUsageDetailsViewModel(
             }
         }
 
-        private fun isLocationByPassEnabled(): Boolean =
-            SdkLevel.isAtLeastV() && Flags.locationBypassPrivacyDashboardEnabled()
+        private fun isLocationByPassEnabled(): Boolean = SdkLevel.isAtLeastV()
 
         fun create(
             app: Application,

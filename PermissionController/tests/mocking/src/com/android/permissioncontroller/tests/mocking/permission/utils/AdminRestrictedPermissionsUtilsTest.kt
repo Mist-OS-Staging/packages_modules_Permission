@@ -114,24 +114,23 @@ object AdminRestrictedPermissionsUtilsTest {
         @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
         @RequiresFlagsEnabled(Flags.FLAG_REPLACE_BODY_SENSOR_PERMISSION_ENABLED)
         fun addAdminRestrictedPermission_addsPermissionToRestrictedList() {
+            val exampleHealthPermission = "test.permission.health"
             var canGrant =
                 AdminRestrictedPermissionsUtils.mayAdminGrantPermission(
-                    HealthPermissions.READ_HEART_RATE,
-                    HealthPermissions.HEALTH_PERMISSION_GROUP,
+                    exampleHealthPermission,
+                    /* group= */ null,
                     /* canAdminGrantSensorsPermissions= */ false,
                     /* isManagedProfile= */ false,
                     dpm,
                 )
             assertEquals(true, canGrant)
 
-            AdminRestrictedPermissionsUtils.addAdminRestrictedPermission(
-                HealthPermissions.READ_HEART_RATE
-            )
+            AdminRestrictedPermissionsUtils.addAdminRestrictedPermission(exampleHealthPermission)
 
             canGrant =
                 AdminRestrictedPermissionsUtils.mayAdminGrantPermission(
-                    HealthPermissions.READ_HEART_RATE,
-                    HealthPermissions.HEALTH_PERMISSION_GROUP,
+                    exampleHealthPermission,
+                    /* group= */ null,
                     /* canAdminGrantSensorsPermissions= */ false,
                     /* isManagedProfile= */ false,
                     dpm,

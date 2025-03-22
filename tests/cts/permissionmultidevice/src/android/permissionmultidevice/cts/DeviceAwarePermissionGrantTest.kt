@@ -62,13 +62,8 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-@SdkSuppress(minSdkVersion = Build.VERSION_CODES.VANILLA_ICE_CREAM, codeName = "VanillaIceCream")
+@SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA, codeName = "Baklava")
 @AppModeFull(reason = "VirtualDeviceManager cannot be accessed by instant apps")
-@RequiresFlagsEnabled(
-    Flags.FLAG_DEVICE_AWARE_PERMISSION_APIS_ENABLED,
-    Flags.FLAG_DEVICE_AWARE_PERMISSIONS_ENABLED,
-    Flags.FLAG_ALLOW_HOST_PERMISSION_DIALOGS_ON_VIRTUAL_DEVICES,
-)
 open class DeviceAwarePermissionGrantTest {
     private val instrumentation: Instrumentation = InstrumentationRegistry.getInstrumentation()
     private val defaultDeviceContext = instrumentation.targetContext
@@ -273,7 +268,7 @@ open class DeviceAwarePermissionGrantTest {
         )
     }
 
-    // TODO: Receives PERMISSION_DENIED but it's fine if remote permission is held??
+    @RequiresFlagsEnabled(Flags.FLAG_ALLOW_HOST_PERMISSION_DIALOGS_ON_VIRTUAL_DEVICES)
     @Test
     fun deviceAwarePermission_onRemote_requestHostPermission() {
         createVirtualDevice(cameraPolicy = DEVICE_POLICY_CUSTOM)
@@ -289,6 +284,7 @@ open class DeviceAwarePermissionGrantTest {
         )
     }
 
+    @RequiresFlagsEnabled(Flags.FLAG_ALLOW_HOST_PERMISSION_DIALOGS_ON_VIRTUAL_DEVICES)
     @Test
     fun deviceAwarePermission_onRemote_withRemotePermission_requestHostPermission() {
         createVirtualDevice(cameraPolicy = DEVICE_POLICY_CUSTOM)
@@ -334,6 +330,7 @@ open class DeviceAwarePermissionGrantTest {
         )
     }
 
+    @RequiresFlagsEnabled(Flags.FLAG_ALLOW_HOST_PERMISSION_DIALOGS_ON_VIRTUAL_DEVICES)
     @Test
     fun deviceAwarePermissionWithoutCapability_onHost_requestRemotePermission() {
         createVirtualDevice(cameraPolicy = DEVICE_POLICY_DEFAULT)
@@ -349,6 +346,7 @@ open class DeviceAwarePermissionGrantTest {
         )
     }
 
+    @RequiresFlagsEnabled(Flags.FLAG_ALLOW_HOST_PERMISSION_DIALOGS_ON_VIRTUAL_DEVICES)
     @Test
     fun deviceAwarePermissionWithoutCapability_onRemote_requestRemotePermission() {
         createVirtualDevice(cameraPolicy = DEVICE_POLICY_DEFAULT)
@@ -364,6 +362,7 @@ open class DeviceAwarePermissionGrantTest {
         )
     }
 
+    @RequiresFlagsEnabled(Flags.FLAG_ALLOW_HOST_PERMISSION_DIALOGS_ON_VIRTUAL_DEVICES)
     @Test
     fun deviceAwarePermissionWithoutCapability_onRemote_requestPermissionWithoutDeviceId() {
         createVirtualDevice(cameraPolicy = DEVICE_POLICY_DEFAULT)
@@ -379,6 +378,7 @@ open class DeviceAwarePermissionGrantTest {
         )
     }
 
+    @RequiresFlagsEnabled(Flags.FLAG_ALLOW_HOST_PERMISSION_DIALOGS_ON_VIRTUAL_DEVICES)
     @Test
     fun deviceAwarePermissionWithoutCapability_onRemote_requestHostPermission() {
         createVirtualDevice(cameraPolicy = DEVICE_POLICY_DEFAULT)
@@ -424,6 +424,7 @@ open class DeviceAwarePermissionGrantTest {
         )
     }
 
+    @RequiresFlagsEnabled(Flags.FLAG_ALLOW_HOST_PERMISSION_DIALOGS_ON_VIRTUAL_DEVICES)
     @Test
     fun nonDeviceAwarePermission_onHost_requestRemotePermission() {
         createVirtualDevice()
@@ -439,6 +440,7 @@ open class DeviceAwarePermissionGrantTest {
         )
     }
 
+    @RequiresFlagsEnabled(Flags.FLAG_ALLOW_HOST_PERMISSION_DIALOGS_ON_VIRTUAL_DEVICES)
     @Test
     fun nonDeviceAwarePermission_onRemote_requestRemotePermission() {
         createVirtualDevice()
@@ -454,6 +456,7 @@ open class DeviceAwarePermissionGrantTest {
         )
     }
 
+    @RequiresFlagsEnabled(Flags.FLAG_ALLOW_HOST_PERMISSION_DIALOGS_ON_VIRTUAL_DEVICES)
     @Test
     fun nonDeviceAwarePermission_onRemote_requestPermissionWithoutDeviceId() {
         createVirtualDevice()
@@ -469,6 +472,7 @@ open class DeviceAwarePermissionGrantTest {
         )
     }
 
+    @RequiresFlagsEnabled(Flags.FLAG_ALLOW_HOST_PERMISSION_DIALOGS_ON_VIRTUAL_DEVICES)
     @Test
     fun nonDeviceAwarePermission_onRemote_requestHostPermission() {
         createVirtualDevice()

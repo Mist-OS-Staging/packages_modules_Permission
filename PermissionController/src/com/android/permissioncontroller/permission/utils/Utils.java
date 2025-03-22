@@ -39,7 +39,6 @@ import static android.content.Intent.EXTRA_REASON;
 import static android.content.pm.PackageManager.FLAG_PERMISSION_RESTRICTION_INSTALLER_EXEMPT;
 import static android.content.pm.PackageManager.FLAG_PERMISSION_RESTRICTION_SYSTEM_EXEMPT;
 import static android.content.pm.PackageManager.FLAG_PERMISSION_RESTRICTION_UPGRADE_EXEMPT;
-import static android.content.pm.PackageManager.FLAG_PERMISSION_REVOKE_WHEN_REQUESTED;
 import static android.content.pm.PackageManager.FLAG_PERMISSION_USER_SENSITIVE_WHEN_DENIED;
 import static android.content.pm.PackageManager.FLAG_PERMISSION_USER_SENSITIVE_WHEN_GRANTED;
 import static android.content.pm.PackageManager.MATCH_SYSTEM_ONLY;
@@ -116,6 +115,7 @@ import com.android.permissioncontroller.R;
 import com.android.permissioncontroller.permission.model.AppPermissionGroup;
 import com.android.permissioncontroller.permission.model.livedatatypes.LightAppPermGroup;
 import com.android.permissioncontroller.permission.model.livedatatypes.LightPackageInfo;
+import com.android.settingslib.widget.SettingsThemeHelper;
 
 import kotlin.Triple;
 
@@ -1070,6 +1070,14 @@ public final class Utils {
     }
 
     /**
+     * Whether Expressive Design is enabled on this device.
+     */
+    public static boolean isExpressiveDesignEnabled(@NonNull Context context) {
+        return SdkLevel.isAtLeastB() && DeviceUtils.isHandheld()
+                && SettingsThemeHelper.isExpressiveTheme(context);
+    }
+
+    /**
      * Returns true if the group name passed is that of the Platform health group.
      * @param permGroupName name of the group that needs to be checked.
      */
@@ -1109,10 +1117,23 @@ public final class Utils {
             return false;
         }
 
-        // Always show Fitness&Wellness chip on Wear.
+        // Only show Fitness&Wellness chip on Wear if the app is requesting system permissions.
         if (Flags.replaceBodySensorPermissionEnabled()
-            && pm.hasSystemFeature(PackageManager.FEATURE_WATCH)) {
-            return true;
+                && pm.hasSystemFeature(PackageManager.FEATURE_WATCH)) {
+            Set<String> requestedPermissions = new HashSet<>(packageInfo.getRequestedPermissions());
+            for (PermissionInfo permission : permissions) {
+                if (!requestedPermissions.contains(permission.name)) {
+                    continue;
+                }
+                String appOpStr = AppOpsManager.permissionToOp(permission.name);
+                if (appOpStr != null
+                        && !appOpStr.equals(AppOpsManager.OPSTR_READ_WRITE_HEALTH_DATA)) {
+                    // Found system health permission. Show the chip.
+                    return true;
+                }
+            }
+            // No valid system permissions are requested.
+            return false;
         }
 
         // Check in permission is already granted as we should not hide it in the UX at that point.
@@ -1171,45 +1192,29 @@ public final class Utils {
             }
         }
 
-        // Split permission only applies to READ_HEART_RATE.
-        if (!requestedHealthPermissions.contains(HealthPermissions.READ_HEART_RATE)) {
+        if (!isValidSplitHealthPermissions(requestedHealthPermissions)) {
             return false;
         }
 
-        // If there are other health permissions (other than READ_HEALTH_DATA_IN_BACKGROUND)
-        // don't consider this a pure split-permission request.
-        if (requestedHealthPermissions.size() > 2) {
-            return false;
-        }
-
-        boolean isBackgroundPermissionRequested =
-            requestedHealthPermissions.contains(
-                HealthPermissions.READ_HEALTH_DATA_IN_BACKGROUND);
-        // If there are two health permissions declared, make sure the other is
-        // READ_HEALTH_DATA_IN_BACKGROUND.
-        if (requestedHealthPermissions.size() == 2 && !isBackgroundPermissionRequested) {
-            return false;
-        }
-
-        // If READ_HEALTH_DATA_IN_BACKGROUND is requested, check permission flag to see if is from
-        // split permission.
-        if (isBackgroundPermissionRequested) {
-            int readHealthDataInBackgroundFlag =
-                pm.getPermissionFlags(
-                    HealthPermissions.READ_HEALTH_DATA_IN_BACKGROUND, packageName, user);
-            if (!isFromSplitPermission(readHealthDataInBackgroundFlag)) {
+        int targetSdk = packageInfo.getTargetSdkVersion();
+        for (String perm : requestedHealthPermissions) {
+            if (!isFromSplitPermission(pm.getPermissionFlags(perm, packageName, user), targetSdk)) {
                 return false;
             }
         }
-
-        // Check READ_HEART_RATE permission flag to see if is from split permission.
-        int readHeartRateFlag =
-            pm.getPermissionFlags(HealthPermissions.READ_HEART_RATE, packageName, user);
-        return isFromSplitPermission(readHeartRateFlag);
+        return true;
     }
 
-    private static boolean isFromSplitPermission(int permissionFlag) {
-        return (permissionFlag & FLAG_PERMISSION_REVOKE_WHEN_REQUESTED) != 0;
+    private static boolean isValidSplitHealthPermissions(List<String> permissions) {
+        return (permissions.size() == 1 && permissions.contains(HealthPermissions.READ_HEART_RATE))
+            || (permissions.size() == 2 && permissions.contains(HealthPermissions.READ_HEART_RATE)
+            && permissions.contains(HealthPermissions.READ_HEALTH_DATA_IN_BACKGROUND));
+    }
+
+    private static boolean isFromSplitPermission(int permissionFlag, int targetSdk) {
+        return (targetSdk >= Build.VERSION_CODES.M)
+            ? (permissionFlag & PackageManager.FLAG_PERMISSION_REVOKE_WHEN_REQUESTED) != 0
+            : (permissionFlag & PackageManager.FLAG_PERMISSION_REVIEW_REQUIRED) != 0;
     }
 
     /**
