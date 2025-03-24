@@ -62,6 +62,7 @@ fun WearGrantPermissionsScreen(
     val materialUIVersion = ResourceHelper.materialUIVersionInApp
     ScrollableScreen(
         materialUIVersion = materialUIVersion,
+        asScalingList = true,
         showTimeText = false,
         image = icon.value,
         title = groupMessage.value,

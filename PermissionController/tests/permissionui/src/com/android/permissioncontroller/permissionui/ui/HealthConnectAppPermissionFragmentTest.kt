@@ -36,6 +36,7 @@ import org.junit.After
 import org.junit.Assume.assumeFalse
 import org.junit.Assume.assumeTrue
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -68,6 +69,10 @@ class HealthConnectAppPermissionFragmentTest : BasePermissionUiTest() {
         uninstallTestApps()
     }
 
+    @SdkSuppress(
+        minSdkVersion = Build.VERSION_CODES.UPSIDE_DOWN_CAKE,
+        maxSdkVersion = Build.VERSION_CODES.VANILLA_ICE_CREAM,
+    )
     @Test
     fun usedHealthConnectPermissionsAreListed_handHeldDevices() {
         assumeFalse(context.packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH))
@@ -78,6 +83,18 @@ class HealthConnectAppPermissionFragmentTest : BasePermissionUiTest() {
         eventually { waitFindObject(By.text(HEALTH_CONNECT_LABEL)) }
     }
 
+    @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA, codeName = "Baklava")
+    @Test
+    @Ignore("b/405152547")
+    fun usedHealthConnectPermissionsAreListed_handHeldDevices_healthFitnessBrand() {
+        assumeFalse(context.packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH))
+        installTestAppThatUsesHealthConnectPermission()
+
+        startManageAppPermissionsActivity()
+
+        eventually { waitFindObject(By.text(HEALTH_FITNESS_LABEL)) }
+    }
+
     @Test
     fun invalidUngrantedUsedHealthConnectPermissionsAreNotListed_handHeldDevices() {
         assumeFalse(context.packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH))
@@ -86,6 +103,7 @@ class HealthConnectAppPermissionFragmentTest : BasePermissionUiTest() {
         startManageAppPermissionsActivity()
 
         waitUntilObjectGone(By.text(HEALTH_CONNECT_LABEL), TIMEOUT_SHORT)
+        waitUntilObjectGone(By.text(HEALTH_FITNESS_LABEL), TIMEOUT_SHORT)
     }
 
     @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA, codeName = "Baklava")
@@ -115,14 +133,29 @@ class HealthConnectAppPermissionFragmentTest : BasePermissionUiTest() {
     @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA, codeName = "Baklava")
     @RequiresFlagsEnabled(FLAG_REPLACE_BODY_SENSOR_PERMISSION_ENABLED)
     @Test
+    @Ignore("b/405152547")
     fun startManageAppPermissionsActivity_handHeldDevices_requestLegacyBodySensorsUngranted_healthConnectShowsUp() {
         assumeFalse(context.packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH))
         installTestAppThatUsesLegacyBodySensorsPermissions()
 
         startManageAppPermissionsActivity()
 
-        eventually { waitFindObject(By.text(HEALTH_CONNECT_LABEL)) }
+        eventually { waitFindObject(By.text(HEALTH_FITNESS_LABEL)) }
     }
+
+    @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA, codeName = "Baklava")
+    @RequiresFlagsEnabled(FLAG_REPLACE_BODY_SENSOR_PERMISSION_ENABLED)
+    @Test
+    @Ignore("b/405152547")
+    fun startManageAppPermissionsActivity_handHeldDevices_requestLegacyBodySensorsTargetSdk22Ungranted_healthConnectShowsUp() {
+        assumeFalse(context.packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH))
+        installTestAppThatUsesLegacyBodySensorsPermissionsTargetSdk22()
+
+        startManageAppPermissionsActivity()
+
+        eventually { waitFindObject(By.text(HEALTH_FITNESS_LABEL)) }
+    }
+
 
     @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA, codeName = "Baklava")
     @RequiresFlagsEnabled(FLAG_REPLACE_BODY_SENSOR_PERMISSION_ENABLED)
@@ -133,7 +166,7 @@ class HealthConnectAppPermissionFragmentTest : BasePermissionUiTest() {
 
         startManageAppPermissionsActivity()
 
-        waitUntilObjectGone(By.text(HEALTH_CONNECT_LABEL), TIMEOUT_SHORT)
+        waitUntilObjectGone(By.text(HEALTH_FITNESS_LABEL), TIMEOUT_SHORT)
     }
 
     private fun startManageAppPermissionsActivity() {
@@ -152,6 +185,7 @@ class HealthConnectAppPermissionFragmentTest : BasePermissionUiTest() {
         private const val FITNESS_AND_WELLNESS_LABEL = "Fitness and wellness"
         // Health connect label uses a non breaking space
         private const val HEALTH_CONNECT_LABEL = "Health\u00A0Connect"
+        private const val HEALTH_FITNESS_LABEL = "Health, fitness and wellness"
         private const val HEALTH_CONNECT_PERMISSION_READ_FLOORS_CLIMBED =
             "android.permission.health.READ_FLOORS_CLIMBED"
 

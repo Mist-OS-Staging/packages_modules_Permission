@@ -74,6 +74,7 @@ android_test {
         ":PermissionUiReadCalendarPermissionApp",
         ":PermissionUiUseLegacyBodySensorsPermissionApp",
         ":PermissionUiUseReadHeartRatePermissionApp",
+        ":PermissionUiUseLegacyBodySensorsPermissionTargetSdk22App",
     ],
     per_testcase_directory: true,
 }

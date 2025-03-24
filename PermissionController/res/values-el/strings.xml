@@ -455,13 +455,13 @@
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"Δεν υποστηρίζει προφίλ εργασίας"</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Σημείωση: Εάν έχετε ορίσει ένα κλείδωμα οθόνης και επανεκκινήσετε τη συσκευή, η εκκίνηση αυτής της εφαρμογής δεν θα είναι δυνατή έως ότου ξεκλειδώσετε τη συσκευή σας."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Ο βοηθός θα μπορεί να διαβάσει πληροφορίες σχετικά με τις εφαρμογές που χρησιμοποιούνται στο σύστημά σας, συμπεριλαμβανομένων πληροφοριών που είναι ορατές στην οθόνη σας ή προσβάσιμες εντός των εφαρμογών."</string>
-    <string name="incident_report_channel_name" msgid="3144954065936288440">"Κοινοποίηση δεδομένων εντοπισμού σφαλμάτων"</string>
-    <string name="incident_report_notification_title" msgid="4635984625656519773">"Κοινοποίηση λεπτομερ. δεδομ. εντοπισμού σφαλμάτων;"</string>
-    <string name="incident_report_notification_text" msgid="3376480583513587923">"Η εφαρμογή <xliff:g id="APP_NAME">%1$s</xliff:g> θέλει να ανεβάσει πληροφορίες εντοπισμού σφαλμάτων."</string>
-    <string name="incident_report_dialog_title" msgid="669104389325204095">"Κοινοπ. δεδομ. εντοπισμού και διόρθωσης σφαλμάτων;"</string>
+    <string name="incident_report_channel_name" msgid="3144954065936288440">"Κοινοποίηση δεδομένων αποσφαλμάτωσης"</string>
+    <string name="incident_report_notification_title" msgid="4635984625656519773">"Κοινοποίηση λεπτομερ. δεδομ. αποσφαλμάτωσης;"</string>
+    <string name="incident_report_notification_text" msgid="3376480583513587923">"Η εφαρμογή <xliff:g id="APP_NAME">%1$s</xliff:g> θέλει να ανεβάσει πληροφορίες αποσφαλμάτωσης."</string>
+    <string name="incident_report_dialog_title" msgid="669104389325204095">"Κοινοπ. δεδομ. αποσφαλμάτωσης;"</string>
     <string name="incident_report_dialog_intro" msgid="5897733669850951832">"Το σύστημα εντόπισε ένα πρόβλημα."</string>
     <string name="incident_report_dialog_text" msgid="1819244417678973362">"Η εφαρμογή <xliff:g id="APP_NAME_0">%1$s</xliff:g> ζητάει να ανεβάσει μια αναφορά σφάλματος από αυτή τη συσκευή η οποία λήφθηκε στις <xliff:g id="DATE">%2$s</xliff:g>, <xliff:g id="TIME">%3$s</xliff:g>. Οι αναφορές σφάλματος περιλαμβάνουν προσωπικά στοιχεία σχετικά με τη συσκευή σας ή στοιχεία που έχουν καταγράψει οι εφαρμογές, για παράδειγμα, ονόματα χρηστών, δεδομένα τοποθεσίας, αναγνωριστικά συσκευών και πληροφορίες δικτύου. Να κοινοποιείτε τις αναφορές σφάλματος μόνο σε άτομα και εφαρμογές στα οποία θεωρείτε ότι μπορείτε να εμπιστεύεστε αυτές τις πληροφορίες.\n\nΝα επιτραπεί στην εφαρμογή <xliff:g id="APP_NAME_1">%4$s</xliff:g> να ανεβάσει μια αναφορά σφάλματος;"</string>
-    <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"Παρουσιάστηκε ένα σφάλμα κατά την επεξεργασία της αναφοράς σφάλματος για την εφαρμογή <xliff:g id="APP_NAME">%1$s</xliff:g>. Γι\' αυτόν τον λόγο, η κοινοποίηση λεπτομερών δεδομένων εντοπισμού και διόρθωσης σφαλμάτων απορρίφθηκε. Λυπούμαστε για τη διακοπή."</string>
+    <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"Παρουσιάστηκε ένα σφάλμα κατά την επεξεργασία της αναφοράς σφάλματος για την εφαρμογή <xliff:g id="APP_NAME">%1$s</xliff:g>. Γι\' αυτόν τον λόγο, η κοινοποίηση λεπτομερών δεδομένων αποσφαλμάτωσης απορρίφθηκε. Λυπούμαστε για τη διακοπή."</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"Να επιτρέπεται"</string>
     <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"Να μην επιτρέπεται"</string>
     <string name="adjust_user_sensitive_title" msgid="4196724451314280527">"Σύνθετες ρυθμίσεις"</string>

@@ -16,7 +16,6 @@
 package com.android.permissioncontroller.wear.permission.components.material3
 
 import android.graphics.drawable.Drawable
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.ScrollableState
 import androidx.compose.foundation.layout.Box
@@ -30,9 +29,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
@@ -53,6 +50,7 @@ import androidx.wear.compose.foundation.lazy.rememberScalingLazyListState
 import androidx.wear.compose.foundation.lazy.rememberTransformingLazyColumnState
 import androidx.wear.compose.material3.AppScaffold
 import androidx.wear.compose.material3.CircularProgressIndicator
+import androidx.wear.compose.material3.Icon
 import androidx.wear.compose.material3.IconButtonDefaults
 import androidx.wear.compose.material3.ListHeader
 import androidx.wear.compose.material3.MaterialTheme
@@ -271,6 +269,7 @@ private fun BoxScope.LazyColumnView(
             titleItem(
                 text = title,
                 testTag = titleTestTag,
+                asScalingList = true,
                 contentPaddingValues = paddingDefaults.titlePaddingValues(subtitle == null),
             )
             subtitleItem(
@@ -287,6 +286,7 @@ private fun BoxScope.LazyColumnView(
         ScalingLazyColumn(
             contentPadding = scrollContentPadding,
             state = listState as ScalingLazyListState,
+            autoCentering = null,
             modifier = Modifier.background(MaterialTheme.colorScheme.background),
             content = { scrollingViewContent(ScalingScopeConverter(this)) },
         )
@@ -350,24 +350,25 @@ private fun ListScopeWrapper.iconItem(painter: Painter?, modifier: Modifier = Mo
     painter?.let {
         item {
             val iconColor = WearPermissionButtonStyle.Secondary.material3ButtonColors().iconColor
-            Image(
-                painter = it,
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = modifier,
-                colorFilter = ColorFilter.tint(iconColor),
-            )
+            Icon(painter = it, contentDescription = null, modifier = modifier, tint = iconColor)
         }
     }
 
 private fun ListScopeWrapper.titleItem(
     text: String?,
+    asScalingList: Boolean,
     testTag: String?,
     contentPaddingValues: PaddingValues,
     modifier: Modifier = Modifier,
 ) =
     text?.let {
         item(contentType = "header") {
+            val style =
+                if (asScalingList) {
+                    MaterialTheme.typography.titleMedium
+                } else {
+                    MaterialTheme.typography.titleLarge
+                }
             ListHeader(
                 modifier = modifier.requiredHeightIn(1.dp), // We do not want default min height
                 contentPadding = contentPaddingValues,
@@ -376,7 +377,7 @@ private fun ListScopeWrapper.titleItem(
                     text = it,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.optionalTestTag(testTag),
-                    style = MaterialTheme.typography.titleLarge.copy(hyphens = Hyphens.Auto),
+                    style = style.copy(hyphens = Hyphens.Auto),
                 )
             }
         }

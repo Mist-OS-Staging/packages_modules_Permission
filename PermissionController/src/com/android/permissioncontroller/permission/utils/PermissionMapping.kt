@@ -45,7 +45,7 @@ object PermissionMapping {
         listOf(
             Manifest.permission_group.LOCATION,
             Manifest.permission_group.CAMERA,
-            Manifest.permission_group.MICROPHONE
+            Manifest.permission_group.MICROPHONE,
         )
 
     @JvmField
@@ -55,7 +55,7 @@ object PermissionMapping {
             listOf(
                 Manifest.permission_group.STORAGE,
                 Manifest.permission_group.READ_MEDIA_AURAL,
-                Manifest.permission_group.READ_MEDIA_VISUAL
+                Manifest.permission_group.READ_MEDIA_VISUAL,
             )
 
     val PARTIAL_MEDIA_PERMISSIONS: MutableSet<String> = mutableSetOf()
@@ -370,7 +370,7 @@ object PermissionMapping {
 
         val appSupportsPickerPrompt =
             group.permissions[Manifest.permission.READ_MEDIA_VISUAL_USER_SELECTED]?.isImplicit ==
-              false
+                false
 
         return if (appSupportsPickerPrompt) {
             PARTIAL_MEDIA_PERMISSIONS
@@ -402,11 +402,7 @@ object PermissionMapping {
         if (opName == AppOpsManager.OPSTR_PHONE_CALL_CAMERA) {
             return Manifest.permission_group.CAMERA
         }
-        if (
-            SdkLevel.isAtLeastV() &&
-                Flags.locationBypassPrivacyDashboardEnabled() &&
-                opName == AppOpsManager.OPSTR_EMERGENCY_LOCATION
-        ) {
+        if (SdkLevel.isAtLeastV() && opName == AppOpsManager.OPSTR_EMERGENCY_LOCATION) {
             return Manifest.permission_group.LOCATION
         }
 

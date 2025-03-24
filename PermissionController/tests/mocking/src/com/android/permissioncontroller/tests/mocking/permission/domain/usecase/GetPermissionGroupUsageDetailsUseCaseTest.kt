@@ -21,10 +21,12 @@ import android.content.Context
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
+import android.os.Build
 import android.os.UserHandle
 import android.permission.flags.Flags
 import android.platform.test.annotations.RequiresFlagsEnabled
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.filters.SdkSuppress
 import com.android.dx.mockito.inline.extended.ExtendedMockito
 import com.android.modules.utils.build.SdkLevel
 import com.android.permissioncontroller.PermissionControllerApplication
@@ -846,7 +848,10 @@ class GetPermissionGroupUsageDetailsUseCaseTest {
 
     @Test
     @Ignore("b/365004787")
-    @RequiresFlagsEnabled(Flags.FLAG_LOCATION_BYPASS_PRIVACY_DASHBOARD_ENABLED)
+    @SdkSuppress(
+        minSdkVersion = Build.VERSION_CODES.VANILLA_ICE_CREAM,
+        codeName = "VanillaIceCream",
+    )
     fun emergencyAccessesAreNotClusteredWithRegularAccesses() = runTest {
         Assume.assumeTrue(SdkLevel.isAtLeastV())
         val appOpEvents =
@@ -870,7 +875,10 @@ class GetPermissionGroupUsageDetailsUseCaseTest {
     }
 
     @Test
-    @RequiresFlagsEnabled(Flags.FLAG_LOCATION_BYPASS_PRIVACY_DASHBOARD_ENABLED)
+    @SdkSuppress(
+        minSdkVersion = Build.VERSION_CODES.VANILLA_ICE_CREAM,
+        codeName = "VanillaIceCream",
+    )
     fun emergencyAccessesAreClustered() = runTest {
         Assume.assumeTrue(SdkLevel.isAtLeastV())
         val appOpEvents =
