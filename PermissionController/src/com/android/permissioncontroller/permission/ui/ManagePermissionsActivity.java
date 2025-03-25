@@ -27,6 +27,8 @@ import static com.android.permissioncontroller.PermissionControllerStatsLog.APP_
 import static com.android.permissioncontroller.PermissionControllerStatsLog.APP_PERMISSION_GROUPS_FRAGMENT_AUTO_REVOKE_ACTION__ACTION__OPENED_FOR_AUTO_REVOKE;
 import static com.android.permissioncontroller.PermissionControllerStatsLog.APP_PERMISSION_GROUPS_FRAGMENT_AUTO_REVOKE_ACTION__ACTION__OPENED_FROM_INTENT;
 import static com.android.permissioncontroller.PermissionControllerStatsLog.AUTO_REVOKE_NOTIFICATION_CLICKED;
+import static com.android.permissioncontroller.PermissionControllerStatsLog.PERMISSION_MANAGER_PAGE_INTERACTION;
+import static com.android.permissioncontroller.PermissionControllerStatsLog.PERMISSION_MANAGER_PAGE_INTERACTION__ACTION__PERMISSION_MANAGER_OPENED;
 import static com.android.permissioncontroller.PermissionControllerStatsLog.PERMISSION_USAGE_FRAGMENT_INTERACTION;
 import static com.android.permissioncontroller.PermissionControllerStatsLog.PERMISSION_USAGE_FRAGMENT_INTERACTION__ACTION__OPEN;
 
@@ -218,6 +220,12 @@ public final class ManagePermissionsActivity extends SettingsActivity {
         String permissionName;
         switch (action) {
             case Intent.ACTION_MANAGE_PERMISSIONS:
+                PermissionControllerStatsLog.write(
+                        PERMISSION_MANAGER_PAGE_INTERACTION,
+                        sessionId,
+                        PERMISSION_MANAGER_PAGE_INTERACTION__ACTION__PERMISSION_MANAGER_OPENED,
+                        null
+                );
                 Bundle arguments = new Bundle();
                 arguments.putLong(EXTRA_SESSION_ID, sessionId);
                 if (DeviceUtils.isAuto(this)) {
