@@ -701,6 +701,6 @@
     <string name="privacy_dashboard_emergency_location_dialog_title" msgid="849723944428031911">"Ubicación enviada a servicios de emergencia"</string>
     <string name="privacy_dashboard_emergency_location_dialog_description" msgid="5815970230573483329">"Esta app accedió a la ubicación de tu dispositivo cuando hacías una llamada o enviabas un mensaje de texto a un número de emergencia. Esto puede suceder incluso si no se le otorgó a la app el permiso de ubicación o si la ubicación del dispositivo está desactivada. "<a href="https://support.google.com/android/answer/9319337">"Más información"</a></string>
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"Revisa el teléfono"</string>
-    <string name="wear_phone_connection_error" msgid="8934350845737930783">"No se pudo establecer conexión con el teléfono"</string>
+    <string name="wear_phone_connection_error" msgid="8934350845737930783">"No se pudo conectar el teléfono"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"¿Quieres volver a intentarlo?"</string>
 </resources>

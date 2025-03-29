@@ -1328,6 +1328,7 @@
 
      <role
         name="android.app.role.SYSTEM_SUPERVISION"
+        behavior="v33.SystemSupervisionRoleBehavior"
         defaultHolders="config_systemSupervision"
         exclusive="true"
         exclusivity="user"

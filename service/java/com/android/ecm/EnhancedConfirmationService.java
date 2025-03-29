@@ -44,6 +44,7 @@ import android.content.pm.PackageInstaller;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.SignedPackage;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Binder;
@@ -67,6 +68,7 @@ import android.view.accessibility.AccessibilityManager;
 
 import androidx.annotation.Keep;
 import androidx.annotation.RequiresApi;
+import androidx.annotation.VisibleForTesting;
 
 import com.android.internal.annotations.GuardedBy;
 import com.android.internal.util.Preconditions;
@@ -78,6 +80,8 @@ import com.android.server.SystemService;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -176,6 +180,8 @@ public class EnhancedConfirmationService extends SystemService {
     private final Map<Integer, AccessibilityManager> mUserAccessibilityManagers =
             new ArrayMap<>();
 
+    private @NonNull List<String> mExemptSettings = Collections.emptyList();
+
     @Override
     public void onStart() {
         Context context = getContext();
@@ -185,6 +191,7 @@ public class EnhancedConfirmationService extends SystemService {
                 systemConfigManager.getEnhancedConfirmationTrustedPackages());
         mTrustedInstallerCertDigests = toTrustedPackageMap(
                 systemConfigManager.getEnhancedConfirmationTrustedInstallers());
+        initExemptSettings(context);
 
         publishBinderService(Context.ECM_ENHANCED_CONFIRMATION_SERVICE, new Stub());
 
@@ -202,6 +209,28 @@ public class EnhancedConfirmationService extends SystemService {
             certDigests.add(signedPackage.getCertificateDigest());
         }
         return trustedPackageMap;
+    }
+
+    private static final String EXEMPT_SETTINGS_RESOURCE_NAME =
+            "config_enhancedConfirmationModeExemptSettings";
+
+    @VisibleForTesting
+    void initExemptSettings(@NonNull Context context) {
+        int resourceId = context.getResources().getIdentifier(EXEMPT_SETTINGS_RESOURCE_NAME,
+                "array", "android");
+        if (resourceId == 0) {
+            return;
+        }
+        try {
+            mExemptSettings = Arrays.asList(context.getResources().getStringArray(resourceId));
+        } catch (Resources.NotFoundException e) {
+            Log.e(LOG_TAG, "Cannot get resource: " + EXEMPT_SETTINGS_RESOURCE_NAME, e);
+        }
+    }
+
+    @VisibleForTesting
+    boolean isSettingExempt(@NonNull String settingIdentifier) {
+        return mExemptSettings.contains("*") || mExemptSettings.contains(settingIdentifier);
     }
 
     void addOngoingCall(Call call) {
@@ -303,7 +332,7 @@ public class EnhancedConfirmationService extends SystemService {
                     throw new IllegalStateException("Clear restriction attempted but not allowed");
                 }
                 setAppEcmState(packageName, EcmState.ECM_STATE_NOT_GUARDED, userId);
-                EnhancedConfirmationStatsLogUtils.INSTANCE.logRestrictionCleared(
+                EnhancedConfirmationStatsLogUtils.logRestrictionCleared(
                         getPackageUid(mPackageManager, packageName, userId));
             } catch (NameNotFoundException e) {
                 throw new IllegalArgumentException(e);
@@ -480,6 +509,9 @@ public class EnhancedConfirmationService extends SystemService {
                 return false;
             }
 
+            if (isSettingExempt(settingIdentifier)) {
+                return false;
+            }
             if (PER_PACKAGE_PROTECTED_SETTINGS.contains(settingIdentifier)) {
                 return true;
             }
