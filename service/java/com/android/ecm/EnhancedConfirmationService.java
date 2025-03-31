@@ -81,7 +81,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -116,41 +115,15 @@ public class EnhancedConfirmationService extends SystemService {
         int ECM_STATE_IMPLICIT = AppOpsManager.MODE_DEFAULT;
     }
 
-    private static final ArraySet<String> PER_PACKAGE_PROTECTED_SETTINGS = new ArraySet<>();
+    private static final String EXEMPT_ALL_SETTINGS = "*";
+
+    @VisibleForTesting
+    final ArraySet<String> mPerPackageProtectedSettings = new ArraySet<>();
 
     // Settings restricted when an untrusted call is ongoing. These must also be added to
     // PROTECTED_SETTINGS
-    private static final ArraySet<String> UNTRUSTED_CALL_RESTRICTED_SETTINGS = new ArraySet<>();
-
-    static {
-        // Runtime permissions
-        PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.SEND_SMS);
-        PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.RECEIVE_SMS);
-        PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.READ_SMS);
-        PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.RECEIVE_MMS);
-        PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.RECEIVE_WAP_PUSH);
-        PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.READ_CELL_BROADCASTS);
-        PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission_group.SMS);
-
-        PER_PACKAGE_PROTECTED_SETTINGS.add(Manifest.permission.BIND_DEVICE_ADMIN);
-        // App ops
-        PER_PACKAGE_PROTECTED_SETTINGS.add(AppOpsManager.OPSTR_BIND_ACCESSIBILITY_SERVICE);
-        PER_PACKAGE_PROTECTED_SETTINGS.add(AppOpsManager.OPSTR_ACCESS_NOTIFICATIONS);
-        PER_PACKAGE_PROTECTED_SETTINGS.add(AppOpsManager.OPSTR_SYSTEM_ALERT_WINDOW);
-        PER_PACKAGE_PROTECTED_SETTINGS.add(AppOpsManager.OPSTR_GET_USAGE_STATS);
-        PER_PACKAGE_PROTECTED_SETTINGS.add(AppOpsManager.OPSTR_LOADER_USAGE_STATS);
-        // Default application roles.
-        PER_PACKAGE_PROTECTED_SETTINGS.add(RoleManager.ROLE_DIALER);
-        PER_PACKAGE_PROTECTED_SETTINGS.add(RoleManager.ROLE_SMS);
-
-        if (Flags.unknownCallPackageInstallBlockingEnabled()) {
-            // Requesting package installs, limited during phone calls
-            UNTRUSTED_CALL_RESTRICTED_SETTINGS.add(
-                    AppOpsManager.OPSTR_REQUEST_INSTALL_PACKAGES);
-            UNTRUSTED_CALL_RESTRICTED_SETTINGS.add(
-                    AppOpsManager.OPSTR_BIND_ACCESSIBILITY_SERVICE);
-        }
-    }
+    @VisibleForTesting
+    final ArraySet<String> mUntrustedCallRestrictedSettings = new ArraySet<>();
 
     private Map<String, List<byte[]>> mTrustedPackageCertDigests;
     private Map<String, List<byte[]>> mTrustedInstallerCertDigests;
@@ -180,8 +153,6 @@ public class EnhancedConfirmationService extends SystemService {
     private final Map<Integer, AccessibilityManager> mUserAccessibilityManagers =
             new ArrayMap<>();
 
-    private @NonNull List<String> mExemptSettings = Collections.emptyList();
-
     @Override
     public void onStart() {
         Context context = getContext();
@@ -191,7 +162,7 @@ public class EnhancedConfirmationService extends SystemService {
                 systemConfigManager.getEnhancedConfirmationTrustedPackages());
         mTrustedInstallerCertDigests = toTrustedPackageMap(
                 systemConfigManager.getEnhancedConfirmationTrustedInstallers());
-        initExemptSettings(context);
+        initSettings(context);
 
         publishBinderService(Context.ECM_ENHANCED_CONFIRMATION_SERVICE, new Stub());
 
@@ -215,22 +186,58 @@ public class EnhancedConfirmationService extends SystemService {
             "config_enhancedConfirmationModeExemptSettings";
 
     @VisibleForTesting
-    void initExemptSettings(@NonNull Context context) {
+    void initSettings(@NonNull Context context) {
+        // Runtime permissions
+        mPerPackageProtectedSettings.add(Manifest.permission.SEND_SMS);
+        mPerPackageProtectedSettings.add(Manifest.permission.RECEIVE_SMS);
+        mPerPackageProtectedSettings.add(Manifest.permission.READ_SMS);
+        mPerPackageProtectedSettings.add(Manifest.permission.RECEIVE_MMS);
+        mPerPackageProtectedSettings.add(Manifest.permission.RECEIVE_WAP_PUSH);
+        mPerPackageProtectedSettings.add(Manifest.permission.READ_CELL_BROADCASTS);
+        mPerPackageProtectedSettings.add(Manifest.permission_group.SMS);
+
+        mPerPackageProtectedSettings.add(Manifest.permission.BIND_DEVICE_ADMIN);
+        // App ops
+        mPerPackageProtectedSettings.add(AppOpsManager.OPSTR_BIND_ACCESSIBILITY_SERVICE);
+        mPerPackageProtectedSettings.add(AppOpsManager.OPSTR_ACCESS_NOTIFICATIONS);
+        mPerPackageProtectedSettings.add(AppOpsManager.OPSTR_SYSTEM_ALERT_WINDOW);
+        mPerPackageProtectedSettings.add(AppOpsManager.OPSTR_GET_USAGE_STATS);
+        mPerPackageProtectedSettings.add(AppOpsManager.OPSTR_LOADER_USAGE_STATS);
+        // Default application roles.
+        mPerPackageProtectedSettings.add(RoleManager.ROLE_DIALER);
+        mPerPackageProtectedSettings.add(RoleManager.ROLE_SMS);
+
+        if (Flags.unknownCallPackageInstallBlockingEnabled()) {
+            // Requesting package installs, limited during phone calls
+            mUntrustedCallRestrictedSettings.add(
+                    AppOpsManager.OPSTR_REQUEST_INSTALL_PACKAGES);
+            mUntrustedCallRestrictedSettings.add(
+                    AppOpsManager.OPSTR_BIND_ACCESSIBILITY_SERVICE);
+        }
+        loadPackageExemptSettings(context);
+    }
+
+
+    @VisibleForTesting
+    void loadPackageExemptSettings(@NonNull Context context) {
         int resourceId = context.getResources().getIdentifier(EXEMPT_SETTINGS_RESOURCE_NAME,
                 "array", "android");
         if (resourceId == 0) {
             return;
         }
         try {
-            mExemptSettings = Arrays.asList(context.getResources().getStringArray(resourceId));
+            List<String> exemptSettings =
+                    Arrays.asList(context.getResources().getStringArray(resourceId));
+            for (String exemptSetting: exemptSettings) {
+                if (EXEMPT_ALL_SETTINGS.equals(exemptSetting)) {
+                    mPerPackageProtectedSettings.clear();
+                    return;
+                }
+                mPerPackageProtectedSettings.remove(exemptSetting);
+            }
         } catch (Resources.NotFoundException e) {
             Log.e(LOG_TAG, "Cannot get resource: " + EXEMPT_SETTINGS_RESOURCE_NAME, e);
         }
-    }
-
-    @VisibleForTesting
-    boolean isSettingExempt(@NonNull String settingIdentifier) {
-        return mExemptSettings.contains("*") || mExemptSettings.contains(settingIdentifier);
     }
 
     void addOngoingCall(Call call) {
@@ -433,7 +440,7 @@ public class EnhancedConfirmationService extends SystemService {
 
         private boolean isSettingEcmGuardedForPackage(@NonNull String settingIdentifier,
                 @NonNull String packageName, @UserIdInt int userId) throws NameNotFoundException {
-            if (!PER_PACKAGE_PROTECTED_SETTINGS.contains(settingIdentifier)) {
+            if (!mPerPackageProtectedSettings.contains(settingIdentifier)) {
                 return false;
             }
             return isPackageEcmGuarded(packageName, userId);
@@ -509,13 +516,10 @@ public class EnhancedConfirmationService extends SystemService {
                 return false;
             }
 
-            if (isSettingExempt(settingIdentifier)) {
-                return false;
-            }
-            if (PER_PACKAGE_PROTECTED_SETTINGS.contains(settingIdentifier)) {
+            if (mPerPackageProtectedSettings.contains(settingIdentifier)) {
                 return true;
             }
-            if (UNTRUSTED_CALL_RESTRICTED_SETTINGS.contains(settingIdentifier)) {
+            if (mUntrustedCallRestrictedSettings.contains(settingIdentifier)) {
                 return true;
             }
             // TODO(b/310218979): Add role selections as protected settings
@@ -526,7 +530,7 @@ public class EnhancedConfirmationService extends SystemService {
         // method will result in a metric being logged, representing a blocked/allowed setting
         private String getGlobalProtectionReason(@NonNull String settingIdentifier,
                 @NonNull String packageName, @UserIdInt int userId) {
-            if (!UNTRUSTED_CALL_RESTRICTED_SETTINGS.contains(settingIdentifier)) {
+            if (!mUntrustedCallRestrictedSettings.contains(settingIdentifier)) {
                 return null;
             }
             if (mCallTracker == null) {
@@ -588,7 +592,7 @@ public class EnhancedConfirmationService extends SystemService {
         }
     }
 
-    private static class CallTracker {
+    private class CallTracker {
         // The time we will remember an untrusted call
         private static final long UNTRUSTED_CALL_STORAGE_TIME_MS = TimeUnit.HOURS.toMillis(1);
         // The minimum time that must pass between individual logs of the same call, uid, trusted
@@ -828,7 +832,7 @@ public class EnhancedConfirmationService extends SystemService {
                 return;
             }
 
-            if (!UNTRUSTED_CALL_RESTRICTED_SETTINGS.contains(settingIdentifier)) {
+            if (!mUntrustedCallRestrictedSettings.contains(settingIdentifier)) {
                 return;
             }
 
