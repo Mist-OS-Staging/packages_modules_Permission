@@ -532,6 +532,8 @@
             <!-- END EXPRESSIVE DESIGN CONFIGS -->
 
             <!-- START EXPRESSIVE DESIGN ATTRIBUTES -->
+
+            <!-- Start: SwitchCompat -->
             <!-- Tint to apply to the thumb drawable. -->
             <item type="attr" name="thumbTint" />
             <!-- Blending mode used to apply the thumb tint. -->
@@ -576,9 +578,12 @@
             <!-- The blending mode used to apply the tint specified by trackDecorationTint
             to trackDecoration. The default mode is SRC_IN if not specified. -->
             <item type="attr" name="trackDecorationTintMode" />
+            <!-- END: MaterialSwitch -->
 
+            <!-- Expressive switch style attribute -->
+            <item type="attr" name="expressiveSwitchStyle" />
             <!-- END EXPRESSIVE DESIGN ATTRIBUTES -->
-        </policy>
+         </policy>
 
     </overlayable>
 
