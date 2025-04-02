@@ -487,6 +487,8 @@
 
             <!-- START EXPRESSIVE DESIGN CONFIGS -->
             <item type="bool" name="config_enableExpressiveDesignInPermissionSettings"/>
+            <!-- config for opting out of expressive permission dialogs -->
+            <item type="bool" name="config_enableExpressiveDesignInRequestPermissionDialog"/>
             <!-- END EXPRESSIVE DESIGN CONFIGS -->
         </policy>
 
