@@ -154,6 +154,24 @@
 
             <!-- END Used in V30 only -->
 
+            <!-- START EXPRESSIVE PERMISSION DIALOG -->
+
+            <item type="style" name="PermissionGrantTitleMessageExpressive" />
+            <item type="style" name="PermissionGrantDetailMessageExpressive" />
+            <item type="style" name="PermissionGrantButtonListExpressive" />
+            <item type="style" name="PermissionGrantButtonExpressive" />
+
+            <item type="style" name="PermissionGrantButtonAllowExpressive" />
+            <item type="style" name="PermissionGrantButtonAllowForegroundExpressive" />
+            <item type="style" name="PermissionGrantButtonAllowOneTimeExpressive" />
+            <item type="style" name="PermissionGrantButtonAllowSelectedExpressive" />
+            <item type="style" name="PermissionGrantButtonAllowAllExpressive" />
+            <item type="style" name="PermissionGrantButtonDenyExpressive" />
+            <item type="style" name="PermissionGrantButtonNoUpgradeExpressive" />
+            <item type="style" name="PermissionGrantButtonDontAllowMoreExpressive" />
+
+            <!-- END EXPRESSIVE PERMISSION DIALOG -->
+
             <!-- END PERMISSION GRANT DIALOG -->
 
             <!-- START PERMISSION RATIONALE DIALOG -->
