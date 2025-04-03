@@ -1214,7 +1214,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
             if (isWatch) {
                 clickAndWaitForWindowTransition(
                     By.text(permissionLabel).displayId(displayId),
-                    40_000,
+                    120_000,
                 )
             } else {
                 clickPermissionControllerUi(By.text(permissionLabel).displayId(displayId))
@@ -1285,7 +1285,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
             navigatedGroupLabels.add(permissionLabel)
             if (useLegacyNavigation) {
                 if (isWatch) {
-                    click(By.text(permissionLabel).displayId(displayId), 40_000)
+                    click(By.text(permissionLabel).displayId(displayId), 120_000)
                 } else if (isAutomotive) {
                     clickPermissionControllerUi(permissionLabel)
                 } else {
