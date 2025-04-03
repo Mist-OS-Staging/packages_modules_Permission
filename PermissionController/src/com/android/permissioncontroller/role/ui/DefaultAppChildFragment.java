@@ -53,6 +53,7 @@ import com.android.permissioncontroller.role.utils.SettingsCompat;
 import com.android.role.controller.model.Role;
 import com.android.role.controller.model.Roles;
 import com.android.settingslib.utils.applications.AppUtils;
+import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
 import java.util.List;
 import java.util.Objects;
@@ -65,7 +66,7 @@ import java.util.Objects;
  *
  * @param <PF> type of the parent fragment
  */
-public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
+public class DefaultAppChildFragment<PF extends SettingsBasePreferenceFragment
         & DefaultAppChildFragment.Parent> extends Fragment
         implements DefaultAppConfirmationDialogFragment.Listener,
         Preference.OnPreferenceClickListener {

@@ -156,6 +156,8 @@ public final class ManagePermissionsActivity extends SettingsActivity {
             // Automotive relies on a different theme. Apply before calling super so that
             // fragments are restored properly on configuration changes.
             setTheme(R.style.CarSettings);
+        } else if (Utils.isExpressiveDesignEnabled(this)) {
+            setTheme(R.style.Theme_PermissionController_Settings_Expressive_FilterTouches);
         }
         if (SdkLevel.isAtLeastV() && DeviceUtils.isHandheld(this)) {
             switch (getIntent().getAction()) {
