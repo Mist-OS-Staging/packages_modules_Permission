@@ -25,6 +25,7 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.os.Process
+import android.os.UserManager
 import android.permission.flags.Flags
 import android.platform.test.annotations.AppModeFull
 import android.platform.test.annotations.RequiresFlagsEnabled
@@ -68,9 +69,11 @@ class EnhancedConfirmationInCallTest {
     val checkFlagsRule: CheckFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
 
     @Before
-    fun assumeNotAutoOrTv() {
+    fun assumeNotAutoTvOrHsum() {
         Assume.assumeFalse(packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK))
         Assume.assumeFalse(packageManager.hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE))
+        // TODO b/408470449: remove once call extras are fixed
+        Assume.assumeFalse(UserManager.isHeadlessSystemUserMode())
     }
 
     companion object {

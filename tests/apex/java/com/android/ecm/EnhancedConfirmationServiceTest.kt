@@ -47,7 +47,7 @@ class EnhancedConfirmationServiceTest {
     private lateinit var mockitoSession: MockitoSession
     private lateinit var enhancedConfirmationService: EnhancedConfirmationService
 
-    @Mock private lateinit var localManagerRegistry: LocalManagerRegistry
+    private lateinit var defaultCallRestrictedSettings: Set<String>
 
     @Mock private lateinit var mockContext: Context
 
@@ -62,40 +62,72 @@ class EnhancedConfirmationServiceTest {
                 .strictness(Strictness.LENIENT)
                 .startMocking()
         enhancedConfirmationService = EnhancedConfirmationService(context)
+        overrideStringArrayResource(EXEMPT_SETTINGS_RESOURCE_NAME, null)
+        enhancedConfirmationService.initSettings(mockContext)
+        defaultCallRestrictedSettings =
+            enhancedConfirmationService.mUntrustedCallRestrictedSettings.toSet()
     }
 
     @After
     fun finishMockingApexEnvironment() {
         mockitoSession.finishMocking()
+        overrideStringArrayResource(EXEMPT_SETTINGS_RESOURCE_NAME, null)
+        enhancedConfirmationService.initSettings(mockContext)
     }
 
     @Test
     fun exemptSettingsAreExempt() {
         overrideStringArrayResource(EXEMPT_SETTINGS_RESOURCE_NAME, EXEMPT_SETTINGS)
-        enhancedConfirmationService.initExemptSettings(mockContext)
+        enhancedConfirmationService.loadPackageExemptSettings(mockContext)
 
-        assertThat(enhancedConfirmationService.isSettingExempt(SEND_SMS)).isTrue()
-        assertThat(enhancedConfirmationService.isSettingExempt(RECEIVE_SMS)).isTrue()
+        assertThat(enhancedConfirmationService.mPerPackageProtectedSettings.contains(SEND_SMS))
+            .isFalse()
+        assertThat(enhancedConfirmationService.mPerPackageProtectedSettings.contains(RECEIVE_SMS))
+            .isFalse()
     }
 
     @Test
     fun nonExemptSettingsAreNotExempt() {
         overrideStringArrayResource(EXEMPT_SETTINGS_RESOURCE_NAME, EXEMPT_SETTINGS)
-        enhancedConfirmationService.initExemptSettings(mockContext)
+        enhancedConfirmationService.loadPackageExemptSettings(mockContext)
 
-        assertThat(enhancedConfirmationService.isSettingExempt(ROLE_DIALER)).isFalse()
-        assertThat(enhancedConfirmationService.isSettingExempt(ROLE_SMS)).isFalse()
+        assertThat(enhancedConfirmationService.mPerPackageProtectedSettings.contains(ROLE_DIALER))
+            .isTrue()
+        assertThat(enhancedConfirmationService.mPerPackageProtectedSettings.contains(ROLE_SMS))
+            .isTrue()
     }
 
     @Test
     fun givenNoExemptSettingsThenNoneExempt() {
         overrideStringArrayResource(EXEMPT_SETTINGS_RESOURCE_NAME, null)
-        enhancedConfirmationService.initExemptSettings(mockContext)
+        enhancedConfirmationService.loadPackageExemptSettings(mockContext)
 
-        assertThat(enhancedConfirmationService.isSettingExempt(SEND_SMS)).isFalse()
-        assertThat(enhancedConfirmationService.isSettingExempt(RECEIVE_SMS)).isFalse()
-        assertThat(enhancedConfirmationService.isSettingExempt(ROLE_DIALER)).isFalse()
-        assertThat(enhancedConfirmationService.isSettingExempt(ROLE_SMS)).isFalse()
+        assertThat(enhancedConfirmationService.mPerPackageProtectedSettings.contains(SEND_SMS))
+            .isTrue()
+        assertThat(enhancedConfirmationService.mPerPackageProtectedSettings.contains(RECEIVE_SMS))
+            .isTrue()
+        assertThat(enhancedConfirmationService.mPerPackageProtectedSettings.contains(ROLE_DIALER))
+            .isTrue()
+        assertThat(enhancedConfirmationService.mPerPackageProtectedSettings.contains(ROLE_SMS))
+            .isTrue()
+    }
+
+    @Test
+    fun wildcardExemptsAllSettings() {
+        overrideStringArrayResource(EXEMPT_SETTINGS_RESOURCE_NAME, EXEMPT_ALL_SETTINGS)
+        enhancedConfirmationService.loadPackageExemptSettings(mockContext)
+        assertThat(enhancedConfirmationService.mPerPackageProtectedSettings).isEmpty()
+    }
+
+    @Test
+    fun exemptionDoesntAffectCallSettings() {
+        overrideStringArrayResource(
+            EXEMPT_SETTINGS_RESOURCE_NAME,
+            defaultCallRestrictedSettings.toTypedArray(),
+        )
+        enhancedConfirmationService.loadPackageExemptSettings(mockContext)
+        assertThat(enhancedConfirmationService.mUntrustedCallRestrictedSettings)
+            .isEqualTo(defaultCallRestrictedSettings)
     }
 
     private fun overrideStringArrayResource(name: String, newValue: Array<String>?) {
@@ -110,6 +142,9 @@ class EnhancedConfirmationServiceTest {
         private const val EXEMPT_SETTINGS_RESOURCE = 1 // Fake resource id
         private const val EXEMPT_SETTINGS_RESOURCE_NAME =
             "config_enhancedConfirmationModeExemptSettings"
+
         private val EXEMPT_SETTINGS = arrayOf<String>(SEND_SMS, RECEIVE_SMS)
+
+        private val EXEMPT_ALL_SETTINGS = arrayOf<String>("*")
     }
 }
