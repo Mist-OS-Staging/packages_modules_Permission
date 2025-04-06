@@ -35,7 +35,7 @@ public class SettingsActivity extends SettingsTransitionActivity implements
 
     @Override
     public boolean isExpressiveDesignEnabled() {
-        return SdkLevel.isAtLeastB() && getResources().getBoolean(
+        return SdkLevel.isAtLeastB() && DeviceUtils.isHandheld() && getResources().getBoolean(
                 R.bool.config_enableExpressiveDesignInPermissionSettings);
     }
 }

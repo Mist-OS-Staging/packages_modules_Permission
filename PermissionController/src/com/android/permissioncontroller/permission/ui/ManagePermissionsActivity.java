@@ -87,6 +87,7 @@ import com.android.permissioncontroller.permission.ui.wear.WearUnusedAppsFragmen
 import com.android.permissioncontroller.permission.utils.KotlinUtils;
 import com.android.permissioncontroller.permission.utils.PermissionMapping;
 import com.android.permissioncontroller.permission.utils.Utils;
+import com.android.settingslib.widget.SettingsThemeHelper;
 
 import java.util.Objects;
 import java.util.Random;
@@ -156,7 +157,7 @@ public final class ManagePermissionsActivity extends SettingsActivity {
             // Automotive relies on a different theme. Apply before calling super so that
             // fragments are restored properly on configuration changes.
             setTheme(R.style.CarSettings);
-        } else if (Utils.isExpressiveDesignEnabled(this)) {
+        } else if (SettingsThemeHelper.isExpressiveTheme(this)) {
             setTheme(R.style.Theme_PermissionController_Settings_Expressive_FilterTouches);
         }
         if (SdkLevel.isAtLeastV() && DeviceUtils.isHandheld(this)) {

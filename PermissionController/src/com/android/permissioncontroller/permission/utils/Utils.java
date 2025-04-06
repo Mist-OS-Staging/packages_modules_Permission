@@ -115,7 +115,6 @@ import com.android.permissioncontroller.R;
 import com.android.permissioncontroller.permission.model.AppPermissionGroup;
 import com.android.permissioncontroller.permission.model.livedatatypes.LightAppPermGroup;
 import com.android.permissioncontroller.permission.model.livedatatypes.LightPackageInfo;
-import com.android.settingslib.widget.SettingsThemeHelper;
 
 import kotlin.Triple;
 
@@ -1067,14 +1066,6 @@ public final class Utils {
         } finally {
             Binder.restoreCallingIdentity(token);
         }
-    }
-
-    /**
-     * Whether Expressive Design is enabled on this device.
-     */
-    public static boolean isExpressiveDesignEnabled(@NonNull Context context) {
-        return SdkLevel.isAtLeastB() && DeviceUtils.isHandheld()
-                && SettingsThemeHelper.isExpressiveTheme(context);
     }
 
     /**

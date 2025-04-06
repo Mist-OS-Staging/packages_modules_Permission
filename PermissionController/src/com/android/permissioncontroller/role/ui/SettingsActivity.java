@@ -21,24 +21,27 @@ import android.view.WindowManager;
 
 import androidx.annotation.Nullable;
 
+import com.android.modules.utils.build.SdkLevel;
 import com.android.permissioncontroller.DeviceUtils;
 import com.android.permissioncontroller.R;
-import com.android.permissioncontroller.permission.utils.Utils;
 import com.android.settingslib.collapsingtoolbar.EdgeToEdgeUtils;
 import com.android.settingslib.collapsingtoolbar.SettingsTransitionActivity;
+import com.android.settingslib.widget.ExpressiveDesignEnabledProvider;
+import com.android.settingslib.widget.SettingsThemeHelper;
 
 /**
  * Base class for settings activities.
  */
 // Made public for com.android.permissioncontroller.role.ui.specialappaccess
-public class SettingsActivity extends SettingsTransitionActivity {
+public class SettingsActivity extends SettingsTransitionActivity implements
+        ExpressiveDesignEnabledProvider {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         if (DeviceUtils.isAuto(this)) {
             // Automotive relies on a different theme.
             setTheme(R.style.CarSettings);
-        } else if (Utils.isExpressiveDesignEnabled(this)) {
+        } else if (SettingsThemeHelper.isExpressiveTheme(this)) {
             setTheme(R.style.Theme_PermissionController_Settings_Expressive_FilterTouches);
         }
         EdgeToEdgeUtils.enable(this);
@@ -53,5 +56,10 @@ public class SettingsActivity extends SettingsTransitionActivity {
     protected boolean isSettingsTransitionEnabled() {
         return super.isSettingsTransitionEnabled() && !(DeviceUtils.isAuto(this)
                 || DeviceUtils.isTelevision(this) || DeviceUtils.isWear(this));
+    }
+
+    @Override
+    public boolean isExpressiveDesignEnabled() {
+        return SdkLevel.isAtLeastB() && DeviceUtils.isHandheld();
     }
 }
