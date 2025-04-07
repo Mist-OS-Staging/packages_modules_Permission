@@ -633,7 +633,7 @@
     <string name="mic_toggle_title" msgid="2649991093496110162">"Микрофоны хандалт"</string>
     <string name="perm_toggle_description" msgid="7801326363741451379">"Апп болон үйлчилгээнд"</string>
     <string name="mic_toggle_description" msgid="9163104307990677157">"Апп болон үйлчилгээнд. Энэ тохиргоо унтраалттай тохиолдолд таныг яаралтай тусламжийн утасны дугаар луу залгах үед микрофоны өгөгдлийг хуваалцсан хэвээр байж магадгүй."</string>
-    <string name="location_settings_subtitle" msgid="2328360561197430695">"Байршилд хандах эрхтэй аппууд, үйлчилгээнүүдийг хараарай"</string>
+    <string name="location_settings_subtitle" msgid="2328360561197430695">"Байршилд хандах эрхтэй апп, үйлчилгээнүүдийг хараарай"</string>
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"Түр санах ойн хандалтыг харуулах"</string>
     <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"Аппууд таны хуулсан текст, зураг эсвэл бусад контентод хандах үед мессеж харуулах"</string>
     <string name="show_password_title" msgid="2877269286984684659">"Нууц үгнүүдийг харуулах"</string>

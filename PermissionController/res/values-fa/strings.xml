@@ -147,7 +147,7 @@
     <string name="permission_usage_any_permission" msgid="6358023078298106997">"همه اجازه‌ها"</string>
     <string name="permission_usage_any_time" msgid="3802087027301631827">"هر زمانی"</string>
     <string name="permission_usage_last_n_days" msgid="7882626467375714145">"{count,plural, =1{# روز گذشته}one{# روز گذشته}other{# روز گذشته}}"</string>
-    <string name="permission_usage_last_n_hours" msgid="8490466053680267858">"{count,plural, =1{# ساعت گذشته}one{# ساعت گذشته}other{# ساعت گذشته}}"</string>
+    <string name="permission_usage_last_n_hours" msgid="8490466053680267858">"{count,plural, =1{# ساعت پیش}one{# ساعت پیش}other{# ساعت پیش}}"</string>
     <string name="permission_usage_last_n_minutes" msgid="7817864229878281983">"{count,plural, =1{# دقیقه گذشته}one{# دقیقه گذشته}other{# دقیقه گذشته}}"</string>
     <string name="no_permission_usages" msgid="9119517454177289331">"هیچ مجوزی استفاده نشده است"</string>
     <string name="permission_usage_list_title_any_time" msgid="8718257027381592407">"آخرین دسترسی در هرزمانی"</string>
@@ -576,7 +576,7 @@
     <string name="safety_center_rescan_button" msgid="4517514567809409596">"اسکن کردن دستگاه"</string>
     <string name="safety_center_issue_card_dismiss_button" msgid="5113965506144222402">"رد کردن"</string>
     <string name="safety_center_issue_card_dismiss_confirmation_title" msgid="2734809473425036382">"این هشدار رد شود؟"</string>
-    <string name="safety_center_issue_card_dismiss_confirmation_message" msgid="3775418736671093563">"هرزمان خواستید تنظیمات ایمنی و حریم خصوصی را مرور کنید تا محافظت بیشتری اضافه کنید"</string>
+    <string name="safety_center_issue_card_dismiss_confirmation_message" msgid="3775418736671093563">"هرزمان خواستید تنظیمات ایمنی و حریم خصوصی را بازنگری کنید تا محافظت بیشتری اضافه کنید"</string>
     <string name="safety_center_issue_card_confirm_dismiss_button" msgid="5884137843083634556">"رد شدن"</string>
     <string name="safety_center_issue_card_cancel_dismiss_button" msgid="2874578798877712346">"لغو"</string>
     <string name="safety_center_entries_category_title" msgid="34356964062813115">"تنظیمات"</string>
@@ -666,7 +666,7 @@
     <string name="learn_about_data_sharing" msgid="4200480587079488045">"آشنایی با هم‌رسانی داده‌ها"</string>
     <string name="shares_location_with_third_parties" msgid="2278051743742057767">"داده‌های مکانتان اکنون با اشخاص ثالث هم‌رسانی می‌شود"</string>
     <string name="shares_location_with_third_parties_for_advertising" msgid="1918588064014480513">"داده‌های مکانتان برای اهداف تبلیغاتی یا بازاریابی اکنون با اشخاص ثالث هم‌رسانی می‌شود"</string>
-    <string name="updated_in_last_days" msgid="8371811947153042322">"{count,plural, =0{در روز گذشته به‌روزرسانی شده است}=1{در روز گذشته به‌روزرسانی شده است}one{در # روز به‌روزرسانی شده است}other{در # روز به‌روزرسانی شده است}}"</string>
+    <string name="updated_in_last_days" msgid="8371811947153042322">"{count,plural, =0{در روز پیش به‌روزرسانی شده}=1{در روز پیش به‌روزرسانی شده}one{در # روز به‌روزرسانی شده}other{در # روز به‌روزرسانی شده}}"</string>
     <string name="no_updates_at_this_time" msgid="9031085635689982935">"درحال‌حاضر هیچ به‌روزرسانی‌ای وجود ندارد"</string>
     <string name="safety_label_changes_notification_title" msgid="4479955083472203839">"به‌روزرسانی‌های هم‌رسانی داده"</string>
     <string name="safety_label_changes_notification_desc" msgid="7808764283266234675">"برخی‌از برنامه‌ها روش هم‌رسانی داده‌های مکان شما را تغییر داده‌اند"</string>
