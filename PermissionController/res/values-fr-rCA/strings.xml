@@ -364,7 +364,7 @@
     <string name="role_browser_request_title" msgid="2895200507835937192">"Définir <xliff:g id="APP_NAME">%1$s</xliff:g> comme appli par défaut pour la navigation?"</string>
     <string name="role_browser_request_description" msgid="5888803407905985941">"Aucune autorisation nécessaire"</string>
     <string name="role_dialer_label" msgid="1100224146343237968">"Appli Téléphone par défaut"</string>
-    <string name="role_dialer_short_label" msgid="7186888549465352489">"Appli Téléphone"</string>
+    <string name="role_dialer_short_label" msgid="7186888549465352489">"Appli de téléphone"</string>
     <string name="role_dialer_description" msgid="8768708633696539612">"Applis qui vous permettent de faire et de recevoir des appels téléphoniques sur votre appareil"</string>
     <string name="role_dialer_request_title" msgid="5959618560705912058">"Définir <xliff:g id="APP_NAME">%1$s</xliff:g> comme appli de téléphonie par défaut?"</string>
     <string name="role_dialer_request_description" msgid="6288839625724909320">"Cette appli aura accès à votre appareil photo, à vos contacts, à votre microphone, à votre téléphone et à vos messages texte"</string>
@@ -587,7 +587,7 @@
     <string name="safety_privacy_qs_tile_subtitle" msgid="3621544532041936749">"Vérification de l\'état"</string>
     <string name="privacy_controls_qs" msgid="5780144882040591169">"Paramètres de confidentialité"</string>
     <string name="security_settings_button_label_qs" msgid="8280343822465962330">"Plus de paramètres"</string>
-    <string name="camera_toggle_label_qs" msgid="3880261453066157285">"Accès à la caméra"</string>
+    <string name="camera_toggle_label_qs" msgid="3880261453066157285">"Accès à l\'appareil photo"</string>
     <string name="microphone_toggle_label_qs" msgid="8132912469813396552">"Accès au microphone"</string>
     <string name="permissions_removed_qs" msgid="8957319130625294572">"L\'autorisation a été retirée"</string>
     <string name="camera_usage_qs" msgid="4394233566086665994">"Consulter les utilisations récentes de l\'appareil photo"</string>
@@ -629,11 +629,11 @@
     <string name="safety_center_background_location_access_revoked" msgid="6972274943343442213">"Accès modifié"</string>
     <string name="safety_center_view_recent_location_access" msgid="3524391299490678243">"Voir les utilisations récentes de la position"</string>
     <string name="privacy_controls_title" msgid="7605929972256835199">"Paramètres de confidentialité"</string>
-    <string name="camera_toggle_title" msgid="1251201397431837666">"Accès à la caméra"</string>
+    <string name="camera_toggle_title" msgid="1251201397431837666">"Accès à l\'appareil photo"</string>
     <string name="mic_toggle_title" msgid="2649991093496110162">"Accès au microphone"</string>
     <string name="perm_toggle_description" msgid="7801326363741451379">"Pour les applis et les services"</string>
     <string name="mic_toggle_description" msgid="9163104307990677157">"Pour les applis et les services. Si ce paramètre est désactivé, il est possible que les données du microphone soient partagées lorsque vous appelez un numéro d\'urgence."</string>
-    <string name="location_settings_subtitle" msgid="2328360561197430695">"Voir les applis et les services qui ont accès à votre emplacement"</string>
+    <string name="location_settings_subtitle" msgid="2328360561197430695">"Voyez les applis et les services qui ont accès à votre position"</string>
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"Afficher l\'accès au presse-papiers"</string>
     <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"Un message s\'affiche lorsque les applis accèdent à du texte, à des images ou à d\'autres contenus que vous avez copiés"</string>
     <string name="show_password_title" msgid="2877269286984684659">"Afficher les mots de passe"</string>

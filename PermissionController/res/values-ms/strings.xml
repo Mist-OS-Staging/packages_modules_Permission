@@ -364,7 +364,7 @@
     <string name="role_browser_request_title" msgid="2895200507835937192">"Tetapkan <xliff:g id="APP_NAME">%1$s</xliff:g> sebagai apl penyemak imbas lalai anda?"</string>
     <string name="role_browser_request_description" msgid="5888803407905985941">"Kebenaran tidak diperlukan"</string>
     <string name="role_dialer_label" msgid="1100224146343237968">"Apl telefon lalai"</string>
-    <string name="role_dialer_short_label" msgid="7186888549465352489">"Apl Telefon"</string>
+    <string name="role_dialer_short_label" msgid="7186888549465352489">"Apl telefon"</string>
     <string name="role_dialer_description" msgid="8768708633696539612">"Apl yang membenarkan anda membuat dan menerima panggilan telefon pada peranti anda"</string>
     <string name="role_dialer_request_title" msgid="5959618560705912058">"Tetapkan <xliff:g id="APP_NAME">%1$s</xliff:g> sebagai apl telefon lalai anda?"</string>
     <string name="role_dialer_request_description" msgid="6288839625724909320">"Apl ini akan diberikan akses kepada Kamera, Kenalan, Mikrofon, Telefon dan SMS anda"</string>
