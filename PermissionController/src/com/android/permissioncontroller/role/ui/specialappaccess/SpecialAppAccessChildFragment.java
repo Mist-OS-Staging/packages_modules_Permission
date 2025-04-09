@@ -29,6 +29,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.TwoStatePreference;
@@ -40,7 +41,6 @@ import com.android.permissioncontroller.role.ui.RoleApplicationPreference;
 import com.android.permissioncontroller.role.utils.RoleUiBehaviorUtils;
 import com.android.role.controller.model.Role;
 import com.android.role.controller.model.Roles;
-import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
 import java.util.List;
 
@@ -52,7 +52,7 @@ import java.util.List;
  *
  * @param <PF> type of the parent fragment
  */
-public class SpecialAppAccessChildFragment<PF extends SettingsBasePreferenceFragment
+public class SpecialAppAccessChildFragment<PF extends PreferenceFragmentCompat
         & SpecialAppAccessChildFragment.Parent> extends Fragment
         implements Preference.OnPreferenceClickListener {
 
