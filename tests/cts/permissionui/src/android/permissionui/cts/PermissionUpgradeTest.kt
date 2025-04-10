@@ -63,7 +63,8 @@ class PermissionUpgradeTest : BaseUsePermissionTest() {
                 android.Manifest.permission.USE_SIP,
                 android.Manifest.permission.PROCESS_OUTGOING_CALLS,
                 android.Manifest.permission.CAMERA,
-                android.Manifest.permission.BODY_SENSORS,
+                // TODO: b/406669065 - Re-enable this permission once upgrade logic is fixed.
+                // android.Manifest.permission.BODY_SENSORS,
                 // Split permissions
                 android.Manifest.permission.ACCESS_BACKGROUND_LOCATION
             )
