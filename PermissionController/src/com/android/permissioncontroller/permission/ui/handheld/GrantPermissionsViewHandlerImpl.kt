@@ -77,6 +77,8 @@ import com.android.permissioncontroller.permission.ui.GrantPermissionsViewHandle
 import com.android.permissioncontroller.permission.ui.GrantPermissionsViewHandler.GRANTED_ONE_TIME
 import com.android.permissioncontroller.permission.ui.GrantPermissionsViewHandler.GRANTED_USER_SELECTED
 import com.android.permissioncontroller.permission.ui.GrantPermissionsViewHandler.ResultListener
+import com.android.permissioncontroller.permission.utils.Utils
+import com.android.settingslib.widget.SettingsThemeHelper
 
 class GrantPermissionsViewHandlerImpl(
     private val mActivity: Activity,
@@ -201,14 +203,16 @@ class GrantPermissionsViewHandlerImpl(
     override fun createView(): View {
         val useMaterial3PermissionGrantDialog =
             mActivity.resources.getBoolean(R.bool.config_useMaterial3PermissionGrantDialog)
-        val rootView =
-            if (useMaterial3PermissionGrantDialog || SdkLevel.isAtLeastT()) {
-                LayoutInflater.from(mActivity).inflate(R.layout.grant_permissions_material3, null)
-                    as ViewGroup
+        val layoutResource =
+            if (SettingsThemeHelper.isExpressiveTheme(mActivity)) {
+                R.layout.grant_permissions_expressive
+            } else if (useMaterial3PermissionGrantDialog || SdkLevel.isAtLeastT()) {
+                R.layout.grant_permissions_material3
             } else {
-                LayoutInflater.from(mActivity).inflate(R.layout.grant_permissions, null)
-                    as ViewGroup
+                R.layout.grant_permissions
             }
+        val rootView =
+            LayoutInflater.from(mActivity).inflate(layoutResource, null) as ViewGroup
         this.rootView = rootView
 
         // Uses the vertical gravity of the PermissionGrantSingleton style to position the window
