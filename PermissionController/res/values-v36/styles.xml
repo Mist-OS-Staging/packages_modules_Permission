@@ -1,0 +1,76 @@
+<!--
+  ~ Copyright (C) 2025 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <!-- START EXPRESSIVE PERMISSION GRANT DIALOG -->
+
+    <style name="PermissionGrantTitleMessageExpressive"
+           parent="@style/TextAppearance.SettingsLib.HeadlineSmall">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="PermissionGrantDetailMessageExpressive"
+           parent="@style/TextAppearance.SettingsLib.BodyMedium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">18dp</item>
+    </style>
+
+    <style name="PermissionGrantButtonListExpressive">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingTop">@dimen/settingslib_expressive_space_none</item>
+        <item name="android:paddingStart">@dimen/settingslib_expressive_space_small4</item>
+        <item name="android:paddingEnd">@dimen/settingslib_expressive_space_small4</item>
+        <item name="android:paddingBottom">14dp</item>
+    </style>
+
+    <style name="PermissionGrantButtonExpressive"
+           parent="@android:style/Widget.DeviceDefault.Button.Borderless.Colored">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/settingslib_expressive_space_medium3</item>
+        <item name="android:layout_marginTop">@dimen/settingslib_expressive_space_extrasmall2</item>
+        <item name="android:layout_marginStart">@dimen/settingslib_expressive_space_none</item>
+        <item name="android:layout_marginEnd">@dimen/settingslib_expressive_space_none</item>
+        <item name="android:layout_marginBottom">@dimen/settingslib_expressive_space_extrasmall6</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:background">@drawable/settingslib_expressive_button_background_filled</item>
+        <item name="android:textColor">@color/settingslib_materialColorOnPrimary</item>
+    </style>
+
+    <!-- END EXPRESSIVE PERMISSION GRANT DIALOG -->
+
+    <style name="PermissionGrantButtonAllowExpressive"
+           parent="@style/PermissionGrantButtonExpressive"></style>
+    <style name="PermissionGrantButtonAllowForegroundExpressive"
+           parent="@style/PermissionGrantButtonExpressive"></style>
+    <style name="PermissionGrantButtonAllowOneTimeExpressive"
+           parent="@style/PermissionGrantButtonExpressive"></style>
+    <style name="PermissionGrantButtonAllowSelectedExpressive"
+           parent="@style/PermissionGrantButtonExpressive"></style>
+    <style name="PermissionGrantButtonAllowAllExpressive"
+           parent="@style/PermissionGrantButtonExpressive"></style>
+    <style name="PermissionGrantButtonDenyExpressive"
+           parent="@style/PermissionGrantButtonExpressive"></style>
+    <style name="PermissionGrantButtonNoUpgradeExpressive"
+           parent="@style/PermissionGrantButtonExpressive"></style>
+    <style name="PermissionGrantButtonDontAllowMoreExpressive"
+           parent="@style/PermissionGrantButtonExpressive"></style>
+</resources>

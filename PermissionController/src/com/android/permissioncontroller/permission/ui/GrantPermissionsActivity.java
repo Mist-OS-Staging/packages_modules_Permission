@@ -95,6 +95,7 @@ import com.android.permissioncontroller.permission.utils.KotlinUtils;
 import com.android.permissioncontroller.permission.utils.PermissionMapping;
 import com.android.permissioncontroller.permission.utils.Utils;
 import com.android.permissioncontroller.permission.utils.v35.MultiDeviceUtils;
+import com.android.settingslib.widget.ExpressiveDesignEnabledProvider;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -109,7 +110,7 @@ import java.util.Set;
  * An activity which displays runtime permission prompts on behalf of an app.
  */
 public class GrantPermissionsActivity extends SettingsActivity
-        implements GrantPermissionsViewHandler.ResultListener {
+        implements GrantPermissionsViewHandler.ResultListener, ExpressiveDesignEnabledProvider {
 
     private static final String LOG_TAG = "GrantPermissionsActivity";
 
@@ -1039,6 +1040,12 @@ public class GrantPermissionsActivity extends SettingsActivity
         if (!isResultSet()) {
             removeActivityFromMap();
         }
+    }
+
+    @Override
+    public boolean isExpressiveDesignEnabled() {
+        return SdkLevel.isAtLeastB() && DeviceUtils.isHandheld() && getResources().getBoolean(
+                R.bool.config_enableExpressiveDesignInRequestPermissionDialog);
     }
 
     /**

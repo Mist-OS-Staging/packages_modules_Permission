@@ -23,4 +23,6 @@
     <bool name="config_usePreferenceForAppPermissionSettings">false</bool>
     <bool name="config_appPermissionFooterLinkPreferenceSummaryUnderlined">false</bool>
     <bool name="config_enableExpressiveDesignInPermissionSettings">true</bool>
+    <!-- config for opting out of expressive permission dialogs -->
+    <bool name="config_enableExpressiveDesignInRequestPermissionDialog">true</bool>
 </resources>
