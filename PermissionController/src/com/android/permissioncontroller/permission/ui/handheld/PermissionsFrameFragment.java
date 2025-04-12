@@ -39,6 +39,7 @@ import com.android.permissioncontroller.permission.ui.handheld.v35.SectionPrefer
 import com.android.permissioncontroller.permission.utils.Utils;
 import com.android.settingslib.widget.ActionBarShadowController;
 import com.android.settingslib.widget.SettingsBasePreferenceFragment;
+import com.android.settingslib.widget.SettingsThemeHelper;
 
 // TODO: b/375480009 - After using SettingsBasePreferenceFragment as the base class for our
 //  fragments, we must ensure that we migrate to SettingsPreferenceGroupAdapter, and that doing so
@@ -127,7 +128,8 @@ public abstract class PermissionsFrameFragment extends SettingsBasePreferenceFra
 
     @Override
     public RecyclerView.Adapter onCreateAdapter(@NonNull PreferenceScreen preferenceScreen) {
-        if (SdkLevel.isAtLeastV() && DeviceUtils.isHandheld(requireContext())) {
+        if (SdkLevel.isAtLeastV() && DeviceUtils.isHandheld(requireContext())
+                && !SettingsThemeHelper.isExpressiveTheme(requireContext())) {
             return new SectionPreferenceGroupAdapter(preferenceScreen);
         } else {
             return super.onCreateAdapter(preferenceScreen);

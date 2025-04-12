@@ -32,6 +32,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
@@ -45,7 +46,6 @@ import com.android.permissioncontroller.role.utils.RoleUiBehaviorUtils;
 import com.android.role.controller.model.Role;
 import com.android.role.controller.model.Roles;
 import com.android.settingslib.utils.applications.AppUtils;
-import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
 import java.util.List;
 
@@ -57,7 +57,7 @@ import java.util.List;
  *
  * @param <PF> type of the parent fragment
  */
-public class DefaultAppListChildFragment<PF extends SettingsBasePreferenceFragment
+public class DefaultAppListChildFragment<PF extends PreferenceFragmentCompat
         & DefaultAppListChildFragment.Parent> extends Fragment
         implements Preference.OnPreferenceClickListener {
 

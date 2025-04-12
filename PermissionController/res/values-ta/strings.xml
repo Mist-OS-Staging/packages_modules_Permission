@@ -359,12 +359,12 @@
     <string name="role_assistant_short_label" msgid="3369003713187703399">"டிஜிட்டல் அசிஸ்டண்ட் ஆப்ஸ்"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"நீங்கள் பார்க்கும் திரையில் உள்ள தகவலின் அடிப்படையில் அசிஸ்ட் ஆப்ஸ் உதவும். ஒருங்கிணைந்த உதவியை வழங்குவதற்காக \'தொடக்கியையும்\' \'குரல் உள்ளீட்டுச் சேவைகளையும்\' சில ஆப்ஸ் பயன்படுத்துகின்றன."</string>
     <string name="role_browser_label" msgid="2877796144554070207">"உலாவிக்கான இயல்பான ஆப்ஸ்"</string>
-    <string name="role_browser_short_label" msgid="6745009127123292296">"உலாவி ஆப்ஸ்"</string>
+    <string name="role_browser_short_label" msgid="6745009127123292296">"பிரவுசர் ஆப்ஸ்"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"இணையத்திற்கும் திரையில் பார்த்துத் தட்டக்கூடிய இணைப்புகளுக்கும் அணுகலை வழங்கும் ஆப்ஸ்"</string>
     <string name="role_browser_request_title" msgid="2895200507835937192">"<xliff:g id="APP_NAME">%1$s</xliff:g>ஐ இயல்பான உலாவி ஆப்ஸாக அமைக்கவா?"</string>
     <string name="role_browser_request_description" msgid="5888803407905985941">"அனுமதிகள் தேவையில்லை"</string>
     <string name="role_dialer_label" msgid="1100224146343237968">"இயல்பான மொபைல் ஆப்ஸ்"</string>
-    <string name="role_dialer_short_label" msgid="7186888549465352489">"மொபைல் ஆப்ஸ்"</string>
+    <string name="role_dialer_short_label" msgid="7186888549465352489">"ஃபோன் ஆப்ஸ்"</string>
     <string name="role_dialer_description" msgid="8768708633696539612">"உங்கள் சாதனத்தில் அழைப்புகளைச் செய்யவும் பெறவும் அனுமதிக்கும் ஆப்ஸ்"</string>
     <string name="role_dialer_request_title" msgid="5959618560705912058">"<xliff:g id="APP_NAME">%1$s</xliff:g>ஐ இயல்பான மொபைல் ஆப்ஸாக அமைக்கவா?"</string>
     <string name="role_dialer_request_description" msgid="6288839625724909320">"கேமரா, தொடர்புகள், மைக்ரோஃபோன், மொபைல், மெசேஜ் ஆகியவற்றுக்கான அணுகல் இந்த ஆப்ஸுக்கு வழங்கப்படும்"</string>
@@ -411,7 +411,7 @@
     <string name="role_notes_search_keywords" msgid="7710756695666744631">"குறிப்புகள்"</string>
     <string name="role_wallet_label" msgid="3719419175656204207">"இயல்புநிலை வாலட் ஆப்ஸ்"</string>
     <string name="role_wallet_short_label" msgid="6521288403762457452">"வாலட் ஆப்ஸ்"</string>
-    <string name="role_wallet_description" msgid="3726535836165949838">"பல்வேறு வகையான பரிமாற்றங்கள் தொடர்பாக உங்களுக்கு உதவ கிரெடிட் கார்டுகள், லாயல்டி கார்டுகள், கார் சாவிகள் மற்றும் பிறவற்றை வாலட் ஆப்ஸில் சேமிக்கலாம்."</string>
+    <string name="role_wallet_description" msgid="3726535836165949838">"பல்வேறு வகையான பரிவர்த்தனைகள் தொடர்பாக உங்களுக்கு உதவ கிரெடிட் கார்டுகள், லாயல்டி கார்டுகள், கார் சாவிகள் மற்றும் பிறவற்றை வாலட் ஆப்ஸில் சேமிக்கலாம்."</string>
     <string name="role_wallet_request_title" msgid="4770217108262737093">"<xliff:g id="APP_NAME">%1$s</xliff:g> ஆப்ஸை உங்கள் இயல்புநிலை வாலட் ஆப்ஸாக அமைக்கவா?"</string>
     <string name="role_wallet_request_description" msgid="6305487425777483053">"அனுமதிகள் தேவையில்லை"</string>
     <string name="request_role_current_default" msgid="738722892438247184">"தற்போதைய இயல்பான ஆப்ஸ்"</string>

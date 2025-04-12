@@ -22,8 +22,8 @@
     <string name="cancel" msgid="8943320028373963831">"ביטול"</string>
     <string name="back" msgid="6249950659061523680">"חזרה"</string>
     <string name="dialog_close" msgid="6840699812532384661">"סגירה"</string>
-    <string name="available" msgid="6007778121920339498">"הגישה מותרת"</string>
-    <string name="blocked" msgid="9195547604866033708">"הגישה חסומה"</string>
+    <string name="available" msgid="6007778121920339498">"מותרת"</string>
+    <string name="blocked" msgid="9195547604866033708">"חסומה"</string>
     <string name="on" msgid="280241003226755921">"מופעל"</string>
     <string name="off" msgid="1438489226422866263">"כבוי"</string>
     <string name="uninstall_or_disable" msgid="4496612999740858933">"הסרה או השבתה"</string>
@@ -63,7 +63,7 @@
     <string name="app_permissions" msgid="3369917736607944781">"הרשאות לאפליקציות"</string>
     <string name="unused_apps" msgid="2058057455175955094">"אפליקציות שמזמן לא השתמשת בהן"</string>
     <string name="edit_photos_description" msgid="5540108003480078892">"עריכת הרשימה של התמונות שנבחרו לאפליקציה הזו"</string>
-    <string name="no_unused_apps" msgid="12809387670415295">"אין אפליקציות שאינן בשימוש"</string>
+    <string name="no_unused_apps" msgid="12809387670415295">"אין אפליקציות שלא היו בשימוש"</string>
     <string name="zero_unused_apps" msgid="9024448554157499748">"אין אפליקציות שאינן בשימוש"</string>
     <string name="review_permission_decisions" msgid="309559429150613632">"ההחלטות האחרונות לגבי הרשאות"</string>
     <string name="review_permission_decisions_view_all" msgid="90391040431566130">"הצגת כל ההחלטות האחרונות לגבי הרשאות"</string>
