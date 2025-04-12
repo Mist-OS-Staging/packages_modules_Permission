@@ -311,7 +311,7 @@ public class AppPermissionFragment extends SettingsWithLargeHeader
     }
 
     private void showPermissionRationaleDialog(Boolean showPermissionRationale) {
-        showPermissionRationaleDialog(showPermissionRationale == Boolean.TRUE);
+        showPermissionRationaleDialog(Objects.equals(showPermissionRationale, Boolean.TRUE));
     }
 
     private void showPermissionRationaleDialog(boolean showPermissionRationale) {
