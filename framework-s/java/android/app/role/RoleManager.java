@@ -203,6 +203,22 @@ public final class RoleManager {
             "android.app.role.FINANCED_DEVICE_KIOSK";
 
     /**
+     * The name of the system financed device controller role.
+     *
+     * This role grants the device lock controller a set of permissions that allows it
+     * to manage the device state for financed devices. When a creditor app that holds the
+     * {@link #ROLE_FINANCED_DEVICE_KIOSK} role invokes the lock or unlock command on a
+     * financed device, it is through the device lock controller that the accompanying policies
+     * are enforced.
+     *
+     * @hide
+     */
+    @SystemApi
+    @FlaggedApi(com.android.permission.flags.Flags.FLAG_SYSTEM_FINANCED_DEVICE_CONTROLLER)
+    public static final String ROLE_SYSTEM_FINANCED_DEVICE_CONTROLLER =
+            "android.app.role.SYSTEM_FINANCED_DEVICE_CONTROLLER";
+
+    /**
      * The name of the system call streaming role.
      *
      * @hide
