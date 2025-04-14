@@ -183,6 +183,12 @@
             <item type="style" name="PermissionRationaleButtonContainerExpressive" />
             <item type="style" name="PermissionRationaleBackButtonExpressive" />
 
+            <item type="style" name="EnhancedConfirmationDialogExpressive" />
+            <item type="style" name="EnhancedConfirmationDialogHeaderExpressive" />
+            <item type="style" name="EnhancedConfirmationDialogIconExpressive" />
+            <item type="style" name="EnhancedConfirmationDialogTitleExpressive" />
+            <item type="style" name="EnhancedConfirmationDialogDescExpressive" />
+            <item type="style" name="Theme.EnhancedConfirmationDialogActivityExpressive" />
 
             <!-- END EXPRESSIVE PERMISSION DIALOG -->
 

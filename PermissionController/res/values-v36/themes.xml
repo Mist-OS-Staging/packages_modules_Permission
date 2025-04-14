@@ -27,4 +27,27 @@
     <style name="Theme.PermissionController.Settings.Expressive.FilterTouches">
         <item name="android:filterTouchesWhenObscured">true</item>
     </style>
+
+    <style name="Theme.Expressive.Dialog.Alert.DayNight" parent="@style/Theme.DeviceDefault.Dialog.Alert.DayNight">
+        <item name="android:buttonBarStyle">@style/Widget.Expressive.PlatformDialogButtonBar</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/Widget.Expressive.PlatformDialogButton.Filled</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/Widget.Expressive.PlatformDialogButton.Outline</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/Widget.Expressive.PlatformDialogButton</item>
+    </style>
+
+    <!-- START EXPRESSIVE ENHANCED CONFIRMATION DIALOG -->
+
+    <!-- This is not overlayable -->
+    <style name="Theme.EnhancedConfirmationDialogActivityExpressive.FilterTouches">
+        <item name="android:filterTouchesWhenObscured">true</item>
+    </style>
+
+    <style name="Theme.EnhancedConfirmationDialogActivityExpressive"
+           parent="@style/Theme.DeviceDefault.Dialog.NoActionBar.DayNight">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:alertDialogTheme">@style/Theme.Expressive.Dialog.Alert.DayNight</item>
+    </style>
+
+    <!-- END EXPRESSIVE ENHANCED CONFIRMATION DIALOG -->
+
 </resources>
