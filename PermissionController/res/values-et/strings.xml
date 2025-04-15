@@ -235,15 +235,15 @@
     <string name="special_file_access_dialog" msgid="583804114020740610">"Kas lubada sellel rakendusel selle seadme või ühendatud salvestusseadme ühises salvestusruumis juurde pääseda mis tahes failidele ning neid muuta ja kustutada? See rakendus võib failidele juurde pääseda teilt luba küsimata."</string>
     <string name="permission_description_summary_generic" msgid="5401399408814903391">"Selle loaga rakendused saavad teha järgmist: <xliff:g id="DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="permission_description_summary_activity_recognition" msgid="2652850576497070146">"Selle loaga rakendused pääsevad juurde teie füüsilise tegevuse andmetele (nt kõndimise, ratta- ja autosõidu andmed, sammuloendur ning muud)"</string>
-    <string name="permission_description_summary_calendar" msgid="103329982944411010">"Selle loaga rakendustel on juurdepääs teie kalendrile"</string>
+    <string name="permission_description_summary_calendar" msgid="103329982944411010">"Selle loaga rakendustel on juurdepääs teie kalendrile."</string>
     <string name="permission_description_summary_call_log" msgid="7321437186317577624">"Selle loaga rakendused saavad telefoni kõnelogi lugeda ja sellesse kirjutada"</string>
     <string name="permission_description_summary_camera" msgid="108004375101882069">"Selle loaga rakendused saavad jäädvustada pilte ja videoid"</string>
-    <string name="permission_description_summary_contacts" msgid="2337798886460408996">"Selle loaga rakendustel on juurdepääs teie kontaktidele"</string>
-    <string name="permission_description_summary_location" msgid="2817531799933480694">"Selle loaga rakendustel on juurdepääs seadme asukohateabele"</string>
+    <string name="permission_description_summary_contacts" msgid="2337798886460408996">"Selle loaga rakendustel on juurdepääs teie kontaktidele."</string>
+    <string name="permission_description_summary_location" msgid="2817531799933480694">"Selle loaga rakendustel on juurdepääs seadme asukohateabele."</string>
     <string name="permission_description_summary_nearby_devices" msgid="8269183818275073741">"Selle loaga rakendused saavad leida lähedalasuvaid seadmeid, luua nendega ühenduse ja määrata nende suhtelise asukoha"</string>
     <string name="permission_description_summary_microphone" msgid="630834800308329907">"Selle loaga rakendused võivad heli salvestada"</string>
     <string name="permission_description_summary_phone" msgid="4515277217435233619">"Selle loaga rakendused saavad telefonikõnesid teha ja hallata"</string>
-    <string name="permission_description_summary_sensors" msgid="1836045815643119949">"Selle loaga rakendustel on juurdepääs teie eluliste näitajate andurite andmetele"</string>
+    <string name="permission_description_summary_sensors" msgid="1836045815643119949">"Selle loaga rakendustel on juurdepääs teie eluliste näitajate andurite andmetele."</string>
     <string name="permission_description_summary_sms" msgid="725999468547768517">"Selle loaga rakendused saavad SMS-sõnumeid saata ja vaadata"</string>
     <string name="permission_description_summary_storage" msgid="6575759089065303346">"Selle loaga rakendused pääsevad teie seadmes juurde fotodele, meediale ja failidele"</string>
     <string name="permission_description_summary_read_media_aural" msgid="3354728149930482199">"Selle loaga rakendused pääsevad selles seadmes juurde muusikale ja muudele helifailidele"</string>

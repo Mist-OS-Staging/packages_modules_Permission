@@ -575,7 +575,7 @@
     <string name="safety_center_dashboard_page_title" msgid="2810774008694315854">"सुरक्षा आणि गोपनीयता"</string>
     <string name="safety_center_rescan_button" msgid="4517514567809409596">"डिव्हाइस स्कॅन करा"</string>
     <string name="safety_center_issue_card_dismiss_button" msgid="5113965506144222402">"डिसमिस करा"</string>
-    <string name="safety_center_issue_card_dismiss_confirmation_title" msgid="2734809473425036382">"ही सूचना डिसमिस करायची का?"</string>
+    <string name="safety_center_issue_card_dismiss_confirmation_title" msgid="2734809473425036382">"हा अलर्ट डिसमिस करायचा का?"</string>
     <string name="safety_center_issue_card_dismiss_confirmation_message" msgid="3775418736671093563">"आणखी संरक्षण जोडण्यासाठी, तुमच्या सुरक्षा आणि गोपनीयता सेटिंग्जचे कधीही पुनरावलोकन करा"</string>
     <string name="safety_center_issue_card_confirm_dismiss_button" msgid="5884137843083634556">"डिसमिस करा"</string>
     <string name="safety_center_issue_card_cancel_dismiss_button" msgid="2874578798877712346">"रद्द करा"</string>

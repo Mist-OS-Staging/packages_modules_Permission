@@ -24,7 +24,7 @@
     <string name="dialog_close" msgid="6840699812532384661">"إغلاق"</string>
     <string name="available" msgid="6007778121920339498">"متاح"</string>
     <string name="blocked" msgid="9195547604866033708">"محظور"</string>
-    <string name="on" msgid="280241003226755921">"مفعَّلة"</string>
+    <string name="on" msgid="280241003226755921">"الميزة مفعَّلة"</string>
     <string name="off" msgid="1438489226422866263">"إيقاف"</string>
     <string name="uninstall_or_disable" msgid="4496612999740858933">"إلغاء التثبيت أو الإيقاف"</string>
     <string name="app_not_found_dlg_title" msgid="6029482906093859756">"لم يتمّ العثور على التطبيق."</string>
@@ -253,8 +253,8 @@
     <string name="app_permission_never_accessed_summary" msgid="401346181461975090">"لم يستخدم الإذن مطلقًا"</string>
     <string name="app_permission_never_accessed_denied_summary" msgid="6596000497490905146">"تم الرفض / لم يسبق الحصول على الإذن"</string>
     <string name="allowed_header" msgid="7769277978004790414">"التطبيقات المسموح لها"</string>
-    <string name="allowed_always_header" msgid="6455903312589013545">"الإذن ممنوحٌ طوال الوقت"</string>
-    <string name="allowed_foreground_header" msgid="6845655788447833353">"تطبيقات يمكنها الوصول عند استخدامها فقط"</string>
+    <string name="allowed_always_header" msgid="6455903312589013545">"تطبيقات لديها الإذن طوال الوقت"</string>
+    <string name="allowed_foreground_header" msgid="6845655788447833353">"تطبيقات لديها الإذن عند استخدامها فقط"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"التطبيقات المسموح لها بالوصول إلى الوسائط فقط"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"التطبيقات المسموح لها بإدارة كل الملفات"</string>
     <string name="ask_header" msgid="2633816846459944376">"الطلب في كل مرة"</string>

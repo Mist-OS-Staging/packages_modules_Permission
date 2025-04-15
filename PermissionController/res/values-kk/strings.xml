@@ -573,7 +573,7 @@
     <string name="automotive_required_app_title" msgid="2992168288249988735">"Осы қолданба қажет"</string>
     <string name="automotive_required_app_summary" msgid="6514902316658090465">"Осы қолданба көлік өндірушісі үшін қажет."</string>
     <string name="safety_center_dashboard_page_title" msgid="2810774008694315854">"Қауіпсіздік және құпиялық"</string>
-    <string name="safety_center_rescan_button" msgid="4517514567809409596">"Құрылғыны тексеру"</string>
+    <string name="safety_center_rescan_button" msgid="4517514567809409596">"Құрылғыны сканерлеу"</string>
     <string name="safety_center_issue_card_dismiss_button" msgid="5113965506144222402">"Жабу"</string>
     <string name="safety_center_issue_card_dismiss_confirmation_title" msgid="2734809473425036382">"Осы хабарландыруды жабу керек пе?"</string>
     <string name="safety_center_issue_card_dismiss_confirmation_message" msgid="3775418736671093563">"Қорғаныс деңгейін арттыру үшін қауіпсіздік пен құпиялық параметрлерін кез келген уақытта қарап шығыңыз."</string>

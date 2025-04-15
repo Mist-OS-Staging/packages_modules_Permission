@@ -568,7 +568,7 @@
     <string name="automotive_blocked_camera_title" msgid="6142362431548829416">"L\'accés a Càmera està desactivat"</string>
     <string name="automotive_blocked_microphone_title" msgid="3956311098238620220">"L\'accés al micròfon està desactivat"</string>
     <string name="automotive_blocked_location_title" msgid="6047574747593264689">"L\'accés a la ubicació està desactivat"</string>
-    <string name="automotive_blocked_infotainment_app_summary" msgid="8217099645064950860">"Per a les aplicacions d\'informació i entreteniment"</string>
+    <string name="automotive_blocked_infotainment_app_summary" msgid="8217099645064950860">"Per a les aplicacions d\'infoentreteniment"</string>
     <string name="automotive_blocked_required_app_summary" msgid="8591513745681168088">"Per a les aplicacions requerides"</string>
     <string name="automotive_required_app_title" msgid="2992168288249988735">"Es requereix aquesta aplicació"</string>
     <string name="automotive_required_app_summary" msgid="6514902316658090465">"El fabricant del cotxe requereix aquesta aplicació"</string>
