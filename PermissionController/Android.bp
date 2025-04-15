@@ -141,6 +141,7 @@ android_library {
         "SettingsLibSelectorWithWidgetPreference",
         "SettingsLibTwoTargetPreference",
         "SettingsLibIllustrationPreference",
+        "SettingsLibZeroStatePreference",
         "androidx.annotation_annotation",
         "permissioncontroller-statsd",
         "car-ui-lib",
