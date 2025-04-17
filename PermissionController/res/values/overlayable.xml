@@ -170,6 +170,20 @@
             <item type="style" name="PermissionGrantButtonNoUpgradeExpressive" />
             <item type="style" name="PermissionGrantButtonDontAllowMoreExpressive" />
 
+            <item type="style" name="PermissionRationaleContentExpressive" />
+            <item type="style" name="PermissionRationaleTitleContainerExpressive" />
+            <item type="style" name="PermissionRationaleTitleIconExpressive" />
+            <item type="style" name="PermissionRationaleTitleMessageExpressive" />
+            <item type="style" name="PermissionRationaleSectionOuterContainerExpressive" />
+            <item type="style" name="PermissionRationaleSectionIconExpressive" />
+            <item type="style" name="PermissionRationaleSectionInnerContainerExpressive" />
+            <item type="style" name="PermissionRationaleSectionTitleExpressive" />
+            <item type="style" name="PermissionRationaleSectionMessageExpressive" />
+            <item type="style" name="PermissionRationaleSectionPurposeListExpressive" />
+            <item type="style" name="PermissionRationaleButtonContainerExpressive" />
+            <item type="style" name="PermissionRationaleBackButtonExpressive" />
+
+
             <!-- END EXPRESSIVE PERMISSION DIALOG -->
 
             <!-- END PERMISSION GRANT DIALOG -->
