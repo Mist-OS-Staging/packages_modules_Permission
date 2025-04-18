@@ -57,6 +57,7 @@ import androidx.annotation.RequiresApi;
 import androidx.annotation.StringRes;
 import androidx.core.util.Preconditions;
 
+import com.android.modules.utils.build.SdkLevel;
 import com.android.permission.safetylabel.DataPurposeConstants.Purpose;
 import com.android.permissioncontroller.Constants;
 import com.android.permissioncontroller.DeviceUtils;
@@ -70,6 +71,7 @@ import com.android.permissioncontroller.permission.ui.model.v34.PermissionRation
 import com.android.permissioncontroller.permission.ui.model.v34.PermissionRationaleViewModelFactory;
 import com.android.permissioncontroller.permission.utils.KotlinUtils;
 import com.android.permissioncontroller.permission.utils.Utils;
+import com.android.settingslib.widget.ExpressiveDesignEnabledProvider;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -87,7 +89,7 @@ import java.util.stream.Collectors;
  */
 @RequiresApi(Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
 public class PermissionRationaleActivity extends SettingsActivity implements
-        PermissionRationaleViewHandler.ResultListener {
+        PermissionRationaleViewHandler.ResultListener, ExpressiveDesignEnabledProvider {
 
     private static final String LOG_TAG = PermissionRationaleActivity.class.getSimpleName();
 
@@ -333,6 +335,12 @@ public class PermissionRationaleActivity extends SettingsActivity implements
                     PERMISSION_RATIONALE_DIALOG_ACTION_REPORTED__BUTTON_PRESSED__CANCEL);
             finishAfterTransition();
         }
+    }
+
+    @Override
+    public boolean isExpressiveDesignEnabled() {
+        return SdkLevel.isAtLeastB() && DeviceUtils.isHandheld() && getResources().getBoolean(
+                R.bool.config_enableExpressiveDesignInRequestPermissionDialog);
     }
 
     private void onPermissionRationaleInfoLoad(PermissionRationaleInfo permissionRationaleInfo) {
