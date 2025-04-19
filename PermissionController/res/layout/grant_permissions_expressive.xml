@@ -52,10 +52,15 @@
                         android:id="@+id/permission_icon"
                         style="@style/PermissionGrantTitleIconMaterial3" />
 
+                    <!-- TODO: As a quick fix for b/410176498, we changed the usage of
+                               PermissionGrantTitleMessageExpressive to PermissionGrantTitleMessage.
+                               Change back to using PermissionGrantTitleMessageExpressive once we
+                               figured out the root cause.
+                    -->
                     <TextView
                         android:id="@+id/permission_message"
                         android:accessibilityHeading="true"
-                        style="@style/PermissionGrantTitleMessageExpressive" />
+                        style="@style/PermissionGrantTitleMessage" />
 
                 </LinearLayout>
 
