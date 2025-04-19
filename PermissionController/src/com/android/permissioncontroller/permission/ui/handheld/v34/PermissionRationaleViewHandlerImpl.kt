@@ -37,6 +37,7 @@ import androidx.core.text.method.LinkMovementMethodCompat
 import com.android.permissioncontroller.R
 import com.android.permissioncontroller.permission.ui.v34.PermissionRationaleViewHandler
 import com.android.permissioncontroller.permission.ui.v34.PermissionRationaleViewHandler.Result.Companion.CANCELLED
+import com.android.settingslib.widget.SettingsThemeHelper
 
 /**
  * Handheld implementation of [PermissionRationaleViewHandler]. Used for managing the presentation
@@ -128,8 +129,14 @@ class PermissionRationaleViewHandlerImpl(
     }
 
     override fun createView(): View {
+        val layoutResource = if (SettingsThemeHelper.isExpressiveTheme(mActivity)) {
+            R.layout.permission_rationale_expressive
+        } else {
+            R.layout.permission_rationale
+        }
+
         val rootView =
-            LayoutInflater.from(mActivity).inflate(R.layout.permission_rationale, null) as ViewGroup
+            LayoutInflater.from(mActivity).inflate(layoutResource, null) as ViewGroup
 
         // Uses the vertical gravity of the PermissionGrantSingleton style to position the window
         val gravity =
@@ -164,10 +171,12 @@ class PermissionRationaleViewHandlerImpl(
             rootView.findViewById<Button>(R.id.back_button)!!.apply {
                 setOnClickListener(this@PermissionRationaleViewHandlerImpl)
 
-                // Load the text color from the activity theme rather than the Material Design theme
-                val textColor =
-                    getColorStateListForAttr(mActivity, android.R.attr.textColorPrimary)!!
-                setTextColor(textColor)
+                if (!SettingsThemeHelper.isExpressiveTheme(mActivity)) {
+                    // Load the text color from the activity theme rather than the Material Design theme
+                    val textColor =
+                        getColorStateListForAttr(mActivity, android.R.attr.textColorPrimary)!!
+                    setTextColor(textColor)
+                }
             }
 
         this.rootView = rootView
