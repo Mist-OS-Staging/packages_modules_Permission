@@ -44,4 +44,8 @@ rule com.android.safetycenter.pendingintents.** com.android.permission.jarjar.@0
 rule com.android.safetycenter.resources.** com.android.permission.jarjar.@0
 rule com.google.protobuf.** com.android.permission.jarjar.@0
 rule com.android.permissioncontroller.PermissionControllerStatsLog com.android.permission.jarjar.@0
+rule com.android.server.telecom.flags.*FeatureFlags* com.android.permission.jarjar.@0
+rule com.android.server.telecom.flags.FeatureFlags* com.android.permission.jarjar.@0
+rule com.android.server.telecom.flags.FeatureFlags com.android.permission.jarjar.@0
+rule com.android.server.telecom.flags.Flags com.android.permission.jarjar.@0
 # LINT.ThenChange(PermissionController/role-controller/java/com/android/role/controller/model/RoleParser.java:applyJarjarTransform)

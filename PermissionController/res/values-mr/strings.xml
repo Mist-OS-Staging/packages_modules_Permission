@@ -128,7 +128,7 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"गोपनीयता डॅशबोर्ड"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"कोणत्या ॲप्सनी अलीकडे परवानग्या वापरल्या ते पहा"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> वापर"</string>
-    <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"इतर परवानग्या पाहणे"</string>
+    <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"इतर परवानग्या पहा"</string>
     <string name="perm_usage_adv_info_summary_2_items" msgid="3702175198750127822">"<xliff:g id="PERMGROUP_0">%1$s</xliff:g>, <xliff:g id="PERMGROUP_1">%2$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_summary_more_items" msgid="949055326299562218">"<xliff:g id="PERMGROUP_0">%1$s</xliff:g>, <xliff:g id="PERMGROUP_1">%2$s</xliff:g> आणि आणखी <xliff:g id="NUM">%3$s</xliff:g>"</string>
     <string name="permission_group_usage_subtitle_24h" msgid="5120155996322114181">"ॲप्सनी मागील २४ तासांमध्ये तुमचे <xliff:g id="PERMGROUP">%1$s</xliff:g> वापरलेल्याची टाइमलाइन"</string>
@@ -164,7 +164,7 @@
     <string name="permission_usage_bar_chart_title_last_minute" msgid="820450867183487607">"मागील एका मिनिटातील परवानगी वापर"</string>
     <string name="permission_usage_preference_summary_not_used_in_past_n_days" msgid="4771868094611359651">"{count,plural, =1{मागील # दिवसामध्ये न वापरलेली}other{मागील # दिवसांमध्ये न वापरलेली}}"</string>
     <string name="permission_usage_preference_summary_not_used_in_past_n_hours" msgid="3828973177433435742">"{count,plural, =1{मागील # तासामध्ये न वापरलेली}other{मागील # तासांमध्ये न वापरलेली}}"</string>
-    <string name="permission_usage_preference_label" msgid="8343167938128676378">"{count,plural, =1{एका अ‍ॅपने वापरल्या}other{# अ‍ॅप्सनी वापरल्या}}"</string>
+    <string name="permission_usage_preference_label" msgid="8343167938128676378">"{count,plural, =1{एका अ‍ॅपने वापरली}other{# अ‍ॅप्सनी वापरली}}"</string>
     <string name="permission_usage_view_details" msgid="6675335735468752787">"डॅशबोर्डमध्ये सर्व पहा"</string>
     <string name="app_permission_usage_filter_label" msgid="7182861154638631550">"यानुसार फिल्टर केले: <xliff:g id="PERM">%1$s</xliff:g>"</string>
     <string name="app_permission_usage_remove_filter" msgid="2926157607436428207">"फिल्टर काढून टाका"</string>

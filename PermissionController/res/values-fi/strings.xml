@@ -345,10 +345,10 @@
     <string name="app_perms_content_provider_7d_all_files" msgid="7962416229708835558">"Käytetty 7 viime päivän aikana • Kaikki tiedostot"</string>
     <string name="no_permissions_allowed" msgid="6081976856354669209">"Käyttöoikeuksia ei ole myönnetty"</string>
     <string name="no_permissions_denied" msgid="8159923922804043282">"Ei myöntämättömiä lupia"</string>
-    <string name="no_apps_allowed" msgid="7718822655254468631">"Ei yksikään sovellus"</string>
+    <string name="no_apps_allowed" msgid="7718822655254468631">"Ei sovelluksia"</string>
     <string name="no_apps_allowed_full" msgid="8011716991498934104">"Ei sovelluksia, joilla on käyttöoikeudet kaikille tiedostoille"</string>
     <string name="no_apps_allowed_scoped" msgid="4908850477787659501">"Ei sovelluksia, joilla on käyttöoikeudet vain medialle"</string>
-    <string name="no_apps_denied" msgid="7663435886986784743">"Ei estettyjä sovelluksia"</string>
+    <string name="no_apps_denied" msgid="7663435886986784743">"Ei sovelluksia"</string>
     <string name="car_permission_selected" msgid="180837028920791596">"Valittu"</string>
     <string name="settings" msgid="5409109923158713323">"Asetukset"</string>
     <string name="accessibility_service_dialog_title_single" msgid="7956432823014102366">"<xliff:g id="SERVICE_NAME">%s</xliff:g> on saanut laitteen täydet käyttöoikeudet"</string>
