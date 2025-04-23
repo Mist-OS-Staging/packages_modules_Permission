@@ -155,7 +155,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
             "app_location_permission_rationale_subtitle"
         const val HEALTH_PERMISSION_SELECT_HEART_RATE_PLAIN_TEXT = "Heart rate"
         const val HEALTH_PERMISSION_ALLOW_ALL_PLAIN_TEXT = "Allow all"
-        const val HEALTH_PERMISSION_ALLOW_ALWAYS_PLAIN_TEXT = "Allow all the time"
+        const val HEALTH_PERMISSION_ALLOW_ALWAYS_PLAIN_TEXT = "All the time"
         const val GRANT_DIALOG_PERMISSION_RATIONALE_CONTAINER_VIEW =
             "com.android.permissioncontroller:id/permission_rationale_container"
         const val PERMISSION_RATIONALE_ACTIVITY_TITLE_VIEW =
