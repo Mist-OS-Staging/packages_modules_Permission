@@ -725,9 +725,13 @@ public class EnhancedConfirmationService extends SystemService {
                 // telephony service is unavailable.
             }
             UserHandle user = mContext.getUser();
-            if (com.android.server.telecom.flags.Flags.callDetailsGetAssociatedUserApi()) {
-                user = call.getDetails().getAssociatedUser();
+            /*
+            TODO b/408470449: reenable once call extras are fixed
+            Bundle extras = call.getDetails().getExtras();
+            if (extras != null) {
+                user = extras.getParcelable(Intent.EXTRA_USER_HANDLE, UserHandle.class);
             }
+             */
             if (number != null) {
                 return hasContactWithPhoneNumber(number, user)
                         ? CALL_TYPE_TRUSTED : CALL_TYPE_UNTRUSTED;
