@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2021 The Android Open Source Project
+  ~ Copyright (C) 2025 The Android Open Source Project
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -14,17 +15,17 @@
   ~ limitations under the License.
   -->
 
-<PreferenceScreen
+<rotate
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">>
-
-    <PreferenceCategory
-        android:key="info_msg_category"/>
-
-    <com.android.settingslib.widget.ZeroStatePreference
-        android:key="zero_state_preference"
-        android:title="@string/no_unused_apps"
-        android:icon="@drawable/ic_apps_24dp"
-        app:isPreferenceVisible="false"/>
-
-</PreferenceScreen>
+    android:fromDegrees="90"
+    android:toDegrees="90">
+    <shape android:shape="line">
+        <stroke
+            android:color="@color/settingslib_materialColorOutlineVariant"
+            android:dashWidth="2dp"
+            android:dashGap="4dp"
+            android:width="2dp"
+            android:height="26dp"
+            />
+    </shape>
+</rotate>
