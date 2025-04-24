@@ -521,6 +521,8 @@
             <item type="bool" name="config_enableExpressiveDesignInPermissionSettings"/>
             <!-- config for opting out of expressive permission dialogs -->
             <item type="bool" name="config_enableExpressiveDesignInRequestPermissionDialog"/>
+            <!-- config for opting out of expressive enhanced confirmation dialogs -->
+            <item type="bool" name="config_enableExpressiveDesignInEnhancedConfirmationDialog"/>
             <!-- END EXPRESSIVE DESIGN CONFIGS -->
         </policy>
 
