@@ -562,7 +562,7 @@
     <string name="blocked_camera_title" msgid="1128510551791284384">"Kamera ya kifaa imezuiwa"</string>
     <string name="blocked_microphone_title" msgid="1631517143648232585">"Maikrofoni ya kifaa imezuiwa"</string>
     <string name="blocked_location_title" msgid="2005608279812892383">"Utambuzi wa mahali kifaa kilipo umezimwa"</string>
-    <string name="blocked_sensor_summary" msgid="4443707628305027375">"Kwa ajili ya programu na huduma"</string>
+    <string name="blocked_sensor_summary" msgid="4443707628305027375">"Kwa programu na huduma"</string>
     <string name="blocked_mic_summary" msgid="8960466941528458347">"Huenda bado data ya maikrofoni ikashirikiwa unapopigia namba ya dharura."</string>
     <string name="blocked_sensor_button_label" msgid="6742092634984289658">"Badilisha"</string>
     <string name="automotive_blocked_camera_title" msgid="6142362431548829416">"Idhini ya kufikia kamera imezimwa"</string>
