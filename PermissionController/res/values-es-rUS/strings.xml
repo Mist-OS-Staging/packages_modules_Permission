@@ -348,7 +348,7 @@
     <string name="no_apps_allowed" msgid="7718822655254468631">"No se le otorgó permiso a ninguna app"</string>
     <string name="no_apps_allowed_full" msgid="8011716991498934104">"Ninguna app tiene el permiso para todos los archivos"</string>
     <string name="no_apps_allowed_scoped" msgid="4908850477787659501">"Ninguna app tiene el permiso solo para contenido multimedia"</string>
-    <string name="no_apps_denied" msgid="7663435886986784743">"No hay apps rechazadas"</string>
+    <string name="no_apps_denied" msgid="7663435886986784743">"No se le rechazó el permiso a ninguna app"</string>
     <string name="car_permission_selected" msgid="180837028920791596">"Seleccionado"</string>
     <string name="settings" msgid="5409109923158713323">"Configuración"</string>
     <string name="accessibility_service_dialog_title_single" msgid="7956432823014102366">"<xliff:g id="SERVICE_NAME">%s</xliff:g> tiene acceso completo a tu dispositivo"</string>
@@ -659,11 +659,11 @@
     <string name="app_permission_rationale_message" msgid="8511466916077100713">"Seguridad de los datos"</string>
     <string name="app_location_permission_rationale_title" msgid="925420340572401350">"Es posible que se compartan los datos de ubicación"</string>
     <string name="app_location_permission_rationale_subtitle" msgid="6986985722752868692">"Esta app indicó que podría compartir tus datos de ubicación con terceros"</string>
-    <string name="data_sharing_updates_title" msgid="7996933386875213859">"Actualizaciones del uso compartido de los datos de ubicación"</string>
+    <string name="data_sharing_updates_title" msgid="7996933386875213859">"Actualizaciones de los datos compartidos de ubicación"</string>
     <string name="data_sharing_updates_summary" msgid="764113985772233889">"Revisa las apps que cambiaron la forma en que comparten tus datos de ubicación"</string>
     <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"Estas apps cambiaron la forma en que podrían compartir tus datos de ubicación. Es posible que no los hayan compartido antes o que ahora los compartan con fines publicitarios o de marketing."</string>
-    <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Los desarrolladores de estas apps brindaron información sobre sus prácticas de uso compartido de datos a una tienda de aplicaciones. Podrían actualizarla con el tiempo.\n\nLas prácticas de uso compartido de datos pueden variar según la versión de la app, el uso, la región y la edad."</string>
-    <string name="learn_about_data_sharing" msgid="4200480587079488045">"Más información sobre el uso compartido de datos"</string>
+    <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Los desarrolladores de estas apps brindaron información a una tienda de aplicaciones sobre sus formas de compartir datos. Podrían actualizarla con el tiempo.\n\nLas formas de compartir datos pueden variar según la versión de la app, el uso, la región y la edad."</string>
+    <string name="learn_about_data_sharing" msgid="4200480587079488045">"Más información sobre cómo se comparten los datos"</string>
     <string name="shares_location_with_third_parties" msgid="2278051743742057767">"Tus datos de ubicación ahora se comparten con terceros"</string>
     <string name="shares_location_with_third_parties_for_advertising" msgid="1918588064014480513">"Tus datos de ubicación ahora se comparten con terceros para publicidad o marketing"</string>
     <string name="updated_in_last_days" msgid="8371811947153042322">"{count,plural, =0{Se actualizó en el último día}=1{Se actualizó en el último día}many{Se actualizó hace # de días}other{Se actualizó hace # días}}"</string>

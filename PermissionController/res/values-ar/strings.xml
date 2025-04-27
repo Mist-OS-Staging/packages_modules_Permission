@@ -645,7 +645,7 @@
     <string name="permission_rationale_data_sharing_source_message" msgid="8330794595417986883">"‏قدَّم المطوّر معلومات إلى "<annotation id="link"><annotation id="install_source" example="App Store">"%1$s"</annotation></annotation>" عن كيفية مشاركة هذا التطبيق للبيانات. يمكن أنّ يعدّل المطوّر هذه المعلومات بمرور الوقت."</string>
     <string name="permission_rationale_location_purpose_title" msgid="5115877143670012618">"قد يشارك التطبيق بيانات الموقع الجغرافي من أجل:"</string>
     <string name="permission_rationale_permission_data_sharing_varies_title" msgid="9103718980919908316">"اختلاف مشاركة البيانات"</string>
-    <string name="permission_rationale_data_sharing_varies_message" msgid="4224469559084489222">"قد تختلف الممارسات المتعلقة بالبيانات حسب إصدار تطبيقك وآلية استخدامك له ومنطقتك وعمرك. "<annotation id="link">"مزيد من المعلومات عن مشاركة البيانات"</annotation></string>
+    <string name="permission_rationale_data_sharing_varies_message" msgid="4224469559084489222">"قد تختلف الممارسات المتعلقة بالبيانات حسب إصدار تطبيقك وطريقة استخدامك له ومنطقتك وعمرك. "<annotation id="link">"مزيد من المعلومات عن مشاركة البيانات"</annotation></string>
     <string name="permission_rationale_data_sharing_varies_message_without_link" msgid="4912763761399025094">"قد تختلف الممارسات المتعلقة بالبيانات حسب إصدار تطبيقك وآلية استخدامك له ومنطقتك وعمرك."</string>
     <string name="permission_rationale_location_settings_title" msgid="7204145004850190953">"بيانات موقعك الجغرافي"</string>
     <string name="permission_rationale_permission_settings_message" msgid="631286040979660267">"يمكنك تغيير أذونات هذا التطبيق في "<annotation id="link">"إعدادات الخصوصية"</annotation>"."</string>

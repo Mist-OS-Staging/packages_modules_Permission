@@ -25,7 +25,7 @@
     <string name="fingerprint_unlock_title_for_work" msgid="6343690273672384918">"Hatz-marka lanerako"</string>
     <string name="fingerprint_unlock_title_for_private_profile" msgid="9004513575240235691"></string>
     <string name="fingerprint_unlock_search_terms" msgid="688405183240088603">"Hatz-marka, hatza, hatz-marka gehitu"</string>
-    <string name="wear_unlock_title" msgid="1613730442896319515">"Ikusi"</string>
+    <string name="wear_unlock_title" msgid="1613730442896319515">"Erlojua"</string>
     <string name="wear_unlock_title_for_work" msgid="3103157953371670280">"Erlojua lanerako"</string>
     <string name="wear_unlock_title_for_private_profile" msgid="927318621331822758"></string>
     <string name="wear_unlock_search_terms" msgid="3769797118448924263">"Erlojua, Erloju bidez desblokeatzea"</string>
