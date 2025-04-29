@@ -77,6 +77,14 @@ filegroup {
     srcs: ["jarjar-rules.txt"],
 }
 
+android_library_import {
+    name: "device-state-schema-for-permission-controller",
+    aars: ["libs/appfunctions_schema_androidx_archive.aar"],
+    apex_available: [
+        "com.android.permission",
+    ],
+}
+
 android_library {
     name: "PermissionController-lib",
     sdk_version: "system_current",
@@ -100,7 +108,7 @@ android_library {
         "android.car-stubs",
         "safety-center-annotations",
     ],
-
+    optional_uses_libs: ["com.android.extensions.appfunctions"],
     static_libs: [
         "permissioncontroller-protos",
         "iconloader_sc_mainline_prod",
@@ -165,6 +173,9 @@ android_library {
         "android.content.pm.flags-aconfig-java-export",
         "android.os.flags-aconfig-java-export",
         "wear-permission-components",
+        "androidx.appsearch_appsearch",
+        "androidx.appsearch_appsearch-builtin-types",
+        "device-state-schema-for-permission-controller",
     ],
 
     lint: {
@@ -194,6 +205,9 @@ android_app {
     use_resource_processor: true,
     rename_resources_package: false,
     privapp_allowlist: ":privapp_allowlist_com.android.permissioncontroller.xml",
+    flags_packages: [
+        "com.android.permission.flags-aconfig",
+    ],
 
     static_libs: ["PermissionController-lib"],
 
