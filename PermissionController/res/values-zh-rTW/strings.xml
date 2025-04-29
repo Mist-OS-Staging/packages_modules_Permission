@@ -489,7 +489,7 @@
     <string name="permgroupupgraderequestdetail_nearby_devices" msgid="6877531270654738614">"要允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;尋找、連結及判斷附近裝置的相對位置嗎？"<annotation id="link">"請前往「設定」授予權限。"</annotation></string>
     <string name="permgrouprequest_fineupgrade" msgid="2334242928821697672">"要將「<xliff:g id="APP_NAME">&lt;b&gt;%1$s&lt;/b&gt;</xliff:g>」可以存取的定位資訊從「大概位置」改為「精確位置」嗎？"</string>
     <string name="permgrouprequest_device_aware_fineupgrade" msgid="4453775952305587571">"要將「<xliff:g id="APP_NAME">&lt;b&gt;%1$s&lt;/b&gt;</xliff:g>」在「<xliff:g id="DEVICE_NAME">%2$s</xliff:g>」&lt;b&gt;&lt;/b&gt;的位置資訊存取權從大概變更為精確嗎？"</string>
-    <string name="permgrouprequest_coarselocation" msgid="7244605063736425232">"要允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;存取這部裝置的大概位置資訊嗎？"</string>
+    <string name="permgrouprequest_coarselocation" msgid="7244605063736425232">"要允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;存取這部裝置的大概位置嗎？"</string>
     <string name="permgrouprequest_device_aware_coarselocation" msgid="8367540370912066757">"要允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;存取「<xliff:g id="DEVICE_NAME">%2$s</xliff:g>」&lt;b&gt;&lt;/b&gt;的大概位置資訊嗎？"</string>
     <string name="permgrouprequest_finelocation_imagetext" msgid="1313062433398914334">"精確"</string>
     <string name="permgrouprequest_coarselocation_imagetext" msgid="8650605041483025297">"大概"</string>
