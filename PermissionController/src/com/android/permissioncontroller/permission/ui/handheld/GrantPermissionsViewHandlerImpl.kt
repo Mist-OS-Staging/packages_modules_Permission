@@ -210,8 +210,7 @@ class GrantPermissionsViewHandlerImpl(
             } else {
                 R.layout.grant_permissions
             }
-        val rootView =
-            LayoutInflater.from(mActivity).inflate(layoutResource, null) as ViewGroup
+        val rootView = LayoutInflater.from(mActivity).inflate(layoutResource, null) as ViewGroup
         this.rootView = rootView
 
         // Uses the vertical gravity of the PermissionGrantSingleton style to position the window

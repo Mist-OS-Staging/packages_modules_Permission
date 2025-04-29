@@ -47,7 +47,7 @@ import com.android.settingslib.widget.SettingsThemeHelper
 class PermissionRationaleViewHandlerImpl(
     private val mActivity: Activity,
     private val resultListener: PermissionRationaleViewHandler.ResultListener,
-    private val shouldShowSettingsSection: Boolean
+    private val shouldShowSettingsSection: Boolean,
 ) : PermissionRationaleViewHandler, OnClickListener {
 
     private var groupName: String? = null
@@ -95,7 +95,7 @@ class PermissionRationaleViewHandlerImpl(
         purposeTitle: CharSequence,
         purposeMessage: CharSequence,
         learnMoreMessage: CharSequence,
-        settingsMessage: CharSequence
+        settingsMessage: CharSequence,
     ) {
         this.groupName = groupName
         this.title = title
@@ -129,14 +129,13 @@ class PermissionRationaleViewHandlerImpl(
     }
 
     override fun createView(): View {
-        val layoutResource = if (SettingsThemeHelper.isExpressiveTheme(mActivity)) {
-            R.layout.permission_rationale_expressive
-        } else {
-            R.layout.permission_rationale
-        }
-
-        val rootView =
-            LayoutInflater.from(mActivity).inflate(layoutResource, null) as ViewGroup
+        val layoutResource =
+            if (SettingsThemeHelper.isExpressiveTheme(mActivity)) {
+                R.layout.permission_rationale_expressive
+            } else {
+                R.layout.permission_rationale
+            }
+        val rootView = LayoutInflater.from(mActivity).inflate(layoutResource, null) as ViewGroup
 
         // Uses the vertical gravity of the PermissionGrantSingleton style to position the window
         val gravity =
@@ -172,7 +171,8 @@ class PermissionRationaleViewHandlerImpl(
                 setOnClickListener(this@PermissionRationaleViewHandlerImpl)
 
                 if (!SettingsThemeHelper.isExpressiveTheme(mActivity)) {
-                    // Load the text color from the activity theme rather than the Material Design theme
+                    // Load the text color from the activity theme rather than the Material Design
+                    // theme
                     val textColor =
                         getColorStateListForAttr(mActivity, android.R.attr.textColorPrimary)!!
                     setTextColor(textColor)
