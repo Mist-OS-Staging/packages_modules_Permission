@@ -642,6 +642,17 @@
             </intent-filter>
         </activity>
 
+        <service
+            android:name="com.android.permissioncontroller.permission.service.DeviceStateAppFunctionService"
+            android:permission="android.permission.BIND_APP_FUNCTION_SERVICE"
+            android:exported="true"
+            android:featureFlag="com.android.permission.flags.app_function_service_enabled">
+            <property android:name="android.app.appfunctions" android:value="appfunctions.xml"/>
+            <intent-filter>
+                <action android:name="android.app.appfunctions.AppFunctionService"/>
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>
