@@ -21,11 +21,11 @@
         android:key="subpage_brand_chip"
         app:selectable="false"/>
 
-    <com.android.settingslib.widget.UntitledPreferenceCategory
+    <com.android.settingslib.widget.SettingsTitlelessPreferenceCategory
         android:key="subpage_issue_group"
         app:selectable="false" />
 
-    <com.android.settingslib.widget.UntitledPreferenceCategory
+    <com.android.settingslib.widget.SettingsTitlelessPreferenceCategory
         android:key="subpage_generic_entry_group"
         app:selectable="false" />
 
@@ -58,7 +58,7 @@
             android:title="@string/location_settings"
           android:summary="@string/location_settings_subtitle"/>
 
-        <com.android.settingslib.widget.UntitledPreferenceCategory
+        <com.android.settingslib.widget.SettingsTitlelessPreferenceCategory
             android:key="subpage_controls_extra_entry_group"
             app:selectable="false" />
     </com.android.permissioncontroller.safetycenter.ui.ComparablePreferenceCategory>
