@@ -50,6 +50,7 @@ import com.android.permissioncontroller.permission.utils.PermissionMapping
 import com.android.permissioncontroller.permission.utils.Utils
 import com.android.role.controller.model.Roles
 import com.android.settingslib.widget.ExpressiveDesignEnabledProvider
+import com.android.settingslib.widget.SettingsThemeHelper
 
 @Keep
 @RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
@@ -97,7 +98,7 @@ class EnhancedConfirmationDialogActivity : FragmentActivity(), ExpressiveDesignE
             return
         }
 
-        if (isExpressiveDesignEnabled()) {
+        if (SettingsThemeHelper.isExpressiveTheme(this)) {
             setTheme(R.style.Theme_EnhancedConfirmationDialogActivityExpressive_FilterTouches)
         } else {
             setTheme(R.style.Theme_EnhancedConfirmationDialog_FilterTouches)
@@ -310,7 +311,7 @@ class EnhancedConfirmationDialogActivity : FragmentActivity(), ExpressiveDesignE
         ): View =
             LayoutInflater.from(context)
                 .inflate(
-                    if (dialogActivity.isExpressiveDesignEnabled()) {
+                    if (SettingsThemeHelper.isExpressiveTheme(dialogActivity)) {
                         R.layout.enhanced_confirmation_dialog_expressive
                     } else {
                         R.layout.enhanced_confirmation_dialog
