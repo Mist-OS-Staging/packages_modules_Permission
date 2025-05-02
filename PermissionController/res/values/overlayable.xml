@@ -739,6 +739,8 @@
             <item type="style" name="TextAppearance.SafetyCenter.ActionButton" />
             <item type="style" name="TextAppearance.SafetyCenter.ActionButton.Secondary" />
             <item type="style" name="TextAppearance.SafetyCenter.BrandChip" />
+
+            <item type="bool" name="config_enableExpressiveDesignInSafetyCenter"/>
         </policy>
     </overlayable>
 

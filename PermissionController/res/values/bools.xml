@@ -27,4 +27,5 @@
     <bool name="config_enableExpressiveDesignInRequestPermissionDialog">true</bool>
     <!-- config for opting out of expressive enhanced confirmation dialogs -->
     <bool name="config_enableExpressiveDesignInEnhancedConfirmationDialog">true</bool>
+    <bool name="config_enableExpressiveDesignInSafetyCenter">true</bool>
 </resources>
