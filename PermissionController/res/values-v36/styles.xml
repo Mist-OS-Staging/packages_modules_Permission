@@ -17,9 +17,8 @@
 <resources>
     <style name="Widget.Expressive.PlatformDialogButtonBar"
            parent="@android:style/DeviceDefault.ButtonBar.AlertDialog">
-        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingTop">28dp</item>
         <item name="android:paddingBottom">12dp</item>
-        <item name="android:paddingRight">12dp</item>
     </style>
 
     <!--
@@ -43,13 +42,15 @@
     </style>
 
     <style name="Widget.Expressive.PlatformDialogButton.Filled">
+        <item name="android:layout_marginEnd">@dimen/settingslib_expressive_space_extrasmall6</item>
         <item name="android:background">@drawable/settingslib_expressive_button_background_filled</item>
         <item name="android:textColor">@color/settingslib_materialColorOnPrimary</item>
     </style>
 
     <style name="Widget.Expressive.PlatformDialogButton.Outline">
+        <item name="android:layout_marginEnd">@dimen/settingslib_expressive_space_extrasmall4</item>
         <item name="android:background">@drawable/settingslib_expressive_button_background_outline</item>
-        <item name="android:textColor">@color/settingslib_materialColorOnPrimary</item>
+        <item name="android:textColor">@color/settingslib_materialColorPrimary</item>
     </style>
 
     <!-- START EXPRESSIVE PERMISSION GRANT DIALOG -->
@@ -212,7 +213,8 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:padding">@dimen/settingslib_expressive_space_small4</item>
+        <item name="android:paddingTop">@dimen/settingslib_expressive_space_small4</item>
+        <item name="android:paddingHorizontal">@dimen/settingslib_expressive_space_small4</item>
     </style>
 
     <style name="EnhancedConfirmationDialogHeaderExpressive">
