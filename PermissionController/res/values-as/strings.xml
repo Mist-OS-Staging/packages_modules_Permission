@@ -679,7 +679,7 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"প্ৰতিবন্ধিত ছেটিং"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"আপোনাৰ সুৰক্ষাৰ বাবে, এই ছেটিংটো বৰ্তমান উপলব্ধ নহয়।"</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"কলৰ সময়ত কাৰ্য সম্পূৰ্ণ কৰিব নোৱাৰি"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"আপোনাৰ ডিভাইচ আৰু ডেটা সুৰক্ষিত কৰিবলৈ এই ছেটিংটো অৱৰোধ কৰা হৈছে।<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"আপোনাৰ ডিভাইচ আৰু ডেটা সুৰক্ষিত কৰিবলৈ এই ছেটিং অৱৰোধ কৰা হৈছে।<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
 
 </xliff:g>স্কেমাৰসকলে আপোনাক এটা নতুন উৎসৰ পৰা অজ্ঞাত এপ্‌সমূহ ইনষ্টল কৰিবলৈ কৈ ক্ষতিকাৰক এপ্‌সমূহ ইনষ্টল কৰিবলৈ চেষ্টা কৰিব পাৰে।"</string>

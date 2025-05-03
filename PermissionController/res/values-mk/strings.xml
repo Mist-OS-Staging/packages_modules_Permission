@@ -679,7 +679,7 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"Ограничена поставка"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"За ваша безбедност, поставкава е недостапна во моментов."</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"Дејството не може да се заврши во тек на повик"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g> Поставкава е блокирана за да ги заштити вашиот уред и податоци."</string>
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"Поставкава е блокирана за да ги заштити вашиот уред и податоци.<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
 
 </xliff:g>Измамниците може да се обидат да инсталираат штетни апликации барајќи од вас да инсталирате непознати апликации од нов извор."</string>

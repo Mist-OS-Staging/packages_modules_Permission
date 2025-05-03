@@ -682,7 +682,7 @@
     <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"Mipangilio hii imezuiwa ili kulinda kifaa na data yako.<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
 
-</xliff:g>Walaghai wanaweza kujaribu kuweka programu hatari kwenye kifaa chako kwa kukuomba uweke programu zisizojulikana kutoka chanzo kigeni."</string>
+</xliff:g>Walaghai wanaweza kujaribu kuweka programu hatari kwenye kifaa chako kwa kukuomba uweke programu zisizojulikana kutoka chanzo geni."</string>
     <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
 
 </xliff:g>Walaghai wanaweza kujaribu kudhibiti kifaa chako kwa kukuomba uruhusu programu ifikie vipengele vya ufikivu."</string>
