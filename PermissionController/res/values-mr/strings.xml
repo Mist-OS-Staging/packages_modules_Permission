@@ -102,7 +102,7 @@
     <string name="permission_summary_disabled_by_policy_background_only" msgid="221995005556362660">"धोरणामुळे बॅकग्राउंड अ‍ॅक्सेस बंद केला आहे"</string>
     <string name="permission_summary_enabled_by_policy_background_only" msgid="8287675974767104279">"धोरणामुळे बॅकग्राउंड अ‍ॅक्सेस सुरू केला आहे"</string>
     <string name="permission_summary_enabled_by_policy_foreground_only" msgid="3844582916889767831">"धोरणामुळे फोरग्राउंड अ‍ॅक्सेस सुरू केला आहे"</string>
-    <string name="permission_summary_enforced_by_admin" msgid="822702574117248700">"प्रशासकाने नियंत्रित केलेले"</string>
+    <string name="permission_summary_enforced_by_admin" msgid="822702574117248700">"ॲडमिनद्वारे नियंत्रित"</string>
     <string name="permission_summary_disabled_by_admin_background_only" msgid="3127091456731845646">"प्रशासकाने बॅकग्राउंड अ‍ॅक्सेस बंद केला आहे"</string>
     <string name="permission_summary_enabled_by_admin_background_only" msgid="9132423838440275757">"प्रशासकाने बॅकग्राउंड अ‍ॅक्सेस सुरू केला आहे"</string>
     <string name="permission_summary_enabled_by_admin_foreground_only" msgid="1298432715610745358">"प्रशासकाने फोरग्राउंड अ‍ॅक्सेस सुरू केला आहे"</string>

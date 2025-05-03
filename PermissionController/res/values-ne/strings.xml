@@ -452,7 +452,7 @@
     <string name="special_app_access" msgid="5019319067120213797">"एपसम्बन्धी विशेष पहुँच"</string>
     <string name="no_special_app_access" msgid="6950277571805106247">"एपसम्बन्धी कुनै विशेष पहुँच छैन"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"कुनै पनि एप छैन"</string>
-    <string name="home_missing_work_profile_support" msgid="1756855847669387977">"कार्य प्रोफाइल समर्थन गर्दैन"</string>
+    <string name="home_missing_work_profile_support" msgid="1756855847669387977">"वर्क प्रोफाइल समर्थन गर्दैन"</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"टिपोट: तपाईंले आफ्नो यन्त्र पुनः सुरु गर्नुभयो र त्यसमा स्क्रिन लक सेट गरिएको छ भने तपाईंले आफ्नो डिभाइस अनलक नगरेसम्म यो एप सुरु हुन सक्दैन।"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"सहायकले तपाईंको स्क्रिनमा देखिने वा अनुप्रयोगभित्रबाट पहुँच राख्न सकिने जानकारीलगायत तपाईंको प्रणालीमा प्रयोगमा रहेका एपसम्बन्धी जानकारी पढ्न सक्ने छ।"</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"डिबग प्रक्रियासम्बन्धी डेटा सेयर गर्नुहोस्"</string>
