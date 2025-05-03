@@ -84,8 +84,8 @@
     <string name="storage_supergroup_warning_allow" msgid="103093462784523190">"此应用专为旧版 Android 系统打造。如果您同意授予这项权限，即会允许访问所有存储空间（包括照片、视频、音乐、音频和其他文件）。"</string>
     <string name="storage_supergroup_warning_deny" msgid="6420765672683284347">"此应用专为旧版 Android 系统打造。如果您拒绝授予这项权限，则会禁止访问所有存储空间（包括照片、视频、音乐、音频和其他文件）。"</string>
     <string name="default_permission_description" msgid="4624464917726285203">"执行未知操作"</string>
-    <string name="app_permissions_group_summary" msgid="8788419008958284002">"已授权 <xliff:g id="COUNT_0">%1$d</xliff:g> 个应用（共 <xliff:g id="COUNT_1">%2$d</xliff:g> 个）"</string>
-    <string name="app_permissions_group_summary2" msgid="4329922444840521150">"已授权 <xliff:g id="COUNT_0">%1$d</xliff:g> 个应用/共 <xliff:g id="COUNT_1">%2$d</xliff:g> 个"</string>
+    <string name="app_permissions_group_summary" msgid="8788419008958284002">"已授权给 <xliff:g id="COUNT_0">%1$d</xliff:g> 个应用（共 <xliff:g id="COUNT_1">%2$d</xliff:g> 个）"</string>
+    <string name="app_permissions_group_summary2" msgid="4329922444840521150">"已授权给 <xliff:g id="COUNT_0">%1$d</xliff:g> 个应用/共 <xliff:g id="COUNT_1">%2$d</xliff:g> 个"</string>
     <string name="menu_show_system" msgid="4254021607027872504">"显示系统应用"</string>
     <string name="menu_hide_system" msgid="3855390843744028465">"隐藏系统应用"</string>
     <string name="menu_show_7_days_data" msgid="8979611198508523706">"显示过去 7 天内的权限使用情况"</string>
@@ -587,7 +587,7 @@
     <string name="safety_privacy_qs_tile_subtitle" msgid="3621544532041936749">"查看状态"</string>
     <string name="privacy_controls_qs" msgid="5780144882040591169">"您的隐私控制项"</string>
     <string name="security_settings_button_label_qs" msgid="8280343822465962330">"更多设置"</string>
-    <string name="camera_toggle_label_qs" msgid="3880261453066157285">"摄像头使用权限"</string>
+    <string name="camera_toggle_label_qs" msgid="3880261453066157285">"相机权限"</string>
     <string name="microphone_toggle_label_qs" msgid="8132912469813396552">"麦克风使用权限"</string>
     <string name="permissions_removed_qs" msgid="8957319130625294572">"已移除权限"</string>
     <string name="camera_usage_qs" msgid="4394233566086665994">"查看近期相机使用情况"</string>
@@ -629,8 +629,8 @@
     <string name="safety_center_background_location_access_revoked" msgid="6972274943343442213">"访问权限已更改"</string>
     <string name="safety_center_view_recent_location_access" msgid="3524391299490678243">"查看近期位置信息使用情况"</string>
     <string name="privacy_controls_title" msgid="7605929972256835199">"隐私控制"</string>
-    <string name="camera_toggle_title" msgid="1251201397431837666">"摄像头使用权限"</string>
-    <string name="mic_toggle_title" msgid="2649991093496110162">"麦克风使用权限"</string>
+    <string name="camera_toggle_title" msgid="1251201397431837666">"相机权限"</string>
+    <string name="mic_toggle_title" msgid="2649991093496110162">"麦克风权限"</string>
     <string name="perm_toggle_description" msgid="7801326363741451379">"针对应用和服务"</string>
     <string name="mic_toggle_description" msgid="9163104307990677157">"会影响应用和服务。如果您关闭此设置，那么当您拨打紧急电话号码时，系统可能仍会分享麦克风数据。"</string>
     <string name="location_settings_subtitle" msgid="2328360561197430695">"查看能够访问位置信息的应用和服务"</string>

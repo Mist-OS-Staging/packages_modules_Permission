@@ -22,9 +22,43 @@
         <!-- These two attributes are required when using Toolbar as ActionBar. -->
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
+        <item name="android:alertDialogTheme">@style/Theme.Expressive.Dialog.Alert.DayNight</item>
     </style>
 
     <style name="Theme.PermissionController.Settings.Expressive.FilterTouches">
         <item name="android:filterTouchesWhenObscured">true</item>
     </style>
+
+    <!--
+      ~ This is our implementation of expressive dialog theme for the platform AlertDialog.
+      ~ The styles are intended to be similar to the Theme.AlertDialog.SettingsLib.Expressive
+      ~ from SettingsLib:
+      ~ frameworks/base/packages/SettingsLib/SettingsTheme/res/values-v36/themes_expressive.xml
+    -->
+    <style name="Theme.Expressive.Dialog.Alert.DayNight" parent="@style/Theme.DeviceDefault.Dialog.Alert.DayNight">
+        <item name="android:colorAccent">@color/settingslib_materialColorPrimary</item>
+        <item name="android:colorBackground">@color/settingslib_materialColorSurfaceContainerHigh</item>
+        <item name="android:windowTitleStyle">@style/Widget.SettingsLib.DialogWindowTitle</item>
+        <item name="android:dialogPreferredPadding">@dimen/settingslib_expressive_space_small4</item>
+        <item name="android:buttonBarStyle">@style/Widget.Expressive.PlatformDialogButtonBar</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/Widget.Expressive.PlatformDialogButton.Filled</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/Widget.Expressive.PlatformDialogButton.Outline</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/Widget.Expressive.PlatformDialogButton</item>
+    </style>
+
+    <!-- START EXPRESSIVE ENHANCED CONFIRMATION DIALOG -->
+
+    <!-- This is not overlayable -->
+    <style name="Theme.EnhancedConfirmationDialogActivityExpressive.FilterTouches">
+        <item name="android:filterTouchesWhenObscured">true</item>
+    </style>
+
+    <style name="Theme.EnhancedConfirmationDialogActivityExpressive"
+           parent="@style/Theme.DeviceDefault.Dialog.NoActionBar.DayNight">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:alertDialogTheme">@style/Theme.Expressive.Dialog.Alert.DayNight</item>
+    </style>
+
+    <!-- END EXPRESSIVE ENHANCED CONFIRMATION DIALOG -->
+
 </resources>

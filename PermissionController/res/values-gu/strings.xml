@@ -102,7 +102,7 @@
     <string name="permission_summary_disabled_by_policy_background_only" msgid="221995005556362660">"પૉલિસી દ્વારા બૅકગ્રાઉન્ડ ઍક્સેસને બંધ કરવામાં આવ્યો છે"</string>
     <string name="permission_summary_enabled_by_policy_background_only" msgid="8287675974767104279">"પૉલિસી દ્વારા બૅકગ્રાઉન્ડ ઍક્સેસને ચાલુ કરવામાં આવ્યો છે"</string>
     <string name="permission_summary_enabled_by_policy_foreground_only" msgid="3844582916889767831">"પૉલિસી દ્વારા ફૉરગ્રાઉન્ડ ઍક્સેસને ચાલુ કરવામાં આવ્યો છે"</string>
-    <string name="permission_summary_enforced_by_admin" msgid="822702574117248700">"વ્યવસ્થાપક દ્વારા નિયંત્રિત"</string>
+    <string name="permission_summary_enforced_by_admin" msgid="822702574117248700">"ઍડમિન દ્વારા નિયંત્રિત"</string>
     <string name="permission_summary_disabled_by_admin_background_only" msgid="3127091456731845646">"વ્યવસ્થાપકે બૅકગ્રાઉન્ડ ઍક્સેસ બંધ કર્યો છે"</string>
     <string name="permission_summary_enabled_by_admin_background_only" msgid="9132423838440275757">"વ્યવસ્થાપકે બૅકગ્રાઉન્ડ ઍક્સેસ ચાલુ કર્યો છે"</string>
     <string name="permission_summary_enabled_by_admin_foreground_only" msgid="1298432715610745358">"વ્યવસ્થાપકે ફૉરગ્રાઉન્ડ ઍક્સેસ ચાલુ કર્યો છે"</string>
@@ -503,7 +503,7 @@
     <string name="permgrouprequest_storage_pre_q" msgid="168130651144569428">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ને આ ડિવાઇસ પર &lt;b&gt;ફોટા, વીડિયો, મ્યુઝિક, ઑડિયો અને અન્ય ફાઇલો&lt;b&gt;ના ઍક્સેસની મંજૂરી આપીએ?"</string>
     <string name="permgrouprequest_read_media_aural" msgid="2593365397347577812">"શું &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ને આ ડિવાઇસ પરની મ્યુઝિક અને ઑડિયો ફાઇલો ઍક્સેસ કરવાની મંજૂરી આપીએ?"</string>
     <string name="permgrouprequest_device_aware_read_media_aural" msgid="7927884506238101064">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ને &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt; પર મ્યુઝિક અને ઑડિયો ઍક્સેસ કરવાની મંજૂરી આપીએ?"</string>
-    <string name="permgrouprequest_read_media_visual" msgid="5548780620779729975">"શું &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ને આ ડિવાઇસ પરના ફોટા અને વીડિયો ઍક્સેસ કરવાની મંજૂરી આપીએ?"</string>
+    <string name="permgrouprequest_read_media_visual" msgid="5548780620779729975">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ને આ ડિવાઇસ પરના ફોટા અને વીડિયો ઍક્સેસ કરવાની મંજૂરી આપીએ?"</string>
     <string name="permgrouprequest_device_aware_read_media_visual" msgid="3122576538319059333">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ને &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt; પર ફોટા અને વીડિયો ઍક્સેસ કરવાની મંજૂરી આપીએ?"</string>
     <string name="permgrouprequest_more_photos" msgid="128933814654231321">"શું &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ને આ ડિવાઇસ પરના વધુ ફોટા અને વીડિયો ઍક્સેસ કરવાની મંજૂરી આપીએ?"</string>
     <string name="permgrouprequest_device_aware_more_photos" msgid="1703469013613723053">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ને &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt; પર વધુ ફોટા અને વીડિયો ઍક્સેસ કરવાની મંજૂરી આપીએ?"</string>
@@ -633,7 +633,7 @@
     <string name="mic_toggle_title" msgid="2649991093496110162">"માઇક્રોફોનનો ઍક્સેસ"</string>
     <string name="perm_toggle_description" msgid="7801326363741451379">"ઍપ અને સેવાઓ માટે"</string>
     <string name="mic_toggle_description" msgid="9163104307990677157">"ઍપ અને સેવાઓ માટે. આ સેટિંગ બંધ હોવા છતાં પણ, જ્યારે તમે ઇમર્જન્સી નંબર પર કૉલ કરો ત્યારે કદાચ માઇક્રોફોનનો ડેટા શેર કરવામાં આવી શકે."</string>
-    <string name="location_settings_subtitle" msgid="2328360561197430695">"લોકેશનનો ઍક્સેસ ધરાવતી ઍપ અને તેની સેવાઓ જુઓ"</string>
+    <string name="location_settings_subtitle" msgid="2328360561197430695">"લોકેશનનો ઍક્સેસ ધરાવતી ઍપ અને સેવાઓ જુઓ"</string>
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"ક્લિપબોર્ડનો ઍક્સેસ બતાવો"</string>
     <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"જ્યારે ઍપ તમે કૉપિ કરેલી ટેક્સ્ટ, છબીઓ કે અન્ય કન્ટેન્ટનો ઍક્સેસ કરે, ત્યારે મેસેજ બતાવો"</string>
     <string name="show_password_title" msgid="2877269286984684659">"પાસવર્ડ બતાવો"</string>
@@ -678,7 +678,7 @@
     <string name="allow_restricted_settings" msgid="8073000189478396881">"પ્રતિબંધિત સેટિંગને મંજૂરી આપો"</string>
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"પ્રતિબંધિત સેટિંગ"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"તમારી સુરક્ષા માટે, આ સેટિંગ હાલમાં ઉપલબ્ધ નથી."</string>
-    <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"કૉલ દરમિયાન ક્રિયા પૂર્ણ કરી શકાતી નથી"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"કૉલ દરમિયાન ઍક્શન પૂર્ણ કરી શકાતી નથી"</string>
     <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"તમારા ડિવાઇસ અને ડેટાને સુરક્ષિત રાખવા માટે આ સેટિંગ બ્લૉક કરવામાં આવ્યું છે.<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
 

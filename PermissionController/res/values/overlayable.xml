@@ -183,6 +183,12 @@
             <item type="style" name="PermissionRationaleButtonContainerExpressive" />
             <item type="style" name="PermissionRationaleBackButtonExpressive" />
 
+            <item type="style" name="EnhancedConfirmationDialogExpressive" />
+            <item type="style" name="EnhancedConfirmationDialogHeaderExpressive" />
+            <item type="style" name="EnhancedConfirmationDialogIconExpressive" />
+            <item type="style" name="EnhancedConfirmationDialogTitleExpressive" />
+            <item type="style" name="EnhancedConfirmationDialogDescExpressive" />
+            <item type="style" name="Theme.EnhancedConfirmationDialogActivityExpressive" />
 
             <!-- END EXPRESSIVE PERMISSION DIALOG -->
 
@@ -521,6 +527,8 @@
             <item type="bool" name="config_enableExpressiveDesignInPermissionSettings"/>
             <!-- config for opting out of expressive permission dialogs -->
             <item type="bool" name="config_enableExpressiveDesignInRequestPermissionDialog"/>
+            <!-- config for opting out of expressive enhanced confirmation dialogs -->
+            <item type="bool" name="config_enableExpressiveDesignInEnhancedConfirmationDialog"/>
             <!-- END EXPRESSIVE DESIGN CONFIGS -->
 
             <!-- START EXPRESSIVE DESIGN ATTRIBUTES -->
@@ -731,6 +739,8 @@
             <item type="style" name="TextAppearance.SafetyCenter.ActionButton" />
             <item type="style" name="TextAppearance.SafetyCenter.ActionButton.Secondary" />
             <item type="style" name="TextAppearance.SafetyCenter.BrandChip" />
+
+            <item type="bool" name="config_enableExpressiveDesignInSafetyCenter"/>
         </policy>
     </overlayable>
 

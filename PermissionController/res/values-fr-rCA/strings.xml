@@ -659,7 +659,7 @@
     <string name="app_permission_rationale_message" msgid="8511466916077100713">"Sécurité des données"</string>
     <string name="app_location_permission_rationale_title" msgid="925420340572401350">"Les données de localisation peuvent être partagées"</string>
     <string name="app_location_permission_rationale_subtitle" msgid="6986985722752868692">"Cette appli indique qu\'elle peut partager vos données de localisation avec des tiers"</string>
-    <string name="data_sharing_updates_title" msgid="7996933386875213859">"Mises à jour des pratiques de partage des données pour la localisation"</string>
+    <string name="data_sharing_updates_title" msgid="7996933386875213859">"Mises à jour du partage des données pour la localisation"</string>
     <string name="data_sharing_updates_summary" msgid="764113985772233889">"Passez en revue les applis qui ont changé la façon dont elles peuvent partager vos données de localisation"</string>
     <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"Ces applis ont modifié la façon dont elles peuvent partager vos données de localisation. Elles peuvent ne pas les avoir partagées auparavant, ou peuvent maintenant les partager à des fins d\'annonces ou de marketing."</string>
     <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Les développeurs de ces applis ont fourni des renseignements sur leurs pratiques de partage des données à une boutique d\'applis. Ils peuvent les mettre à jour au fil du temps.\n\nLes pratiques de partage des données peuvent varier en fonction de la version de votre appli, de son utilisation, de votre région et de votre âge."</string>

@@ -662,7 +662,7 @@
     <string name="data_sharing_updates_title" msgid="7996933386875213859">"Masasisho ya kushiriki data ya mahali"</string>
     <string name="data_sharing_updates_summary" msgid="764113985772233889">"Kagua programu zilizobadilisha jinsi zinavyoweza kushiriki data ya mahali ulipo"</string>
     <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"Programu hizi zimebadilisha jinsi zinavyoweza kushiriki data ya mahali ulipo. Huenda zilikuwa haziishiriki hapo awali au sasa zinaweza kuishiriki kwa madhumuni ya utangazaji au uuzaji."</string>
-    <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Wasanidi wa programu hizi wametoa maelezo kuhusu mbinu zao za kushiriki data kwenye duka la programu. Wanaweza kuyasasisha kadiri muda unavyosonga.\n\nMbinu za kushiriki data zinaweza kutofautiana kulingana na toleo la programu, matumizi, eneo na umri wako."</string>
+    <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Wasanidi wa programu hizi wametoa maelezo kuhusu mbinu zao za kuruhusu ufikiaji wa data kwenye duka la programu. Wanaweza kuyasasisha kadiri muda unavyosonga.\n\nMbinu za kuruhusu ufikiaji wa data zinaweza kutofautiana kulingana na toleo la programu, matumizi, eneo na umri wako."</string>
     <string name="learn_about_data_sharing" msgid="4200480587079488045">"Pata maelezo kuhusu kushiriki data"</string>
     <string name="shares_location_with_third_parties" msgid="2278051743742057767">"Sasa data ya mahali ulipo inashirikiwa na wengine"</string>
     <string name="shares_location_with_third_parties_for_advertising" msgid="1918588064014480513">"Sasa data ya mahali ulipo inashirikiwa na wengine kwa madhumuni ya utangazaji au uuzaji"</string>
@@ -682,7 +682,7 @@
     <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"Mipangilio hii imezuiwa ili kulinda kifaa na data yako.<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
 
-</xliff:g>Walaghai wanaweza kujaribu kuweka programu hatari kwenye kifaa chako kwa kukuomba uweke programu zisizojulikana kutoka chanzo kigeni."</string>
+</xliff:g>Walaghai wanaweza kujaribu kuweka programu hatari kwenye kifaa chako kwa kukuomba uweke programu zisizojulikana kutoka chanzo geni."</string>
     <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
 
 </xliff:g>Walaghai wanaweza kujaribu kudhibiti kifaa chako kwa kukuomba uruhusu programu ifikie vipengele vya ufikivu."</string>

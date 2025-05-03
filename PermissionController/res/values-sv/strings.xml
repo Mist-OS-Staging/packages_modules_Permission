@@ -16,7 +16,7 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name" msgid="6098036489833144040">"Behörighetsansvarig"</string>
+    <string name="app_name" msgid="6098036489833144040">"Behörighetsinställning"</string>
     <string name="ok" msgid="1936281769725676272">"OK"</string>
     <string name="permission_search_keyword" msgid="1214451577494730543">"behörigheter"</string>
     <string name="cancel" msgid="8943320028373963831">"Avbryt"</string>

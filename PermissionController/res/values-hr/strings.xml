@@ -102,7 +102,7 @@
     <string name="permission_summary_disabled_by_policy_background_only" msgid="221995005556362660">"Pristup u pozadini onemogućen je pravilima"</string>
     <string name="permission_summary_enabled_by_policy_background_only" msgid="8287675974767104279">"Pristup u pozadini omogućen je pravilima"</string>
     <string name="permission_summary_enabled_by_policy_foreground_only" msgid="3844582916889767831">"Pristup u prednjem planu omogućen je pravilima"</string>
-    <string name="permission_summary_enforced_by_admin" msgid="822702574117248700">"Kontrolira administrator"</string>
+    <string name="permission_summary_enforced_by_admin" msgid="822702574117248700">"Upravlja administrator"</string>
     <string name="permission_summary_disabled_by_admin_background_only" msgid="3127091456731845646">"Pristup iz pozadine onemogućio je administrator"</string>
     <string name="permission_summary_enabled_by_admin_background_only" msgid="9132423838440275757">"Pristup iz pozadine omogućio je administrator"</string>
     <string name="permission_summary_enabled_by_admin_foreground_only" msgid="1298432715610745358">"Pristup iz prednjeg plana omogućio je administrator"</string>
