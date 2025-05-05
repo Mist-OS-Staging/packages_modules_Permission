@@ -202,6 +202,8 @@
           -->
         <permissions>
             <permission name="android.permission.PROVIDE_OWN_AUTOFILL_SUGGESTIONS" minSdkVersion="34" />
+            <permission name="android.permission.REPOSITION_SELF_WINDOWS"
+                featureFlag="com.android.window.flags.Flags.enableWindowRepositioningApi" />
         </permissions>
     </role>
 
