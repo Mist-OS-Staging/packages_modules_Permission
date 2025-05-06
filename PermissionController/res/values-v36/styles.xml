@@ -15,44 +15,6 @@
   -->
 
 <resources>
-    <style name="Widget.Expressive.PlatformDialogButtonBar"
-           parent="@android:style/DeviceDefault.ButtonBar.AlertDialog">
-        <item name="android:paddingTop">28dp</item>
-        <item name="android:paddingBottom">12dp</item>
-    </style>
-
-    <!--
-      ~ This is our implementation of expressive button for the platform AlertDialog.
-      ~ The styles are intended to be similar to the Widget.SettingsLib.DialogButton and
-      ~ Widget.SettingsLib.DialogButton.Filled from SettingsLib:
-      ~ frameworks/base/packages/SettingsLib/SettingsTheme/res/values-v36/styles_expressive.xml
-      -->
-    <style name="Widget.Expressive.PlatformDialogButton"
-           parent="@android:style/Widget.DeviceDefault.Button">
-        <item name="android:layout_marginTop">@dimen/settingslib_expressive_space_extrasmall4</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:minHeight">0dp</item>
-        <item name="android:minWidth">0dp</item>
-        <item name="android:paddingVertical">@dimen/settingslib_expressive_space_extrasmall5</item>
-        <item name="android:paddingHorizontal">@dimen/settingslib_expressive_space_small1</item>
-        <item name="android:stateListAnimator">@null</item>
-        <item name="android:textAllCaps">false</item>
-        <item name="android:textAppearance">@style/TextAppearance.SettingsLib.LabelLarge</item>
-        <item name="android:textColor">@color/settingslib_materialColorPrimary</item>
-    </style>
-
-    <style name="Widget.Expressive.PlatformDialogButton.Filled">
-        <item name="android:layout_marginEnd">@dimen/settingslib_expressive_space_extrasmall6</item>
-        <item name="android:background">@drawable/settingslib_expressive_button_background_filled</item>
-        <item name="android:textColor">@color/settingslib_materialColorOnPrimary</item>
-    </style>
-
-    <style name="Widget.Expressive.PlatformDialogButton.Outline">
-        <item name="android:layout_marginEnd">@dimen/settingslib_expressive_space_extrasmall4</item>
-        <item name="android:background">@drawable/settingslib_expressive_button_background_outline</item>
-        <item name="android:textColor">@color/settingslib_materialColorPrimary</item>
-    </style>
-
     <!-- START EXPRESSIVE PERMISSION GRANT DIALOG -->
 
     <style name="PermissionGrantTitleMessageExpressive"
