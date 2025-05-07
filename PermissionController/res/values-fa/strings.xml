@@ -39,7 +39,7 @@
     <string name="grant_dialog_button_allow_selected_photos" msgid="5497042471576153842">"انتخاب عکس و ویدیو"</string>
     <string name="grant_dialog_button_allow_more_selected_photos" msgid="5145657877588697709">"انتخاب موارد بیشتر"</string>
     <string name="grant_dialog_button_dont_select_more" msgid="6643552729129461268">"دیگر چیزی انتخاب نشود"</string>
-    <string name="grant_dialog_button_deny_anyway" msgid="7225905870668915151">"درهرصورت اجازه نیست"</string>
+    <string name="grant_dialog_button_deny_anyway" msgid="7225905870668915151">"به‌هرصورت اجازه ندادن"</string>
     <string name="grant_dialog_button_dismiss" msgid="1930399742250226393">"رد کردن"</string>
     <string name="current_permission_template" msgid="7452035392573329375">"<xliff:g id="CURRENT_PERMISSION_INDEX">%1$s</xliff:g> مجوز از <xliff:g id="PERMISSION_COUNT">%2$s</xliff:g> مجوز"</string>
     <string name="permission_warning_template" msgid="2247087781222679458">"‏به &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; این اجازه داده شود؟ <xliff:g id="ACTION">%2$s</xliff:g>"</string>

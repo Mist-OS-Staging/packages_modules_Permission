@@ -629,7 +629,7 @@
     <string name="safety_center_background_location_access_revoked" msgid="6972274943343442213">"تم تغيير إذن الوصول."</string>
     <string name="safety_center_view_recent_location_access" msgid="3524391299490678243">"عرض أحدث بيانات استخدام للموقع الجغرافي"</string>
     <string name="privacy_controls_title" msgid="7605929972256835199">"عناصر التحكّم في الخصوصية"</string>
-    <string name="camera_toggle_title" msgid="1251201397431837666">"الوصول إلى الكاميرا"</string>
+    <string name="camera_toggle_title" msgid="1251201397431837666">"الوصول للكاميرا"</string>
     <string name="mic_toggle_title" msgid="2649991093496110162">"الوصول إلى الميكروفون"</string>
     <string name="perm_toggle_description" msgid="7801326363741451379">"للتطبيقات والخدمات"</string>
     <string name="mic_toggle_description" msgid="9163104307990677157">"للتطبيقات والخدمات. إذا كان هذا الخيار غير مفعّل، قد تتم مشاركة بيانات الميكروفون عند الاتصال برقم طوارئ"</string>

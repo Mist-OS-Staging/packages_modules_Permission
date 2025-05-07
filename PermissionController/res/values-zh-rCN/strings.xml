@@ -524,8 +524,8 @@
     <string name="permgroupbackgroundrequest_camera" msgid="1274286575704213875">"要允许 &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; 拍摄照片和录制视频吗？"</string>
     <string name="permgroupbackgroundrequest_device_aware_camera" msgid="8533353179594971475">"要允许&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;在&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;上拍照片和录视频吗？"</string>
     <string name="permgroupbackgroundrequestdetail_camera" msgid="4458783509089859078">"此应用可能想要随时拍摄照片和录制视频，即使在您未使用它的时候。"<annotation id="link">"您可以在“设置”中授权"</annotation>"。"</string>
-    <string name="permgroupupgraderequest_camera" msgid="640758449200241582">"要更改&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;的相机使用权限吗？"</string>
-    <string name="permgroupupgraderequest_device_aware_camera" msgid="3290160912843715236">"要更改&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;在&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;上的相机使用权限吗？"</string>
+    <string name="permgroupupgraderequest_camera" msgid="640758449200241582">"要更改&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;的相机权限吗？"</string>
+    <string name="permgroupupgraderequest_device_aware_camera" msgid="3290160912843715236">"要更改&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;在&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;上的相机权限吗？"</string>
     <string name="permgroupupgraderequestdetail_camera" msgid="6642747548010962597">"此应用想要随时拍摄照片和录制视频，即使在您未使用它的时候。"<annotation id="link">"您可以在“设置”中授权"</annotation>"。"</string>
     <string name="permgrouprequest_calllog" msgid="2065327180175371397">"要允许“&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;”访问您的手机通话记录吗？"</string>
     <string name="permgrouprequest_device_aware_calllog" msgid="8220927190376843309">"要允许&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;在&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;上访问您的手机通话记录吗？"</string>
@@ -565,7 +565,7 @@
     <string name="blocked_sensor_summary" msgid="4443707628305027375">"会影响应用和服务"</string>
     <string name="blocked_mic_summary" msgid="8960466941528458347">"当您拨打紧急电话号码时，系统可能仍会分享麦克风数据。"</string>
     <string name="blocked_sensor_button_label" msgid="6742092634984289658">"更改"</string>
-    <string name="automotive_blocked_camera_title" msgid="6142362431548829416">"摄像头访问权限已关闭"</string>
+    <string name="automotive_blocked_camera_title" msgid="6142362431548829416">"已关闭相机权限"</string>
     <string name="automotive_blocked_microphone_title" msgid="3956311098238620220">"麦克风使用权限已关闭"</string>
     <string name="automotive_blocked_location_title" msgid="6047574747593264689">"位置信息获取权限已关闭"</string>
     <string name="automotive_blocked_infotainment_app_summary" msgid="8217099645064950860">"信息娱乐应用"</string>
@@ -588,7 +588,7 @@
     <string name="privacy_controls_qs" msgid="5780144882040591169">"您的隐私控制项"</string>
     <string name="security_settings_button_label_qs" msgid="8280343822465962330">"更多设置"</string>
     <string name="camera_toggle_label_qs" msgid="3880261453066157285">"相机权限"</string>
-    <string name="microphone_toggle_label_qs" msgid="8132912469813396552">"麦克风使用权限"</string>
+    <string name="microphone_toggle_label_qs" msgid="8132912469813396552">"麦克风权限"</string>
     <string name="permissions_removed_qs" msgid="8957319130625294572">"已移除权限"</string>
     <string name="camera_usage_qs" msgid="4394233566086665994">"查看近期相机使用情况"</string>
     <string name="microphone_usage_qs" msgid="8527666682168170417">"查看近期麦克风使用情况"</string>
