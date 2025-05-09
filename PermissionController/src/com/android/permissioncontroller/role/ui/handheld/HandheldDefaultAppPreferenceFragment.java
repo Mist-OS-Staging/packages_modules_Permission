@@ -26,7 +26,6 @@ import androidx.preference.Preference;
 
 import com.android.permissioncontroller.role.ui.DefaultAppChildFragment;
 import com.android.permissioncontroller.role.ui.RoleApplicationPreference;
-import com.android.settingslib.widget.FooterPreference;
 import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
 /**
@@ -101,8 +100,8 @@ public class HandheldDefaultAppPreferenceFragment extends SettingsBasePreference
 
     @NonNull
     @Override
-    public Preference createFooterPreference() {
-        return new FooterPreference(requireContext());
+    public Preference createDescriptionPreference(boolean isFooter) {
+        return new HandheldDescriptionPreference(requireContext(), isFooter);
     }
 
     @Override
