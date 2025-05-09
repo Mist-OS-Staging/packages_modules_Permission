@@ -1879,6 +1879,15 @@
         android:protectionLevel="dangerous"
         android:permissionFlags="hardRestricted" />
 
+   <!-- Allows an app to access moisture intrusion sensor data
+        <p>Protection level: normal
+         @hide
+    -->
+    <permission android:name="android.permission.READ_MOISTURE_INTRUSION"
+                android:permissionGroup="android.permission-group.SENSORS"
+                android:protectionLevel="normal"
+                android:featureFlag="com.android.tradeinmode.flags.trade_in_mode_2025q4"/>
+
     <!-- Allows an app to use fingerprint hardware.
          <p>Protection level: normal
          @deprecated Applications should request {@link
