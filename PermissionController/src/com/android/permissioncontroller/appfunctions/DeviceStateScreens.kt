@@ -18,8 +18,13 @@ package com.android.permissioncontroller.appfunctions
 
 import android.content.Context
 import android.content.Intent
+import android.content.res.Resources
+import android.net.Uri
 import android.os.UserHandle
+import android.provider.Settings
+import com.android.permissioncontroller.R
 import com.android.permissioncontroller.permission.model.livedatatypes.AppPermGroupUiInfo.PermGrantState
+import com.android.permissioncontroller.permission.ui.model.UnusedAppsViewModel.UnusedPeriod
 import com.android.permissioncontroller.permission.utils.KotlinUtils.getPermGroupLabel
 import com.android.permissioncontroller.permission.utils.Utils
 import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateItem
@@ -112,6 +117,8 @@ class AppPermissionScreen(
     val packageName: String,
     val userHandle: UserHandle,
     val permissionGrantState: PermGrantState,
+    val lastAccessTime: Long,
+    val usePreciseLocation: Boolean?,
 ) : PerScreenDeviceState() {
     private val permissionGroupLabel: String =
         getPermGroupLabel(context, permissionGroup).toString()
@@ -151,14 +158,40 @@ class AppPermissionScreen(
 
     override fun getDeviceStateItems(): List<DeviceStateItem> {
         val result: MutableList<DeviceStateItem> = mutableListOf()
-        val permissionState =
+        val permissionGroupLabel: String = getPermGroupLabel(context, permissionGroup).toString()
+        val permissionStateItem =
             DeviceStateItem(
-                key = "${permissionGroup}_permission_allowed",
-                name = LocalizedString(english = "$permissionGroup access for this app"),
+                key = "${permissionGroupLabel.lowercase()}_permission_state",
+                name = LocalizedString(english = "$permissionGroupLabel access for this app"),
                 jsonValue = translatePermissionGrantState(),
             )
+        result.add(permissionStateItem)
 
-        result.add(permissionState)
+        if (lastAccessTime > 0) {
+            val summaryTimestamp =
+                Utils.getPermissionLastAccessSummaryTimestamp(
+                    lastAccessTime,
+                    context,
+                    permissionGroup,
+                )
+            val recentAccessItem =
+                DeviceStateItem(
+                    key = "recent_access",
+                    name = LocalizedString(english = "Recent access"),
+                    jsonValue = getRecentAccessSummary(summaryTimestamp),
+                )
+            result.add(recentAccessItem)
+        }
+
+        if (usePreciseLocation != null) {
+            val usePreciseLocation =
+                DeviceStateItem(
+                    key = "use_precise_location",
+                    name = LocalizedString(english = "Use precise location"),
+                    jsonValue = usePreciseLocation.toString(),
+                )
+            result.add(usePreciseLocation)
+        }
 
         return result
     }
@@ -173,10 +206,108 @@ class AppPermissionScreen(
         }
     }
 
+    private fun getRecentAccessSummary(summaryTimestamp: Triple<String, Int, String>): String {
+        val res: Resources = context.resources
+
+        return when (summaryTimestamp.second) {
+            Utils.LAST_24H_CONTENT_PROVIDER ->
+                res.getString(R.string.app_perms_content_provider_24h)
+            Utils.LAST_7D_CONTENT_PROVIDER -> res.getString(R.string.app_perms_content_provider_7d)
+            Utils.LAST_24H_SENSOR_TODAY ->
+                res.getString(R.string.app_perms_24h_access, summaryTimestamp.first)
+            Utils.LAST_24H_SENSOR_YESTERDAY ->
+                res.getString(R.string.app_perms_24h_access_yest, summaryTimestamp.first)
+            Utils.LAST_7D_SENSOR ->
+                res.getString(
+                    R.string.app_perms_7d_access,
+                    summaryTimestamp.third,
+                    summaryTimestamp.first,
+                )
+            else -> ""
+        }
+    }
+
     companion object {
         const val KEY = "app_permission"
     }
 }
 
+class UnusedAppsScreen : PerScreenDeviceState() {
+    override val key: String
+        get() = KEY
+
+    override val description: String
+        get() = DESCRIPTION
+
+    override val paths: List<String>
+        get() = listOf("Apps", "Unused apps")
+
+    override val intentUri: String
+        get() = Intent(Intent.ACTION_MANAGE_UNUSED_APPS).toUri(Intent.URI_INTENT_SCHEME)
+
+    companion object {
+        const val KEY = "unused_apps"
+        const val DESCRIPTION = "Unused apps"
+    }
+}
+
+class UnusedAppLastUsageScreen(
+    val context: Context,
+    val packageName: String,
+    private val lastUsageTime: Long,
+) : PerScreenDeviceState() {
+    private var packageLabel: String
+
+    init {
+        val appInfo = context.packageManager.getApplicationInfo(packageName, 0)
+        packageLabel = Utils.getFullAppLabel(appInfo, context)
+    }
+
+    override val key: String
+        get() = KEY
+
+    override val description: String
+        get() = "Unused app details: $packageLabel"
+
+    override val paths: List<String>
+        get() = listOf("Apps", "Unused apps", packageLabel)
+
+    override val intentUri: String
+        get() =
+            Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+                .apply { setData(Uri.fromParts("package", packageName, null)) }
+                .toUri(Intent.URI_INTENT_SCHEME)
+
+    override fun getDeviceStateItems(): List<DeviceStateItem> {
+        val usagePeriod = UnusedPeriod.findLongestValidPeriod(lastUsageTime)
+
+        val lastUsed =
+            DeviceStateItem(
+                key = "last_used",
+                name = LocalizedString(english = "Last used"),
+                jsonValue = translateUnusedPeriod(usagePeriod),
+            )
+        return listOf(lastUsed)
+    }
+
+    private fun translateUnusedPeriod(usagePeriod: UnusedPeriod): String {
+        return when (usagePeriod) {
+            UnusedPeriod.ONE_MONTH -> "1 month ago"
+            UnusedPeriod.THREE_MONTHS -> "3 months ago"
+            UnusedPeriod.SIX_MONTHS -> "6 months ago"
+        }
+    }
+
+    companion object {
+        const val KEY = "unused_app_last_usage"
+    }
+}
+
 val deviceStateScreenKeys: List<String> =
-    listOf(PermissionManagerScreen.KEY, PermissionAppsScreen.KEY, AppPermissionScreen.KEY)
+    listOf(
+        PermissionManagerScreen.KEY,
+        PermissionAppsScreen.KEY,
+        AppPermissionScreen.KEY,
+        UnusedAppsScreen.KEY,
+        UnusedAppLastUsageScreen.KEY,
+    )
