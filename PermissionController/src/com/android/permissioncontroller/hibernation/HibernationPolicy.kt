@@ -62,6 +62,7 @@ import android.printservice.PrintService
 import android.provider.DeviceConfig
 import android.provider.DeviceConfig.NAMESPACE_APP_HIBERNATION
 import android.provider.Settings
+import android.provider.Settings.Global.DEVICE_DEMO_MODE
 import android.provider.Settings.Secure.USER_SETUP_COMPLETE
 import android.safetycenter.SafetyCenterManager
 import android.safetycenter.SafetyEvent
@@ -281,6 +282,10 @@ class HibernationBroadcastReceiver : BroadcastReceiver() {
         val action = intent.action
         val contentResolver = context.contentResolver
         if (action == Intent.ACTION_BOOT_COMPLETED || action == ACTION_SET_UP_HIBERNATION) {
+            if (Settings.Global.getInt(contentResolver, DEVICE_DEMO_MODE, 0) != 0) {
+                DumpableLog.i(LOG_TAG, "Not scheduling hibernation job. Device is retail mode")
+                return
+            }
             if (isUserSetupComplete(contentResolver)) {
                 maybeInitStartTimeUnusedAppTracking(context.sharedPreferences)
             } else {
@@ -297,6 +302,14 @@ class HibernationBroadcastReceiver : BroadcastReceiver() {
                                 && isUserSetupComplete(contentResolver)) {
                                 contentResolver.unregisterContentObserver(this)
                                 maybeInitStartTimeUnusedAppTracking(context.sharedPreferences)
+
+                                // Retail mode is set during set-up wizard so we need to check
+                                // after if the job should actually be scheduled
+                                if (Settings.Global.getInt(contentResolver, DEVICE_DEMO_MODE, 0)
+                                    != 0) {
+                                    context.getSystemService(JobScheduler::class.java)!!.cancel(
+                                        Constants.HIBERNATION_JOB_ID)
+                                }
                             }
                         }
                     }
