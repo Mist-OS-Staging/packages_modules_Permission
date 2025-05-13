@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"Výchozí digitální asistent"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"Aplikace digitálního asistenta"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"Asistenční aplikace pomáhají na základě informací na zobrazené obrazovce. Některé aplikace podporují spouštěče i hlasový vstup, a nabízejí tak integrovanou asistenci."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"Doporučuje: <xliff:g id="OEM_NAME">%s</xliff:g>"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"Výchozí prohlížeč"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"Prohlížeč"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"Aplikace, které vám umožňují přístup k internetu a zobrazují odkazy, na které můžete klepnout."</string>
@@ -440,7 +441,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Otevírání odkazů"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"Výchozí pracovní"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"Výchozí pro soukromý prostor"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"Optimalizováno pro zařízení"</string>
     <string name="default_app_others" msgid="7793029848126079876">"Jiné"</string>
     <string name="default_app_none" msgid="9084592086808194457">"Žádná aplikace"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(Výchozí nastavení systému)"</string>

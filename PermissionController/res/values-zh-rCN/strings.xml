@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"默认数字助理应用"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"数字助理应用"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"辅助应用可根据您当前浏览的屏幕内容为您提供帮助。部分应用同时支持启动器和语音输入服务，可为您提供更全面的协助。"</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"<xliff:g id="OEM_NAME">%s</xliff:g>推荐"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"默认浏览器应用"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"浏览器应用"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"这类应用可让您访问互联网以及显示您点按的链接"</string>
@@ -440,7 +441,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"打开链接"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"默认工作应用"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"私密空间的默认应用"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"针对设备进行了优化"</string>
     <string name="default_app_others" msgid="7793029848126079876">"其他"</string>
     <string name="default_app_none" msgid="9084592086808194457">"无"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"（系统默认）"</string>
@@ -635,7 +635,7 @@
     <string name="mic_toggle_description" msgid="9163104307990677157">"会影响应用和服务。如果您关闭此设置，那么当您拨打紧急电话号码时，系统可能仍会分享麦克风数据。"</string>
     <string name="location_settings_subtitle" msgid="2328360561197430695">"查看能够访问位置信息的应用和服务"</string>
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"显示剪贴板访问通知"</string>
-    <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"系统会在应用访问您复制的文字、图片或其他内容时显示一条消息"</string>
+    <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"若有应用访问您复制的文字、图片或其他内容，系统会显示通知"</string>
     <string name="show_password_title" msgid="2877269286984684659">"显示密码"</string>
     <string name="show_password_summary" msgid="1110166488865981610">"输入时短暂显示字符"</string>
     <string name="permission_rationale_message_location" msgid="2153841534298068414">"此应用已声明它可能会与第三方分享位置数据"</string>
