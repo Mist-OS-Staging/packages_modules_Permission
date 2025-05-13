@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"ఆటోమేటిక్ డిజిటల్ అసిస్టెంట్ యాప్"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"డిజిటల్ అసిస్టెంట్ యాప్"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"మీ ముందున్న స్క్రీన్‌లోని సమాచారం ఆధారంగా సహాయక (అసిస్ట్) యాప్‌లు, మీకు హెల్ప్ చేయగలవు. కొన్ని యాప్‌లు, మీకు ఈజీగా సాయం చేయడానికి లాంచర్‌కు, వాయిస్ ఇన్‌పుట్ సర్వీసులకు రెండింటికీ సపోర్ట్‌ ఇస్తాయి."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"<xliff:g id="OEM_NAME">%s</xliff:g> ద్వారా సిఫార్సు చేయబడింది"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"ఆటోమేటిక్ బ్రౌజర్ యాప్"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"బ్రౌజర్ యాప్"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"మీకు ఇంటర్నెట్‌కు యాక్సెస్‌ ఇచ్చి, ట్యాప్ చేయడానికి లింక్‌ల‌ను డిస్‌ప్లే చేసే యాప్‌లు"</string>
@@ -440,7 +441,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"లింక్‌లను తెరవడం"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"వర్క్‌ ప్లేస్ కోసం ఆటోమేటిక్"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"ఆటోమేటిక్‌గా ప్రైవేట్ స్పేస్"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"డివైజ్ కోసం ఆప్టిమైజ్ చేసినవి"</string>
     <string name="default_app_others" msgid="7793029848126079876">"ఇతర యాప్‌లు"</string>
     <string name="default_app_none" msgid="9084592086808194457">"ఏదీ కాదు"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(సిస్టమ్ ఆటోమేటిక్)"</string>

@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"Standaard digitale-assistent-app"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"Digitale-assistent-app"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"Apps voor assistentie kunnen je helpen op basis van de informatie op het scherm dat je bekijkt. Bepaalde apps ondersteunen launcher- en spraakinvoerservices voor geïntegreerde ondersteuning."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"Aanbevolen door <xliff:g id="OEM_NAME">%s</xliff:g>"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"Standaard browser-app"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"Browser-app"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"Apps die toegang tot internet geven en de links tonen waarop je hebt getikt"</string>
@@ -440,7 +441,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Links openen"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"Standaard voor werk"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"Standaard voor privégedeelte"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"Geoptimaliseerd voor apparaat"</string>
     <string name="default_app_others" msgid="7793029848126079876">"Anders"</string>
     <string name="default_app_none" msgid="9084592086808194457">"Geen"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(Systeem­stan­daard)"</string>

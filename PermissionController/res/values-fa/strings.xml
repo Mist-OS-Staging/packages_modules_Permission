@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"برنامه دستیار دیجیتال پیش‌فرض"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"برنامه دستیار دیجیتال"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"برنامه‌های همیار می‌توانند براساس اطلاعات موجود در صفحه‌ای که در آن هستید، کمکتان کنند. برخی برنامه‌ها از هر دو سرویس راه‌انداز و ورودی صوتی پشتیبانی می‌کنند تا کمک یکپارچه‌ای ارائه دهند."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"توصیه‌شده توسط <xliff:g id="OEM_NAME">%s</xliff:g>"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"برنامه مرورگر پیش‌فرض"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"برنامه مرورگر"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"برنامه‌هایی که به شما دسترسی به اینترنت را می‌دهند و پیوندهایی را نشان می‌دهند که روی آن‌ها می‌زنید"</string>
@@ -440,7 +441,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"باز کردن پیوندها"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"پیش‌فرض برای کار"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"برنامه‌های پیش‌فرض برای فضای خصوصی"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"بهینه‌سازی‌شده برای دستگاه"</string>
     <string name="default_app_others" msgid="7793029848126079876">"موارد دیگر"</string>
     <string name="default_app_none" msgid="9084592086808194457">"هیچ‌کدام"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(پیش‌فرض سیستم)"</string>

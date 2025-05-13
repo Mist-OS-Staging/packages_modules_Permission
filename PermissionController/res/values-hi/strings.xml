@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"डिफ़ॉल्ट डिजिटल असिस्टेंट ऐप"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"डिजिटल असिस्टेंट ऐप्लिकेशन"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"स्क्रीन पर दिख रही जानकारी के आधार पर, सहायक ऐप्लिकेशन आपकी मदद कर सकते हैं. कुछ ऐप्लिकेशन हर तरह से आपकी मदद करने के लिए, लॉन्चर और फ़ोन को बोलकर निर्देश देने वाली सेवाओं, दोनों के साथ काम करते हैं."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"<xliff:g id="OEM_NAME">%s</xliff:g> के सुझाए गए ऐप्लिकेशन"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"डिफ़ॉल्ट ब्राउज़र ऐप्लिकेशन"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"ब्राउज़र ऐप्लिकेशन"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"ऐसे ऐप्लिकेशन जो आपको इंटरनेट तक ऐक्सेस देते हैं और आपके टैप किए गए लिंक को डिसप्ले करते हैं"</string>
@@ -440,7 +441,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"खुलने वाले लिंक"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"काम के लिए डिफ़ॉल्ट"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"प्राइवेट स्पेस के लिए डिफ़ॉल्ट ऐप्लिकेशन"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"डिवाइस के लिए ऑप्टिमाइज़ किया गया"</string>
     <string name="default_app_others" msgid="7793029848126079876">"अन्य"</string>
     <string name="default_app_none" msgid="9084592086808194457">"कोई नहीं"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(सिस्टम डिफ़ॉल्ट)"</string>

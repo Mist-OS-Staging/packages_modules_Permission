@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"Digitaalse assistendi vaikerakendus"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"Digitaalse assistendi rakendus"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"Abirakendused saavad aidata teid kuvatud ekraaniteabe alusel. Mõned rakendused toetavad integreeritud abi pakkumisel nii käivitusprogrammi kui ka häälsisendi teenuseid."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"<xliff:g id="OEM_NAME">%s</xliff:g> soovitab"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"Brauseri vaikerakendus"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"Brauserirakendus"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"Rakendused, mis võimaldavad juurdepääsu internetile ja kuvavad puudutatavaid linke"</string>
@@ -440,7 +441,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Linkide avamine"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"Vaikerakendused töö jaoks"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"Privaatse ruumi vaikerakendused"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"Seadme jaoks optimeeritud"</string>
     <string name="default_app_others" msgid="7793029848126079876">"Muud"</string>
     <string name="default_app_none" msgid="9084592086808194457">"Puudub"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(Süsteemi vaikeseade)"</string>

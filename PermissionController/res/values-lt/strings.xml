@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"Numat. skaitm. pagelbiklio pr."</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"Skaitmeninio pagelbik. pr."</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"Pagalbinė programa gali padėti atsižvelgdama į peržiūrimo ekrano informaciją. Kai kurios programos palaiko tiek paleidimo priemonę, tiek įvesties balsu paslaugas, kad galėtų būti naudingos."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"Rekomenduoja „<xliff:g id="OEM_NAME">%s</xliff:g>“"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"Numatytoji naršyklės programa"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"Naršyklės programa"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"Programos, leidžiančios pasiekti internetą ir rodomas nuorodas, kurias paliečiate"</string>
@@ -440,7 +441,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Nuorodų atidarymas"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"Numatytosios darbo programos"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"Privačios erdvės numatytosios programos"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"Optimizuota pagal įrenginį"</string>
     <string name="default_app_others" msgid="7793029848126079876">"Kita"</string>
     <string name="default_app_none" msgid="9084592086808194457">"Nėra"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(Sistemos numatytoji programa)"</string>
