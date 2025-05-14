@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"تطبيق المساعد الرقمي التلقائي"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"تطبيق المساعد الرقمي"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"بإمكان التطبيقات المساعِدة مساعدتك استنادًا إلى المعلومات التي تظهر على شاشتك. وتعمل بعض التطبيقات مع كل من خدمة المشغّل وخدمة الإدخال الصوتي لتوفير مساعدة متكاملة لك."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"مقترَحة بواسطة \"<xliff:g id="OEM_NAME">%s</xliff:g>\""</string>
     <string name="role_browser_label" msgid="2877796144554070207">"تطبيق المتصفّح التلقائي"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"تطبيق المتصفح"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"التطبيقات التي تتيح إمكانية الوصول إلى الإنترنت وتعرض روابط تنقر عليها"</string>
@@ -440,7 +441,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"فتح الروابط"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"التطبيقات التلقائية للعمل"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"التطبيقات التلقائية في المساحة الخاصّة"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"متوافقة مع الجهاز"</string>
     <string name="default_app_others" msgid="7793029848126079876">"غير ذلك"</string>
     <string name="default_app_none" msgid="9084592086808194457">"غير محدَّد"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(الإعداد التلقائي للنظام)"</string>
@@ -599,7 +599,7 @@
     <string name="active_call_usage_qs" msgid="8559974395932523391">"يتم الاستخدام في المكالمة الهاتفية"</string>
     <string name="recent_call_usage_qs" msgid="743044899599410935">"تم الاستخدام مؤخرًا في مكالمة هاتفية"</string>
     <string name="active_app_usage_qs" msgid="4063912870936464727">"يتم الاستخدام من قِبل <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
-    <string name="recent_app_usage_qs" msgid="6650259601306212327">"تم الاستخدام مؤخرًا من قِبل \"<xliff:g id="APP_NAME">%1$s</xliff:g>\""</string>
+    <string name="recent_app_usage_qs" msgid="6650259601306212327">"تم الاستخدام مؤخرًا بواسطة \"<xliff:g id="APP_NAME">%1$s</xliff:g>\""</string>
     <string name="active_app_usage_1_qs" msgid="4325136375823357052">"يتم الاستخدام من قِبل <xliff:g id="APP_NAME">%1$s</xliff:g> (<xliff:g id="ATTRIBUTION_LABEL">%2$s</xliff:g>)"</string>
     <string name="recent_app_usage_1_qs" msgid="261450184773310741">"تم الاستخدام مؤخرًا من قِبل <xliff:g id="APP_NAME">%1$s</xliff:g> (<xliff:g id="ATTRIBUTION_LABEL">%2$s</xliff:g>)"</string>
     <string name="active_app_usage_2_qs" msgid="6107866785243565283">"يتم الاستخدام من قِبل <xliff:g id="APP_NAME">%1$s</xliff:g> (<xliff:g id="ATTRIBUTION_LABEL">%2$s</xliff:g> • <xliff:g id="PROXY_LABEL">%3$s</xliff:g>)"</string>

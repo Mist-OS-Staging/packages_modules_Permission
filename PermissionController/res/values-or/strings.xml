@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"ଡିଫଲ୍ଟ ଡିଜିଟାଲ ସହାୟକ ଆପ"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"ଡିଜିଟାଲ୍ Assistant ଆପ୍"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"ଆପଣ ଭ୍ୟୁ କରୁଥିବା ସ୍କ୍ରିନ ସୂଚନାକୁ ଆଧାର କରି ସହାୟକ ଆପ ଆପଣଙ୍କୁ ସାହାଯ୍ୟ କରିପାରିବ। କେତେକ ଆପ ଆପଣଙ୍କୁ ସମ୍ପୂର୍ଣ୍ଣ ସହାୟତା ଦେବା ପାଇଁ ଉଭୟ ଲଞ୍ଚର ଓ ଭଏସ ଇନପୁଟ ସେବାକୁ ସମର୍ଥନ କରେ।"</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"<xliff:g id="OEM_NAME">%s</xliff:g>ଦ୍ୱାରା ସୁପାରିଶ କରାଯାଇଛି"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"ଡିଫଲ୍ଟ ବ୍ରାଉଜର୍‌ ଆପ୍‌"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"ବ୍ରାଉଜର୍‌ ଆପ୍‌"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"ଆପ୍ସ ଯାହା ଆପଣଙ୍କୁ ଇଣ୍ଟର୍ନେଟ ପାଇଁ ଆକ୍ସେସ ଦିଏ ଏବଂ ଆପଣ ଟାପ କରୁଥିବା ଲିଙ୍କଗୁଡ଼ିକୁ ଡିସପ୍ଲେ କରେ"</string>
@@ -440,7 +441,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"ଓପନିଂ ଲିଙ୍କ୍"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"କାର୍ଯ୍ୟ ପାଇଁ ଡିଫଲ୍ଟ ଅଛି"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"ପ୍ରାଇଭେଟ ସ୍ପେସ ପାଇଁ ଡିଫଲ୍ଟ"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"ଡିଭାଇସ ପାଇଁ ଅପ୍ଟିମାଇଜ କରାଯାଇଛି"</string>
     <string name="default_app_others" msgid="7793029848126079876">"ଅନ୍ୟ"</string>
     <string name="default_app_none" msgid="9084592086808194457">"କିଛି ଆପ ସେଟ କରାଯାଇନାହିଁ"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(ସିଷ୍ଟମ୍ ଡିଫଲ୍ଟ)"</string>
