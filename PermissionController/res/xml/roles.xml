@@ -1385,12 +1385,11 @@
 
     <role
         name="android.app.role.SUPERVISION"
-        defaultHolders="config_supervision"
-        exclusive="true"
-        exclusivity="user"
+        behavior="v36_1.SupervisionRoleBehavior"
+        exclusive="false"
+        exclusivity="none"
         featureFlag="android.permission.flags.Flags.supervisionRoleEnabled"
         minSdkVersion="36"
-        static="true"
         systemOnly="true"
         visible="false" >
         <required-components>
