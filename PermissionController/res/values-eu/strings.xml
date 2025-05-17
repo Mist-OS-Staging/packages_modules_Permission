@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"Laguntzaile digitalaren aplikazio lehenetsia"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"Laguntzaile digitalaren aplikazioa"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"Ikusten ari zaren pantailako informazioaren araberako laguntza eskain diezazukete laguntza-aplikazioek. Zenbait aplikaziok exekutatzeko tresna eta ahots bidezko zerbitzuak onartzen dituzte laguntza integratua eskaintzeko."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"<xliff:g id="OEM_NAME">%s</xliff:g> fabrikatzaileak gomendatua"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"Arakatzaile lehenetsia"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"Arakatzaile-apli⁠kazioa⁠⁠⁠⁠"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"Interneteko sarbidea ematen dizuten eta sakatzen dituzun estekak bistaratzen dituzten aplikazioak"</string>
@@ -440,7 +441,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Irekiko diren estekak"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"Lanerako aplikazio lehenetsiak"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"Eremu pribatuko aplikazio lehenetsiak"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"Gailurako optimizatuta"</string>
     <string name="default_app_others" msgid="7793029848126079876">"Beste batzuk"</string>
     <string name="default_app_none" msgid="9084592086808194457">"Bat ere ez"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(sistemaren aplikazio lehenetsia)"</string>

@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"デフォルトのデジタル アシスタント アプリ"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"デジタル アシスタント アプリ"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"アシストアプリは、表示している画面の情報に基づいてサポートを提供します。一部のアプリはランチャーと音声入力サービスの両方に対応しており、統合されたサポートを提供します。"</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"<xliff:g id="OEM_NAME">%s</xliff:g> がおすすめするアプリ"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"デフォルトのブラウザアプリ"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"ブラウザアプリ"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"インターネットにアクセスするためのアプリです。タップしたリンクは、このアプリで開きます。"</string>
@@ -440,7 +441,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"リンクを開く"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"デフォルトの仕事用アプリ"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"プライベート スペースのデフォルト"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"デバイス向けに最適化"</string>
     <string name="default_app_others" msgid="7793029848126079876">"その他"</string>
     <string name="default_app_none" msgid="9084592086808194457">"なし"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"（システムのデフォルト）"</string>

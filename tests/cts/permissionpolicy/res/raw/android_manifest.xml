@@ -8187,6 +8187,16 @@
                 android:description="@string/permdesc_fullScreenIntent"
                 android:protectionLevel="normal|appop" />
 
+    <!-- Required for apps to post promoted notifications.
+         <p>Protection level: normal|appops
+         @FlaggedApi(android.app.Flags.FLAG_API_RICH_ONGOING_PERMISSION)
+         -->
+    <permission android:name="android.permission.POST_PROMOTED_NOTIFICATIONS"
+        android:label="@string/permlab_postPromotedNotifications"
+        android:description="@string/permdesc_postPromotedNotifications"
+        android:protectionLevel="normal|appop"
+        android:featureFlag="android.app.api_rich_ongoing_permission"/>
+
     <!-- @SystemApi Required for the privileged assistant apps targeting
          {@link android.os.Build.VERSION_CODES#VANILLA_ICE_CREAM}
          that receive voice trigger from a sandboxed {@link HotwordDetectionService}.
@@ -8547,6 +8557,13 @@
          @hide -->
     <permission android:name="android.permission.CREATE_VIRTUAL_DEVICE"
                 android:protectionLevel="internal|role" />
+
+    <!-- Allows an application access to computer control features.
+     @hide -->
+    <permission android:name="android.permission.ACCESS_COMPUTER_CONTROL"
+        android:protectionLevel="internal|knownSigner"
+        android:knownCerts="@array/config_accessComputerControlKnownSigners"
+        android:featureFlag="android.companion.virtualdevice.flags.computer_control_access"/>
 
     <!-- @SystemApi Must be required by a safety source to send an update using the
              {@link android.safetycenter.SafetyCenterManager}.
@@ -9055,6 +9072,15 @@
     <permission android:name="android.permission.ACCESS_TEXT_CLASSIFIER_BY_TYPE"
         android:protectionLevel="signature|role|privileged"
         android:featureFlag="android.permission.flags.text_classifier_choice_api_enabled"/>
+
+    <!-- Allows an application to programmatically move and resize its tasks when the system is in
+        a state that allows such operations, e.g. in a desktop-like environment. It is only
+        extended to the {@link android.app.role.RoleManager#ROLE_BROWSER default browser}.
+        <p>Protection level: internal|role
+        @FlaggedApi(com.android.window.flags.Flags.FLAG_ENABLE_WINDOW_REPOSITIONING_API) -->
+    <permission android:name="android.permission.REPOSITION_SELF_WINDOWS"
+        android:protectionLevel="internal|role"
+        android:featureFlag="com.android.window.flags.enable_window_repositioning_api" />
 
     <!-- Attribution for Geofencing service. -->
     <attribution android:tag="GeofencingService" android:label="@string/geofencing_service"/>

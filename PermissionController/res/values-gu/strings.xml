@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"ડિફૉલ્ટ ડિજિટલ આસિસ્ટંટ ઍપ"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"ડિજિટલ આસિસ્ટંટ ઍપ"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"તમે જોઈ રહ્યા હો તે સ્ક્રીન પરની માહિતીના આધારે સહાયક ઍપ તમને સહાય કરી શકે છે. કેટલીક ઍપ તમને એકીકૃત સહાયતા આપવા માટે લૉન્ચર અને વૉઇસ ઇનપુટ સેવાઓ બંનેને સમર્થન આપે છે."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"<xliff:g id="OEM_NAME">%s</xliff:g> દ્વારા સુઝાવ આપેલી"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"ડિફૉલ્ટ બ્રાઉઝર ઍપ"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"બ્રાઉઝર ઍપ"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"ઍપ કે જે તમને ઇન્ટરનેટનો ઍક્સેસ આપે અને તમે જેના પર ટૅપ કરો તે લિંક દર્શાવે"</string>
@@ -440,7 +441,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"લિંક ખોલવી"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"કાર્ય માટે ડિફૉલ્ટ"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"ખાનગી સ્પેસ માટે ડિફૉલ્ટ"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"ડિવાઇસ માટે ઑપ્ટિમાઇઝ કરેલી છે"</string>
     <string name="default_app_others" msgid="7793029848126079876">"અન્ય"</string>
     <string name="default_app_none" msgid="9084592086808194457">"કોઈ નહીં"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(સિસ્ટમ ડિફૉલ્ટ)"</string>

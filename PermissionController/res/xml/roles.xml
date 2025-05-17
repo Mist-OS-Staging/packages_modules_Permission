@@ -1381,6 +1381,28 @@
         </permissions>
     </role>
 
+    <role
+        name="android.app.role.SUPERVISION"
+        defaultHolders="config_supervision"
+        exclusive="true"
+        exclusivity="user"
+        featureFlag="android.permission.flags.Flags.supervisionRoleEnabled"
+        minSdkVersion="36"
+        static="true"
+        systemOnly="true"
+        visible="false" >
+        <required-components>
+            <service permission="android.permission.BIND_SUPERVISION_APP_SERVICE">
+                <intent-filter>
+                    <action name="android.app.action.SUPERVISION_APP_SERVICE" />
+                </intent-filter>
+            </service>
+        </required-components>
+        <permissions>
+        </permissions>
+    </role>
+
+
     <!---
       ~ A role for the package responsible for constructing managed device experiences,
       ~ including during provisioning.

@@ -172,6 +172,15 @@ public final class RoleManager {
     public static final String ROLE_SYSTEM_SUPERVISION = "android.app.role.SYSTEM_SUPERVISION";
 
     /**
+     * The name of the supervision role.
+     *
+     * @hide
+     */
+    @FlaggedApi(Flags.FLAG_SUPERVISION_ROLE_ENABLED)
+    @SystemApi
+    public static final String ROLE_SUPERVISION = "android.app.role.SUPERVISION";
+
+    /**
      * The name of the system activity recognizer role.
      *
      * @hide

@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"ডিফল্ট ডিজিটাল অ্যাসিস্ট্যান্ট অ্যাপ"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"ডিজিটাল অ্যাসিস্ট্যান্ট অ্যাপ"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"আপনি যে স্ক্রিন দেখছেন সেটির তথ্যের উপর নির্ভর করে অ্যাসিস্ট অ্যাপ আপনাকে সাহায্য করতে পারে৷ কিছু অ্যাপ আপনাকে ইন্টিগ্রেটেড সহায়তা দিতে, লঞ্চার ও ভয়েস ইনপুট দুটি পরিষেবাই ব্যবহার করতে পারে।"</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"<xliff:g id="OEM_NAME">%s</xliff:g>-এর সাজেস্ট করা"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"ডিফল্ট ব্রাউজার অ্যাপ"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"ব্রাউজার অ্যাপ"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"এমন অ্যাপ যা ইন্টারনেট অ্যাক্সেস করতে সাহায্য করে ও ট্যাপ করা লিঙ্কগুলি দেখায়"</string>
@@ -440,7 +441,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"লিঙ্ক খোলা"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"অফিসের জন্য ডিফল্ট"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"প্রাইভেট স্পেসের জন্য ডিফল্ট"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"ডিভাইসের জন্য অপ্টিমাইজ করা হয়েছে"</string>
     <string name="default_app_others" msgid="7793029848126079876">"অন্যান্য"</string>
     <string name="default_app_none" msgid="9084592086808194457">"কোনওটিই নয়"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(সিস্টেম ডিফল্ট)"</string>

@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"Verstekdigitaleassistentapp"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"Digitaleassistentapp"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"Bystandapps kan jou help op grond van inligting vanaf die skerm waarna jy kyk. Sommige apps steun sowel lanseerder- as steminvoerdienste om vir jou geïntegreerde bystand te gee."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"Aanbeveel deur <xliff:g id="OEM_NAME">%s</xliff:g>"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"Verstekblaaier"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"Blaaierapp"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"Apps wat jou toegang tot die internet gee en na vertoonskakels waarop jy tik"</string>
@@ -440,7 +441,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Oopmaak van skakels"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"Verstek vir werk"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"Verstek vir privaat ruimte"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"Geoptimeer vir toestel"</string>
     <string name="default_app_others" msgid="7793029848126079876">"Ander"</string>
     <string name="default_app_none" msgid="9084592086808194457">"Geen"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(Stelselverstek)"</string>

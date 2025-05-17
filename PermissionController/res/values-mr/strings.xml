@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"डीफॉल्ट डिजिटल साहाय्यक अ‍ॅप"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"डिजिटल असिस्टंट अ‍ॅप"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"साहाय्यक अ‍ॅप्स तुम्ही पाहत असलेल्या स्क्रीनवरील माहितीच्या आधारावर तुम्हाला मदत करू शकतात. काही अ‍ॅप्स तुम्हाला एकत्रित साहाय्य देण्यासाठी लाँचर आणि व्हॉइस इनपुट सेवा दोन्हींना सपोर्ट करतात."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"<xliff:g id="OEM_NAME">%s</xliff:g> द्वारे शिफारस केलेले"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"डीफॉल्ट ब्राउझर अ‍ॅप"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"ब्राउझर अ‍ॅप"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"तुम्हाला इंटरनेटचा आणि तुम्ही टॅप करत असलेल्या डिस्प्ले लिंकचा अ‍ॅक्सेस देणारी अ‍ॅप्स"</string>
@@ -440,7 +441,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"उघडणार्‍या लिंक"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"कार्यासाठी डीफॉल्ट"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"खाजगी स्पेससाठी डीफॉल्ट"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"ऑप्टिमाइझ केलेले डिव्हाइस"</string>
     <string name="default_app_others" msgid="7793029848126079876">"इतर"</string>
     <string name="default_app_none" msgid="9084592086808194457">"काहीही नाही"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(सिस्टीम डीफॉल्ट)"</string>
