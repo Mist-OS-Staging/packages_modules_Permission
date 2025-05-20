@@ -363,7 +363,7 @@ class DeviceStateAppFunctionService : AppFunctionService(), PermissionsUsagesCha
 
     companion object {
         private const val TAG = "DeviceStateAppFunctionService"
-        private const val APP_FUNCTION_IDENTIFIER = "getAppPermissionDeviceState"
+        private const val APP_FUNCTION_IDENTIFIER = "getPermissionsDeviceState"
         private val SUPPORTED_PERMISSION_GROUPS =
             listOf(
                 Manifest.permission_group.LOCATION,
