@@ -34,7 +34,9 @@ import android.os.CancellationSignal
 import android.os.OutcomeReceiver
 import android.os.UserHandle
 import androidx.annotation.RequiresApi
+import com.android.permissioncontroller.appfunctions.AdditionalPermissionsScreen
 import com.android.permissioncontroller.appfunctions.AppPermissionScreen
+import com.android.permissioncontroller.appfunctions.AppPermissionsScreen
 import com.android.permissioncontroller.appfunctions.GenericDocumentToPlatformConverter
 import com.android.permissioncontroller.appfunctions.PermissionAppsScreen
 import com.android.permissioncontroller.appfunctions.PermissionManagerScreen
@@ -139,7 +141,7 @@ class DeviceStateAppFunctionService : AppFunctionService(), PermissionsUsagesCha
     private suspend fun buildPerScreenDeviceStates(screenKey: String): List<PerScreenDeviceStates> {
         when (screenKey) {
             PermissionManagerScreen.KEY -> {
-                return listOf(PermissionManagerScreen().toPerScreenDeviceStates())
+                return listOf(PermissionManagerScreen(applicationContext).toPerScreenDeviceStates())
             }
             PermissionAppsScreen.KEY -> {
                 return coroutineScope {
@@ -151,6 +153,23 @@ class DeviceStateAppFunctionService : AppFunctionService(), PermissionsUsagesCha
                         }
                         .awaitAll()
                 }
+            }
+            AppPermissionsScreen.KEY -> {
+                val allPackages =
+                    applicationContext.packageManager
+                        .getInstalledPackagesAsUser(0, UserHandle.myUserId())
+                        .map { packageInfo -> packageInfo.packageName }
+                        .toList()
+
+                return coroutineScope {
+                        allPackages.map {
+                            async {
+                                AppPermissionsScreen(applicationContext, it)
+                                    .toPerScreenDeviceStates()
+                            }
+                        }
+                    }
+                    .awaitAll()
             }
             AppPermissionScreen.KEY -> {
                 val filterBeginTimeMillis =
@@ -214,7 +233,7 @@ class DeviceStateAppFunctionService : AppFunctionService(), PermissionsUsagesCha
                 }
             }
             UnusedAppsScreen.KEY -> {
-                return listOf(UnusedAppsScreen().toPerScreenDeviceStates())
+                return listOf(UnusedAppsScreen(applicationContext).toPerScreenDeviceStates())
             }
             UnusedAppLastUsageScreen.KEY -> {
                 val unusedApps = getUnusedPackages().getInitializedValue()!!
@@ -250,6 +269,11 @@ class DeviceStateAppFunctionService : AppFunctionService(), PermissionsUsagesCha
                 }
 
                 return deviceStateScreens
+            }
+            AdditionalPermissionsScreen.KEY -> {
+                return listOf(
+                    AdditionalPermissionsScreen(applicationContext).toPerScreenDeviceStates()
+                )
             }
         }
         throw Exception("$screenKey is not supported")
