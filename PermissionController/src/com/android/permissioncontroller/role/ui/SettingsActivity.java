@@ -28,6 +28,7 @@ import com.android.settingslib.collapsingtoolbar.EdgeToEdgeUtils;
 import com.android.settingslib.collapsingtoolbar.SettingsTransitionActivity;
 import com.android.settingslib.widget.ExpressiveDesignEnabledProvider;
 import com.android.settingslib.widget.SettingsThemeHelper;
+import com.android.settingslib.widget.theme.flags.Flags;
 
 /**
  * Base class for settings activities.
@@ -60,6 +61,7 @@ public class SettingsActivity extends SettingsTransitionActivity implements
 
     @Override
     public boolean isExpressiveDesignEnabled() {
-        return SdkLevel.isAtLeastB() && DeviceUtils.isHandheld();
+        return SdkLevel.isAtLeastB() && DeviceUtils.isHandheld()
+                && Flags.isExpressiveDesignEnabled();
     }
 }
