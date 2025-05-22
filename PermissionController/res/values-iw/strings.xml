@@ -489,7 +489,7 @@
     <string name="permgroupupgraderequestdetail_nearby_devices" msgid="6877531270654738614">"‏לאשר לאפליקציה &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; לאתר מכשירים קרובים, להתחבר אליהם ולזהות את מיקומם היחסי? "<annotation id="link">"יש לתת הרשאה בהגדרות"</annotation></string>
     <string name="permgrouprequest_fineupgrade" msgid="2334242928821697672">"לשנות את הרשאת הגישה של <xliff:g id="APP_NAME">&lt;b&gt;%1$s&lt;/b&gt;</xliff:g> ממיקום משוער למיקום מדויק?"</string>
     <string name="permgrouprequest_device_aware_fineupgrade" msgid="4453775952305587571">"‏לשנות את הרשאת הגישה של האפליקציה <xliff:g id="APP_NAME">&lt;b&gt;%1$s&lt;/b&gt;</xliff:g> למיקום במכשיר &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>‏&lt;/b&gt; מ\'מיקום משוער\' ל\'מיקום מדויק\'?"</string>
-    <string name="permgrouprequest_coarselocation" msgid="7244605063736425232">"‏לתת לאפליקציה &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; הרשאת גישה למיקום המשוער של המכשיר?"</string>
+    <string name="permgrouprequest_coarselocation" msgid="7244605063736425232">"‏לאשר לאפליקציה &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; לגשת למיקום המשוער של המכשיר?"</string>
     <string name="permgrouprequest_device_aware_coarselocation" msgid="8367540370912066757">"‏לתת לאפליקציה &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; הרשאת גישה למיקום המשוער של &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="permgrouprequest_finelocation_imagetext" msgid="1313062433398914334">"מדויק"</string>
     <string name="permgrouprequest_coarselocation_imagetext" msgid="8650605041483025297">"משוער"</string>
@@ -503,7 +503,7 @@
     <string name="permgrouprequest_storage_pre_q" msgid="168130651144569428">"‏לתת לאפליקציה ‎&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‎‏ הרשאת גישה ‎&lt;b&gt;‎‏לתמונות, לסרטונים, למוזיקה, לאודיו ולקבצים אחרים‎&lt;/b&gt;‎‏ במכשיר?"</string>
     <string name="permgrouprequest_read_media_aural" msgid="2593365397347577812">"‏לתת לאפליקציה ‎&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‎‏ הרשאת גישה למוזיקה ולקובצי אודיו במכשיר?"</string>
     <string name="permgrouprequest_device_aware_read_media_aural" msgid="7927884506238101064">"‏לתת לאפליקציה &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; הרשאת גישה למוזיקה ולאודיו במכשיר &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;?"</string>
-    <string name="permgrouprequest_read_media_visual" msgid="5548780620779729975">"‏לתת לאפליקציה ‎&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‎‏ הרשאת גישה לתמונות ולסרטונים במכשיר?"</string>
+    <string name="permgrouprequest_read_media_visual" msgid="5548780620779729975">"‏לאשר לאפליקציה ‎&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‎‏ לגשת לתמונות ולסרטונים במכשיר?"</string>
     <string name="permgrouprequest_device_aware_read_media_visual" msgid="3122576538319059333">"‏לתת לאפליקציה &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; הרשאת גישה לתמונות ולסרטונים במכשיר &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="permgrouprequest_more_photos" msgid="128933814654231321">"‏לתת לאפליקציה ‎&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‎‏ הרשאת גישה לתמונות ולסרטונים נוספים במכשיר?"</string>
     <string name="permgrouprequest_device_aware_more_photos" msgid="1703469013613723053">"‏לתת לאפליקציה &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; הרשאת גישה לעוד תמונות וסרטונים במכשיר &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;?"</string>
@@ -539,7 +539,7 @@
     <string name="permgroupbackgroundrequestdetail_sensors" msgid="7726767635834043501">"כדי לאפשר לאפליקציה הזו לגשת לנתונים של החיישנים הגופניים כל הזמן, גם כשהיא לא בשימוש, "<annotation id="link">"צריך להיכנס להגדרות."</annotation></string>
     <string name="permgroupupgraderequest_sensors" msgid="7576527638411370468">"‏להמשיך לאפשר לאפליקציה &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; לגשת לנתונים של חיישני גוף כשהיא נמצאת בשימוש?"</string>
     <string name="permgroupupgraderequest_device_aware_sensors" msgid="5542771499929819675">"‏להמשיך לאפשר לאפליקציה &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; לגשת לנתוני החיישנים הגופניים במכשיר &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt; כשהאפליקציה בשימוש?"</string>
-    <string name="permgrouprequest_notifications" msgid="6396739062335106181">"‏לתת לאפליקציה &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; הרשאה לשלוח לך התראות?"</string>
+    <string name="permgrouprequest_notifications" msgid="6396739062335106181">"‏לאשר לאפליקציה &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; לשלוח לך התראות?"</string>
     <string name="permgrouprequest_device_aware_notifications" msgid="857671638951040514">"‏לתת לאפליקציה &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; הרשאה לשלוח לך התראות במכשיר &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="auto_granted_permissions" msgid="6009452264824455892">"הרשאות בבקרה"</string>
     <string name="auto_granted_location_permission_notification_title" msgid="7570818224669050377">"לאפליקציה <xliff:g id="APP_NAME">%1$s</xliff:g> יש הרשאת גישה למיקום"</string>

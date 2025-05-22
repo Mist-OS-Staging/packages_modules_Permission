@@ -72,6 +72,7 @@ import com.android.permissioncontroller.permission.ui.model.v34.PermissionRation
 import com.android.permissioncontroller.permission.utils.KotlinUtils;
 import com.android.permissioncontroller.permission.utils.Utils;
 import com.android.settingslib.widget.ExpressiveDesignEnabledProvider;
+import com.android.settingslib.widget.theme.flags.Flags;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -339,7 +340,8 @@ public class PermissionRationaleActivity extends SettingsActivity implements
 
     @Override
     public boolean isExpressiveDesignEnabled() {
-        return SdkLevel.isAtLeastB() && DeviceUtils.isHandheld() && getResources().getBoolean(
+        return SdkLevel.isAtLeastB() && DeviceUtils.isHandheld()
+                && Flags.isExpressiveDesignEnabled() && getResources().getBoolean(
                 R.bool.config_enableExpressiveDesignInRequestPermissionDialog);
     }
 

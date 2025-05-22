@@ -21,6 +21,7 @@ import com.android.permissioncontroller.DeviceUtils;
 import com.android.permissioncontroller.R;
 import com.android.settingslib.collapsingtoolbar.SettingsTransitionActivity;
 import com.android.settingslib.widget.ExpressiveDesignEnabledProvider;
+import com.android.settingslib.widget.theme.flags.Flags;
 
 /**
  * Parent activity that supports transitions
@@ -35,7 +36,8 @@ public class SettingsActivity extends SettingsTransitionActivity implements
 
     @Override
     public boolean isExpressiveDesignEnabled() {
-        return SdkLevel.isAtLeastB() && DeviceUtils.isHandheld() && getResources().getBoolean(
+        return SdkLevel.isAtLeastB() && DeviceUtils.isHandheld()
+                && Flags.isExpressiveDesignEnabled() && getResources().getBoolean(
                 R.bool.config_enableExpressiveDesignInPermissionSettings);
     }
 }
