@@ -52,7 +52,9 @@ android_test {
         "sts-device-util",
         "platform-test-rules",
         "CtsVirtualDeviceCommonLib",
-        "android.permission.flags-aconfig-java-export",
+        // Some flags, like purpose_declaration_enabled, cannot be exported but need to be accessed
+        // in CTS tests. Therefore, do not use android.permission.flags-aconfig-java-exports.
+        "android.permission.flags-aconfig-java",
         "androidx.test.rules",
     ],
     jni_libs: [
