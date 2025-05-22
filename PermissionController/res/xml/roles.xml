@@ -2004,4 +2004,21 @@
         </app-op-permissions>
     </role>
 
+    <!--
+        A role for the active watch face on Wear devices.
+
+        Wear specific non-AOSP permissions are granted in the behavior class through
+        android.R.array.config_watchFacePermissions.
+    -->
+    <role
+        name="android.app.role.WATCH_FACE"
+        behavior="v37.WatchFaceRoleBehavior"
+        featureFlag="android.permission.flags.Flags.watchFaceRoleEnabled"
+        exclusive="true"
+        exclusivity="user"
+        visible="false">
+        <permissions>
+            <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND" />
+        </permissions>
+    </role>
 </roles>
