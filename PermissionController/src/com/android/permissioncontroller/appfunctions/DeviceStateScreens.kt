@@ -18,6 +18,7 @@ package com.android.permissioncontroller.appfunctions
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.content.res.Resources
 import android.net.Uri
 import android.os.UserHandle
@@ -57,6 +58,10 @@ abstract class PerScreenDeviceState {
             intentUri = intentUri,
             deviceStateItems = getDeviceStateItems(),
         )
+    }
+
+    companion object {
+        const val DEFAULT_PACKAGE_LABEL = "Unknown"
     }
 }
 
@@ -126,8 +131,12 @@ class AppPermissionScreen(
     private var packageLabel: String
 
     init {
-        val appInfo = context.packageManager.getApplicationInfo(packageName, 0)
-        packageLabel = Utils.getFullAppLabel(appInfo, context)
+        try {
+            val appInfo = context.packageManager.getApplicationInfo(packageName, 0)
+            packageLabel = Utils.getFullAppLabel(appInfo, context)
+        } catch (e: PackageManager.NameNotFoundException) {
+            packageLabel = DEFAULT_PACKAGE_LABEL
+        }
     }
 
     override val key: String
@@ -259,8 +268,12 @@ class UnusedAppLastUsageScreen(
     private var packageLabel: String
 
     init {
-        val appInfo = context.packageManager.getApplicationInfo(packageName, 0)
-        packageLabel = Utils.getFullAppLabel(appInfo, context)
+        try {
+            val appInfo = context.packageManager.getApplicationInfo(packageName, 0)
+            packageLabel = Utils.getFullAppLabel(appInfo, context)
+        } catch (e: PackageManager.NameNotFoundException) {
+            packageLabel = DEFAULT_PACKAGE_LABEL
+        }
     }
 
     override val key: String
