@@ -575,8 +575,8 @@
     <string name="safety_center_dashboard_page_title" msgid="2810774008694315854">"Zabezpečenie, ochrana súkromia"</string>
     <string name="safety_center_rescan_button" msgid="4517514567809409596">"Skontrolovať zariadenie"</string>
     <string name="safety_center_issue_card_dismiss_button" msgid="5113965506144222402">"Zavrieť"</string>
-    <string name="safety_center_issue_card_dismiss_confirmation_title" msgid="2734809473425036382">"Chcete zavrieť toto upozornenie?"</string>
-    <string name="safety_center_issue_card_dismiss_confirmation_message" msgid="3775418736671093563">"Kedykoľvek si môžete skontrolovať nastavenia zabezpečenia a ochrany súkromia a ochranu zlepšiť"</string>
+    <string name="safety_center_issue_card_dismiss_confirmation_title" msgid="2734809473425036382">"Chcete varovanie zavrieť?"</string>
+    <string name="safety_center_issue_card_dismiss_confirmation_message" msgid="3775418736671093563">"Nastavenia zabezpečenia a ochrany súkromia môžete kedykoľvek skontrolovať  a stupeň ochrany zvýšiť"</string>
     <string name="safety_center_issue_card_confirm_dismiss_button" msgid="5884137843083634556">"Zavrieť"</string>
     <string name="safety_center_issue_card_cancel_dismiss_button" msgid="2874578798877712346">"Zrušiť"</string>
     <string name="safety_center_entries_category_title" msgid="34356964062813115">"Nastavenia"</string>
