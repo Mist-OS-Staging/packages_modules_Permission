@@ -1044,7 +1044,9 @@ public class GrantPermissionsActivity extends SettingsActivity
 
     @Override
     public boolean isExpressiveDesignEnabled() {
-        return SdkLevel.isAtLeastB() && DeviceUtils.isHandheld() && getResources().getBoolean(
+        return SdkLevel.isAtLeastB() && DeviceUtils.isHandheld()
+                && com.android.settingslib.widget.theme.flags.Flags.isExpressiveDesignEnabled()
+                && getResources().getBoolean(
                 R.bool.config_enableExpressiveDesignInRequestPermissionDialog);
     }
 

@@ -51,6 +51,7 @@ import com.android.permissioncontroller.permission.utils.Utils
 import com.android.role.controller.model.Roles
 import com.android.settingslib.widget.ExpressiveDesignEnabledProvider
 import com.android.settingslib.widget.SettingsThemeHelper
+import com.android.settingslib.widget.theme.flags.Flags as SettingsLibFlags
 
 @Keep
 @RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
@@ -259,6 +260,7 @@ class EnhancedConfirmationDialogActivity : FragmentActivity(), ExpressiveDesignE
     override fun isExpressiveDesignEnabled(): Boolean {
         return SdkLevel.isAtLeastB() &&
             DeviceUtils.isHandheld() &&
+            SettingsLibFlags.isExpressiveDesignEnabled() &&
             getResources()
                 .getBoolean(R.bool.config_enableExpressiveDesignInEnhancedConfirmationDialog)
     }
