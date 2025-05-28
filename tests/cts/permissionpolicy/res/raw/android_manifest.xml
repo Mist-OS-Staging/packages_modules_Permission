@@ -9100,6 +9100,18 @@
         android:protectionLevel="signature|role|privileged"
         android:featureFlag="android.permission.flags.text_classifier_choice_api_enabled"/>
 
+    <!--
+        @SystemApi
+        @FlaggedApi(android.permission.flags.Flags.FLAG_SUPERVISION_ROLE_ENABLED)
+        Must be required by a {@link android.app.supervision.SupervisionAppService},
+        to ensure that only the system can bind to it.
+        <p>Protection level: signature
+        @hide
+    -->
+    <permission android:name="android.permission.BIND_SUPERVISION_APP_SERVICE"
+        android:protectionLevel="signature"
+        android:featureFlag="android.permission.flags.supervision_role_enabled" />
+
     <!-- @SystemApi
         @FlaggedApi(android.permission.flags.Flags.FLAG_APP_FUNCTION_ACCESS_API_ENABLED)
         This permission is required to set the access state flags on an agent, to access
