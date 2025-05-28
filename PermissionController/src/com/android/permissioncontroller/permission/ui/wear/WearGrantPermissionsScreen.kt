@@ -24,6 +24,7 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.res.stringResource
 import androidx.core.util.size
 import androidx.wear.compose.material3.Dialog
+import androidx.wear.compose.material3.LocalContentColor
 import com.android.permissioncontroller.R
 import com.android.permissioncontroller.permission.ui.GrantPermissionsActivity.ALLOW_ALWAYS_BUTTON
 import com.android.permissioncontroller.permission.ui.GrantPermissionsActivity.ALLOW_BUTTON
@@ -42,6 +43,7 @@ import com.android.permissioncontroller.permission.ui.wear.GrantPermissionsWearV
 import com.android.permissioncontroller.permission.ui.wear.model.WearGrantPermissionsViewModel
 import com.android.permissioncontroller.wear.permission.components.ScrollableScreen
 import com.android.permissioncontroller.wear.permission.components.material3.WearPermissionButton
+import com.android.permissioncontroller.wear.permission.components.material3.WearPermissionIconBuilder
 import com.android.permissioncontroller.wear.permission.components.material3.WearPermissionToggleControl
 import com.android.permissioncontroller.wear.permission.components.material3.WearPermissionToggleControlType
 import com.android.permissioncontroller.wear.permission.components.theme.ResourceHelper
@@ -60,11 +62,14 @@ fun WearGrantPermissionsScreen(
     val preciseLocationChecked = viewModel.preciseLocationCheckedLiveData.observeAsState(false)
     val buttonVisibilities = viewModel.buttonVisibilitiesLiveData.observeAsState(emptyList())
     val materialUIVersion = ResourceHelper.materialUIVersionInApp
+    val tintColor = LocalContentColor.current
+    val imageBuilder = icon.value?.let { WearPermissionIconBuilder.builder(it).tint(tintColor) }
+
     ScrollableScreen(
         materialUIVersion = materialUIVersion,
         asScalingList = true,
         showTimeText = false,
-        image = icon.value,
+        imageBuilder = imageBuilder,
         title = groupMessage.value,
         subtitle = detailMessage.value,
         titleTestTag = "com.android.permissioncontroller:id/permission_message",
