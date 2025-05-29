@@ -914,6 +914,12 @@
                 android:protectionLevel="signature|privileged"
                 android:featureFlag="android.provider.user_keys" />
 
+    <!-- This permission protects a content provider within home/launcher applications, enabling management of home screen metadata such as shortcut placement, launch intents, and labels. -->
+    <!-- @FlaggedApi(android.provider.Flags.FLAG_LAUNCHER_DATA_ACCESS) -->
+    <permission android:name="android.permission.LAUNCHER_DATA_ACCESS"
+      android:protectionLevel="signatureOrSystem"
+      android:featureFlag="android.provider.launcher_data_access" />
+
     <!-- Allows an application to set default account for new contacts.
         <p>This permission is only granted to system applications fulfilling the Contacts app role.
         <p>Protection level: internal|role
