@@ -914,6 +914,12 @@
                 android:protectionLevel="signature|privileged"
                 android:featureFlag="android.provider.user_keys" />
 
+    <!-- This permission protects a content provider within home/launcher applications, enabling management of home screen metadata such as shortcut placement, launch intents, and labels. -->
+    <!-- @FlaggedApi(android.provider.Flags.FLAG_LAUNCHER_DATA_ACCESS) -->
+    <permission android:name="android.permission.LAUNCHER_DATA_ACCESS"
+      android:protectionLevel="signatureOrSystem"
+      android:featureFlag="android.provider.launcher_data_access" />
+
     <!-- Allows an application to set default account for new contacts.
         <p>This permission is only granted to system applications fulfilling the Contacts app role.
         <p>Protection level: internal|role
@@ -9099,6 +9105,18 @@
     <permission android:name="android.permission.ACCESS_TEXT_CLASSIFIER_BY_TYPE"
         android:protectionLevel="signature|role|privileged"
         android:featureFlag="android.permission.flags.text_classifier_choice_api_enabled"/>
+
+    <!--
+        @SystemApi
+        @FlaggedApi(android.permission.flags.Flags.FLAG_SUPERVISION_ROLE_ENABLED)
+        Must be required by a {@link android.app.supervision.SupervisionAppService},
+        to ensure that only the system can bind to it.
+        <p>Protection level: signature
+        @hide
+    -->
+    <permission android:name="android.permission.BIND_SUPERVISION_APP_SERVICE"
+        android:protectionLevel="signature"
+        android:featureFlag="android.permission.flags.supervision_role_enabled" />
 
     <!-- @SystemApi
         @FlaggedApi(android.permission.flags.Flags.FLAG_APP_FUNCTION_ACCESS_API_ENABLED)
