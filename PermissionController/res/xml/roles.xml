@@ -1380,6 +1380,10 @@
                 featureFlag="android.permission.flags.Flags.supervisionRolePermissionUpdateEnabled"/>
             <permission name="android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS"
                 featureFlag="android.permission.flags.Flags.supervisionRolePermissionUpdateEnabled"/>
+            <permission name="android.permission.MANAGE_DEVICE_POLICY_CAMERA"
+                featureFlag="android.app.admin.flags.Flags.setApplicationRestrictionsCoexistence"/>
+            <permission name="android.permission.MANAGE_DEVICE_POLICY_PROFILES"
+                featureFlag="android.app.admin.flags.Flags.setApplicationRestrictionsCoexistence"/>
         </permissions>
     </role>
 
