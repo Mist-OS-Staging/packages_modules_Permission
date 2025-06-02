@@ -330,10 +330,15 @@ class DeviceStateAppFunctionService : AppFunctionService(), PermissionsUsagesCha
                 if (group.name != Manifest.permission_group.LOCATION) {
                     continue
                 }
-                val coarseLocation = group.getPermission(ACCESS_COARSE_LOCATION)!!
+                val coarseLocation = group.getPermission(ACCESS_COARSE_LOCATION)
                 val fineLocation = group.getPermission(ACCESS_FINE_LOCATION)
 
-                if (fineLocation == null || !group.areRuntimePermissionsGranted()) {
+                if (
+                    coarseLocation == null ||
+                        fineLocation == null ||
+                        !group.areRuntimePermissionsGranted() ||
+                        group.isOneTime
+                ) {
                     return null
                 }
 
