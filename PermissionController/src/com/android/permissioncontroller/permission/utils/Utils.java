@@ -899,7 +899,7 @@ public final class Utils {
      * when the platform is T+, and the package has legacy storage access (i.e., either the package
      * has a targetSdk less than Q, or has a targetSdk equal to Q and has OPSTR_LEGACY_STORAGE).
      *
-     * TODO jaysullivan: This is always calling AppOpsManager; not taking advantage of LiveData
+     * NOTE: This is always calling AppOpsManager; not taking advantage of LiveData
      *
      * @param pkg The package to check
      */
