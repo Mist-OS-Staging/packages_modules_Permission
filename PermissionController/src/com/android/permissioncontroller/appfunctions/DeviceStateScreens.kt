@@ -24,6 +24,13 @@ import android.net.Uri
 import android.os.UserHandle
 import android.provider.Settings
 import com.android.permissioncontroller.R
+import com.android.permissioncontroller.appfunctions.AppFunctionsUtil.ACTION_ADDITIONAL_PERMISSIONS
+import com.android.permissioncontroller.appfunctions.AppFunctionsUtil.ACTION_MANAGE_APP_PERMISSION
+import com.android.permissioncontroller.appfunctions.AppFunctionsUtil.ACTION_MANAGE_APP_PERMISSIONS
+import com.android.permissioncontroller.appfunctions.AppFunctionsUtil.ACTION_MANAGE_PERMISSIONS
+import com.android.permissioncontroller.appfunctions.AppFunctionsUtil.ACTION_MANAGE_PERMISSION_APPS
+import com.android.permissioncontroller.appfunctions.AppFunctionsUtil.ACTION_MANAGE_UNUSED_APPS
+import com.android.permissioncontroller.appfunctions.AppFunctionsUtil.EXTRA_DEVICE_STATE_KEY
 import com.android.permissioncontroller.permission.model.livedatatypes.AppPermGroupUiInfo.PermGrantState
 import com.android.permissioncontroller.permission.ui.model.UnusedAppsViewModel.UnusedPeriod
 import com.android.permissioncontroller.permission.utils.KotlinUtils.getPermGroupLabel
@@ -32,7 +39,7 @@ import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateI
 import com.google.android.appfunctions.schema.common.v1.devicestate.LocalizedString
 import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenDeviceStates
 
-abstract class PerScreenDeviceState {
+abstract class PerScreenDeviceState(val context: Context) {
     /** A unique key that identifies a screen. Used only internally */
     abstract val key: String
 
@@ -42,8 +49,15 @@ abstract class PerScreenDeviceState {
     /** Path to the screen from Settings page, represented by a list of each page along the way */
     abstract val paths: List<String>
 
+    /** Intent of the screen to be used by deeplinking */
+    abstract val intent: Intent
+
     /** Intent Uri of the screen */
-    abstract val intentUri: String
+    val intentUri: String
+        get() =
+            intent
+                .putExtra(EXTRA_DEVICE_STATE_KEY, AppFunctionsUtil.getPasswordForIntent(context))
+                .toUri(Intent.URI_INTENT_SCHEME)
 
     open fun getDeviceStateItems(): List<DeviceStateItem> {
         return emptyList()
@@ -65,7 +79,7 @@ abstract class PerScreenDeviceState {
     }
 }
 
-class PermissionManagerScreen : PerScreenDeviceState() {
+class PermissionManagerScreen(context: Context) : PerScreenDeviceState(context) {
     override val key: String
         get() = KEY
 
@@ -76,8 +90,8 @@ class PermissionManagerScreen : PerScreenDeviceState() {
     override val paths: List<String>
         get() = listOf("Security & privacy", "Privacy controls", "Permission manager")
 
-    override val intentUri: String
-        get() = Intent(Intent.ACTION_MANAGE_PERMISSIONS).toUri(Intent.URI_INTENT_SCHEME)
+    override val intent: Intent
+        get() = Intent(ACTION_MANAGE_PERMISSIONS)
 
     companion object {
         const val KEY = "permission_manager"
@@ -85,8 +99,8 @@ class PermissionManagerScreen : PerScreenDeviceState() {
     }
 }
 
-class PermissionAppsScreen(val context: Context, val permissionGroup: String) :
-    PerScreenDeviceState() {
+class PermissionAppsScreen(context: Context, val permissionGroup: String) :
+    PerScreenDeviceState(context) {
     private val permissionGroupLabel: String =
         getPermGroupLabel(context, permissionGroup).toString()
 
@@ -105,26 +119,56 @@ class PermissionAppsScreen(val context: Context, val permissionGroup: String) :
                 permissionGroupLabel,
             )
 
-    override val intentUri: String
+    override val intent: Intent
         get() =
-            Intent(Intent.ACTION_MANAGE_PERMISSION_APPS)
-                .apply { putExtra(Intent.EXTRA_PERMISSION_GROUP_NAME, permissionGroup) }
-                .toUri(Intent.URI_INTENT_SCHEME)
+            Intent(ACTION_MANAGE_PERMISSION_APPS).apply {
+                putExtra(Intent.EXTRA_PERMISSION_GROUP_NAME, permissionGroup)
+            }
 
     companion object {
         const val KEY = "permission_apps"
     }
 }
 
+class AppPermissionsScreen(context: Context, val packageName: String) :
+    PerScreenDeviceState(context) {
+
+    private var packageLabel: String
+
+    init {
+        val appInfo = context.packageManager.getApplicationInfo(packageName, 0)
+        packageLabel = Utils.getFullAppLabel(appInfo, context)
+    }
+
+    override val key: String
+        get() = KEY
+
+    override val description: String
+        get() = "App Permissions: $packageLabel"
+
+    override val paths: List<String>
+        get() = listOf("Apps", packageLabel, "Permissions")
+
+    override val intent: Intent
+        get() =
+            Intent(ACTION_MANAGE_APP_PERMISSIONS).apply {
+                putExtra(Intent.EXTRA_PACKAGE_NAME, packageName)
+            }
+
+    companion object {
+        const val KEY = "app_permissions"
+    }
+}
+
 class AppPermissionScreen(
-    val context: Context,
+    context: Context,
     val permissionGroup: String,
     val packageName: String,
     val userHandle: UserHandle,
     val permissionGrantState: PermGrantState,
     val lastAccessTime: Long,
     val usePreciseLocation: Boolean?,
-) : PerScreenDeviceState() {
+) : PerScreenDeviceState(context) {
     private val permissionGroupLabel: String =
         getPermGroupLabel(context, permissionGroup).toString()
 
@@ -155,15 +199,13 @@ class AppPermissionScreen(
                 packageLabel,
             )
 
-    override val intentUri: String
+    override val intent: Intent
         get() =
-            Intent(Intent.ACTION_MANAGE_APP_PERMISSION)
-                .apply {
-                    putExtra(Intent.EXTRA_PERMISSION_GROUP_NAME, permissionGroup)
-                    putExtra(Intent.EXTRA_PACKAGE_NAME, packageName)
-                    putExtra(Intent.EXTRA_USER, userHandle)
-                }
-                .toUri(Intent.URI_INTENT_SCHEME)
+            Intent(ACTION_MANAGE_APP_PERMISSION).apply {
+                putExtra(Intent.EXTRA_PERMISSION_GROUP_NAME, permissionGroup)
+                putExtra(Intent.EXTRA_PACKAGE_NAME, packageName)
+                putExtra(Intent.EXTRA_USER, userHandle)
+            }
 
     override fun getDeviceStateItems(): List<DeviceStateItem> {
         val result: MutableList<DeviceStateItem> = mutableListOf()
@@ -241,7 +283,7 @@ class AppPermissionScreen(
     }
 }
 
-class UnusedAppsScreen : PerScreenDeviceState() {
+class UnusedAppsScreen(context: Context) : PerScreenDeviceState(context) {
     override val key: String
         get() = KEY
 
@@ -251,8 +293,8 @@ class UnusedAppsScreen : PerScreenDeviceState() {
     override val paths: List<String>
         get() = listOf("Apps", "Unused apps")
 
-    override val intentUri: String
-        get() = Intent(Intent.ACTION_MANAGE_UNUSED_APPS).toUri(Intent.URI_INTENT_SCHEME)
+    override val intent: Intent
+        get() = Intent(ACTION_MANAGE_UNUSED_APPS)
 
     companion object {
         const val KEY = "unused_apps"
@@ -261,10 +303,10 @@ class UnusedAppsScreen : PerScreenDeviceState() {
 }
 
 class UnusedAppLastUsageScreen(
-    val context: Context,
+    context: Context,
     val packageName: String,
     private val lastUsageTime: Long,
-) : PerScreenDeviceState() {
+) : PerScreenDeviceState(context) {
     private var packageLabel: String
 
     init {
@@ -285,11 +327,11 @@ class UnusedAppLastUsageScreen(
     override val paths: List<String>
         get() = listOf("Apps", "Unused apps", packageLabel)
 
-    override val intentUri: String
+    override val intent: Intent
         get() =
-            Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
-                .apply { setData(Uri.fromParts("package", packageName, null)) }
-                .toUri(Intent.URI_INTENT_SCHEME)
+            Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                setData(Uri.fromParts("package", packageName, null))
+            }
 
     override fun getDeviceStateItems(): List<DeviceStateItem> {
         val usagePeriod = UnusedPeriod.findLongestValidPeriod(lastUsageTime)
@@ -316,11 +358,38 @@ class UnusedAppLastUsageScreen(
     }
 }
 
+class AdditionalPermissionsScreen(context: Context) : PerScreenDeviceState(context) {
+    override val key: String
+        get() = KEY
+
+    override val description: String
+        get() = DESCRIPTION
+
+    override val paths: List<String>
+        get() =
+            listOf(
+                "Security & privacy",
+                "Privacy controls",
+                "Permission manager",
+                "Additional permissions",
+            )
+
+    override val intent: Intent
+        get() = Intent(ACTION_ADDITIONAL_PERMISSIONS)
+
+    companion object {
+        const val KEY = "additional_permissions"
+        const val DESCRIPTION = "Additional Permissions"
+    }
+}
+
 val deviceStateScreenKeys: List<String> =
     listOf(
         PermissionManagerScreen.KEY,
         PermissionAppsScreen.KEY,
+        AppPermissionsScreen.KEY,
         AppPermissionScreen.KEY,
         UnusedAppsScreen.KEY,
         UnusedAppLastUsageScreen.KEY,
+        AdditionalPermissionsScreen.KEY,
     )
