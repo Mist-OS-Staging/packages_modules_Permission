@@ -1385,7 +1385,7 @@
 
     <role
         name="android.app.role.SUPERVISION"
-        behavior="v36_1.SupervisionRoleBehavior"
+        behavior="v36r1.SupervisionRoleBehavior"
         exclusive="false"
         exclusivity="none"
         featureFlag="android.permission.flags.Flags.supervisionRoleEnabled"

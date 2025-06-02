@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.role.controller.behavior.v36_1;
+package com.android.role.controller.behavior.v36r1;
 
 import android.app.supervision.SupervisionManager;
 import android.content.Context;
