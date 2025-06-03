@@ -490,7 +490,7 @@
         <activity android:name="com.android.permissioncontroller.role.ui.SpecialAppAccessActivity"
                   android:theme="@style/Theme.PermissionController.Settings.FilterTouches" />
 
-        <activity android:name="com.android.permissioncontroller.role.ui.RoleSearchTrampolineActivity"
+        <activity android:name="com.android.permissioncontroller.role.ui.RoleTrampolineActivity"
                   android:excludeFromRecents="true"
                   android:noHistory="true"
                   android:exported="true"
@@ -498,6 +498,7 @@
             <intent-filter android:priority="1">
                 <action android:name="com.android.permissioncontroller.settingssearch.action.MANAGE_DEFAULT_APP" />
                 <action android:name="com.android.permissioncontroller.settingssearch.action.MANAGE_SPECIAL_APP_ACCESS" />
+                <action android:name="com.android.permissioncontroller.devicestate.action.MANAGE_DEFAULT_APP" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

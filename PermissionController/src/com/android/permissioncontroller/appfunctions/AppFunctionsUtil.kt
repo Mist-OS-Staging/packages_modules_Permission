@@ -41,6 +41,9 @@ object AppFunctionsUtil {
     const val ACTION_ADDITIONAL_PERMISSIONS =
         "com.android.permissioncontroller.devicestate.action.ADDITIONAL_PERMISSIONS"
 
+    const val ACTION_MANAGE_DEFAULT_APP =
+        "com.android.permissioncontroller.devicestate.action.MANAGE_DEFAULT_APP"
+
     const val LOG_TAG = "AppFunctionsUtil"
     const val EXTRA_DEVICE_STATE_KEY = "com.android.permissioncontroller.devicestate.key"
     const val DEVICE_STATE_PASSWORD_KEY = "device_state_password"
