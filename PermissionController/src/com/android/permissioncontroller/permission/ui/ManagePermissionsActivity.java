@@ -74,6 +74,7 @@ import com.android.permissioncontroller.permission.ui.auto.AutoUnusedAppsFragmen
 import com.android.permissioncontroller.permission.ui.auto.dashboard.AutoPermissionUsageDetailsFragment;
 import com.android.permissioncontroller.permission.ui.auto.dashboard.AutoPermissionUsageFragment;
 import com.android.permissioncontroller.permission.ui.handheld.AppPermissionGroupsFragment;
+import com.android.permissioncontroller.permission.ui.handheld.ManageCustomPermissionsFragment;
 import com.android.permissioncontroller.permission.ui.handheld.PermissionAppsFragment;
 import com.android.permissioncontroller.permission.ui.handheld.v31.PermissionDetailsWrapperFragment;
 import com.android.permissioncontroller.permission.ui.handheld.v31.PermissionUsageWrapperFragment;
@@ -553,6 +554,14 @@ public final class ManagePermissionsActivity extends SettingsActivity {
                             R.id.app_data_sharing_updates);
                 } else {
                     finishAfterTransition();
+                    return;
+                }
+            } break;
+
+            case Constants.ACTION_ADDITIONAL_PERMISSIONS: {
+                if (!DeviceUtils.isAuto(this) && !DeviceUtils.isTelevision(this)) {
+                    Bundle args = ManageCustomPermissionsFragment.createArgs(sessionId);
+                    setNavGraph(args, R.id.manage_custom);
                     return;
                 }
             } break;

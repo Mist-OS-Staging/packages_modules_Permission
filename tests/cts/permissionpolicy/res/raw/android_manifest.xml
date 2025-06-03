@@ -8573,11 +8573,19 @@
     <!-- Allows an application to perform actions on behalf of users inside of
          applications.
          <p>This permission is currently only granted to privileged system apps.
-         <p>Protection level: internal|privileged
-         @FlaggedApi(android.app.appfunctions.flags.Flags.FLAG_ENABLE_APP_FUNCTION_MANAGER)  -->
+         <p>Protection level: internal|privileged -->
     <permission android:name="android.permission.EXECUTE_APP_FUNCTIONS"
-        android:featureFlag="android.app.appfunctions.flags.enable_app_function_manager"
+        android:featureFlag="!android.permission.flags.app_function_access_api_enabled"
         android:protectionLevel="internal|privileged" />
+
+    <!-- Allows an application to perform actions on behalf of users inside of
+         applications.
+         <p>On top of the EXECUTE_APP_FUNCTIONS permission, the app must also be allowlisted by the
+            device to be able to call another app's app function.
+         <p>Protection level: normal -->
+    <permission android:name="android.permission.EXECUTE_APP_FUNCTIONS"
+        android:featureFlag="android.permission.flags.app_function_access_api_enabled"
+        android:protectionLevel="normal" />
 
     <!-- Allows an application to display its suggestions using the autofill framework.
          <p>For now, this permission is only granted to the Browser application.
@@ -9159,6 +9167,17 @@
     -->
     <permission android:name="android.permission.BIND_VERIFICATION_AGENT"
         android:protectionLevel="internal"
+        android:featureFlag="android.content.pm.verification_service" />
+
+    <!-- @SystemApi
+        @FlaggedApi("android.content.pm.verification_service")
+        Allows an application to set user's response for an incomplete verification. This can be
+        held only by the default PackageInstaller package on the device
+        <p>Protection level: internal|installer
+        @hide
+    -->
+    <permission android:name="android.permission.SET_VERIFICATION_USER_RESPONSE"
+        android:protectionLevel="internal|installer"
         android:featureFlag="android.content.pm.verification_service" />
 
     <!-- Attribution for Geofencing service. -->
