@@ -33,6 +33,7 @@ import android.os.Build
 import android.os.CancellationSignal
 import android.os.OutcomeReceiver
 import android.os.UserHandle
+import android.util.Log
 import androidx.annotation.RequiresApi
 import com.android.permissioncontroller.appfunctions.AdditionalPermissionsScreen
 import com.android.permissioncontroller.appfunctions.AppPermissionScreen
@@ -129,9 +130,18 @@ class DeviceStateAppFunctionService : AppFunctionService(), PermissionsUsagesCha
     }
 
     private suspend fun buildDeviceStateResponse(): DeviceStateResponse {
-        val perScreenDeviceStatesList = deviceStateScreenKeys.map { buildPerScreenDeviceStates(it) }
+        val startTime = System.currentTimeMillis()
+        val perScreenDeviceStatesList = coroutineScope {
+            deviceStateScreenKeys.map { async { buildPerScreenDeviceStates(it) } }.awaitAll()
+        }
         val locale = applicationContext.resources.configuration.locales[0]
 
+        if (DEBUG) {
+            Log.i(
+                TAG,
+                "Total time spent to fetch data = ${System.currentTimeMillis() - startTime} ms",
+            )
+        }
         return DeviceStateResponse(
             perScreenDeviceStates = perScreenDeviceStatesList.flatten(),
             deviceLocale = locale.toString(),
@@ -139,6 +149,8 @@ class DeviceStateAppFunctionService : AppFunctionService(), PermissionsUsagesCha
     }
 
     private suspend fun buildPerScreenDeviceStates(screenKey: String): List<PerScreenDeviceStates> {
+        val startTime = System.currentTimeMillis()
+
         when (screenKey) {
             PermissionManagerScreen.KEY -> {
                 return listOf(PermissionManagerScreen(applicationContext).toPerScreenDeviceStates())
@@ -161,15 +173,25 @@ class DeviceStateAppFunctionService : AppFunctionService(), PermissionsUsagesCha
                         .map { packageInfo -> packageInfo.packageName }
                         .toList()
 
-                return coroutineScope {
-                        allPackages.map {
-                            async {
-                                AppPermissionsScreen(applicationContext, it)
-                                    .toPerScreenDeviceStates()
+                val result =
+                    coroutineScope {
+                            allPackages.map {
+                                async {
+                                    AppPermissionsScreen(applicationContext, it)
+                                        .toPerScreenDeviceStates()
+                                }
                             }
                         }
-                    }
-                    .awaitAll()
+                        .awaitAll()
+
+                if (DEBUG) {
+                    Log.i(
+                        TAG,
+                        "Time spent on ${AppPermissionsScreen.KEY} = ${System.currentTimeMillis() - startTime} ms",
+                    )
+                }
+
+                return result
             }
             AppPermissionScreen.KEY -> {
                 val filterBeginTimeMillis =
@@ -191,7 +213,7 @@ class DeviceStateAppFunctionService : AppFunctionService(), PermissionsUsagesCha
 
                 val appPermissionUsages = permissionUsages.usages
 
-                return coroutineScope {
+                val result = coroutineScope {
                     SUPPORTED_PERMISSION_GROUPS.map { permissionGroup ->
                             async {
                                 val packagePermissionInfoMap =
@@ -231,6 +253,15 @@ class DeviceStateAppFunctionService : AppFunctionService(), PermissionsUsagesCha
                         .awaitAll()
                         .flatten()
                 }
+
+                if (DEBUG) {
+                    Log.i(
+                        TAG,
+                        "Time spent on ${AppPermissionScreen.KEY} = ${System.currentTimeMillis() - startTime} ms",
+                    )
+                }
+
+                return result
             }
             UnusedAppsScreen.KEY -> {
                 return listOf(UnusedAppsScreen(applicationContext).toPerScreenDeviceStates())
@@ -265,6 +296,13 @@ class DeviceStateAppFunctionService : AppFunctionService(), PermissionsUsagesCha
                                 lastUsageTime = lastUsageTime,
                             )
                             .toPerScreenDeviceStates()
+                    )
+                }
+
+                if (DEBUG) {
+                    Log.i(
+                        TAG,
+                        "Time spent on ${UnusedAppLastUsageScreen.KEY} = ${System.currentTimeMillis() - startTime} ms",
                     )
                 }
 
@@ -391,10 +429,11 @@ class DeviceStateAppFunctionService : AppFunctionService(), PermissionsUsagesCha
     private data class PackageLastUsageTime(val packageName: String, val usageTime: Long)
 
     companion object {
-        private const val TAG = "DeviceStateAppFunctionService"
+        private const val TAG = "DeviceStateService"
         private const val APP_FUNCTION_IDENTIFIER = "getPermissionsDeviceState"
+        private const val DEBUG = false
         private val SUPPORTED_PERMISSION_GROUPS =
-            listOf(
+            setOf(
                 Manifest.permission_group.LOCATION,
                 Manifest.permission_group.CONTACTS,
                 Manifest.permission_group.CALL_LOG,
