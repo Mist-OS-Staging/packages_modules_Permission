@@ -385,9 +385,15 @@ public class GrantPermissionsActivity extends SettingsActivity
                     finishAfterTransition();
                     return;
                 }
-                // Merge the old dialogs into the new
-                onNewFollowerActivity(current, current.mRequestedPermissions, true);
-                sCurrentGrantRequests.put(mKey, this);
+                if (icicle != null) {
+                    // This dialog is being recreated, so it should be considered a follower
+                    mDelegated = true;
+                    current.onNewFollowerActivity(this, mRequestedPermissions, true);
+                } else {
+                    // Merge the old dialogs into the new
+                    onNewFollowerActivity(current, current.mRequestedPermissions, true);
+                    sCurrentGrantRequests.put(mKey, this);
+                }
             }
         }
 

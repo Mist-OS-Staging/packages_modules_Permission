@@ -136,6 +136,7 @@ android_library {
         "SettingsLibCollapsingToolbarBaseActivity",
         "SettingsLibActivityEmbedding",
         "SettingsLibSettingsTheme",
+        "SettingsLibCategory",
         "SettingsLibFooterPreference",
         "SettingsLibSelectorWithWidgetPreference",
         "SettingsLibTwoTargetPreference",
@@ -216,5 +217,9 @@ android_app {
     apex_available: [
         "//apex_available:platform",
         "com.android.permission",
+    ],
+    licenses: [
+        "packages_modules_Permission_PermissionController_license",
+        "opensourcerequest",
     ],
 }

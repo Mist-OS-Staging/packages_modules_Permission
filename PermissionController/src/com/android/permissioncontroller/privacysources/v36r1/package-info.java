@@ -15,4 +15,4 @@
  */
 
 @androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.BAKLAVA)
-package com.android.role.controller.behavior.v36_1;
+package com.android.permissioncontroller.privacysources.v36r1;
