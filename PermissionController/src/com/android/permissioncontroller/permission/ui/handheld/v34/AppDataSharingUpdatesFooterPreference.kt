@@ -31,8 +31,11 @@ import com.android.settingslib.widget.SettingsThemeHelper
 /** A preference for a footer with an icon and a link. */
 class AppDataSharingUpdatesFooterPreference : Preference {
     constructor(c: Context) : super(c)
+
     constructor(c: Context, a: AttributeSet) : super(c, a)
+
     constructor(c: Context, a: AttributeSet, attr: Int) : super(c, a, attr)
+
     constructor(c: Context, a: AttributeSet, attr: Int, res: Int) : super(c, a, attr, res)
 
     private var footerMessageView: TextView? = null
@@ -81,7 +84,7 @@ class AppDataSharingUpdatesFooterPreference : Preference {
             },
             0,
             footerLink.length,
-            0
+            0,
         )
         footerLinkView?.let {
             it.visibility = if (onFooterLinkClick == null) View.GONE else View.VISIBLE
