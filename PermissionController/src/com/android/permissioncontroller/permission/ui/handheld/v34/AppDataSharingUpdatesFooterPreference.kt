@@ -26,6 +26,7 @@ import androidx.core.text.method.LinkMovementMethodCompat
 import androidx.preference.Preference
 import androidx.preference.PreferenceViewHolder
 import com.android.permissioncontroller.R
+import com.android.settingslib.widget.SettingsThemeHelper
 
 /** A preference for a footer with an icon and a link. */
 class AppDataSharingUpdatesFooterPreference : Preference {
@@ -38,7 +39,11 @@ class AppDataSharingUpdatesFooterPreference : Preference {
     private var footerLinkView: TextView? = null
 
     init {
-        layoutResource = R.layout.app_data_sharing_updates_footer_preference
+        if (SettingsThemeHelper.isExpressiveTheme(context)) {
+            layoutResource = R.layout.app_data_sharing_updates_footer_preference_expressive
+        } else {
+            layoutResource = R.layout.app_data_sharing_updates_footer_preference
+        }
     }
 
     /** Message for the footer. */

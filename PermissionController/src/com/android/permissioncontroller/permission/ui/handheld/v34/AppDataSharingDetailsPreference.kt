@@ -24,6 +24,7 @@ import androidx.core.view.isVisible
 import androidx.preference.Preference
 import androidx.preference.PreferenceViewHolder
 import com.android.permissioncontroller.R
+import com.android.settingslib.widget.SettingsThemeHelper
 
 /** A preference to show messaging below the page title in the [AppDataSharingUpdatesFragment]. */
 @RequiresApi(Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
@@ -34,7 +35,11 @@ class AppDataSharingDetailsPreference : Preference {
     constructor(c: Context, a: AttributeSet, attr: Int, res: Int) : super(c, a, attr, res)
 
     init {
-        layoutResource = R.layout.app_data_sharing_details_preference
+        if (SettingsThemeHelper.isExpressiveTheme(context)) {
+            layoutResource = R.layout.app_data_sharing_details_preference_expressive
+        } else {
+            layoutResource = R.layout.app_data_sharing_details_preference
+        }
     }
 
     /** Whether to show the no updates message. */
