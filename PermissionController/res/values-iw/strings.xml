@@ -635,9 +635,9 @@
     <string name="mic_toggle_description" msgid="9163104307990677157">"לאפליקציות ולשירותים. אם ההגדרה מושבתת, ייתכן שנתוני המיקרופון ישותפו כשתתבצע שיחה למספר חירום."</string>
     <string name="location_settings_subtitle" msgid="2328360561197430695">"הצגת אפליקציות ושירותים שיש להם גישה למיקום"</string>
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"הצגת גישה ללוח העריכה"</string>
-    <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"הצגת הודעה בזמן גישה של אפליקציות לטקסט, לתמונות או לכל תוכן אחר שהעתקת"</string>
+    <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"הצגת הודעה כשאפליקציות ניגשות לטקסט, לתמונות או לתכנים אחרים שהעתקת"</string>
     <string name="show_password_title" msgid="2877269286984684659">"הצגת סיסמאות"</string>
-    <string name="show_password_summary" msgid="1110166488865981610">"התווים יופיעו לפרקי זמן קצרים בזמן ההקלדה"</string>
+    <string name="show_password_summary" msgid="1110166488865981610">"התווים יופיעו לכמה רגעים כשאתה מקליד"</string>
     <string name="permission_rationale_message_location" msgid="2153841534298068414">"האפליקציה הזו הצהירה שהיא עשויה לשתף נתוני מיקום עם צדדים שלישיים"</string>
     <string name="permission_rationale_location_title" msgid="2404797182678793506">"שיתוף נתונים ומיקום"</string>
     <string name="permission_rationale_data_sharing_source_title" msgid="6874604543125814316">"מאיפה מגיע המידע לגבי שיתוף הנתונים"</string>
@@ -660,7 +660,7 @@
     <string name="app_location_permission_rationale_title" msgid="925420340572401350">"ייתכן שנתוני המיקום ישותפו"</string>
     <string name="app_location_permission_rationale_subtitle" msgid="6986985722752868692">"מפתחי האפליקציה הזו הצהירו שהאפליקציה עשויה לשתף את נתוני המיקום שלך עם צדדים שלישיים"</string>
     <string name="data_sharing_updates_title" msgid="7996933386875213859">"עדכונים לגבי שיתוף נתוני מיקום"</string>
-    <string name="data_sharing_updates_summary" msgid="764113985772233889">"בדיקת אפליקציות שהדרך שלהן לשתף נתוני מיקום השתנתה"</string>
+    <string name="data_sharing_updates_summary" msgid="764113985772233889">"בדוק את האפליקציות ששינו את שיתוף נתוני המיקום"</string>
     <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"באפליקציות האלה, השתנה האופן שבו הן עשויות לשתף את נתוני המיקום שלך. יכול להיות שהן לא שיתפו את הנתונים האלה בעבר, או שעכשיו הן משתפות את נתוני המיקום לצורכי פרסום ושיווק."</string>
     <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"המפתחים של האפליקציות האלה סיפקו מידע לגבי האופן שבו הנתונים משותפים עם חנות אפליקציות. המידע עשוי להתעדכן עם הזמן.\n\nנוהלי שיתוף הנתונים עשויים להשתנות בהתאם לגרסת האפליקציה, לשימוש בה, לאזור ולגיל המשתמש."</string>
     <string name="learn_about_data_sharing" msgid="4200480587079488045">"מידע נוסף על שיתוף נתונים"</string>
