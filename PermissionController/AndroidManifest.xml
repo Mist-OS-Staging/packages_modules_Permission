@@ -514,6 +514,36 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="com.android.permissioncontroller.appfunctions.ui.v36r1.AgentListActivity"
+            android:enabled="@bool/is_at_least_v36r1"
+            android:exported="true"
+            android:theme="@style/Theme.PermissionController.Settings.FilterTouches">
+            <intent-filter android:priority="1">
+                <action android:name="android.app.appfunctions.action.MANAGE_APP_FUNCTION_ACCESS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.android.permissioncontroller.appfunctions.ui.v36r1.AgentAccessActivity"
+            android:enabled="@bool/is_at_least_v36r1"
+            android:exported="true"
+            android:theme="@style/Theme.PermissionController.Settings.FilterTouches">
+            <intent-filter android:priority="1">
+                <action android:name="android.app.appfunctions.action.MANAGE_AGENT_APP_FUNCTION_ACCESS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.android.permissioncontroller.appfunctions.ui.v36r1.TargetAccessActivity"
+            android:enabled="@bool/is_at_least_v36r1"
+            android:exported="true"
+            android:theme="@style/Theme.PermissionController.Settings.FilterTouches">
+            <intent-filter android:priority="1">
+                <action android:name="android.app.appfunctions.action.MANAGE_TARGET_APP_FUNCTION_ACCESS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <provider android:name="com.android.permissioncontroller.permission.service.PermissionSearchIndexablesProvider"
             android:authorities="com.android.permissioncontroller"
             android:multiprocess="false"
