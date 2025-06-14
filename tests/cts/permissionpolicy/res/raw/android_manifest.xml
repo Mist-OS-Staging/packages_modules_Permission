@@ -9191,6 +9191,20 @@
         android:protectionLevel="internal"
         android:featureFlag="android.content.pm.verification_service" />
 
+    <!-- Permission required to access TV Watchdog Metrics
+     <p>Not for use by third-party applications.</p>
+     @hide -->
+    <permission android:name="android.permission.COLLECT_TV_WATCHDOG_METRICS"
+        android:protectionLevel="signature|privileged"
+        android:featureFlag="android.media.tv.flags.enable_tv_watchdog_emmc_protection" />
+
+    <!-- Permission required to control configuration for TV Watchdog Metrics
+     <p>Not for use by third-party applications.</p>
+     @hide -->
+    <permission android:name="android.permission.CONTROL_TV_WATCHDOG_CONFIG"
+        android:protectionLevel="signature|privileged"
+        android:featureFlag="android.media.tv.flags.enable_tv_watchdog_emmc_protection" />
+
     <!-- @SystemApi
         @FlaggedApi("android.content.pm.verification_service")
         Allows an application to set user's response for an incomplete developer verification. This can be
