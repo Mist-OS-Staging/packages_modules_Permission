@@ -23,4 +23,21 @@
      entry will navigate to App Function Access Settings page, which displays apps which implement
      App Function agents. [CHAR LIMIT=130] -->
     <string name="app_function_access_settings_summary" description="The summary of the entry for App Function Access Settings, which describes the page contents">Perform actions on your device and in other apps</string>
+
+    <!-- Summary for App Function Agent List Settings page. [CHAR LIMIT=130] -->
+    <string name="app_function_agent_list_summary" description="The summary of the App Function Agent list Settings, which describes the page contents">Assistant apps that can access apps and device functions on your device</string>
+    <!-- Label when there are no agent apps available for app function agent list [CHAR LIMIT=30] -->
+    <string name="app_function_agent_list_empty" description="Label when there are no agent apps available for app function agent list">You don’t currently have any agent apps.</string>
+
+    <!-- Summary for App Function Agent Access Settings page. [CHAR LIMIT=130] -->
+    <string name="app_function_agent_access_summary" description="The summary of the App Function Agent Access Settings, which describes the page contents">Apps and system settings <xliff:g id="app_name" example="Example Agent App">%1$s</xliff:g> can access to perform actions</string>
+    <!-- Label when there are no agent apps available for app function agent list [CHAR LIMIT=30] -->
+    <string name="app_function_agent_access_empty" description="Label when there are no target apps available for app function agent access">You don’t currently have any target apps.</string>
+
+    <!-- Title for App Function Target Access Settings page. [CHAR LIMIT=70] -->
+    <string name="app_function_target_access_title">Agent control of <xliff:g id="app_name" example="Example App">%1$s</xliff:g></string>
+    <!-- Summary for App Function Target Access Settings page. [CHAR LIMIT=130] -->
+    <string name="app_function_target_access_summary" description="The summary of the App Function Target Access Settings, which describes the page contents">These agents can perform actions in <xliff:g id="app_name" example="Example App">%1$s</xliff:g>.</string>
+    <!-- Label when there are no agent apps available for app function agent list [CHAR LIMIT=30] -->
+    <string name="app_function_target_access_empty" description="Label when there are no agent apps available for app function agent access">You don’t currently have any agent apps.</string>
 </resources>
