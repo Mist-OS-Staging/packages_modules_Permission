@@ -235,7 +235,7 @@ class RoleUserState {
         synchronized (mLock) {
             if (!mRoles.containsKey(roleName)) {
                 Log.e(LOG_TAG, "Cannot set fallback enabled for unknown role, role: " + roleName
-                        + ", fallbackEnabled: " + fallbackEnabled);
+                        + ", fallbackEnabled: " + fallbackEnabled + ", user: " + mUserId);
                 return;
             }
             if (mFallbackEnabledRoles.contains(roleName) == fallbackEnabled) {
@@ -262,7 +262,8 @@ class RoleUserState {
                     String roleName = legacyFallbackDisabledRoles.get(i);
                     mFallbackEnabledRoles.remove(roleName);
                 }
-                Log.v(LOG_TAG, "Migrated fallback enabled roles: " + mFallbackEnabledRoles);
+                Log.v(LOG_TAG, "Migrated fallback enabled roles: " + mFallbackEnabledRoles
+                        + ", user: " + mUserId);
                 mVersion = VERSION_FALLBACK_STATE_MIGRATED;
                 scheduleWriteFileLocked();
             }
@@ -312,7 +313,7 @@ class RoleUserState {
             if (!mRoles.containsKey(roleName)) {
                 mRoles.put(roleName, new ArraySet<>());
                 mFallbackEnabledRoles.add(roleName);
-                Log.i(LOG_TAG, "Added new role: " + roleName);
+                Log.i(LOG_TAG, "Added new role: " + roleName + ", user: " + mUserId);
                 scheduleWriteFileLocked();
                 return true;
             } else {
@@ -337,7 +338,8 @@ class RoleUserState {
                     ArraySet<String> packageNames = mRoles.valueAt(i);
                     if (!packageNames.isEmpty()) {
                         Log.e(LOG_TAG, "Holders of a removed role should have been cleaned up,"
-                                + " role: " + roleName + ", holders: " + packageNames);
+                                + " role: " + roleName + ", holders: " + packageNames + ", user: "
+                                + mUserId);
                     }
                     mRoles.removeAt(i);
                     mFallbackEnabledRoles.remove(roleName);
@@ -372,7 +374,7 @@ class RoleUserState {
             ArraySet<String> roleHolders = mRoles.get(roleName);
             if (roleHolders == null) {
                 Log.e(LOG_TAG, "Cannot add role holder for unknown role, role: " + roleName
-                        + ", package: " + packageName);
+                        + ", package: " + packageName + ", user: " + mUserId);
                 return false;
             }
             changed = roleHolders.add(packageName);
@@ -403,7 +405,7 @@ class RoleUserState {
             ArraySet<String> roleHolders = mRoles.get(roleName);
             if (roleHolders == null) {
                 Log.e(LOG_TAG, "Cannot remove role holder for unknown role, role: " + roleName
-                        + ", package: " + packageName);
+                        + ", package: " + packageName + ", user: " + mUserId);
                 return false;
             }
 
