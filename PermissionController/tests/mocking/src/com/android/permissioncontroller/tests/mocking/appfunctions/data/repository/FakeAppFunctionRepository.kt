@@ -30,13 +30,11 @@ class FakeAppFunctionRepository(
 
     // ACCESS_REQUEST_STATE_GRANTED is 0, so returning default value 2 which is
     // ACCESS_REQUEST_STATE_UNREQUESTABLE
-    override suspend fun getAppFunctionAccessRequestState(
+    override suspend fun getAccessRequestState(
         agentPackageName: String,
         targetPackageName: String,
     ): Int = accessFlags.getOrDefault(agentPackageName to targetPackageName, 2)
 
-    override suspend fun getAppFunctionAccessFlags(
-        agentPackageName: String,
-        targetPackageName: String,
-    ): Int = accessFlags.getOrDefault(agentPackageName to targetPackageName, 0)
+    override suspend fun getAccessFlags(agentPackageName: String, targetPackageName: String): Int =
+        accessFlags.getOrDefault(agentPackageName to targetPackageName, 0)
 }
