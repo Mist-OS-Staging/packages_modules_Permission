@@ -24,6 +24,7 @@ import static android.view.WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM;
 import static android.view.WindowManager.LayoutParams.SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS;
 
 import static com.android.permissioncontroller.Constants.EXTRA_IS_ECM_IN_APP;
+import static com.android.permissioncontroller.flags.Flags.grantActivityPauseHandover;
 import static com.android.permissioncontroller.permission.ui.GrantPermissionsViewHandler.CANCELED;
 import static com.android.permissioncontroller.permission.ui.GrantPermissionsViewHandler.DENIED;
 import static com.android.permissioncontroller.permission.ui.GrantPermissionsViewHandler.DENIED_DO_NOT_ASK_AGAIN;
@@ -78,6 +79,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.StringRes;
 import androidx.core.util.Preconditions;
+import androidx.lifecycle.Lifecycle;
 
 import com.android.modules.utils.build.SdkLevel;
 import com.android.permissioncontroller.DeviceUtils;
@@ -371,13 +373,13 @@ public class GrantPermissionsActivity extends SettingsActivity
                 finishSystemStartedDialogsOnOtherTasksLocked();
             } else if (mIsSystemTriggered) {
                 // The system triggered dialog doesn't require results. Delegate, and finish.
-                current.onNewFollowerActivity(null, mRequestedPermissions, false);
+                current.onNewFollowerActivityLocked(null, mRequestedPermissions, false);
                 finishAfterTransition();
                 return;
             } else if (current.mIsSystemTriggered) {
                 // merge into the system triggered dialog, which has task overlay set
                 mDelegated = true;
-                current.onNewFollowerActivity(this, mRequestedPermissions, false);
+                current.onNewFollowerActivityLocked(this, mRequestedPermissions, false);
             } else {
                 // this + current + current.mFollowerActivities
                 if ((current.mFollowerActivities.size() + 2) > MAX_DIALOGS_PER_PKG_TASK) {
@@ -388,10 +390,10 @@ public class GrantPermissionsActivity extends SettingsActivity
                 if (icicle != null) {
                     // This dialog is being recreated, so it should be considered a follower
                     mDelegated = true;
-                    current.onNewFollowerActivity(this, mRequestedPermissions, true);
+                    current.onNewFollowerActivityLocked(this, mRequestedPermissions, true);
                 } else {
                     // Merge the old dialogs into the new
-                    onNewFollowerActivity(current, current.mRequestedPermissions, true);
+                    onNewFollowerActivityLocked(current, current.mRequestedPermissions, true);
                     sCurrentGrantRequests.put(mKey, this);
                 }
             }
@@ -584,7 +586,8 @@ public class GrantPermissionsActivity extends SettingsActivity
      *                 activity finishing
      * @param newPermissions The new permissions requested in the activity
      */
-    private void onNewFollowerActivity(@Nullable GrantPermissionsActivity follower,
+    @GuardedBy("sCurrentGrantRequests")
+    private void onNewFollowerActivityLocked(@Nullable GrantPermissionsActivity follower,
             @NonNull List<String> newPermissions, boolean followerIsOlder) {
         if (follower != null) {
             // Ensure the list of follower activities is a stack
@@ -615,9 +618,14 @@ public class GrantPermissionsActivity extends SettingsActivity
             olderActivity.mRootView.setVisibility(View.GONE);
         }
         if (follower != null && followerIsOlder) {
-            follower.mFollowerActivities.forEach((oldFollower) ->
-                    onNewFollowerActivity(oldFollower, new ArrayList<>(), true));
+            List<GrantPermissionsActivity> descendantFollowers = new ArrayList<>(
+                    follower.mFollowerActivities);
             follower.mFollowerActivities.clear();
+            for (GrantPermissionsActivity oldFollower: descendantFollowers) {
+                if (oldFollower != this) {
+                    onNewFollowerActivityLocked(oldFollower, new ArrayList<>(), true);
+                }
+            }
         }
 
         if (mRequestedPermissions.containsAll(newPermissions)) {
@@ -648,6 +656,32 @@ public class GrantPermissionsActivity extends SettingsActivity
         mViewModel.getRequestInfosLiveData().observe(this, this::onRequestInfoLoad);
         if (follower != null) {
             follower.mViewModel = mViewModel;
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if (!grantActivityPauseHandover()) {
+            return;
+        }
+
+        synchronized (sCurrentGrantRequests) {
+            for (GrantPermissionsActivity follower: mFollowerActivities) {
+                if (follower.getLifecycle().getCurrentState() == Lifecycle.State.RESUMED) {
+                    // Well this is awkward. This activity is paused, and one of its "follower"
+                    // activities is resumed. That means that activity needs to be made the leader
+                    follower.mDelegated = false;
+                    follower.onNewFollowerActivityLocked(this, mRequestedPermissions, true);
+                    mViewModel.getRequestInfosLiveData()
+                            .observe(follower, follower::onRequestInfoLoad);
+                    if (!mViewModel.getRequestInfosLiveData().isStale()) {
+                        // Immediately load the requestInfos
+                        follower.onRequestInfoLoad(mRequestInfos);
+                    }
+                    return;
+                }
+            }
         }
     }
 
