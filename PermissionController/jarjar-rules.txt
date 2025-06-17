@@ -10,6 +10,10 @@ rule android.app.appfunctions.flags.*FeatureFlags* com.android.permissioncontrol
 rule android.app.appfunctions.flags.FeatureFlags* com.android.permissioncontroller.jarjar.@0
 rule android.app.appfunctions.flags.FeatureFlags com.android.permissioncontroller.jarjar.@0
 rule android.app.appfunctions.flags.Flags com.android.permissioncontroller.jarjar.@0
+rule android.companion.*FeatureFlags* com.android.permissioncontroller.jarjar.@0
+rule android.companion.FeatureFlags* com.android.permissioncontroller.jarjar.@0
+rule android.companion.FeatureFlags com.android.permissioncontroller.jarjar.@0
+rule android.companion.Flags com.android.permissioncontroller.jarjar.@0
 rule android.companion.virtualdevice.flags.*FeatureFlags* com.android.permissioncontroller.jarjar.@0
 rule android.companion.virtualdevice.flags.FeatureFlags* com.android.permissioncontroller.jarjar.@0
 rule android.companion.virtualdevice.flags.FeatureFlags com.android.permissioncontroller.jarjar.@0
