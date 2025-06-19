@@ -16,10 +16,13 @@
 package com.android.permissioncontroller.appfunctions.ui.handheld
 
 import android.os.Bundle
+import android.view.View
 import androidx.preference.Preference
 import com.android.permissioncontroller.appfunctions.ui.AgentListChildFragment
 import com.android.permissioncontroller.appfunctions.ui.handheld.HandheldAgentListPreferenceFragment.Parent
 import com.android.settingslib.widget.SettingsBasePreferenceFragment
+import com.android.settingslib.widget.TopIntroPreference
+import com.android.settingslib.widget.ZeroStatePreference
 
 /**
  * Handheld preference fragment for the list of app function agents.
@@ -28,10 +31,8 @@ import com.android.settingslib.widget.SettingsBasePreferenceFragment
  */
 class HandheldAgentListPreferenceFragment :
     SettingsBasePreferenceFragment(), AgentListChildFragment.Parent {
-    @Suppress("DEPRECATION")
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         if (savedInstanceState == null) {
             val fragment = AgentListChildFragment.newInstance()
             childFragmentManager.beginTransaction().add(fragment, null).commit()
@@ -46,9 +47,13 @@ class HandheldAgentListPreferenceFragment :
         requireParent().setTitle(title)
     }
 
-    override fun createPreference(): Preference {
-        return Preference(requireContext())
-    }
+    override fun createHeaderPreference(): Preference = TopIntroPreference(requireContext())
+
+    override fun createEmptyStatePreference(): Preference =
+        ZeroStatePreference(requireContext()).apply { isPersistent = false }
+
+    override fun createPreference(): Preference =
+        Preference(requireContext()).apply { isPersistent = false }
 
     override fun onPreferenceScreenChanged() {
         requireParent().onPreferenceScreenChanged()
