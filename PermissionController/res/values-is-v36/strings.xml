@@ -18,18 +18,11 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_function_access_settings_title" msgid="6493844150240131544">"Fulltrúastjórnun á öðrum forritum"</string>
     <string name="app_function_access_settings_summary" msgid="4981985766883304913">"Framkvæmdu aðgerðir í tækinu þínu og öðrum forritum"</string>
-    <!-- no translation found for app_function_agent_list_summary (701511309529625652) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_empty (4470415933968048626) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (232294957355918509) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty (4726736137938790465) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (3033806413829781590) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (3371340975017149274) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_empty (2441713844910322045) -->
-    <skip />
+    <string name="app_function_agent_list_summary" msgid="701511309529625652">"Aðstoðarforrit sem hafa aðgang að forritum og tækjavirkni í tækinu þínu"</string>
+    <string name="app_function_agent_list_empty" msgid="4470415933968048626">"Sem stendur ertu ekki með nein fulltrúaforrit."</string>
+    <string name="app_function_agent_access_summary" msgid="232294957355918509">"Forrit og kerfisstillingar sem <xliff:g id="APP_NAME">%1$s</xliff:g> hefur aðgang að til að framkvæma aðgerðir"</string>
+    <string name="app_function_agent_access_empty" msgid="4726736137938790465">"Sem stendur ertu ekki með nein markforrit."</string>
+    <string name="app_function_target_access_title" msgid="3033806413829781590">"Fulltrúastjórnun á <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_target_access_summary" msgid="3371340975017149274">"Þessir fulltrúar geta framkvæmt aðgerðir í <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="app_function_target_access_empty" msgid="2441713844910322045">"Sem stendur ertu ekki með nein fulltrúaforrit."</string>
 </resources>

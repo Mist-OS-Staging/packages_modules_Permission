@@ -18,18 +18,11 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_function_access_settings_title" msgid="6493844150240131544">"અન્ય ઍપનું એજન્ટ નિયંત્રણ"</string>
     <string name="app_function_access_settings_summary" msgid="4981985766883304913">"તમારા ડિવાઇસ અને અન્ય ઍપ પર ઍક્શન પર્ફોર્મ કરો"</string>
-    <!-- no translation found for app_function_agent_list_summary (701511309529625652) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_empty (4470415933968048626) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (232294957355918509) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty (4726736137938790465) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (3033806413829781590) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (3371340975017149274) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_empty (2441713844910322045) -->
-    <skip />
+    <string name="app_function_agent_list_summary" msgid="701511309529625652">"Assistant ઍપ કે જે તમારા ડિવાઇસ પર ઍપ અને ડિવાઇસના કર્યોને ઍક્સેસ કરી શકે છે"</string>
+    <string name="app_function_agent_list_empty" msgid="4470415933968048626">"તમારી પાસે હાલમાં કોઈ એજન્ટ ઍપ નથી."</string>
+    <string name="app_function_agent_access_summary" msgid="232294957355918509">"ઍપ અને સિસ્ટમના સેટિંગ <xliff:g id="APP_NAME">%1$s</xliff:g> ક્રિયાઓ કરવા માટે ઍક્સેસ કરી શકે છે"</string>
+    <string name="app_function_agent_access_empty" msgid="4726736137938790465">"તમારી પાસે હાલમાં કોઈ લક્ષ્ય ઍપ નથી."</string>
+    <string name="app_function_target_access_title" msgid="3033806413829781590">"<xliff:g id="APP_NAME">%1$s</xliff:g>નું એજન્ટ નિયંત્રણ"</string>
+    <string name="app_function_target_access_summary" msgid="3371340975017149274">"આ એજન્ટ <xliff:g id="APP_NAME">%1$s</xliff:g>માં ક્રિયાઓ કરી શકે છે."</string>
+    <string name="app_function_target_access_empty" msgid="2441713844910322045">"તમારી પાસે હાલમાં કોઈ એજન્ટ ઍપ નથી."</string>
 </resources>

@@ -18,18 +18,11 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_function_access_settings_title" msgid="6493844150240131544">"Агентное управление другими приложениями"</string>
     <string name="app_function_access_settings_summary" msgid="4981985766883304913">"Совершайте действия на своем устройстве и в других приложениях"</string>
-    <!-- no translation found for app_function_agent_list_summary (701511309529625652) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_empty (4470415933968048626) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (232294957355918509) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty (4726736137938790465) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (3033806413829781590) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (3371340975017149274) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_empty (2441713844910322045) -->
-    <skip />
+    <string name="app_function_agent_list_summary" msgid="701511309529625652">"Приложения-помощники, у которых есть доступ к функциям устройства и приложениям"</string>
+    <string name="app_function_agent_list_empty" msgid="4470415933968048626">"У вас нет приложений-агентов."</string>
+    <string name="app_function_agent_access_summary" msgid="232294957355918509">"Приложения и системные настройки, к которым приложение \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" имеет доступ для выполнения действий"</string>
+    <string name="app_function_agent_access_empty" msgid="4726736137938790465">"У вас нет подходящих приложений."</string>
+    <string name="app_function_target_access_title" msgid="3033806413829781590">"Управление приложением \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" с помощью агентов"</string>
+    <string name="app_function_target_access_summary" msgid="3371340975017149274">"Эти агенты могут выполнять действия в приложении \"<xliff:g id="APP_NAME">%1$s</xliff:g>\""</string>
+    <string name="app_function_target_access_empty" msgid="2441713844910322045">"У вас нет приложений-агентов."</string>
 </resources>

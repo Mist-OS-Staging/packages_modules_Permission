@@ -18,18 +18,11 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_function_access_settings_title" msgid="6493844150240131544">"Контрола на агенти на други апликации"</string>
     <string name="app_function_access_settings_summary" msgid="4981985766883304913">"Извршувајте дејства на уредот и во други апликации"</string>
-    <!-- no translation found for app_function_agent_list_summary (701511309529625652) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_empty (4470415933968048626) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (232294957355918509) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty (4726736137938790465) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (3033806413829781590) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (3371340975017149274) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_empty (2441713844910322045) -->
-    <skip />
+    <string name="app_function_agent_list_summary" msgid="701511309529625652">"Апликации за помош што може да пристапуваат до апликациите и функциите на вашиот уред"</string>
+    <string name="app_function_agent_list_empty" msgid="4470415933968048626">"Во моментов немате апликации на агенти."</string>
+    <string name="app_function_agent_access_summary" msgid="232294957355918509">"Апликацијата <xliff:g id="APP_NAME">%1$s</xliff:g> може да пристапува до системските и поставките за апликации за да врши дејства"</string>
+    <string name="app_function_agent_access_empty" msgid="4726736137938790465">"Во моментов немате целни апликации."</string>
+    <string name="app_function_target_access_title" msgid="3033806413829781590">"Контрола на агент на <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_target_access_summary" msgid="3371340975017149274">"Агентиве може да вршат дејства во <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="app_function_target_access_empty" msgid="2441713844910322045">"Во моментов немате апликации на агенти."</string>
 </resources>

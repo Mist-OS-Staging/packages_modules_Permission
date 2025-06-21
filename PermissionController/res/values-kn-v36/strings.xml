@@ -18,18 +18,11 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_function_access_settings_title" msgid="6493844150240131544">"ಇತರ ಆ್ಯಪ್‌ಗಳ ಏಜೆಂಟ್ ನಿಯಂತ್ರಣ"</string>
     <string name="app_function_access_settings_summary" msgid="4981985766883304913">"ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಮತ್ತು ಇತರ ಆ್ಯಪ್‌ಗಳಲ್ಲಿ ಕ್ರಿಯೆಗಳನ್ನು ಮಾಡಿ"</string>
-    <!-- no translation found for app_function_agent_list_summary (701511309529625652) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_empty (4470415933968048626) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (232294957355918509) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty (4726736137938790465) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (3033806413829781590) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (3371340975017149274) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_empty (2441713844910322045) -->
-    <skip />
+    <string name="app_function_agent_list_summary" msgid="701511309529625652">"ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಸಾಧನದ ಕಾರ್ಯಗಳನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಬಹುದಾದ ಅಸಿಸ್ಟೆಂಟ್ ಆ್ಯಪ್‌ಗಳು"</string>
+    <string name="app_function_agent_list_empty" msgid="4470415933968048626">"ನೀವು ಪ್ರಸ್ತುತ ಯಾವುದೇ ಏಜೆಂಟ್ ಆ್ಯಪ್‌ಗಳನ್ನು ಹೊಂದಿಲ್ಲ."</string>
+    <string name="app_function_agent_access_summary" msgid="232294957355918509">"ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಸಿಸ್ಟಮ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು <xliff:g id="APP_NAME">%1$s</xliff:g> ಕ್ರಿಯೆಗಳನ್ನು ನಿರ್ವಹಿಸಲು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಬಹುದು"</string>
+    <string name="app_function_agent_access_empty" msgid="4726736137938790465">"ನೀವು ಪ್ರಸ್ತುತ ಯಾವುದೇ ಟಾರ್ಗೆಟ್ ಆ್ಯಪ್‌ಗಳನ್ನು ಹೊಂದಿಲ್ಲ."</string>
+    <string name="app_function_target_access_title" msgid="3033806413829781590">"<xliff:g id="APP_NAME">%1$s</xliff:g> ನ ಏಜೆಂಟ್ ನಿಯಂತ್ರಣ"</string>
+    <string name="app_function_target_access_summary" msgid="3371340975017149274">"ಈ ಏಜೆಂಟ್‌ಗಳು <xliff:g id="APP_NAME">%1$s</xliff:g> ನಲ್ಲಿ ಕ್ರಿಯೆಗಳನ್ನು ನಡೆಸಬಹುದು."</string>
+    <string name="app_function_target_access_empty" msgid="2441713844910322045">"ನೀವು ಪ್ರಸ್ತುತ ಯಾವುದೇ ಏಜೆಂಟ್ ಆ್ಯಪ್‌ಗಳನ್ನು ಹೊಂದಿಲ್ಲ."</string>
 </resources>

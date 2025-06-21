@@ -18,18 +18,11 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_function_access_settings_title" msgid="6493844150240131544">"ការគ្រប់គ្រងភ្នាក់ងាររបស់កម្មវិធីផ្សេងទៀត"</string>
     <string name="app_function_access_settings_summary" msgid="4981985766883304913">"ធ្វើសកម្មភាពនៅលើឧបករណ៍របស់អ្នក និងនៅក្នុងកម្មវិធីផ្សេងទៀត"</string>
-    <!-- no translation found for app_function_agent_list_summary (701511309529625652) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_empty (4470415933968048626) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (232294957355918509) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty (4726736137938790465) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (3033806413829781590) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (3371340975017149274) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_empty (2441713844910322045) -->
-    <skip />
+    <string name="app_function_agent_list_summary" msgid="701511309529625652">"កម្មវិធី Google Assistant ដែលអាចចូលប្រើកម្មវិធី និងមុខងារឧបករណ៍នៅលើឧបករណ៍របស់អ្នក"</string>
+    <string name="app_function_agent_list_empty" msgid="4470415933968048626">"បច្ចុប្បន្ន អ្នកមិនមានកម្មវិធីភ្នាក់ងារណាមួយទេ។"</string>
+    <string name="app_function_agent_access_summary" msgid="232294957355918509">"កម្មវិធី និងការកំណត់ប្រព័ន្ធ <xliff:g id="APP_NAME">%1$s</xliff:g> អាចចូលប្រើដើម្បីអនុវត្តសកម្មភាព"</string>
+    <string name="app_function_agent_access_empty" msgid="4726736137938790465">"បច្ចុប្បន្ន អ្នកមិនមានកម្មវិធីគោលដៅណាមួយទេ។"</string>
+    <string name="app_function_target_access_title" msgid="3033806413829781590">"ការគ្រប់គ្រង <xliff:g id="APP_NAME">%1$s</xliff:g> ដោយភ្នាក់ងារ"</string>
+    <string name="app_function_target_access_summary" msgid="3371340975017149274">"ភ្នាក់ងារទាំងនេះអាចអនុវត្តសកម្មភាពនៅក្នុង <xliff:g id="APP_NAME">%1$s</xliff:g>។"</string>
+    <string name="app_function_target_access_empty" msgid="2441713844910322045">"បច្ចុប្បន្ន អ្នកមិនមានកម្មវិធីភ្នាក់ងារណាមួយទេ។"</string>
 </resources>
