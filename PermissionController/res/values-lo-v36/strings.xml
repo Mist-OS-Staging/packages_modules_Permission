@@ -18,18 +18,11 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_function_access_settings_title" msgid="6493844150240131544">"ຕົວແທນການຄວບຄຸມແອັບອື່ນໆ"</string>
     <string name="app_function_access_settings_summary" msgid="4981985766883304913">"ດຳເນີນຄຳສັ່ງຢູ່ອຸປະກອນຂອງທ່ານ ແລະ ໃນແອັບອື່ນໆ"</string>
-    <!-- no translation found for app_function_agent_list_summary (701511309529625652) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_empty (4470415933968048626) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (232294957355918509) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty (4726736137938790465) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (3033806413829781590) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (3371340975017149274) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_empty (2441713844910322045) -->
-    <skip />
+    <string name="app_function_agent_list_summary" msgid="701511309529625652">"ແອັບຜູ້ຊ່ວຍທີ່ສາມາດເຂົ້າເຖິງແອັບ ແລະ ຟັງຊັນອຸປະກອນຢູ່ອຸປະກອນຂອງທ່ານ"</string>
+    <string name="app_function_agent_list_empty" msgid="4470415933968048626">"ປັດຈຸບັນທ່ານບໍ່ມີແອັບຕົວແທນໃດໆ."</string>
+    <string name="app_function_agent_access_summary" msgid="232294957355918509">"ການຕັ້ງຄ່າແອັບ ແລະ ການຕັ້ງຄ່າລະບົບ <xliff:g id="APP_NAME">%1$s</xliff:g> ສາມາດເຂົ້າເຖິງເພື່ອດຳເນີນຄຳສັ່ງ"</string>
+    <string name="app_function_agent_access_empty" msgid="4726736137938790465">"ປັດຈຸບັນທ່ານບໍ່ມີແອັບເປົ້າໝາຍໃດໆ."</string>
+    <string name="app_function_target_access_title" msgid="3033806413829781590">"ຕົວແທນການຄວບຄຸມຂອງ <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_target_access_summary" msgid="3371340975017149274">"ຕົວແທນເຫຼົ່ານີ້ສາມາດດຳເນີນຄຳສັ່ງໃນ <xliff:g id="APP_NAME">%1$s</xliff:g> ໄດ້."</string>
+    <string name="app_function_target_access_empty" msgid="2441713844910322045">"ປັດຈຸບັນທ່ານບໍ່ມີແອັບຕົວແທນໃດໆ."</string>
 </resources>

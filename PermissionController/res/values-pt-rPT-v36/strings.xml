@@ -18,18 +18,11 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_function_access_settings_title" msgid="6493844150240131544">"Controlo de agentes de outras apps"</string>
     <string name="app_function_access_settings_summary" msgid="4981985766883304913">"Execute ações no seu dispositivo e noutras apps"</string>
-    <!-- no translation found for app_function_agent_list_summary (701511309529625652) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_empty (4470415933968048626) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (232294957355918509) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty (4726736137938790465) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (3033806413829781590) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (3371340975017149274) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_empty (2441713844910322045) -->
-    <skip />
+    <string name="app_function_agent_list_summary" msgid="701511309529625652">"Apps do Assistente que podem aceder a apps e funções do dispositivo no seu dispositivo"</string>
+    <string name="app_function_agent_list_empty" msgid="4470415933968048626">"Atualmente, não tem nenhuma app de agente."</string>
+    <string name="app_function_agent_access_summary" msgid="232294957355918509">"Apps e definições do sistema a que a app <xliff:g id="APP_NAME">%1$s</xliff:g> pode aceder para executar ações"</string>
+    <string name="app_function_agent_access_empty" msgid="4726736137938790465">"Atualmente, não tem nenhuma app de destino."</string>
+    <string name="app_function_target_access_title" msgid="3033806413829781590">"Controlo de agentes da app <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_target_access_summary" msgid="3371340975017149274">"Estes agentes podem realizar ações na app <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="app_function_target_access_empty" msgid="2441713844910322045">"Atualmente, não tem nenhuma app de agente."</string>
 </resources>

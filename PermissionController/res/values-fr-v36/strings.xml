@@ -18,18 +18,11 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_function_access_settings_title" msgid="6493844150240131544">"Contrôle de l\'agent d\'autres applications"</string>
     <string name="app_function_access_settings_summary" msgid="4981985766883304913">"Effectuez des actions sur votre appareil et dans d\'autres applis"</string>
-    <!-- no translation found for app_function_agent_list_summary (701511309529625652) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_empty (4470415933968048626) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (232294957355918509) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty (4726736137938790465) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (3033806413829781590) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (3371340975017149274) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_empty (2441713844910322045) -->
-    <skip />
+    <string name="app_function_agent_list_summary" msgid="701511309529625652">"Applications d\'assistance ayant accès aux applis et aux fonctions de votre appareil"</string>
+    <string name="app_function_agent_list_empty" msgid="4470415933968048626">"Vous n\'avez actuellement aucune application d\'agent."</string>
+    <string name="app_function_agent_access_summary" msgid="232294957355918509">"Applis et paramètres système auxquels <xliff:g id="APP_NAME">%1$s</xliff:g> peut accéder pour effectuer des actions"</string>
+    <string name="app_function_agent_access_empty" msgid="4726736137938790465">"Vous n\'avez actuellement aucune application cible."</string>
+    <string name="app_function_target_access_title" msgid="3033806413829781590">"Contrôle de l\'agent sur <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_target_access_summary" msgid="3371340975017149274">"Ces agents peuvent effectuer des actions dans <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="app_function_target_access_empty" msgid="2441713844910322045">"Vous n\'avez actuellement aucune application d\'agent."</string>
 </resources>
