@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.permissioncontroller.appfunctions.ui.v36r1
+package com.android.permissioncontroller.appfunctions.ui
 
 import android.os.Bundle
 import android.os.Process

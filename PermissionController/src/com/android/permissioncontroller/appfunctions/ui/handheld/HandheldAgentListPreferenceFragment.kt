@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.permissioncontroller.appfunctions.ui.handheld.v36r1
+package com.android.permissioncontroller.appfunctions.ui.handheld
 
 import android.os.Bundle
 import androidx.preference.Preference
-import com.android.permissioncontroller.appfunctions.ui.handheld.v36r1.HandheldAgentListPreferenceFragment.Parent
-import com.android.permissioncontroller.appfunctions.ui.v36r1.AgentListChildFragment
+import com.android.permissioncontroller.appfunctions.ui.AgentListChildFragment
+import com.android.permissioncontroller.appfunctions.ui.handheld.HandheldAgentListPreferenceFragment.Parent
 import com.android.settingslib.widget.SettingsBasePreferenceFragment
 
 /**

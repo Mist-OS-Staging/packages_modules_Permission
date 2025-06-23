@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.permissioncontroller.appfunctions.data.repository.v36r1
+package com.android.permissioncontroller.appfunctions.data.repository
 
 import android.app.Application
 import android.app.appfunctions.AppFunctionManager
