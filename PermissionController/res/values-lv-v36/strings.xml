@@ -18,18 +18,11 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_function_access_settings_title" msgid="6493844150240131544">"Aģenta kontrole pār citām lietotnēm"</string>
     <string name="app_function_access_settings_summary" msgid="4981985766883304913">"Veiciet darbības savā ierīcē un citās lietotnēs"</string>
-    <!-- no translation found for app_function_agent_list_summary (701511309529625652) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_empty (4470415933968048626) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (232294957355918509) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty (4726736137938790465) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (3033806413829781590) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (3371340975017149274) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_empty (2441713844910322045) -->
-    <skip />
+    <string name="app_function_agent_list_summary" msgid="701511309529625652">"Asistenta lietotnes, kas var piekļūt lietotnēm un funkcijām jūsu ierīcē."</string>
+    <string name="app_function_agent_list_empty" msgid="4470415933968048626">"Pašlaik jums nav nevienas aģenta lietotnes."</string>
+    <string name="app_function_agent_access_summary" msgid="232294957355918509">"Lietotnes un sistēmas iestatījumi, kam lietotne <xliff:g id="APP_NAME">%1$s</xliff:g> var piekļūt, lai veiktu darbības."</string>
+    <string name="app_function_agent_access_empty" msgid="4726736137938790465">"Pašlaik jums nav nevienas mērķa lietotnes."</string>
+    <string name="app_function_target_access_title" msgid="3033806413829781590">"Aģenta kontrole pār lietotni <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_target_access_summary" msgid="3371340975017149274">"Šie aģenti var veikt darbības lietotnē <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="app_function_target_access_empty" msgid="2441713844910322045">"Pašlaik jums nav nevienas aģenta lietotnes."</string>
 </resources>

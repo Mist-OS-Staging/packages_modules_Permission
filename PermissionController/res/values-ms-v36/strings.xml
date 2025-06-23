@@ -18,18 +18,11 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_function_access_settings_title" msgid="6493844150240131544">"Kawalan ejen apl lain"</string>
     <string name="app_function_access_settings_summary" msgid="4981985766883304913">"Lakukan tindakan pada peranti anda dan pada apl lain"</string>
-    <!-- no translation found for app_function_agent_list_summary (701511309529625652) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_empty (4470415933968048626) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (232294957355918509) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty (4726736137938790465) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (3033806413829781590) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (3371340975017149274) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_empty (2441713844910322045) -->
-    <skip />
+    <string name="app_function_agent_list_summary" msgid="701511309529625652">"Apl pembantu yang boleh mengakses apl dan fungsi peranti pada peranti anda"</string>
+    <string name="app_function_agent_list_empty" msgid="4470415933968048626">"Anda tidak mempunyai sebarang apl ejen pada masa ini."</string>
+    <string name="app_function_agent_access_summary" msgid="232294957355918509">"Apl dan tetapan sistem <xliff:g id="APP_NAME">%1$s</xliff:g> boleh mendapatkan akses untuk melakukan tindakan"</string>
+    <string name="app_function_agent_access_empty" msgid="4726736137938790465">"Anda tidak mempunyai sebarang apl sasaran pada masa ini."</string>
+    <string name="app_function_target_access_title" msgid="3033806413829781590">"Kawalan ejen <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_target_access_summary" msgid="3371340975017149274">"Ejen ini boleh melakukan tindakan pada <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="app_function_target_access_empty" msgid="2441713844910322045">"Anda tidak mempunyai sebarang apl ejen pada masa ini."</string>
 </resources>

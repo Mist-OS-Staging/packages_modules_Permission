@@ -18,18 +18,11 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_function_access_settings_title" msgid="6493844150240131544">"अन्य एपहरूको एजेन्ट कन्ट्रोल"</string>
     <string name="app_function_access_settings_summary" msgid="4981985766883304913">"आफ्नो डिभाइस र अन्य एपहरूमा कारबाहीहरू गर्नुहोस्"</string>
-    <!-- no translation found for app_function_agent_list_summary (701511309529625652) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_empty (4470415933968048626) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (232294957355918509) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty (4726736137938790465) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (3033806413829781590) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (3371340975017149274) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_empty (2441713844910322045) -->
-    <skip />
+    <string name="app_function_agent_list_summary" msgid="701511309529625652">"तपाईंको डिभाइसमा भएका एप र डिभाइसका सुविधाहरू एक्सेस गर्न सक्ने एसिस्टेन्ट एपहरू"</string>
+    <string name="app_function_agent_list_empty" msgid="4470415933968048626">"तपाईंसँग अहिले कुनै पनि एजेन्ट एप उपलब्ध छैन।"</string>
+    <string name="app_function_agent_access_summary" msgid="232294957355918509">"<xliff:g id="APP_NAME">%1$s</xliff:g> ले कारबाहीहरू गर्ने प्रयोजनका लागि एक्सेस गर्न सक्ने एप तथा सिस्टम सेटिङ"</string>
+    <string name="app_function_agent_access_empty" msgid="4726736137938790465">"तपाईंसँग अहिले कुनै पनि टार्गेट एप उपलब्ध छैन।"</string>
+    <string name="app_function_target_access_title" msgid="3033806413829781590">"<xliff:g id="APP_NAME">%1$s</xliff:g> को एजेन्ट कन्ट्रोल"</string>
+    <string name="app_function_target_access_summary" msgid="3371340975017149274">"यी एजेन्टहरूले <xliff:g id="APP_NAME">%1$s</xliff:g> मा कारबाहीहरू गर्न सक्छन्।"</string>
+    <string name="app_function_target_access_empty" msgid="2441713844910322045">"तपाईंसँग अहिले कुनै पनि एजेन्ट एप उपलब्ध छैन।"</string>
 </resources>
