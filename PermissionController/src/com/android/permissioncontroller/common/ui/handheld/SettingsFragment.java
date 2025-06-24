@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.permissioncontroller.role.ui.handheld;
+package com.android.permissioncontroller.common.ui.handheld;
 
 import android.app.ActionBar;
 import android.os.Bundle;
@@ -43,7 +43,6 @@ import com.google.android.material.appbar.CollapsingToolbarLayout;
 /**
  * Base class for settings fragments.
  */
-// Made public for com.android.permissioncontroller.role.ui.specialappaccess.handheld
 public abstract class SettingsFragment extends CollapsingToolbarBaseFragment {
 
     @NonNull
