@@ -39,7 +39,7 @@ interface AppFunctionRepository {
 
     /**
      * Checks whether the given agent has access to app functions of the given target app. See
-     * [AppFunctionManager#getAppFunctionAccessRequestState] for more details.
+     * [AppFunctionManager#getAccessRequestState] for more details.
      *
      * @param agentPackageName The package name of the agent.
      * @param targetPackageName The package name of the target app.
@@ -48,16 +48,13 @@ interface AppFunctionRepository {
      *   AppFunctionManager#ACCESS_REQUEST_STATE_DENIED}, or {@link
      *   AppFunctionManager#ACCESS_REQUEST_STATE_UNREQUESTABLE}.
      */
-    suspend fun getAppFunctionAccessRequestState(
-        agentPackageName: String,
-        targetPackageName: String,
-    ): Int
+    suspend fun getAccessRequestState(agentPackageName: String, targetPackageName: String): Int
 
     /**
      * Returns the access flags for the given agent and target package name. See
-     * [AppFunctionManager#getAppFunctionAccessFlags] for more details.
+     * [AppFunctionManager#getAccessFlags] for more details.
      */
-    suspend fun getAppFunctionAccessFlags(agentPackageName: String, targetPackageName: String): Int
+    suspend fun getAccessFlags(agentPackageName: String, targetPackageName: String): Int
 
     companion object {
         @Volatile private var instance: AppFunctionRepository? = null
@@ -89,25 +86,19 @@ class AppFunctionRepositoryImpl(
     override suspend fun getValidTargets(): List<String> =
         withContext(dispatcher) { appFunctionManager?.getValidTargets() ?: emptyList() }
 
-    override suspend fun getAppFunctionAccessRequestState(
+    override suspend fun getAccessRequestState(
         agentPackageName: String,
         targetPackageName: String,
     ): Int =
         withContext(dispatcher) {
             // ACCESS_REQUEST_STATE_GRANTED is 0, so returning default value 2 which is
             // ACCESS_REQUEST_STATE_UNREQUESTABLE
-            appFunctionManager?.getAppFunctionAccessRequestState(
-                agentPackageName,
-                targetPackageName,
-            ) ?: 2
+            appFunctionManager?.getAccessRequestState(agentPackageName, targetPackageName) ?: 2
         }
 
-    override suspend fun getAppFunctionAccessFlags(
-        agentPackageName: String,
-        targetPackageName: String,
-    ): Int =
+    override suspend fun getAccessFlags(agentPackageName: String, targetPackageName: String): Int =
         withContext(dispatcher) {
             // API returns 0 if the combination is not valid
-            appFunctionManager?.getAppFunctionAccessFlags(agentPackageName, targetPackageName) ?: 0
+            appFunctionManager?.getAccessFlags(agentPackageName, targetPackageName) ?: 0
         }
 }

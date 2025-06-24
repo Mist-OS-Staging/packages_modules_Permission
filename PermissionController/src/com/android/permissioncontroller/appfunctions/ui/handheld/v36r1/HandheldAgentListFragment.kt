@@ -18,7 +18,7 @@ package com.android.permissioncontroller.appfunctions.ui.handheld.v36r1
 import androidx.annotation.StringRes
 import androidx.preference.PreferenceFragmentCompat
 import com.android.permissioncontroller.R
-import com.android.permissioncontroller.role.ui.handheld.SettingsFragment
+import com.android.permissioncontroller.common.ui.handheld.SettingsFragment
 
 // TODO(b/424652480): Use SettingsWithLargeHeader instead to get larger header components (e.g.
 //  icon, title, summary), and ensure supports style overlay

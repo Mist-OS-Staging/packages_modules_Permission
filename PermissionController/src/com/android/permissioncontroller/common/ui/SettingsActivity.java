@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.permissioncontroller.role.ui;
+package com.android.permissioncontroller.common.ui;
 
 import android.os.Bundle;
 import android.view.WindowManager;
@@ -33,7 +33,6 @@ import com.android.settingslib.widget.theme.flags.Flags;
 /**
  * Base class for settings activities.
  */
-// Made public for com.android.permissioncontroller.role.ui.specialappaccess
 public class SettingsActivity extends SettingsTransitionActivity implements
         ExpressiveDesignEnabledProvider {
 

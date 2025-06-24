@@ -17,7 +17,7 @@ package com.android.permissioncontroller.appfunctions.ui.v36r1
 
 import android.os.Bundle
 import com.android.permissioncontroller.appfunctions.ui.handheld.v36r1.HandheldAgentListFragment
-import com.android.permissioncontroller.role.ui.SettingsActivity
+import com.android.permissioncontroller.common.ui.SettingsActivity
 
 /** Activity for the app function agent list. */
 class AgentListActivity : SettingsActivity() {
