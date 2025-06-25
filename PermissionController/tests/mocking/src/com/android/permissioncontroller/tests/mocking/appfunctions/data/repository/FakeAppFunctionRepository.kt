@@ -16,7 +16,7 @@
 
 package com.android.permissioncontroller.tests.mocking.appfunctions.data.repository
 
-import com.android.permissioncontroller.appfunctions.data.repository.v36r1.AppFunctionRepository
+import com.android.permissioncontroller.appfunctions.data.repository.AppFunctionRepository
 
 /** Fake implementation of [AppFunctionRepository] for testing. */
 class FakeAppFunctionRepository(

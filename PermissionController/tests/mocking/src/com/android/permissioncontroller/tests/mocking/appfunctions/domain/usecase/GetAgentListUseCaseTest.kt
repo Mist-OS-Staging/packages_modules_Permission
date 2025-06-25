@@ -19,15 +19,11 @@ package com.android.permissioncontroller.tests.mocking.appfunctions.domain.useca
 import android.os.Build
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
-import com.android.permissioncontroller.appfunctions.data.repository.v36r1.AppFunctionRepository
-import com.android.permissioncontroller.appfunctions.domain.model.v36r1.AppFunctionPackageInfo
-import com.android.permissioncontroller.appfunctions.domain.usecase.v36r1.GetAgentListUseCase
-import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
+import com.android.permissioncontroller.appfunctions.domain.model.AppFunctionPackageInfo
+import com.android.permissioncontroller.appfunctions.domain.usecase.GetAgentListUseCase
 import com.android.permissioncontroller.tests.mocking.appfunctions.data.repository.FakeAppFunctionRepository
-import com.android.permissioncontroller.tests.mocking.coroutines.collectLastValue
 import com.android.permissioncontroller.tests.mocking.pm.data.repository.FakePackageRepository
 import com.google.common.truth.Truth.assertThat
-import kotlinx.coroutines.test.TestScope
 import kotlinx.coroutines.test.runTest
 import org.junit.Test
 import org.junit.runner.RunWith

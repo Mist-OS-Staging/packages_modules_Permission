@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.permissioncontroller.appfunctions.ui.v36r1
+package com.android.permissioncontroller.appfunctions.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import com.android.permissioncontroller.appfunctions.ui.handheld.v36r1.HandheldAgentAccessFragment
+import com.android.permissioncontroller.appfunctions.ui.handheld.HandheldAgentAccessFragment
 import com.android.permissioncontroller.common.ui.SettingsActivity
 
 /** Activity to manage app function agent access. */

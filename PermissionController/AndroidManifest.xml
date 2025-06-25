@@ -514,7 +514,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.android.permissioncontroller.appfunctions.ui.v36r1.AgentListActivity"
+        <activity android:name="com.android.permissioncontroller.appfunctions.ui.AgentListActivity"
             android:enabled="@bool/is_at_least_v36r1"
             android:exported="true"
             android:theme="@style/Theme.PermissionController.Settings.FilterTouches">
@@ -524,7 +524,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.android.permissioncontroller.appfunctions.ui.v36r1.AgentAccessActivity"
+        <activity android:name="com.android.permissioncontroller.appfunctions.ui.AgentAccessActivity"
             android:enabled="@bool/is_at_least_v36r1"
             android:exported="true"
             android:theme="@style/Theme.PermissionController.Settings.FilterTouches">
@@ -534,7 +534,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.android.permissioncontroller.appfunctions.ui.v36r1.TargetAccessActivity"
+        <activity android:name="com.android.permissioncontroller.appfunctions.ui.TargetAccessActivity"
             android:enabled="@bool/is_at_least_v36r1"
             android:exported="true"
             android:theme="@style/Theme.PermissionController.Settings.FilterTouches">

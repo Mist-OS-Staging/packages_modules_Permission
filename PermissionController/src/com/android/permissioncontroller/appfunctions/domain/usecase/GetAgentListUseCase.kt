@@ -14,16 +14,13 @@
  * limitations under the License.
  */
 
-package com.android.permissioncontroller.appfunctions.domain.usecase.v36r1
+package com.android.permissioncontroller.appfunctions.domain.usecase
 
 import android.os.Process
-import com.android.permissioncontroller.appfunctions.data.repository.v36r1.AppFunctionRepository
-import com.android.permissioncontroller.appfunctions.domain.model.v36r1.AppFunctionPackageInfo
+import com.android.permissioncontroller.appfunctions.data.repository.AppFunctionRepository
+import com.android.permissioncontroller.appfunctions.domain.model.AppFunctionPackageInfo
 import com.android.permissioncontroller.common.model.Stateful
 import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.asFlow
-import kotlinx.coroutines.flow.map
 
 /**
  * This use case returns a list of all valid app function agents.
@@ -33,15 +30,18 @@ import kotlinx.coroutines.flow.map
  */
 class GetAgentListUseCase(
     private val appFunctionRepository: AppFunctionRepository,
-    private val packageRepository: PackageRepository
+    private val packageRepository: PackageRepository,
 ) {
-    operator suspend fun invoke(): Stateful<List<AppFunctionPackageInfo>> {
+    suspend operator fun invoke(): Stateful<List<AppFunctionPackageInfo>> {
         val agentPackageNames = appFunctionRepository.getValidAgents()
-        val agents = agentPackageNames.map { agentPackageName ->
-            val label = packageRepository.getPackageLabel(agentPackageName, Process.myUserHandle())
-            val icon = packageRepository.getBadgedPackageIcon(agentPackageName, Process.myUserHandle())
-            AppFunctionPackageInfo(agentPackageName, label, icon)
-        }
+        val agents =
+            agentPackageNames.map { agentPackageName ->
+                val label =
+                    packageRepository.getPackageLabel(agentPackageName, Process.myUserHandle())
+                val icon =
+                    packageRepository.getBadgedPackageIcon(agentPackageName, Process.myUserHandle())
+                AppFunctionPackageInfo(agentPackageName, label, icon)
+            }
         return Stateful.Success(agents)
     }
 }
