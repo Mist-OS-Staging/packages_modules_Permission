@@ -16,4 +16,4 @@
 
 // TODO(b/424004217): Update this to the correct version code
 @androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.BAKLAVA)
-package com.android.permissioncontroller.appfunctions.domain.model.v36r1;
+package com.android.permissioncontroller.appfunctions.domain.usecase;

@@ -13,26 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.permissioncontroller.appfunctions.ui.handheld.v36r1
+package com.android.permissioncontroller.appfunctions.ui.handheld
 
 import android.os.Bundle
 import androidx.preference.Preference
-import com.android.permissioncontroller.appfunctions.ui.v36r1.AgentAccessChildFragment
+import com.android.permissioncontroller.appfunctions.ui.TargetAccessChildFragment
+import com.android.permissioncontroller.appfunctions.ui.handheld.HandheldTargetAccessPreferenceFragment.Parent
 import com.android.settingslib.widget.SettingsBasePreferenceFragment
 
 /**
- * Handheld preference fragment for the management of app function agents.
+ * Handheld preference fragment for the management of app function targets.
  *
  * Must be added as a child fragment and its parent fragment must implement [Parent].
  */
-class HandheldAgentAccessPreferenceFragment(val agentPackageName: String) :
-    SettingsBasePreferenceFragment(), AgentAccessChildFragment.Parent {
+class HandheldTargetAccessPreferenceFragment(val targetPackage: String) :
+    SettingsBasePreferenceFragment(), TargetAccessChildFragment.Parent {
     @Suppress("DEPRECATION")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
         if (savedInstanceState == null) {
-            val fragment = AgentAccessChildFragment.newInstance()
+            val fragment = TargetAccessChildFragment.newInstance(targetPackage)
             childFragmentManager.beginTransaction().add(fragment, null).commit()
         }
     }
@@ -41,12 +42,12 @@ class HandheldAgentAccessPreferenceFragment(val agentPackageName: String) :
         // Preferences will be added by the child fragment later.
     }
 
-    override fun setTitle(title: CharSequence) {
-        requireParent().setTitle(title)
-    }
-
     override fun createPreference(): Preference {
         return Preference(requireContext())
+    }
+
+    override fun setTitle(title: CharSequence) {
+        requireParent().setTitle(title)
     }
 
     override fun onPreferenceScreenChanged() {
@@ -80,8 +81,8 @@ class HandheldAgentAccessPreferenceFragment(val agentPackageName: String) :
          * @return a new instance of this fragment
          */
         @JvmStatic
-        fun newInstance(agentPackageName: String): HandheldAgentAccessPreferenceFragment {
-            return HandheldAgentAccessPreferenceFragment(agentPackageName)
+        fun newInstance(targetPackage: String): HandheldTargetAccessPreferenceFragment {
+            return HandheldTargetAccessPreferenceFragment(targetPackage)
         }
     }
 }

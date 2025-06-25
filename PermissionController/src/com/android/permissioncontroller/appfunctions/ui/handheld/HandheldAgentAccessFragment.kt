@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.permissioncontroller.appfunctions.ui.handheld.v36r1
+package com.android.permissioncontroller.appfunctions.ui.handheld
 
 import androidx.annotation.StringRes
 import androidx.preference.PreferenceFragmentCompat

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.permissioncontroller.appfunctions.domain.model.v36r1
+package com.android.permissioncontroller.appfunctions.domain.model
 
 import android.graphics.drawable.Drawable
 
