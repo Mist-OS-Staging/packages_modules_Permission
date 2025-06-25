@@ -18,9 +18,9 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_function_access_settings_title" msgid="6493844150240131544">"ଅନ୍ୟ ଆପ୍ସର ଏଜେଣ୍ଟ ନିୟନ୍ତ୍ରଣ"</string>
     <string name="app_function_access_settings_summary" msgid="4981985766883304913">"ଆପଣଙ୍କ ଡିଭାଇସ ଏବଂ ଅନ୍ୟ ଆପ୍ସରେ କାର୍ଯ୍ୟ ପରଫର୍ମ କରନ୍ତୁ"</string>
-    <string name="app_function_agent_list_summary" msgid="701511309529625652">"ଆପଣଙ୍କ ଡିଭାଇସରେ ଆପ୍ସ ଏବଂ ଡିଭାଇସ ଫଙ୍କସନଗୁଡ଼ିକୁ ଆକ୍ସେସ କରିପାରିବା Assistant ଆପ୍ସ"</string>
+    <string name="app_function_agent_list_summary" msgid="701511309529625652">"ଆପଣଙ୍କ ଡିଭାଇସରେ ଆପ୍ସ ଏବଂ ଡିଭାଇସ ଫଙ୍କସନଗୁଡ଼ିକୁ ଆକ୍ସେସ କରିପାରୁଥିବା Assistant ଆପ୍ସ"</string>
     <string name="app_function_agent_list_empty" msgid="4470415933968048626">"ବର୍ତ୍ତମାନ ଆପଣଙ୍କର କୌଣସି ଏଜେଣ୍ଟ ଆପ୍ସ ନାହିଁ।"</string>
-    <string name="app_function_agent_access_summary" msgid="232294957355918509">"କାର୍ଯ୍ୟଗୁଡ଼ିକ କରିବା ପାଇଁ <xliff:g id="APP_NAME">%1$s</xliff:g> ଆକ୍ସେସ କରିପାରିବା ଆପ୍ସ ଏବଂ ସିଷ୍ଟମ ସେଟିଂସ"</string>
+    <string name="app_function_agent_access_summary" msgid="232294957355918509">"କାର୍ଯ୍ୟଗୁଡ଼ିକ କରିବା ପାଇଁ <xliff:g id="APP_NAME">%1$s</xliff:g> ଆକ୍ସେସ କରିପାରୁଥିବା ଆପ୍ସ ଏବଂ ସିଷ୍ଟମ ସେଟିଂସ"</string>
     <string name="app_function_agent_access_empty" msgid="4726736137938790465">"ଆପଣଙ୍କ ପାଖରେ ବର୍ତ୍ତମାନ କୌଣସି ଟାର୍ଗେଟ ଆପ୍ସ ନାହିଁ।"</string>
     <string name="app_function_target_access_title" msgid="3033806413829781590">"<xliff:g id="APP_NAME">%1$s</xliff:g>ର ଏଜେଣ୍ଟ ନିୟନ୍ତ୍ରଣ"</string>
     <string name="app_function_target_access_summary" msgid="3371340975017149274">"ଏହି ଏଜେଣ୍ଟଗୁଡ଼ିକ <xliff:g id="APP_NAME">%1$s</xliff:g>ରେ କାର୍ଯ୍ୟଗୁଡ଼ିକୁ କରିପାରିବ।"</string>
