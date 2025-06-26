@@ -18,6 +18,7 @@ package com.android.permissioncontroller.appfunctions.data.repository
 
 import android.app.Application
 import android.app.appfunctions.AppFunctionManager
+import android.app.appfunctions.AppFunctionManager.ACCESS_REQUEST_STATE_UNREQUESTABLE
 import android.permission.flags.Flags
 import kotlin.concurrent.Volatile
 import kotlinx.coroutines.CoroutineDispatcher
@@ -56,6 +57,17 @@ interface AppFunctionRepository {
      */
     suspend fun getAccessFlags(agentPackageName: String, targetPackageName: String): Int
 
+    /**
+     * Updates the access flags for the given agent and target package name. See
+     * [AppFunctionManager#updateAccessFlags] for more details.
+     */
+    suspend fun updateAccessFlags(
+        agentPackageName: String,
+        targetPackageName: String,
+        flagMask: Int,
+        flags: Int,
+    )
+
     companion object {
         @Volatile private var instance: AppFunctionRepository? = null
 
@@ -91,9 +103,8 @@ class AppFunctionRepositoryImpl(
         targetPackageName: String,
     ): Int =
         withContext(dispatcher) {
-            // ACCESS_REQUEST_STATE_GRANTED is 0, so returning default value 2 which is
-            // ACCESS_REQUEST_STATE_UNREQUESTABLE
-            appFunctionManager?.getAccessRequestState(agentPackageName, targetPackageName) ?: 2
+            appFunctionManager?.getAccessRequestState(agentPackageName, targetPackageName)
+                ?: ACCESS_REQUEST_STATE_UNREQUESTABLE
         }
 
     override suspend fun getAccessFlags(agentPackageName: String, targetPackageName: String): Int =
@@ -101,4 +112,20 @@ class AppFunctionRepositoryImpl(
             // API returns 0 if the combination is not valid
             appFunctionManager?.getAccessFlags(agentPackageName, targetPackageName) ?: 0
         }
+
+    override suspend fun updateAccessFlags(
+        agentPackageName: String,
+        targetPackageName: String,
+        flagMask: Int,
+        flags: Int,
+    ) {
+        withContext(dispatcher) {
+            appFunctionManager?.updateAccessFlags(
+                agentPackageName,
+                targetPackageName,
+                flagMask,
+                flags,
+            )
+        }
+    }
 }

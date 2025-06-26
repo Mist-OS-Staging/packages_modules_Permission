@@ -20,8 +20,8 @@ import android.os.Build
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
 import com.android.permissioncontroller.appfunctions.domain.model.AppFunctionPackageInfo
-import com.android.permissioncontroller.appfunctions.domain.usecase.GetAgentListUseCase
 import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCase
+import com.android.permissioncontroller.appfunctions.domain.usecase.GetTargetListUseCase
 import com.android.permissioncontroller.tests.mocking.appfunctions.data.repository.FakeAppFunctionRepository
 import com.android.permissioncontroller.tests.mocking.pm.data.repository.FakePackageRepository
 import com.google.common.truth.Truth.assertThat
@@ -30,35 +30,35 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 // TODO(b/424004217): Update this to the correct version code
-/** Unit tests for [GetAgentListUseCase]. */
+/** Unit tests for [GetTargetListUseCase]. */
 @RunWith(AndroidJUnit4::class)
 @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
-class GetAgentListUseCaseTest {
+class GetTargetListUseCaseTest {
     @Test
-    fun getAgentList_returnsAgentList() = runTest {
-        val expectedAgents =
-            agentPackagesAndLabels.map { AppFunctionPackageInfo(it.key, it.value, null) }
+    fun getTargetList_returnsTargetList() = runTest {
+        val expectedTargets =
+            targetPackagesAndLabels.map { AppFunctionPackageInfo(it.key, it.value, null) }
         val useCase =
-            GetAgentListUseCase(
-                FakeAppFunctionRepository(agents = agentPackageNames),
+            GetTargetListUseCase(
+                FakeAppFunctionRepository(targets = targetPackageNames),
                 GetAppFunctionPackageInfoUseCase(
-                    FakePackageRepository(packagesAndLabels = agentPackagesAndLabels)
+                    FakePackageRepository(packagesAndLabels = targetPackagesAndLabels)
                 ),
             )
-        val actualAgents = useCase()
-        assertThat(actualAgents).containsExactlyElementsIn(expectedAgents)
+        val actualTargets = useCase()
+        assertThat(actualTargets).containsExactlyElementsIn(expectedTargets)
     }
 
     companion object {
-        private const val TEST_AGENT_PACKAGE_NAME = "test.agent.package"
-        private const val TEST_AGENT_PACKAGE_NAME2 = "test.agent.package2"
-        private const val TEST_AGENT_LABEL = "Test Agent"
-        private const val TEST_AGENT_LABEL2 = "Test Agent 2"
-        private val agentPackageNames = listOf(TEST_AGENT_PACKAGE_NAME, TEST_AGENT_PACKAGE_NAME2)
-        private val agentPackagesAndLabels =
+        private const val TEST_TARGET_PACKAGE_NAME = "test.target.package"
+        private const val TEST_TARGET_PACKAGE_NAME2 = "test.target.package2"
+        private const val TEST_TARGET_LABEL = "Test Target"
+        private const val TEST_TARGET_LABEL2 = "Test Target 2"
+        private val targetPackageNames = listOf(TEST_TARGET_PACKAGE_NAME, TEST_TARGET_PACKAGE_NAME2)
+        private val targetPackagesAndLabels =
             mapOf(
-                TEST_AGENT_PACKAGE_NAME to TEST_AGENT_LABEL,
-                TEST_AGENT_PACKAGE_NAME2 to TEST_AGENT_LABEL2,
+                TEST_TARGET_PACKAGE_NAME to TEST_TARGET_LABEL,
+                TEST_TARGET_PACKAGE_NAME2 to TEST_TARGET_LABEL2,
             )
     }
 }
