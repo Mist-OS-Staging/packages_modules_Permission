@@ -40,6 +40,7 @@ java_library {
         "android.os.flags-aconfig-java-export",
         "com.android.window.flags.window-aconfig-java-export",
         "device_policy_aconfig_flags_java_export",
+        "surfaceflinger_exported_flags_lib",
     ],
     apex_available: [
         "com.android.permission",
