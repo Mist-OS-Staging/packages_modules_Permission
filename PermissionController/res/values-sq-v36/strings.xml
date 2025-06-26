@@ -19,10 +19,10 @@
     <string name="app_function_access_settings_title" msgid="6493844150240131544">"Kontrolli i agjentit në aplikacione të tjera"</string>
     <string name="app_function_access_settings_summary" msgid="4981985766883304913">"Kryej veprime në pajisjen tënde dhe në aplikacione të tjera"</string>
     <string name="app_function_agent_list_summary" msgid="701511309529625652">"Aplikacionet e asistentit mund të kenë qasje te funksionet e aplikacioneve dhe pajisjes në pajisjen tënde"</string>
-    <string name="app_function_agent_list_empty" msgid="4470415933968048626">"Aktualisht nuk ke asnjë aplikacion agjenti"</string>
+    <string name="app_function_agent_list_empty" msgid="4470415933968048626">"Aktualisht nuk ke asnjë aplikacion agjenti."</string>
     <string name="app_function_agent_access_summary" msgid="232294957355918509">"Cilësimet e aplikacioneve dhe të sistemit ku mund të ketë qasje <xliff:g id="APP_NAME">%1$s</xliff:g> për të kryer veprime"</string>
-    <string name="app_function_agent_access_empty" msgid="4726736137938790465">"Aktualisht nuk ke asnjë aplikacion të synuar"</string>
+    <string name="app_function_agent_access_empty" msgid="4726736137938790465">"Aktualisht nuk ke asnjë aplikacion të synuar."</string>
     <string name="app_function_target_access_title" msgid="3033806413829781590">"Kontrolli i agjentit për <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="app_function_target_access_summary" msgid="3371340975017149274">"Këta agjentë mund të kryejnë veprime te <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="app_function_target_access_empty" msgid="2441713844910322045">"Aktualisht nuk ke asnjë aplikacion agjenti"</string>
+    <string name="app_function_target_access_empty" msgid="2441713844910322045">"Aktualisht nuk ke asnjë aplikacion agjenti."</string>
 </resources>
