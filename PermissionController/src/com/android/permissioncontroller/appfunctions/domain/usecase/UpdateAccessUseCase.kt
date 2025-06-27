@@ -13,27 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.android.permissioncontroller.appfunctions.domain.usecase
 
-import android.os.Process
+import android.app.appfunctions.AppFunctionManager.ACCESS_FLAG_USER_DENIED
+import android.app.appfunctions.AppFunctionManager.ACCESS_FLAG_USER_GRANTED
 import com.android.permissioncontroller.appfunctions.data.repository.AppFunctionRepository
-import com.android.permissioncontroller.appfunctions.domain.model.AppFunctionPackageInfo
 
 /**
- * This use case returns a list of all valid app function agents.
+ * This use case updates access state for a specified agent and target packages.
  *
  * @param appFunctionRepository The repository to use to get the app function agents.
- * @param getAppFunctionPackageInfoUseCase The usecase to get [AppFunctionPackageInfo].
  */
-class GetAgentListUseCase(
-    private val appFunctionRepository: AppFunctionRepository,
-    private val getAppFunctionPackageInfoUseCase: GetAppFunctionPackageInfoUseCase,
-) {
-    suspend operator fun invoke(): List<AppFunctionPackageInfo> {
-        val agentPackageNames = appFunctionRepository.getValidAgents()
-        return agentPackageNames.map { agentPackageName ->
-            getAppFunctionPackageInfoUseCase(agentPackageName, Process.myUserHandle())
-        }
+class UpdateAccessUseCase(private val appFunctionRepository: AppFunctionRepository) {
+    suspend operator fun invoke(
+        agentPackageName: String,
+        targetPackageName: String,
+        isGranted: Boolean,
+    ) {
+        appFunctionRepository.updateAccessFlags(
+            agentPackageName,
+            targetPackageName,
+            ACCESS_FLAG_USER_GRANTED or ACCESS_FLAG_USER_DENIED,
+            if (isGranted) ACCESS_FLAG_USER_GRANTED else ACCESS_FLAG_USER_DENIED,
+        )
     }
 }
