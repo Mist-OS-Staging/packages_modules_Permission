@@ -15,35 +15,38 @@
  */
 package com.android.permissioncontroller.appfunctions.ui.handheld
 
-import androidx.annotation.StringRes
+import android.content.Intent
+import android.os.Bundle
 import androidx.preference.PreferenceFragmentCompat
-import com.android.permissioncontroller.R
 import com.android.permissioncontroller.common.ui.handheld.SettingsFragment
 
-// TODO(b/424652480): Use SettingsWithLargeHeader instead to get larger header components (e.g.
-//  icon, title, summary), and ensure supports style overlay
 /** Fragment for the app function agent list. */
-class HandheldTargetAccessFragment(val targetPackage: String) :
+class HandheldTargetAccessFragment :
     SettingsFragment(), HandheldTargetAccessPreferenceFragment.Parent {
-    override fun onCreatePreferenceFragment(): PreferenceFragmentCompat {
-        return HandheldTargetAccessPreferenceFragment.newInstance(targetPackage)
+    private lateinit var targetPackageName: String
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        targetPackageName = arguments!!.getString(Intent.EXTRA_PACKAGE_NAME)!!
     }
 
-    @Override
-    @StringRes
-    override fun getEmptyTextResource(): Int {
-        return R.string.app_function_target_access_empty
+    override fun onCreatePreferenceFragment(): PreferenceFragmentCompat {
+        return HandheldTargetAccessPreferenceFragment.newInstance(targetPackageName)
     }
 
     companion object {
         /**
          * Create a new instance of this fragment.
          *
+         * @param targetPackageName target package to modify access for
          * @return a new instance of this fragment
          */
         @JvmStatic
-        fun newInstance(targetPackage: String): HandheldTargetAccessFragment {
-            return HandheldTargetAccessFragment(targetPackage)
+        fun newInstance(targetPackageName: String): HandheldTargetAccessFragment {
+            val arguments =
+                Bundle().apply { putString(Intent.EXTRA_PACKAGE_NAME, targetPackageName) }
+            return HandheldTargetAccessFragment().apply { setArguments(arguments) }
         }
     }
 }
