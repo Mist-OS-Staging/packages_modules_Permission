@@ -20,21 +20,25 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Process;
+import android.os.UserHandle;
 
+import com.android.permissioncontroller.appfunctions.AppFunctionsUtil;
 import com.android.permissioncontroller.role.service.RoleSearchIndexablesProvider;
 
 /**
  * Trampoline activity for activities exposed from
- * {@link com.android.permissioncontroller.role.service.RoleSearchIndexablesProvider}.
+ * {@link com.android.permissioncontroller.role.service.RoleSearchIndexablesProvider} and
+ * {@link com.android.permissioncontroller.appfunctions.AppFunctionsUtil#ACTION_MANAGE_DEFAULT_APP}.
  */
-public class RoleSearchTrampolineActivity extends Activity {
+public class RoleTrampolineActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         Intent intent = getIntent();
-        if (!RoleSearchIndexablesProvider.isIntentValid(intent, this)) {
+        if (!RoleSearchIndexablesProvider.isIntentValid(intent, this)
+                && !AppFunctionsUtil.isIntentValid(intent, this)) {
             finish();
             return;
         }
@@ -56,6 +60,11 @@ public class RoleSearchTrampolineActivity extends Activity {
             case RoleSearchIndexablesProvider.ACTION_MANAGE_SPECIAL_APP_ACCESS:
                 newIntent = SpecialAppAccessActivity.createIntent(
                         RoleSearchIndexablesProvider.getOriginalKey(intent), this);
+                break;
+            case AppFunctionsUtil.ACTION_MANAGE_DEFAULT_APP:
+                newIntent = DefaultAppActivity.createIntent(
+                        intent.getStringExtra(Intent.EXTRA_ROLE_NAME),
+                        intent.getParcelableExtra(Intent.EXTRA_USER, UserHandle.class), this);
                 break;
             default:
                 finish();
