@@ -24,17 +24,13 @@ import android.net.Uri
 import android.os.UserHandle
 import android.provider.Settings
 import com.android.permissioncontroller.R
-import com.android.permissioncontroller.appfunctions.AppFunctionsUtil.ACTION_ADDITIONAL_PERMISSIONS
-import com.android.permissioncontroller.appfunctions.AppFunctionsUtil.ACTION_MANAGE_APP_PERMISSION
-import com.android.permissioncontroller.appfunctions.AppFunctionsUtil.ACTION_MANAGE_APP_PERMISSIONS
-import com.android.permissioncontroller.appfunctions.AppFunctionsUtil.ACTION_MANAGE_PERMISSIONS
-import com.android.permissioncontroller.appfunctions.AppFunctionsUtil.ACTION_MANAGE_PERMISSION_APPS
-import com.android.permissioncontroller.appfunctions.AppFunctionsUtil.ACTION_MANAGE_UNUSED_APPS
 import com.android.permissioncontroller.appfunctions.AppFunctionsUtil.EXTRA_DEVICE_STATE_KEY
 import com.android.permissioncontroller.permission.model.livedatatypes.AppPermGroupUiInfo.PermGrantState
 import com.android.permissioncontroller.permission.ui.model.UnusedAppsViewModel.UnusedPeriod
 import com.android.permissioncontroller.permission.utils.KotlinUtils.getPermGroupLabel
 import com.android.permissioncontroller.permission.utils.Utils
+import com.android.permissioncontroller.role.ui.RoleApplicationItem
+import com.android.role.controller.model.Role
 import com.google.android.appfunctions.schema.common.v1.devicestate.DeviceStateItem
 import com.google.android.appfunctions.schema.common.v1.devicestate.LocalizedString
 import com.google.android.appfunctions.schema.common.v1.devicestate.PerScreenDeviceStates
@@ -91,7 +87,7 @@ class PermissionManagerScreen(context: Context) : PerScreenDeviceState(context) 
         get() = listOf("Security & privacy", "Privacy controls", "Permission manager")
 
     override val intent: Intent
-        get() = Intent(ACTION_MANAGE_PERMISSIONS)
+        get() = Intent(AppFunctionsUtil.ACTION_MANAGE_PERMISSIONS)
 
     companion object {
         const val KEY = "permission_manager"
@@ -121,7 +117,7 @@ class PermissionAppsScreen(context: Context, val permissionGroup: String) :
 
     override val intent: Intent
         get() =
-            Intent(ACTION_MANAGE_PERMISSION_APPS).apply {
+            Intent(AppFunctionsUtil.ACTION_MANAGE_PERMISSION_APPS).apply {
                 putExtra(Intent.EXTRA_PERMISSION_GROUP_NAME, permissionGroup)
             }
 
@@ -151,7 +147,7 @@ class AppPermissionsScreen(context: Context, val packageName: String) :
 
     override val intent: Intent
         get() =
-            Intent(ACTION_MANAGE_APP_PERMISSIONS).apply {
+            Intent(AppFunctionsUtil.ACTION_MANAGE_APP_PERMISSIONS).apply {
                 putExtra(Intent.EXTRA_PACKAGE_NAME, packageName)
             }
 
@@ -201,7 +197,7 @@ class AppPermissionScreen(
 
     override val intent: Intent
         get() =
-            Intent(ACTION_MANAGE_APP_PERMISSION).apply {
+            Intent(AppFunctionsUtil.ACTION_MANAGE_APP_PERMISSION).apply {
                 putExtra(Intent.EXTRA_PERMISSION_GROUP_NAME, permissionGroup)
                 putExtra(Intent.EXTRA_PACKAGE_NAME, packageName)
                 putExtra(Intent.EXTRA_USER, userHandle)
@@ -294,7 +290,7 @@ class UnusedAppsScreen(context: Context) : PerScreenDeviceState(context) {
         get() = listOf("Apps", "Unused apps")
 
     override val intent: Intent
-        get() = Intent(ACTION_MANAGE_UNUSED_APPS)
+        get() = Intent(AppFunctionsUtil.ACTION_MANAGE_UNUSED_APPS)
 
     companion object {
         const val KEY = "unused_apps"
@@ -375,11 +371,90 @@ class AdditionalPermissionsScreen(context: Context) : PerScreenDeviceState(conte
             )
 
     override val intent: Intent
-        get() = Intent(ACTION_ADDITIONAL_PERMISSIONS)
+        get() = Intent(AppFunctionsUtil.ACTION_ADDITIONAL_PERMISSIONS)
 
     companion object {
         const val KEY = "additional_permissions"
         const val DESCRIPTION = "Additional Permissions"
+    }
+}
+
+class DefaultAppListScreen(context: Context) : PerScreenDeviceState(context) {
+    override val key: String
+        get() = KEY
+
+    override val description: String
+        get() = DESCRIPTION
+
+    override val paths: List<String>
+        get() = listOf("Apps", "Default apps")
+
+    override val intent: Intent
+        get() = Intent(Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS)
+
+    companion object {
+        const val KEY = "default_app_list"
+        const val DESCRIPTION = "Default Apps"
+    }
+}
+
+class DefaultAppScreen(
+    context: Context,
+    private val role: Role,
+    private val roleApplications: List<RoleApplicationItem>,
+    private val isWorkProfile: Boolean,
+    private val user: UserHandle,
+) : PerScreenDeviceState(context) {
+    private val defaultAppName = context.getString(role.shortLabelResource)
+
+    override val key: String
+        get() = KEY
+
+    override val description: String
+        get() =
+            context.getString(role.labelResource).let {
+                return if (isWorkProfile) "Work profile: $it" else it
+            }
+
+    override val paths: List<String>
+        get() = listOf("Apps", "Default apps", defaultAppName)
+
+    override val intent: Intent
+        get() =
+            Intent(AppFunctionsUtil.ACTION_MANAGE_DEFAULT_APP).apply {
+                putExtra(Intent.EXTRA_ROLE_NAME, role.name)
+                putExtra(Intent.EXTRA_USER, user)
+            }
+
+    override fun getDeviceStateItems(): List<DeviceStateItem> {
+        val result = mutableListOf<DeviceStateItem>()
+
+        roleApplications.forEach { roleApplicationInfo ->
+            val packageLabel = Utils.getFullAppLabel(roleApplicationInfo.applicationInfo, context)
+            if (roleApplicationInfo.isHolderApplication) {
+                result.add(
+                    DeviceStateItem(
+                        key = "current_default_app",
+                        name = LocalizedString(english = "Current default app"),
+                        jsonValue = packageLabel,
+                    )
+                )
+            } else {
+                result.add(
+                    DeviceStateItem(
+                        key = "candidate_default_app",
+                        name = LocalizedString(english = "Candidate default app"),
+                        jsonValue = packageLabel,
+                    )
+                )
+            }
+        }
+
+        return result
+    }
+
+    companion object {
+        const val KEY = "default_app"
     }
 }
 
@@ -392,4 +467,6 @@ val deviceStateScreenKeys: List<String> =
         UnusedAppsScreen.KEY,
         UnusedAppLastUsageScreen.KEY,
         AdditionalPermissionsScreen.KEY,
+        DefaultAppListScreen.KEY,
+        DefaultAppScreen.KEY,
     )
