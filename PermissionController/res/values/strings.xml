@@ -1227,12 +1227,6 @@
     <!-- Description for the watch profile role. [CHAR LIMIT=NONE] -->
     <string name="role_watch_description"><xliff:g id="app_name" example="Wear">%1$s</xliff:g> will be allowed to interact with your notifications and access your Phone, SMS, Contacts and Calendar permissions.</string>
 
-    <!-- Description for the app streaming profile role. [CHAR LIMIT=NONE] -->
-    <string name="role_app_streaming_description"><xliff:g id="app_name" example="Cross-Device Communciation">%1$s</xliff:g> will be allowed to interact with your notifications and stream your apps to the connected device.</string>
-
-    <!-- Description for the companion device computer profile role. [CHAR LIMIT=NONE] -->
-    <string name="role_companion_device_computer_description">This service shares your photos, media, and notifications from your phone to other devices.</string>
-
     <!-- Label for the NOTES role. [CHAR LIMIT=30] -->
     <string name="role_notes_label">Default notes app</string>
     <!-- Short label for the NOTES role. [CHAR LIMIT=30] -->

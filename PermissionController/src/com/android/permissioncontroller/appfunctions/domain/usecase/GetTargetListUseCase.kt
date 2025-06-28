@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.android.permissioncontroller.appfunctions.domain.usecase
 
 import android.os.Process
@@ -21,19 +20,19 @@ import com.android.permissioncontroller.appfunctions.data.repository.AppFunction
 import com.android.permissioncontroller.appfunctions.domain.model.AppFunctionPackageInfo
 
 /**
- * This use case returns a list of all valid app function agents.
+ * This use case returns a list of all valid app function targets.
  *
- * @param appFunctionRepository The repository to use to get the app function agents.
+ * @param appFunctionRepository The repository to use to get the app function targets.
  * @param getAppFunctionPackageInfoUseCase The usecase to get [AppFunctionPackageInfo].
  */
-class GetAgentListUseCase(
+class GetTargetListUseCase(
     private val appFunctionRepository: AppFunctionRepository,
     private val getAppFunctionPackageInfoUseCase: GetAppFunctionPackageInfoUseCase,
 ) {
     suspend operator fun invoke(): List<AppFunctionPackageInfo> {
-        val agentPackageNames = appFunctionRepository.getValidAgents()
-        return agentPackageNames.map { agentPackageName ->
-            getAppFunctionPackageInfoUseCase(agentPackageName, Process.myUserHandle())
+        val targetPackageNames = appFunctionRepository.getValidTargets()
+        return targetPackageNames.map { targetPackageName ->
+            getAppFunctionPackageInfoUseCase(targetPackageName, Process.myUserHandle())
         }
     }
 }
