@@ -17,6 +17,7 @@
 package com.android.permissioncontroller.common.ui.handheld;
 
 import android.app.ActionBar;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -94,7 +95,10 @@ public abstract class SettingsFragment extends CollapsingToolbarBaseFragment {
             mPreferenceFragment = (PreferenceFragmentCompat) getChildFragmentManager()
                     .findFragmentById(R.id.preference_fragment_container);
         }
-        mEmptyText.setText(getEmptyTextResource());
+        int emptyTextResource = getEmptyTextResource();
+        if (emptyTextResource != Resources.ID_NULL) {
+            mEmptyText.setText(getEmptyTextResource());
+        }
         updateStateViews();
     }
 
@@ -102,7 +106,9 @@ public abstract class SettingsFragment extends CollapsingToolbarBaseFragment {
     protected abstract PreferenceFragmentCompat onCreatePreferenceFragment();
 
     @StringRes
-    protected abstract int getEmptyTextResource();
+    protected int getEmptyTextResource() {
+        return Resources.ID_NULL;
+    }
 
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {

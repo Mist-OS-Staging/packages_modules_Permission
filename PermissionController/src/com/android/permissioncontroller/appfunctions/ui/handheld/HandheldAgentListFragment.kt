@@ -15,23 +15,13 @@
  */
 package com.android.permissioncontroller.appfunctions.ui.handheld
 
-import androidx.annotation.StringRes
 import androidx.preference.PreferenceFragmentCompat
-import com.android.permissioncontroller.R
 import com.android.permissioncontroller.common.ui.handheld.SettingsFragment
 
-// TODO(b/424652480): Use SettingsWithLargeHeader instead to get larger header components (e.g.
-//  icon, title, summary), and ensure supports style overlay
 /** Fragment for the app function agent list. */
 class HandheldAgentListFragment : SettingsFragment(), HandheldAgentListPreferenceFragment.Parent {
     override fun onCreatePreferenceFragment(): PreferenceFragmentCompat {
         return HandheldAgentListPreferenceFragment.newInstance()
-    }
-
-    @Override
-    @StringRes
-    override fun getEmptyTextResource(): Int {
-        return R.string.app_function_agent_list_empty
     }
 
     companion object {

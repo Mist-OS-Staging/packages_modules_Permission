@@ -25,6 +25,7 @@ import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import androidx.test.filters.SdkSuppress
 import androidx.test.uiautomator.By
 import com.android.compatibility.common.util.SystemUtil.runWithShellPermissionIdentity
+import org.junit.After
 import org.junit.Assume.assumeFalse
 import org.junit.Before
 import org.junit.Rule
@@ -33,7 +34,10 @@ import org.junit.Test
 // TODO(b/424004217): Update this to the correct version code
 /** Tests the UI that displays the app function agents list. */
 @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
-@RequiresFlagsEnabled(Flags.FLAG_APP_FUNCTION_ACCESS_UI_ENABLED)
+@RequiresFlagsEnabled(
+    Flags.FLAG_APP_FUNCTION_ACCESS_API_ENABLED,
+    Flags.FLAG_APP_FUNCTION_ACCESS_UI_ENABLED,
+)
 class AgentListTest : BaseUsePermissionTest() {
     @get:Rule val checkFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
 
@@ -44,12 +48,51 @@ class AgentListTest : BaseUsePermissionTest() {
         assumeFalse(isWatch)
     }
 
+    @After
+    fun uninstallAgentApp() {
+        uninstallPackage(AGENT_APP_PACKAGE_NAME, requireSuccess = false)
+    }
+
     @Test
     fun startActivityWithIntent_showTitle() {
         startAppFunctionAgentListActivity()
 
         try {
             findView(By.descContains(APP_FUNCTION_AGENT_LIST_TITLE), true)
+        } finally {
+            pressBack()
+        }
+    }
+
+    @Test
+    fun startActivityWithIntent_showSummary() {
+        startAppFunctionAgentListActivity()
+
+        try {
+            findView(By.textContains(APP_FUNCTION_AGENT_LIST_SUMMARY), true)
+        } finally {
+            pressBack()
+        }
+    }
+
+    @Test
+    fun startActivityWithIntent_dontShowInvalidAgent() {
+        startAppFunctionAgentListActivity()
+
+        try {
+            findView(By.textContains(AGENT_APP_LABEL), false)
+        } finally {
+            pressBack()
+        }
+    }
+
+    @Test
+    fun startActivityWithIntent_showAgent() {
+        installPackage(AGENT_APP_APK_PATH)
+        startAppFunctionAgentListActivity()
+
+        try {
+            findView(By.textContains(AGENT_APP_LABEL), true)
         } finally {
             pressBack()
         }
@@ -69,6 +112,12 @@ class AgentListTest : BaseUsePermissionTest() {
     }
 
     companion object {
+        const val AGENT_APP_APK_PATH = "$APK_DIRECTORY/CtsAgentApp.apk"
+        const val AGENT_APP_PACKAGE_NAME = "android.permissionui.cts.appfunctions"
+        const val AGENT_APP_LABEL = "CtsAgentApp"
+
         private const val APP_FUNCTION_AGENT_LIST_TITLE = "Agent control of other apps"
+        private const val APP_FUNCTION_AGENT_LIST_SUMMARY =
+            "Assistant apps that can access apps and device functions on your device"
     }
 }

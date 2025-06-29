@@ -15,6 +15,7 @@
  */
 package com.android.permissioncontroller.appfunctions.ui
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -41,5 +42,16 @@ class AgentAccessActivity : SettingsActivity() {
 
     companion object {
         private val LOG_TAG = AgentAccessActivity::class.java.simpleName
+
+        /**
+         * Create an intent for starting this activity.
+         *
+         * @param context the context to create the intent
+         * @param agentPackageName the package whose access will be managed by the activity
+         * @return an intent to start this activity
+         */
+        fun createIntent(context: Context, agentPackageName: String) =
+            Intent(context, AgentAccessActivity::class.java)
+                .putExtra(Intent.EXTRA_PACKAGE_NAME, agentPackageName)
     }
 }
