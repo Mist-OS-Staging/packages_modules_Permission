@@ -16,10 +16,23 @@
 package com.android.permissioncontroller.appfunctions.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle.State
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.preference.Preference
+import androidx.preference.Preference.OnPreferenceClickListener
 import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.PreferenceGroup
 import com.android.permissioncontroller.R
+import com.android.permissioncontroller.appfunctions.domain.model.AppFunctionPackageInfo
+import com.android.permissioncontroller.appfunctions.ui.viewmodel.AgentListUiState
+import com.android.permissioncontroller.appfunctions.ui.viewmodel.AgentListViewModel
+import com.android.permissioncontroller.appfunctions.ui.viewmodel.AgentListViewModelFactory
+import com.android.permissioncontroller.common.model.Stateful
+import kotlinx.coroutines.launch
 
 /**
  * Child fragment for the list of app function agents.
@@ -30,19 +43,125 @@ import com.android.permissioncontroller.R
  *
  * @param <PF> type of the parent fragment
  */
-class AgentListChildFragment<PF> : Fragment(), Preference.OnPreferenceClickListener where
+class AgentListChildFragment<PF> : Fragment(), OnPreferenceClickListener where
 PF : PreferenceFragmentCompat,
 PF : AgentListChildFragment.Parent {
-    @Suppress("DEPRECATION")
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    private lateinit var viewModel: AgentListViewModel
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
         val preferenceFragment = requirePreferenceFragment()
         preferenceFragment.setTitle(getString(R.string.app_function_access_settings_title))
+
+        val factory = AgentListViewModelFactory(requireActivity().application)
+        viewModel = ViewModelProvider(this, factory).get(AgentListViewModel::class.java)
+
+        preferenceFragment.lifecycleScope.launch {
+            preferenceFragment.lifecycle.repeatOnLifecycle(State.STARTED) {
+                viewModel.uiStateFlow.collect(::onUiStateChanged)
+            }
+        }
+    }
+
+    private fun onUiStateChanged(uiState: Stateful<AgentListUiState>) {
+        val preferenceFragment = requirePreferenceFragment()
+        val preferenceManager = preferenceFragment.preferenceManager
+        var preferenceScreen = preferenceFragment.preferenceScreen
+        val context = preferenceManager.context
+        val oldPreferences = mutableMapOf<String, Preference>()
+        if (preferenceScreen == null) {
+            preferenceScreen = preferenceManager.createPreferenceScreen(context)
+            preferenceFragment.preferenceScreen = preferenceScreen
+        } else {
+            clearPreferences(preferenceScreen, oldPreferences)
+        }
+
+        addHeaderPreference(preferenceScreen, oldPreferences)
+
+        when (uiState) {
+            is Stateful.Loading -> {} // do nothing
+            is Stateful.Failure -> {
+                Log.e(LOG_TAG, "Failed to load agent list", uiState.throwable)
+                addEmptyStatePreference(preferenceScreen, oldPreferences)
+            }
+            is Stateful.Success -> {
+                val agents = uiState.value.agents
+                if (agents.isEmpty()) {
+                    addEmptyStatePreference(preferenceScreen, oldPreferences)
+                } else {
+                    addAgentPreferences(preferenceScreen, agents, oldPreferences)
+                }
+            }
+        }
+
+        preferenceFragment.onPreferenceScreenChanged()
+    }
+
+    private fun clearPreferences(
+        preferenceGroup: PreferenceGroup,
+        oldPreferences: MutableMap<String, Preference>,
+    ) {
+        for (i in preferenceGroup.preferenceCount - 1 downTo 0) {
+            val preference = preferenceGroup.getPreference(i)
+            preferenceGroup.removePreference(preference)
+            preference.order = Preference.DEFAULT_ORDER
+            oldPreferences[preference.key] = preference
+        }
+    }
+
+    private fun addHeaderPreference(
+        preferenceGroup: PreferenceGroup,
+        oldPreferences: Map<String, Preference>,
+    ) {
+        val preferenceFragment = requirePreferenceFragment()
+        val preference =
+            oldPreferences[PREFERENCE_KEY_INTRO]
+                ?: preferenceFragment.createHeaderPreference().apply {
+                    key = PREFERENCE_KEY_INTRO
+                    setTitle(R.string.app_function_agent_list_summary)
+                }
+        preferenceGroup.addPreference(preference)
+    }
+
+    private fun addEmptyStatePreference(
+        preferenceGroup: PreferenceGroup,
+        oldPreferences: Map<String, Preference>,
+    ) {
+        val preferenceFragment = requirePreferenceFragment()
+        val preference =
+            oldPreferences[PREFERENCE_KEY_ZERO_STATE]
+                ?: preferenceFragment.createEmptyStatePreference().apply {
+                    key = PREFERENCE_KEY_ZERO_STATE
+                    setTitle(R.string.app_function_agent_list_empty)
+                }
+        preferenceGroup.addPreference(preference)
+    }
+
+    private fun addAgentPreferences(
+        preferenceGroup: PreferenceGroup,
+        agents: List<AppFunctionPackageInfo>,
+        oldPreferences: Map<String, Preference>,
+    ) {
+        val preferenceFragment = requirePreferenceFragment()
+        for (agent in agents) {
+            val preference =
+                oldPreferences[agent.packageName]
+                    ?: preferenceFragment.createPreference().apply {
+                        key = agent.packageName
+                        title = agent.label
+                        icon = agent.icon
+                        onPreferenceClickListener = this@AgentListChildFragment
+                    }
+            preferenceGroup.addPreference(preference)
+        }
     }
 
     override fun onPreferenceClick(preference: Preference): Boolean {
-        // TODO(rmacgregor): Implement onPreferenceClick
+        val agentPackageName = preference.key
+        val context = requireContext()
+        val intent = AgentAccessActivity.createIntent(context, agentPackageName)
+        startActivity(intent)
         return true
     }
 
@@ -60,6 +179,12 @@ PF : AgentListChildFragment.Parent {
          */
         fun setTitle(title: CharSequence)
 
+        /** Creates a new intro preference for the screen */
+        fun createHeaderPreference(): Preference
+
+        /** Creates a new zero state preference for the screen */
+        fun createEmptyStatePreference(): Preference
+
         /** Creates a new preference for an agent. */
         fun createPreference(): Preference
 
@@ -71,6 +196,12 @@ PF : AgentListChildFragment.Parent {
     }
 
     companion object {
+        private val LOG_TAG = AgentListChildFragment::class.java.simpleName
+        private val PREFERENCE_KEY_INTRO =
+            AgentListChildFragment::class.java.name + ".preference.INTRO"
+        private val PREFERENCE_KEY_ZERO_STATE =
+            AgentListChildFragment::class.java.name + ".preference.ZERO_STATE"
+
         /**
          * Create a new instance of AgentListChildFragment
          *
