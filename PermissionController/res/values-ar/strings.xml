@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"هل تريد ضبط <xliff:g id="APP_NAME">%1$s</xliff:g> باعتباره التطبيق التلقائي للتنقّل؟"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"ما مِن أذونات مطلوبة."</string>
     <string name="role_watch_description" msgid="267003778693177779">"سيتم السماح لتطبيق <xliff:g id="APP_NAME">%1$s</xliff:g> بالتفاعل مع الإشعارات والوصول إلى أذونات الهاتف والرسائل القصيرة وجهات الاتصال والتقويم."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"سيتم السماح لتطبيق <xliff:g id="APP_NAME">%1$s</xliff:g> بالتفاعل مع الإشعارات وبث التطبيقات إلى الجهاز المتصل."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"هذه الخدمة تشارك الصور والوسائط والإشعارات من هاتفك مع أجهزة أخرى."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"تطبيق تدوين الملاحظات التلقائي"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"تطبيق تدوين الملاحظات"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"التطبيقات التي تتيح لك تدوين ملاحظات على جهازك"</string>

@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"Vols definir <xliff:g id="APP_NAME">%1$s</xliff:g> com a aplicació de navegació predefinida?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"No calen permisos"</string>
     <string name="role_watch_description" msgid="267003778693177779">"<xliff:g id="APP_NAME">%1$s</xliff:g> tindrà permís per interaccionar amb les teves notificacions i accedir al telèfon, SMS, contactes i calendari."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"<xliff:g id="APP_NAME">%1$s</xliff:g> tindrà permís per interaccionar amb les teves notificacions i reproduir en continu les teves aplicacions al dispositiu connectat."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"Aquest servei comparteix les fotos, el contingut multimèdia i les notificacions del telèfon amb altres dispositius."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"Aplicació de notes predeterminada"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"Aplicació de notes"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"Aplicacions que et permeten prendre notes al dispositiu"</string>

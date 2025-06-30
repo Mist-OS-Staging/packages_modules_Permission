@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"<xliff:g id="APP_NAME">%1$s</xliff:g> యాప్‌ను మీ ఆటోమేటిక్ సెట్టింగ్ నావిగేషన్ యాప్‌గా సెటప్ చేయాలా?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"అనుమతులు అవసరం లేదు"</string>
     <string name="role_watch_description" msgid="267003778693177779">"మీ నోటిఫికేషన్‌లతో ఇంటరాక్ట్ అవ్వడానికి అలాగే మీ ఫోన్, SMS, కాంటాక్ట్‌లు అలాగే Calendar అనుమతులను యాక్సెస్ చేయడానికి <xliff:g id="APP_NAME">%1$s</xliff:g> అనుమతించబడుతుంది."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"మీ నోటిఫికేషన్‌లతో ఇంటరాక్ట్ అవ్వడానికి, కనెక్ట్ అయిన పరికరానికి మీ యాప్‌లను స్ట్రీమ్ చేయడానికి <xliff:g id="APP_NAME">%1$s</xliff:g> అనుమతించబడుతుంది."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"ఈ సర్వీస్ మీ ఫోటోలు, మీడియా, ఇంకా నోటిఫికేషన్‌లను మీ ఫోన్ నుండి ఇతర పరికరాలకు షేర్ చేస్తుంది."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"ఆటోమేటిక్ నోట్స్ యాప్"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"నోట్స్ యాప్"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"మీ పరికరంలో నోట్స్ తీసుకోవడానికి మిమ్మల్ని అనుమతించే యాప్‌లు"</string>

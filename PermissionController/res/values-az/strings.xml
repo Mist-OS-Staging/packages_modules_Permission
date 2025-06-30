@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"<xliff:g id="APP_NAME">%1$s</xliff:g> defolt naviqasiya tətbiqi olaraq ayarlansın?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"İcazəyə ehtiyac yoxdur"</string>
     <string name="role_watch_description" msgid="267003778693177779">"<xliff:g id="APP_NAME">%1$s</xliff:g> bildirişlərinizə, Telefon, SMS, Kontaktlar və Təqvimə giriş əldə edəcək."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"<xliff:g id="APP_NAME">%1$s</xliff:g> bildirişlərinizə giriş əldə edəcək və tətbiqlərinizi qoşulmuş cihazda yayımlaya biləcək"</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"Bu xidmət telefonunuzdakı foto, media və bildirişləri digər cihazlarla paylaşır."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"Defolt qeyd tətbiqi"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"Qeyd tətbiqi"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"Cihazınızda qeydlər aparmağa imkan verən tətbiqlər"</string>

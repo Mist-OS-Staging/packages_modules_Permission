@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"<xliff:g id="APP_NAME">%1$s</xliff:g> ஆப்ஸை உங்கள் வழிகாட்டும் இயல்புநிலை ஆப்ஸாக அமைக்கவா?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"அனுமதிகள் தேவையில்லை"</string>
     <string name="role_watch_description" msgid="267003778693177779">"உங்கள் அறிவிப்புகளைப் பயன்படுத்துவதற்கான அனுமதியையும் மொபைல், மெசேஜ், தொடர்புகள், கேலெண்டர் ஆகியவற்றின் அனுமதிகளுக்கான அணுகலையும் <xliff:g id="APP_NAME">%1$s</xliff:g> ஆப்ஸ் பெறும்."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"உங்கள் அறிவிப்புகளைப் பயன்படுத்துவதற்கான அனுமதியையும் இணைக்கப்பட்டுள்ள சாதனத்தில் உங்கள் ஆப்ஸை ஸ்ட்ரீம் செய்யவும் <xliff:g id="APP_NAME">%1$s</xliff:g> ஆப்ஸ் அனுமதிக்கப்படும்."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"இந்தச் சேவை உங்கள் படங்கள், மீடியா, அறிவிப்புகள் ஆகியவற்றை மொபைலிலிருந்து பிற சாதனங்களுக்குப் பகிரும்."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"குறிப்பெடுக்க இயல்புநிலை ஆப்ஸ்"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"குறிப்பு எடுப்பதற்கான ஆப்ஸ்"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"உங்கள் சாதனத்தில் குறிப்புகள் எடுக்க அனுமதிக்கும் ஆப்ஸ்"</string>
