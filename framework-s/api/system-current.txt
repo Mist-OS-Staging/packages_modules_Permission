@@ -41,8 +41,8 @@ package android.app.role {
     method @Nullable @RequiresPermission(android.Manifest.permission.MANAGE_DEFAULT_APPLICATIONS) public String getDefaultApplication(@NonNull String);
     method @FlaggedApi("com.android.permission.flags.cross_user_role_enabled") @NonNull @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public java.util.List<java.lang.String> getDefaultHoldersForTest(@NonNull String);
     method @Deprecated @NonNull @RequiresPermission("com.android.permissioncontroller.permission.MANAGE_ROLES_FROM_CONTROLLER") public java.util.List<java.lang.String> getHeldRolesFromController(@NonNull String);
-    method @NonNull @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public java.util.List<java.lang.String> getRoleHolders(@NonNull String);
-    method @NonNull @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public java.util.List<java.lang.String> getRoleHoldersAsUser(@NonNull String, @NonNull android.os.UserHandle);
+    method @NonNull @RequiresPermission(anyOf={android.Manifest.permission.MANAGE_ROLE_HOLDERS, android.Manifest.permission.GET_ROLE_HOLDERS}) public java.util.List<java.lang.String> getRoleHolders(@NonNull String);
+    method @NonNull @RequiresPermission(anyOf={android.Manifest.permission.MANAGE_ROLE_HOLDERS, android.Manifest.permission.GET_ROLE_HOLDERS}) public java.util.List<java.lang.String> getRoleHoldersAsUser(@NonNull String, @NonNull android.os.UserHandle);
     method @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public void isApplicationVisibleForRole(@NonNull String, @NonNull String, @NonNull java.util.concurrent.Executor, @NonNull java.util.function.Consumer<java.lang.Boolean>);
     method @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public boolean isBypassingRoleQualification();
     method @FlaggedApi("android.permission.flags.system_server_role_controller_enabled") @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public boolean isRoleFallbackEnabled(@NonNull String);
