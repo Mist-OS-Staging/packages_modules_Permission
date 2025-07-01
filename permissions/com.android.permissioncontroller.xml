@@ -37,5 +37,6 @@
         <permission name="android.permission.READ_SYSTEM_GRAMMATICAL_GENDER" />
         <permission name="android.permission.WATCH_APPOPS" />
         <permission name="android.permission.OBSERVE_ROLE_HOLDERS"/>
+        <permission name="android.permission.ACCESS_LOCATION_BYPASS_ALLOWLIST" />
     </privapp-permissions>
 </permissions>
