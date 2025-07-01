@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"Vil du angi <xliff:g id="APP_NAME">%1$s</xliff:g> som standardapp for navigering?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"Ingen tillatelser er nødvendige"</string>
     <string name="role_watch_description" msgid="267003778693177779">"<xliff:g id="APP_NAME">%1$s</xliff:g> får tillatelse til å samhandle med varslene dine og får tilgang til Telefon, SMS, kontakter og Kalender."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"<xliff:g id="APP_NAME">%1$s</xliff:g> får tillatelse til å samhandle med varslene dine og strømme appene dine til den tilkoblede enheten."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"Denne tjenesten deler bildene, mediene og varslene dine fra telefonen din til andre enheter."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"Standard notatapp"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"Notatapp"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"Apper du kan bruke til å ta notater på enheten"</string>

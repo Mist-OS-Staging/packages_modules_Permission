@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"<xliff:g id="APP_NAME">%1$s</xliff:g> ကို မူရင်းလမ်းညွှန်အက်ပ်အဖြစ် သတ်မှတ်မလား။"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"ခွင့်ပြုချက် မလိုပါ"</string>
     <string name="role_watch_description" msgid="267003778693177779">"သင်၏ ‘ဖုန်း’၊ ‘SMS စာတိုစနစ်’၊ ‘အဆက်အသွယ်များ’ နှင့် ‘ပြက္ခဒိန်’ ခွင့်ပြုချက်များကို သုံးရန်နှင့် အကြောင်းကြားချက်များကို ပြန်လှန်တုံ့ပြန်ရန် <xliff:g id="APP_NAME">%1$s</xliff:g> ကို ခွင့်ပြုပါမည်။"</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"သင့်အကြောင်းကြားချက်များကို ပြန်လှန်တုံ့ပြန်ရန်နှင့် သင့်အက်ပ်များကို ချိတ်ဆက်ထားသောစက်သို့ တိုက်ရိုက်လွှင့်ရန် <xliff:g id="APP_NAME">%1$s</xliff:g> ကို ခွင့်ပြုပါမည်။"</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"ဤဝန်ဆောင်မှုသည် သင်၏ဖုန်းမှ ဓာတ်ပုံ၊ မီဒီယာနှင့် အကြောင်းကြားချက်များကို အခြားစက်ပစ္စည်းများသို့ မျှဝေသည်။"</string>
     <string name="role_notes_label" msgid="7451627001058089536">"မူရင်း မှတ်စုအက်ပ်"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"မှတ်စုရေးသောအက်ပ်"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"စက်ပစ္စည်းတွင် မှတ်စုရေးခွင့်ပြုသော အက်ပ်များ"</string>

@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"Stel <xliff:g id="APP_NAME">%1$s</xliff:g> as jou navigasieprogram?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"Geen toestemmings is nodig nie"</string>
     <string name="role_watch_description" msgid="267003778693177779">"<xliff:g id="APP_NAME">%1$s</xliff:g> sal interaksie met jou kennisgewings mag hê en toegang kry tot jou Foon-, SMS-, Kontakte- en Kalender-toestemmings."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"<xliff:g id="APP_NAME">%1$s</xliff:g> sal toegelaat word om interaksie met jou kennisgewings te hê en jou programme na die gekoppelde toestel te stroom."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"Hierdie diens deel jou foto\'s, media en kennisgewings van jou foon af na ander toestelle toe."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"Versteknotasapp"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"Notasapp"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"Apps wat jou toelaat om notas op jou toestel te maak"</string>

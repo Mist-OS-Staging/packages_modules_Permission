@@ -396,7 +396,8 @@ public final class RoleManager {
      * Get package names of the applications holding the role.
      * <p>
      * <strong>Note:</strong> Using this API requires holding
-     * {@code android.permission.MANAGE_ROLE_HOLDERS}.
+     * {@code android.permission.MANAGE_ROLE_HOLDERS} or
+     * {@code android.permission.GET_ROLE_HOLDERS}.
      *
      * @param roleName the name of the role to get the role holder for
      *
@@ -407,7 +408,8 @@ public final class RoleManager {
      * @hide
      */
     @NonNull
-    @RequiresPermission(Manifest.permission.MANAGE_ROLE_HOLDERS)
+    @RequiresPermission(anyOf = {Manifest.permission.MANAGE_ROLE_HOLDERS,
+            Manifest.permission.GET_ROLE_HOLDERS})
     @SystemApi
     @UserHandleAware(enabledSinceTargetSdkVersion = Build.VERSION_CODES.VANILLA_ICE_CREAM)
     public List<String> getRoleHolders(@NonNull String roleName) {
@@ -418,7 +420,9 @@ public final class RoleManager {
      * Get package names of the applications holding the role.
      * <p>
      * <strong>Note:</strong> Using this API requires holding
-     * {@code android.permission.MANAGE_ROLE_HOLDERS} and if the user id is not the current user
+     * {@code android.permission.MANAGE_ROLE_HOLDERS} or
+     * {@code android.permission.GET_ROLE_HOLDERS}. If the user id is not the
+     * current user, it also requires holding
      * {@code android.permission.INTERACT_ACROSS_USERS_FULL}.
      *
      * @param roleName the name of the role to get the role holder for
@@ -433,7 +437,8 @@ public final class RoleManager {
      * @hide
      */
     @NonNull
-    @RequiresPermission(Manifest.permission.MANAGE_ROLE_HOLDERS)
+    @RequiresPermission(anyOf = {Manifest.permission.MANAGE_ROLE_HOLDERS,
+            Manifest.permission.GET_ROLE_HOLDERS})
     @SystemApi
     public List<String> getRoleHoldersAsUser(@NonNull String roleName, @NonNull UserHandle user) {
         Preconditions.checkStringNotEmpty(roleName, "roleName cannot be null or empty");

@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"Сделать приложение \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" навигатором по умолчанию?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"Разрешения не требуются."</string>
     <string name="role_watch_description" msgid="267003778693177779">"Приложению \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" будет предоставлен доступ к уведомлениям, а также следующие разрешения: телефон, SMS, контакты и календарь."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"Приложение \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" сможет взаимодействовать с уведомлениями и транслировать приложения на подключенное устройство."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"Этот сервис открывает другим устройствам доступ к фотографиям, медиафайлам и уведомлениям на вашем телефоне."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"Для заметок по умолчанию"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"Приложение для заметок"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"Приложения для написания заметок на вашем устройстве"</string>

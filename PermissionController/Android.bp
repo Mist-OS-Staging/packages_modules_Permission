@@ -155,6 +155,7 @@ android_library {
         "lottie",
         "safety-label",
         "role-controller",
+        "android.location.flags-aconfig-java-export",
         "android.permission.flags-aconfig-java-export",
         "android.xr.flags-aconfig-java-export",
         "com.android.permission.flags-aconfig-java-export",

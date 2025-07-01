@@ -69,6 +69,12 @@
                 searchTerms="@com.android.safetycenter.resources:string/biometrics_search_terms"
                 refreshOnPageOpenAllowed="true"
                 initialDisplayState="hidden"/>
+            <issue-only-safety-source
+                id="AndroidIdentityCheck"
+                packageName="com.android.settings"
+                profile="primary_profile_only"
+                refreshOnPageOpenAllowed="true"
+                maxSeverityLevel="200"/>
         </safety-sources-group>
         <safety-sources-group
             id="AndroidCellularNetworkSecuritySources"

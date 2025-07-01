@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"Želite nastaviti aplikacijo <xliff:g id="APP_NAME">%1$s</xliff:g> kot privzeto aplikacijo za navigacijo?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"Nobeno dovoljenje ni potrebno"</string>
     <string name="role_watch_description" msgid="267003778693177779">"Aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> bosta omogočena interakcija z obvestili in dostop do dovoljenj za telefon, sporočila SMS, stike in koledar."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"Aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> bosta omogočena interakcija z obvestili in pretočno izvajanje aplikacij v povezano napravo."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"Ta storitev deli vaše fotografije, predstavnost in obvestila iz vašega telefona z drugimi napravami."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"Privzeta aplikacija za zapiske"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"Aplikacija za zapiske"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"Aplikacije, ki vam omogočajo ustvarjanje zapiskov v napravi."</string>

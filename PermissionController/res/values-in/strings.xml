@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"Setel <xliff:g id="APP_NAME">%1$s</xliff:g> sebagai aplikasi navigasi default?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"Tidak ada izin yang diperlukan"</string>
     <string name="role_watch_description" msgid="267003778693177779">"<xliff:g id="APP_NAME">%1$s</xliff:g> akan diizinkan berinteraksi dengan notifikasi dan mengakses izin Telepon, SMS, Kontak, dan Kalender."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"<xliff:g id="APP_NAME">%1$s</xliff:g> akan diizinkan berinteraksi dengan notifikasi dan men-streaming aplikasi ke perangkat terhubung."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"Layanan ini membagikan foto, media, dan notifikasi dari ponsel ke perangkat lain."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"Aplikasi catatan default"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"Aplikasi catatan"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"Aplikasi untuk membuat catatan di perangkat"</string>
