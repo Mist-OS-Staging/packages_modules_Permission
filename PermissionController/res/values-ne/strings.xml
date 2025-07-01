@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"<xliff:g id="APP_NAME">%1$s</xliff:g> लाई आफ्नो डिफल्ट नेभिगेसन एप बनाउने हो?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"कुनै पनि अनुमति चाहिन्न"</string>
     <string name="role_watch_description" msgid="267003778693177779">"<xliff:g id="APP_NAME">%1$s</xliff:g> लाई तपाईंका सूचना जाँच गर्ने र फोन, SMS, सम्पर्क ठेगाना तथा पात्रोका अनुमति हेर्ने तथा प्रयोग गर्ने अनुमति दिइने छ।"</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"<xliff:g id="APP_NAME">%1$s</xliff:g> लाई तपाईंका सूचना हेर्ने र कनेक्ट भएको डिभाइसमा तपाईंका एपहरू स्ट्रिम गर्ने अनुमति दिइने छ।"</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"तपाईं यो सेवाका सहायताले अन्य डिभाइससँग आफ्नो फोनमा भएका फोटो, मिडिया र सूचनाहरू सेयर गर्न सक्नुहुन्छ।"</string>
     <string name="role_notes_label" msgid="7451627001058089536">"डिफल्ट नोट एप"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"नोट एप"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"तपाईंलाई आफ्नो डिभाइसमा नोट बनाउन दिने एपहरू"</string>

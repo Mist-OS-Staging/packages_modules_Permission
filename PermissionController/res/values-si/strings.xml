@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"<xliff:g id="APP_NAME">%1$s</xliff:g> ඔබගේ පෙරනිමි සංචාලන යෙදුම ලෙස සකසන්නද?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"අවසර අවශ්‍ය නැත"</string>
     <string name="role_watch_description" msgid="267003778693177779">"<xliff:g id="APP_NAME">%1$s</xliff:g> ඔබගේ දැනුම්දීම් සමඟ අන්තර්ක්‍රියා කිරීමට සහ ඔබගේ දුරකථනය, කෙටි පණිවුඩ, සම්බන්ධතා සහ දින දර්ශන අවසර වෙත ප්‍රවේශ වීමට ඉඩ දෙනු ඇත."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"<xliff:g id="APP_NAME">%1$s</xliff:g> හට ඔබගේ දැනුම්දීම් සමඟ අන්තර්ක්‍රියා කිරීමට සහ ඔබගේ යෙදුම් සම්බන්ධිත උපාංගයට ප්‍රවාහ කිරීමට ඉඩ දෙනු ඇත."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"මෙම සේවාව ඔබගේ ඡායාරූප, මාධ්‍ය සහ දැනුම්දීම් ඔබගේ දුරකථනයෙන් වෙනත් උපාංග වෙත බෙදා ගනී."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"පෙරනිමි සටහන් යෙදුම"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"සටහන් යෙදුම"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"ඔබේ උපාංගයෙහි සටහන් ගැනීමට ඔබට ඉඩ දෙන යෙදුම්"</string>

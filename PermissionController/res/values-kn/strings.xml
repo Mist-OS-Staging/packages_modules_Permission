@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"<xliff:g id="APP_NAME">%1$s</xliff:g> ಅನ್ನು ಡೀಫಾಲ್ಟ್ ನ್ಯಾವಿಗೇಷನ್ ಆ್ಯಪ್ ಆಗಿ ಸೆಟ್ ಮಾಡಬೇಕೇ?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"ಯಾವುದೇ ಅನುಮತಿಗಳ ಅಗತ್ಯವಿಲ್ಲ"</string>
     <string name="role_watch_description" msgid="267003778693177779">"ನಿಮ್ಮ ಅಧಿಸೂಚನೆಗಳೊಂದಿಗೆ ಸಂವಹನ ನಡೆಸಲು ಮತ್ತು ನಿಮ್ಮ ಫೋನ್, ಎಸ್ಎಂಎಸ್, ಸಂಪರ್ಕಗಳು ಮತ್ತು Calendar ಅನುಮತಿಗಳನ್ನು ಪ್ರವೇಶಿಸಲು <xliff:g id="APP_NAME">%1$s</xliff:g> ಗೆ ಅನುಮತಿಸಲಾಗುತ್ತದೆ."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"ನಿಮ್ಮ ಅಧಿಸೂಚನೆಗಳೊಂದಿಗೆ ಸಂವಹನ ನಡೆಸಲು ಮತ್ತು ನಿಮ್ಮ ಆ್ಯಪ್‌ಗಳನ್ನು ಸಂಪರ್ಕಿತ ಸಾಧನಕ್ಕೆ ಸ್ಟ್ರೀಮ್ ಮಾಡಲು <xliff:g id="APP_NAME">%1$s</xliff:g> ಗೆ ಅನುಮತಿಸಲಾಗುತ್ತದೆ."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"ಈ ಸೇವೆಯು ನಿಮ್ಮ ಫೋಟೋಗಳು, ಮಾಧ್ಯಮ ಹಾಗೂ ಅಧಿಸೂಚನೆಗಳನ್ನು ನಿಮ್ಮ ಫೋನ್‌ನಿಂದ ಇತರ ಸಾಧನಗಳ ಜೊತೆ ಹಂಚಿಕೊಳ್ಳುತ್ತದೆ."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"ಡೀಫಾಲ್ಟ್ ಟಿಪ್ಪಣಿಗಳ ಆ್ಯಪ್"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"ಟಿಪ್ಪಣಿಗಳು ಆ್ಯಪ್"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಟಿಪ್ಪಣಿಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ನಿಮಗೆ ಅನುಮತಿಸುವ ಆ್ಯಪ್‌ಗಳು"</string>

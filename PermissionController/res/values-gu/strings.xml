@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"શું <xliff:g id="APP_NAME">%1$s</xliff:g>ને તમારી ડિફૉલ્ટ નૅવિગેશન ઍપ તરીકે સેટ કરીએ?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"કોઈ પરવાનગી જરૂરી નથી"</string>
     <string name="role_watch_description" msgid="267003778693177779">"<xliff:g id="APP_NAME">%1$s</xliff:g>ને તમારા નોટિફિકેશન સાથે ક્રિયાપ્રતિક્રિયા કરવાની અને તમારા ફોન, SMS, સંપર્કો તેમજ Calendarની પરવાનગીઓ ઍક્સેસ કરવાની મંજૂરી મળશે."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"<xliff:g id="APP_NAME">%1$s</xliff:g>ને તમારા નોટિફિકેશન સાથે ક્રિયાપ્રતિક્રિયા કરવાની અને કનેક્ટ કરેલા ડિવાઇસ સાથે તમારી ઍપનું કન્ટેન્ટ સ્ટ્રીમ કરવાની મંજૂરી આપવામાં આવશે."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"આ સેવા તમારા ફોનમાંથી તમારા ફોટા, મીડિયા અને નોટિફિકેશન અન્ય ડિવાઇસમાં શેર કરે છે."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"નોંધ માટેની ડિફૉલ્ટ ઍપ"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"નોંધ માટેની ઍપ"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"ઍપ કે જે તમને તમારા ડિવાઇસ પર નોંધ કરવાની મંજૂરી આપે છે"</string>

@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"Setezi <xliff:g id="APP_NAME">%1$s</xliff:g> ca aplicație de navigare prestabilită?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"Nu este nevoie de permisiuni"</string>
     <string name="role_watch_description" msgid="267003778693177779">"<xliff:g id="APP_NAME">%1$s</xliff:g> va putea să interacționeze cu notificările și să-ți acceseze permisiunile pentru Telefon, SMS-uri, Agendă și Calendar."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"<xliff:g id="APP_NAME">%1$s</xliff:g> va putea să interacționeze cu notificările și să redea în stream conținutul din aplicații pe dispozitivul conectat."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"Acest serviciu trimite fotografiile, conținutul media și notificările de pe telefon pe alte dispozitive."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"Aplicația prestabilită pentru note"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"Aplicația pentru note"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"Aplicații cu ajutorul cărora poți să iei notițe pe dispozitiv"</string>

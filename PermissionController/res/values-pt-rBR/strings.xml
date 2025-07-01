@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"Definir <xliff:g id="APP_NAME">%1$s</xliff:g> como o app de navegação padrão?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"Nenhuma permissão necessária"</string>
     <string name="role_watch_description" msgid="267003778693177779">"O app <xliff:g id="APP_NAME">%1$s</xliff:g> poderá interagir com suas notificações e acessar as permissões do Telefone, de SMS, de Contatos e da Agenda."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"O app <xliff:g id="APP_NAME">%1$s</xliff:g> poderá interagir com suas notificações e fazer streaming de outros apps para os dispositivos conectados."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"Este serviço compartilha fotos, mídia e notificações do smartphone com outros dispositivos."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"App de notas padrão"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"App de notas"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"Apps que permitem a criação de notas no dispositivo"</string>

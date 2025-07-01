@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"Czy aplikacja <xliff:g id="APP_NAME">%1$s</xliff:g> ma być domyślną aplikacją do nawigacji?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"Nie potrzebuje uprawnień"</string>
     <string name="role_watch_description" msgid="267003778693177779">"Aplikacja <xliff:g id="APP_NAME">%1$s</xliff:g> będzie mogła korzystać z powiadomień oraz uprawnień dotyczących Telefonu, SMS-ów, Kontaktów i Kalendarza."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"Aplikacja <xliff:g id="APP_NAME">%1$s</xliff:g> będzie mogła korzystać z powiadomień oraz odtwarzać strumieniowo dane z aplikacji na połączonych urządzeniach."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"Ta usługa udostępnia Twoje zdjęcia, multimedia i powiadomienia z telefonu innym urządzeniom."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"Domyślna aplikacja do notatek"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"Aplikacja do notatek"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"Aplikacje umożliwiające robienie notatek na urządzeniu"</string>

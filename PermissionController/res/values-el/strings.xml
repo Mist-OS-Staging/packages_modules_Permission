@@ -404,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"Ορισμός <xliff:g id="APP_NAME">%1$s</xliff:g> ως προεπιλεγμένης εφαρμογής πλοήγησης;"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"Δεν απαιτούνται άδειες"</string>
     <string name="role_watch_description" msgid="267003778693177779">"Η εφαρμογή <xliff:g id="APP_NAME">%1$s</xliff:g> θα επιτρέπεται να αλληλεπιδρά με τις ειδοποιήσεις σας και να έχει πρόσβαση στις άδειες Τηλεφώνου, SMS, Επαφών και Ημερολογίου."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"Η εφαρμογή <xliff:g id="APP_NAME">%1$s</xliff:g> θα επιτρέπεται να αλληλεπιδρά με τις ειδοποιήσεις σας και να μεταδίδει τις εφαρμογές σας μέσω ροής στη συνδεδεμένη συσκευή."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"Αυτή η υπηρεσία κοινοποιεί τις φωτογραφίες, τα μέσα και τις ειδοποιήσεις από το τηλέφωνό σας στις άλλες συσκευές σας."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"Προεπιλεγ. εφαρμογή σημειώσεων"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"Εφαρμογή σημειώσεων"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"Εφαρμογές που σας επιτρέπουν να κρατάτε σημειώσεις στη συσκευή σας"</string>
