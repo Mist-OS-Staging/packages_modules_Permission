@@ -15,11 +15,20 @@
  */
 package com.android.permissioncontroller.appfunctions.ui
 
+import android.content.Intent
 import android.os.Bundle
+import android.os.Process
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle.State
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.PreferenceGroup
+import androidx.preference.TwoStatePreference
 import com.android.permissioncontroller.R
+import com.android.permissioncontroller.permission.utils.KotlinUtils
+import kotlinx.coroutines.launch
 
 /**
  * Child fragment for modifying agent access of target apps.
@@ -33,12 +42,91 @@ import com.android.permissioncontroller.R
 class AgentAccessChildFragment<PF> : Fragment(), Preference.OnPreferenceClickListener where
 PF : PreferenceFragmentCompat,
 PF : AgentAccessChildFragment.Parent {
-    @Suppress("DEPRECATION")
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    private lateinit var agentPackageName: String
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        agentPackageName = arguments!!.getString(Intent.EXTRA_PACKAGE_NAME)!!
 
         val preferenceFragment = requirePreferenceFragment()
         preferenceFragment.setTitle(getString(R.string.app_function_access_settings_title))
+
+        preferenceFragment.lifecycleScope.launch {
+            preferenceFragment.lifecycle.repeatOnLifecycle(State.STARTED) { onUiStateChanged() }
+        }
+    }
+
+    private fun onUiStateChanged() {
+        val preferenceFragment = requirePreferenceFragment()
+        val preferenceManager = preferenceFragment.preferenceManager
+        var preferenceScreen = preferenceFragment.preferenceScreen
+        val context = preferenceManager.context
+        val oldPreferences = mutableMapOf<String, Preference>()
+        if (preferenceScreen == null) {
+            preferenceScreen = preferenceManager.createPreferenceScreen(context)
+            preferenceFragment.preferenceScreen = preferenceScreen
+        } else {
+            clearPreferences(preferenceScreen, oldPreferences)
+        }
+        val label =
+            KotlinUtils.getPackageLabel(
+                requireActivity().application,
+                agentPackageName,
+                Process.myUserHandle(),
+            )
+        addHeaderPreference(preferenceScreen, label, oldPreferences)
+        addEmptyStatePreference(preferenceScreen, label, oldPreferences)
+
+        preferenceFragment.onPreferenceScreenChanged()
+    }
+
+    private fun clearPreferences(
+        preferenceGroup: PreferenceGroup,
+        oldPreferences: MutableMap<String, Preference>,
+    ) {
+        for (i in preferenceGroup.preferenceCount - 1 downTo 0) {
+            val preference = preferenceGroup.getPreference(i)
+            preferenceGroup.removePreference(preference)
+            preference.order = Preference.DEFAULT_ORDER
+            oldPreferences[preference.key] = preference
+        }
+    }
+
+    private fun addHeaderPreference(
+        preferenceGroup: PreferenceGroup,
+        label: String,
+        oldPreferences: Map<String, Preference>,
+    ) {
+        val agentIcon =
+            KotlinUtils.getBadgedPackageIcon(
+                requireActivity().application,
+                agentPackageName,
+                Process.myUserHandle(),
+            )
+        val preference =
+            oldPreferences[PREFERENCE_KEY_INTRO]
+                ?: requirePreferenceFragment().createHeaderPreference().apply {
+                    key = PREFERENCE_KEY_INTRO
+                    icon = agentIcon
+                    title = label
+                    summary = getString(R.string.app_function_agent_access_summary, label)
+                }
+        preferenceGroup.addPreference(preference)
+    }
+
+    private fun addEmptyStatePreference(
+        preferenceGroup: PreferenceGroup,
+        label: String,
+        oldPreferences: Map<String, Preference>,
+    ) {
+        val preference =
+            oldPreferences[PREFERENCE_KEY_ZERO_STATE]
+                ?: requirePreferenceFragment().createEmptyStatePreference().apply {
+                    key = PREFERENCE_KEY_ZERO_STATE
+                    title = getString(R.string.app_function_agent_access_empty_title, label)
+                }
+        preferenceGroup.addPreference(preference)
     }
 
     override fun onPreferenceClick(preference: Preference): Boolean {
@@ -60,8 +148,14 @@ PF : AgentAccessChildFragment.Parent {
          */
         fun setTitle(title: CharSequence)
 
+        /** Creates a new header preference for the screen */
+        fun createHeaderPreference(): Preference
+
+        /** Creates a new empty state preference for the screen */
+        fun createEmptyStatePreference(): Preference
+
         /** Creates a new preference for a target app. */
-        fun createPreference(): Preference
+        fun createPreference(): TwoStatePreference
 
         /**
          * Callback when changes have been made to the {@link PreferenceScreen} of the parent {@link
@@ -71,11 +165,21 @@ PF : AgentAccessChildFragment.Parent {
     }
 
     companion object {
+        private val PREFERENCE_KEY_INTRO =
+            AgentAccessChildFragment::class.java.name + ".preference.INTRO"
+        private val PREFERENCE_KEY_ZERO_STATE =
+            AgentAccessChildFragment::class.java.name + ".preference.ZERO_STATE"
+
         /**
          * Create a new instance of AgentAccessChildFragment
          *
+         * @param agentPackageName agent package to modify access for
          * @return a new instance of AgentAccessChildFragment
          */
-        fun newInstance(): AgentAccessChildFragment<*> = AgentAccessChildFragment<Nothing>()
+        fun newInstance(agentPackageName: String): AgentAccessChildFragment<*> {
+            val arguments =
+                Bundle().apply { putString(Intent.EXTRA_PACKAGE_NAME, agentPackageName) }
+            return AgentAccessChildFragment<Nothing>().apply { setArguments(arguments) }
+        }
     }
 }

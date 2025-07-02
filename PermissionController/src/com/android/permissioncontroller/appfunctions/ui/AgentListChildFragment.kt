@@ -133,7 +133,8 @@ PF : AgentListChildFragment.Parent {
             oldPreferences[PREFERENCE_KEY_ZERO_STATE]
                 ?: preferenceFragment.createEmptyStatePreference().apply {
                     key = PREFERENCE_KEY_ZERO_STATE
-                    setTitle(R.string.app_function_agent_list_empty)
+                    setTitle(R.string.app_function_agent_list_empty_title)
+                    setSummary(R.string.app_function_agent_list_empty_summary)
                 }
         preferenceGroup.addPreference(preference)
     }
@@ -179,10 +180,10 @@ PF : AgentListChildFragment.Parent {
          */
         fun setTitle(title: CharSequence)
 
-        /** Creates a new intro preference for the screen */
+        /** Creates a new header preference for the screen */
         fun createHeaderPreference(): Preference
 
-        /** Creates a new zero state preference for the screen */
+        /** Creates a new empty state preference for the screen */
         fun createEmptyStatePreference(): Preference
 
         /** Creates a new preference for an agent. */
