@@ -15,35 +15,38 @@
  */
 package com.android.permissioncontroller.appfunctions.ui.handheld
 
-import androidx.annotation.StringRes
+import android.content.Intent
+import android.os.Bundle
 import androidx.preference.PreferenceFragmentCompat
-import com.android.permissioncontroller.R
 import com.android.permissioncontroller.common.ui.handheld.SettingsFragment
 
-// TODO(b/424652480): Use SettingsWithLargeHeader instead to get larger header components (e.g.
-//  icon, title, summary), and ensure supports style overlay
 /** Fragment for the app function agent list. */
-class HandheldAgentAccessFragment(val agentPackageName: String) :
+class HandheldAgentAccessFragment :
     SettingsFragment(), HandheldAgentAccessPreferenceFragment.Parent {
-    override fun onCreatePreferenceFragment(): PreferenceFragmentCompat {
-        return HandheldAgentAccessPreferenceFragment.newInstance(agentPackageName)
+    private lateinit var agentPackageName: String
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        agentPackageName = arguments!!.getString(Intent.EXTRA_PACKAGE_NAME)!!
     }
 
-    @Override
-    @StringRes
-    override fun getEmptyTextResource(): Int {
-        return R.string.app_function_agent_access_empty
+    override fun onCreatePreferenceFragment(): PreferenceFragmentCompat {
+        return HandheldAgentAccessPreferenceFragment.newInstance(agentPackageName)
     }
 
     companion object {
         /**
          * Create a new instance of this fragment.
          *
+         * @param agentPackageName agent package to modify access for
          * @return a new instance of this fragment
          */
         @JvmStatic
         fun newInstance(agentPackageName: String): HandheldAgentAccessFragment {
-            return HandheldAgentAccessFragment(agentPackageName)
+            val arguments =
+                Bundle().apply { putString(Intent.EXTRA_PACKAGE_NAME, agentPackageName) }
+            return HandheldAgentAccessFragment().apply { setArguments(arguments) }
         }
     }
 }

@@ -137,6 +137,7 @@ android_library {
         "SettingsLibActivityEmbedding",
         "SettingsLibSettingsTheme",
         "SettingsLibCategory",
+        "SettingsLibIntroPreference",
         "SettingsLibFooterPreference",
         "SettingsLibSelectorWithWidgetPreference",
         "SettingsLibTopIntroPreference",

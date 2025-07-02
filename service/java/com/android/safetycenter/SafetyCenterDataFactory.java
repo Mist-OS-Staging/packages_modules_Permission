@@ -542,7 +542,8 @@ public final class SafetyCenterDataFactory {
         CharSequence groupSummary =
                 mSafetyCenterResourcesApk.getOptionalString(safetySourcesGroup.getSummaryResId());
 
-        if (safetySourcesGroup.getId().equals(ANDROID_LOCK_SCREEN_SOURCES_GROUP_ID)
+        if (SafetyCenterFlags.getGenerateSummarySafetySourcesGroupIds()
+                        .contains(safetySourcesGroup.getId())
                 && TextUtils.isEmpty(groupSummary)) {
             List<CharSequence> titles = new ArrayList<>();
             for (int i = 0; i < entries.size(); i++) {

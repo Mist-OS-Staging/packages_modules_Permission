@@ -15,24 +15,37 @@
  */
 package com.android.permissioncontroller.appfunctions.ui.handheld
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.preference.Preference
+import androidx.preference.SwitchPreferenceCompat
+import androidx.preference.TwoStatePreference
 import com.android.permissioncontroller.appfunctions.ui.AgentAccessChildFragment
+import com.android.settingslib.widget.IntroPreference
 import com.android.settingslib.widget.SettingsBasePreferenceFragment
+import com.android.settingslib.widget.TopIntroPreference
 
 /**
  * Handheld preference fragment for the management of app function agents.
  *
  * Must be added as a child fragment and its parent fragment must implement [Parent].
  */
-class HandheldAgentAccessPreferenceFragment(val agentPackageName: String) :
+class HandheldAgentAccessPreferenceFragment :
     SettingsBasePreferenceFragment(), AgentAccessChildFragment.Parent {
-    @Suppress("DEPRECATION")
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    private lateinit var agentPackageName: String
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        agentPackageName = arguments!!.getString(Intent.EXTRA_PACKAGE_NAME)!!
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         if (savedInstanceState == null) {
-            val fragment = AgentAccessChildFragment.newInstance()
+            val fragment = AgentAccessChildFragment.newInstance(agentPackageName)
             childFragmentManager.beginTransaction().add(fragment, null).commit()
         }
     }
@@ -45,9 +58,12 @@ class HandheldAgentAccessPreferenceFragment(val agentPackageName: String) :
         requireParent().setTitle(title)
     }
 
-    override fun createPreference(): Preference {
-        return Preference(requireContext())
-    }
+    override fun createHeaderPreference(): Preference = IntroPreference(requireContext())
+
+    override fun createEmptyStatePreference(): Preference = TopIntroPreference(requireContext())
+
+    override fun createPreference(): TwoStatePreference =
+        SwitchPreferenceCompat(requireContext()).apply { isPersistent = false }
 
     override fun onPreferenceScreenChanged() {
         requireParent().onPreferenceScreenChanged()
@@ -77,11 +93,14 @@ class HandheldAgentAccessPreferenceFragment(val agentPackageName: String) :
         /**
          * Create a new instance of this fragment.
          *
+         * @param agentPackageName agent package to modify access for
          * @return a new instance of this fragment
          */
         @JvmStatic
         fun newInstance(agentPackageName: String): HandheldAgentAccessPreferenceFragment {
-            return HandheldAgentAccessPreferenceFragment(agentPackageName)
+            val arguments =
+                Bundle().apply { putString(Intent.EXTRA_PACKAGE_NAME, agentPackageName) }
+            return HandheldAgentAccessPreferenceFragment().apply { setArguments(arguments) }
         }
     }
 }

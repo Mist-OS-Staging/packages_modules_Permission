@@ -33,7 +33,10 @@ import org.junit.Test
 // TODO(b/424004217): Update this to the correct version code
 /** Tests the UI that displays the app function agents list. */
 @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
-@RequiresFlagsEnabled(Flags.FLAG_APP_FUNCTION_ACCESS_UI_ENABLED)
+@RequiresFlagsEnabled(
+    Flags.FLAG_APP_FUNCTION_ACCESS_API_ENABLED,
+    Flags.FLAG_APP_FUNCTION_ACCESS_UI_ENABLED,
+)
 class AgentAccessTest : BaseUsePermissionTest() {
     @get:Rule val checkFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
 
@@ -55,6 +58,17 @@ class AgentAccessTest : BaseUsePermissionTest() {
         }
     }
 
+    @Test
+    fun startActivityWithIntent_showSummary() {
+        startAppFunctionAgentListActivity()
+
+        try {
+            findView(By.textContains(APP_FUNCTION_AGENT_ACCESS_SUMMARY), true)
+        } finally {
+            pressBack()
+        }
+    }
+
     /** Starts activity with intent [ACTION_MANAGE_AGENT_APP_FUNCTION_ACCESS]. */
     private fun startAppFunctionAgentListActivity() {
         doAndWaitForWindowTransition {
@@ -71,5 +85,7 @@ class AgentAccessTest : BaseUsePermissionTest() {
 
     companion object {
         private const val APP_FUNCTION_AGENT_ACCESS_TITLE = "Agent control of other apps"
+        private const val APP_FUNCTION_AGENT_ACCESS_SUMMARY =
+            "Apps and system settings $APP_PACKAGE_NAME can access to perform actions"
     }
 }
