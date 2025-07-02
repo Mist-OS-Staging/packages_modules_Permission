@@ -91,6 +91,7 @@ public class OneTimePermissionTest {
             mContext.getSystemService(ActivityManager.class);
     private String mOldOneTimePermissionTimeoutValue;
     private String mOldOneTimePermissionKilledDelayValue;
+    private String mOldEnableExtraDelaySvcRestartMemPressureValue;
 
     @Rule
     public final ScreenRecordRule sScreenRecordRule = new ScreenRecordRule(false, false);
@@ -119,11 +120,18 @@ public class OneTimePermissionTest {
                     "one_time_permissions_timeout_millis");
             mOldOneTimePermissionKilledDelayValue = DeviceConfig.getProperty("permissions",
                     "one_time_permissions_killed_delay_millis");
+            mOldEnableExtraDelaySvcRestartMemPressureValue = DeviceConfig.getProperty(
+                    "activity_manager", "enable_extra_delay_svc_restart_mem_pressure");
             DeviceConfig.setProperty("permissions", "one_time_permissions_timeout_millis",
                     Long.toString(ONE_TIME_TIMEOUT_MILLIS), false);
             DeviceConfig.setProperty("permissions",
                     "one_time_permissions_killed_delay_millis",
                     Long.toString(ONE_TIME_KILLED_DELAY_MILLIS), false);
+            // Prevents ActivityManager from delaying app restart by up to 40 seconds
+            // depending on the device's memory pressure
+            DeviceConfig.setProperty("activity_manager",
+                    "enable_extra_delay_svc_restart_mem_pressure",
+                    Boolean.toString(false), false);
         });
     }
 
@@ -142,6 +150,9 @@ public class OneTimePermissionTest {
                     DeviceConfig.setProperty("permissions",
                             "one_time_permissions_killed_delay_millis",
                             mOldOneTimePermissionKilledDelayValue, false);
+                    DeviceConfig.setProperty("activity_manager",
+                            "enable_extra_delay_svc_restart_mem_pressure",
+                            mOldEnableExtraDelaySvcRestartMemPressureValue, false);
                 });
     }
 
