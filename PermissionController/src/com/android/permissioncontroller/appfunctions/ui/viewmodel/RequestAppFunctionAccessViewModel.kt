@@ -52,10 +52,6 @@ class RequestAppFunctionAccessViewModel(
     val dispatcher: CoroutineDispatcher = Dispatchers.Default,
 ) : AndroidViewModel(application) {
     private val coroutineScope = scope ?: viewModelScope
-    private val agentAppFunctionPackageInfo =
-        getAppFunctionPackageInfoUseCase(agentPackageName, user)
-    private val targetAppFunctionPackageInfo =
-        getAppFunctionPackageInfoUseCase(targetPackageName, user)
 
     @VisibleForTesting
     private val _uiStateFlow = MutableStateFlow<Stateful<RequestAccessUiState>>(Stateful.Loading())
@@ -65,16 +61,18 @@ class RequestAppFunctionAccessViewModel(
         coroutineScope.launch(dispatcher) {
             try {
                 val grantState = getAccessRequestStateUseCase(agentPackageName, targetPackageName)
+                val agentPackageInfo = getAppFunctionPackageInfoUseCase(agentPackageName, user)
+                val targetPackageInfo = getAppFunctionPackageInfoUseCase(targetPackageName, user)
                 val isRequestable =
                     grantState != ACCESS_REQUEST_STATE_GRANTED &&
                         grantState != ACCESS_REQUEST_STATE_UNREQUESTABLE
                 _uiStateFlow.value =
                     Stateful.Success(
                         RequestAccessUiState(
-                            agentAppFunctionPackageInfo.label,
-                            targetAppFunctionPackageInfo.label,
-                            agentAppFunctionPackageInfo.icon,
-                            targetAppFunctionPackageInfo.icon,
+                            agentPackageInfo.label,
+                            targetPackageInfo.label,
+                            agentPackageInfo.icon,
+                            targetPackageInfo.icon,
                             isRequestable,
                         )
                     )
