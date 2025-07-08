@@ -61,4 +61,7 @@ class GetAccessRequestStateUseCase(private val appFunctionRepository: AppFunctio
         }
         return agentTargetAccessMap
     }
+
+    suspend operator fun invoke(agentPackageName: String, targetPackageName: String): Int =
+        appFunctionRepository.getAccessRequestState(agentPackageName, targetPackageName)
 }

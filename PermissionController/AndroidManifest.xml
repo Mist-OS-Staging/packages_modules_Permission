@@ -318,6 +318,18 @@
                   android:canDisplayOnRemoteDevices="@bool/is_at_least_v">
         </activity>
 
+        <activity android:name="com.android.permissioncontroller.appfunctions.ui.RequestAccessActivity"
+                  android:theme="@style/Theme.RequestAppFunctionAccessActivity.FilterTouches"
+                  android:excludeFromRecents="true"
+                  android:exported="true"
+                  android:launchMode="singleTop"
+                  android:enabled="@bool/is_at_least_v36r1">
+            <intent-filter android:priority="1">
+                <action android:name="android.app.appfunctions.action.REQUEST_APP_FUNCTION_ACCESS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <activity android:name="com.android.permissioncontroller.permission.ui.ManagePermissionsActivity"
                   android:configChanges="orientation|keyboardHidden|screenSize"
                   android:label="@string/app_permissions"
