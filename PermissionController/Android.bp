@@ -158,6 +158,7 @@ android_library {
         "role-controller",
         "android.location.flags-aconfig-java-export",
         "android.permission.flags-aconfig-java-export",
+        "com.android.permissioncontroller.flags-aconfig-java",
         "android.xr.flags-aconfig-java-export",
         "com.android.permission.flags-aconfig-java-export",
         "androidx.compose.foundation_foundation",

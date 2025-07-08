@@ -16,6 +16,6 @@
   -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Comma separated list of safety source IDs to show in the same task as the safety center -->
-    <string name="config_same_task_safety_source_ids" translatable="false">AndroidAccessibility,AndroidBackgroundLocation,AndroidBiometrics,AndroidFaceUnlock,AndroidFingerprintUnlock,AndroidHealthConnect,AndroidLockScreen,AndroidPrivateSpace,AndroidMoreSettings,AndroidNotificationListener,AndroidPermissionAutoRevoke,AndroidPermissionManager,AndroidPermissionUsage,AndroidPrivacyAppDataSharingUpdates,AndroidPrivacyControls,AndroidWearUnlock,AndroidWorkPolicyInfo</string>
+  <string name="app_function_access_settings_title" description="The title of the entry for App Function Access Settings">Agent control of other apps</string>
+  <string name="app_function_access_settings_summary" description="The summary of the entry for App Function Access Settings, which describes the page contents">Perform actions on your device and in other apps</string>
 </resources>
