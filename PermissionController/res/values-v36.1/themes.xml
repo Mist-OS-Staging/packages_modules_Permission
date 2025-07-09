@@ -18,12 +18,17 @@
 <resources>
     <!-- START REQUEST APP FUNCTION DIALOG -->
 
+    <style name="Theme.RequestAppFunctionAccessActivity" parent="Theme.DeviceDefault.Settings.Transparent">
+        <item name="android:dialogTheme">@style/Theme.PermissionController.Settings.Dialog</item>
+    </style>
+
     <style name="Theme.RequestAppFunctionAccessActivity.FilterTouches">
         <item name="android:filterTouchesWhenObscured">true</item>
     </style>
 
-    <style name="Theme.RequestAppFunctionAccessActivity" parent="Theme.DeviceDefault.Settings.Transparent">
-        <item name="android:alertDialogTheme">@style/Theme.DeviceDefault.AlertDialog.SettingsLib.Expressive.Vertical</item>
+    <style name="Theme.PermissionController.Settings.Dialog" parent="@style/Theme.DeviceDefault.Dialog.NoActionBar.DayNight">
+        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
     </style>
 
     <!-- END REQUEST APP FUNCTION DIALOG -->
