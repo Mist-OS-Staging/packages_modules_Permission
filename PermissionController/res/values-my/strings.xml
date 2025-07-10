@@ -701,4 +701,30 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"သင့်ဖုန်းကို စစ်ဆေးပါ"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"သင့်ဖုန်းကို ချိတ်ဆက်၍မရပါ"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"ထပ်စမ်းကြည့်မလား။"</string>
+    <!-- no translation found for app_function_access_settings_title (8529554485031723950) -->
+    <skip />
+    <!-- no translation found for app_function_access_settings_summary (2162127599468986004) -->
+    <skip />
+    <!-- no translation found for app_function_agent_list_summary (1809900126197190780) -->
+    <skip />
+    <!-- no translation found for app_function_agent_list_empty_title (397515613920663055) -->
+    <skip />
+    <!-- no translation found for app_function_agent_list_empty_summary (610653760323174019) -->
+    <skip />
+    <!-- no translation found for app_function_agent_access_summary (7238285759002624286) -->
+    <skip />
+    <!-- no translation found for app_function_agent_access_empty_title (3943494236139338580) -->
+    <skip />
+    <!-- no translation found for app_function_target_access_title (5086998551478393562) -->
+    <skip />
+    <!-- no translation found for app_function_target_access_summary (2688275777520240124) -->
+    <skip />
+    <!-- no translation found for request_app_function_access_dialog_title (6549957496184641967) -->
+    <skip />
+    <!-- no translation found for request_app_function_access_dialog_desc (5815889037756375293) -->
+    <skip />
+    <!-- no translation found for request_app_function_dialog_button_allow (7758794243635329183) -->
+    <skip />
+    <!-- no translation found for request_app_function_dialog_button_deny (9084928058374041888) -->
+    <skip />
 </resources>
