@@ -18,7 +18,6 @@ package com.android.permissioncontroller.appfunctions
 
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.content.res.Resources
 import android.net.Uri
 import android.os.UserHandle
@@ -129,21 +128,14 @@ class PermissionAppsScreen(context: Context, val permissionGroup: String) :
 class AppPermissionsScreen(context: Context, val packageName: String) :
     PerScreenDeviceState(context) {
 
-    private var packageLabel: String
-
-    init {
-        val appInfo = context.packageManager.getApplicationInfo(packageName, 0)
-        packageLabel = Utils.getFullAppLabel(appInfo, context)
-    }
-
     override val key: String
         get() = KEY
 
     override val description: String
-        get() = "App Permissions: $packageLabel"
+        get() = "App Permissions: $packageName"
 
     override val paths: List<String>
-        get() = listOf("Apps", packageLabel, "Permissions")
+        get() = listOf("Apps", packageName, "Permissions")
 
     override val intent: Intent
         get() =
@@ -168,22 +160,11 @@ class AppPermissionScreen(
     private val permissionGroupLabel: String =
         getPermGroupLabel(context, permissionGroup).toString()
 
-    private var packageLabel: String
-
-    init {
-        try {
-            val appInfo = context.packageManager.getApplicationInfo(packageName, 0)
-            packageLabel = Utils.getFullAppLabel(appInfo, context)
-        } catch (e: PackageManager.NameNotFoundException) {
-            packageLabel = DEFAULT_PACKAGE_LABEL
-        }
-    }
-
     override val key: String
         get() = KEY
 
     override val description: String
-        get() = "$permissionGroupLabel Permission: $packageLabel"
+        get() = "$permissionGroupLabel Permission: $packageName"
 
     override val paths: List<String>
         get() =
@@ -192,7 +173,7 @@ class AppPermissionScreen(
                 "Privacy controls",
                 "Permission manager",
                 permissionGroupLabel,
-                packageLabel,
+                packageName,
             )
 
     override val intent: Intent
@@ -303,25 +284,14 @@ class UnusedAppLastUsageScreen(
     val packageName: String,
     private val lastUsageTime: Long,
 ) : PerScreenDeviceState(context) {
-    private var packageLabel: String
-
-    init {
-        try {
-            val appInfo = context.packageManager.getApplicationInfo(packageName, 0)
-            packageLabel = Utils.getFullAppLabel(appInfo, context)
-        } catch (e: PackageManager.NameNotFoundException) {
-            packageLabel = DEFAULT_PACKAGE_LABEL
-        }
-    }
-
     override val key: String
         get() = KEY
 
     override val description: String
-        get() = "Unused app details: $packageLabel"
+        get() = "Unused app details: $packageName"
 
     override val paths: List<String>
-        get() = listOf("Apps", "Unused apps", packageLabel)
+        get() = listOf("Apps", "Unused apps", packageName)
 
     override val intent: Intent
         get() =
@@ -430,13 +400,13 @@ class DefaultAppScreen(
         val result = mutableListOf<DeviceStateItem>()
 
         roleApplications.forEach { roleApplicationInfo ->
-            val packageLabel = Utils.getFullAppLabel(roleApplicationInfo.applicationInfo, context)
+            val packageName = roleApplicationInfo.applicationInfo.packageName
             if (roleApplicationInfo.isHolderApplication) {
                 result.add(
                     DeviceStateItem(
                         key = "current_default_app",
                         name = LocalizedString(english = "Current default app"),
-                        jsonValue = packageLabel,
+                        jsonValue = packageName,
                     )
                 )
             } else {
@@ -444,7 +414,7 @@ class DefaultAppScreen(
                     DeviceStateItem(
                         key = "candidate_default_app",
                         name = LocalizedString(english = "Candidate default app"),
-                        jsonValue = packageLabel,
+                        jsonValue = packageName,
                     )
                 )
             }
