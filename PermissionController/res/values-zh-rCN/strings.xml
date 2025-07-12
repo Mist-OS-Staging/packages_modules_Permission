@@ -195,7 +195,7 @@
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"允许有限访问"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"确切位置"</string>
     <string name="approximate_image_description" msgid="938803699637069884">"大致位置"</string>
-    <string name="app_permission_location_accuracy" msgid="7166912915040018669">"启用精确位置"</string>
+    <string name="app_permission_location_accuracy" msgid="7166912915040018669">"使用精确位置"</string>
     <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"精确位置关闭时，应用可以获取您的大致位置"</string>
     <string name="app_permission_title" msgid="2090897901051370711">"<xliff:g id="PERM">%1$s</xliff:g>权限"</string>
     <string name="app_permission_header" msgid="2951363137032603806">"是否允许此应用获得“<xliff:g id="PERM">%1$s</xliff:g>”权限"</string>
@@ -701,4 +701,30 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"请查看您的手机"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"无法连接到您的手机"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"要重试吗？"</string>
+    <!-- no translation found for app_function_access_settings_title (8529554485031723950) -->
+    <skip />
+    <!-- no translation found for app_function_access_settings_summary (2162127599468986004) -->
+    <skip />
+    <!-- no translation found for app_function_agent_list_summary (1809900126197190780) -->
+    <skip />
+    <!-- no translation found for app_function_agent_list_empty_title (397515613920663055) -->
+    <skip />
+    <!-- no translation found for app_function_agent_list_empty_summary (610653760323174019) -->
+    <skip />
+    <!-- no translation found for app_function_agent_access_summary (7238285759002624286) -->
+    <skip />
+    <!-- no translation found for app_function_agent_access_empty_title (3943494236139338580) -->
+    <skip />
+    <!-- no translation found for app_function_target_access_title (5086998551478393562) -->
+    <skip />
+    <!-- no translation found for app_function_target_access_summary (2688275777520240124) -->
+    <skip />
+    <!-- no translation found for request_app_function_access_dialog_title (6549957496184641967) -->
+    <skip />
+    <!-- no translation found for request_app_function_access_dialog_desc (5815889037756375293) -->
+    <skip />
+    <!-- no translation found for request_app_function_dialog_button_allow (7758794243635329183) -->
+    <skip />
+    <!-- no translation found for request_app_function_dialog_button_deny (9084928058374041888) -->
+    <skip />
 </resources>
