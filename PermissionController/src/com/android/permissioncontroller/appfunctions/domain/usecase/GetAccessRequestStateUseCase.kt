@@ -31,15 +31,15 @@ class GetAccessRequestStateUseCase(private val appFunctionRepository: AppFunctio
     suspend operator fun invoke(
         agentPackageName: String,
         targetPackageNames: List<String>,
-    ): Map<Pair<String, String>, Boolean> {
-        val agentTargetAccessMap = mutableMapOf<Pair<String, String>, Boolean>()
+    ): Map<String, Boolean> {
+        val agentTargetAccessMap = mutableMapOf<String, Boolean>()
         for (targetPackageName in targetPackageNames) {
             val accessRequestState =
                 appFunctionRepository.getAccessRequestState(agentPackageName, targetPackageName)
             if (accessRequestState == ACCESS_REQUEST_STATE_UNREQUESTABLE) {
                 continue
             }
-            agentTargetAccessMap[agentPackageName to targetPackageName] =
+            agentTargetAccessMap[targetPackageName] =
                 accessRequestState == ACCESS_REQUEST_STATE_GRANTED
         }
         return agentTargetAccessMap
@@ -48,15 +48,15 @@ class GetAccessRequestStateUseCase(private val appFunctionRepository: AppFunctio
     suspend operator fun invoke(
         agentPackageNames: List<String>,
         targetPackageName: String,
-    ): Map<Pair<String, String>, Boolean> {
-        val agentTargetAccessMap = mutableMapOf<Pair<String, String>, Boolean>()
+    ): Map<String, Boolean> {
+        val agentTargetAccessMap = mutableMapOf<String, Boolean>()
         for (agentPackageName in agentPackageNames) {
             val accessRequestState =
                 appFunctionRepository.getAccessRequestState(agentPackageName, targetPackageName)
             if (accessRequestState == ACCESS_REQUEST_STATE_UNREQUESTABLE) {
                 continue
             }
-            agentTargetAccessMap[agentPackageName to targetPackageName] =
+            agentTargetAccessMap[agentPackageName] =
                 accessRequestState == ACCESS_REQUEST_STATE_GRANTED
         }
         return agentTargetAccessMap
