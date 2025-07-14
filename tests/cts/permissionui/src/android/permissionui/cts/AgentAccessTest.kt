@@ -25,6 +25,7 @@ import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import androidx.test.filters.SdkSuppress
 import androidx.test.uiautomator.By
 import com.android.compatibility.common.util.SystemUtil.runWithShellPermissionIdentity
+import org.junit.After
 import org.junit.Assume.assumeFalse
 import org.junit.Before
 import org.junit.Rule
@@ -45,11 +46,20 @@ class AgentAccessTest : BaseUsePermissionTest() {
         assumeFalse(isAutomotive)
         assumeFalse(isTv)
         assumeFalse(isWatch)
+
+        installPackage(AGENT_APP_APK_PATH)
+        installPackage(TARGET_APP_APK_PATH)
+    }
+
+    @After
+    fun cleanup() {
+        uninstallPackage(AGENT_APP_PACKAGE_NAME, requireSuccess = false)
+        uninstallPackage(TARGET_APP_PACKAGE_NAME, requireSuccess = false)
     }
 
     @Test
     fun startActivityWithIntent_showTitle() {
-        startAppFunctionAgentListActivity()
+        startAppFunctionAgentAccessActivity()
 
         try {
             findView(By.descContains(APP_FUNCTION_AGENT_ACCESS_TITLE), true)
@@ -60,7 +70,7 @@ class AgentAccessTest : BaseUsePermissionTest() {
 
     @Test
     fun startActivityWithIntent_showSummary() {
-        startAppFunctionAgentListActivity()
+        startAppFunctionAgentAccessActivity()
 
         try {
             findView(By.textContains(APP_FUNCTION_AGENT_ACCESS_SUMMARY), true)
@@ -70,13 +80,13 @@ class AgentAccessTest : BaseUsePermissionTest() {
     }
 
     /** Starts activity with intent [ACTION_MANAGE_AGENT_APP_FUNCTION_ACCESS]. */
-    private fun startAppFunctionAgentListActivity() {
+    private fun startAppFunctionAgentAccessActivity() {
         doAndWaitForWindowTransition {
             runWithShellPermissionIdentity {
                 context.startActivity(
                     Intent(ACTION_MANAGE_AGENT_APP_FUNCTION_ACCESS).apply {
                         addFlags(FLAG_ACTIVITY_NEW_TASK)
-                        putExtra(Intent.EXTRA_PACKAGE_NAME, APP_PACKAGE_NAME)
+                        putExtra(Intent.EXTRA_PACKAGE_NAME, AGENT_APP_PACKAGE_NAME)
                     }
                 )
             }
@@ -84,8 +94,15 @@ class AgentAccessTest : BaseUsePermissionTest() {
     }
 
     companion object {
+        private const val AGENT_APP_APK_PATH = "$APK_DIRECTORY/CtsAgentApp.apk"
+        private const val TARGET_APP_APK_PATH = "$APK_DIRECTORY/CtsTargetApp.apk"
+        private const val AGENT_APP_PACKAGE_NAME = "android.permissionui.cts.appfunctions.agent"
+        private const val TARGET_APP_PACKAGE_NAME = "android.permissionui.cts.appfunctions.target"
+        private const val AGENT_APP_LABEL = "CtsAgentApp"
+        private const val TARGET_APP_LABEL = "CtsTargetApp"
+
         private const val APP_FUNCTION_AGENT_ACCESS_TITLE = "Agent control of other apps"
         private const val APP_FUNCTION_AGENT_ACCESS_SUMMARY =
-            "Apps and system settings $APP_PACKAGE_NAME can access to perform actions"
+            "Apps and system settings $AGENT_APP_LABEL can access to perform actions"
     }
 }
