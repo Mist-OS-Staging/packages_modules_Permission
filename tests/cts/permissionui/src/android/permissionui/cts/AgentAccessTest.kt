@@ -15,6 +15,12 @@
  */
 package android.permissionui.cts
 
+import android.app.appfunctions.AppFunctionManager
+import android.app.appfunctions.AppFunctionManager.ACCESS_FLAG_MASK_ALL
+import android.app.appfunctions.AppFunctionManager.ACCESS_FLAG_USER_DENIED
+import android.app.appfunctions.AppFunctionManager.ACCESS_FLAG_USER_GRANTED
+import android.app.appfunctions.AppFunctionManager.ACCESS_REQUEST_STATE_DENIED
+import android.app.appfunctions.AppFunctionManager.ACCESS_REQUEST_STATE_GRANTED
 import android.app.appfunctions.AppFunctionManager.ACTION_MANAGE_AGENT_APP_FUNCTION_ACCESS
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
@@ -24,7 +30,9 @@ import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import androidx.test.filters.SdkSuppress
 import androidx.test.uiautomator.By
+import com.android.compatibility.common.util.SystemUtil.callWithShellPermissionIdentity
 import com.android.compatibility.common.util.SystemUtil.runWithShellPermissionIdentity
+import com.google.common.truth.Truth.assertThat
 import org.junit.After
 import org.junit.Assume.assumeFalse
 import org.junit.Before
@@ -41,6 +49,8 @@ import org.junit.Test
 class AgentAccessTest : BaseUsePermissionTest() {
     @get:Rule val checkFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
 
+    private val appFunctionManager = context.getSystemService(AppFunctionManager::class.java)!!
+
     @Before
     fun setup() {
         assumeFalse(isAutomotive)
@@ -49,10 +59,14 @@ class AgentAccessTest : BaseUsePermissionTest() {
 
         installPackage(AGENT_APP_APK_PATH)
         installPackage(TARGET_APP_APK_PATH)
+
+        setAppFunctionFlags(0, AGENT_APP_PACKAGE_NAME, TARGET_APP_PACKAGE_NAME)
     }
 
     @After
     fun cleanup() {
+        setAppFunctionFlags(0, AGENT_APP_PACKAGE_NAME, TARGET_APP_PACKAGE_NAME)
+
         uninstallPackage(AGENT_APP_PACKAGE_NAME, requireSuccess = false)
         uninstallPackage(TARGET_APP_PACKAGE_NAME, requireSuccess = false)
     }
@@ -79,6 +93,32 @@ class AgentAccessTest : BaseUsePermissionTest() {
         }
     }
 
+    @Test
+    fun clickTargetApp_whenAccessDenied_grantAccess() {
+        testChangeAccess(ACCESS_FLAG_USER_DENIED, ACCESS_REQUEST_STATE_GRANTED)
+    }
+
+    @Test
+    fun clickTargetApp_whenAccessGranted_revokeAccess() {
+        testChangeAccess(ACCESS_FLAG_USER_GRANTED, ACCESS_REQUEST_STATE_DENIED)
+    }
+
+    private fun testChangeAccess(initialAccessFlags: Int, expectedAccessRequestState: Int) {
+        // Set granted/denied via API
+        setAppFunctionFlags(initialAccessFlags, AGENT_APP_PACKAGE_NAME, TARGET_APP_PACKAGE_NAME)
+
+        startAppFunctionAgentAccessActivity()
+
+        // Trigger grant/revoke access from setting entry
+        try {
+            click(By.textContains(TARGET_APP_LABEL))
+            assertThat(getAccessRequestState(AGENT_APP_PACKAGE_NAME, TARGET_APP_PACKAGE_NAME))
+                .isEqualTo(expectedAccessRequestState)
+        } finally {
+            pressBack()
+        }
+    }
+
     /** Starts activity with intent [ACTION_MANAGE_AGENT_APP_FUNCTION_ACCESS]. */
     private fun startAppFunctionAgentAccessActivity() {
         doAndWaitForWindowTransition {
@@ -91,6 +131,24 @@ class AgentAccessTest : BaseUsePermissionTest() {
                 )
             }
         }
+    }
+
+    private fun getAccessRequestState(agentPackageName: String, targetPackageName: String): Int =
+        callWithShellPermissionIdentity {
+            appFunctionManager.getAccessRequestState(agentPackageName, targetPackageName)
+        }
+
+    private fun setAppFunctionFlags(
+        flags: Int,
+        agentPackageName: String,
+        targetPackageName: String,
+    ) = callWithShellPermissionIdentity {
+        appFunctionManager.updateAccessFlags(
+            agentPackageName,
+            targetPackageName,
+            ACCESS_FLAG_MASK_ALL,
+            flags,
+        )
     }
 
     companion object {
