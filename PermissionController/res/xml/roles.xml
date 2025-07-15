@@ -1410,6 +1410,15 @@
             </service>
         </required-components>
         <permissions>
+            <permission name="android.permission.MANAGE_DEFAULT_APPLICATIONS" />
+            <permission name="android.permission.MANAGE_DEVICE_POLICY_BLUETOOTH" />
+            <permission name="android.permission.MANAGE_DEVICE_POLICY_INSTALL_UNKNOWN_SOURCES" />
+            <permission name="android.permission.MANAGE_DEVICE_POLICY_MODIFY_USERS" />
+            <permission name="android.permission.MANAGE_DEVICE_POLICY_PACKAGE_STATE" />
+            <permission name="android.permission.MANAGE_DEVICE_POLICY_RUNTIME_PERMISSIONS" />
+            <permission name="android.permission.MANAGE_DEVICE_POLICY_SCREEN_CONTENT" />
+            <permission name="android.permission.MANAGE_DEVICE_POLICY_SYSTEM_DIALOGS" />
+            <permission name="android.permission.SUSPEND_APPS" />
         </permissions>
     </role>
 
