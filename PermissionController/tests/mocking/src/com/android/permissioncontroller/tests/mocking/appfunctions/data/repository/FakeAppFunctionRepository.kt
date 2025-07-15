@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.android.permissioncontroller.tests.mocking.appfunctions.data.repository
 
 import android.app.appfunctions.AppFunctionManager.ACCESS_FLAG_USER_DENIED
@@ -27,8 +26,10 @@ import com.android.permissioncontroller.appfunctions.data.repository.AppFunction
 class FakeAppFunctionRepository(
     private val agents: List<String> = emptyList(),
     private val targets: List<String> = emptyList(),
-    private val accessFlags: MutableMap<Pair<String, String>, Int> = mutableMapOf(),
+    accessFlags: Map<Pair<String, String>, Int> = mutableMapOf(),
 ) : AppFunctionRepository {
+    private val _accessFlags: MutableMap<Pair<String, String>, Int> = accessFlags.toMutableMap()
+
     override suspend fun getValidAgents(): List<String> = agents
 
     override suspend fun getValidTargets(): List<String> = targets
@@ -37,7 +38,7 @@ class FakeAppFunctionRepository(
         agentPackageName: String,
         targetPackageName: String,
     ): Int {
-        val flags = accessFlags.getOrDefault(agentPackageName to targetPackageName, 0)
+        val flags = _accessFlags.getOrDefault(agentPackageName to targetPackageName, 0)
         return when {
             (flags and FLAG_MASK) == ACCESS_FLAG_USER_GRANTED -> ACCESS_REQUEST_STATE_GRANTED
             (flags and FLAG_MASK) == ACCESS_FLAG_USER_DENIED -> ACCESS_REQUEST_STATE_DENIED
@@ -46,7 +47,7 @@ class FakeAppFunctionRepository(
     }
 
     override suspend fun getAccessFlags(agentPackageName: String, targetPackageName: String): Int =
-        accessFlags.getOrDefault(agentPackageName to targetPackageName, 0)
+        _accessFlags.getOrDefault(agentPackageName to targetPackageName, 0)
 
     override suspend fun updateAccessFlags(
         agentPackageName: String,
@@ -54,7 +55,7 @@ class FakeAppFunctionRepository(
         flagMask: Int,
         flags: Int,
     ) {
-        accessFlags[agentPackageName to targetPackageName] = flagMask and flags
+        _accessFlags[agentPackageName to targetPackageName] = flagMask and flags
     }
 
     companion object {

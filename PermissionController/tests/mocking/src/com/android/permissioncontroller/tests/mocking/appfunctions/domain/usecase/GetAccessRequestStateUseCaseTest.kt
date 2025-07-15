@@ -48,10 +48,7 @@ class GetAccessRequestStateUseCaseTest {
                 )
             )
             .containsExactlyEntriesIn(
-                mapOf(
-                    (TEST_AGENT_PACKAGE_NAME to TEST_TARGET_PACKAGE_NAME) to true,
-                    (TEST_AGENT_PACKAGE_NAME to TEST_TARGET_PACKAGE_NAME2) to false,
-                )
+                mapOf(TEST_TARGET_PACKAGE_NAME to true, TEST_TARGET_PACKAGE_NAME2 to false)
             )
 
         assertThat(
@@ -65,10 +62,7 @@ class GetAccessRequestStateUseCaseTest {
                 )
             )
             .containsExactlyEntriesIn(
-                mapOf(
-                    (TEST_AGENT_PACKAGE_NAME2 to TEST_TARGET_PACKAGE_NAME) to false,
-                    (TEST_AGENT_PACKAGE_NAME2 to TEST_TARGET_PACKAGE_NAME2) to true,
-                )
+                mapOf(TEST_TARGET_PACKAGE_NAME to false, TEST_TARGET_PACKAGE_NAME2 to true)
             )
     }
 
@@ -84,10 +78,7 @@ class GetAccessRequestStateUseCaseTest {
                 )
             )
             .containsExactlyEntriesIn(
-                mapOf(
-                    (TEST_AGENT_PACKAGE_NAME to TEST_TARGET_PACKAGE_NAME) to true,
-                    (TEST_AGENT_PACKAGE_NAME2 to TEST_TARGET_PACKAGE_NAME) to false,
-                )
+                mapOf(TEST_AGENT_PACKAGE_NAME to true, TEST_AGENT_PACKAGE_NAME2 to false)
             )
 
         assertThat(
@@ -97,10 +88,7 @@ class GetAccessRequestStateUseCaseTest {
                 )
             )
             .containsExactlyEntriesIn(
-                mapOf(
-                    (TEST_AGENT_PACKAGE_NAME to TEST_TARGET_PACKAGE_NAME2) to false,
-                    (TEST_AGENT_PACKAGE_NAME2 to TEST_TARGET_PACKAGE_NAME2) to true,
-                )
+                mapOf(TEST_AGENT_PACKAGE_NAME to false, TEST_AGENT_PACKAGE_NAME2 to true)
             )
     }
 
@@ -125,7 +113,7 @@ class GetAccessRequestStateUseCaseTest {
         private const val TEST_TARGET_PACKAGE_NAME2 = "test.target.package2"
         private const val TEST_TARGET_PACKAGE_NAME3 = "test.target.package3"
         private val accessFlags =
-            mutableMapOf(
+            mapOf(
                 (TEST_AGENT_PACKAGE_NAME to TEST_TARGET_PACKAGE_NAME) to ACCESS_FLAG_USER_GRANTED,
                 (TEST_AGENT_PACKAGE_NAME to TEST_TARGET_PACKAGE_NAME2) to ACCESS_FLAG_USER_DENIED,
                 (TEST_AGENT_PACKAGE_NAME2 to TEST_TARGET_PACKAGE_NAME) to ACCESS_FLAG_USER_DENIED,
