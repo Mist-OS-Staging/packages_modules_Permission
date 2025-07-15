@@ -318,9 +318,13 @@ public final class Utils {
                 R.string.permgrouprequest_device_aware_notifications);
 
         PERM_GROUP_REQUEST_DETAIL_RES = new ArrayMap<>();
-        PERM_GROUP_REQUEST_DETAIL_RES.put(LOCATION, R.string.permgrouprequestdetail_location);
-        PERM_GROUP_REQUEST_DETAIL_RES.put(MICROPHONE, R.string.permgrouprequestdetail_microphone);
-        PERM_GROUP_REQUEST_DETAIL_RES.put(CAMERA, R.string.permgrouprequestdetail_camera);
+        // This string resource is non-empty in resources directory v36.1+, which is the version we
+        // start to show details for this permission group. SDK_INT_FULL doesn't exist until B, so
+        // check isAtLeastB first
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.BAKLAVA
+                && Build.VERSION.SDK_INT_FULL >= Build.VERSION_CODES_FULL.BAKLAVA_1) {
+            PERM_GROUP_REQUEST_DETAIL_RES.put(CONTACTS, R.string.permgrouprequestdetail_contacts);
+        }
 
         PERM_GROUP_BACKGROUND_REQUEST_RES = new ArrayMap<>();
         PERM_GROUP_BACKGROUND_REQUEST_RES

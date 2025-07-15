@@ -875,6 +875,7 @@ public class GrantPermissionsActivity extends SettingsActivity
 
     private int getDetailMessageId(String permGroupName, Prompt prompt) {
         return switch (prompt) {
+            case BASIC -> Utils.getRequestDetail(permGroupName);
             case UPGRADE_SETTINGS_LINK, OT_UPGRADE_SETTINGS_LINK ->
                     Utils.getUpgradeRequestDetail(permGroupName);
             case SETTINGS_LINK_FOR_BG, SETTINGS_LINK_WITH_OT ->
