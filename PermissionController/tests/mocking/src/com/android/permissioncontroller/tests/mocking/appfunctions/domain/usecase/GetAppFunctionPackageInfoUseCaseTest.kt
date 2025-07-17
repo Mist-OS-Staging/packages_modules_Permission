@@ -34,7 +34,7 @@ import org.junit.runner.RunWith
 @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
 class GetAppFunctionPackageInfoUseCaseTest {
     @Test
-    fun getAgentList_returnsAgentList() = runTest {
+    fun getAppFunctionPackageInfo_returnsAppFunctionPackageInfo() = runTest {
         val expectedPackageInfo = AppFunctionPackageInfo(TEST_PACKAGE_NAME, TEST_LABEL, null)
         val useCase =
             GetAppFunctionPackageInfoUseCase(
