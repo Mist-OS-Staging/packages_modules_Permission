@@ -17,6 +17,7 @@ package com.android.permissioncontroller.appfunctions.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.permission.flags.Flags
 import android.util.Log
 import com.android.permissioncontroller.appfunctions.ui.handheld.HandheldTargetAccessFragment
 import com.android.permissioncontroller.common.ui.SettingsActivity
@@ -25,6 +26,11 @@ import com.android.permissioncontroller.common.ui.SettingsActivity
 class TargetAccessActivity : SettingsActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if (!Flags.appFunctionAccessUiEnabled()) {
+            finish()
+            return
+        }
 
         val targetPackageName: String? = intent.getStringExtra(Intent.EXTRA_PACKAGE_NAME)
         if (targetPackageName.isNullOrEmpty()) {
