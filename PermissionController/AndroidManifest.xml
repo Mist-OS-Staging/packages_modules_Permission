@@ -323,7 +323,7 @@
                   android:excludeFromRecents="true"
                   android:exported="true"
                   android:launchMode="singleTop"
-                  android:enabled="@bool/is_at_least_v36r1">
+                  android:enabled="@bool/is_at_least_v37">
             <intent-filter android:priority="1">
                 <action android:name="android.app.appfunctions.action.REQUEST_APP_FUNCTION_ACCESS" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -530,7 +530,7 @@
         </activity>
 
         <activity android:name="com.android.permissioncontroller.appfunctions.ui.AgentListActivity"
-            android:enabled="@bool/is_at_least_v36r1"
+            android:enabled="@bool/is_at_least_v37"
             android:exported="true"
             android:theme="@style/Theme.PermissionController.Settings.FilterTouches">
             <intent-filter android:priority="1">
@@ -540,7 +540,7 @@
         </activity>
 
         <activity android:name="com.android.permissioncontroller.appfunctions.ui.AgentAccessActivity"
-            android:enabled="@bool/is_at_least_v36r1"
+            android:enabled="@bool/is_at_least_v37"
             android:exported="true"
             android:theme="@style/Theme.PermissionController.Settings.FilterTouches">
             <intent-filter android:priority="1">
@@ -550,7 +550,7 @@
         </activity>
 
         <activity android:name="com.android.permissioncontroller.appfunctions.ui.TargetAccessActivity"
-            android:enabled="@bool/is_at_least_v36r1"
+            android:enabled="@bool/is_at_least_v37"
             android:exported="true"
             android:theme="@style/Theme.PermissionController.Settings.FilterTouches">
             <intent-filter android:priority="1">

@@ -16,6 +16,7 @@
 package com.android.permissioncontroller.appfunctions.ui
 
 import android.os.Bundle
+import android.permission.flags.Flags
 import com.android.permissioncontroller.appfunctions.ui.handheld.HandheldAgentListFragment
 import com.android.permissioncontroller.common.ui.SettingsActivity
 
@@ -23,6 +24,11 @@ import com.android.permissioncontroller.common.ui.SettingsActivity
 class AgentListActivity : SettingsActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if (!Flags.appFunctionAccessUiEnabled()) {
+            finish()
+            return
+        }
 
         if (savedInstanceState == null) {
             val fragment = HandheldAgentListFragment.newInstance()
