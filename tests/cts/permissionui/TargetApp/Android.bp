@@ -19,7 +19,7 @@ package {
 }
 
 android_test_helper_app {
-    name: "CtsAgentApp",
+    name: "CtsTargetApp",
     defaults: ["mts-target-sdk-version-current"],
     min_sdk_version: "36",
     srcs: [

@@ -15,19 +15,29 @@
  */
 package com.android.permissioncontroller.appfunctions.ui
 
+import android.content.Context
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.os.Process
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle.State
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.preference.Preference
+import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceGroup
+import androidx.preference.PreferenceScreen
 import androidx.preference.TwoStatePreference
 import com.android.permissioncontroller.R
-import com.android.permissioncontroller.permission.utils.KotlinUtils
+import com.android.permissioncontroller.appfunctions.ui.viewmodel.AgentAccessUiState
+import com.android.permissioncontroller.appfunctions.ui.viewmodel.AgentAccessViewModel
+import com.android.permissioncontroller.appfunctions.ui.viewmodel.AgentAccessViewModelFactory
+import com.android.permissioncontroller.appfunctions.ui.viewmodel.SystemTargetItem
+import com.android.permissioncontroller.appfunctions.ui.viewmodel.TargetItem
+import com.android.permissioncontroller.common.model.Stateful
 import kotlinx.coroutines.launch
 
 /**
@@ -44,6 +54,8 @@ PF : PreferenceFragmentCompat,
 PF : AgentAccessChildFragment.Parent {
     private lateinit var agentPackageName: String
 
+    private lateinit var viewModel: AgentAccessViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -52,33 +64,92 @@ PF : AgentAccessChildFragment.Parent {
         val preferenceFragment = requirePreferenceFragment()
         preferenceFragment.setTitle(getString(R.string.app_function_access_settings_title))
 
+        val factory = AgentAccessViewModelFactory(agentPackageName, requireActivity().application)
+        viewModel = ViewModelProvider(this, factory).get(AgentAccessViewModel::class.java)
         preferenceFragment.lifecycleScope.launch {
-            preferenceFragment.lifecycle.repeatOnLifecycle(State.STARTED) { onUiStateChanged() }
+            preferenceFragment.lifecycle.repeatOnLifecycle(State.STARTED) {
+                viewModel.uiStateFlow.collect(::onUiStateChanged)
+            }
         }
     }
 
-    private fun onUiStateChanged() {
+    private fun onUiStateChanged(uiState: Stateful<AgentAccessUiState>) {
+        if (uiState is Stateful.Loading) {
+            // do nothing
+            return
+        }
+
         val preferenceFragment = requirePreferenceFragment()
         val preferenceManager = preferenceFragment.preferenceManager
         var preferenceScreen = preferenceFragment.preferenceScreen
         val context = preferenceManager.context
         val oldPreferences = mutableMapOf<String, Preference>()
+        var oldSystemTargetPreferenceCategory: PreferenceCategory? = null
+        val oldSystemTargetPreferences = mutableMapOf<String, Preference>()
+        var oldAppTargetPreferenceCategory: PreferenceCategory? = null
+        val oldAppTargetPreferences = mutableMapOf<String, Preference>()
         if (preferenceScreen == null) {
             preferenceScreen = preferenceManager.createPreferenceScreen(context)
             preferenceFragment.preferenceScreen = preferenceScreen
         } else {
+            oldSystemTargetPreferenceCategory =
+                preferenceScreen.findPreference(PREFERENCE_KEY_SYSTEM_CATEGORY)
+            clearPreferenceCategory(oldSystemTargetPreferenceCategory, oldSystemTargetPreferences)
+
+            oldAppTargetPreferenceCategory =
+                preferenceScreen.findPreference(PREFERENCE_KEY_APP_CATEGORY)
+            clearPreferenceCategory(oldAppTargetPreferenceCategory, oldAppTargetPreferences)
+
             clearPreferences(preferenceScreen, oldPreferences)
         }
-        val label =
-            KotlinUtils.getPackageLabel(
-                requireActivity().application,
-                agentPackageName,
-                Process.myUserHandle(),
+
+        if (uiState is Stateful.Failure) {
+            Log.e(LOG_TAG, "Failed to load target list", uiState.throwable)
+            val agentLabel = uiState.value?.agent?.label ?: agentPackageName
+            val agentIcon = uiState.value?.agent?.icon
+            addHeaderPreference(preferenceScreen, agentLabel, agentIcon, oldPreferences)
+            addEmptyStatePreference(
+                preferenceScreen,
+                PREFERENCE_KEY_APP_ZERO_STATE,
+                agentLabel,
+                oldPreferences,
             )
-        addHeaderPreference(preferenceScreen, label, oldPreferences)
-        addEmptyStatePreference(preferenceScreen, label, oldPreferences)
+        } else if (uiState is Stateful.Success) {
+            val agentLabel = uiState.value.agent.label
+            val agentIcon = uiState.value.agent.icon
+            val targets = uiState.value.targets
+            addHeaderPreference(preferenceScreen, agentLabel, agentIcon, oldPreferences)
+            addSystemTargetPreferenceCategory(
+                oldSystemTargetPreferenceCategory,
+                preferenceScreen,
+                agentLabel,
+                uiState.value.deviceSettings,
+                oldSystemTargetPreferences,
+                context,
+            )
+            addTargetPreferenceCategory(
+                oldAppTargetPreferenceCategory,
+                preferenceScreen,
+                agentLabel,
+                targets,
+                oldAppTargetPreferences,
+                context,
+            )
+        }
 
         preferenceFragment.onPreferenceScreenChanged()
+    }
+
+    private fun clearPreferenceCategory(
+        preferenceCategory: PreferenceCategory?,
+        oldPreferences: MutableMap<String, Preference>,
+    ) {
+        if (preferenceCategory == null) {
+            return
+        }
+        clearPreferences(preferenceCategory, oldPreferences)
+        preferenceCategory.parent?.removePreference(preferenceCategory)
+        preferenceCategory.order = Preference.DEFAULT_ORDER
     }
 
     private fun clearPreferences(
@@ -95,42 +166,160 @@ PF : AgentAccessChildFragment.Parent {
 
     private fun addHeaderPreference(
         preferenceGroup: PreferenceGroup,
-        label: String,
+        agentLabel: String,
+        agentIcon: Drawable?,
         oldPreferences: Map<String, Preference>,
     ) {
-        val agentIcon =
-            KotlinUtils.getBadgedPackageIcon(
-                requireActivity().application,
-                agentPackageName,
-                Process.myUserHandle(),
-            )
         val preference =
             oldPreferences[PREFERENCE_KEY_INTRO]
                 ?: requirePreferenceFragment().createHeaderPreference().apply {
                     key = PREFERENCE_KEY_INTRO
-                    icon = agentIcon
-                    title = label
-                    summary = getString(R.string.app_function_agent_access_summary, label)
                 }
+        // Old preference might need to be updated
+        preference.apply {
+            icon = agentIcon
+            title = agentLabel
+            summary = getString(R.string.app_function_agent_access_summary, agentLabel)
+        }
         preferenceGroup.addPreference(preference)
+    }
+
+    private fun addSystemTargetPreferenceCategory(
+        oldPreferenceCategory: PreferenceCategory?,
+        preferenceScreen: PreferenceScreen,
+        agentLabel: String,
+        deviceSettings: SystemTargetItem?,
+        oldPreferences: Map<String, Preference>,
+        context: Context,
+    ) {
+        val preferenceCategory =
+            oldPreferenceCategory
+                ?: PreferenceCategory(context).apply {
+                    key = PREFERENCE_KEY_SYSTEM_CATEGORY
+                    setTitle(R.string.app_function_agent_access_system_targets_category_title)
+                }
+        preferenceScreen.addPreference(preferenceCategory)
+
+        if (deviceSettings == null) {
+            addEmptyStatePreference(
+                preferenceCategory,
+                PREFERENCE_KEY_SYSTEM_ZERO_STATE,
+                agentLabel,
+                oldPreferences,
+            )
+        } else {
+            addDeviceSettingsTargetPreference(preferenceCategory, deviceSettings, oldPreferences)
+        }
+    }
+
+    private fun addTargetPreferenceCategory(
+        oldPreferenceCategory: PreferenceCategory?,
+        preferenceScreen: PreferenceScreen,
+        agentLabel: String,
+        targets: List<TargetItem>,
+        oldPreferences: Map<String, Preference>,
+        context: Context,
+    ) {
+        val preferenceCategory =
+            oldPreferenceCategory
+                ?: PreferenceCategory(context).apply {
+                    key = PREFERENCE_KEY_APP_CATEGORY
+                    setTitle(R.string.app_function_agent_access_app_targets_category_title)
+                }
+        preferenceScreen.addPreference(preferenceCategory)
+
+        if (targets.isEmpty()) {
+            addEmptyStatePreference(
+                preferenceCategory,
+                PREFERENCE_KEY_APP_ZERO_STATE,
+                agentLabel,
+                oldPreferences,
+            )
+        } else {
+            addTargetPreferences(preferenceCategory, targets, oldPreferences)
+        }
     }
 
     private fun addEmptyStatePreference(
         preferenceGroup: PreferenceGroup,
-        label: String,
+        emptyPreferenceKey: String,
+        agentLabel: String,
         oldPreferences: Map<String, Preference>,
     ) {
+        val emptyPreferenceTitle =
+            when (emptyPreferenceKey) {
+                PREFERENCE_KEY_SYSTEM_ZERO_STATE ->
+                    getString(
+                        R.string.app_function_agent_access_system_targets_empty_title,
+                        agentLabel,
+                    )
+                PREFERENCE_KEY_APP_ZERO_STATE ->
+                    getString(
+                        R.string.app_function_agent_access_app_targets_empty_title,
+                        agentLabel,
+                    )
+                else -> return
+            }
         val preference =
-            oldPreferences[PREFERENCE_KEY_ZERO_STATE]
+            oldPreferences[emptyPreferenceKey]
                 ?: requirePreferenceFragment().createEmptyStatePreference().apply {
-                    key = PREFERENCE_KEY_ZERO_STATE
-                    title = getString(R.string.app_function_agent_access_empty_title, label)
+                    key = emptyPreferenceKey
+                    title = emptyPreferenceTitle
                 }
         preferenceGroup.addPreference(preference)
     }
 
+    private fun addDeviceSettingsTargetPreference(
+        preferenceGroup: PreferenceGroup,
+        target: SystemTargetItem,
+        oldPreferences: Map<String, Preference>,
+    ) {
+        val preference =
+            oldPreferences[PREFERENCE_KEY_DEVICE_SETTINGS] as TwoStatePreference?
+                ?: requirePreferenceFragment().createPreference().apply {
+                    key = PREFERENCE_KEY_DEVICE_SETTINGS
+                    onPreferenceClickListener = this@AgentAccessChildFragment
+                }
+        // Ensure current ux state reflects the data state
+        preference.apply {
+            setTitle(R.string.app_function_device_settings_target_title)
+            icon = target.icon
+            isChecked = target.accessGranted
+        }
+        preferenceGroup.addPreference(preference)
+    }
+
+    private fun addTargetPreferences(
+        preferenceGroup: PreferenceGroup,
+        targets: List<TargetItem>,
+        oldPreferences: Map<String, Preference>,
+    ) {
+        for (target in targets) {
+            val targetPackageInfo = target.packageInfo
+            val targetPackageName = targetPackageInfo.packageName
+            val preference =
+                oldPreferences[targetPackageName] as TwoStatePreference?
+                    ?: requirePreferenceFragment().createPreference().apply {
+                        key = targetPackageName
+                        onPreferenceClickListener = this@AgentAccessChildFragment
+                    }
+            // Ensure current ux state reflects the data state
+            preference.apply {
+                title = targetPackageInfo.label
+                icon = targetPackageInfo.icon
+                isChecked = target.accessGranted
+            }
+            preferenceGroup.addPreference(preference)
+        }
+    }
+
     override fun onPreferenceClick(preference: Preference): Boolean {
-        // TODO(rmacgregor): Implement onPreferenceClick
+        preference as TwoStatePreference
+        if (preference.key == PREFERENCE_KEY_DEVICE_SETTINGS) {
+            viewModel.updateDeviceSettingsAccessState(preference.isChecked)
+        } else {
+            viewModel.updateAccessState(preference.key, preference.isChecked)
+        }
         return true
     }
 
@@ -154,7 +343,7 @@ PF : AgentAccessChildFragment.Parent {
         /** Creates a new empty state preference for the screen */
         fun createEmptyStatePreference(): Preference
 
-        /** Creates a new preference for a target app. */
+        /** Creates a new two state preference for a target app. */
         fun createPreference(): TwoStatePreference
 
         /**
@@ -165,10 +354,19 @@ PF : AgentAccessChildFragment.Parent {
     }
 
     companion object {
+        private val LOG_TAG = AgentAccessChildFragment::class.java.simpleName
         private val PREFERENCE_KEY_INTRO =
             AgentAccessChildFragment::class.java.name + ".preference.INTRO"
-        private val PREFERENCE_KEY_ZERO_STATE =
-            AgentAccessChildFragment::class.java.name + ".preference.ZERO_STATE"
+        private val PREFERENCE_KEY_SYSTEM_CATEGORY =
+            AgentAccessChildFragment::class.java.name + ".preference.SYSTEM_CATEGORY"
+        private val PREFERENCE_KEY_SYSTEM_ZERO_STATE =
+            AgentAccessChildFragment::class.java.name + ".preference.SYSTEM_ZERO_STATE"
+        private val PREFERENCE_KEY_APP_CATEGORY =
+            AgentAccessChildFragment::class.java.name + ".preference.APP_CATEGORY"
+        private val PREFERENCE_KEY_APP_ZERO_STATE =
+            AgentAccessChildFragment::class.java.name + ".preference.APP_ZERO_STATE"
+        private val PREFERENCE_KEY_DEVICE_SETTINGS =
+            AgentAccessChildFragment::class.java.name + ".preference.DEVICE_SETTINGS"
 
         /**
          * Create a new instance of AgentAccessChildFragment

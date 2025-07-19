@@ -2097,14 +2097,22 @@
 
     <!-- Summary for App Function Agent Access Settings page. [CHAR LIMIT=130] -->
     <string name="app_function_agent_access_summary" description="The summary of the App Function Agent Access Settings, which describes the page contents">Apps and system settings <xliff:g id="app_name" example="Example Agent App">%1$s</xliff:g> can access to perform actions</string>
-    <!-- Label when there are no agent apps available for app function target list [CHAR LIMIT=30] -->
-    <string name="app_function_agent_access_empty_title" description="Label when there are no target apps available for app function agent access">No apps are available for <xliff:g id="app_name" example="Example Agent App">%1$s</xliff:g> access</string>
+    <!-- Label when there are no system apps available for app function target list [CHAR LIMIT=30] -->
+    <string name="app_function_agent_access_system_targets_empty_title" description="Label when there are no system apps available for app function agent access">No system apps are available for <xliff:g id="app_name" example="Example Agent App">%1$s</xliff:g> access</string>
+    <!-- Label when there are no apps available for app function target list [CHAR LIMIT=30] -->
+    <string name="app_function_agent_access_app_targets_empty_title" description="Label when there are no target apps available for app function agent access">No apps are available for <xliff:g id="app_name" example="Example Agent App">%1$s</xliff:g> access</string>
+    <!-- Category title for system apps list section of Agent Access Settings page [CHAR LIMIT=30] -->
+    <string name="app_function_agent_access_system_targets_category_title" description="Category title for system apps list section of Agent Access Settings page">System</string>
+    <!-- Category title for target apps list section of Agent Access Settings page [CHAR LIMIT=30] -->
+    <string name="app_function_agent_access_app_targets_category_title" description="Category title for target apps list section of Agent Access Settings page">Apps</string>
 
     <!-- Title for App Function Target Access Settings page. [CHAR LIMIT=70] -->
     <string name="app_function_target_access_title">Agent control of <xliff:g id="app_name" example="Example App">%1$s</xliff:g></string>
     <!-- Summary for App Function Target Access Settings page. [CHAR LIMIT=130] -->
     <string name="app_function_target_access_summary" description="The summary of the App Function Target Access Settings, which describes the page contents">These agents can perform actions in <xliff:g id="app_name" example="Example App">%1$s</xliff:g>.</string>
 
+    <!-- Device settings target title [CHAR LIMIT=30] -->
+    <string name="app_function_device_settings_target_title" description="Target app title used for Device Settings">Device Settings</string>
     <!-- END APP FUNCTION SETTINGS -->
 
     <!-- START REQUEST APP FUNCTION DIALOG -->
