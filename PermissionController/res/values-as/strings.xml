@@ -701,30 +701,26 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"আপোনাৰ ফ’নটো চাওক"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"আপোনাৰ ফ’নটোৰ সৈতে সংযোগ কৰিব পৰা নগ’ল"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"পুনৰ চেষ্টা কৰিবনে?"</string>
-    <!-- no translation found for app_function_access_settings_title (8529554485031723950) -->
+    <string name="app_function_access_settings_title" msgid="8529554485031723950">"অন্য এপৰ এজেণ্ট নিয়ন্ত্ৰণ"</string>
+    <string name="app_function_access_settings_summary" msgid="2162127599468986004">"আপোনাৰ ডিভাইচত আৰু অন্য এপত কাৰ্য সম্পাদন কৰক"</string>
+    <string name="app_function_agent_list_summary" msgid="1809900126197190780">"আপোনাৰ ডিভাইচত এপ্‌ আৰু ডিভাইচৰ ফাংশ্বন এক্সেছ কৰিব পৰা সহায়ক এপ্‌"</string>
+    <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"কোনো এজেণ্ট এপ্‌ উপলব্ধ নহয়"</string>
+    <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"এই সুবিধাটো সক্ষম কৰিবলৈ আপোনাৰ ডিভাইচত এটা এজেণ্ট এপ্‌ ইনষ্টল কৰক"</string>
+    <string name="app_function_agent_access_summary" msgid="7238285759002624286">"<xliff:g id="APP_NAME">%1$s</xliff:g>এ কাৰ্য কৰিবলৈ এক্সেছ কৰিব পৰা এপ্‌ আৰু ছিষ্টেমৰ ছেটিং"</string>
+    <!-- no translation found for app_function_agent_access_system_targets_empty_title (7597788502414132639) -->
     <skip />
-    <!-- no translation found for app_function_access_settings_summary (2162127599468986004) -->
+    <!-- no translation found for app_function_agent_access_app_targets_empty_title (774337187158063143) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_summary (1809900126197190780) -->
+    <!-- no translation found for app_function_agent_access_system_targets_category_title (7563475048220758703) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_empty_title (397515613920663055) -->
+    <!-- no translation found for app_function_agent_access_app_targets_category_title (620431387701237004) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_empty_summary (610653760323174019) -->
+    <string name="app_function_target_access_title" msgid="5086998551478393562">"<xliff:g id="APP_NAME">%1$s</xliff:g>ৰ এজেণ্ট নিয়ন্ত্ৰণ"</string>
+    <string name="app_function_target_access_summary" msgid="2688275777520240124">"এই এজেণ্টসমূহে <xliff:g id="APP_NAME">%1$s</xliff:g>ত কাৰ্য কৰিব পাৰে।"</string>
+    <!-- no translation found for app_function_device_settings_target_title (7310525289514611525) -->
     <skip />
-    <!-- no translation found for app_function_agent_access_summary (7238285759002624286) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty_title (3943494236139338580) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (5086998551478393562) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (2688275777520240124) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_title (6549957496184641967) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_desc (5815889037756375293) -->
-    <skip />
-    <!-- no translation found for request_app_function_dialog_button_allow (7758794243635329183) -->
-    <skip />
-    <!-- no translation found for request_app_function_dialog_button_deny (9084928058374041888) -->
-    <skip />
+    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>ক <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> এক্সেছ কৰিবলৈ অনুমতি দিবনে?"</string>
+    <string name="request_app_function_access_dialog_desc" msgid="5815889037756375293">"এইটোৱে <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>ক <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>ৰ তথ্য এক্সেছ কৰিবলৈ দিয়ে আৰু ব্যৱহাৰকাৰীৰ হৈ কাৰ্যব্যৱস্থা গ্ৰহণ কৰিবলৈ দিয়ে।"</string>
+    <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"অনুমতি দিয়ক"</string>
+    <string name="request_app_function_dialog_button_deny" msgid="9084928058374041888">"অনুমতি নিদিব"</string>
 </resources>

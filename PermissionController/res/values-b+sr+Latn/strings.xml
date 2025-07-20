@@ -701,30 +701,26 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"Proverite telefon"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"Povezivanje sa telefonom nije uspelo"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"Želite li da probate ponovo?"</string>
-    <!-- no translation found for app_function_access_settings_title (8529554485031723950) -->
+    <string name="app_function_access_settings_title" msgid="8529554485031723950">"Kontrolišite druge aplikacije pomoću agenta"</string>
+    <string name="app_function_access_settings_summary" msgid="2162127599468986004">"Obavljajte radnje na uređaju i u drugim aplikacijama"</string>
+    <string name="app_function_agent_list_summary" msgid="1809900126197190780">"Aplikacije pomoćnika koje mogu da pristupaju aplikacijama i funkcijama uređaja na vašem uređaju"</string>
+    <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"Nema dostupnih aplikacija agenta"</string>
+    <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"Instalirajte aplikaciju agenta na uređaju da biste omogućili ovu funkciju"</string>
+    <string name="app_function_agent_access_summary" msgid="7238285759002624286">"Aplikacija <xliff:g id="APP_NAME">%1$s</xliff:g> može da pristupa aplikacijama i podešavanjima sistema da bi obavljala radnje"</string>
+    <!-- no translation found for app_function_agent_access_system_targets_empty_title (7597788502414132639) -->
     <skip />
-    <!-- no translation found for app_function_access_settings_summary (2162127599468986004) -->
+    <!-- no translation found for app_function_agent_access_app_targets_empty_title (774337187158063143) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_summary (1809900126197190780) -->
+    <!-- no translation found for app_function_agent_access_system_targets_category_title (7563475048220758703) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_empty_title (397515613920663055) -->
+    <!-- no translation found for app_function_agent_access_app_targets_category_title (620431387701237004) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_empty_summary (610653760323174019) -->
+    <string name="app_function_target_access_title" msgid="5086998551478393562">"Kontrola agenta za <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_target_access_summary" msgid="2688275777520240124">"Ovi agenti mogu da obavljaju radnje u aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <!-- no translation found for app_function_device_settings_target_title (7310525289514611525) -->
     <skip />
-    <!-- no translation found for app_function_agent_access_summary (7238285759002624286) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty_title (3943494236139338580) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (5086998551478393562) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (2688275777520240124) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_title (6549957496184641967) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_desc (5815889037756375293) -->
-    <skip />
-    <!-- no translation found for request_app_function_dialog_button_allow (7758794243635329183) -->
-    <skip />
-    <!-- no translation found for request_app_function_dialog_button_deny (9084928058374041888) -->
-    <skip />
+    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ima dozvolu za pristup <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
+    <string name="request_app_function_access_dialog_desc" msgid="5815889037756375293">"To omogućava da <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> pristupa informacijama o <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> i preduz. radnje u ime korisnika."</string>
+    <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Dozvoli"</string>
+    <string name="request_app_function_dialog_button_deny" msgid="9084928058374041888">"Ne dozvoli"</string>
 </resources>
