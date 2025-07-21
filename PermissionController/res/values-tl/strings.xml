@@ -701,30 +701,26 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"Tingnan ang iyong telepono"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"Hindi makakonekta sa iyong telepono"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"Subukan ulit?"</string>
-    <!-- no translation found for app_function_access_settings_title (8529554485031723950) -->
+    <string name="app_function_access_settings_title" msgid="8529554485031723950">"Kontrol ng ahente sa iba pang app"</string>
+    <string name="app_function_access_settings_summary" msgid="2162127599468986004">"Magsagawa ng mga aksyon sa iyong device at sa iba pang app"</string>
+    <string name="app_function_agent_list_summary" msgid="1809900126197190780">"Mga assistant app na makaka-access ng mga function ng mga app at device sa iyong device"</string>
+    <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"Walang available na app ng ahente"</string>
+    <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"Mag-install ng app ng ahente sa iyong device para ma-enable ang feature na ito"</string>
+    <string name="app_function_agent_access_summary" msgid="7238285759002624286">"Mga app at setting ng system na puwedeng i-access ng <xliff:g id="APP_NAME">%1$s</xliff:g> para makapagsagawa ng mga aksyon"</string>
+    <!-- no translation found for app_function_agent_access_system_targets_empty_title (7597788502414132639) -->
     <skip />
-    <!-- no translation found for app_function_access_settings_summary (2162127599468986004) -->
+    <!-- no translation found for app_function_agent_access_app_targets_empty_title (774337187158063143) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_summary (1809900126197190780) -->
+    <!-- no translation found for app_function_agent_access_system_targets_category_title (7563475048220758703) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_empty_title (397515613920663055) -->
+    <!-- no translation found for app_function_agent_access_app_targets_category_title (620431387701237004) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_empty_summary (610653760323174019) -->
+    <string name="app_function_target_access_title" msgid="5086998551478393562">"Kontrol ng ahente sa <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_target_access_summary" msgid="2688275777520240124">"Makakapagsagawa ng mga aksyon sa <xliff:g id="APP_NAME">%1$s</xliff:g> ang mga ahenteng ito."</string>
+    <!-- no translation found for app_function_device_settings_target_title (7310525289514611525) -->
     <skip />
-    <!-- no translation found for app_function_agent_access_summary (7238285759002624286) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty_title (3943494236139338580) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (5086998551478393562) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (2688275777520240124) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_title (6549957496184641967) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_desc (5815889037756375293) -->
-    <skip />
-    <!-- no translation found for request_app_function_dialog_button_allow (7758794243635329183) -->
-    <skip />
-    <!-- no translation found for request_app_function_dialog_button_deny (9084928058374041888) -->
-    <skip />
+    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"Payagang i-access ng <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ang <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
+    <string name="request_app_function_access_dialog_desc" msgid="5815889037756375293">"Papayagan nitong i-access ng <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ang impormasyon ng <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> at umaksyon ito para sa user."</string>
+    <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Payagan"</string>
+    <string name="request_app_function_dialog_button_deny" msgid="9084928058374041888">"Huwag payagan"</string>
 </resources>

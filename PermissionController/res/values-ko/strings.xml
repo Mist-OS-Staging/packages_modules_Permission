@@ -701,30 +701,26 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"휴대전화를 확인하세요"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"휴대전화에 연결할 수 없습니다"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"다시 시도하시겠습니까?"</string>
-    <!-- no translation found for app_function_access_settings_title (8529554485031723950) -->
+    <string name="app_function_access_settings_title" msgid="8529554485031723950">"다른 앱의 에이전트 제어"</string>
+    <string name="app_function_access_settings_summary" msgid="2162127599468986004">"기기 및 다른 앱에서 작업 수행"</string>
+    <string name="app_function_agent_list_summary" msgid="1809900126197190780">"기기의 앱 및 기기 기능에 액세스할 수 있는 어시스턴트 앱"</string>
+    <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"사용 가능한 에이전트 앱이 없습니다"</string>
+    <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"이 기능을 사용 설정하려면 기기에 에이전트 앱을 설치하세요"</string>
+    <string name="app_function_agent_access_summary" msgid="7238285759002624286">"앱 및 시스템 설정 <xliff:g id="APP_NAME">%1$s</xliff:g>에서 액세스하여 작업을 수행할 수 있습니다."</string>
+    <!-- no translation found for app_function_agent_access_system_targets_empty_title (7597788502414132639) -->
     <skip />
-    <!-- no translation found for app_function_access_settings_summary (2162127599468986004) -->
+    <!-- no translation found for app_function_agent_access_app_targets_empty_title (774337187158063143) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_summary (1809900126197190780) -->
+    <!-- no translation found for app_function_agent_access_system_targets_category_title (7563475048220758703) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_empty_title (397515613920663055) -->
+    <!-- no translation found for app_function_agent_access_app_targets_category_title (620431387701237004) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_empty_summary (610653760323174019) -->
+    <string name="app_function_target_access_title" msgid="5086998551478393562">"<xliff:g id="APP_NAME">%1$s</xliff:g>의 에이전트 제어"</string>
+    <string name="app_function_target_access_summary" msgid="2688275777520240124">"이 에이전트는 <xliff:g id="APP_NAME">%1$s</xliff:g>에서 작업을 수행할 수 있습니다."</string>
+    <!-- no translation found for app_function_device_settings_target_title (7310525289514611525) -->
     <skip />
-    <!-- no translation found for app_function_agent_access_summary (7238285759002624286) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty_title (3943494236139338580) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (5086998551478393562) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (2688275777520240124) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_title (6549957496184641967) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_desc (5815889037756375293) -->
-    <skip />
-    <!-- no translation found for request_app_function_dialog_button_allow (7758794243635329183) -->
-    <skip />
-    <!-- no translation found for request_app_function_dialog_button_deny (9084928058374041888) -->
-    <skip />
+    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>에서 <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>에 액세스하도록 허용하시겠습니까?"</string>
+    <string name="request_app_function_access_dialog_desc" msgid="5815889037756375293">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>에서 <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> 정보에 액세스하고 사용자 대신 작업을 수행할 수 있습니다."</string>
+    <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"허용"</string>
+    <string name="request_app_function_dialog_button_deny" msgid="9084928058374041888">"허용 안함"</string>
 </resources>

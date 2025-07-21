@@ -701,30 +701,26 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಪರಿಶೀಲಿಸಿ"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"ಪುನಃ ಪ್ರಯತ್ನಿಸಬೇಕೆ?"</string>
-    <!-- no translation found for app_function_access_settings_title (8529554485031723950) -->
+    <string name="app_function_access_settings_title" msgid="8529554485031723950">"ಇತರ ಆ್ಯಪ್‌ಗಳ ಏಜೆಂಟ್ ನಿಯಂತ್ರಣ"</string>
+    <string name="app_function_access_settings_summary" msgid="2162127599468986004">"ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಮತ್ತು ಇತರ ಆ್ಯಪ್‌ಗಳಲ್ಲಿ ಕ್ರಿಯೆಗಳನ್ನು ನಿರ್ವಹಿಸಿ"</string>
+    <string name="app_function_agent_list_summary" msgid="1809900126197190780">"ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಸಾಧನದ ಕಾರ್ಯಗಳನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಬಹುದಾದ ಅಸಿಸ್ಟೆಂಟ್ ಆ್ಯಪ್‌ಗಳು"</string>
+    <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"ಯಾವುದೇ ಏಜೆಂಟ್ ಆ್ಯಪ್‌ಗಳು ಲಭ್ಯವಿಲ್ಲ"</string>
+    <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"ಈ ಫೀಚರ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಏಜೆಂಟ್ ಆ್ಯಪ್ ಅನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ"</string>
+    <string name="app_function_agent_access_summary" msgid="7238285759002624286">"ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಸಿಸ್ಟಂ ಸೆಟ್ಟಿಂಗ್‌ಗಳು <xliff:g id="APP_NAME">%1$s</xliff:g> ಕ್ರಿಯೆಗಳನ್ನು ನಿರ್ವಹಿಸಲು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಬಹುದು"</string>
+    <!-- no translation found for app_function_agent_access_system_targets_empty_title (7597788502414132639) -->
     <skip />
-    <!-- no translation found for app_function_access_settings_summary (2162127599468986004) -->
+    <!-- no translation found for app_function_agent_access_app_targets_empty_title (774337187158063143) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_summary (1809900126197190780) -->
+    <!-- no translation found for app_function_agent_access_system_targets_category_title (7563475048220758703) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_empty_title (397515613920663055) -->
+    <!-- no translation found for app_function_agent_access_app_targets_category_title (620431387701237004) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_empty_summary (610653760323174019) -->
+    <string name="app_function_target_access_title" msgid="5086998551478393562">"<xliff:g id="APP_NAME">%1$s</xliff:g> ನ ಏಜೆಂಟ್ ನಿಯಂತ್ರಣ"</string>
+    <string name="app_function_target_access_summary" msgid="2688275777520240124">"ಈ ಏಜೆಂಟ್‌ಗಳು <xliff:g id="APP_NAME">%1$s</xliff:g> ನಲ್ಲಿ ಕ್ರಿಯೆಗಳನ್ನು ನಡೆಸಬಹುದು."</string>
+    <!-- no translation found for app_function_device_settings_target_title (7310525289514611525) -->
     <skip />
-    <!-- no translation found for app_function_agent_access_summary (7238285759002624286) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty_title (3943494236139338580) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (5086998551478393562) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (2688275777520240124) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_title (6549957496184641967) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_desc (5815889037756375293) -->
-    <skip />
-    <!-- no translation found for request_app_function_dialog_button_allow (7758794243635329183) -->
-    <skip />
-    <!-- no translation found for request_app_function_dialog_button_deny (9084928058374041888) -->
-    <skip />
+    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ಗೆ ಅನುಮತಿಸಬೇಕೇ?"</string>
+    <string name="request_app_function_access_dialog_desc" msgid="5815889037756375293">"ಇದು <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ನಲ್ಲಿನ ಮಾಹಿತಿ ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು ಹಾಗೂ ಬಳಕೆದಾರರ ಪರವಾಗಿ ಕ್ರಮ ತೆಗೆದುಕೊಳ್ಳಲು <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ಗೆ ಅನುಮತಿಸುತ್ತದೆ."</string>
+    <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"ಅನುಮತಿಸಿ"</string>
+    <string name="request_app_function_dialog_button_deny" msgid="9084928058374041888">"ಅನುಮತಿಸಬೇಡಿ"</string>
 </resources>
