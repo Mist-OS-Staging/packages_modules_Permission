@@ -35,7 +35,6 @@ import com.android.settingslib.widget.SettingsThemeHelper
 class SafetyCenterSubpageFragment : SafetyCenterFragment() {
 
     private lateinit var sourceGroupId: String
-    private lateinit var subpageBrandChip: SafetyBrandChipPreference
     private lateinit var subpageIllustration: SafetyIllustrationPreference
     private lateinit var subpageIssueGroup: PreferenceGroup
     private lateinit var subpageEntryGroup: PreferenceGroup
@@ -46,13 +45,19 @@ class SafetyCenterSubpageFragment : SafetyCenterFragment() {
         setPreferencesFromResource(R.xml.safety_center_subpage, rootKey)
         sourceGroupId = requireArguments().getString(SOURCE_GROUP_ID_KEY)!!
 
-        subpageBrandChip = preferenceScreen.findPreference(BRAND_CHIP_KEY)!!
+        val subpageBrandChip =
+            preferenceScreen.findPreference<SafetyBrandChipPreference>(BRAND_CHIP_KEY)!!
+        if (SettingsThemeHelper.isExpressiveTheme(requireContext())) {
+            preferenceScreen.removePreference(subpageBrandChip)
+        } else {
+            subpageBrandChip.setupListener(requireActivity(), safetyCenterSessionId)
+        }
+
         subpageIllustration = preferenceScreen.findPreference(ILLUSTRATION_KEY)!!
         subpageIssueGroup = preferenceScreen.findPreference(ISSUE_GROUP_KEY)!!
         subpageEntryGroup = preferenceScreen.findPreference(ENTRY_GROUP_KEY)!!
         subpageFooter = preferenceScreen.findPreference(FOOTER_KEY)!!
 
-        subpageBrandChip.setupListener(requireActivity(), safetyCenterSessionId)
         setupIllustration()
         setupFooter()
         maybeRemoveSpacer()
