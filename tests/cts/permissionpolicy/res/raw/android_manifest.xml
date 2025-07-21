@@ -2770,6 +2770,19 @@
         android:protectionLevel="signature|privileged"
         android:featureFlag="android.os.vibrator.vendor_vibration_effects" />
 
+    <!--
+    @SystemApi
+    @FlaggedApi(com.android.server.power.feature.flags.Flags.FLAG_PARTIAL_SLEEP_WAKELOCKS)
+    Allows an application to create and acquire partial sleep wakelocks with
+    {@link android.os.PowerManager#newSleeplock}.
+    <p> Protection level: signature
+    @hide
+    -->
+    <permission android:name="android.permission.ACQUIRE_SLEEP_LOCK"
+            android:protectionLevel="signature"
+            android:featureFlag="com.android.server.display.feature.flags.partial_sleep_wakelocks" />
+
+
     <!-- @SystemApi Allows access to the vibrator state.
          <p>Protection level: signature
          @hide
