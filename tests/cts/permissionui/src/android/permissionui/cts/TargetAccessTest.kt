@@ -15,6 +15,12 @@
  */
 package android.permissionui.cts
 
+import android.app.appfunctions.AppFunctionManager
+import android.app.appfunctions.AppFunctionManager.ACCESS_FLAG_MASK_ALL
+import android.app.appfunctions.AppFunctionManager.ACCESS_FLAG_USER_DENIED
+import android.app.appfunctions.AppFunctionManager.ACCESS_FLAG_USER_GRANTED
+import android.app.appfunctions.AppFunctionManager.ACCESS_REQUEST_STATE_DENIED
+import android.app.appfunctions.AppFunctionManager.ACCESS_REQUEST_STATE_GRANTED
 import android.app.appfunctions.AppFunctionManager.ACTION_MANAGE_TARGET_APP_FUNCTION_ACCESS
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
@@ -24,7 +30,10 @@ import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import androidx.test.filters.SdkSuppress
 import androidx.test.uiautomator.By
+import com.android.compatibility.common.util.SystemUtil.callWithShellPermissionIdentity
 import com.android.compatibility.common.util.SystemUtil.runWithShellPermissionIdentity
+import com.google.common.truth.Truth.assertThat
+import org.junit.After
 import org.junit.Assume.assumeFalse
 import org.junit.Before
 import org.junit.Rule
@@ -40,16 +49,31 @@ import org.junit.Test
 class TargetAccessTest : BaseUsePermissionTest() {
     @get:Rule val checkFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
 
+    private val appFunctionManager = context.getSystemService(AppFunctionManager::class.java)!!
+
     @Before
     fun setup() {
         assumeFalse(isAutomotive)
         assumeFalse(isTv)
         assumeFalse(isWatch)
+
+        installPackage(AGENT_APP_APK_PATH)
+        installPackage(TARGET_APP_APK_PATH)
+
+        setAppFunctionFlags(0, AGENT_APP_PACKAGE_NAME, TARGET_APP_PACKAGE_NAME)
+    }
+
+    @After
+    fun cleanup() {
+        setAppFunctionFlags(0, AGENT_APP_PACKAGE_NAME, TARGET_APP_PACKAGE_NAME)
+
+        uninstallPackage(AGENT_APP_PACKAGE_NAME, requireSuccess = false)
+        uninstallPackage(TARGET_APP_PACKAGE_NAME, requireSuccess = false)
     }
 
     @Test
     fun startActivityWithIntent_showTitle() {
-        startAppFunctionAgentListActivity()
+        startAppFunctionTargetAccessActivity()
 
         try {
             findView(By.descContains(APP_FUNCTION_TARGET_ACCESS_TITLE), true)
@@ -59,8 +83,19 @@ class TargetAccessTest : BaseUsePermissionTest() {
     }
 
     @Test
+    fun startActivityWithIntent_showTargetAppLabel() {
+        startAppFunctionTargetAccessActivity()
+
+        try {
+            findView(By.textContains(TARGET_APP_LABEL), true)
+        } finally {
+            pressBack()
+        }
+    }
+
+    @Test
     fun startActivityWithIntent_showSummary() {
-        startAppFunctionAgentListActivity()
+        startAppFunctionTargetAccessActivity()
 
         try {
             findView(By.textContains(APP_FUNCTION_TARGET_ACCESS_SUMMARY), true)
@@ -69,23 +104,74 @@ class TargetAccessTest : BaseUsePermissionTest() {
         }
     }
 
+    @Test
+    fun clickAgentApp_whenAccessDenied_grantAccess() {
+        testChangeAccess(ACCESS_FLAG_USER_DENIED, ACCESS_REQUEST_STATE_GRANTED)
+    }
+
+    @Test
+    fun clickAgentApp_whenAccessGranted_revokeAccess() {
+        testChangeAccess(ACCESS_FLAG_USER_GRANTED, ACCESS_REQUEST_STATE_DENIED)
+    }
+
+    private fun testChangeAccess(initialAccessFlags: Int, expectedAccessRequestState: Int) {
+        // Set granted/denied via API
+        setAppFunctionFlags(initialAccessFlags, AGENT_APP_PACKAGE_NAME, TARGET_APP_PACKAGE_NAME)
+
+        startAppFunctionTargetAccessActivity()
+
+        // Trigger grant/revoke access from setting entry
+        try {
+            click(By.textContains(AGENT_APP_LABEL))
+            assertThat(getAccessRequestState(AGENT_APP_PACKAGE_NAME, TARGET_APP_PACKAGE_NAME))
+                .isEqualTo(expectedAccessRequestState)
+        } finally {
+            pressBack()
+        }
+    }
+
     /** Starts activity with intent [ACTION_MANAGE_TARGET_APP_FUNCTION_ACCESS]. */
-    private fun startAppFunctionAgentListActivity() {
+    private fun startAppFunctionTargetAccessActivity() {
         doAndWaitForWindowTransition {
             runWithShellPermissionIdentity {
                 context.startActivity(
                     Intent(ACTION_MANAGE_TARGET_APP_FUNCTION_ACCESS).apply {
                         addFlags(FLAG_ACTIVITY_NEW_TASK)
-                        putExtra(Intent.EXTRA_PACKAGE_NAME, APP_PACKAGE_NAME)
+                        putExtra(Intent.EXTRA_PACKAGE_NAME, TARGET_APP_PACKAGE_NAME)
                     }
                 )
             }
         }
     }
 
+    private fun getAccessRequestState(agentPackageName: String, targetPackageName: String): Int =
+        callWithShellPermissionIdentity {
+            appFunctionManager.getAccessRequestState(agentPackageName, targetPackageName)
+        }
+
+    private fun setAppFunctionFlags(
+        flags: Int,
+        agentPackageName: String,
+        targetPackageName: String,
+    ) = callWithShellPermissionIdentity {
+        appFunctionManager.updateAccessFlags(
+            agentPackageName,
+            targetPackageName,
+            ACCESS_FLAG_MASK_ALL,
+            flags,
+        )
+    }
+
     companion object {
-        private const val APP_FUNCTION_TARGET_ACCESS_TITLE = "Agent control of $APP_PACKAGE_NAME"
+        private const val AGENT_APP_APK_PATH = "$APK_DIRECTORY/CtsAgentApp.apk"
+        private const val TARGET_APP_APK_PATH = "$APK_DIRECTORY/CtsTargetApp.apk"
+        private const val AGENT_APP_PACKAGE_NAME = "android.permissionui.cts.appfunctions.agent"
+        private const val TARGET_APP_PACKAGE_NAME = "android.permissionui.cts.appfunctions.target"
+        private const val AGENT_APP_LABEL = "CtsAgentApp"
+        private const val TARGET_APP_LABEL = "CtsTargetApp"
+
+        private const val APP_FUNCTION_TARGET_ACCESS_TITLE = "Agent access"
         private const val APP_FUNCTION_TARGET_ACCESS_SUMMARY =
-            "These agents can perform actions in $APP_PACKAGE_NAME."
+            "Agents that can access info and take actions for you in this app"
     }
 }
