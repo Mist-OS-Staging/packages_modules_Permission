@@ -701,30 +701,26 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"သင့်ဖုန်းကို စစ်ဆေးပါ"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"သင့်ဖုန်းကို ချိတ်ဆက်၍မရပါ"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"ထပ်စမ်းကြည့်မလား။"</string>
-    <!-- no translation found for app_function_access_settings_title (8529554485031723950) -->
+    <string name="app_function_access_settings_title" msgid="8529554485031723950">"အခြားအက်ပ်များ၏ အေးဂျင့်ထိန်းချုပ်မှု"</string>
+    <string name="app_function_access_settings_summary" msgid="2162127599468986004">"သင့်စက်နှင့် အခြားအက်ပ်များတွင် လုပ်ဆောင်ချက်များ ဆောင်ရွက်နိုင်သည်"</string>
+    <string name="app_function_agent_list_summary" msgid="1809900126197190780">"သင့်စက်ရှိ အက်ပ်နှင့် စက်လုပ်ဆောင်ချက်များကို သုံးနိုင်သော Assistant အက်ပ်များ"</string>
+    <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"အေးဂျင့်အက်ပ်များကို မရနိုင်ပါ"</string>
+    <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"ဤတူးလ်ကိုဖွင့်ရန် သင့်စက်တွင် အေးဂျင့်အက်ပ်ကို ထည့်သွင်းပါ"</string>
+    <string name="app_function_agent_access_summary" msgid="7238285759002624286">"လုပ်ဆောင်ချက်များ ဆောင်ရွက်ရန်အတွက် <xliff:g id="APP_NAME">%1$s</xliff:g> က သုံးနိုင်သော အက်ပ်နှင့် စနစ် ဆက်တင်များ"</string>
+    <!-- no translation found for app_function_agent_access_system_targets_empty_title (7597788502414132639) -->
     <skip />
-    <!-- no translation found for app_function_access_settings_summary (2162127599468986004) -->
+    <!-- no translation found for app_function_agent_access_app_targets_empty_title (774337187158063143) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_summary (1809900126197190780) -->
+    <!-- no translation found for app_function_agent_access_system_targets_category_title (7563475048220758703) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_empty_title (397515613920663055) -->
+    <!-- no translation found for app_function_agent_access_app_targets_category_title (620431387701237004) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_empty_summary (610653760323174019) -->
+    <string name="app_function_target_access_title" msgid="5086998551478393562">"<xliff:g id="APP_NAME">%1$s</xliff:g> ၏ ကိုယ်စားလှယ် ထိန်းချုပ်မှု"</string>
+    <string name="app_function_target_access_summary" msgid="2688275777520240124">"ဤကိုယ်စားလှယ်များက <xliff:g id="APP_NAME">%1$s</xliff:g> တွင် လုပ်ဆောင်ချက်များကို အကောင်အထည်ဖော်နိုင်သည်။"</string>
+    <!-- no translation found for app_function_device_settings_target_title (7310525289514611525) -->
     <skip />
-    <!-- no translation found for app_function_agent_access_summary (7238285759002624286) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty_title (3943494236139338580) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (5086998551478393562) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (2688275777520240124) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_title (6549957496184641967) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_desc (5815889037756375293) -->
-    <skip />
-    <!-- no translation found for request_app_function_dialog_button_allow (7758794243635329183) -->
-    <skip />
-    <!-- no translation found for request_app_function_dialog_button_deny (9084928058374041888) -->
-    <skip />
+    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ကို <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> သုံးခွင့် ပြုမလား။"</string>
+    <string name="request_app_function_access_dialog_desc" msgid="5815889037756375293">"၎င်းသည် <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> အချက်အလက် သုံးရန်နှင့် အသုံးပြုသူ၏ ကိုယ်စား လုပ်ဆောင်ရန် <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ကို ခွင့်ပြုသည်။"</string>
+    <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"ခွင့်ပြုရန်"</string>
+    <string name="request_app_function_dialog_button_deny" msgid="9084928058374041888">"ခွင့်မပြုပါ"</string>
 </resources>

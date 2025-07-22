@@ -701,30 +701,26 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"Проверьте телефон"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"Нет связи с телефоном."</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"Повторить попытку?"</string>
-    <!-- no translation found for app_function_access_settings_title (8529554485031723950) -->
+    <string name="app_function_access_settings_title" msgid="8529554485031723950">"Агентное управление другими приложениями"</string>
+    <string name="app_function_access_settings_summary" msgid="2162127599468986004">"Совершайте действия на своем устройстве и в других приложениях."</string>
+    <string name="app_function_agent_list_summary" msgid="1809900126197190780">"Приложения-помощники, у которых есть доступ к функциям устройства и приложениям."</string>
+    <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"Нет доступных приложений-агентов"</string>
+    <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"Чтобы использовать эту функцию, установите приложение-агент"</string>
+    <string name="app_function_agent_access_summary" msgid="7238285759002624286">"Приложения и системные настройки, к которым приложение \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" имеет доступ для выполнения действий."</string>
+    <!-- no translation found for app_function_agent_access_system_targets_empty_title (7597788502414132639) -->
     <skip />
-    <!-- no translation found for app_function_access_settings_summary (2162127599468986004) -->
+    <!-- no translation found for app_function_agent_access_app_targets_empty_title (774337187158063143) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_summary (1809900126197190780) -->
+    <!-- no translation found for app_function_agent_access_system_targets_category_title (7563475048220758703) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_empty_title (397515613920663055) -->
+    <!-- no translation found for app_function_agent_access_app_targets_category_title (620431387701237004) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_empty_summary (610653760323174019) -->
+    <string name="app_function_target_access_title" msgid="5086998551478393562">"Управление приложением \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" с помощью агентов"</string>
+    <string name="app_function_target_access_summary" msgid="2688275777520240124">"Эти агенты могут выполнять действия в приложении \"<xliff:g id="APP_NAME">%1$s</xliff:g>\"."</string>
+    <!-- no translation found for app_function_device_settings_target_title (7310525289514611525) -->
     <skip />
-    <!-- no translation found for app_function_agent_access_summary (7238285759002624286) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty_title (3943494236139338580) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (5086998551478393562) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (2688275777520240124) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_title (6549957496184641967) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_desc (5815889037756375293) -->
-    <skip />
-    <!-- no translation found for request_app_function_dialog_button_allow (7758794243635329183) -->
-    <skip />
-    <!-- no translation found for request_app_function_dialog_button_deny (9084928058374041888) -->
-    <skip />
+    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"\"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>\": доступ (\"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>\")"</string>
+    <string name="request_app_function_access_dialog_desc" msgid="5815889037756375293">"\"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>\" получит доступ к приложению \"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>\" и сможет выполнять действия от имени пользователя"</string>
+    <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Разрешить"</string>
+    <string name="request_app_function_dialog_button_deny" msgid="9084928058374041888">"Запретить"</string>
 </resources>

@@ -69,6 +69,8 @@ interface AppFunctionRepository {
     )
 
     companion object {
+        const val DEVICE_SETTINGS_TARGET_PACKAGE_NAME = "android"
+
         @Volatile private var instance: AppFunctionRepository? = null
 
         /** Returns the singleton instance of [AppFunctionRepository]. */

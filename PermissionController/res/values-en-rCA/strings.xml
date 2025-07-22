@@ -701,23 +701,23 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"Check your phone"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"Couldn\'t reach your phone"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"Retry?"</string>
-    <!-- no translation found for app_function_access_settings_title (8529554485031723950) -->
+    <string name="app_function_access_settings_title" msgid="8529554485031723950">"Agent control of other apps"</string>
+    <string name="app_function_access_settings_summary" msgid="2162127599468986004">"Perform actions on your device and in other apps"</string>
+    <string name="app_function_agent_list_summary" msgid="1809900126197190780">"Assistant apps that can access apps and device functions on your device"</string>
+    <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"No agent apps available"</string>
+    <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"Install an agent app on your device to enable this feature"</string>
+    <string name="app_function_agent_access_summary" msgid="7238285759002624286">"Apps and system settings <xliff:g id="APP_NAME">%1$s</xliff:g> can access to perform actions"</string>
+    <!-- no translation found for app_function_agent_access_system_targets_empty_title (7597788502414132639) -->
     <skip />
-    <!-- no translation found for app_function_access_settings_summary (2162127599468986004) -->
+    <!-- no translation found for app_function_agent_access_app_targets_empty_title (774337187158063143) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_summary (1809900126197190780) -->
+    <!-- no translation found for app_function_agent_access_system_targets_category_title (7563475048220758703) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_empty_title (397515613920663055) -->
+    <!-- no translation found for app_function_agent_access_app_targets_category_title (620431387701237004) -->
     <skip />
-    <!-- no translation found for app_function_agent_list_empty_summary (610653760323174019) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (7238285759002624286) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_empty_title (3943494236139338580) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_title (5086998551478393562) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (2688275777520240124) -->
+    <string name="app_function_target_access_title" msgid="5086998551478393562">"Agent control of <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_target_access_summary" msgid="2688275777520240124">"These agents can perform actions in <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <!-- no translation found for app_function_device_settings_target_title (7310525289514611525) -->
     <skip />
     <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"Allow <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> to access <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
     <string name="request_app_function_access_dialog_desc" msgid="5815889037756375293">"This allows <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> to access <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> information and take actions on the user’s behalf."</string>

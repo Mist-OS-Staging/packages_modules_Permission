@@ -27,6 +27,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.CancellationSignal
 import android.os.OutcomeReceiver
+import android.platform.test.annotations.AppModeFull
 import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.CheckFlagsRule
 import android.platform.test.flag.junit.DeviceFlagsValueProvider
@@ -51,6 +52,7 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA, codeName = "Baklava")
+@AppModeFull(reason = "Instant apps cannot access AppFunctionManager")
 @RequiresFlagsEnabled(com.android.permission.flags.Flags.FLAG_APP_FUNCTION_SERVICE_ENABLED)
 class DeviceStateAppFunctionServiceTest {
 
