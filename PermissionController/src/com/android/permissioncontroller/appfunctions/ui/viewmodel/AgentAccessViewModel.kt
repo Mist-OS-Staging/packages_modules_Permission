@@ -93,7 +93,7 @@ class AgentAccessViewModel(
     ): AgentAccessUiState {
         val deviceSettings =
             accessRequestStates.get(DEVICE_SETTINGS_TARGET_PACKAGE_NAME)?.let {
-                SystemTargetItem(getDeviceSettingsTargetIconUseCase(Process.myUserHandle()), it)
+                DeviceSettingsItem(getDeviceSettingsTargetIconUseCase(Process.myUserHandle()), it)
             }
         val targets =
             accessRequestStates
@@ -124,11 +124,11 @@ class AgentAccessViewModel(
 
 data class AgentAccessUiState(
     val agent: AppFunctionPackageInfo,
-    val deviceSettings: SystemTargetItem? = null,
+    val deviceSettings: DeviceSettingsItem? = null,
     val targets: List<TargetItem> = emptyList(),
 )
 
-data class SystemTargetItem(val icon: Drawable?, val accessGranted: Boolean)
+data class DeviceSettingsItem(val icon: Drawable?, val accessGranted: Boolean)
 
 data class TargetItem(val packageInfo: AppFunctionPackageInfo, val accessGranted: Boolean)
 
