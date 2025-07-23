@@ -35,7 +35,7 @@ import com.android.permissioncontroller.R
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.AgentAccessUiState
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.AgentAccessViewModel
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.AgentAccessViewModelFactory
-import com.android.permissioncontroller.appfunctions.ui.viewmodel.SystemTargetItem
+import com.android.permissioncontroller.appfunctions.ui.viewmodel.DeviceSettingsItem
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.TargetItem
 import com.android.permissioncontroller.common.model.Stateful
 import kotlinx.coroutines.launch
@@ -108,12 +108,7 @@ PF : AgentAccessChildFragment.Parent {
             val agentLabel = uiState.value?.agent?.label ?: agentPackageName
             val agentIcon = uiState.value?.agent?.icon
             addHeaderPreference(preferenceScreen, agentLabel, agentIcon, oldPreferences)
-            addEmptyStatePreference(
-                preferenceScreen,
-                PREFERENCE_KEY_APP_ZERO_STATE,
-                agentLabel,
-                oldPreferences,
-            )
+            addEmptyStatePreference(preferenceScreen, agentLabel, oldPreferences)
         } else if (uiState is Stateful.Success) {
             val agentLabel = uiState.value.agent.label
             val agentIcon = uiState.value.agent.icon
@@ -122,7 +117,6 @@ PF : AgentAccessChildFragment.Parent {
             addSystemTargetPreferenceCategory(
                 oldSystemTargetPreferenceCategory,
                 preferenceScreen,
-                agentLabel,
                 uiState.value.deviceSettings,
                 oldSystemTargetPreferences,
                 context,
@@ -187,11 +181,13 @@ PF : AgentAccessChildFragment.Parent {
     private fun addSystemTargetPreferenceCategory(
         oldPreferenceCategory: PreferenceCategory?,
         preferenceScreen: PreferenceScreen,
-        agentLabel: String,
-        deviceSettings: SystemTargetItem?,
+        deviceSettings: DeviceSettingsItem?,
         oldPreferences: Map<String, Preference>,
         context: Context,
     ) {
+        if (deviceSettings == null) {
+            return
+        }
         val preferenceCategory =
             oldPreferenceCategory
                 ?: PreferenceCategory(context).apply {
@@ -199,17 +195,7 @@ PF : AgentAccessChildFragment.Parent {
                     setTitle(R.string.app_function_agent_access_system_targets_category_title)
                 }
         preferenceScreen.addPreference(preferenceCategory)
-
-        if (deviceSettings == null) {
-            addEmptyStatePreference(
-                preferenceCategory,
-                PREFERENCE_KEY_SYSTEM_ZERO_STATE,
-                agentLabel,
-                oldPreferences,
-            )
-        } else {
-            addDeviceSettingsTargetPreference(preferenceCategory, deviceSettings, oldPreferences)
-        }
+        addDeviceSettingsTargetPreference(preferenceCategory, deviceSettings, oldPreferences)
     }
 
     private fun addTargetPreferenceCategory(
@@ -229,12 +215,7 @@ PF : AgentAccessChildFragment.Parent {
         preferenceScreen.addPreference(preferenceCategory)
 
         if (targets.isEmpty()) {
-            addEmptyStatePreference(
-                preferenceCategory,
-                PREFERENCE_KEY_APP_ZERO_STATE,
-                agentLabel,
-                oldPreferences,
-            )
+            addEmptyStatePreference(preferenceCategory, agentLabel, oldPreferences)
         } else {
             addTargetPreferences(preferenceCategory, targets, oldPreferences)
         }
@@ -242,36 +223,25 @@ PF : AgentAccessChildFragment.Parent {
 
     private fun addEmptyStatePreference(
         preferenceGroup: PreferenceGroup,
-        emptyPreferenceKey: String,
         agentLabel: String,
         oldPreferences: Map<String, Preference>,
     ) {
-        val emptyPreferenceTitle =
-            when (emptyPreferenceKey) {
-                PREFERENCE_KEY_SYSTEM_ZERO_STATE ->
-                    getString(
-                        R.string.app_function_agent_access_system_targets_empty_title,
-                        agentLabel,
-                    )
-                PREFERENCE_KEY_APP_ZERO_STATE ->
-                    getString(
-                        R.string.app_function_agent_access_app_targets_empty_title,
-                        agentLabel,
-                    )
-                else -> return
-            }
         val preference =
-            oldPreferences[emptyPreferenceKey]
+            oldPreferences[PREFERENCE_KEY_ZERO_STATE]
                 ?: requirePreferenceFragment().createEmptyStatePreference().apply {
-                    key = emptyPreferenceKey
-                    title = emptyPreferenceTitle
+                    key = PREFERENCE_KEY_ZERO_STATE
+                    title =
+                        getString(
+                            R.string.app_function_agent_access_app_targets_empty_title,
+                            agentLabel,
+                        )
                 }
         preferenceGroup.addPreference(preference)
     }
 
     private fun addDeviceSettingsTargetPreference(
         preferenceGroup: PreferenceGroup,
-        target: SystemTargetItem,
+        target: DeviceSettingsItem,
         oldPreferences: Map<String, Preference>,
     ) {
         val preference =
@@ -359,11 +329,9 @@ PF : AgentAccessChildFragment.Parent {
             AgentAccessChildFragment::class.java.name + ".preference.INTRO"
         private val PREFERENCE_KEY_SYSTEM_CATEGORY =
             AgentAccessChildFragment::class.java.name + ".preference.SYSTEM_CATEGORY"
-        private val PREFERENCE_KEY_SYSTEM_ZERO_STATE =
-            AgentAccessChildFragment::class.java.name + ".preference.SYSTEM_ZERO_STATE"
         private val PREFERENCE_KEY_APP_CATEGORY =
             AgentAccessChildFragment::class.java.name + ".preference.APP_CATEGORY"
-        private val PREFERENCE_KEY_APP_ZERO_STATE =
+        private val PREFERENCE_KEY_ZERO_STATE =
             AgentAccessChildFragment::class.java.name + ".preference.APP_ZERO_STATE"
         private val PREFERENCE_KEY_DEVICE_SETTINGS =
             AgentAccessChildFragment::class.java.name + ".preference.DEVICE_SETTINGS"
