@@ -83,6 +83,17 @@ class AgentAccessTest : BaseUsePermissionTest() {
     }
 
     @Test
+    fun startActivityWithIntent_showAgentAppLabel() {
+        startAppFunctionAgentAccessActivity()
+
+        try {
+            findView(By.textContains(AGENT_APP_LABEL), true)
+        } finally {
+            pressBack()
+        }
+    }
+
+    @Test
     fun startActivityWithIntent_showSummary() {
         startAppFunctionAgentAccessActivity()
 
@@ -159,8 +170,8 @@ class AgentAccessTest : BaseUsePermissionTest() {
         private const val AGENT_APP_LABEL = "CtsAgentApp"
         private const val TARGET_APP_LABEL = "CtsTargetApp"
 
-        private const val APP_FUNCTION_AGENT_ACCESS_TITLE = "Agent control of other apps"
+        private const val APP_FUNCTION_AGENT_ACCESS_TITLE = "App access"
         private const val APP_FUNCTION_AGENT_ACCESS_SUMMARY =
-            "Apps and system settings $AGENT_APP_LABEL can access to perform actions"
+            "Apps and settings this agent can access to get info and take actions for you"
     }
 }

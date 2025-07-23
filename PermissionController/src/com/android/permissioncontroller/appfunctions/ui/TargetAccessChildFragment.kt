@@ -57,11 +57,10 @@ PF : TargetAccessChildFragment.Parent {
 
         targetPackageName = arguments!!.getString(Intent.EXTRA_PACKAGE_NAME)!!
 
-        val preferenceFragment = requirePreferenceFragment()
-        preferenceFragment.setTitle(getString(R.string.app_function_target_access_title))
-
         val factory = TargetAccessViewModelFactory(requireActivity().application, targetPackageName)
         viewModel = ViewModelProvider(this, factory).get(TargetAccessViewModel::class.java)
+
+        val preferenceFragment = requirePreferenceFragment()
         preferenceFragment.lifecycleScope.launch {
             preferenceFragment.lifecycle.repeatOnLifecycle(State.STARTED) {
                 viewModel.uiStateFlow.collect(::onUiStateChanged)
@@ -193,13 +192,6 @@ PF : TargetAccessChildFragment.Parent {
 
     /** Interface that the parent fragment must implement. */
     interface Parent {
-        /**
-         * Set the title of the current settings page.
-         *
-         * @param title the title of the current settings page
-         */
-        fun setTitle(title: CharSequence)
-
         /** Creates a new header preference for the screen */
         fun createHeaderPreference(): Preference
 

@@ -16,6 +16,6 @@
   -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_function_access_settings_title" description="The title of the entry for App Function Access Settings">Agent control of other apps</string>
-  <string name="app_function_access_settings_summary" description="The summary of the entry for App Function Access Settings, which describes the page contents">Perform actions on your device and in other apps</string>
+  <string name="app_function_access_settings_title" description="The title of the entry for App Function Access Settings">Agents</string>
+  <string name="app_function_access_settings_summary" description="The summary of the entry for App Function Access Settings, which describes the page contents">Agents that can access info or take actions in apps</string>
 </resources>

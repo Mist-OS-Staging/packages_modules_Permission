@@ -532,6 +532,7 @@
         <activity android:name="com.android.permissioncontroller.appfunctions.ui.AgentListActivity"
             android:enabled="@bool/is_at_least_v37"
             android:exported="true"
+            android:label="@string/app_function_agent_list_title"
             android:theme="@style/Theme.PermissionController.Settings.FilterTouches">
             <intent-filter android:priority="1">
                 <action android:name="android.app.appfunctions.action.MANAGE_APP_FUNCTION_ACCESS" />
@@ -542,6 +543,7 @@
         <activity android:name="com.android.permissioncontroller.appfunctions.ui.AgentAccessActivity"
             android:enabled="@bool/is_at_least_v37"
             android:exported="true"
+            android:label="@string/app_function_agent_access_title"
             android:theme="@style/Theme.PermissionController.Settings.FilterTouches">
             <intent-filter android:priority="1">
                 <action android:name="android.app.appfunctions.action.MANAGE_AGENT_APP_FUNCTION_ACCESS" />
@@ -552,6 +554,7 @@
         <activity android:name="com.android.permissioncontroller.appfunctions.ui.TargetAccessActivity"
             android:enabled="@bool/is_at_least_v37"
             android:exported="true"
+            android:label="@string/app_function_target_access_title"
             android:theme="@style/Theme.PermissionController.Settings.FilterTouches">
             <intent-filter android:priority="1">
                 <action android:name="android.app.appfunctions.action.MANAGE_TARGET_APP_FUNCTION_ACCESS" />

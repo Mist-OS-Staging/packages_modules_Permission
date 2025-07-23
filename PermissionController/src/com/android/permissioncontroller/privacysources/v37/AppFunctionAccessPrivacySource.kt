@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.permissioncontroller.privacysources.v36r1
+package com.android.permissioncontroller.privacysources.v37
 
 import android.app.PendingIntent
 import android.app.PendingIntent.FLAG_IMMUTABLE
@@ -29,7 +29,6 @@ import android.safetycenter.SafetySourceStatus
 import com.android.permissioncontroller.R
 import com.android.permissioncontroller.permission.utils.Utils
 import com.android.permissioncontroller.privacysources.PrivacySource
-import com.android.permissioncontroller.privacysources.SafetyCenterReceiver
 import com.android.permissioncontroller.privacysources.SafetyCenterReceiver.RefreshEvent
 
 /**
@@ -48,12 +47,11 @@ class AppFunctionAccessPrivacySource : PrivacySource {
     override fun rescanAndPushSafetyCenterData(
         context: Context,
         intent: Intent,
-        refreshEvent: SafetyCenterReceiver.RefreshEvent,
+        refreshEvent: RefreshEvent,
     ) {
         val safetyCenterManager: SafetyCenterManager =
             Utils.getSystemServiceSafe(context, SafetyCenterManager::class.java)
 
-        // TODO(b/414805948): Add app function access API flag here once exported
         val safetySourceData =
             if (Flags.appFunctionAccessUiEnabled()) {
                 val pendingIntent = getPendingIntentForAppFunctionAgentList(context)

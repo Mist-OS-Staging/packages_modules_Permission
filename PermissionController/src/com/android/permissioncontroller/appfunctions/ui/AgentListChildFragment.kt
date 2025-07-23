@@ -51,12 +51,10 @@ PF : AgentListChildFragment.Parent {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val preferenceFragment = requirePreferenceFragment()
-        preferenceFragment.setTitle(getString(R.string.app_function_access_settings_title))
-
         val factory = AgentListViewModelFactory(requireActivity().application)
         viewModel = ViewModelProvider(this, factory).get(AgentListViewModel::class.java)
 
+        val preferenceFragment = requirePreferenceFragment()
         preferenceFragment.lifecycleScope.launch {
             preferenceFragment.lifecycle.repeatOnLifecycle(State.STARTED) {
                 viewModel.uiStateFlow.collect(::onUiStateChanged)
@@ -173,13 +171,6 @@ PF : AgentListChildFragment.Parent {
 
     /** Interface that the parent fragment must implement. */
     interface Parent {
-        /**
-         * Set the title of the current settings page.
-         *
-         * @param title the title of the current settings page
-         */
-        fun setTitle(title: CharSequence)
-
         /** Creates a new header preference for the screen */
         fun createHeaderPreference(): Preference
 

@@ -116,8 +116,8 @@ class AgentListTest : BaseUsePermissionTest() {
         const val AGENT_APP_PACKAGE_NAME = "android.permissionui.cts.appfunctions.agent"
         const val AGENT_APP_LABEL = "CtsAgentApp"
 
-        private const val APP_FUNCTION_AGENT_LIST_TITLE = "Agent control of other apps"
+        private const val APP_FUNCTION_AGENT_LIST_TITLE = "Agents"
         private const val APP_FUNCTION_AGENT_LIST_SUMMARY =
-            "Assistant apps that can access apps and device functions on your device"
+            "Manage access for agents on this device"
     }
 }

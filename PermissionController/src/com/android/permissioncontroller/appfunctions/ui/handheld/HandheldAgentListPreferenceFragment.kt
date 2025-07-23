@@ -43,10 +43,6 @@ class HandheldAgentListPreferenceFragment :
         // Preferences will be added by the child fragment later.
     }
 
-    override fun setTitle(title: CharSequence) {
-        requireParent().setTitle(title)
-    }
-
     override fun createHeaderPreference(): Preference = TopIntroPreference(requireContext())
 
     override fun createEmptyStatePreference(): Preference =
@@ -65,13 +61,6 @@ class HandheldAgentListPreferenceFragment :
 
     /** Interface that the parent fragment must implement. */
     interface Parent {
-        /**
-         * Set the title of the current settings page.
-         *
-         * @param title the title of the current settings page
-         */
-        fun setTitle(title: CharSequence)
-
         /**
          * Callback when changes have been made to the {@link androidx.preference.PreferenceScreen}
          * of this {@link PreferenceFragmentCompat}.

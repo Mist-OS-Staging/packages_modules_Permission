@@ -61,11 +61,10 @@ PF : AgentAccessChildFragment.Parent {
 
         agentPackageName = arguments!!.getString(Intent.EXTRA_PACKAGE_NAME)!!
 
-        val preferenceFragment = requirePreferenceFragment()
-        preferenceFragment.setTitle(getString(R.string.app_function_access_settings_title))
-
         val factory = AgentAccessViewModelFactory(requireActivity().application, agentPackageName)
         viewModel = ViewModelProvider(this, factory).get(AgentAccessViewModel::class.java)
+
+        val preferenceFragment = requirePreferenceFragment()
         preferenceFragment.lifecycleScope.launch {
             preferenceFragment.lifecycle.repeatOnLifecycle(State.STARTED) {
                 viewModel.uiStateFlow.collect(::onUiStateChanged)
@@ -168,12 +167,12 @@ PF : AgentAccessChildFragment.Parent {
             oldPreferences[PREFERENCE_KEY_INTRO]
                 ?: requirePreferenceFragment().createHeaderPreference().apply {
                     key = PREFERENCE_KEY_INTRO
+                    setSummary(R.string.app_function_agent_access_summary)
                 }
         // Old preference might need to be updated
         preference.apply {
             icon = agentIcon
             title = agentLabel
-            summary = getString(R.string.app_function_agent_access_summary, agentLabel)
         }
         preferenceGroup.addPreference(preference)
     }
@@ -300,13 +299,6 @@ PF : AgentAccessChildFragment.Parent {
 
     /** Interface that the parent fragment must implement. */
     interface Parent {
-        /**
-         * Set the title of the current settings page.
-         *
-         * @param title the title of the current settings page
-         */
-        fun setTitle(title: CharSequence)
-
         /** Creates a new header preference for the screen */
         fun createHeaderPreference(): Preference
 
