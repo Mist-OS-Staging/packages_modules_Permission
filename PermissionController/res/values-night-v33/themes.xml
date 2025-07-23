@@ -85,5 +85,8 @@
         <item name="scMoreIssuesTitleTextAppearance">
             @style/TextAppearance.Material3.LabelLarge
         </item>
+        <item name="scQsToggleTitleTextAppearance">
+            @style/TextAppearance.SafetyCenter.Medium
+        </item>
     </style>
 </resources>

@@ -57,6 +57,7 @@
     <attr name="scIssueSubtitleTextAppearance" format="reference" />
     <attr name="scIssueAttributionTitleTextAppearance" format="reference" />
     <attr name="scMoreIssuesTitleTextAppearance" format="reference" />
+    <attr name="scQsToggleTitleTextAppearance" format="reference" />
 
     <attr name="colorScShieldAccent" format="color" />
 </resources>

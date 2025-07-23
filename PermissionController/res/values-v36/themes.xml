@@ -66,6 +66,9 @@
         <item name="scMoreIssuesTitleTextAppearance">
             @style/TextAppearance.SettingsLib.LabelLarge
         </item>
+        <item name="scQsToggleTitleTextAppearance">
+            @style/TextAppearance.SettingsLib.LabelLarge
+        </item>
     </style>
 
     <style name="ThemeOverlay.SafetyCenter.ExpressiveButtons" parent="">
