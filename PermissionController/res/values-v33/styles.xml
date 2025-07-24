@@ -144,7 +144,7 @@
 
     <style name="SafetyCenterQsToggleText.Title">
         <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
-        <item name="android:textAppearance">@style/TextAppearance.SafetyCenter.Medium</item>
+        <item name="android:textAppearance">?attr/scQsToggleTitleTextAppearance</item>
         <item name="android:lineHeight">@dimen/sc_line_height_medium</item>
     </style>
 
