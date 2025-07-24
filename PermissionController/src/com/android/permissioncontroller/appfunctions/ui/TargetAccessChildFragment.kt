@@ -16,10 +16,12 @@
 package com.android.permissioncontroller.appfunctions.ui
 
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.os.Process
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle.State
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.preference.Preference
@@ -27,7 +29,11 @@ import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceGroup
 import androidx.preference.TwoStatePreference
 import com.android.permissioncontroller.R
-import com.android.permissioncontroller.permission.utils.KotlinUtils
+import com.android.permissioncontroller.appfunctions.ui.viewmodel.AgentItem
+import com.android.permissioncontroller.appfunctions.ui.viewmodel.TargetAccessUiState
+import com.android.permissioncontroller.appfunctions.ui.viewmodel.TargetAccessViewModel
+import com.android.permissioncontroller.appfunctions.ui.viewmodel.TargetAccessViewModelFactory
+import com.android.permissioncontroller.common.model.Stateful
 import kotlinx.coroutines.launch
 
 /**
@@ -44,29 +50,31 @@ PF : PreferenceFragmentCompat,
 PF : TargetAccessChildFragment.Parent {
     private lateinit var targetPackageName: String
 
+    private lateinit var viewModel: TargetAccessViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         targetPackageName = arguments!!.getString(Intent.EXTRA_PACKAGE_NAME)!!
 
         val preferenceFragment = requirePreferenceFragment()
-        preferenceFragment.setTitle(
-            getString(
-                R.string.app_function_target_access_title,
-                KotlinUtils.getPackageLabel(
-                    requireActivity().application,
-                    targetPackageName,
-                    Process.myUserHandle(),
-                ),
-            )
-        )
+        preferenceFragment.setTitle(getString(R.string.app_function_target_access_title))
 
+        val factory = TargetAccessViewModelFactory(requireActivity().application, targetPackageName)
+        viewModel = ViewModelProvider(this, factory).get(TargetAccessViewModel::class.java)
         preferenceFragment.lifecycleScope.launch {
-            preferenceFragment.lifecycle.repeatOnLifecycle(State.STARTED) { onUiStateChanged() }
+            preferenceFragment.lifecycle.repeatOnLifecycle(State.STARTED) {
+                viewModel.uiStateFlow.collect(::onUiStateChanged)
+            }
         }
     }
 
-    private fun onUiStateChanged() {
+    private fun onUiStateChanged(uiState: Stateful<TargetAccessUiState>) {
+        if (uiState is Stateful.Loading) {
+            // do nothing
+            return
+        }
+
         val preferenceFragment = requirePreferenceFragment()
         val preferenceManager = preferenceFragment.preferenceManager
         var preferenceScreen = preferenceFragment.preferenceScreen
@@ -79,8 +87,24 @@ PF : TargetAccessChildFragment.Parent {
             clearPreferences(preferenceScreen, oldPreferences)
         }
 
-        addHeaderPreference(preferenceScreen, oldPreferences)
-        addEmptyStatePreference(preferenceScreen, oldPreferences)
+        if (uiState is Stateful.Failure) {
+            Log.e(LOG_TAG, "Failed to load agent list", uiState.throwable)
+            val targetLabel = uiState.value?.target?.label ?: targetPackageName
+            val targetIcon = uiState.value?.target?.icon
+            addHeaderPreference(preferenceScreen, targetLabel, targetIcon, oldPreferences)
+            addEmptyStatePreference(preferenceScreen, oldPreferences)
+        } else if (uiState is Stateful.Success) {
+            val targetLabel = uiState.value.target.label
+            val targetIcon = uiState.value.target.icon
+            val targets = uiState.value.agents
+
+            addHeaderPreference(preferenceScreen, targetLabel, targetIcon, oldPreferences)
+            if (targets.isEmpty()) {
+                addEmptyStatePreference(preferenceScreen, oldPreferences)
+            } else {
+                addTargetPreferences(preferenceScreen, targets, oldPreferences)
+            }
+        }
 
         preferenceFragment.onPreferenceScreenChanged()
     }
@@ -99,28 +123,21 @@ PF : TargetAccessChildFragment.Parent {
 
     private fun addHeaderPreference(
         preferenceGroup: PreferenceGroup,
+        targetLabel: String,
+        targetIcon: Drawable?,
         oldPreferences: Map<String, Preference>,
     ) {
-        val targetIcon =
-            KotlinUtils.getBadgedPackageIcon(
-                requireActivity().application,
-                targetPackageName,
-                Process.myUserHandle(),
-            )
-        val label =
-            KotlinUtils.getPackageLabel(
-                requireActivity().application,
-                targetPackageName,
-                Process.myUserHandle(),
-            )
         val preference =
             oldPreferences[PREFERENCE_KEY_INTRO]
                 ?: requirePreferenceFragment().createHeaderPreference().apply {
                     key = PREFERENCE_KEY_INTRO
-                    icon = targetIcon
-                    title = label
-                    summary = getString(R.string.app_function_target_access_summary, label)
+                    setSummary(R.string.app_function_target_access_summary)
                 }
+        // Old preference might need to be updated
+        preference.apply {
+            icon = targetIcon
+            title = targetLabel
+        }
         preferenceGroup.addPreference(preference)
     }
 
@@ -138,8 +155,34 @@ PF : TargetAccessChildFragment.Parent {
         preferenceGroup.addPreference(preference)
     }
 
+    private fun addTargetPreferences(
+        preferenceGroup: PreferenceGroup,
+        agents: List<AgentItem>,
+        oldPreferences: Map<String, Preference>,
+    ) {
+        val preferenceFragment = requirePreferenceFragment()
+        for (agent in agents) {
+            val agentPackageInfo = agent.packageInfo
+            val agentPackageName = agentPackageInfo.packageName
+            val preference =
+                oldPreferences[agentPackageName] as TwoStatePreference?
+                    ?: preferenceFragment.createPreference().apply {
+                        key = agentPackageName
+                        onPreferenceClickListener = this@TargetAccessChildFragment
+                    }
+            // Ensure current ux state reflects the data state
+            preference.apply {
+                title = agentPackageInfo.label
+                icon = agentPackageInfo.icon
+                isChecked = agent.accessGranted
+            }
+            preferenceGroup.addPreference(preference)
+        }
+    }
+
     override fun onPreferenceClick(preference: Preference): Boolean {
-        // TODO(rmacgregor): Implement onPreferenceClick
+        preference as TwoStatePreference
+        viewModel.updateAccessState(preference.key, preference.isChecked)
         return true
     }
 
@@ -174,6 +217,7 @@ PF : TargetAccessChildFragment.Parent {
     }
 
     companion object {
+        private val LOG_TAG = TargetAccessChildFragment::class.java.simpleName
         private val PREFERENCE_KEY_INTRO =
             TargetAccessChildFragment::class.java.name + ".preference.INTRO"
         private val PREFERENCE_KEY_ZERO_STATE =

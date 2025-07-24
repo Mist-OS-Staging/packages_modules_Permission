@@ -2107,9 +2107,9 @@
     <string name="app_function_agent_access_app_targets_category_title" description="Category title for target apps list section of Agent Access Settings page">Apps</string>
 
     <!-- Title for App Function Target Access Settings page. [CHAR LIMIT=70] -->
-    <string name="app_function_target_access_title">Agent control of <xliff:g id="app_name" example="Example App">%1$s</xliff:g></string>
+    <string name="app_function_target_access_title">Agent access</string>
     <!-- Summary for App Function Target Access Settings page. [CHAR LIMIT=130] -->
-    <string name="app_function_target_access_summary" description="The summary of the App Function Target Access Settings, which describes the page contents">These agents can perform actions in <xliff:g id="app_name" example="Example App">%1$s</xliff:g>.</string>
+    <string name="app_function_target_access_summary" description="The summary of the App Function Target Access Settings, which describes the page contents">Agents that can access info and take actions for you in this app</string>
 
     <!-- Device settings target title [CHAR LIMIT=30] -->
     <string name="app_function_device_settings_target_title" description="Target app title used for Device Settings">Device Settings</string>

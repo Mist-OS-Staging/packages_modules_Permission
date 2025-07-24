@@ -64,7 +64,7 @@ PF : AgentAccessChildFragment.Parent {
         val preferenceFragment = requirePreferenceFragment()
         preferenceFragment.setTitle(getString(R.string.app_function_access_settings_title))
 
-        val factory = AgentAccessViewModelFactory(agentPackageName, requireActivity().application)
+        val factory = AgentAccessViewModelFactory(requireActivity().application, agentPackageName)
         viewModel = ViewModelProvider(this, factory).get(AgentAccessViewModel::class.java)
         preferenceFragment.lifecycleScope.launch {
             preferenceFragment.lifecycle.repeatOnLifecycle(State.STARTED) {
