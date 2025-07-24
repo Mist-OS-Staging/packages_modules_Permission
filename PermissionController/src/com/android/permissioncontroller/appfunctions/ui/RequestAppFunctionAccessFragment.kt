@@ -16,13 +16,13 @@
 
 package com.android.permissioncontroller.appfunctions.ui
 
-import android.app.AlertDialog
 import android.app.Dialog
 import android.content.DialogInterface
 import android.os.Bundle
 import android.os.Process
 import android.util.Log
 import android.view.LayoutInflater
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.DialogFragment
@@ -47,6 +47,8 @@ class RequestAppFunctionAccessFragment : DialogFragment() {
     private lateinit var targetIconView: ImageView
     private lateinit var titleTextView: TextView
     private lateinit var messageTextView: TextView
+    private lateinit var positiveButton: Button
+    private lateinit var negativeButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -86,16 +88,14 @@ class RequestAppFunctionAccessFragment : DialogFragment() {
                     targetIconView = requireViewById<ImageView>(R.id.target_icon)
                     titleTextView = requireViewById<TextView>(R.id.title)
                     messageTextView = requireViewById<TextView>(R.id.description)
+                    positiveButton = requireViewById<Button>(R.id.allow_button)
+                    negativeButton = requireViewById<Button>(R.id.dont_allow_button)
                 }
-        return AlertDialog.Builder(activity)
-            .setView(view)
-            .setPositiveButton(R.string.request_app_function_dialog_button_allow) { _, _ ->
-                onAppFunctionGrant(agentPackageName, targetPackageName)
-            }
-            .setNegativeButton(R.string.request_app_function_dialog_button_deny) { dialog, _ ->
-                dialog.cancel()
-            }
-            .create()
+        positiveButton.apply {
+            setOnClickListener { onAppFunctionGrant(agentPackageName, targetPackageName) }
+        }
+        negativeButton.apply { setOnClickListener { dialog!!.cancel() } }
+        return Dialog(activity).apply { setContentView(view) }
     }
 
     private fun onUiStateChanged(uiState: Stateful<RequestAccessUiState>) {
@@ -113,7 +113,7 @@ class RequestAppFunctionAccessFragment : DialogFragment() {
             )
         val message =
             getString(
-                R.string.request_app_function_access_dialog_desc,
+                R.string.request_app_function_access_dialog_description,
                 uiData.agentLabel,
                 uiData.targetLabel,
             )

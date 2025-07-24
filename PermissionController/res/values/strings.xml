@@ -2107,9 +2107,9 @@
     <string name="app_function_agent_access_app_targets_category_title" description="Category title for target apps list section of Agent Access Settings page">Apps</string>
 
     <!-- Title for App Function Target Access Settings page. [CHAR LIMIT=70] -->
-    <string name="app_function_target_access_title">Agent control of <xliff:g id="app_name" example="Example App">%1$s</xliff:g></string>
+    <string name="app_function_target_access_title">Agent access</string>
     <!-- Summary for App Function Target Access Settings page. [CHAR LIMIT=130] -->
-    <string name="app_function_target_access_summary" description="The summary of the App Function Target Access Settings, which describes the page contents">These agents can perform actions in <xliff:g id="app_name" example="Example App">%1$s</xliff:g>.</string>
+    <string name="app_function_target_access_summary" description="The summary of the App Function Target Access Settings, which describes the page contents">Agents that can access info and take actions for you in this app</string>
 
     <!-- Device settings target title [CHAR LIMIT=30] -->
     <string name="app_function_device_settings_target_title" description="Target app title used for Device Settings">Device Settings</string>
@@ -2120,11 +2120,11 @@
     <!-- Label for the title of request app function access dialog [CHAR LIMIT=20]-->
     <string name="request_app_function_access_dialog_title">Allow <xliff:g id="agent_app_name" example="Example Agent App">%1$s</xliff:g> to access <xliff:g id="target_app_name" example="Example Target App">%2$s</xliff:g>?</string>
     <!-- Label for the description of request app function access dialog [CHAR LIMIT=20]-->
-    <string name="request_app_function_access_dialog_desc">This allows <xliff:g id="agent_app_name" example="Example Agent App">%1$s</xliff:g> to access <xliff:g id="target_app_name" example="Example Target App">%2$s</xliff:g> information and take actions on the user\u2019s behalf.</string>
+    <string name="request_app_function_access_dialog_description">This allows <xliff:g id="agent_app_name" example="Example Agent App">%1$s</xliff:g> to access <xliff:g id="target_app_name" example="Example Target App">%2$s</xliff:g> information and take actions on the user\u2019s behalf.</string>
     <!-- Label for the allow button for request app function dialog. [CHAR LIMIT=15]  -->
     <string name="request_app_function_dialog_button_allow">Allow</string>
     <!-- Label for the deny button for request app function dialog. [CHAR LIMIT=15]  -->
-    <string name="request_app_function_dialog_button_deny">Don\u2019t allow</string>
+    <string name="request_app_function_dialog_button_dont_allow">Don\u2019t allow</string>
 
     <!-- END REQUEST APP FUNCTION DIALOG -->
 </resources>

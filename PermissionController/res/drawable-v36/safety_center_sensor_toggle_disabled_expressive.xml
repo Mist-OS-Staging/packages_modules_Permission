@@ -14,8 +14,12 @@
   ~ limitations under the License.
   -->
 
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- disabled is 30% opacity -->
-    <item android:state_enabled="false" android:color="?attr/colorScButtonRecommendBase" android:alpha="0.3" />
-    <item android:color="?attr/colorScButtonRecommendBase" />
-</selector>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+        android:color="?android:colorControlHighlight">
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/safety_center_toggle_disabled"/>
+            <corners android:radius="90dp"/>
+        </shape>
+    </item>
+</ripple>

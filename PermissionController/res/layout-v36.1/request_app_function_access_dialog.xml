@@ -15,12 +15,11 @@
   ~ limitations under the License.
   -->
 
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/RequestAppFunctionAccessDialog">
+    style="@style/RequestAppFunctionAccessDialogScrollView">
     <LinearLayout
-        android:id="@+id/header"
-        style="@style/RequestAppFunctionAccessDialogHeader">
+        style="@style/RequestAppFunctionAccessDialogContent">
         <LinearLayout
             style="@style/RequestAppFunctionAccessDialogIconBar">
             <ImageView
@@ -34,16 +33,17 @@
             android:id="@+id/title"
             android:text="@string/request_app_function_access_dialog_title"
             style="@style/RequestAppFunctionAccessDialogTitle" />
+        <TextView
+            android:id="@+id/description"
+            android:text="@string/request_app_function_access_dialog_description"
+            style="@style/RequestAppFunctionAccessDialogDescription" />
+        <Button
+            android:id="@+id/allow_button"
+            android:text="@string/request_app_function_dialog_button_allow"
+            style="@style/RequestAppFunctionAccessDialogAllowButton" />
+        <Button
+            android:id="@+id/dont_allow_button"
+            android:text="@string/request_app_function_dialog_button_dont_allow"
+            style="@style/RequestAppFunctionAccessDialogDontAllowButton" />
     </LinearLayout>
-
-    <ScrollView
-        style="@style/RequestAppFunctionAccessDialogScrollView">
-        <LinearLayout
-            style="@style/RequestAppFunctionAccessDialogBody">
-            <TextView
-                android:id="@+id/description"
-                android:text="@string/request_app_function_access_dialog_desc"
-                style="@style/RequestAppFunctionAccessDialogDescription" />
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+</ScrollView>
