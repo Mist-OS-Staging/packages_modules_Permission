@@ -707,20 +707,17 @@
     <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"Tiada apl ejen tersedia"</string>
     <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"Pasang apl ejen pada peranti anda untuk mendayakan ciri ini"</string>
     <string name="app_function_agent_access_summary" msgid="7238285759002624286">"Apl dan tetapan sistem <xliff:g id="APP_NAME">%1$s</xliff:g> boleh mendapatkan akses untuk melakukan tindakan"</string>
-    <!-- no translation found for app_function_agent_access_system_targets_empty_title (7597788502414132639) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_app_targets_empty_title (774337187158063143) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_system_targets_category_title (7563475048220758703) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_app_targets_category_title (620431387701237004) -->
-    <skip />
+    <string name="app_function_agent_access_system_targets_empty_title" msgid="7597788502414132639">"Tiada apl sistem yang tersedia untuk akses <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"Tiada apl tersedia untuk akses <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"Sistem"</string>
+    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Apl"</string>
     <string name="app_function_target_access_title" msgid="5086998551478393562">"Kawalan ejen <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="app_function_target_access_summary" msgid="2688275777520240124">"Ejen ini boleh melakukan tindakan pada <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <!-- no translation found for app_function_device_settings_target_title (7310525289514611525) -->
-    <skip />
+    <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Tetapan Peranti"</string>
     <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"Benarkan <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> mengakses <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
-    <string name="request_app_function_access_dialog_desc" msgid="5815889037756375293">"Ciri ini membenarkan <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> mengakses maklumat <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> dan mengambil tindakan bagi pihak pengguna."</string>
+    <!-- no translation found for request_app_function_access_dialog_description (8841298093381343286) -->
+    <skip />
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Benarkan"</string>
-    <string name="request_app_function_dialog_button_deny" msgid="9084928058374041888">"Jangan benarkan"</string>
+    <!-- no translation found for request_app_function_dialog_button_dont_allow (7657036841986717007) -->
+    <skip />
 </resources>

@@ -29,6 +29,8 @@
     <string name="safety_center_entry_content_description" msgid="3639565652938224321">"<xliff:g id="ENTRY_ITEM_TITLE">%1$s</xliff:g>। <xliff:g id="ENTRY_ITEM_SUMMARY">%2$s</xliff:g>"</string>
     <string name="safety_center_more_issues_card_title" msgid="7425844746197493312">"थप अलर्टहरू"</string>
     <string name="safety_center_dismissed_issues_card_title" msgid="2340129842725145733">"खारेज गरिएका अलर्टहरू"</string>
+    <!-- no translation found for safety_center_expressive_more_issues_collapse_title (4022284109267834224) -->
+    <skip />
     <string name="safety_center_more_issues_card_expand_action" msgid="7109451851052272946">"{count,plural, =1{एक्स्पान्ड गरेर थप एउटा अलर्ट हेर्नुहोस्}other{एक्स्पान्ड गरेर थप # वटा अलर्ट हेर्नुहोस्}}"</string>
     <string name="safety_center_more_issues_card_collapse_action" msgid="7485597582198474637">"कोल्याप्स गर्नुहोस्"</string>
     <string name="safety_center_issue_card_prefix_content_description" msgid="1447445289637043544">"सतर्कता अपनाउनुहोस्। <xliff:g id="ISSUE_CARD_TITLE">%1$s</xliff:g>"</string>
