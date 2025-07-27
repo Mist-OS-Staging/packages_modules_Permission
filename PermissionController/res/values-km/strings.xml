@@ -720,7 +720,9 @@
     <!-- no translation found for app_function_device_settings_target_title (7310525289514611525) -->
     <skip />
     <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"អនុញ្ញាតឱ្យ <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ចូលប្រើ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ឬ?"</string>
-    <string name="request_app_function_access_dialog_desc" msgid="5815889037756375293">"ការធ្វើបែបនេះអនុញ្ញាតឱ្យ <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ចូលប្រើព័ត៌មាន <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> និងធ្វើសកម្មភាពជំនួសឱ្យអ្នកប្រើប្រាស់។"</string>
+    <!-- no translation found for request_app_function_access_dialog_description (8841298093381343286) -->
+    <skip />
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"អនុញ្ញាត"</string>
-    <string name="request_app_function_dialog_button_deny" msgid="9084928058374041888">"មិនអនុញ្ញាត"</string>
+    <!-- no translation found for request_app_function_dialog_button_dont_allow (7657036841986717007) -->
+    <skip />
 </resources>

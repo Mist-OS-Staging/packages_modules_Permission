@@ -720,7 +720,9 @@
     <!-- no translation found for app_function_device_settings_target_title (7310525289514611525) -->
     <skip />
     <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"要允許「<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>」存取「<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>」嗎？"</string>
-    <string name="request_app_function_access_dialog_desc" msgid="5815889037756375293">"「<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>」可存取「<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>」資訊並代表使用者採取行動。"</string>
+    <!-- no translation found for request_app_function_access_dialog_description (8841298093381343286) -->
+    <skip />
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"允許"</string>
-    <string name="request_app_function_dialog_button_deny" msgid="9084928058374041888">"不允許"</string>
+    <!-- no translation found for request_app_function_dialog_button_dont_allow (7657036841986717007) -->
+    <skip />
 </resources>

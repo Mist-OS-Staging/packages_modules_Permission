@@ -720,7 +720,9 @@
     <!-- no translation found for app_function_device_settings_target_title (7310525289514611525) -->
     <skip />
     <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"ਕੀ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ਤੱਕ <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ਨੂੰ ਪਹੁੰਚ ਕਰਨ ਦੇਣੀ ਹੈ?"</string>
-    <string name="request_app_function_access_dialog_desc" msgid="5815889037756375293">"ਇਸ ਨਾਲ <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ਨੂੰ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ਦੀ ਜਾਣਕਾਰੀ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਅਤੇ ਵਰਤੋਂਕਾਰ ਦੀ ਤਰਫ਼ੋਂ ਕਾਰਵਾਈਆਂ ਕਰਨ ਦੀ ਆਗਿਆ ਮਿਲਦੀ ਹੈ।"</string>
+    <!-- no translation found for request_app_function_access_dialog_description (8841298093381343286) -->
+    <skip />
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"ਆਗਿਆ ਦਿਓ"</string>
-    <string name="request_app_function_dialog_button_deny" msgid="9084928058374041888">"ਆਗਿਆ ਨਾ ਦਿਓ"</string>
+    <!-- no translation found for request_app_function_dialog_button_dont_allow (7657036841986717007) -->
+    <skip />
 </resources>
