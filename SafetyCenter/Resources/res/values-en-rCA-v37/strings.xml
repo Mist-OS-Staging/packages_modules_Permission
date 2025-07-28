@@ -17,6 +17,6 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_function_access_settings_title" msgid="2392794502498586153">"Agent control of other apps"</string>
-    <string name="app_function_access_settings_summary" msgid="9220806266653439664">"Perform actions on your device and in other apps"</string>
+    <string name="app_function_access_settings_title" msgid="2755147062089099851">"Agents"</string>
+    <string name="app_function_access_settings_summary" msgid="6409382291361390766">"Agents that can access info or take actions in apps"</string>
 </resources>
