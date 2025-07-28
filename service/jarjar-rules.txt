@@ -56,4 +56,8 @@ rule com.android.graphics.surfaceflinger.flags.*FeatureFlags* com.android.permis
 rule com.android.graphics.surfaceflinger.flags.FeatureFlags* com.android.permission.jarjar.@0
 rule com.android.graphics.surfaceflinger.flags.FeatureFlags com.android.permission.jarjar.@0
 rule com.android.graphics.surfaceflinger.flags.Flags com.android.permission.jarjar.@0
+rule com.android.server.telecom.flags.*FeatureFlags* com.android.permission.jarjar.@0
+rule com.android.server.telecom.flags.FeatureFlags* com.android.permission.jarjar.@0
+rule com.android.server.telecom.flags.FeatureFlags com.android.permission.jarjar.@0
+rule com.android.server.telecom.flags.Flags com.android.permission.jarjar.@0
 # LINT.ThenChange(PermissionController/role-controller/java/com/android/role/controller/model/RoleParser.java:applyJarjarTransform)
