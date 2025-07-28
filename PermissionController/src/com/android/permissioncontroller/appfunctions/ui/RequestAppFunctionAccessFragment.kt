@@ -20,7 +20,6 @@ import android.app.Dialog
 import android.content.DialogInterface
 import android.os.Bundle
 import android.os.Process
-import android.util.Log
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.ImageView
@@ -91,9 +90,7 @@ class RequestAppFunctionAccessFragment : DialogFragment() {
                     positiveButton = requireViewById<Button>(R.id.allow_button)
                     negativeButton = requireViewById<Button>(R.id.dont_allow_button)
                 }
-        positiveButton.apply {
-            setOnClickListener { onAppFunctionGrant(agentPackageName, targetPackageName) }
-        }
+        positiveButton.apply { setOnClickListener { onAppFunctionGrant() } }
         negativeButton.apply { setOnClickListener { dialog!!.cancel() } }
         return Dialog(activity).apply { setContentView(view) }
     }
@@ -124,13 +121,8 @@ class RequestAppFunctionAccessFragment : DialogFragment() {
         messageTextView.text = message
     }
 
-    fun onAppFunctionGrant(agentPackageName: String?, targetPackageName: String?) {
-        Log.v(
-            LOG_TAG,
-            "onAppFunctionGrant, agentPackageName: $agentPackageName," +
-                " targetPackageName: $targetPackageName",
-        )
-        // TODO: AppFunctionManager.setAppFunctionAccessFlags()
+    fun onAppFunctionGrant() {
+        viewModel.grantAccess()
         finish()
     }
 

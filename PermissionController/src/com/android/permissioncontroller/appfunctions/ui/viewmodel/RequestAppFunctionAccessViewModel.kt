@@ -32,6 +32,7 @@ import androidx.lifecycle.viewmodel.CreationExtras
 import com.android.permissioncontroller.appfunctions.data.repository.AppFunctionRepository
 import com.android.permissioncontroller.appfunctions.domain.usecase.GetAccessRequestStateUseCase
 import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCase
+import com.android.permissioncontroller.appfunctions.domain.usecase.UpdateAccessUseCase
 import com.android.permissioncontroller.common.model.Stateful
 import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
 import kotlinx.coroutines.CoroutineDispatcher
@@ -48,6 +49,7 @@ class RequestAppFunctionAccessViewModel(
     private val targetPackageName: String,
     getAppFunctionPackageInfoUseCase: GetAppFunctionPackageInfoUseCase,
     private val getAccessRequestStateUseCase: GetAccessRequestStateUseCase,
+    private val updateAccessUseCase: UpdateAccessUseCase,
     scope: CoroutineScope? = null,
     val dispatcher: CoroutineDispatcher = Dispatchers.Default,
 ) : AndroidViewModel(application) {
@@ -81,6 +83,12 @@ class RequestAppFunctionAccessViewModel(
             }
         }
     }
+
+    fun grantAccess() {
+        coroutineScope.launch(dispatcher) {
+            updateAccessUseCase(agentPackageName, targetPackageName, true)
+        }
+    }
 }
 
 /** The data class for UI state of RequestAppFunctionAccess dialog. */
@@ -105,6 +113,7 @@ class RequestAppFunctionAccessViewModelFactory(
         val appFunctionRepository = AppFunctionRepository.getInstance(application)
         val getAppFunctionPackageInfoUseCase = GetAppFunctionPackageInfoUseCase(packageRepository)
         val getAccessRequestStateUseCase = GetAccessRequestStateUseCase(appFunctionRepository)
+        val updateAccessUseCase = UpdateAccessUseCase(appFunctionRepository)
         return RequestAppFunctionAccessViewModel(
             application,
             user,
@@ -112,6 +121,7 @@ class RequestAppFunctionAccessViewModelFactory(
             targetPackageName,
             getAppFunctionPackageInfoUseCase,
             getAccessRequestStateUseCase,
+            updateAccessUseCase,
         )
             as T
     }
