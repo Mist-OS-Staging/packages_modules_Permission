@@ -19,19 +19,28 @@ package android.safetycenter.cts
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.os.Build.VERSION_CODES
+import android.permission.flags.Flags
+import android.platform.test.annotations.RequiresFlagsEnabled
+import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import android.safetycenter.SafetyCenterEntry
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.ext.truth.os.ParcelableSubject.assertThat
+import androidx.test.filters.SdkSuppress
 import com.android.safetycenter.testing.EqualsHashCodeToStringTester
 import com.google.common.truth.Truth.assertThat
 import kotlin.test.assertFailsWith
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
 /** CTS tests for [SafetyCenterEntry]. */
 @RunWith(AndroidJUnit4::class)
 class SafetyCenterEntryTest {
+
+    @get:Rule val flagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
+
     private val context: Context = ApplicationProvider.getApplicationContext()
 
     private val pendingIntent1 =
@@ -167,6 +176,14 @@ class SafetyCenterEntryTest {
             .isNull()
     }
 
+    @SdkSuppress(minSdkVersion = VERSION_CODES.BAKLAVA)
+    @RequiresFlagsEnabled(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+    @Test
+    fun hasError_returnsHasError() {
+        assertThat(entry1.hasError()).isFalse()
+        assertThat(SafetyCenterEntry.Builder(entry1).setHasError(true).build().hasError()).isTrue()
+    }
+
     @Test
     fun build_withInvalidEntrySeverityLevel_throwsIllegalArgumentException() {
         val exception =
@@ -207,6 +224,13 @@ class SafetyCenterEntryTest {
                     .build()
             )
             .recreatesEqual(SafetyCenterEntry.CREATOR)
+    }
+
+    @SdkSuppress(minSdkVersion = VERSION_CODES.BAKLAVA)
+    @RequiresFlagsEnabled(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+    @Test
+    fun parcelRoundTrip_withHasError_recreatesEqual() {
+        assertThat(SafetyCenterEntry.Builder(entry1).setHasError(true).build()).recreatesEqual(SafetyCenterEntry.CREATOR)
     }
 
     @Test
@@ -266,6 +290,69 @@ class SafetyCenterEntryTest {
                 SafetyCenterEntry.Builder(entry1).setPendingIntent(pendingIntent2).build()
             )
             .addEqualityGroup(SafetyCenterEntry.Builder(entry1).setIconAction(iconAction2).build())
+            .test()
+    }
+
+    @SdkSuppress(minSdkVersion = VERSION_CODES.BAKLAVA)
+    @RequiresFlagsEnabled(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+    @Test
+    fun equalsHashCodeToString_whenOpenSafetyCenterApisEnabled_usingEqualsHashCodeToStringTester() {
+        EqualsHashCodeToStringTester.ofParcelable(
+                parcelableCreator = SafetyCenterEntry.CREATOR,
+                createCopy = { SafetyCenterEntry.Builder(it).build() },
+            )
+            .addEqualityGroup(entry1)
+            .addEqualityGroup(
+                SafetyCenterEntry.Builder("id", "a title")
+                    .setSummary("a summary")
+                    .setSeverityLevel(SafetyCenterEntry.ENTRY_SEVERITY_LEVEL_OK)
+                    .setSeverityUnspecifiedIconType(
+                        SafetyCenterEntry.SEVERITY_UNSPECIFIED_ICON_TYPE_PRIVACY
+                    )
+                    .setPendingIntent(pendingIntent1)
+                    .setIconAction(
+                        SafetyCenterEntry.IconAction.ICON_ACTION_TYPE_INFO,
+                        pendingIntent2,
+                    )
+                    .build(),
+                SafetyCenterEntry.Builder("id", "a title")
+                    .setSummary("a summary")
+                    .setSeverityLevel(SafetyCenterEntry.ENTRY_SEVERITY_LEVEL_OK)
+                    .setSeverityUnspecifiedIconType(
+                        SafetyCenterEntry.SEVERITY_UNSPECIFIED_ICON_TYPE_PRIVACY
+                    )
+                    .setPendingIntent(pendingIntent1)
+                    .setIconAction(
+                        SafetyCenterEntry.IconAction.ICON_ACTION_TYPE_INFO,
+                        pendingIntent2,
+                    )
+                    .build(),
+            )
+            .addEqualityGroup(SafetyCenterEntry.Builder(entry1).setId("a different id").build())
+            .addEqualityGroup(
+                SafetyCenterEntry.Builder(entry1).setTitle("a different title").build()
+            )
+            .addEqualityGroup(
+                SafetyCenterEntry.Builder(entry1).setSummary("a different summary").build()
+            )
+            .addEqualityGroup(
+                SafetyCenterEntry.Builder(entry1)
+                    .setSeverityLevel(SafetyCenterEntry.ENTRY_SEVERITY_LEVEL_CRITICAL_WARNING)
+                    .build()
+            )
+            .addEqualityGroup(
+                SafetyCenterEntry.Builder(entry1)
+                    .setSeverityUnspecifiedIconType(
+                        SafetyCenterEntry.SEVERITY_UNSPECIFIED_ICON_TYPE_PRIVACY
+                    )
+                    .build()
+            )
+            .addEqualityGroup(SafetyCenterEntry.Builder(entry1).setEnabled(false).build())
+            .addEqualityGroup(
+                SafetyCenterEntry.Builder(entry1).setPendingIntent(pendingIntent2).build()
+            )
+            .addEqualityGroup(SafetyCenterEntry.Builder(entry1).setIconAction(iconAction2).build())
+            .addEqualityGroup(SafetyCenterEntry.Builder(entry1).setHasError(true).build())
             .test()
     }
 

@@ -21,12 +21,14 @@ import static android.os.Build.VERSION_CODES.TIRAMISU;
 import static java.util.Objects.requireNonNull;
 
 import android.annotation.IntDef;
+import android.annotation.FlaggedApi;
 import android.annotation.NonNull;
 import android.annotation.Nullable;
 import android.annotation.SystemApi;
 import android.app.PendingIntent;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.permission.flags.Flags;
 import android.text.TextUtils;
 
 import androidx.annotation.RequiresApi;
@@ -142,6 +144,7 @@ public final class SafetyCenterEntry implements Parcelable {
                             .setEnabled(in.readBoolean())
                             .setPendingIntent(in.readTypedObject(PendingIntent.CREATOR))
                             .setIconAction(in.readTypedObject(IconAction.CREATOR))
+                            .setHasError(in.readBoolean())
                             .build();
                 }
 
@@ -159,6 +162,7 @@ public final class SafetyCenterEntry implements Parcelable {
     private final boolean mEnabled;
     @Nullable private final PendingIntent mPendingIntent;
     @Nullable private final IconAction mIconAction;
+    private final boolean mHasError;
 
     private SafetyCenterEntry(
             @NonNull String id,
@@ -168,7 +172,8 @@ public final class SafetyCenterEntry implements Parcelable {
             @SeverityUnspecifiedIconType int severityUnspecifiedIconType,
             boolean enabled,
             @Nullable PendingIntent pendingIntent,
-            @Nullable IconAction iconAction) {
+            @Nullable IconAction iconAction,
+            boolean hasError) {
         mId = id;
         mTitle = title;
         mSummary = summary;
@@ -177,6 +182,7 @@ public final class SafetyCenterEntry implements Parcelable {
         mEnabled = enabled;
         mPendingIntent = pendingIntent;
         mIconAction = iconAction;
+        mHasError = hasError;
     }
 
     /**
@@ -217,6 +223,12 @@ public final class SafetyCenterEntry implements Parcelable {
         return mEnabled;
     }
 
+    /** Returns whether this entry has an error. */
+    @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+    public boolean hasError() {
+        return mHasError;
+    }
+
     /**
      * Returns the optional {@link PendingIntent} to execute when this entry is selected if present,
      * or {@code null} otherwise.
@@ -242,6 +254,7 @@ public final class SafetyCenterEntry implements Parcelable {
         return mSeverityLevel == that.mSeverityLevel
                 && mSeverityUnspecifiedIconType == that.mSeverityUnspecifiedIconType
                 && mEnabled == that.mEnabled
+                && mHasError == that.mHasError
                 && Objects.equals(mId, that.mId)
                 && TextUtils.equals(mTitle, that.mTitle)
                 && TextUtils.equals(mSummary, that.mSummary)
@@ -259,7 +272,8 @@ public final class SafetyCenterEntry implements Parcelable {
                 mSeverityUnspecifiedIconType,
                 mEnabled,
                 mPendingIntent,
-                mIconAction);
+                mIconAction,
+                mHasError);
     }
 
     @Override
@@ -277,6 +291,7 @@ public final class SafetyCenterEntry implements Parcelable {
                 + mSeverityUnspecifiedIconType
                 + ", mEnabled="
                 + mEnabled
+                + (Flags.openSafetyCenterApis() ? ", mHasError=" + mHasError : "")
                 + ", mPendingIntent="
                 + mPendingIntent
                 + ", mIconAction="
@@ -299,6 +314,7 @@ public final class SafetyCenterEntry implements Parcelable {
         dest.writeBoolean(mEnabled);
         dest.writeTypedObject(mPendingIntent, flags);
         dest.writeTypedObject(mIconAction, flags);
+        dest.writeBoolean(mHasError);
     }
 
     /** Builder class for {@link SafetyCenterEntry}. */
@@ -313,6 +329,7 @@ public final class SafetyCenterEntry implements Parcelable {
         private int mSeverityUnspecifiedIconType = SEVERITY_UNSPECIFIED_ICON_TYPE_NO_ICON;
 
         private boolean mEnabled = true;
+        private boolean mHasError = false;
         @Nullable private PendingIntent mPendingIntent;
         @Nullable private IconAction mIconAction;
 
@@ -335,6 +352,7 @@ public final class SafetyCenterEntry implements Parcelable {
             mSeverityLevel = safetyCenterEntry.mSeverityLevel;
             mSeverityUnspecifiedIconType = safetyCenterEntry.mSeverityUnspecifiedIconType;
             mEnabled = safetyCenterEntry.mEnabled;
+            mHasError = safetyCenterEntry.mHasError;
             mPendingIntent = safetyCenterEntry.mPendingIntent;
             mIconAction = safetyCenterEntry.mIconAction;
         }
@@ -389,6 +407,17 @@ public final class SafetyCenterEntry implements Parcelable {
             return this;
         }
 
+        /**
+         * Sets whether this entry has an error. Defaults to {@code false}.
+         * @param hasError whether this entry has an error
+         */
+        @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+        @NonNull
+        public Builder setHasError(boolean hasError) {
+            mHasError = hasError;
+            return this;
+        }
+
         /** Sets the optional {@link PendingIntent} to execute when this entry is selected. */
         @NonNull
         public Builder setPendingIntent(@Nullable PendingIntent pendingIntent) {
@@ -422,7 +451,8 @@ public final class SafetyCenterEntry implements Parcelable {
                     mSeverityUnspecifiedIconType,
                     mEnabled,
                     mPendingIntent,
-                    mIconAction);
+                    mIconAction,
+                    mHasError);
         }
     }
 
