@@ -211,7 +211,7 @@
     <string name="unused_apps_label_v2" msgid="7058776770056517980">"एप प्रयोग नगरिएको अवस्थामा उक्त एपमा गरिएको गतिविधि रेकर्ड नगर्नुहोस्"</string>
     <string name="unused_apps_label_v3" msgid="693340578642156657">"एप प्रयोग गरिएको छैन भने व्यवस्थापन गर्नुहोस्"</string>
     <string name="unused_apps_summary" msgid="8839466950318403115">"अनुमतिहरू रद्द गर्नुहोस्, अस्थायी फाइलहरू मेटाउनुहोस् र एपसम्बन्धी सूचना नपठाउनुहोस्"</string>
-    <string name="unused_apps_summary_v2" msgid="5011313200815115802">"अनुमति रद्द गर्नुहोस्, अस्थायी फाइलहरू मेटाउनुहोस्, सूचना नपठाउनुहोस् र एप अभिलेखमा राख्नुहोस्"</string>
+    <string name="unused_apps_summary_v2" msgid="5011313200815115802">"अनुमति रद्द गर्नुहोस्, अस्थायी फाइलहरू मेटाउनुहोस्, सूचना नपठाउनुहोस् र एप अर्काइभमा राख्नुहोस्"</string>
     <string name="auto_revoke_summary" msgid="5867548789805911683">"तपाईंका डेटाको सुरक्षार्थ यो एप केही महिनासम्म प्रयोग नगरिएका खण्डमा यसलाई दिइएका अनुमति रद्द गरिने छन्।"</string>
     <string name="auto_revoke_summary_with_permissions" msgid="389712086597285013">"तपाईंका डेटाको सुरक्षार्थ यो एप केही महिनासम्म प्रयोग नगरिएका खण्डमा निम्न अनुमति रद्द गरिने छन्: <xliff:g id="PERMS">%1$s</xliff:g>"</string>
     <string name="auto_revoked_apps_page_summary" msgid="6594753657893756536">"तपाईंका डेटाको सुरक्षार्थ तपाईंले केही महिनादेखि प्रयोग नगरेका एपलाई दिइएका अनुमति रद्द गरिएका छन्।"</string>
@@ -701,24 +701,28 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"आफ्नो फोनमा हेर्नुहोस्"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"तपाईंको फोनमा कनेक्ट गर्न सकिएन"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"पुनः प्रयास गर्ने हो?"</string>
-    <string name="app_function_access_settings_title" msgid="8529554485031723950">"अन्य एपहरूको एजेन्ट कन्ट्रोल"</string>
-    <string name="app_function_access_settings_summary" msgid="2162127599468986004">"आफ्नो डिभाइस र अन्य एपहरूमा कारबाहीहरू गर्नुहोस्"</string>
-    <string name="app_function_agent_list_summary" msgid="1809900126197190780">"तपाईंको डिभाइसमा भएका एप र डिभाइसका सुविधाहरू एक्सेस गर्न सक्ने एसिस्टेन्ट एपहरू"</string>
+    <!-- no translation found for app_function_access_settings_title (8891907044622237648) -->
+    <skip />
+    <!-- no translation found for app_function_access_settings_summary (8574075661031712914) -->
+    <skip />
+    <!-- no translation found for app_function_agent_list_title (5292351554854465261) -->
+    <skip />
+    <!-- no translation found for app_function_agent_list_summary (5591295514604863634) -->
+    <skip />
     <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"कुनै पनि एजेन्ट एप उपलब्ध छैन"</string>
     <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"यो सुविधा अन गर्न आफ्नो डिभाइसमा कुनै एजेन्ट एप इन्स्टल गर्नुहोस्"</string>
-    <string name="app_function_agent_access_summary" msgid="7238285759002624286">"<xliff:g id="APP_NAME">%1$s</xliff:g> ले कारबाहीहरू गर्ने प्रयोजनका लागि एक्सेस गर्न सक्ने एप तथा सिस्टम सेटिङ"</string>
-    <!-- no translation found for app_function_agent_access_system_targets_empty_title (7597788502414132639) -->
+    <!-- no translation found for app_function_agent_access_title (2066670300909436012) -->
     <skip />
-    <!-- no translation found for app_function_agent_access_app_targets_empty_title (774337187158063143) -->
+    <!-- no translation found for app_function_agent_access_summary (6732843077882189740) -->
     <skip />
-    <!-- no translation found for app_function_agent_access_system_targets_category_title (7563475048220758703) -->
+    <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"<xliff:g id="APP_NAME">%1$s</xliff:g> एक्सेस गर्न प्रयोग गर्न सकिने कुनै पनि एप उपलब्ध छैन"</string>
+    <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"सिस्टम"</string>
+    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"एपहरू"</string>
+    <!-- no translation found for app_function_target_access_title (7415628605578155761) -->
     <skip />
-    <!-- no translation found for app_function_agent_access_app_targets_category_title (620431387701237004) -->
+    <!-- no translation found for app_function_target_access_summary (6099120829640806490) -->
     <skip />
-    <string name="app_function_target_access_title" msgid="5086998551478393562">"<xliff:g id="APP_NAME">%1$s</xliff:g> को एजेन्ट कन्ट्रोल"</string>
-    <string name="app_function_target_access_summary" msgid="2688275777520240124">"यी एजेन्टहरूले <xliff:g id="APP_NAME">%1$s</xliff:g> मा कारबाहीहरू गर्न सक्छन्।"</string>
-    <!-- no translation found for app_function_device_settings_target_title (7310525289514611525) -->
-    <skip />
+    <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"डिभाइसका सेटिङ"</string>
     <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> लाई <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> एक्सेस गर्ने अनुमति दिने हो?"</string>
     <!-- no translation found for request_app_function_access_dialog_description (8841298093381343286) -->
     <skip />
