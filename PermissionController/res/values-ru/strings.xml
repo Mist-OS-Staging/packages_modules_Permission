@@ -357,7 +357,7 @@
     <string name="accessibility_service_dialog_bottom_text_multiple" msgid="7009848932395519852">"Эти приложения могут получить доступ к изображению на экране, вашим действиям и вводимому тексту. Кроме того, они могут сами выполнять действия и управлять экраном."</string>
     <string name="role_assistant_label" msgid="4727586018198208128">"Цифровой помощник по умолчанию"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"Цифровой помощник"</string>
-    <string name="role_assistant_description" msgid="6622458130459922952">"Приложения-помощники могут использовать информацию на экране. Для большего удобства некоторые из них поддерживают запуск других приложений и голосовой ввод."</string>
+    <string name="role_assistant_description" msgid="6622458130459922952">"Приложения-помощники могут оказывать вам содействие, учитывая информацию на экране, который вы просматриваете. Чтобы вам было ещё удобнее, некоторые из них поддерживают запуск других приложений и голосовой ввод."</string>
     <string name="role_assistant_recommended_title" msgid="2093873159106905257">"Рекомендовано компанией \"<xliff:g id="OEM_NAME">%s</xliff:g>\""</string>
     <string name="role_browser_label" msgid="2877796144554070207">"Браузер по умолчанию"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"Браузер"</string>
@@ -701,24 +701,28 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"Проверьте телефон"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"Нет связи с телефоном."</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"Повторить попытку?"</string>
-    <string name="app_function_access_settings_title" msgid="8529554485031723950">"Агентное управление другими приложениями"</string>
-    <string name="app_function_access_settings_summary" msgid="2162127599468986004">"Совершайте действия на своем устройстве и в других приложениях."</string>
-    <string name="app_function_agent_list_summary" msgid="1809900126197190780">"Приложения-помощники, у которых есть доступ к функциям устройства и приложениям."</string>
+    <!-- no translation found for app_function_access_settings_title (8891907044622237648) -->
+    <skip />
+    <!-- no translation found for app_function_access_settings_summary (8574075661031712914) -->
+    <skip />
+    <!-- no translation found for app_function_agent_list_title (5292351554854465261) -->
+    <skip />
+    <!-- no translation found for app_function_agent_list_summary (5591295514604863634) -->
+    <skip />
     <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"Нет доступных приложений-агентов"</string>
     <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"Чтобы использовать эту функцию, установите приложение-агент"</string>
-    <string name="app_function_agent_access_summary" msgid="7238285759002624286">"Приложения и системные настройки, к которым приложение \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" имеет доступ для выполнения действий."</string>
-    <!-- no translation found for app_function_agent_access_system_targets_empty_title (7597788502414132639) -->
+    <!-- no translation found for app_function_agent_access_title (2066670300909436012) -->
     <skip />
-    <!-- no translation found for app_function_agent_access_app_targets_empty_title (774337187158063143) -->
+    <!-- no translation found for app_function_agent_access_summary (6732843077882189740) -->
     <skip />
-    <!-- no translation found for app_function_agent_access_system_targets_category_title (7563475048220758703) -->
+    <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"Нет приложений, которые могут получить доступ к приложению \"<xliff:g id="APP_NAME">%1$s</xliff:g>\""</string>
+    <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"Системные"</string>
+    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Приложения"</string>
+    <!-- no translation found for app_function_target_access_title (7415628605578155761) -->
     <skip />
-    <!-- no translation found for app_function_agent_access_app_targets_category_title (620431387701237004) -->
+    <!-- no translation found for app_function_target_access_summary (6099120829640806490) -->
     <skip />
-    <string name="app_function_target_access_title" msgid="5086998551478393562">"Управление приложением \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" с помощью агентов"</string>
-    <string name="app_function_target_access_summary" msgid="2688275777520240124">"Эти агенты могут выполнять действия в приложении \"<xliff:g id="APP_NAME">%1$s</xliff:g>\"."</string>
-    <!-- no translation found for app_function_device_settings_target_title (7310525289514611525) -->
-    <skip />
+    <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Настройки устройства"</string>
     <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"\"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>\": доступ (\"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>\")"</string>
     <!-- no translation found for request_app_function_access_dialog_description (8841298093381343286) -->
     <skip />
