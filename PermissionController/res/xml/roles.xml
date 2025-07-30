@@ -660,6 +660,7 @@
             <permission name="android.permission.REQUEST_COMPANION_PROFILE_AUTOMOTIVE_PROJECTION"
                 minSdkVersion="33" />
             <permission name="android.permission.MANAGE_SAFETY_CENTER"
+                featureFlag="!android.permission.flags.Flags.openSafetyCenterApis"
                 minSdkVersion="33" />
             <permission name="android.permission.ASSOCIATE_COMPANION_DEVICES" minSdkVersion="36" />
             <permission name="android.permission.CREATE_VIRTUAL_DEVICE" minSdkVersion="33" />
