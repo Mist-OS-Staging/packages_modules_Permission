@@ -21,6 +21,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build.VERSION_CODES.TIRAMISU
 import android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE
+import android.os.Build.VERSION_CODES.BAKLAVA
 import android.os.UserHandle
 import android.platform.test.annotations.RequiresFlagsDisabled
 import android.platform.test.annotations.RequiresFlagsEnabled
@@ -1298,6 +1299,70 @@ class SafetyCenterManagerTest {
         val apiSafetyCenterData = safetyCenterManager.getSafetyCenterDataWithPermission()
 
         assertThat(apiSafetyCenterData).isEqualTo(safetyCenterDataUnknownReviewError)
+    }
+
+    @Test
+    @SdkSuppress(minSdkVersion = BAKLAVA)
+    @RequiresFlagsEnabled(android.permission.flags.Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+    fun getSafetyCenterData_reportError_entryHasError() {
+        safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.singleSourceConfig)
+        safetyCenterManager.reportSafetySourceErrorWithPermission(
+            SINGLE_SOURCE_ID,
+            SafetySourceErrorDetails(EVENT_SOURCE_STATE_CHANGED),
+        )
+        val expectedEntry =
+            SafetyCenterEntry.Builder(
+                    safetyCenterTestData.safetyCenterEntryError(SINGLE_SOURCE_ID)
+                )
+                .setHasError(true)
+                .build()
+        val expectedSafetyCenterData =
+            SafetyCenterData(
+                safetyCenterTestData.safetyCenterStatusUnknown,
+                emptyList(),
+                listOf(
+                    safetyCenterTestData.singletonSafetyCenterEntryOrGroup(
+                        SINGLE_SOURCE_GROUP_ID,
+                        expectedEntry,
+                        "Couldn’t check setting",
+                    )
+                ),
+                emptyList(),
+            )
+
+        val apiSafetyCenterData = safetyCenterManager.getSafetyCenterDataWithPermission()
+
+        assertThat(apiSafetyCenterData).isEqualTo(expectedSafetyCenterData)
+    }
+
+    @Test
+    @SdkSuppress(minSdkVersion = BAKLAVA)
+    @RequiresFlagsEnabled(android.permission.flags.Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+    fun getSafetyCenterData_reportNoError_entryHasNoError() {
+        safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.singleSourceConfig)
+        safetyCenterTestHelper.setData(SINGLE_SOURCE_ID, safetySourceTestData.information)
+        val expectedEntry =
+            SafetyCenterEntry.Builder(
+                    safetyCenterTestData.safetyCenterEntryOk(SINGLE_SOURCE_ID)
+                )
+                .setHasError(false)
+                .build()
+        val expectedSafetyCenterData =
+            SafetyCenterData(
+                safetyCenterStatusOk,
+                emptyList(),
+                listOf(
+                    safetyCenterTestData.singletonSafetyCenterEntryOrGroup(
+                        SINGLE_SOURCE_GROUP_ID,
+                        expectedEntry,
+                    )
+                ),
+                emptyList(),
+            )
+
+        val apiSafetyCenterData = safetyCenterManager.getSafetyCenterDataWithPermission()
+
+        assertThat(apiSafetyCenterData).isEqualTo(expectedSafetyCenterData)
     }
 
     @Test
