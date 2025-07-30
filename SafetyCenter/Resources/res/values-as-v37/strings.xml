@@ -17,6 +17,6 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_function_access_settings_title" msgid="2392794502498586153">"অন্য এপ্‌সমূহৰ এজেণ্ট নিয়ন্ত্ৰণ"</string>
-    <string name="app_function_access_settings_summary" msgid="9220806266653439664">"আপোনাৰ ডিভাইচত আৰু অন্য এপত কাৰ্য সম্পাদন কৰক"</string>
+    <string name="app_function_access_settings_title" msgid="2755147062089099851">"এজেণ্টসকল"</string>
+    <string name="app_function_access_settings_summary" msgid="6409382291361390766">"এপ্‌সমূহত তথ্য এক্সেছ কৰিব আৰু কাৰ্যব্যৱস্থা গ্ৰহণ কৰিব পৰা এজেণ্টসকল"</string>
 </resources>

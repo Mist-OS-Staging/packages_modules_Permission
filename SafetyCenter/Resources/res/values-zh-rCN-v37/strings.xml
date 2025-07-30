@@ -17,6 +17,6 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_function_access_settings_title" msgid="2392794502498586153">"其他应用的代理控制"</string>
-    <string name="app_function_access_settings_summary" msgid="9220806266653439664">"在您的设备和其他应用中执行操作"</string>
+    <string name="app_function_access_settings_title" msgid="2755147062089099851">"智能体"</string>
+    <string name="app_function_access_settings_summary" msgid="6409382291361390766">"可在应用中访问信息或执行操作的智能体"</string>
 </resources>

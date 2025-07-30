@@ -17,6 +17,6 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_function_access_settings_title" msgid="2392794502498586153">"Usaidizi wa kudhibiti programu nyingine"</string>
-    <string name="app_function_access_settings_summary" msgid="9220806266653439664">"Hutekeleza vitendo kwenye kifaa chako na katika programu nyingine"</string>
+    <string name="app_function_access_settings_title" msgid="2755147062089099851">"Mifumo tekelezi"</string>
+    <string name="app_function_access_settings_summary" msgid="6409382291361390766">"Mifumo tekelezi inayoweza kufikia maelezo na kutekeleza vitendo kwenye programu"</string>
 </resources>

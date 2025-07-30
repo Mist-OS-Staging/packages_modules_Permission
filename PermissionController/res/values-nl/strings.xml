@@ -701,28 +701,28 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"Check je telefoon"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"Kan je telefoon niet bereiken"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"Opnieuw proberen?"</string>
-    <string name="app_function_access_settings_title" msgid="8529554485031723950">"Agent-besturing van andere apps"</string>
-    <string name="app_function_access_settings_summary" msgid="2162127599468986004">"Acties uitvoeren op je apparaat en in andere apps"</string>
-    <string name="app_function_agent_list_summary" msgid="1809900126197190780">"Assistent-apps die toegang kunnen krijgen tot apps en apparaatfuncties op je apparaat"</string>
+    <!-- no translation found for app_function_access_settings_title (8891907044622237648) -->
+    <skip />
+    <!-- no translation found for app_function_access_settings_summary (8574075661031712914) -->
+    <skip />
+    <!-- no translation found for app_function_agent_list_title (5292351554854465261) -->
+    <skip />
+    <!-- no translation found for app_function_agent_list_summary (5591295514604863634) -->
+    <skip />
     <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"Geen agent-apps beschikbaar"</string>
     <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"Installeer een agent-app op je apparaat om deze functie aan te zetten"</string>
-    <string name="app_function_agent_access_summary" msgid="7238285759002624286">"Apps en systeeminstellingen waartoe <xliff:g id="APP_NAME">%1$s</xliff:g> toegang heeft om acties uit te voeren"</string>
-    <!-- no translation found for app_function_agent_access_system_targets_empty_title (7597788502414132639) -->
+    <!-- no translation found for app_function_agent_access_title (2066670300909436012) -->
     <skip />
-    <!-- no translation found for app_function_agent_access_app_targets_empty_title (774337187158063143) -->
+    <!-- no translation found for app_function_agent_access_summary (6732843077882189740) -->
     <skip />
-    <!-- no translation found for app_function_agent_access_system_targets_category_title (7563475048220758703) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_app_targets_category_title (620431387701237004) -->
-    <skip />
-    <string name="app_function_target_access_title" msgid="5086998551478393562">"Agent-beheer van <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
-    <string name="app_function_target_access_summary" msgid="2688275777520240124">"Deze agents kunnen acties uitvoeren in <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <!-- no translation found for app_function_device_settings_target_title (7310525289514611525) -->
-    <skip />
+    <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"Er zijn geen apps beschikbaar voor toegang tot <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"Systeem"</string>
+    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Apps"</string>
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"Toegang voor agent"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agents die toegang hebben tot informatie en acties voor je kunnen uitvoeren in deze app"</string>
+    <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Apparaatinstellingen"</string>
     <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> toegang geven tot <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
-    <!-- no translation found for request_app_function_access_dialog_description (8841298093381343286) -->
-    <skip />
+    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"Zo kan <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> toegang krijgen tot <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>-gegevens en acties uitvoeren namens de gebruiker."</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Toestaan"</string>
-    <!-- no translation found for request_app_function_dialog_button_dont_allow (7657036841986717007) -->
-    <skip />
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Niet toestaan"</string>
 </resources>

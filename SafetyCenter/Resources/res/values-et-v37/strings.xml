@@ -17,6 +17,6 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_function_access_settings_title" msgid="2392794502498586153">"Agendi kontroll teiste rakenduste üle"</string>
-    <string name="app_function_access_settings_summary" msgid="9220806266653439664">"Tehke toiminguid oma seadmes ja teistes rakendustes"</string>
+    <string name="app_function_access_settings_title" msgid="2755147062089099851">"Agendid"</string>
+    <string name="app_function_access_settings_summary" msgid="6409382291361390766">"Agendid, kellel on juurdepääs teabele või kes saavad rakendustes toiminguid teha."</string>
 </resources>

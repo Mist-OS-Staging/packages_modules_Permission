@@ -701,28 +701,22 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"നിങ്ങളുടെ ഫോൺ പരിശോധിക്കുക"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"നിങ്ങളുടെ ഫോണുമായി കണക്റ്റ് ചെയ്യാനായില്ല"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"വീണ്ടും ശ്രമിക്കണോ?"</string>
-    <string name="app_function_access_settings_title" msgid="8529554485031723950">"മറ്റ് ആപ്പുകളുടെ ഏജന്റ് നിയന്ത്രണം"</string>
-    <string name="app_function_access_settings_summary" msgid="2162127599468986004">"നിങ്ങളുടെ ഉപകരണത്തിലും മറ്റ് ആപ്പുകളിലും പ്രവർത്തനങ്ങൾ നടത്തുക"</string>
-    <string name="app_function_agent_list_summary" msgid="1809900126197190780">"നിങ്ങളുടെ ഉപകരണത്തിലെ ആപ്പുകളും ഉപകരണ പ്രവർത്തനങ്ങളും ആക്സസ് ചെയ്യാൻ കഴിയുന്ന അസിസ്റ്റന്റ് ആപ്പുകൾ"</string>
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"ഏജന്റുകൾ"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"ആപ്പുകളിൽ വിവരങ്ങൾ ആക്‌സസ് ചെയ്യാനോ പ്രവർത്തനങ്ങൾ നടത്താനോ കഴിയുന്ന ഏജന്റുകൾ"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"ഏജന്റുകൾ"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"ഈ ഉപകരണത്തിൽ ഏജന്റുകൾക്കുള്ള ആക്സസ് മാനേജ് ചെയ്യുക"</string>
     <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"ഏജന്റ് ആപ്പുകളൊന്നും ലഭ്യമല്ല"</string>
     <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"ഈ ഫീച്ചർ പ്രവർത്തനക്ഷമമാക്കാൻ, നിങ്ങളുടെ ഉപകരണത്തിൽ ഒരു ഏജന്റ് ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്യുക"</string>
-    <string name="app_function_agent_access_summary" msgid="7238285759002624286">"പ്രവർത്തനങ്ങൾ നടത്തുന്നതിനായി <xliff:g id="APP_NAME">%1$s</xliff:g> എന്നതിന് ആക്സസ് ചെയ്യാൻ കഴിയുന്ന ആപ്പുകളും സിസ്റ്റം ക്രമീകരണവും"</string>
-    <!-- no translation found for app_function_agent_access_system_targets_empty_title (7597788502414132639) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_app_targets_empty_title (774337187158063143) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_system_targets_category_title (7563475048220758703) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_app_targets_category_title (620431387701237004) -->
-    <skip />
-    <string name="app_function_target_access_title" msgid="5086998551478393562">"<xliff:g id="APP_NAME">%1$s</xliff:g> എന്നതിന്റെ ഏജന്റ് നിയന്ത്രണം"</string>
-    <string name="app_function_target_access_summary" msgid="2688275777520240124">"ഈ ഏജന്റുകൾക്ക് <xliff:g id="APP_NAME">%1$s</xliff:g> എന്നതിൽ പ്രവർത്തനങ്ങൾ നടത്താൻ കഴിയും."</string>
-    <!-- no translation found for app_function_device_settings_target_title (7310525289514611525) -->
-    <skip />
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"ആപ്പ് ആക്‌സസ്"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"വിവരങ്ങൾ നേടാനും നിങ്ങൾക്കായി പ്രവർത്തനങ്ങൾ നടത്താനും ഈ ഏജന്റിന് ആക്‌സസ് ചെയ്യാൻ കഴിയുന്ന ആപ്പുകളും ക്രമീകരണവും"</string>
+    <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"<xliff:g id="APP_NAME">%1$s</xliff:g> ആക്‌സസിനായി ആപ്പുകളൊന്നും ലഭ്യമല്ല"</string>
+    <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"സിസ്റ്റം"</string>
+    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"ആപ്പുകൾ"</string>
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"ഏജന്റ് ആക്സസ്"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"ഈ ആപ്പിൽ വിവരങ്ങൾ ആക്സസ് ചെയ്യാനും നിങ്ങൾക്കായി പ്രവർത്തനങ്ങൾ നടത്താനും കഴിയുന്ന ഏജന്റുകൾ"</string>
+    <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"ഉപകരണ ക്രമീകരണം"</string>
     <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ആക്സസ് ചെയ്യാൻ <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> എന്നതിനെ അനുവദിക്കണോ?"</string>
-    <!-- no translation found for request_app_function_access_dialog_description (8841298093381343286) -->
-    <skip />
+    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> വിവരങ്ങൾ ആക്സസ് ചെയ്യാനും ഉപയോക്താവിനായി നടപടിയെടുക്കാനും <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> എന്നതിനെ ഇത് അനുവദിക്കുന്നു."</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"അനുവദിക്കുക"</string>
-    <!-- no translation found for request_app_function_dialog_button_dont_allow (7657036841986717007) -->
-    <skip />
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"അനുവദിക്കരുത്"</string>
 </resources>

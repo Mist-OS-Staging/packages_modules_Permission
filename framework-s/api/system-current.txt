@@ -113,6 +113,7 @@ package android.safetycenter {
     method public int getSeverityUnspecifiedIconType();
     method @Nullable public CharSequence getSummary();
     method @NonNull public CharSequence getTitle();
+    method @FlaggedApi("android.permission.flags.open_safety_center_apis") public boolean hasError();
     method public boolean isEnabled();
     method public void writeToParcel(@NonNull android.os.Parcel, int);
     field @NonNull public static final android.os.Parcelable.Creator<android.safetycenter.SafetyCenterEntry> CREATOR;
@@ -131,6 +132,7 @@ package android.safetycenter {
     ctor public SafetyCenterEntry.Builder(@NonNull android.safetycenter.SafetyCenterEntry);
     method @NonNull public android.safetycenter.SafetyCenterEntry build();
     method @NonNull public android.safetycenter.SafetyCenterEntry.Builder setEnabled(boolean);
+    method @FlaggedApi("android.permission.flags.open_safety_center_apis") @NonNull public android.safetycenter.SafetyCenterEntry.Builder setHasError(boolean);
     method @NonNull public android.safetycenter.SafetyCenterEntry.Builder setIconAction(@Nullable android.safetycenter.SafetyCenterEntry.IconAction);
     method @NonNull public android.safetycenter.SafetyCenterEntry.Builder setIconAction(int, @NonNull android.app.PendingIntent);
     method @NonNull public android.safetycenter.SafetyCenterEntry.Builder setId(@NonNull String);

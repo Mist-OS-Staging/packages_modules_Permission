@@ -701,28 +701,28 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"તમારો ફોન ચેક કરો"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"તમારા ફોન સુધી પહોંચી શકાયું નથી"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"ફરી પ્રયાસ કરીએ?"</string>
-    <string name="app_function_access_settings_title" msgid="8529554485031723950">"અન્ય ઍપનું એજન્ટ વડે નિયંત્રણ"</string>
-    <string name="app_function_access_settings_summary" msgid="2162127599468986004">"તમારા ડિવાઇસ અને અન્ય ઍપ પર ઍક્શન પર્ફોર્મ કરો"</string>
-    <string name="app_function_agent_list_summary" msgid="1809900126197190780">"Assistant ઍપ કે જે તમારા ડિવાઇસ પર ઍપ અને ડિવાઇસના કાર્યોને ઍક્સેસ કરી શકે છે"</string>
+    <!-- no translation found for app_function_access_settings_title (8891907044622237648) -->
+    <skip />
+    <!-- no translation found for app_function_access_settings_summary (8574075661031712914) -->
+    <skip />
+    <!-- no translation found for app_function_agent_list_title (5292351554854465261) -->
+    <skip />
+    <!-- no translation found for app_function_agent_list_summary (5591295514604863634) -->
+    <skip />
     <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"કોઈ એજન્ટ ઍપ ઉપલબ્ધ નથી"</string>
     <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"આ સુવિધા ચાલુ કરવા માટે, તમારા ડિવાઇસ પર એજન્ટ ઍપ ઇન્સ્ટૉલ કરો"</string>
-    <string name="app_function_agent_access_summary" msgid="7238285759002624286">"ઍપ અને સિસ્ટમના સેટિંગ જેને ઍક્શન પર્ફોર્મ કરવા માટે <xliff:g id="APP_NAME">%1$s</xliff:g> ઍક્સેસ કરી શકે છે"</string>
-    <!-- no translation found for app_function_agent_access_system_targets_empty_title (7597788502414132639) -->
+    <!-- no translation found for app_function_agent_access_title (2066670300909436012) -->
     <skip />
-    <!-- no translation found for app_function_agent_access_app_targets_empty_title (774337187158063143) -->
+    <!-- no translation found for app_function_agent_access_summary (6732843077882189740) -->
     <skip />
-    <!-- no translation found for app_function_agent_access_system_targets_category_title (7563475048220758703) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_app_targets_category_title (620431387701237004) -->
-    <skip />
-    <string name="app_function_target_access_title" msgid="5086998551478393562">"<xliff:g id="APP_NAME">%1$s</xliff:g>નું એજન્ટ વડે નિયંત્રણ"</string>
-    <string name="app_function_target_access_summary" msgid="2688275777520240124">"આ એજન્ટ <xliff:g id="APP_NAME">%1$s</xliff:g>માં ઍક્શન પર્ફોર્મ કરી શકે છે."</string>
-    <!-- no translation found for app_function_device_settings_target_title (7310525289514611525) -->
-    <skip />
+    <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"<xliff:g id="APP_NAME">%1$s</xliff:g>ના ઍક્સેસ માટે કોઈ ઍપ ઉપલબ્ધ નથી"</string>
+    <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"સિસ્ટમ"</string>
+    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"ઍપ"</string>
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"એજન્ટ ઍક્સેસ"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"આ ઍપમાં માહિતીનો ઍક્સેસ કરી શકે અને તમારા માટે પગલાં લઈ શકે તેવા એજન્ટ"</string>
+    <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"ડિવાઇસના સેટિંગ"</string>
     <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>ને <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ઍક્સેસ કરવા દઈએ?"</string>
-    <!-- no translation found for request_app_function_access_dialog_description (8841298093381343286) -->
-    <skip />
+    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"આનાથી <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>ને <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>ની માહિતી ઍક્સેસ કરવાની અને વપરાશકર્તા વતી પગલાં લેવાની મંજૂરી મળશે."</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"મંજૂરી આપો"</string>
-    <!-- no translation found for request_app_function_dialog_button_dont_allow (7657036841986717007) -->
-    <skip />
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"મંજૂરી આપશો નહીં"</string>
 </resources>

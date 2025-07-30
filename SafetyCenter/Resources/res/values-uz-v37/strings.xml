@@ -17,6 +17,6 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_function_access_settings_title" msgid="2392794502498586153">"Boshqa ilovalar agent nazorati"</string>
-    <string name="app_function_access_settings_summary" msgid="9220806266653439664">"Qurilmangiz va boshqa ilovalarda amallar bajaring"</string>
+    <string name="app_function_access_settings_title" msgid="2755147062089099851">"Agentlar"</string>
+    <string name="app_function_access_settings_summary" msgid="6409382291361390766">"Ilovalarda maʼlumotlarga kira oladigan yoki amallar bajara oladigan agentlar"</string>
 </resources>

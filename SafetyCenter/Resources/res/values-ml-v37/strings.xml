@@ -17,6 +17,6 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_function_access_settings_title" msgid="2392794502498586153">"മറ്റ് ആപ്പുകളുടെ ഏജന്റ് നിയന്ത്രണം"</string>
-    <string name="app_function_access_settings_summary" msgid="9220806266653439664">"നിങ്ങളുടെ ഉപകരണത്തിലും മറ്റ് ആപ്പുകളിലും പ്രവർത്തനങ്ങൾ നടത്തുക"</string>
+    <string name="app_function_access_settings_title" msgid="2755147062089099851">"ഏജന്റുകൾ"</string>
+    <string name="app_function_access_settings_summary" msgid="6409382291361390766">"ആപ്പുകളിൽ വിവരങ്ങൾ ആക്‌സസ് ചെയ്യാനോ പ്രവർത്തനങ്ങൾ നടത്താനോ കഴിയുന്ന ഏജന്റുകൾ"</string>
 </resources>
