@@ -29,7 +29,6 @@ import android.provider.Telephony;
 import android.telecom.TelecomManager;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
@@ -57,8 +56,6 @@ public class RequestRoleActivity extends FragmentActivity {
 
     private String mRoleName;
     private String mPackageName;
-
-    private boolean mEnterAnimationCompleted;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -335,21 +332,5 @@ public class RequestRoleActivity extends FragmentActivity {
         super.onNewIntent(intent);
 
         Log.w(LOG_TAG, "Ignoring new intent: " + intent);
-    }
-
-    @Override
-    public void onEnterAnimationComplete() {
-        super.onEnterAnimationComplete();
-
-        mEnterAnimationCompleted = true;
-    }
-
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent ev) {
-        // Block touches while the enter animation is still running to prevent tap jacking.
-        if (!mEnterAnimationCompleted) {
-            return true;
-        }
-        return super.dispatchTouchEvent(ev);
     }
 }
