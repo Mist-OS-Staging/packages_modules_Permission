@@ -18,8 +18,8 @@ package com.android.permissioncontroller.appfunctions.ui
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.permission.flags.Flags
 import android.util.Log
+import com.android.permissioncontroller.appfunctions.AppFunctionsUtil
 import com.android.permissioncontroller.appfunctions.ui.handheld.HandheldAgentAccessFragment
 import com.android.permissioncontroller.common.ui.SettingsActivity
 
@@ -28,14 +28,22 @@ class AgentAccessActivity : SettingsActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (!Flags.appFunctionAccessUiEnabled()) {
+        if (!AppFunctionsUtil.isAppFunctionUiEnabled(this)) {
+            Log.w(
+                LOG_TAG,
+                "App Function isn't enabled: Either the platform is not supported " +
+                    "or the UI flag FLAG_APP_FUNCTION_ACCESS_UI_ENABLED isn't enabled.",
+            )
             finish()
             return
         }
 
         val agentPackageName: String? = intent.getStringExtra(Intent.EXTRA_PACKAGE_NAME)
-        if (agentPackageName.isNullOrEmpty()) {
-            Log.e(LOG_TAG, "Unknown package: $agentPackageName")
+        if (
+            agentPackageName.isNullOrEmpty() ||
+                !AppFunctionsUtil.isValidAgent(agentPackageName, this)
+        ) {
+            Log.e(LOG_TAG, "Unknown/Invalid package: $agentPackageName")
             finish()
             return
         }
