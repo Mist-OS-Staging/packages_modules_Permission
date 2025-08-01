@@ -701,32 +701,22 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"আপনার ফোন চেক করুন"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"আপনার ফোনে কানেক্ট করা যায়নি"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"আবার চেষ্টা করতে চান?"</string>
-    <!-- no translation found for app_function_access_settings_title (8891907044622237648) -->
-    <skip />
-    <!-- no translation found for app_function_access_settings_summary (8574075661031712914) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_title (5292351554854465261) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_summary (5591295514604863634) -->
-    <skip />
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"এজেন্ট"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"যেসব এজেন্ট, অ্যাপে তথ্য অ্যাক্সেস করতে বা অ্যাকশন নিতে পারে"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"এজেন্ট"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"এই ডিভাইসে এজেন্টদের অ্যাক্সেস ম্যানেজ করুন"</string>
     <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"কোনও এজেন্ট অ্যাপ উপলভ্য নেই"</string>
     <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"এই ফিচার চালু করতে, আপনার ডিভাইসে কোনও এজেন্ট অ্যাপ ইনস্টল করুন"</string>
-    <!-- no translation found for app_function_agent_access_title (2066670300909436012) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (6732843077882189740) -->
-    <skip />
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"অ্যাপ অ্যাক্সেস"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"এমন অ্যাপ ও সেটিংস যা অ্যাক্সেস করে এই এজেন্ট আপনার হয়ে তথ্য পেতে ও অ্যাকশন নিতে পারবে"</string>
     <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"<xliff:g id="APP_NAME">%1$s</xliff:g> অ্যাক্সেস করার জন্য কোনও অ্যাপ উপলভ্য নেই"</string>
     <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"সিস্টেম"</string>
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"অ্যাপ"</string>
-    <!-- no translation found for app_function_target_access_title (7415628605578155761) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (6099120829640806490) -->
-    <skip />
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"এজেন্টের অ্যাক্সেস"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"এই অ্যাপে আপনার জন্য তথ্য অ্যাক্সেস করতে ও অ্যাকশন নিতে পারে এমন এজেন্ট"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"ডিভাইস সেটিংস"</string>
     <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>-কে <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> অ্যাক্সেস করার অনুমতি দেবেন?"</string>
-    <!-- no translation found for request_app_function_access_dialog_description (8841298093381343286) -->
-    <skip />
+    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"এটি <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>-এর তথ্য অ্যাক্সেস করতে <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>-কে এবং ব্যবহারকারীর হয়ে অ্যাকশন নেওয়ার অনুমতি দেয়।"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"অনুমতি দিন"</string>
-    <!-- no translation found for request_app_function_dialog_button_dont_allow (7657036841986717007) -->
-    <skip />
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"অনুমতি দেবেন না"</string>
 </resources>

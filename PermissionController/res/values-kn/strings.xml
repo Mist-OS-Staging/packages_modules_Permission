@@ -712,15 +712,11 @@
     <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"<xliff:g id="APP_NAME">%1$s</xliff:g> ಆ್ಯಕ್ಸೆಸ್‌ಗಾಗಿ ಯಾವುದೇ ಆ್ಯಪ್‌ಗಳು ಲಭ್ಯವಿಲ್ಲ"</string>
     <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"ಸಿಸ್ಟಂ"</string>
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"ಆ್ಯಪ್‌ಗಳು"</string>
-    <!-- no translation found for app_function_target_access_title (7415628605578155761) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (6099120829640806490) -->
-    <skip />
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"ಏಜೆಂಟ್ ಆ್ಯಕ್ಸೆಸ್"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"ಈ ಆ್ಯಪ್‌ನಲ್ಲಿ ಮಾಹಿತಿಯನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಬಹುದಾದ ಮತ್ತು ನಿಮಗಾಗಿ ಕ್ರಮಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದಾದ ಏಜೆಂಟ್‌ಗಳು"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"ಸಾಧನ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
     <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ಗೆ ಅನುಮತಿಸಬೇಕೇ?"</string>
-    <!-- no translation found for request_app_function_access_dialog_description (8841298093381343286) -->
-    <skip />
+    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"ಇದು <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ನಲ್ಲಿನ ಮಾಹಿತಿ ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು ಹಾಗೂ ಬಳಕೆದಾರರ ಪರವಾಗಿ ಕ್ರಮ ತೆಗೆದುಕೊಳ್ಳಲು <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ಗೆ ಅನುಮತಿಸುತ್ತದೆ."</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"ಅನುಮತಿಸಿ"</string>
-    <!-- no translation found for request_app_function_dialog_button_dont_allow (7657036841986717007) -->
-    <skip />
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"ಅನುಮತಿಸಬೇಡಿ"</string>
 </resources>

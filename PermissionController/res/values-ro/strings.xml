@@ -701,32 +701,22 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"Verifică-ți telefonul"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"Nu s-a putut accesa telefonul"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"Încerci din nou?"</string>
-    <!-- no translation found for app_function_access_settings_title (8891907044622237648) -->
-    <skip />
-    <!-- no translation found for app_function_access_settings_summary (8574075661031712914) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_title (5292351554854465261) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_summary (5591295514604863634) -->
-    <skip />
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"Agenți"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"Agenți care pot să acceseze informații sau să facă acțiuni în aplicații"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"Agenți"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"Gestionează accesul agenților pe acest dispozitiv"</string>
     <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"Nu sunt disponibile aplicații agent"</string>
     <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"Instalează o aplicație agent pe dispozitiv pentru a activa această funcție"</string>
-    <!-- no translation found for app_function_agent_access_title (2066670300909436012) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (6732843077882189740) -->
-    <skip />
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"Accesul la aplicații"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"Aplicațiile și setările pe care le poate accesa acest agent pentru a obține informații și a face acțiuni pentru tine"</string>
     <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"Nu sunt disponibile aplicații pentru accesul <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"Sistem"</string>
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Aplicații"</string>
-    <!-- no translation found for app_function_target_access_title (7415628605578155761) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (6099120829640806490) -->
-    <skip />
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"Acces pentru agenți"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agenți care pot să acceseze informații și să acționeze pentru tine în această aplicație"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Setările dispozitivului"</string>
     <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"Permiți ca <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> să acceseze <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
-    <!-- no translation found for request_app_function_access_dialog_description (8841298093381343286) -->
-    <skip />
+    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"Astfel, <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> poate să acceseze informațiile din <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> și să acționeze în numele utilizatorului."</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Permite"</string>
-    <!-- no translation found for request_app_function_dialog_button_dont_allow (7657036841986717007) -->
-    <skip />
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Nu permite"</string>
 </resources>

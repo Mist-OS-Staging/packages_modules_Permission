@@ -73,7 +73,7 @@
     <string name="denied_permission_decision" msgid="5308961501779563781">"您拒绝为“<xliff:g id="APP_NAME">%1$s</xliff:g>”授予<xliff:g id="PERMISSION_NAME">%2$s</xliff:g>访问权限"</string>
     <string name="days_ago" msgid="6650359081551335629">"{count,plural, =0{今天}=1{1 天前}other{# 天前}}"</string>
     <string name="app_disable_dlg_positive" msgid="7418444149981904940">"停用应用"</string>
-    <string name="app_disable_dlg_text" msgid="3126943217146120240">"如果您停用此应用，Android 及其他应用可能会无法再正常运行。请注意，您无法删除此应用，因为它是设备预装应用。停用后，系统将关闭此应用并在设备上将其隐藏。"</string>
+    <string name="app_disable_dlg_text" msgid="3126943217146120240">"如果停用此应用，Android 及其他应用可能会无法再正常运行。请注意，您无法删除此应用，因为它是设备预装应用。停用后，系统将关闭此应用并在设备上将其隐藏。"</string>
     <string name="app_permission_manager" msgid="3903811137630909550">"权限管理器"</string>
     <string name="never_ask_again" msgid="4728762438198560329">"不再询问"</string>
     <string name="no_permissions" msgid="3881676756371148563">"没有权限"</string>

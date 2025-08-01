@@ -205,11 +205,11 @@
     <string name="app_permission_info_button" msgid="8973692370208562556">"जानकारी"</string>
     <string name="app_permission_settings_button" msgid="4582916817451973752">"सेटिंग"</string>
     <string name="assistant_mic_label" msgid="1011432357152323896">"असिस्टेंट माइक्रोफ़ोन के इस्तेमाल से जुड़ा डेटा दिखाएं"</string>
-    <string name="unused_apps_category_title" msgid="2988455616845243901">"इस्तेमाल न हो रहे ऐप के लिए सेटिंग"</string>
+    <string name="unused_apps_category_title" msgid="2988455616845243901">"इस्तेमाल नहीं हो रहे ऐप के लिए सेटिंग"</string>
     <string name="auto_revoke_label" msgid="5068393642936571656">"ऐप्लिकेशन का इस्तेमाल न होने पर अनुमतियां हटाएं"</string>
     <string name="unused_apps_label" msgid="2595428768404901064">"अनुमतियां हटाएं और जगह खाली करें"</string>
     <string name="unused_apps_label_v2" msgid="7058776770056517980">"इस्तेमाल न होने पर ऐप गतिविधि रोकें"</string>
-    <string name="unused_apps_label_v3" msgid="693340578642156657">"इस्तेमाल नहीं हो रहा ऐप्लिकेशन मैनेज करें"</string>
+    <string name="unused_apps_label_v3" msgid="693340578642156657">"इस्तेमाल नहीं हो रहा ऐप मैनेज करें"</string>
     <string name="unused_apps_summary" msgid="8839466950318403115">"ऐप्लिकेशन की अनुमतियां हटाएं, डिवाइस में कुछ समय के लिए रहने वाली फ़ाइलें मिटाएं, और सूचनाएं रोकें"</string>
     <string name="unused_apps_summary_v2" msgid="5011313200815115802">"ऐप्लिकेशन की अनुमतियां हटाएं, डिवाइस में कुछ समय के लिए रहने वाली फ़ाइलें मिटाएं, सूचनाएं रोकें, और ऐप्लिकेशन संग्रहित करें"</string>
     <string name="auto_revoke_summary" msgid="5867548789805911683">"अगर इस ऐप्लिकेशन का इस्तेमाल कुछ महीनों तक नहीं किया गया, तो इसे दी गई अनुमतियां हटा दी जाएंगी. ऐसा आपके डेटा को सुरक्षित रखने के लिए किया जाएगा."</string>
@@ -680,7 +680,7 @@
     <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"आपके डिवाइस और डेटा को सुरक्षित रखने के लिए, यह सेटिंग ब्लॉक की गई है. <xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
 
-</xliff:g>धोखाधड़ी करने वाले लोग, आपको किसी नए सोर्स से अनजान ऐप्लिकेशन इंस्टॉल करने के लिए कहकर आपके डिवाइस पर नुकसान पहुंचाने वाले ऐप्लिकेशन इंस्टॉल कराने की कोशिश कर सकते हैं."</string>
+</xliff:g>धोखाधड़ी करने वाले लोग, आपके डिवाइस को नुकसान पहुंचाने वाले अनजान ऐप्लिकेशन, किसी नए सोर्स से इंस्टॉल कराने की कोशिश कर सकते हैं."</string>
     <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
 
 </xliff:g>धोखाधड़ी करने वाले लोग, आपके डिवाइस में मौजूद किसी ऐप्लिकेशन को ऐक्सेस करने की अनुमति लेकर, आपके डिवाइस को कंट्रोल करने की कोशिश कर सकते हैं."</string>
@@ -701,32 +701,22 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"अपना फ़ोन देखें"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"आपके फ़ोन से कनेक्ट नहीं किया जा सका"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"फिर से कोशिश करें?"</string>
-    <!-- no translation found for app_function_access_settings_title (8891907044622237648) -->
-    <skip />
-    <!-- no translation found for app_function_access_settings_summary (8574075661031712914) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_title (5292351554854465261) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_summary (5591295514604863634) -->
-    <skip />
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"एजेंट"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"ऐसे एजेंट जो ऐप्लिकेशन में जानकारी ऐक्सेस कर सकते हैं या कार्रवाइयां कर सकते हैं"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"एजेंट"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"इस डिवाइस पर एजेंट का ऐक्सेस मैनेज करें"</string>
     <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"कोई एजेंट ऐप्लिकेशन उपलब्ध नहीं है"</string>
     <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"इस सुविधा को चालू करने के लिए, अपने डिवाइस पर एजेंट ऐप्लिकेशन इंस्टॉल करें"</string>
-    <!-- no translation found for app_function_agent_access_title (2066670300909436012) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (6732843077882189740) -->
-    <skip />
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"ऐप्लिकेशन का ऐक्सेस"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"वे ऐप्लिकेशन और सेटिंग जिन्हें यह एजेंट ऐक्सेस कर सकता है, ताकि यह आपके लिए जानकारी हासिल कर सके और कार्रवाइयां कर सके"</string>
     <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"<xliff:g id="APP_NAME">%1$s</xliff:g> को ऐक्सेस करने के लिए, कोई ऐप्लिकेशन उपलब्ध नहीं है"</string>
     <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"सिस्टम"</string>
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"ऐप्लिकेशन"</string>
-    <!-- no translation found for app_function_target_access_title (7415628605578155761) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (6099120829640806490) -->
-    <skip />
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"एजेंट को मिलने वाला ऐक्सेस"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"वे एजेंट जो इस ऐप्लिकेशन में आपकी जानकारी ऐक्सेस कर सकते हैं और आपकी ओर से कार्रवाइयां कर सकते हैं"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"डिवाइस की सेटिंग"</string>
     <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"क्या <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> को <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> का ऐक्सेस देना है?"</string>
-    <!-- no translation found for request_app_function_access_dialog_description (8841298093381343286) -->
-    <skip />
+    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"इससे <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> को <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> की जानकारी ऐक्सेस करने और उपयोगकर्ता की ओर से कार्रवाइयां करने की अनुमति मिलती है."</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"अनुमति दें"</string>
-    <!-- no translation found for request_app_function_dialog_button_dont_allow (7657036841986717007) -->
-    <skip />
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"अनुमति न दें"</string>
 </resources>
