@@ -61,9 +61,9 @@
     <string name="grant_dialog_button_allow_media_only" msgid="4832877658422573832">"Autoriser l\'accès aux fichiers multimédias"</string>
     <string name="app_permissions_breadcrumb" msgid="5136969550489411650">"Applis"</string>
     <string name="app_permissions" msgid="3369917736607944781">"Autorisations des applis"</string>
-    <string name="unused_apps" msgid="2058057455175955094">"Applis non utilisées"</string>
+    <string name="unused_apps" msgid="2058057455175955094">"Applis inutilisées"</string>
     <string name="edit_photos_description" msgid="5540108003480078892">"Modifiez une sélection de photos pour cette appli"</string>
-    <string name="no_unused_apps" msgid="12809387670415295">"Aucune appli non utilisée"</string>
+    <string name="no_unused_apps" msgid="12809387670415295">"Aucune appli inutilisée"</string>
     <string name="zero_unused_apps" msgid="9024448554157499748">"Aucune appli inutilisée"</string>
     <string name="review_permission_decisions" msgid="309559429150613632">"Décisions d\'autorisation récentes"</string>
     <string name="review_permission_decisions_view_all" msgid="90391040431566130">"Afficher toutes les décisions d\'autorisation récentes"</string>
@@ -73,7 +73,7 @@
     <string name="denied_permission_decision" msgid="5308961501779563781">"Vous avez refusé l\'accès de <xliff:g id="APP_NAME">%1$s</xliff:g> aux <xliff:g id="PERMISSION_NAME">%2$s</xliff:g>"</string>
     <string name="days_ago" msgid="6650359081551335629">"{count,plural, =0{Aujourd’hui}=1{Il y a 1 jour}one{Il y a # jour}many{Il y a # jours}other{Il y a # jours}}"</string>
     <string name="app_disable_dlg_positive" msgid="7418444149981904940">"Désactiver l\'appli"</string>
-    <string name="app_disable_dlg_text" msgid="3126943217146120240">"Si vous désactivez cette appli, Android et d\'autres applis risquent de ne plus fonctionner correctement. Gardez à l\'esprit que vous ne pouvez pas supprimer cette appli, étant donné qu\'elle était préinstallée sur votre appareil. En la désactivant, elle ne sera plus active et elle sera masquée sur votre appareil."</string>
+    <string name="app_disable_dlg_text" msgid="3126943217146120240">"Si vous désactivez cette appli, Android et d\'autres applis risquent de ne plus fonctionner correctement. Gardez à l\'esprit que vous ne pouvez pas supprimer cette appli, étant donné qu\'elle était préinstallée sur votre appareil. Si vous la désactivez, elle ne sera plus active et elle sera masquée sur votre appareil."</string>
     <string name="app_permission_manager" msgid="3903811137630909550">"Gestionnaire des autorisations"</string>
     <string name="never_ask_again" msgid="4728762438198560329">"Ne plus demander"</string>
     <string name="no_permissions" msgid="3881676756371148563">"Aucune autorisation"</string>
@@ -225,7 +225,7 @@
     <string name="auto_revoked_app_summary_one" msgid="7093213590301252970">"L\'autorisation <xliff:g id="PERMISSION_NAME">%s</xliff:g> a été supprimée"</string>
     <string name="auto_revoked_app_summary_two" msgid="1910545340763709389">"Les autorisations <xliff:g id="PERMISSION_NAME_0">%1$s</xliff:g> et <xliff:g id="PERMISSION_NAME_1">%2$s</xliff:g> ont été supprimées"</string>
     <string name="auto_revoked_app_summary_many" msgid="5930976230827378798">"L\'autorisation <xliff:g id="PERMISSION_NAME">%1$s</xliff:g> et <xliff:g id="NUMBER">%2$s</xliff:g> autres ont été supprimées"</string>
-    <string name="unused_apps_page_title" msgid="6986983535677572559">"Applis non utilisées"</string>
+    <string name="unused_apps_page_title" msgid="6986983535677572559">"Applis inutilisées"</string>
     <string name="unused_apps_page_summary" msgid="1867593913217272155">"Si une appli n\'est pas utilisée pendant quelques mois :\n\n• les autorisations sont retirées pour protéger vos données;\n• les notifications sont arrêtées pour économiser la pile;\n• les fichiers temporaires sont retirés pour libérer de l\'espace de stockage.\n\nPour permettre d\'accéder de nouveau aux autorisations et aux notifications, ouvrez l\'appli."</string>
     <string name="unused_apps_page_tv_summary" msgid="2624911608663778308">"Si une appli n\'est pas utilisée pendant un mois :\n\n• Les autorisations sont retirées pour protéger vos données.\n• Les fichiers temporaires sont retirés pour libérer de l\'espace de stockage.\n\nPour réactiver les autorisations, ouvrez l\'appli."</string>
     <string name="last_opened_category_title" msgid="8796557894614236128">"{count,plural, =1{Dernière ouverture : il y a plus de # mois}one{Dernière ouverture : il y a plus de # mois}many{Dernière ouverture : il y a plus de # de mois}other{Dernière ouverture : il y a plus de # mois}}"</string>
@@ -310,7 +310,7 @@
     <string name="auto_revoke_before_notification_title_one" msgid="6758024954464359876">"Une appli est inutilisée"</string>
     <string name="auto_revoke_before_notification_title_many" msgid="4415543943846385685">"<xliff:g id="NUMBER_OF_APPS">%s</xliff:g> applis sont inutilisées"</string>
     <string name="auto_revoke_before_notification_content_one" msgid="1156635373417068822">"Les autorisations seront supprimées pour protéger votre confidentialité. Touchez pour examiner."</string>
-    <string name="unused_apps_title" msgid="8589298917717872239">"Applis non utilisées"</string>
+    <string name="unused_apps_title" msgid="8589298917717872239">"Applis inutilisées"</string>
     <string name="unused_apps_subtitle_after" msgid="2034267519506357898">"Les autorisations ont été supprimées pour"</string>
     <string name="unused_apps_subtitle_before" msgid="5233302577076132427">"Les autorisations seront supprimées pour"</string>
     <string name="unused_permissions_subtitle_two" msgid="2207266295008423015">"<xliff:g id="PERM_NAME_0">%1$s</xliff:g> et <xliff:g id="PERM_NAME_1">%2$s</xliff:g>"</string>
@@ -701,32 +701,22 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"Vérifiez votre téléphone"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"Impossible de joindre votre téléphone"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"Réessayer?"</string>
-    <!-- no translation found for app_function_access_settings_title (8891907044622237648) -->
-    <skip />
-    <!-- no translation found for app_function_access_settings_summary (8574075661031712914) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_title (5292351554854465261) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_summary (5591295514604863634) -->
-    <skip />
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"Agents"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"Les agents qui peuvent accéder à des informations ou effectuer des actions dans les applis"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"Agents"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"Gérez l\'accès des agents sur cet appareil"</string>
     <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"Aucune appli d\'agent accessible"</string>
     <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"Installer une appli d\'agent sur votre appareil pour activer cette fonctionnalité"</string>
-    <!-- no translation found for app_function_agent_access_title (2066670300909436012) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (6732843077882189740) -->
-    <skip />
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"Accès des applis"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"Les applis et les paramètres auxquels cet agent peut accéder pour obtenir des informations et effectuer des actions pour vous"</string>
     <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"Aucune appli n\'est accessible pour <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"Système"</string>
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Applis"</string>
-    <!-- no translation found for app_function_target_access_title (7415628605578155761) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (6099120829640806490) -->
-    <skip />
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"Accès de l\'agent"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"Les agents qui peuvent accéder à des informations et effectuer des actions pour vous dans cette appli"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Paramètres de l\'appareil"</string>
     <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"Autor. <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> à accéd. à <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
-    <!-- no translation found for request_app_function_access_dialog_description (8841298093381343286) -->
-    <skip />
+    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"Permet à <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> d\'acc. aux infos de <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> et d\'effectuer des actions pour l\'utilisat."</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Autoriser"</string>
-    <!-- no translation found for request_app_function_dialog_button_dont_allow (7657036841986717007) -->
-    <skip />
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Interdire"</string>
 </resources>

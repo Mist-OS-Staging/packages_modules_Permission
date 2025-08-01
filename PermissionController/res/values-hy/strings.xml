@@ -677,7 +677,7 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"Սահմանափակումներով կարգավորում"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"Անվտանգության նկատառումներից ելնելով՝ այս կարգավորումը ներկայումս անհասանելի է։"</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"Զանգի ընթացքում հնարավոր չէ կատարել գործողությունը"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>. այս կարգավորումն արգելափակված է՝ ձեր սարքի և տվյալների անվտանգության նկատառումներից դուրս գալով։"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g> Այս կարգավորումն արգելափակված է՝ ձեր սարքի և տվյալների անվտանգության նկատառումներից ելնելով։"</string>
     <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
 
 </xliff:g>Խաբեբաները կարող են փորձել վտանգավոր հավելվածներ տեղադրել ձեր սարքում՝ ձեզ խնդրելով, որ նոր աղբյուրից անհայտ հավելվածներ տեղադրեք։"</string>
@@ -712,15 +712,11 @@
     <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"Չկան հավելվածներ, որոնց հասանելի է <xliff:g id="APP_NAME">%1$s</xliff:g> հավելվածը"</string>
     <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"Համակարգ"</string>
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Հավելվածներ"</string>
-    <!-- no translation found for app_function_target_access_title (7415628605578155761) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (6099120829640806490) -->
-    <skip />
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"Գործակալի հասանելիություն"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"Գործակալներ, որոնք կարող են տեղեկությունների հասանելիություն ստանալ և այս հավելվածում ձեր անունից գործողություններ կատարել"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Սարքի կարգավորումներ"</string>
     <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>-ին թույլատրե՞լ սա՝ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>
-    <!-- no translation found for request_app_function_access_dialog_description (8841298093381343286) -->
-    <skip />
+    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> հավելվածը ստանում է <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>-ի տվյալների հասանելիություն և օգտատիրոջ անունից գործելու թույլտվություն։"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Թույլատրել"</string>
-    <!-- no translation found for request_app_function_dialog_button_dont_allow (7657036841986717007) -->
-    <skip />
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Չթույլատրել"</string>
 </resources>

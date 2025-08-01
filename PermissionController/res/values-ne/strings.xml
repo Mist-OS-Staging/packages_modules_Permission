@@ -701,20 +701,14 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"आफ्नो फोनमा हेर्नुहोस्"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"तपाईंको फोनमा कनेक्ट गर्न सकिएन"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"पुनः प्रयास गर्ने हो?"</string>
-    <!-- no translation found for app_function_access_settings_title (8891907044622237648) -->
-    <skip />
-    <!-- no translation found for app_function_access_settings_summary (8574075661031712914) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_title (5292351554854465261) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_summary (5591295514604863634) -->
-    <skip />
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"एजेन्टहरू"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"एपमा भएको जानकारी एक्सेस गर्न वा कारबाहीहरू गर्न सक्ने एजेन्टहरू"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"एजेन्टहरू"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"यो डिभाइसमा एजेन्टहरूको एक्सेस व्यवस्थापन गर्नुहोस्"</string>
     <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"कुनै पनि एजेन्ट एप उपलब्ध छैन"</string>
     <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"यो सुविधा अन गर्न आफ्नो डिभाइसमा कुनै एजेन्ट एप इन्स्टल गर्नुहोस्"</string>
-    <!-- no translation found for app_function_agent_access_title (2066670300909436012) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (6732843077882189740) -->
-    <skip />
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"एपको एक्सेस"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"तपाईंका लागि जानकारी प्राप्त गर्न र कारबाहीहरू गर्न यो एजेन्टले एक्सेस गर्न सक्ने एप तथा सेटिङ"</string>
     <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"<xliff:g id="APP_NAME">%1$s</xliff:g> एक्सेस गर्न प्रयोग गर्न सकिने कुनै पनि एप उपलब्ध छैन"</string>
     <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"सिस्टम"</string>
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"एपहरू"</string>

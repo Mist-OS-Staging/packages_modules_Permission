@@ -209,7 +209,7 @@
     <string name="auto_revoke_label" msgid="5068393642936571656">"இந்த ஆப்ஸ் பயன்படுத்தப்படவில்லை என்றால் அனுமதிகளை அகற்றவும்"</string>
     <string name="unused_apps_label" msgid="2595428768404901064">"அனுமதிகளை அகற்றி இடத்தைக் காலியாக்கு"</string>
     <string name="unused_apps_label_v2" msgid="7058776770056517980">"செயலில் இல்லாதபோது ஆப்ஸை இடைநிறுத்துதல்"</string>
-    <string name="unused_apps_label_v3" msgid="693340578642156657">"ஆப்ஸைப் பயன்படுத்தாதபோது நிர்வகித்தல்"</string>
+    <string name="unused_apps_label_v3" msgid="693340578642156657">"ஆப்ஸைப் பயன்படுத்தாதபோது நிர்வகி"</string>
     <string name="unused_apps_summary" msgid="8839466950318403115">"அனுமதிகளை அகற்றும், தற்காலிக ஃபைல்களை நீக்கும், அறிவிப்புகளை நிறுத்தும்"</string>
     <string name="unused_apps_summary_v2" msgid="5011313200815115802">"அனுமதிகளை அகற்றும், தற்காலிக ஃபைல்களை நீக்கும், அறிவிப்புகளை நிறுத்தும், ஆப்ஸைக் காப்பிடும்"</string>
     <string name="auto_revoke_summary" msgid="5867548789805911683">"இந்த ஆப்ஸைச் சில மாதங்கள் பயன்படுத்தவில்லை என்றால் உங்கள் தரவைப் பாதுகாப்பதற்காக இதற்கான அனுமதிகள் அகற்றப்படும்."</string>
@@ -680,7 +680,7 @@
     <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"உங்கள் சாதனத்தையும் தரவையும் பாதுகாப்பதற்காக இந்த அமைப்பு தடுக்கப்பட்டுள்ளது.<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
 
-</xliff:g>புதிய மூலத்தில் இருந்து அறியப்படாத ஆப்ஸை நிறுவுமாறு கேட்பதன் மூலம் மோசடி செய்பவர்கள் தீங்கு விளைவிக்கும் ஆப்ஸை நிறுவ முயலலாம்."</string>
+</xliff:g>ஒரு புதிய சோர்ஸிலிருந்து தெரியாத ஆப்ஸை நிறுவுமாறு கேட்பதன் மூலம் மோசடி செய்பவர்கள் தீங்கு விளைவிக்கும் ஆப்ஸை நிறுவ முயலலாம்."</string>
     <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
 
 </xliff:g>ஆப்ஸுக்கான அணுகல்தன்மை அம்சங்களை அனுமதிக்குமாறு கேட்பதன் மூலம் மோசடி செய்பவர்கள் உங்கள் சாதனத்தைக் கட்டுப்படுத்த முயலலாம்."</string>
@@ -701,32 +701,22 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"மொபைலைப் பாருங்கள்"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"உங்கள் மொபைலுடன் இணைக்க முடியவில்லை"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"மீண்டும் முயலவா?"</string>
-    <!-- no translation found for app_function_access_settings_title (8891907044622237648) -->
-    <skip />
-    <!-- no translation found for app_function_access_settings_summary (8574075661031712914) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_title (5292351554854465261) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_summary (5591295514604863634) -->
-    <skip />
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"ஏஜெண்ட்டுகள்"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"ஆப்ஸில் தகவல்களை அணுகக்கூடிய அல்லது நடவடிக்கைகளை எடுக்கக்கூடிய ஏஜெண்ட்டுகள்"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"ஏஜெண்ட்டுகள்"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"இந்தச் சாதனத்திலுள்ள ஏஜெண்ட்டுகளுக்கான அணுகலை நிர்வகிக்கலாம்"</string>
     <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"ஏஜெண்ட் ஆப்ஸ் எதுவுமில்லை"</string>
     <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"இந்த அம்சத்தை இயக்க உங்கள் சாதனத்தில் ஓர் ஏஜெண்ட் ஆப்ஸை நிறுவுங்கள்"</string>
-    <!-- no translation found for app_function_agent_access_title (2066670300909436012) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (6732843077882189740) -->
-    <skip />
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"ஆப்ஸ் அணுகல்"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"உங்களுக்காக தகவல்களைப் பெறுவதற்கும் நடவடிக்கைகளை எடுப்பதற்கும் இந்த ஏஜெண்ட் அணுகக்கூடிய ஆப்ஸும் அமைப்புகளும்"</string>
     <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"<xliff:g id="APP_NAME">%1$s</xliff:g> அணுகலுக்கு எந்த ஆப்ஸும் இல்லை"</string>
     <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"சிஸ்டம்"</string>
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"ஆப்ஸ்"</string>
-    <!-- no translation found for app_function_target_access_title (7415628605578155761) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (6099120829640806490) -->
-    <skip />
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"ஏஜெண்ட் அணுகல்"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"இந்த ஆப்ஸில் தகவல்களை அணுகி உங்களுக்காகச் செயல்களைச் செய்யக்கூடிய ஏஜெண்ட்டுகள்"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"சாதன அமைப்புகள்"</string>
     <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ஆப்ஸை <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> அணுக அனுமதிக்கவா?"</string>
-    <!-- no translation found for request_app_function_access_dialog_description (8841298093381343286) -->
-    <skip />
+    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> தகவல்களை அணுகவும் பயனரின் சார்பாகச் செயல்களைச் செய்யவும் <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ஆப்ஸை இது அனுமதிக்கிறது."</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"அனுமதி"</string>
-    <!-- no translation found for request_app_function_dialog_button_dont_allow (7657036841986717007) -->
-    <skip />
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"அனுமதிக்காதே"</string>
 </resources>

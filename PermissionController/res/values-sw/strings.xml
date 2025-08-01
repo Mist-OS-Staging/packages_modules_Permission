@@ -383,7 +383,7 @@
     <string name="role_emergency_request_description" msgid="131645948770262850">"Hakuna ruhusa zinazohitajika"</string>
     <string name="role_emergency_search_keywords" msgid="1920007722599213358">"katika dharura"</string>
     <string name="role_home_label" msgid="3871847846649769412">"Programu chaguomsingi ya mwanzo"</string>
-    <string name="role_home_short_label" msgid="8544733747952272337">"Programu ya ukurasa wa mwanzo"</string>
+    <string name="role_home_short_label" msgid="8544733747952272337">"Programu ya mwanzo"</string>
     <string name="role_home_description" msgid="7997371519626556675">"Programu, zinazoitwa vifungua programu, zinazochukua nafasi ya skrini yako ya kwanza kwenye kifaa chako cha Android na kukupa uwezo wa kufikia maudhui na vipengele vya kifaa chako"</string>
     <string name="role_home_request_title" msgid="738136983453341081">"Je, ungependa kuweka <xliff:g id="APP_NAME">%1$s</xliff:g> iwe programu yako chaguomsingi ya ukurasa wa kwanza?"</string>
     <string name="role_home_request_description" msgid="2658833966716057673">"Hakuna ruhusa zinazohitajika"</string>
