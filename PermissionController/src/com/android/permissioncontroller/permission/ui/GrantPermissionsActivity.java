@@ -64,6 +64,7 @@ import android.util.ArraySet;
 import android.util.Log;
 import android.util.Pair;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnAttachStateChangeListener;
 import android.view.Window;
@@ -235,6 +236,8 @@ public class GrantPermissionsActivity extends SettingsActivity
     /** Which device the permission will affect. Default is the primary device. */
     private int mTargetDeviceId = ContextCompat.DEVICE_ID_DEFAULT;
 
+    private boolean mEnterAnimationCompleted;
+
     private PackageManager mPackageManager;
 
     private final ActivityResultLauncher<Intent> mShowWarningDialog =
@@ -259,6 +262,9 @@ public class GrantPermissionsActivity extends SettingsActivity
             mSessionId = new Random().nextLong();
         } else {
             mSessionId = icicle.getLong(KEY_SESSION_ID);
+            // When activity is re-created, there is no transition animation,
+            // onEnterAnimationComplete() is not called. So we need to set it manually.
+            mEnterAnimationCompleted = true;
         }
 
         getWindow().addSystemFlags(SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
@@ -1088,6 +1094,21 @@ public class GrantPermissionsActivity extends SettingsActivity
                 && com.android.settingslib.widget.theme.flags.Flags.isExpressiveDesignEnabled()
                 && getResources().getBoolean(
                 R.bool.config_enableExpressiveDesignInRequestPermissionDialog);
+    }
+
+    @Override
+    public void onEnterAnimationComplete() {
+        super.onEnterAnimationComplete();
+        mEnterAnimationCompleted = true;
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        // Block touches while the enter animation is still running to prevent tap jacking.
+        if (!mEnterAnimationCompleted) {
+            return true;
+        }
+        return super.dispatchTouchEvent(ev);
     }
 
     /**
