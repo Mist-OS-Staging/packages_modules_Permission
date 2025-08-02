@@ -572,10 +572,10 @@
     <string name="automotive_required_app_summary" msgid="6514902316658090465">"Bilproducenten kræver denne app"</string>
     <string name="safety_center_dashboard_page_title" msgid="2810774008694315854">"Sikkerhed og privatliv"</string>
     <string name="safety_center_rescan_button" msgid="4517514567809409596">"Scan enhed"</string>
-    <string name="safety_center_issue_card_dismiss_button" msgid="5113965506144222402">"Afvis"</string>
+    <string name="safety_center_issue_card_dismiss_button" msgid="5113965506144222402">"Luk"</string>
     <string name="safety_center_issue_card_dismiss_confirmation_title" msgid="2734809473425036382">"Vil du afvise denne underretning?"</string>
     <string name="safety_center_issue_card_dismiss_confirmation_message" msgid="3775418736671093563">"Du kan altid gennemgå dine sikkerheds- og privatlivsindstillinger for at tilføje mere beskyttelse"</string>
-    <string name="safety_center_issue_card_confirm_dismiss_button" msgid="5884137843083634556">"Afvis"</string>
+    <string name="safety_center_issue_card_confirm_dismiss_button" msgid="5884137843083634556">"Luk"</string>
     <string name="safety_center_issue_card_cancel_dismiss_button" msgid="2874578798877712346">"Annuller"</string>
     <string name="safety_center_entries_category_title" msgid="34356964062813115">"Indstillinger"</string>
     <string name="safety_status_preference_title_and_summary_content_description" msgid="3511373256505058464">"Status for sikkerhed og privatliv. <xliff:g id="OVERALL_SAFETY_STATUS">%1$s</xliff:g>. <xliff:g id="SUMMARY_OF_DEVICE_STATUS">%2$s</xliff:g>"</string>
@@ -701,32 +701,22 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"Tjek din telefon"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"Der kunne ikke oprettes forbindelse til telefonen"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"Vil du prøve igen?"</string>
-    <!-- no translation found for app_function_access_settings_title (8891907044622237648) -->
-    <skip />
-    <!-- no translation found for app_function_access_settings_summary (8574075661031712914) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_title (5292351554854465261) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_summary (5591295514604863634) -->
-    <skip />
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"Agenter"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"Agenter, der kan tilgå oplysninger eller foretage handlinger i apps"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"Agenter"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"Administrer agenters adgang på denne enhed"</string>
     <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"Der er ingen tilgængelige agentapps"</string>
     <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"Installer en agentapp på din enhed for at aktivere denne funktion"</string>
-    <!-- no translation found for app_function_agent_access_title (2066670300909436012) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (6732843077882189740) -->
-    <skip />
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"Appadgang"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"Apps og indstillinger, som denne agent kan tilgå for at hente oplysninger og foretage handlinger for dig"</string>
     <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"Der er ingen tilgængelige apps med adgang til <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"System"</string>
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Apps"</string>
-    <!-- no translation found for app_function_target_access_title (7415628605578155761) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_summary (6099120829640806490) -->
-    <skip />
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"Adgang for repræsentant"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"Repræsentanter, der kan tilgå oplysninger og foretage handlinger for dig i denne app"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Enhedsindstillinger"</string>
     <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"Vil du give <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> adgang til <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
-    <!-- no translation found for request_app_function_access_dialog_description (8841298093381343286) -->
-    <skip />
+    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"Dette giver <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> adgang til <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>-oplysninger og mulighed for at foretage handlinger på brugerens vegne."</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Tillad"</string>
-    <!-- no translation found for request_app_function_dialog_button_dont_allow (7657036841986717007) -->
-    <skip />
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Tillad ikke"</string>
 </resources>

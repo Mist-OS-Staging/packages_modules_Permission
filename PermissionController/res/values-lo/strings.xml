@@ -701,20 +701,14 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"ກວດເບິ່ງໂທລະສັບຂອງທ່ານ"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"ບໍ່ສາມາດເຂົ້າເຖິງໂທລະສັບຂອງທ່ານໄດ້"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"ລອງໃໝ່ບໍ?"</string>
-    <!-- no translation found for app_function_access_settings_title (8891907044622237648) -->
-    <skip />
-    <!-- no translation found for app_function_access_settings_summary (8574075661031712914) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_title (5292351554854465261) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_summary (5591295514604863634) -->
-    <skip />
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"ຕົວແທນ"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"ຕົວແທນທີ່ສາມາດເຂົ້າເຖິງຂໍ້ມູນ ຫຼື ດຳເນີນການໃນແອັບໄດ້"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"ຕົວແທນ"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"ຈັດການສິດເຂົ້າເຖິງສຳລັບຕົວແທນໃນອຸປະກອນເຄື່ອງນີ້"</string>
     <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"ບໍ່ມີແອັບຕົວແທນທີ່ພ້ອມໃຫ້ນຳໃຊ້"</string>
     <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"ຕິດຕັ້ງແອັບຕົວແທນໃນອຸປະກອນຂອງທ່ານເພື່ອເປີດການນຳໃຊ້ຄຸນສົມບັດນີ້"</string>
-    <!-- no translation found for app_function_agent_access_title (2066670300909436012) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (6732843077882189740) -->
-    <skip />
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"ສິດເຂົ້າເຖິງຂອງແອັບ"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"ແອັບ ແລະ ການຕັ້ງຄ່າທີ່ຕົວແທນນີ້ສາມາດເຂົ້າເຖິງເພື່ອເບິ່ງຂໍ້ມູນ ແລະ ດຳເນີນການໃຫ້ທ່ານໄດ້"</string>
     <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"ບໍ່ມີແອັບທີ່ພ້ອມນຳໃຊ້ສຳລັບການເຂົ້າເຖິງ <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"ລະບົບ"</string>
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"ແອັບ"</string>

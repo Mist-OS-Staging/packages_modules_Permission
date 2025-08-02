@@ -73,7 +73,7 @@
     <string name="denied_permission_decision" msgid="5308961501779563781">"Не одобривте пристап за <xliff:g id="APP_NAME">%1$s</xliff:g> до <xliff:g id="PERMISSION_NAME">%2$s</xliff:g>"</string>
     <string name="days_ago" msgid="6650359081551335629">"{count,plural, =0{Денес}=1{Пред 1 ден}one{Пред # ден}other{Пред # дена}}"</string>
     <string name="app_disable_dlg_positive" msgid="7418444149981904940">"Оневозможи ја апликацијата"</string>
-    <string name="app_disable_dlg_text" msgid="3126943217146120240">"Ако ја оневозможите оваа апликација, Android и другите апликации можеби веќе нема да функционираат како што треба. Имајте предвид, не може да ја избришете апликацијава бидејќи е однапред инсталирана на уредот. Ако ја оневозможите, ќе ја исклучите и ќе ја сокриете на уредот."</string>
+    <string name="app_disable_dlg_text" msgid="3126943217146120240">"Ако ја оневозможите оваа апликација, Android и другите апликации можеби веќе нема да функционираат како што треба. Имајте предвид, не може да ја избришете апликацијава бидејќи е однапред инсталирана на уредот. Ако ја оневозможите, ќе ја исклучите и ќе ја скриете на уредот."</string>
     <string name="app_permission_manager" msgid="3903811137630909550">"Управувач со дозволи"</string>
     <string name="never_ask_again" msgid="4728762438198560329">"Не прашувај повторно"</string>
     <string name="no_permissions" msgid="3881676756371148563">"Нема дозволи"</string>
@@ -275,7 +275,7 @@
     <string name="unused_apps_notification_content" msgid="9195026773244581246">"Дозволите и привремените датотеки се отстранети, а известувањата се сопрени. Допрете за да прегледате."</string>
     <string name="unused_apps_safety_center_card_title" msgid="5638409355530099149">"Прегледајте ги апликациите со отстранети дозволи"</string>
     <string name="unused_apps_safety_center_card_content" msgid="1088557243627427820">"За апликации што не сте ги користеле некое време, дозволите и привремените датотеки беа отстранети и известувањата беа запрени."</string>
-    <string name="unused_apps_safety_center_action_title" msgid="8865914432518993194">"Прегледување апликации"</string>
+    <string name="unused_apps_safety_center_action_title" msgid="8865914432518993194">"Прегледајте ги апликациите"</string>
     <string name="post_drive_permission_decision_reminder_title" msgid="1290697371418139976">"Погледнете ги неодамнешните дозволи"</string>
     <string name="post_drive_permission_decision_reminder_summary_1_app_1_permission" msgid="670521503734140711">"Додека возевте, дадовте пристап на <xliff:g id="APP">%1$s</xliff:g> за <xliff:g id="PERMISSION">%2$s</xliff:g>"</string>
     <string name="post_drive_permission_decision_reminder_summary_1_app_2_permissions" msgid="671791184670801301">"Додека возевте, дадовте пристап на <xliff:g id="APP">%1$s</xliff:g> за <xliff:g id="PERMISSION_1">%2$s</xliff:g> и <xliff:g id="PERMISSION_2">%3$s</xliff:g>"</string>
@@ -701,20 +701,14 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"Проверете го телефонот"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"Не можеше да се контактира со телефонот"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"Ќе се обидете повторно?"</string>
-    <!-- no translation found for app_function_access_settings_title (8891907044622237648) -->
-    <skip />
-    <!-- no translation found for app_function_access_settings_summary (8574075661031712914) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_title (5292351554854465261) -->
-    <skip />
-    <!-- no translation found for app_function_agent_list_summary (5591295514604863634) -->
-    <skip />
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"Агенти"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"Агенти што може да пристапуваат до податоци или да преземаат дејства во апликации"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"Агенти"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"Управувајте со пристапот за агенти на уредов"</string>
     <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"Не се достапни апликации за агент"</string>
     <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"Инсталирајте апликација за агент на вашиот уред за да ја овозможите функцијава"</string>
-    <!-- no translation found for app_function_agent_access_title (2066670300909436012) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_summary (6732843077882189740) -->
-    <skip />
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"Пристап до апликации"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"Апликации и поставки до кои може да пристапува агентов за да добива податоци и да презема дејства за вас"</string>
     <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"Не се достапни апликации за пристап до <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"Систем"</string>
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Апликации"</string>
