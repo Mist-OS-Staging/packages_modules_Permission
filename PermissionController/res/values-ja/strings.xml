@@ -680,10 +680,10 @@
     <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"デバイスとデータを保護するため、この設定はブロックされています。<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
 
-</xliff:g>詐欺師が新しいソースから不明なアプリをインストールするようユーザーに持ちかけ、有害なアプリをインストールしようとする可能性があります。"</string>
+</xliff:g>この機能を騙されて使うと、有害なアプリをインストールしてしまう危険性があります。"</string>
     <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
 
-</xliff:g>詐欺師が、ユーザー補助機能へのアクセスをアプリに許可するようユーザーに依頼して、デバイスを操作しようとする可能性があります。"</string>
+</xliff:g>騙されてユーザー補助機能へのアクセスを許可すると、デバイスが操作されてしまう危険性があります。"</string>
     <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"アプリは<xliff:g id="PERMISSION_NAME">%1$s</xliff:g>へのアクセスを拒否されました"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"機密情報に関わる権限へのアクセスをアプリがリクエストしました。この権限へのアクセスは、あなたの個人情報や財務情報を危険にさらす恐れがあります。<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>この制限付きの権限がないとアプリは正しく動作しない可能性があります。&lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;アクセスを許可する方法の詳細&lt;/a&gt;"</string>
