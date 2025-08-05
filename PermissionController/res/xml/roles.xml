@@ -1346,6 +1346,8 @@
             <permission name="android.permission.MANAGE_DEFAULT_APPLICATIONS" minSdkVersion="34"/>
             <permission name="android.permission.SUSPEND_APPS"/>
             <permission name="android.permission.SYSTEM_APPLICATION_OVERLAY"/>
+            <permission name="android.permission.MANAGE_APP_OPS_MODES"
+                featureFlag="android.permission.flags.Flags.supervisionRoleEnabled"/>
             <permission name="android.permission.MANAGE_DEVICE_POLICY_ACCOUNT_MANAGEMENT"
                 featureFlag="android.permission.flags.Flags.supervisionRolePermissionUpdateEnabled"/>
             <permission name="android.permission.MANAGE_DEVICE_POLICY_APP_RESTRICTIONS"
