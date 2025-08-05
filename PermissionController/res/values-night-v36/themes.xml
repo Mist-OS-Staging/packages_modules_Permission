@@ -17,7 +17,8 @@
 
 <resources>
 
-    <style name="ThemeOverlay.SafetyCenter.ExpressiveColors" parent="">
+    <style name="ThemeOverlay.SafetyCenter.ExpressiveColors"
+        parent="ThemeOverlay.SafetyCenter.ExpressiveColorsBase">
         <item name="textColorScActionButton">?android:attr/textColorPrimaryInverse</item>
         <item name="textColorScActionButtonRecommend">?android:attr/textColorPrimaryInverse</item>
         <item name="textColorScSecondaryActionButton">?android:attr/textColorPrimary</item>
@@ -40,7 +41,4 @@
             @color/sc_expressive_semantic_red_container_high_dt
         </item>
     </style>
-
-    <style name="ThemeOverlay.SafetyCenter.ExpressiveColors.QuickSettings"
-        parent="ThemeOverlay.SafetyCenter.ExpressiveColors" />
 </resources>
