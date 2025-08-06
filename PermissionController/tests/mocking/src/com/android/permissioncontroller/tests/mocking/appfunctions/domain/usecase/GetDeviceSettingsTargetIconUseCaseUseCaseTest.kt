@@ -21,8 +21,6 @@ import android.os.Process
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
 import com.android.dx.mockito.inline.extended.ExtendedMockito
-import com.android.permissioncontroller.PermissionControllerApplication
-import com.android.permissioncontroller.R
 import com.android.permissioncontroller.appfunctions.domain.usecase.GetDeviceSettingsTargetIconUseCase
 import com.android.permissioncontroller.tests.mocking.pm.data.repository.FakePackageRepository
 import com.google.common.truth.Truth.assertThat
@@ -32,7 +30,6 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
-import org.mockito.Mockito.`when`
 import org.mockito.MockitoAnnotations
 import org.mockito.MockitoSession
 import org.mockito.quality.Strictness
@@ -42,9 +39,7 @@ import org.mockito.quality.Strictness
 @RunWith(AndroidJUnit4::class)
 @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
 class GetDeviceSettingsTargetIconUseCaseUseCaseTest {
-    @Mock private lateinit var application: PermissionControllerApplication
     @Mock private lateinit var icon: Drawable
-    @Mock private lateinit var fallBackIcon: Drawable
 
     private var mockitoSession: MockitoSession? = null
 
@@ -52,12 +47,7 @@ class GetDeviceSettingsTargetIconUseCaseUseCaseTest {
     fun setup() {
         MockitoAnnotations.initMocks(this)
         mockitoSession =
-            ExtendedMockito.mockitoSession()
-                .mockStatic(PermissionControllerApplication::class.java)
-                .strictness(Strictness.LENIENT)
-                .startMocking()
-
-        `when`(application.getDrawable(R.drawable.ic_settings_24dp)).thenReturn(fallBackIcon)
+            ExtendedMockito.mockitoSession().strictness(Strictness.LENIENT).startMocking()
     }
 
     @After
@@ -66,38 +56,33 @@ class GetDeviceSettingsTargetIconUseCaseUseCaseTest {
     }
 
     @Test
-    fun getDeviceSettingsTargetIcon_getSettingsPackageNameNull_returnsFallbackSettingsIcon() =
-        runTest {
-            val useCase =
-                GetDeviceSettingsTargetIconUseCase(
-                    application,
-                    FakePackageRepository(packageIcons = mapOf(TEST_PACKAGE_NAME to icon)),
-                )
-            val actualIcon = useCase(Process.myUserHandle())
-            assertThat(actualIcon).isEqualTo(fallBackIcon)
-        }
+    fun getDeviceSettingsTargetIcon_getSettingsPackageNameNull_returnsNull() = runTest {
+        val useCase =
+            GetDeviceSettingsTargetIconUseCase(
+                FakePackageRepository(packageIcons = mapOf(TEST_PACKAGE_NAME to icon))
+            )
+        val actualIcon = useCase(Process.myUserHandle())
+        assertThat(actualIcon).isNull()
+    }
 
     @Test
-    fun getDeviceSettingsTargetIcon_getSettingsPackageIconNull_returnsFallbackSettingsIcon() =
-        runTest {
-            val useCase =
-                GetDeviceSettingsTargetIconUseCase(
-                    application,
-                    FakePackageRepository(settingsPackageName = TEST_PACKAGE_NAME),
-                )
-            val actualIcon = useCase(Process.myUserHandle())
-            assertThat(actualIcon).isEqualTo(fallBackIcon)
-        }
+    fun getDeviceSettingsTargetIcon_getSettingsPackageIconNull_returnsNull() = runTest {
+        val useCase =
+            GetDeviceSettingsTargetIconUseCase(
+                FakePackageRepository(settingsPackageName = TEST_PACKAGE_NAME)
+            )
+        val actualIcon = useCase(Process.myUserHandle())
+        assertThat(actualIcon).isNull()
+    }
 
     @Test
     fun getDeviceSettingsTargetIcon_returnsSettingsPackageIcon() = runTest {
         val useCase =
             GetDeviceSettingsTargetIconUseCase(
-                application,
                 FakePackageRepository(
                     packageIcons = mapOf(TEST_PACKAGE_NAME to icon),
                     settingsPackageName = TEST_PACKAGE_NAME,
-                ),
+                )
             )
         val actualIcon = useCase(Process.myUserHandle())
         assertThat(actualIcon).isEqualTo(icon)
