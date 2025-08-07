@@ -161,6 +161,8 @@ public final class SafetyCenterActivity extends CollapsingToolbarBaseActivity
     @Override
     public Resources.Theme getTheme() {
         Resources.Theme theme = super.getTheme();
+        theme.applyStyle(R.style.ThemeOverlay_SafetyCenterColors_DayNight, /* force= */ true);
+
         if (SettingsThemeHelper.isExpressiveTheme(this)) {
             theme.applyStyle(R.style.ThemeOverlay_SafetyCenter_Expressive, /* force= */ true);
             theme.applyStyle(

@@ -44,6 +44,10 @@ public class SafetyCenterQsActivity extends FragmentActivity
             return;
         }
 
+        if (SettingsThemeHelper.isExpressiveTheme(this)) {
+            setTheme(R.style.Theme_SafetyCenterQsExpressive);
+        }
+
         configureFragment();
     }
 
@@ -73,13 +77,14 @@ public class SafetyCenterQsActivity extends FragmentActivity
     public Resources.Theme getTheme() {
         Resources.Theme theme = super.getTheme();
         if (SettingsThemeHelper.isExpressiveTheme(this)) {
+            theme.applyStyle(R.style.ThemeOverlay_SafetyCenterColors_DayNight, /* force= */ true);
             theme.applyStyle(R.style.ThemeOverlay_SafetyCenter_Expressive, /* force= */ true);
             theme.applyStyle(
                     R.style.ThemeOverlay_SafetyCenter_ExpressiveButtons_QuickSettings,
                     /* force= */ true);
-            theme.applyStyle(
-                    R.style.ThemeOverlay_SafetyCenter_ExpressiveColors_QuickSettings,
-                    /* force= */ true);
+            theme.applyStyle(R.style.ThemeOverlay_SafetyCenter_ExpressiveColors, /* force= */ true);
+        } else {
+            theme.applyStyle(R.style.ThemeOverlay_SafetyCenterColors_Dark, /* force= */ true);
         }
         return theme;
     }

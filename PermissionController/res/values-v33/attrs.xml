@@ -17,6 +17,7 @@
 
 <resources>
     <attr name="colorSurface" format="color" />
+    <attr name="colorSurfaceContainerHigh" format="color" />
     <attr name="colorSurfaceVariant" format="color" />
     <attr name="colorAccentPrimary" format="color" />
     <attr name="colorScStatusInfo" format="color" />
