@@ -37,6 +37,7 @@ import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiScrollable
 import androidx.test.uiautomator.UiSelector
 import androidx.test.uiautomator.Until
+import com.android.compatibility.common.util.DisableAnimationRule
 import com.android.compatibility.common.util.SystemUtil.eventually
 import com.android.compatibility.common.util.UiAutomatorUtils2
 import com.android.modules.utils.build.SdkLevel
@@ -63,6 +64,8 @@ class AppPermissionsTest {
             Manifest.permission.MANAGE_ONE_TIME_PERMISSION_SESSIONS,
             Manifest.permission.REVOKE_RUNTIME_PERMISSIONS,
         )
+
+    @get:Rule val disableAnimationRule = DisableAnimationRule()
 
     private lateinit var persistentDeviceId: String
     private lateinit var externalDeviceCameraText: String

@@ -46,6 +46,7 @@ import androidx.test.uiautomator.By;
 import androidx.test.uiautomator.UiDevice;
 import androidx.test.uiautomator.UiObject2;
 
+import com.android.compatibility.common.util.DisableAnimationRule;
 import com.android.compatibility.common.util.FeatureUtil;
 import com.android.compatibility.common.util.SystemUtil;
 import com.android.compatibility.common.util.UiAutomatorUtils2;
@@ -99,6 +100,9 @@ public class OneTimePermissionTest {
     @Rule
     public IgnoreAllTestsRule mIgnoreAutomotive = new IgnoreAllTestsRule(
             mContext.getPackageManager().hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE));
+
+    @Rule
+    public DisableAnimationRule mDisableAnimationRule = new DisableAnimationRule();
 
     @Before
     public void wakeUpScreen() {
