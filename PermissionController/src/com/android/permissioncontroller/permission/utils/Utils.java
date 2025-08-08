@@ -549,7 +549,7 @@ public final class Utils {
         if (group.equals(Manifest.permission_group.UNDEFINED)) {
             List<PermissionInfo> undefinedPerms = new ArrayList<>();
             for (PermissionInfo permissionInfo : installedRuntime) {
-                if (Flags.replaceBodySensorPermissionEnabled()
+                if (SdkLevel.isAtLeastB()
                     && (permissionInfo.name.equals(Manifest.permission.BODY_SENSORS) ||
                     permissionInfo.name.equals(Manifest.permission.BODY_SENSORS_BACKGROUND))) {
                     continue;
@@ -1109,7 +1109,7 @@ public final class Utils {
         }
 
         // Only show Fitness&Wellness chip on Wear if the app is requesting system permissions.
-        if (Flags.replaceBodySensorPermissionEnabled()
+        if (SdkLevel.isAtLeastB()
                 && pm.hasSystemFeature(PackageManager.FEATURE_WATCH)) {
             Set<String> requestedPermissions = new HashSet<>(packageInfo.getRequestedPermissions());
             for (PermissionInfo permission : permissions) {
@@ -1163,10 +1163,10 @@ public final class Utils {
      * Returns true if the request is being made as the result of a split health permission from
      * BODY_SENSORS call.
      */
-    @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
+    @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.BAKLAVA)
     private static boolean isRequestFromSplitHealthPermission(LightPackageInfo packageInfo) {
         // Sdk check to make sure HealthConnectManager.isHealthPermission() is supported.
-        if (!SdkLevel.isAtLeastU() || !Flags.replaceBodySensorPermissionEnabled()) {
+        if (!SdkLevel.isAtLeastB()) {
             return false;
         }
 
