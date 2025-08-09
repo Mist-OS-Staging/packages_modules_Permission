@@ -44,6 +44,13 @@
 
     <!-- END EXPRESSIVE ENHANCED CONFIRMATION DIALOG -->
 
+    <style name="Theme.SafetyCenterQsExpressive"
+        parent="@android:style/Theme.DeviceDefault.DayNight">
+        <item name="android:filterTouchesWhenObscured">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
     <style name="ThemeOverlay.SafetyCenter.Expressive" parent="">
         <item name="scCardSideMargin">0dp</item>
 
@@ -86,7 +93,15 @@
         <item name="scSecondaryActionButtonStyle">@style/ExpressiveOutlineActionButton.Fixed</item>
     </style>
 
-    <style name="ThemeOverlay.SafetyCenter.ExpressiveColors" parent="">
+    <!-- Contains colors whose resource name does not change between light and dark. -->
+    <style name="ThemeOverlay.SafetyCenter.ExpressiveColorsBase" parent="">
+        <item name="colorSurfaceContainerHigh">
+            @color/settingslib_materialColorSurfaceContainerHigh
+        </item>
+    </style>
+
+    <style name="ThemeOverlay.SafetyCenter.ExpressiveColors"
+        parent="ThemeOverlay.SafetyCenter.ExpressiveColorsBase">
         <item name="textColorScActionButton">?attr/colorOnPrimary</item>
         <item name="textColorScActionButtonRecommend">?android:attr/textColorPrimary</item>
         <item name="textColorScSecondaryActionButton">?android:attr/textColorPrimary</item>
@@ -107,30 +122,6 @@
         </item>
         <item name="colorScOutlineButtonWarnBase">
             @color/sc_expressive_semantic_red_container_high_lt
-        </item>
-    </style>
-
-    <style name="ThemeOverlay.SafetyCenter.ExpressiveColors.QuickSettings">
-        <item name="textColorScActionButton">?android:attr/textColorPrimary</item>
-        <item name="textColorScActionButtonRecommend">?android:attr/textColorPrimaryInverse</item>
-        <item name="textColorScSecondaryActionButton">?android:attr/textColorPrimaryInverse</item>
-        <item name="colorScButtonInfoBase">
-            @color/sc_expressive_semantic_green_container_high_dt
-        </item>
-        <item name="colorScOutlineButtonInfoBase">
-            @color/sc_expressive_semantic_green_container_high_dt
-        </item>
-        <item name="colorScButtonRecommendBase">
-            @color/sc_expressive_semantic_yellow_container_high_dt
-        </item>
-        <item name="colorScOutlineButtonRecommendBase">
-            @color/sc_expressive_semantic_yellow_container_high_dt
-        </item>
-        <item name="colorScButtonWarnBase">
-            @color/sc_expressive_semantic_red_container_high_dt
-        </item>
-        <item name="colorScOutlineButtonWarnBase">
-            @color/sc_expressive_semantic_red_container_high_dt
         </item>
     </style>
 </resources>

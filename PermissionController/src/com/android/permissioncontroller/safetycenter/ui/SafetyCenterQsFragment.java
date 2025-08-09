@@ -129,7 +129,9 @@ public class SafetyCenterQsFragment extends Fragment {
             mPermGroupUsages = new ArrayList<>();
         }
 
-        getActivity().setTheme(R.style.Theme_SafetyCenterQs);
+        if (!SettingsThemeHelper.isExpressiveTheme(requireContext())) {
+            getActivity().setTheme(R.style.Theme_SafetyCenterQs);
+        }
 
         SafetyCenterQsViewModelFactory factory =
                 new SafetyCenterQsViewModelFactory(
