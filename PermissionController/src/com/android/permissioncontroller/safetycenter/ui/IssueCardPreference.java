@@ -92,6 +92,8 @@ public class IssueCardPreference extends Preference
             PositionInCardList positionInCardList) {
         super(context);
         setLayoutResource(R.layout.preference_issue_card);
+        // The root view of this preference is not selectable, while child views are.
+        setSelectable(false);
 
         mSafetyCenterViewModel = requireNonNull(safetyCenterViewModel);
         mIssue = requireNonNull(issue);
