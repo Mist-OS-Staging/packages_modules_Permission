@@ -274,7 +274,7 @@
     <string name="unused_apps_notification_title" msgid="4314832015894238019">"{count,plural, =1{प्रयोग नगरिएको # वटा एप}other{प्रयोग नगरिएका # वटा एप}}"</string>
     <string name="unused_apps_notification_content" msgid="9195026773244581246">"एपलाई दिइएका अनुमति तथा अस्थायी फाइलहरू हटाइएका छन् र सूचनाहरू बन्द गरिएका छन्। समीक्षा गर्न ट्याप गर्नुहोस्।"</string>
     <string name="unused_apps_safety_center_card_title" msgid="5638409355530099149">"अनुमति हटाइएका एपहरूको समीक्षा गर्नुहोस्"</string>
-    <string name="unused_apps_safety_center_card_content" msgid="1088557243627427820">"तपाईंले केही समयसम्म नचलाएका एपहरूका हकमा अनुमति र अस्थायी फाइलहरू हटाइने छन् र सूचना पठाउन छाडिने छ।"</string>
+    <string name="unused_apps_safety_center_card_content" msgid="1088557243627427820">"तपाईंले केही समयसम्म नचलाएका एपहरूका हकमा अनुमति र अस्थायी फाइलहरू हटाइने छन् र नोटिफिकेसन पठाउन छाडिने छ।"</string>
     <string name="unused_apps_safety_center_action_title" msgid="8865914432518993194">"एपहरूको समीक्षा गर्नुहोस्"</string>
     <string name="post_drive_permission_decision_reminder_title" msgid="1290697371418139976">"हालसालै अनुमतिका सम्बन्धमा गरिएका निर्णय जाँच्नुहोस्"</string>
     <string name="post_drive_permission_decision_reminder_summary_1_app_1_permission" msgid="670521503734140711">"सवारी साधन चलाइरहेको बेला तपाईंले <xliff:g id="APP">%1$s</xliff:g> लाई <xliff:g id="PERMISSION">%2$s</xliff:g> प्रयोग गर्ने अनुमति दिनुभयो"</string>
@@ -632,7 +632,7 @@
     <string name="perm_toggle_description" msgid="7801326363741451379">"एप तथा सेवाहरूका हकमा"</string>
     <string name="mic_toggle_description" msgid="9163104307990677157">"एप तथा सेवाहरूका हकमा। यो सेटिङ अफ गरिएको अवस्थामा तपाईंले आपत्‍कालीन नम्बरमा कल गर्नुभयो भने माइक्रोफोनसम्बन्धी डेटा अझै पनि सेयर गरिन सक्छ।"</string>
     <string name="location_settings_subtitle" msgid="2328360561197430695">"लोकेसन प्रयोग गर्ने अनुमति दिइएका एप तथा सेवाहरू हेर्नुहोस्"</string>
-    <string name="show_clip_access_notification_title" msgid="5168467637351109096">"क्लिपबोर्डका सामग्री प्रयोग गरिँदा सूचना देखाउनुहोस्"</string>
+    <string name="show_clip_access_notification_title" msgid="5168467637351109096">"क्लिपबोर्डका सामग्री प्रयोग गरिँदा नोटिफिकेसन देखाउनुहोस्"</string>
     <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"मैले कपी गरेका टेक्स्ट, फोटो वा अन्य सामग्री एपहरूले प्रयोग गर्दा म्यासेज देखाउनुहोस्"</string>
     <string name="show_password_title" msgid="2877269286984684659">"पासवर्डहरू देखाउनुहोस्"</string>
     <string name="show_password_summary" msgid="1110166488865981610">"टाइप गर्दै गर्दा वर्णहरू झलक्क देखाउनुहोस्"</string>

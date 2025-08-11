@@ -471,7 +471,7 @@
     <string name="assistant_record_audio_user_sensitive_summary" msgid="6482937591816401619">"使用麥克風啟用語音助手時，在狀態列中顯示圖示"</string>
     <string name="permgrouprequest_storage_isolated" msgid="4892154224026852295">"要允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;存取你裝置上的相片和媒體嗎？"</string>
     <string name="permgrouprequest_device_aware_storage_isolated" msgid="6463062962458809752">"允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;存取「<xliff:g id="DEVICE_NAME">%2$s</xliff:g>」&lt;b&gt;&lt;/b&gt;上的相片和媒體嗎？"</string>
-    <string name="permgrouprequest_contacts" msgid="8391550064551053695">"允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;存取你的聯絡人嗎？"</string>
+    <string name="permgrouprequest_contacts" msgid="8391550064551053695">"允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;存取你的通訊錄嗎？"</string>
     <string name="permgrouprequest_device_aware_contacts" msgid="731025863972535928">"允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;存取你「<xliff:g id="DEVICE_NAME">%2$s</xliff:g>」&lt;b&gt;&lt;/b&gt;上的通訊錄嗎？"</string>
     <string name="permgrouprequest_location" msgid="6990232580121067883">"允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;存取此裝置的位置資訊嗎？"</string>
     <string name="permgrouprequest_device_aware_location" msgid="6075412127429878638">"允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;存取「<xliff:g id="DEVICE_NAME">%2$s</xliff:g>」&lt;b&gt;&lt;/b&gt;的位置嗎？"</string>
