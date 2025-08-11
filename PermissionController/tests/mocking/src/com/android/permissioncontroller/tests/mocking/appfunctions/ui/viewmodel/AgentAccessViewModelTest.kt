@@ -194,7 +194,7 @@ class AgentAccessViewModelTest {
             application,
             agentPackageName,
             appFunctionRepository,
-            GetDeviceSettingsTargetIconUseCase(application, packageRepository),
+            GetDeviceSettingsTargetIconUseCase(packageRepository),
             GetAppFunctionPackageInfoUseCase(packageRepository),
             GetAccessRequestStateUseCase(appFunctionRepository),
             UpdateAccessUseCase(appFunctionRepository),

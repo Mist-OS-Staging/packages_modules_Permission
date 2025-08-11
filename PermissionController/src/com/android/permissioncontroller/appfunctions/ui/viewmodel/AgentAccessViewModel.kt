@@ -139,7 +139,7 @@ class AgentAccessViewModelFactory(
         val appFunctionRepository = AppFunctionRepository.getInstance(application)
         val packageRepository = PackageRepository.getInstance(application)
         val getDeviceSettingsTargetIconUseCase =
-            GetDeviceSettingsTargetIconUseCase(application, packageRepository)
+            GetDeviceSettingsTargetIconUseCase(packageRepository)
         val getAppFunctionPackageInfoUseCase = GetAppFunctionPackageInfoUseCase(packageRepository)
         val getAccessRequestStateUseCase = GetAccessRequestStateUseCase(appFunctionRepository)
         val updateAccessUseCase = UpdateAccessUseCase(appFunctionRepository)

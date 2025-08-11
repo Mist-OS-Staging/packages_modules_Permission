@@ -252,7 +252,11 @@ PF : AgentAccessChildFragment.Parent {
         // Ensure current ux state reflects the data state
         preference.apply {
             setTitle(R.string.app_function_device_settings_target_title)
-            icon = target.icon
+            if (target.icon != null) {
+                icon = target.icon
+            } else {
+                setIcon(R.drawable.ic_appfunction_target_device_settings)
+            }
             isChecked = target.accessGranted
         }
         preferenceGroup.addPreference(preference)

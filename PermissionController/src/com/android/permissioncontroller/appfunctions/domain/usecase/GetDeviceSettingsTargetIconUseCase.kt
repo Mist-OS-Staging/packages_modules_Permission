@@ -15,26 +15,21 @@
  */
 package com.android.permissioncontroller.appfunctions.domain.usecase
 
-import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.UserHandle
-import com.android.permissioncontroller.R
 import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
 
 /**
- * This use case returns a [Drawable] for the Device Settings target for the specified user
+ * This use case returns a [Drawable] for the Device Settings target for the specified user. Returns
+ * null if the settings package or its icon cannot be found.
  *
- * @param appContext The application context used to get drawables
  * @param packageRepository The repository to use to get the package labels and icons.
  */
-class GetDeviceSettingsTargetIconUseCase(
-    private val appContext: Context,
-    private val packageRepository: PackageRepository,
-) {
+class GetDeviceSettingsTargetIconUseCase(private val packageRepository: PackageRepository) {
     operator fun invoke(user: UserHandle): Drawable? {
         val settingsPackageName = packageRepository.getSettingsPackageName(user)
         return settingsPackageName?.let {
             packageRepository.getBadgedPackageIcon(settingsPackageName, user)
-        } ?: appContext.getDrawable(R.drawable.ic_settings_24dp)
+        }
     }
 }
