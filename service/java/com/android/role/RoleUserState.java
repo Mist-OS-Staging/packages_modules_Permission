@@ -32,6 +32,7 @@ import android.util.Log;
 import androidx.annotation.RequiresApi;
 
 import com.android.internal.annotations.GuardedBy;
+import com.android.internal.annotations.VisibleForTesting;
 import com.android.internal.util.dump.DualDumpOutputStream;
 import com.android.modules.utils.BackgroundThread;
 import com.android.permission.util.CollectionUtils;
@@ -116,7 +117,7 @@ class RoleUserState {
     private boolean mDestroyed;
 
     @NonNull
-    private final Handler mWriteHandler = new Handler(BackgroundThread.get().getLooper());
+    private final Handler mWriteHandler;
 
     /**
      * Create a new user state, and read its state from disk if previously persisted.
@@ -128,9 +129,27 @@ class RoleUserState {
      */
     public RoleUserState(@UserIdInt int userId, @NonNull RoleServicePlatformHelper platformHelper,
             @NonNull Callback callback, boolean bypassingRoleQualification) {
+        this(userId, platformHelper, callback, bypassingRoleQualification,
+            new Handler(BackgroundThread.get().getLooper()));
+    }
+
+    /**
+     * Test only constructor that allows override of the write handler
+     *
+     * @param userId the user id for this user state
+     * @param platformHelper the platform helper
+     * @param callback the callback for this user state
+     * @param bypassingRoleQualification whether role qualification is being bypassed
+     * @param writeHandler the handler to use for writing the state to file
+     */
+    @VisibleForTesting
+    public RoleUserState(@UserIdInt int userId, @NonNull RoleServicePlatformHelper platformHelper,
+            @NonNull Callback callback, boolean bypassingRoleQualification,
+            @NonNull Handler writeHandler) {
         mUserId = userId;
         mPlatformHelper = platformHelper;
         mCallback = callback;
+        mWriteHandler = writeHandler;
 
         synchronized (mLock) {
             mBypassingRoleQualification = bypassingRoleQualification;
