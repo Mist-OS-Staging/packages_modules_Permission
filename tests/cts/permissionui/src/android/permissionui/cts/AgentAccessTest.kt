@@ -31,6 +31,7 @@ import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import androidx.test.filters.SdkSuppress
 import androidx.test.uiautomator.By
 import com.android.compatibility.common.util.SystemUtil.callWithShellPermissionIdentity
+import com.android.compatibility.common.util.SystemUtil.eventually
 import com.android.compatibility.common.util.SystemUtil.runWithShellPermissionIdentity
 import com.google.common.truth.Truth.assertThat
 import org.junit.After
@@ -125,6 +126,26 @@ class AgentAccessTest : BaseUsePermissionTest() {
             click(By.textContains(TARGET_APP_LABEL))
             assertThat(getAccessRequestState(AGENT_APP_PACKAGE_NAME, TARGET_APP_PACKAGE_NAME))
                 .isEqualTo(expectedAccessRequestState)
+        } finally {
+            pressBack()
+        }
+    }
+
+    @Test
+    fun targetAppAddedAndRemoved_uiStateUpdated() {
+        startAppFunctionAgentAccessActivity()
+
+        try {
+            // Verify target is shown initially
+            findView(By.textContains(TARGET_APP_LABEL), true)
+
+            // Uninstall target and verify it's not shown
+            uninstallPackage(TARGET_APP_PACKAGE_NAME)
+            eventually { findView(By.textContains(TARGET_APP_LABEL), false) }
+
+            // Install target and verify it's shown
+            installPackage(TARGET_APP_APK_PATH)
+            eventually { findView(By.textContains(TARGET_APP_LABEL), true) }
         } finally {
             pressBack()
         }

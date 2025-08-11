@@ -24,6 +24,7 @@ import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import androidx.test.filters.SdkSuppress
 import androidx.test.uiautomator.By
+import com.android.compatibility.common.util.SystemUtil.eventually
 import com.android.compatibility.common.util.SystemUtil.runWithShellPermissionIdentity
 import org.junit.After
 import org.junit.Assume.assumeFalse
@@ -93,6 +94,26 @@ class AgentListTest : BaseUsePermissionTest() {
 
         try {
             findView(By.textContains(AGENT_APP_LABEL), true)
+        } finally {
+            pressBack()
+        }
+    }
+
+    @Test
+    fun agentAppAddedAndRemoved_uiStateUpdated() {
+        startAppFunctionAgentListActivity()
+
+        try {
+            // Verify agent is not shown initially
+            findView(By.textContains(AGENT_APP_LABEL), false)
+
+            // Install agent and verify it's shown
+            installPackage(AGENT_APP_APK_PATH)
+            eventually { findView(By.textContains(AGENT_APP_LABEL), true) }
+
+            // Uninstall agent and verify it's not shown
+            uninstallPackage(AGENT_APP_PACKAGE_NAME)
+            eventually { findView(By.textContains(AGENT_APP_LABEL), false) }
         } finally {
             pressBack()
         }
