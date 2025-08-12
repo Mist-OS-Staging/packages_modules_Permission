@@ -659,19 +659,24 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
         vararg permissions: String?,
         crossinline block: () -> Unit,
     ) {
+        val intent = Intent().apply {
+                component =
+                    ComponentName(
+                        APP_PACKAGE_NAME,
+                        "$APP_PACKAGE_NAME.RequestPermissionsActivity",
+                    )
+                putExtra("$APP_PACKAGE_NAME.PERMISSIONS", permissions)
+                addFlags(FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK)
+            }
         // Request the permissions
-        doAndWaitForWindowTransition {
-            context.startActivity(
-                Intent().apply {
-                    component =
-                        ComponentName(
-                            APP_PACKAGE_NAME,
-                            "$APP_PACKAGE_NAME.RequestPermissionsActivity",
-                        )
-                    putExtra("$APP_PACKAGE_NAME.PERMISSIONS", permissions)
-                    addFlags(FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK)
-                }
-            )
+        // The WindowManagerStateHelper#waitForValidState only supports S+
+        if (SdkLevel.isAtLeastS()) {
+            context.startActivity(intent)
+            waitForPermissionRequestActivity()
+        } else {
+            doAndWaitForWindowTransition {
+                context.startActivity(intent)
+            }
         }
         // Perform the post-request action
         block()
@@ -1117,6 +1122,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
     }
 
     protected fun clickPermissionRationaleViewInGrantDialog() {
+        assertPermissionRationaleContainerOnGrantDialogIsVisible(true)
         clickAndWaitForWindowTransition(
             By.res(GRANT_DIALOG_PERMISSION_RATIONALE_CONTAINER_VIEW).displayId(displayId)
         )

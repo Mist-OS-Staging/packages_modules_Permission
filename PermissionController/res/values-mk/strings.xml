@@ -198,9 +198,9 @@
     <string name="app_permission_location_accuracy" msgid="7166912915040018669">"Користи прецизна локација"</string>
     <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"Кога прецизната локација е исклучена, апликациите може да пристапуваат до приближната локација"</string>
     <string name="app_permission_title" msgid="2090897901051370711">"Дозвола за <xliff:g id="PERM">%1$s</xliff:g>"</string>
-    <string name="app_permission_header" msgid="2951363137032603806">"Пристап до <xliff:g id="PERM">%1$s</xliff:g> за апликацијава"</string>
+    <string name="app_permission_header" msgid="2951363137032603806">"Пристап до „<xliff:g id="PERM">%1$s</xliff:g>“ за апликацијава"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"Пристап до <xliff:g id="PERM">%1$s</xliff:g> за апликацијава на <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
-    <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"Прикажи ги сите дозволи за <xliff:g id="APP">%1$s</xliff:g>"</string>
+    <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"Прикажи ги сите дозволи за „<xliff:g id="APP">%1$s</xliff:g>“"</string>
     <string name="app_permission_footer_permission_apps_link" msgid="3941988129992794327">"Прикажи ги сите апликации со оваа дозвола"</string>
     <string name="app_permission_info_button" msgid="8973692370208562556">"Информации"</string>
     <string name="app_permission_settings_button" msgid="4582916817451973752">"Поставки"</string>

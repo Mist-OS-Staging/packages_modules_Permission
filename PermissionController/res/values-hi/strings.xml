@@ -410,7 +410,7 @@
     <string name="role_notes_search_keywords" msgid="7710756695666744631">"नोट"</string>
     <string name="role_wallet_label" msgid="3719419175656204207">"डिफ़ॉल्ट वॉलेट ऐप्लिकेशन"</string>
     <string name="role_wallet_short_label" msgid="6521288403762457452">"वॉलेट ऐप्लिकेशन"</string>
-    <string name="role_wallet_description" msgid="3726535836165949838">"वॉलेट ऐप्लिकेशन में, अलग-अलग तरह के लेन-देन में इस्तेमाल होने वाली चीज़ों को स्टोर किया जा सकता है. जैसे, क्रेडिट कार्ड, लॉयल्टी कार्ड, कार की डिजिटल कुंजी वगैरह."</string>
+    <string name="role_wallet_description" msgid="3726535836165949838">"वॉलेट ऐप्लिकेशन में, ऐक्सेस और लेन-देन के लिए इस्तेमाल होने वाले आइटम स्टोर किए जा सकते हैं. जैसे, क्रेडिट कार्ड, लॉयल्टी कार्ड, फ़ोन से कार खोलने या चालू करने की कुंजी वगैरह."</string>
     <string name="role_wallet_request_title" msgid="4770217108262737093">"क्या <xliff:g id="APP_NAME">%1$s</xliff:g> को अपने डिफ़ॉल्ट वॉलेट ऐप्लिकेशन के तौर पर सेट करना है?"</string>
     <string name="role_wallet_request_description" msgid="6305487425777483053">"अनुमति लेना ज़रूरी नहीं है"</string>
     <string name="request_role_current_default" msgid="738722892438247184">"मौजूदा डिफ़ॉल्ट"</string>
@@ -482,7 +482,7 @@
     <string name="permgroupupgraderequest_location" msgid="8328408946822691636">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; के लिए जगह की जानकारी का ऐक्सेस बदलना चाहते हैं?"</string>
     <string name="permgroupupgraderequest_device_aware_location" msgid="1812338666887726191">"क्या &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; के लिए, &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt; की जगह की जानकारी का ऐक्सेस बदलना है?"</string>
     <string name="permgroupupgraderequestdetail_location" msgid="1550899076845189165">"यह ऐप्लिकेशन आपके डिवाइस की जगह की जानकारी हर समय ऐक्सेस करना चाहता है. उस समय भी जब आप इसका इस्तेमाल न कर रहे हों. "<annotation id="link">"सेटिंग में इसकी अनुमति दें."</annotation></string>
-    <string name="permgrouprequest_nearby_devices" msgid="2272829282660436700">"क्या आपको &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; को आस-पास मौजूद डिवाइसों को खोजने, उनसे कनेक्ट करने, और उनकी जगह की जानकारी का पता लगाने की अनुमति देनी है?"</string>
+    <string name="permgrouprequest_nearby_devices" msgid="2272829282660436700">"क्या &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; को आस-पास मौजूद डिवाइस खोजने, उनसे कनेक्ट होने, और उनकी दूरी का पता लगाने की अनुमति देनी है?"</string>
     <string name="permgrouprequest_device_aware_nearby_devices" msgid="5293478278408567442">"क्या &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; को &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt; के आस-पास मौजूद डिवाइसों को खोजने, उनसे कनेक्ट करने, और उनकी जगह की जानकारी का पता लगाने की अनुमति देनी है?"</string>
     <string name="permgroupupgraderequestdetail_nearby_devices" msgid="6877531270654738614">"क्या आप &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; को आस-पास मौजूद डिवाइसों को खोजने, उनसे कनेक्ट करने, और उनकी जगह की जानकारी का पता लगाने की अनुमति देना चाहते हैं? "<annotation id="link">"सेटिंग में जाकर अनुमति दें."</annotation></string>
     <string name="permgrouprequest_fineupgrade" msgid="2334242928821697672">"क्या <xliff:g id="APP_NAME">&lt;b&gt;%1$s&lt;/b&gt;</xliff:g> आपकी जगह की अनुमानित जानकारी के बजाय सटीक जानकारी ऐक्सेस करे?"</string>

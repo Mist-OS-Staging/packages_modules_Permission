@@ -198,7 +198,7 @@
     <string name="app_permission_location_accuracy" msgid="7166912915040018669">"ఖచ్చితమైన లొకేషన్‌ను ఉపయోగించండి"</string>
     <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"ఖచ్చితమైన లొకేషన్ అనే సెట్టింగ్ ఆఫ్‌లో ఉన్నప్పుడు, యాప్‌లు మీ సుమారు లొకేషన్‌ను యాక్సెస్ చేయగలవు"</string>
     <string name="app_permission_title" msgid="2090897901051370711">"\'<xliff:g id="PERM">%1$s</xliff:g>\' అనుమతి"</string>
-    <string name="app_permission_header" msgid="2951363137032603806">"ఈ యాప్ కోసం \'<xliff:g id="PERM">%1$s</xliff:g>\' యాక్సెస్‌ను ఇవ్వాలా? వద్దా"</string>
+    <string name="app_permission_header" msgid="2951363137032603806">"ఈ యాప్‌నకు \'<xliff:g id="PERM">%1$s</xliff:g>\' యాక్సెస్‌:"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g> పరికరంలో ఈ యాప్‌నకు <xliff:g id="PERM">%1$s</xliff:g> యాక్సెస్"</string>
     <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"అన్ని \'<xliff:g id="APP">%1$s</xliff:g>\' అనుమతులను చూడండి"</string>
     <string name="app_permission_footer_permission_apps_link" msgid="3941988129992794327">"ఈ అనుమతి ఉన్న అన్ని యాప్‌లను చూడండి"</string>
@@ -239,7 +239,7 @@
     <string name="permission_description_summary_call_log" msgid="7321437186317577624">"ఈ అనుమతి ఉన్న యాప్‍‌లు ఫోన్ కాల్ లాగ్‌ను చదవగలుగుతాయి, దానిలో రాయగలుగుతాయి"</string>
     <string name="permission_description_summary_camera" msgid="108004375101882069">"ఈ అనుమతి ఉన్న యాప్‌లు ఫోటోలు తీయగలవు, వీడియోను రికార్డ్ చేయగలవు"</string>
     <string name="permission_description_summary_contacts" msgid="2337798886460408996">"ఈ అనుమతి ఉన్న యాప్‌లు మీ కాంటాక్ట్‌లను యాక్సెస్ చేయగలవు"</string>
-    <string name="permission_description_summary_location" msgid="2817531799933480694">"ఈ అనుమతి ఉన్న యాప్‌లు ఈ పరికర లొకేషన్‌ను యాక్సెస్ చేయగలవు"</string>
+    <string name="permission_description_summary_location" msgid="2817531799933480694">"ఈ అనుమతి ఉన్న యాప్‌లు ఈ డివైజ్ లొకేషన్‌ను యాక్సెస్ చేయగలవు"</string>
     <string name="permission_description_summary_nearby_devices" msgid="8269183818275073741">"ఈ అనుమతి ఉన్న యాప్‌లు సమీప పరికరాలను గుర్తించవచ్చు, వాటి సంబంధిత పొజిషన్‌ను తెలుసుకోవచ్చు, అలాగే వాటికి కనెక్ట్ చేయవచ్చు"</string>
     <string name="permission_description_summary_microphone" msgid="630834800308329907">"ఈ అనుమతి ఉన్న యాప్‌లు ఆడియోను రికార్డ్ చేయగలవు"</string>
     <string name="permission_description_summary_phone" msgid="4515277217435233619">"ఈ అనుమతులు ఉన్న యాప్‌లు ఫోన్ కాల్స్‌ చేయగలవు, మేనేజ్ చేయగలవు"</string>
@@ -345,7 +345,7 @@
     <string name="app_perms_content_provider_7d_all_files" msgid="7962416229708835558">"గత 7 రోజుల్లో యాక్సెస్ చేయబడింది • అన్ని ఫైల్స్"</string>
     <string name="no_permissions_allowed" msgid="6081976856354669209">"అనుమతులు ఏవీ ఇవ్వలేదు"</string>
     <string name="no_permissions_denied" msgid="8159923922804043282">"అన్ని అనుమతులు ఇచ్చారు"</string>
-    <string name="no_apps_allowed" msgid="7718822655254468631">"ఏ యాప్‌న‌కు అనుమతి లేదు"</string>
+    <string name="no_apps_allowed" msgid="7718822655254468631">"ఏ యాప్‌న‌కూ అనుమతి లేదు"</string>
     <string name="no_apps_allowed_full" msgid="8011716991498934104">"అన్ని ఫైళ్ల కోసం యాప్‌లు అనుమతించబడవు"</string>
     <string name="no_apps_allowed_scoped" msgid="4908850477787659501">"మీడియా మాత్రమే కోసం యాప్‌లు అనుమతించబడవు"</string>
     <string name="no_apps_denied" msgid="7663435886986784743">"ఏ యాప్‌నూ నిరాక‌రించ‌లేదు"</string>
@@ -410,7 +410,7 @@
     <string name="role_notes_search_keywords" msgid="7710756695666744631">"నోట్స్"</string>
     <string name="role_wallet_label" msgid="3719419175656204207">"ఆటోమేటిక్ వాలెట్ యాప్"</string>
     <string name="role_wallet_short_label" msgid="6521288403762457452">"వాలెట్ యాప్"</string>
-    <string name="role_wallet_description" msgid="3726535836165949838">"వాలెట్ యాప్‌లు మీ క్రెడిట్‌ను, లాయల్టీ కార్డ్‌లను, కార్ కీలను, ఇంకా వివిధ రకాల లావాదేవీలకు సహాయపడటానికి ఇతర వస్తువులను స్టోర్ చేయగలవు."</string>
+    <string name="role_wallet_description" msgid="3726535836165949838">"వాలెట్ యాప్‌లు మీ క్రెడిట్‌ కార్డ్‌లను, లాయల్టీ కార్డ్‌లను, కార్ కీలను, ఇతర వస్తువులను స్టోర్ చేస్తాయి. తద్వారా మీరు పలు రకాల లావాదేవీలు చేయడానికి సాయం చేస్తాయి."</string>
     <string name="role_wallet_request_title" msgid="4770217108262737093">"<xliff:g id="APP_NAME">%1$s</xliff:g>‌ను డిఫాల్ట్ వాలెట్ యాప్‌గా సెట్ చేయాలా?"</string>
     <string name="role_wallet_request_description" msgid="6305487425777483053">"అనుమతులు ఏవీ అవసరం లేదు"</string>
     <string name="request_role_current_default" msgid="738722892438247184">"ప్రస్తుతం ఆటోమేటిక్‌గా ఉంది"</string>
@@ -482,9 +482,9 @@
     <string name="permgroupupgraderequest_location" msgid="8328408946822691636">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; కోసం లొకేష‌న్‌ యాక్సెస్‌ను మార్చాలా?"</string>
     <string name="permgroupupgraderequest_device_aware_location" msgid="1812338666887726191">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;‌లో &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌కు సంబంధించిన లొకేషన్ యాక్సెస్‌ను మార్చాలా?"</string>
     <string name="permgroupupgraderequestdetail_location" msgid="1550899076845189165">"మీరు యాప్ ఉపయోగించనప్పుడు కూడా ఈ యాప్ మీ లొకేష‌న్‌ను ఎప్పటికప్పుడు యాక్సెస్ చేయాల‌ని అనుకుంటోంది."<annotation id="link">"సెట్టింగ్‌లలో అనుమతించండి."</annotation></string>
-    <string name="permgrouprequest_nearby_devices" msgid="2272829282660436700">"సమీప పరికరాల సంబంధిత పొజిషన్‌ను కనుగొనడానికి, కనెక్ట్ చేయడానికి అలాగే నిర్ణయించడానికి \"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;\"ను అనుమతించాలా?"</string>
-    <string name="permgrouprequest_device_aware_nearby_devices" msgid="5293478278408567442">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;‌లో సమీప పరికరాలు కనుగొని, కనెక్ట్ అయి, వాటి దూరం అంచనా వేసేలా &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌ను అనుమతించాలా?"</string>
-    <string name="permgroupupgraderequestdetail_nearby_devices" msgid="6877531270654738614">"సమీప పరికరాల సంబంధిత పొజిషన్‌ను కనుగొనడానికి, కనెక్ట్ చేయడానికి అలాగే నిర్ణయించడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ను అనుమతించాలా? "<annotation id="link">"సెట్టింగ్‌లలో అనుమతించండి."</annotation></string>
+    <string name="permgrouprequest_nearby_devices" msgid="2272829282660436700">"సమీపంలో ఉన్న డివైజ్‌ల రిలేటివ్ పొజిషన్‌ను కనుగొనడానికి, కనెక్ట్ చేయడానికి, నిర్ధారించడానికి \"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;\"ను అనుమతించాలా?"</string>
+    <string name="permgrouprequest_device_aware_nearby_devices" msgid="5293478278408567442">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;‌లో సమీప డివైజ్‌లను కనుగొనడానికి, కనెక్ట్ కావడానికి, రిలేటివ్ పొజిషన్‌ను నిర్ధారించడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌ను అనుమతించాలా?"</string>
+    <string name="permgroupupgraderequestdetail_nearby_devices" msgid="6877531270654738614">"సమీపంలో ఉన్న డివైజ్‌ల రిలేటివ్ పొజిషన్‌ను కనుగొనడానికి, కనెక్ట్ చేయడానికి, నిర్ధారించడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ను అనుమతించాలా? "<annotation id="link">"సెట్టింగ్స్‌లో అనుమతించండి."</annotation></string>
     <string name="permgrouprequest_fineupgrade" msgid="2334242928821697672">"<xliff:g id="APP_NAME">&lt;b&gt;%1$s&lt;/b&gt;</xliff:g>కు సంబంధించిన లొకేషన్ యాక్సెస్‌ను సుమారు నుండి ఖచ్చితమైనదిగా మార్చాలా?"</string>
     <string name="permgrouprequest_device_aware_fineupgrade" msgid="4453775952305587571">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;‌లో &lt;b&gt;<xliff:g id="APP_NAME">&lt;b&gt;%1$s&lt;/b&gt;</xliff:g>&lt;/b&gt; లొకేషన్ యాక్సెస్‌ను రమారమి నుండి ఖచ్చితమైన లొకేషన్‌కు మార్చాలా?"</string>
     <string name="permgrouprequest_coarselocation" msgid="7244605063736425232">"ఈ పరికరానికి సంబంధించి సుమారుగా ఉన్న లొకేషన్‌ను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ని అనుమతించాలా?"</string>
@@ -501,7 +501,7 @@
     <string name="permgrouprequest_storage_pre_q" msgid="168130651144569428">"ఈపరికరంలో &lt;b&gt;ఫోటోలు, వీడియోలు, మ్యూజిక్, ఆడియో, ఇతర ఫైళ్ల&lt;/b&gt; యాక్సెస్‌కు &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ను అనుమతించాలా?"</string>
     <string name="permgrouprequest_read_media_aural" msgid="2593365397347577812">"ఈ పరికరంలో మ్యూజిక్‌ను, ఆడియోను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌ను అనుమతించాలా?"</string>
     <string name="permgrouprequest_device_aware_read_media_aural" msgid="7927884506238101064">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;‌లో మ్యూజిక్‌ను, ఆడియోను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌కు అనుమతినివ్వాలా?"</string>
-    <string name="permgrouprequest_read_media_visual" msgid="5548780620779729975">"ఈ పరికరంలో ఫోటోలను, వీడియోలను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌ను అనుమతించాలా?"</string>
+    <string name="permgrouprequest_read_media_visual" msgid="5548780620779729975">"ఈ డివైజ్‌లోని ఫోటోలను, వీడియోలను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌ను అనుమతించాలా?"</string>
     <string name="permgrouprequest_device_aware_read_media_visual" msgid="3122576538319059333">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;‌లో ఫోటోలను, వీడియోలను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌కు అనుమతినివ్వాలా?"</string>
     <string name="permgrouprequest_more_photos" msgid="128933814654231321">"ఈ పరికరంలోని మరిన్ని ఫోటోలను, వీడియోలను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; యాప్‌ను అనుమతించాలా?"</string>
     <string name="permgrouprequest_device_aware_more_photos" msgid="1703469013613723053">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;‌లో మరిన్ని ఫోటోలను, వీడియోలను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; యాప్‌ను అనుమతించాలా?"</string>
@@ -525,9 +525,9 @@
     <string name="permgroupupgraderequest_camera" msgid="640758449200241582">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; కోసం కెమెరా యాక్సెస్‌ను మార్చాలా?"</string>
     <string name="permgroupupgraderequest_device_aware_camera" msgid="3290160912843715236">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;‌లో &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌కు సంబంధించిన కెమెరా యాక్సెస్‌ను మార్చాలా?"</string>
     <string name="permgroupupgraderequestdetail_camera" msgid="6642747548010962597">"మీరు యాప్ ఉపయోగించనప్పుడు కూడా ఈ యాప్ ఎల్లప్పుడూ ఫోటోలను తీయాలనుకుంటోంది, వీడియోను రికార్డ్ చేయాలనుకుంటోంది. "<annotation id="link">"సెట్టింగ్‌లలో అనుమతించండి."</annotation></string>
-    <string name="permgrouprequest_calllog" msgid="2065327180175371397">"మీ ఫోన్ కాల్ లాగ్‌లను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ని అనుమతించాలా?"</string>
+    <string name="permgrouprequest_calllog" msgid="2065327180175371397">"మీ ఫోన్ కాల్ లాగ్‌లను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ను అనుమతించాలా?"</string>
     <string name="permgrouprequest_device_aware_calllog" msgid="8220927190376843309">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;‌లో ఫోన్ కాల్ లాగ్‌లను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌కు అనుమతించాలనుకుంటున్నారా?"</string>
-    <string name="permgrouprequest_phone" msgid="1829234136997316752">"ఫోన్‌ కాల్స్‌ చేయడానికి, మేనేజ్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ని అనుమతించాలా?"</string>
+    <string name="permgrouprequest_phone" msgid="1829234136997316752">"ఫోన్‌ కాల్స్‌ చేయడానికి, వాటిని మేనేజ్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ను అనుమతించాలా?"</string>
     <string name="permgrouprequest_device_aware_phone" msgid="590399263670349955">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;‌లో ఫోన్ కాల్స్ చేయడానికి, వాటిని మేనేజ్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌ను అనుమతించాలా?"</string>
     <string name="permgrouprequest_sensors" msgid="4397358316850652235">"మీ అత్యంత కీలకమైన గుర్తుల గురించి సెన్సార్ డేటాను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ని అనుమతించాలా?"</string>
     <string name="permgrouprequest_device_aware_sensors" msgid="3874451050573615157">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;‌లో కీలకమైన ఆరోగ్య కొలమానాల సెన్సార్ డేటా యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌ను అనుమతించాలా?"</string>
@@ -559,7 +559,7 @@
     <string name="exempt_info_label" msgid="6286190981253476699">"Android ద్వారా <xliff:g id="APP_NAME">%1$s</xliff:g> సంరక్షించబడుతోంది. మీ డేటా ఈ పరికరంలో ప్రాసెస్ చేయబడుతున్నందున, ఈ యాప్‌నకు సంబంధించిన అనుమతి వినియోగ సమాచారం మీ గోప్యతా డ్యాష్‌బోర్డ్‌లో చూపబడదు."</string>
     <string name="blocked_camera_title" msgid="1128510551791284384">"పరికరం కెమెరా బ్లాక్ చేయబడింది"</string>
     <string name="blocked_microphone_title" msgid="1631517143648232585">"పరికరం మైక్రోఫోన్ బ్లాక్ చేయబడింది"</string>
-    <string name="blocked_location_title" msgid="2005608279812892383">"పరికరం లొకేషన్ ఆఫ్‌లో ఉంది"</string>
+    <string name="blocked_location_title" msgid="2005608279812892383">"డివైజ్ లొకేషన్ ఆఫ్‌లో ఉంది"</string>
     <string name="blocked_sensor_summary" msgid="4443707628305027375">"యాప్‌లు, సర్వీస్‌ల కోసం"</string>
     <string name="blocked_mic_summary" msgid="8960466941528458347">"మీరు ఎమర్జెన్సీ నంబర్‌కు కాల్ చేసినప్పుడు, మైక్రోఫోన్ డేటా ఇప్పటికీ షేర్ చేయబడవచ్చు."</string>
     <string name="blocked_sensor_button_label" msgid="6742092634984289658">"మార్చండి"</string>
