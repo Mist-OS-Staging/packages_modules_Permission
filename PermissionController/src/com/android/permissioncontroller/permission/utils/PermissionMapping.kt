@@ -206,7 +206,7 @@ object PermissionMapping {
                 Manifest.permission_group.NOTIFICATIONS
         }
 
-        if (!Flags.replaceBodySensorPermissionEnabled()) {
+        if (!SdkLevel.isAtLeastB()) {
             PLATFORM_PERMISSIONS[Manifest.permission.BODY_SENSORS] =
                 Manifest.permission_group.SENSORS
             if (SdkLevel.isAtLeastT()) {
@@ -352,7 +352,7 @@ object PermissionMapping {
             PLATFORM_PERMISSIONS[permission] = HEALTH_PERMISSION_GROUP
             PLATFORM_PERMISSION_GROUPS[HEALTH_PERMISSION_GROUP]?.add(permission)
             HEALTH_PERMISSIONS_SET.add(permission)
-            if (Flags.replaceBodySensorPermissionEnabled()) {
+            if (SdkLevel.isAtLeastB()) {
                 AdminRestrictedPermissionsUtils.addAdminRestrictedPermission(permission)
             }
         }
