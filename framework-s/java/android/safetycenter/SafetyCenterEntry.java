@@ -20,8 +20,8 @@ import static android.os.Build.VERSION_CODES.TIRAMISU;
 
 import static java.util.Objects.requireNonNull;
 
-import android.annotation.IntDef;
 import android.annotation.FlaggedApi;
+import android.annotation.IntDef;
 import android.annotation.NonNull;
 import android.annotation.Nullable;
 import android.annotation.SystemApi;
@@ -223,7 +223,13 @@ public final class SafetyCenterEntry implements Parcelable {
         return mEnabled;
     }
 
-    /** Returns whether this entry has an error. */
+    /** Returns whether this entry has an error.
+     *
+     * <p>When an error is present, this object hasn't received the latest status from the safety
+     * feature it's related to because of an error during the refresh process. This is to
+     * differentiate between the other case where the lack of data is due to the refresh process not
+     * being finished yet.
+     */
     @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
     public boolean hasError() {
         return mHasError;
