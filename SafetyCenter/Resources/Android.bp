@@ -48,6 +48,7 @@ android_app {
     //},
     static_libs: [
         "SafetyCenterResourcesShared",
+        "SettingsLibSettingsTheme",
     ],
     updatable: true,
 }
