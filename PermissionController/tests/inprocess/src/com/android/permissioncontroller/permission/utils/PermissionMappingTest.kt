@@ -23,7 +23,6 @@ import android.os.Build
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
-import com.android.modules.utils.build.SdkLevel
 import com.google.common.truth.Truth.assertThat
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
@@ -36,6 +35,7 @@ import org.junit.runner.RunWith
 class PermissionMappingTest {
 
     @JvmField @Rule val instantTaskExecutorRule = InstantTaskExecutorRule()
+
     @Test
     fun testGetPlatformPermissionGroupForOp_healthPermissionGroup() {
         assertThat(
@@ -139,25 +139,12 @@ class PermissionMappingTest {
         )
     }
 
-    @SdkSuppress(maxSdkVersion = Build.VERSION_CODES.VANILLA_ICE_CREAM)
-    @Test
-    fun getGroupOfPlatformPermission_preBaklava_haveSensorsGroup() {
-        assertNotNull(
-            PermissionMapping.getGroupOfPlatformPermission(Manifest.permission.BODY_SENSORS)
-        )
-        assertNotNull(
-            PermissionMapping.getGroupOfPlatformPermission(
-                Manifest.permission.BODY_SENSORS_BACKGROUND
-            )
-        )
-    }
-
     @SdkSuppress(
         minSdkVersion = Build.VERSION_CODES.TIRAMISU,
-        maxSdkVersion = Build.VERSION_CODES.UPSIDE_DOWN_CAKE,
+        maxSdkVersion = Build.VERSION_CODES.VANILLA_ICE_CREAM,
     )
     @Test
-    fun getGroupOfPlatformPermission_preV_haveSensorsGroup() {
+    fun getGroupOfPlatformPermission_preBaklava_haveSensorsGroup() {
         assertNotNull(
             PermissionMapping.getGroupOfPlatformPermission(Manifest.permission.BODY_SENSORS)
         )

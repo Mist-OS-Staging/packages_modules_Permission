@@ -322,28 +322,12 @@ class UtilsTest {
         assertFalse(permissionNamesInSensorsGroup.contains(BODY_SENSORS_BACKGROUND))
     }
 
-    @SdkSuppress(maxSdkVersion = Build.VERSION_CODES.VANILLA_ICE_CREAM)
-    @Test
-    fun getInstalledRuntimePermissionInfosForGroup_preBaklava_bodySensorPermissionsIncluded() {
-        val permissionNamesInUndefinedGroup =
-            Utils.getInstalledRuntimePermissionInfosForGroup(context.packageManager, UNDEFINED)
-                .map { it.name }
-        val permissionNamesInSensorsGroup =
-            Utils.getInstalledRuntimePermissionInfosForGroup(context.packageManager, SENSORS)
-                .map { it.name }
-
-        assertFalse(permissionNamesInUndefinedGroup.contains(BODY_SENSORS))
-        assertFalse(permissionNamesInUndefinedGroup.contains(BODY_SENSORS_BACKGROUND))
-        assertTrue(permissionNamesInSensorsGroup.contains(BODY_SENSORS))
-        assertTrue(permissionNamesInSensorsGroup.contains(BODY_SENSORS_BACKGROUND))
-    }
-
     @SdkSuppress(
         minSdkVersion = Build.VERSION_CODES.TIRAMISU,
-        maxSdkVersion = Build.VERSION_CODES.UPSIDE_DOWN_CAKE,
+        maxSdkVersion = Build.VERSION_CODES.VANILLA_ICE_CREAM,
     )
     @Test
-    fun getInstalledRuntimePermissionInfosForGroup_preV_bodySensorPermissionsIncluded() {
+    fun getInstalledRuntimePermissionInfosForGroup_preBaklava_bodySensorPermissionsIncluded() {
         val permissionNamesInUndefinedGroup =
             Utils.getInstalledRuntimePermissionInfosForGroup(context.packageManager, UNDEFINED)
                 .map { it.name }
