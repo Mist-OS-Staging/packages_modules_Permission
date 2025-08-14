@@ -74,7 +74,8 @@
                 packageName="com.android.settings"
                 profile="primary_profile_only"
                 refreshOnPageOpenAllowed="true"
-                maxSeverityLevel="200"/>
+                maxSeverityLevel="200"
+                notificationsAllowed="true"/>
         </safety-sources-group>
         <safety-sources-group
             id="AndroidCellularNetworkSecuritySources"

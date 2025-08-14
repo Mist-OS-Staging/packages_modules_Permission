@@ -200,10 +200,20 @@ public class IssueCardPreference extends Preference
             case LIST_START_END:
             case LIST_START_CARD_END:
                 return context.getResources()
-                        .getDimensionPixelSize(
-                                mIsDismissed ? R.dimen.sc_card_margin : R.dimen.sc_spacing_large);
+                        .getDimensionPixelSize(getListStartMarginTopResId(context));
             default:
                 return position.getTopMargin(context);
+        }
+    }
+
+    @DimenRes
+    private int getListStartMarginTopResId(Context context) {
+        if (mIsDismissed) {
+            return R.dimen.sc_card_margin;
+        } else if (SettingsThemeHelper.isExpressiveTheme(context)) {
+            return R.dimen.sc_spacing_xxsmall;
+        } else {
+            return R.dimen.sc_spacing_large;
         }
     }
 
