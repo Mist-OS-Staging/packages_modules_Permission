@@ -67,7 +67,7 @@ class SafetyCenterEntryTest {
         )
 
     private val entry1 =
-        createSafetyCenterEntryBuilder("eNtRy_iD", "a title", UserHandle.of(1))
+        createSafetyCenterEntryBuilder("eNtRy_iD", "a title", UserHandle.of(1), "source_id")
             .setSummary("a summary")
             .setPendingIntent(pendingIntent1)
             .setSeverityLevel(SafetyCenterEntry.ENTRY_SEVERITY_LEVEL_UNKNOWN)
@@ -139,7 +139,7 @@ class SafetyCenterEntryTest {
     @Test
     fun isEnabled_defaultTrue() {
         assertThat(
-                createSafetyCenterEntryBuilder("eNtRy_iD", "a title", UserHandle.of(1))
+                createSafetyCenterEntryBuilder("eNtRy_iD", "a title", UserHandle.of(1), "source_id")
                     .setPendingIntent(pendingIntent1)
                     .setSeverityLevel(SafetyCenterEntry.ENTRY_SEVERITY_LEVEL_UNKNOWN)
                     .build()
@@ -190,6 +190,20 @@ class SafetyCenterEntryTest {
     @RequiresFlagsEnabled(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
     @Test
     fun getUserHandle_returnsUser() {
+        assertThat(entry1.safetySourceId).isEqualTo("source_id")
+        assertThat(
+                SafetyCenterEntry.Builder(entry1)
+                    .setSafetySourceId("custom_source_id")
+                    .build()
+                    .safetySourceId
+            )
+            .isEqualTo("custom_source_id")
+    }
+
+    @SdkSuppress(minSdkVersion = VERSION_CODES.BAKLAVA)
+    @RequiresFlagsEnabled(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+    @Test
+    fun getSafetySourceId_returnsSafetySourceId() {
         assertThat(entry1.user).isEqualTo(UserHandle.of(1))
         assertThat(SafetyCenterEntry.Builder(entry1).setUser(UserHandle.of(123)).build().user)
             .isEqualTo(UserHandle.of(123))
@@ -253,7 +267,7 @@ class SafetyCenterEntryTest {
             )
             .addEqualityGroup(entry1)
             .addEqualityGroup(
-                createSafetyCenterEntryBuilder("id", "a title", UserHandle.of(1))
+                createSafetyCenterEntryBuilder("id", "a title", UserHandle.of(1), "source_id")
                     .setSummary("a summary")
                     .setSeverityLevel(SafetyCenterEntry.ENTRY_SEVERITY_LEVEL_OK)
                     .setSeverityUnspecifiedIconType(
@@ -265,7 +279,7 @@ class SafetyCenterEntryTest {
                         pendingIntent2,
                     )
                     .build(),
-                createSafetyCenterEntryBuilder("id", "a title", UserHandle.of(1))
+                createSafetyCenterEntryBuilder("id", "a title", UserHandle.of(1), "source_id")
                     .setSummary("a summary")
                     .setSeverityLevel(SafetyCenterEntry.ENTRY_SEVERITY_LEVEL_OK)
                     .setSeverityUnspecifiedIconType(
@@ -315,7 +329,7 @@ class SafetyCenterEntryTest {
             )
             .addEqualityGroup(entry1)
             .addEqualityGroup(
-                createSafetyCenterEntryBuilder("id", "a title", UserHandle.of(1))
+                createSafetyCenterEntryBuilder("id", "a title", UserHandle.of(1), "source_id")
                     .setSummary("a summary")
                     .setSeverityLevel(SafetyCenterEntry.ENTRY_SEVERITY_LEVEL_OK)
                     .setSeverityUnspecifiedIconType(
@@ -327,7 +341,7 @@ class SafetyCenterEntryTest {
                         pendingIntent2,
                     )
                     .build(),
-                createSafetyCenterEntryBuilder("id", "a title", UserHandle.of(1))
+                createSafetyCenterEntryBuilder("id", "a title", UserHandle.of(1), "source_id")
                     .setSummary("a summary")
                     .setSeverityLevel(SafetyCenterEntry.ENTRY_SEVERITY_LEVEL_OK)
                     .setSeverityUnspecifiedIconType(
@@ -366,11 +380,21 @@ class SafetyCenterEntryTest {
             .addEqualityGroup(SafetyCenterEntry.Builder(entry1).setIconAction(iconAction2).build())
             .addEqualityGroup(SafetyCenterEntry.Builder(entry1).setHasError(true).build())
             .addEqualityGroup(
-                createSafetyCenterEntryBuilder("id", "a title", UserHandle.of(123)).build()
+                createSafetyCenterEntryBuilder("id", "a title", UserHandle.of(123), "source_id")
+                    .build()
             )
             .addEqualityGroup(
-                createSafetyCenterEntryBuilder("id", "a title", UserHandle.of(123))
+                createSafetyCenterEntryBuilder("id", "a title", UserHandle.of(123), "source_id")
                     .setHasError(true)
+                    .build()
+            )
+            .addEqualityGroup(
+                createSafetyCenterEntryBuilder(
+                        "id",
+                        "a title",
+                        UserHandle.of(123),
+                        "custom_safety_source_id",
+                    )
                     .build()
             )
             .test()

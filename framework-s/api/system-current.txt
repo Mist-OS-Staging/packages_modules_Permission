@@ -109,6 +109,7 @@ package android.safetycenter {
     method @Nullable public android.safetycenter.SafetyCenterEntry.IconAction getIconAction();
     method @NonNull public String getId();
     method @Nullable public android.app.PendingIntent getPendingIntent();
+    method @FlaggedApi("android.permission.flags.open_safety_center_apis") @Nullable public String getSafetySourceId();
     method public int getSeverityLevel();
     method public int getSeverityUnspecifiedIconType();
     method @Nullable public CharSequence getSummary();
@@ -130,7 +131,7 @@ package android.safetycenter {
 
   public static final class SafetyCenterEntry.Builder {
     ctor @Deprecated @FlaggedApi("android.permission.flags.open_safety_center_apis") public SafetyCenterEntry.Builder(@NonNull String, @NonNull CharSequence);
-    ctor @FlaggedApi("android.permission.flags.open_safety_center_apis") public SafetyCenterEntry.Builder(@NonNull String, @NonNull CharSequence, @NonNull android.os.UserHandle);
+    ctor @FlaggedApi("android.permission.flags.open_safety_center_apis") public SafetyCenterEntry.Builder(@NonNull String, @NonNull CharSequence, @NonNull android.os.UserHandle, @NonNull String);
     ctor public SafetyCenterEntry.Builder(@NonNull android.safetycenter.SafetyCenterEntry);
     method @NonNull public android.safetycenter.SafetyCenterEntry build();
     method @NonNull public android.safetycenter.SafetyCenterEntry.Builder setEnabled(boolean);
@@ -139,6 +140,7 @@ package android.safetycenter {
     method @NonNull public android.safetycenter.SafetyCenterEntry.Builder setIconAction(int, @NonNull android.app.PendingIntent);
     method @NonNull public android.safetycenter.SafetyCenterEntry.Builder setId(@NonNull String);
     method @NonNull public android.safetycenter.SafetyCenterEntry.Builder setPendingIntent(@Nullable android.app.PendingIntent);
+    method @FlaggedApi("android.permission.flags.open_safety_center_apis") @NonNull public android.safetycenter.SafetyCenterEntry.Builder setSafetySourceId(@NonNull String);
     method @NonNull public android.safetycenter.SafetyCenterEntry.Builder setSeverityLevel(int);
     method @NonNull public android.safetycenter.SafetyCenterEntry.Builder setSeverityUnspecifiedIconType(int);
     method @NonNull public android.safetycenter.SafetyCenterEntry.Builder setSummary(@Nullable CharSequence);
