@@ -16,7 +16,8 @@
 package com.android.permissioncontroller.appfunctions.ui
 
 import android.os.Bundle
-import android.permission.flags.Flags
+import android.util.Log
+import com.android.permissioncontroller.appfunctions.AppFunctionsUtil
 import com.android.permissioncontroller.appfunctions.ui.handheld.HandheldAgentListFragment
 import com.android.permissioncontroller.common.ui.SettingsActivity
 
@@ -25,7 +26,12 @@ class AgentListActivity : SettingsActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (!Flags.appFunctionAccessUiEnabled()) {
+        if (!AppFunctionsUtil.isAppFunctionUiEnabled(this)) {
+            Log.w(
+                LOG_TAG,
+                "App Function isn't enabled: Either the platform is not supported " +
+                    "or the UI flag FLAG_APP_FUNCTION_ACCESS_UI_ENABLED isn't enabled.",
+            )
             finish()
             return
         }
@@ -34,5 +40,9 @@ class AgentListActivity : SettingsActivity() {
             val fragment = HandheldAgentListFragment.newInstance()
             supportFragmentManager.beginTransaction().add(android.R.id.content, fragment).commit()
         }
+    }
+
+    companion object {
+        private val LOG_TAG = AgentListActivity::class.java.simpleName
     }
 }
