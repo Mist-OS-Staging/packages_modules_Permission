@@ -18,30 +18,49 @@ package com.android.permissioncontroller.appfunctions.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.permission.flags.Flags
+import android.util.Log
 import androidx.fragment.app.FragmentActivity
+import com.android.permissioncontroller.appfunctions.AppFunctionsUtil
 
 class RequestAccessActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (!Flags.appFunctionAccessUiEnabled()) {
+        if (!AppFunctionsUtil.isAppFunctionUiEnabled(this)) {
+            Log.w(
+                LOG_TAG,
+                "App Function isn't enabled: Either the platform is not supported " +
+                    "or the UI flag FLAG_APP_FUNCTION_ACCESS_UI_ENABLED isn't enabled.",
+            )
             finish()
             return
         }
 
         val agentPackageName = getCallingPackage()
         val targetPackageName = getIntent().getStringExtra(Intent.EXTRA_PACKAGE_NAME)
-        if (agentPackageName == null || targetPackageName == null) {
+        if (
+            agentPackageName.isNullOrEmpty() ||
+                targetPackageName.isNullOrEmpty() ||
+                !AppFunctionsUtil.isValidAgent(agentPackageName, this) ||
+                !AppFunctionsUtil.isValidTarget(targetPackageName, this)
+        ) {
+            Log.e(
+                LOG_TAG,
+                "Unknown/Invalid agent/target package. " +
+                    "Target package: $targetPackageName. Agent package: $agentPackageName.",
+            )
             finish()
             return
         }
 
-        // TODO: We should finish() the activity if the agent or target app doesn't exist, or if the
-        // access is already granted.
+        // TODO: We should finish() the activity if the access is already granted.
 
         val fragment =
             RequestAppFunctionAccessFragment.newInstance(agentPackageName, targetPackageName)
         supportFragmentManager.beginTransaction().add(fragment, null).commit()
+    }
+
+    companion object {
+        private val LOG_TAG = RequestAccessActivity::class.java.simpleName
     }
 }
