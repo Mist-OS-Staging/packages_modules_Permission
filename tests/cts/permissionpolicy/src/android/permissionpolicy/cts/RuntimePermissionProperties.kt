@@ -61,8 +61,8 @@ import android.content.pm.PermissionInfo.PROTECTION_DANGEROUS
 import android.content.pm.PermissionInfo.PROTECTION_FLAG_APPOP
 import android.health.connect.HealthPermissions
 import android.os.Build
-import android.permission.flags.Flags
 import android.permission.PermissionManager
+import android.permission.flags.Flags
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
 import com.google.common.truth.Truth.assertThat
@@ -154,7 +154,7 @@ class RuntimePermissionProperties {
                 ACCEPT_HANDOVER,
                 RECORD_AUDIO,
                 CAMERA,
-                BODY_SENSORS
+                BODY_SENSORS,
             )
 
         // Add permission split since P
@@ -196,18 +196,19 @@ class RuntimePermissionProperties {
             expectedPerms.add(RANGING)
         }
 
-        // Separately check health permissions.
-        if (Flags.replaceBodySensorPermissionEnabled()) {
-            assertThat(expectedPerms).contains(HealthPermissions.READ_HEART_RATE);
-            assertThat(expectedPerms).contains(HealthPermissions.READ_HEALTH_DATA_IN_BACKGROUND);
+        // Separately check health permissions split from BODY_SENSORS in B
+        for (sdkVersion in Build.VERSION_CODES.BAKLAVA..Build.VERSION_CODES.CUR_DEVELOPMENT + 1) {
+            assertThat(expectedPerms).contains(HealthPermissions.READ_HEART_RATE)
+            assertThat(expectedPerms).contains(HealthPermissions.READ_HEALTH_DATA_IN_BACKGROUND)
+            assertThat(expectedPerms).contains(HealthPermissions.READ_HEART_RATE)
+            assertThat(expectedPerms).contains(HealthPermissions.READ_HEALTH_DATA_IN_BACKGROUND)
 
             // Remove these from the expected list once we've confirmed their
             // present. These are not permissions owned by "android" so won't be
             // in the list of platform runtime permissions.
-            expectedPerms.remove(HealthPermissions.READ_HEART_RATE);
-            expectedPerms.remove(HealthPermissions.READ_HEALTH_DATA_IN_BACKGROUND);
+            expectedPerms.remove(HealthPermissions.READ_HEART_RATE)
+            expectedPerms.remove(HealthPermissions.READ_HEALTH_DATA_IN_BACKGROUND)
         }
-
         assertThat(platformRuntimePerms.map { it.name }).containsExactlyElementsIn(expectedPerms)
     }
 }
