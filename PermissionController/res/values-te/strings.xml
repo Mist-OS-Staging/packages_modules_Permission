@@ -571,7 +571,7 @@
     <string name="automotive_required_app_title" msgid="2992168288249988735">"ఈ యాప్ అవసరం"</string>
     <string name="automotive_required_app_summary" msgid="6514902316658090465">"ఈ యాప్ మీ కారు తయారీదారుకు అవసరం"</string>
     <string name="safety_center_dashboard_page_title" msgid="2810774008694315854">"సెక్యూరిటీ &amp; గోప్యత"</string>
-    <string name="safety_center_rescan_button" msgid="4517514567809409596">"పరికరాన్ని స్కాన్ చేయండి"</string>
+    <string name="safety_center_rescan_button" msgid="4517514567809409596">"డివైజ్‌ను స్కాన్ చేయండి"</string>
     <string name="safety_center_issue_card_dismiss_button" msgid="5113965506144222402">"విస్మరించండి"</string>
     <string name="safety_center_issue_card_dismiss_confirmation_title" msgid="2734809473425036382">"ఈ అలర్ట్‌ను విస్మరించాలా?"</string>
     <string name="safety_center_issue_card_dismiss_confirmation_message" msgid="3775418736671093563">"మరింత రక్షణను జోడించడానికి మీ సెక్యూరిటీ, గోప్యతా సెట్టింగ్‌లను ఎప్పుడైనా సరే రివ్యూ చేయండి"</string>

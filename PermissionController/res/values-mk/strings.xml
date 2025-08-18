@@ -633,7 +633,7 @@
     <string name="mic_toggle_description" msgid="9163104307990677157">"За апликации и услуги. Ако поставкава е исклучена, податоците од микрофонот може сепак да се споделат кога ќе се јавите на број за итни случаи."</string>
     <string name="location_settings_subtitle" msgid="2328360561197430695">"Погледнете кои апликации и услуги имаат пристап до локацијата"</string>
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"Известувај за пристап до привремената меморија"</string>
-    <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"Нека се прикажува известување кога апликациите пристапуваат до текст, слики или други содржини што сте ги копирале"</string>
+    <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"Прикажува известување кога апликациите пристапуваат до текст, слики или други содржини што сте ги копирале"</string>
     <string name="show_password_title" msgid="2877269286984684659">"Прикажувај ги лозинките"</string>
     <string name="show_password_summary" msgid="1110166488865981610">"Прикажувај ги знаците накратко додека пишувам"</string>
     <string name="permission_rationale_message_location" msgid="2153841534298068414">"Апликацијава изјави дека можеби ќе споделува податоци за локацијата со трети страни"</string>
