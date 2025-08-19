@@ -357,6 +357,7 @@ private fun ListScopeWrapper.titleItem(
                     text = it,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.optionalTestTag(testTag),
+                    maxLines = Int.MAX_VALUE,
                     style = style.copy(hyphens = Hyphens.Auto, lineHeight = 1.1.em),
                 )
             }
