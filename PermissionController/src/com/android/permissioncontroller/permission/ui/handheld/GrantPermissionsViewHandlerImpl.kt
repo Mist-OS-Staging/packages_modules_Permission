@@ -104,6 +104,7 @@ class GrantPermissionsViewHandlerImpl(
     private val buttonVisibilities = BooleanArray(NEXT_BUTTON) { false }
     private val locationVisibilities = BooleanArray(NEXT_LOCATION_DIALOG) { false }
     private var selectedPrecision: Int = 0
+    private var isLocationAccuracyButtonClicked: Boolean = false
     private var isLocationPermissionDialogActionClicked: Boolean = false
     private var coarseRadioButton: RadioButton? = null
     private var fineRadioButton: RadioButton? = null
@@ -380,6 +381,8 @@ class GrantPermissionsViewHandlerImpl(
         }
     }
 
+    override fun hasLocationAccuracyButtonBeenClicked(): Boolean = isLocationAccuracyButtonClicked
+
     private fun updateLocationVisibilities() {
         if (locationVisibilities[LOCATION_ACCURACY_LAYOUT]) {
             if (isLocationPermissionDialogActionClicked) {
@@ -483,6 +486,7 @@ class GrantPermissionsViewHandlerImpl(
             if (selectedPrecision != FINE_RADIO_BUTTON) {
                 (locationViews[FINE_RADIO_BUTTON] as RadioButton).isChecked = true
                 selectedPrecision = FINE_RADIO_BUTTON
+                isLocationAccuracyButtonClicked = true
                 runLocationAccuracyAnimation(true)
             }
             return
@@ -492,6 +496,7 @@ class GrantPermissionsViewHandlerImpl(
             if (selectedPrecision != COARSE_RADIO_BUTTON) {
                 (locationViews[COARSE_RADIO_BUTTON] as RadioButton).isChecked = true
                 selectedPrecision = COARSE_RADIO_BUTTON
+                isLocationAccuracyButtonClicked = true
                 runLocationAccuracyAnimation(false)
             }
             return

@@ -233,6 +233,9 @@ public class GrantPermissionsActivity extends SettingsActivity
     private View mRootView;
     private int mStoragePermGroupIcon = R.drawable.ic_empty_icon;
 
+    // Used in logging to determine if user has changed coarse/precise location animation
+    private Prompt mInitialPrompt;
+
     /** Which device the permission will affect. Default is the primary device. */
     private int mTargetDeviceId = ContextCompat.DEVICE_ID_DEFAULT;
 
@@ -827,6 +830,7 @@ public class GrantPermissionsActivity extends SettingsActivity
 
         mButtonVisibilities = getButtonsForPrompt(info.getPrompt(), info.getDeny(),
                 info.getShowRationale());
+        mInitialPrompt = info.getPrompt();
 
         CharSequence permissionRationaleMessage = null;
         if (isPermissionRationaleVisible()) {
@@ -1272,17 +1276,44 @@ public class GrantPermissionsActivity extends SettingsActivity
                 break;
         }
 
-        int selectedPrecision = 0;
+        int initialLocationPrecision = 0;
+        int selectedLocationPrecision = 0;
+        boolean locationAccuracyButtonClicked = false;
+
+        if (android.Manifest.permission_group.LOCATION.equals(permissionGroupName)) {
+            initialLocationPrecision =
+                    calculateLocationPrecisionBitmask(getPermissionsForPrompt(mInitialPrompt));
+            selectedLocationPrecision =
+                    calculateLocationPrecisionBitmask(affectedForegroundPermissions);
+            locationAccuracyButtonClicked = mViewHandler.hasLocationAccuracyButtonBeenClicked();
+        }
+
+        mViewModel.logClickedButtons(permissionGroupName, clickedButton, presentedButtons,
+                isPermissionRationaleVisible(), mInitialPrompt, initialLocationPrecision,
+                selectedLocationPrecision, locationAccuracyButtonClicked);
+    }
+
+    private List<String> getPermissionsForPrompt(Prompt prompt) {
+        return switch (prompt) {
+            case LOCATION_COARSE_ONLY, LOCATION_TWO_BUTTON_COARSE_HIGHLIGHT -> List.of(
+                    ACCESS_COARSE_LOCATION);
+            case LOCATION_FINE_UPGRADE -> List.of(ACCESS_FINE_LOCATION);
+            case LOCATION_TWO_BUTTON_FINE_HIGHLIGHT -> List.of(ACCESS_COARSE_LOCATION,
+                    ACCESS_FINE_LOCATION);
+            default -> List.of();
+        };
+    }
+
+    private int calculateLocationPrecisionBitmask(List<String> affectedForegroundPermissions) {
+        int locationPrecision = 0;
         if (affectedForegroundPermissions != null) {
             for (Map.Entry<String, Integer> entry : PERMISSION_TO_BIT_SHIFT.entrySet()) {
                 if (affectedForegroundPermissions.contains(entry.getKey())) {
-                    selectedPrecision |= 1 << entry.getValue();
+                    locationPrecision |= 1 << entry.getValue();
                 }
             }
         }
-
-        mViewModel.logClickedButtons(permissionGroupName, selectedPrecision, clickedButton,
-                presentedButtons, isPermissionRationaleVisible());
+        return locationPrecision;
     }
 
     private int getButtonState() {
