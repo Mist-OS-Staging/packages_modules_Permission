@@ -84,7 +84,7 @@
     <string name="storage_supergroup_warning_allow" msgid="103093462784523190">"ଏହି ଆପକୁ Androidର ଏକ ପୁରୁଣା ସଂସ୍କରଣ ପାଇଁ ଡିଜାଇନ କରାଯାଇଛି। ଯଦି ଆପଣ ଏହି ଅନୁମତି ଦିଅନ୍ତି, ତେବେ ସମସ୍ତ ଷ୍ଟୋରେଜକୁ (ଫଟୋ, ଭିଡିଓ, ମ୍ୟୁଜିକ, ଅଡିଓ ଏବଂ ଅନ୍ୟ ଫାଇଲଗୁଡ଼ିକୁ ଅନ୍ତର୍ଭୁକ୍ତ କରି) ଆକ୍ସେସ ପାଇଁ ଅନୁମତି ଦିଆଯିବ।"</string>
     <string name="storage_supergroup_warning_deny" msgid="6420765672683284347">"ଏହି ଆପକୁ Androidର ଏକ ପୁରୁଣା ସଂସ୍କରଣ ପାଇଁ ଡିଜାଇନ କରାଯାଇଛି। ଯଦି ଆପଣ ଏହି ଅନୁମତିକୁ ଅଗ୍ରାହ୍ୟ କରନ୍ତି, ତେବେ ସମସ୍ତ ଷ୍ଟୋରେଜକୁ (ଫଟୋ, ଭିଡିଓ, ମ୍ୟୁଜିକ, ଅଡିଓ ଏବଂ ଅନ୍ୟ ଫାଇଲଗୁଡ଼ିକୁ ଅନ୍ତର୍ଭୁକ୍ତ କରି) ଆକ୍ସେସ ଅଗ୍ରାହ୍ୟ କରାଯିବ।"</string>
     <string name="default_permission_description" msgid="4624464917726285203">"ଏହା ଏକ ଅଜଣା କାର୍ଯ୍ୟ ସମ୍ପାଦନ କରିଥାଏ"</string>
-    <string name="app_permissions_group_summary" msgid="8788419008958284002">"<xliff:g id="COUNT_1">%2$d</xliff:g>ଆପ୍ସରୁ <xliff:g id="COUNT_0">%1$d</xliff:g>କୁ ଅନୁମତି ଦିଆଯାଇଛି"</string>
+    <string name="app_permissions_group_summary" msgid="8788419008958284002">"<xliff:g id="COUNT_1">%2$d</xliff:g> ଆପ୍ସରୁ <xliff:g id="COUNT_0">%1$d</xliff:g>କୁ ଅନୁମତି ଦିଆଯାଇଛି"</string>
     <string name="app_permissions_group_summary2" msgid="4329922444840521150">"<xliff:g id="COUNT_0">%1$d</xliff:g>/<xliff:g id="COUNT_1">%2$d</xliff:g>ଟି ଆପକୁ ଅନୁମତି ଦିଆଯାଇଛି"</string>
     <string name="menu_show_system" msgid="4254021607027872504">"ସିଷ୍ଟମ୍‌ ଦେଖାନ୍ତୁ"</string>
     <string name="menu_hide_system" msgid="3855390843744028465">"ସିଷ୍ଟମ୍‌କୁ ଲୁଚାନ୍ତୁ"</string>
