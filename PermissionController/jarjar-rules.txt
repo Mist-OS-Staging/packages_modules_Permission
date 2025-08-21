@@ -22,6 +22,10 @@ rule android.content.pm.*FeatureFlags* com.android.permissioncontroller.jarjar.@
 rule android.content.pm.FeatureFlags* com.android.permissioncontroller.jarjar.@0
 rule android.content.pm.FeatureFlags com.android.permissioncontroller.jarjar.@0
 rule android.content.pm.Flags com.android.permissioncontroller.jarjar.@0
+rule android.location.flags.*FeatureFlags* com.android.permissioncontroller.jarjar.@0
+rule android.location.flags.FeatureFlags* com.android.permissioncontroller.jarjar.@0
+rule android.location.flags.FeatureFlags com.android.permissioncontroller.jarjar.@0
+rule android.location.flags.Flags com.android.permissioncontroller.jarjar.@0
 rule android.permission.flags.*FeatureFlags* com.android.permissioncontroller.jarjar.@0
 rule android.permission.flags.FeatureFlags* com.android.permissioncontroller.jarjar.@0
 rule android.permission.flags.FeatureFlags com.android.permissioncontroller.jarjar.@0
