@@ -273,6 +273,7 @@ package android.safetycenter {
     method @RequiresPermission(android.Manifest.permission.MANAGE_SAFETY_CENTER) public void clearAllSafetySourceDataForTests();
     method @RequiresPermission(android.Manifest.permission.MANAGE_SAFETY_CENTER) public void clearSafetyCenterConfigForTests();
     method @RequiresPermission(android.Manifest.permission.MANAGE_SAFETY_CENTER) public void dismissSafetyCenterIssue(@NonNull String);
+    method @FlaggedApi("android.permission.flags.open_safety_center_apis") @RequiresPermission(android.Manifest.permission.MANAGE_SAFETY_CENTER) public void executeSafetyCenterIssueAction(@NonNull String, @NonNull String, int);
     method @RequiresPermission(android.Manifest.permission.MANAGE_SAFETY_CENTER) public void executeSafetyCenterIssueAction(@NonNull String, @NonNull String);
     method @Nullable @RequiresPermission(android.Manifest.permission.MANAGE_SAFETY_CENTER) public android.safetycenter.config.SafetyCenterConfig getSafetyCenterConfig();
     method @NonNull @RequiresPermission(android.Manifest.permission.MANAGE_SAFETY_CENTER) public android.safetycenter.SafetyCenterData getSafetyCenterData();
