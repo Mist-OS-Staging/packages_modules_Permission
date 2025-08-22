@@ -56,6 +56,7 @@ import org.junit.runner.RunWith
 class AppPermissionsTest {
     private val instrumentation: Instrumentation = InstrumentationRegistry.getInstrumentation()
     private val defaultDeviceContext = instrumentation.targetContext
+    private val packageManager = defaultDeviceContext.packageManager
 
     @get:Rule
     var virtualDeviceRule =
@@ -134,7 +135,11 @@ class AppPermissionsTest {
             mapOf(
                 "Allowed" to listOf(externalDeviceCameraText),
                 "Ask every time" to emptyList(),
-                "Not allowed" to listOf("Camera", "Contacts"),
+                "Not allowed" to
+                    listOf(
+                        getPermissionGroupLabel(Manifest.permission_group.CAMERA),
+                        getPermissionGroupLabel(Manifest.permission_group.CONTACTS),
+                    ),
             )
         assertEquals(expectedGrantInfoMap, getGrantInfoMap())
     }
@@ -203,7 +208,11 @@ class AppPermissionsTest {
             mapOf(
                 "Allowed" to emptyList(),
                 "Ask every time" to emptyList(),
-                "Not allowed" to listOf("Camera", "Contacts"),
+                "Not allowed" to
+                    listOf(
+                        getPermissionGroupLabel(Manifest.permission_group.CAMERA),
+                        getPermissionGroupLabel(Manifest.permission_group.CONTACTS),
+                    ),
             )
         assertEquals(expectedGrantInfoMap, getGrantInfoMap())
     }
@@ -235,7 +244,12 @@ class AppPermissionsTest {
             mapOf(
                 "Allowed" to emptyList(),
                 "Ask every time" to emptyList(),
-                "Not allowed" to listOf("Camera", externalDeviceCameraText, "Contacts"),
+                "Not allowed" to
+                    listOf(
+                        getPermissionGroupLabel(Manifest.permission_group.CAMERA),
+                        externalDeviceCameraText,
+                        getPermissionGroupLabel(Manifest.permission_group.CONTACTS),
+                    ),
             )
         assertEquals(expectedGrantInfoMap, getGrantInfoMap())
     }
@@ -255,7 +269,11 @@ class AppPermissionsTest {
             mapOf(
                 "Allowed" to emptyList(),
                 "Ask every time" to listOf(externalDeviceCameraText),
-                "Not allowed" to listOf("Camera", "Contacts"),
+                "Not allowed" to
+                    listOf(
+                        getPermissionGroupLabel(Manifest.permission_group.CAMERA),
+                        getPermissionGroupLabel(Manifest.permission_group.CONTACTS),
+                    ),
             )
         assertEquals(expectedGrantInfoMap, getGrantInfoMap())
 
@@ -282,7 +300,12 @@ class AppPermissionsTest {
             mapOf(
                 "Allowed" to emptyList(),
                 "Ask every time" to emptyList(),
-                "Not allowed" to listOf("Camera", externalDeviceCameraText, "Contacts"),
+                "Not allowed" to
+                    listOf(
+                        getPermissionGroupLabel(Manifest.permission_group.CAMERA),
+                        externalDeviceCameraText,
+                        getPermissionGroupLabel(Manifest.permission_group.CONTACTS),
+                    ),
             )
         assertEquals(expectedGrantInfoMap, getGrantInfoMap())
 
@@ -309,7 +332,11 @@ class AppPermissionsTest {
             mapOf(
                 "Allowed" to listOf(externalDeviceCameraText),
                 "Ask every time" to emptyList(),
-                "Not allowed" to listOf("Camera", "Contacts"),
+                "Not allowed" to
+                    listOf(
+                        getPermissionGroupLabel(Manifest.permission_group.CAMERA),
+                        getPermissionGroupLabel(Manifest.permission_group.CONTACTS),
+                    ),
             )
         assertEquals(expectedGrantInfoMap, getGrantInfoMap())
 
@@ -426,6 +453,11 @@ class AppPermissionsTest {
 
     private fun getPermState(): Map<String, PermissionManager.PermissionState> =
         permissionManager.getAllPermissionStates(APP_PACKAGE_NAME, persistentDeviceId)
+
+    private fun getPermissionGroupLabel(permissionGroup: String): String {
+        val groupInfo = packageManager.getPermissionGroupInfo(permissionGroup, 0)
+        return groupInfo.loadLabel(packageManager).toString()
+    }
 
     companion object {
         private const val APK_DIRECTORY = "/data/local/tmp/cts-permissionmultidevice"
