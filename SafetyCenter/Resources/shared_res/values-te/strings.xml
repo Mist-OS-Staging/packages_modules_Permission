@@ -25,7 +25,7 @@
     <string name="overall_severity_level_action_taken_summary" msgid="8064091657855656545">"{count,plural, =1{చర్య తీసుకోబడింది}other{చర్యలు తీసుకొనబడ్డాయి}}"</string>
     <string name="overall_severity_level_ok_review_title" msgid="1494321117696765360">"సెట్టింగ్‌లను రివ్యూ చేయండి"</string>
     <string name="overall_severity_level_ok_review_summary" msgid="7743619617413076275">"సెట్టింగ్‌ల లిస్ట్‌ను చెక్ చేయండి"</string>
-    <string name="overall_severity_level_device_recommendation_title" msgid="5250040236433061827">"పరికరం ప్రమాదంలో ఉండవచ్చు"</string>
+    <string name="overall_severity_level_device_recommendation_title" msgid="5250040236433061827">"ఈ డివైజ్ రిస్క్‌లో ఉండే అవకాశం ఉంది"</string>
     <string name="overall_severity_level_critical_device_warning_title" msgid="5901771721834272596">"డివైజ్ ప్రమాదంలో ఉంది"</string>
     <string name="overall_severity_level_data_recommendation_title" msgid="1424269714861655302">"మీ డేటా ప్రమాదంలో ఉండవచ్చు"</string>
     <string name="overall_severity_level_critical_data_warning_title" msgid="1012704126634698604">"మీ డేటా ప్రమాదంలో ఉంది"</string>
