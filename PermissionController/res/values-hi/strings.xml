@@ -715,8 +715,10 @@
     <string name="app_function_target_access_title" msgid="7415628605578155761">"एजेंट को मिलने वाला ऐक्सेस"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"वे एजेंट जो इस ऐप्लिकेशन में आपकी जानकारी ऐक्सेस कर सकते हैं और आपकी ओर से कार्रवाइयां कर सकते हैं"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"डिवाइस की सेटिंग"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"क्या <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> को <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> का ऐक्सेस देना है?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"इससे <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> को <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> की जानकारी ऐक्सेस करने और उपयोगकर्ता की ओर से कार्रवाइयां करने की अनुमति मिलती है."</string>
+    <!-- no translation found for request_app_function_access_dialog_title (877934835928912474) -->
+    <skip />
+    <!-- no translation found for request_app_function_access_dialog_description (155777384496379754) -->
+    <skip />
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"अनुमति दें"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"अनुमति न दें"</string>
 </resources>

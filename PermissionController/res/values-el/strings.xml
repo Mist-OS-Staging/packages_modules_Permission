@@ -715,8 +715,10 @@
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Πρόσβαση εκπροσώπου"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Εκπρόσωποι που μπορούν να έχουν πρόσβαση σε πληροφορίες και να εκτελούν ενέργειες για εσάς σε αυτή την εφαρμογή"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Ρυθμίσεις συσκευής"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"Να επιτρέπεται η πρόσβαση της εφαρμογής <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> στην εφαρμογή <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>;"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"Αυτό επιτρέπει στο <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> να έχει πρόσβαση στις πληροφορίες του <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> και να αναλαμβάνει δράση για λογαριασμό του χρήστη."</string>
+    <!-- no translation found for request_app_function_access_dialog_title (877934835928912474) -->
+    <skip />
+    <!-- no translation found for request_app_function_access_dialog_description (155777384496379754) -->
+    <skip />
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Να επιτρέπεται"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Να μην επιτρέπ."</string>
 </resources>
