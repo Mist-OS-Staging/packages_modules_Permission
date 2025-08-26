@@ -84,8 +84,8 @@
     <string name="storage_supergroup_warning_allow" msgid="103093462784523190">"Hierdie app is vir \'n ouer weergawe van Android ontwerp. As jy hierdie toestemming toelaat, sal toegang tot alle berging (insluitend foto\'s, video\'s, musiek, oudio en ander lêers) toegelaat word."</string>
     <string name="storage_supergroup_warning_deny" msgid="6420765672683284347">"Hierdie app is vir \'n ouer weergawe van Android ontwerp. As jy hierdie toestemming weier, sal toegang tot alle berging (insluitend foto\'s, video\'s, musiek, oudio en ander lêers) geweier word."</string>
     <string name="default_permission_description" msgid="4624464917726285203">"voer \'n onbekende handeling uit"</string>
-    <string name="app_permissions_group_summary" msgid="8788419008958284002">"<xliff:g id="COUNT_0">%1$d</xliff:g> van <xliff:g id="COUNT_1">%2$d</xliff:g> programme toegelaat"</string>
-    <string name="app_permissions_group_summary2" msgid="4329922444840521150">"<xliff:g id="COUNT_0">%1$d</xliff:g>/<xliff:g id="COUNT_1">%2$d</xliff:g> programme toegelaat"</string>
+    <string name="app_permissions_group_summary" msgid="8788419008958284002">"<xliff:g id="COUNT_0">%1$d</xliff:g> van <xliff:g id="COUNT_1">%2$d</xliff:g> apps toegelaat"</string>
+    <string name="app_permissions_group_summary2" msgid="4329922444840521150">"<xliff:g id="COUNT_0">%1$d</xliff:g>/<xliff:g id="COUNT_1">%2$d</xliff:g> apps toegelaat"</string>
     <string name="menu_show_system" msgid="4254021607027872504">"Wys stelsel"</string>
     <string name="menu_hide_system" msgid="3855390843744028465">"Versteek stelsel"</string>
     <string name="menu_show_7_days_data" msgid="8979611198508523706">"Wys 7 dae"</string>
