@@ -46,6 +46,7 @@ import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.ArgumentMatchers.any
 import org.mockito.Mock
 import org.mockito.Mockito.`when` as whenever
 import org.mockito.MockitoAnnotations
@@ -75,7 +76,11 @@ class AgentAccessViewModelTest {
                 .mockStatic(PermissionControllerApplication::class.java)
                 .strictness(Strictness.LENIENT)
                 .startMocking()
+        ExtendedMockito.doReturn(application).`when` { PermissionControllerApplication.get() }
 
+        whenever(application.applicationContext).thenReturn(application)
+        whenever(application.registerReceiverForAllUsers(any(), any(), any(), any()))
+            .thenReturn(null)
         whenever(application.getString(R.string.app_function_device_settings_target_title))
             .thenReturn(TEST_DEVICE_SETTINGS_LABEL)
 
