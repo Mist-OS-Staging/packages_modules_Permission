@@ -715,8 +715,10 @@
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Agentåtkomst"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agenter som kan komma åt information och vidta åtgärder åt dig i den här appen"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Enhetsinställningar"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"Vill du ge <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> åtkomst till <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> kommer åt information om <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> och kan vidta åtgärder för användarens räkning."</string>
+    <!-- no translation found for request_app_function_access_dialog_title (877934835928912474) -->
+    <skip />
+    <!-- no translation found for request_app_function_access_dialog_description (155777384496379754) -->
+    <skip />
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Tillåt"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Tillåt inte"</string>
 </resources>

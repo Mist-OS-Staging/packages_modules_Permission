@@ -25,6 +25,10 @@ import com.android.permissioncontroller.appfunctions.AppFunctionsUtil
 class RequestAccessActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // RESULT_CANCELED means that an access request was denied. Will be changed to RESULT_OK
+        // if the user clicks the grant button in the dialog. Setting CANCELED here in case the
+        // activity finishes before showing a dialog.
+        setResult(RESULT_CANCELED)
 
         if (!AppFunctionsUtil.isAppFunctionUiEnabled(this)) {
             Log.w(

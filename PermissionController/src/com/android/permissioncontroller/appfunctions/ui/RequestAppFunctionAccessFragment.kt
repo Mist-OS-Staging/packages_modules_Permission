@@ -16,6 +16,7 @@
 
 package com.android.permissioncontroller.appfunctions.ui
 
+import android.app.Activity
 import android.app.Dialog
 import android.content.DialogInterface
 import android.os.Bundle
@@ -123,16 +124,18 @@ class RequestAppFunctionAccessFragment : DialogFragment() {
 
     fun onAppFunctionGrant() {
         viewModel.grantAccess()
-        finish()
+        setResultAndFinish(Activity.RESULT_OK)
     }
 
     override fun onCancel(dialog: DialogInterface) {
         super.onCancel(dialog)
-        finish()
+        setResultAndFinish(Activity.RESULT_CANCELED)
     }
 
-    private fun finish() {
-        requireActivity().finish()
+    private fun setResultAndFinish(resultCode: Int) {
+        val activity = requireActivity()
+        activity.setResult(resultCode)
+        activity.finish()
     }
 
     companion object {

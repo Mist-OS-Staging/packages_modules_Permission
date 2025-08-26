@@ -40,7 +40,9 @@ import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.ArgumentMatchers.any
 import org.mockito.Mock
+import org.mockito.Mockito.`when` as whenever
 import org.mockito.MockitoAnnotations
 import org.mockito.MockitoSession
 import org.mockito.quality.Strictness
@@ -67,6 +69,10 @@ class AgentListViewModelTest {
                 .mockStatic(PermissionControllerApplication::class.java)
                 .strictness(Strictness.LENIENT)
                 .startMocking()
+        ExtendedMockito.doReturn(application).`when` { PermissionControllerApplication.get() }
+        whenever(application.applicationContext).thenReturn(application)
+        whenever(application.registerReceiverForAllUsers(any(), any(), any(), any()))
+            .thenReturn(null)
 
         appFunctionRepository = FakeAppFunctionRepository(agents = agentPackageNames)
         packageRepository = FakePackageRepository(packagesAndLabels = agentPackagesAndLabels)

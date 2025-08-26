@@ -32,6 +32,7 @@ import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFuncti
 import com.android.permissioncontroller.appfunctions.domain.usecase.GetDeviceSettingsTargetIconUseCase
 import com.android.permissioncontroller.appfunctions.domain.usecase.UpdateAccessUseCase
 import com.android.permissioncontroller.common.model.Stateful
+import com.android.permissioncontroller.data.repository.v31.PackageChangeListener
 import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
@@ -57,12 +58,19 @@ class AgentAccessViewModel(
     private val targetListComparator: Comparator<TargetItem> =
         compareBy(collator) { it.packageInfo.label }
 
+    private val packageChangeListener = PackageChangeListener(::refresh)
+
     // Backing property to avoid state updates from other classes
     private val _uiStateFlow = MutableStateFlow<Stateful<AgentAccessUiState>>(Stateful.Loading())
     val uiStateFlow: StateFlow<Stateful<AgentAccessUiState>> = _uiStateFlow
 
     init {
+        packageChangeListener.register()
         refresh()
+    }
+
+    override fun onCleared() {
+        packageChangeListener.unregister()
     }
 
     // TODO(b/432096594): refresh on app function manager change listener

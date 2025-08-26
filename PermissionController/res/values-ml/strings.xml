@@ -715,8 +715,10 @@
     <string name="app_function_target_access_title" msgid="7415628605578155761">"ഏജന്റ് ആക്സസ്"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"ഈ ആപ്പിൽ വിവരങ്ങൾ ആക്സസ് ചെയ്യാനും നിങ്ങൾക്കായി പ്രവർത്തനങ്ങൾ നടത്താനും കഴിയുന്ന ഏജന്റുകൾ"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"ഉപകരണ ക്രമീകരണം"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ആക്സസ് ചെയ്യാൻ <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> എന്നതിനെ അനുവദിക്കണോ?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> വിവരങ്ങൾ ആക്സസ് ചെയ്യാനും ഉപയോക്താവിനായി നടപടിയെടുക്കാനും <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> എന്നതിനെ ഇത് അനുവദിക്കുന്നു."</string>
+    <!-- no translation found for request_app_function_access_dialog_title (877934835928912474) -->
+    <skip />
+    <!-- no translation found for request_app_function_access_dialog_description (155777384496379754) -->
+    <skip />
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"അനുവദിക്കുക"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"അനുവദിക്കരുത്"</string>
 </resources>
