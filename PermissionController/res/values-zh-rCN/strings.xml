@@ -715,10 +715,8 @@
     <string name="app_function_target_access_title" msgid="7415628605578155761">"智能体访问权限"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"可在此应用中访问信息并为您执行操作的智能体"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"设备设置"</string>
-    <!-- no translation found for request_app_function_access_dialog_title (877934835928912474) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_description (155777384496379754) -->
-    <skip />
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"要允许“<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>”作为智能体访问“<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>”吗？"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"此智能体将能够访问“<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>”，帮助您获取信息和执行操作"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"允许"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"不允许"</string>
 </resources>

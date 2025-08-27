@@ -106,7 +106,7 @@
     <string name="permission_summary_disabled_by_admin_background_only" msgid="3127091456731845646">"Prístup na pozadí bol zakázaný správcom"</string>
     <string name="permission_summary_enabled_by_admin_background_only" msgid="9132423838440275757">"Prístup na pozadí bol povolený správcom"</string>
     <string name="permission_summary_enabled_by_admin_foreground_only" msgid="1298432715610745358">"Prístup na popredí bol povolený správcom"</string>
-    <string name="permission_summary_enabled_system_fixed" msgid="2438344700184127274">"Zariadenie vyžaduje toto povolenie na prevádzku"</string>
+    <string name="permission_summary_enabled_system_fixed" msgid="2438344700184127274">"Zariadenie vyžaduje toto povolenie, aby mohlo fungovať"</string>
     <!-- no translation found for background_access_chooser_dialog_choices:0 (1351721623256561996) -->
     <!-- no translation found for background_access_chooser_dialog_choices:1 (9127301153688725448) -->
     <!-- no translation found for background_access_chooser_dialog_choices:2 (4305536986042401191) -->

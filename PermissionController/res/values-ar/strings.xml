@@ -197,8 +197,8 @@
     <string name="approximate_image_description" msgid="938803699637069884">"الموقع الجغرافي التقريبي"</string>
     <string name="app_permission_location_accuracy" msgid="7166912915040018669">"استخدام الموقع الجغرافي الدقيق"</string>
     <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"التطبيقات يمكنها الوصول إلى الموقع الجغرافي التقريبي عندما يكون الموقع الجغرافي الدقيق غير مفعّل"</string>
-    <string name="app_permission_title" msgid="2090897901051370711">"إذن <xliff:g id="PERM">%1$s</xliff:g>"</string>
-    <string name="app_permission_header" msgid="2951363137032603806">"منح هذا التطبيق الإذن بالوصول إلى <xliff:g id="PERM">%1$s</xliff:g>"</string>
+    <string name="app_permission_title" msgid="2090897901051370711">"إذن \"<xliff:g id="PERM">%1$s</xliff:g>\""</string>
+    <string name="app_permission_header" msgid="2951363137032603806">"منح هذا التطبيق الإذن بالوصول إلى \"<xliff:g id="PERM">%1$s</xliff:g>\""</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"إذن \"<xliff:g id="PERM">%1$s</xliff:g>\" لهذا التطبيق على \"<xliff:g id="DEVICE_NAME">%2$s</xliff:g>\""</string>
     <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"الاطّلاع على جميع أذونات تطبيق \"<xliff:g id="APP">%1$s</xliff:g>\""</string>
     <string name="app_permission_footer_permission_apps_link" msgid="3941988129992794327">"الاطّلاع على جميع التطبيقات التي لديها هذا الإذن"</string>
@@ -260,7 +260,7 @@
     <string name="ask_header" msgid="2633816846459944376">"الطلب في كل مرة"</string>
     <string name="denied_header" msgid="903209608358177654">"التطبيقات غير المسموح لها"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"‫\"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>\" على \"<xliff:g id="DEVICE_NAME">%2$s</xliff:g>\""</string>
-    <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"الاطّلاع على تطبيقات أكثر يمكنها الوصول إلى كل الملفات"</string>
+    <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"الاطّلاع على تطبيقات أخرى يمكنها الوصول إلى كل الملفات"</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{يوم واحد}zero{# يوم}two{يومان}few{# أيام}many{# يومًا}other{# يوم}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{ساعة واحدة}zero{# ساعة}two{ساعتان}few{# ساعات}many{# ساعةً}other{# ساعة}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{دقيقة واحدة}zero{# دقيقة}two{دقيقتان}few{# دقائق}many{# دقيقةً}other{# دقيقة}}"</string>
@@ -345,7 +345,7 @@
     <string name="app_perms_content_provider_7d_all_files" msgid="7962416229708835558">"تم الوصول في آخر 7 أيام • جميع الملفات"</string>
     <string name="no_permissions_allowed" msgid="6081976856354669209">"لم يتم منح أي أذونات"</string>
     <string name="no_permissions_denied" msgid="8159923922804043282">"لم يتم رفض أي أذونات."</string>
-    <string name="no_apps_allowed" msgid="7718822655254468631">"لم يتم السماح لأي تطبيقات."</string>
+    <string name="no_apps_allowed" msgid="7718822655254468631">"لم يتم السماح لأي تطبيقات"</string>
     <string name="no_apps_allowed_full" msgid="8011716991498934104">"ما من تطبيقات تم منحها إذن الوصول إلى جميع الملفات."</string>
     <string name="no_apps_allowed_scoped" msgid="4908850477787659501">"ما من تطبيقات تم منحها إذن الوصول إلى الوسائط فقط."</string>
     <string name="no_apps_denied" msgid="7663435886986784743">"لم يتم رفض أي تطبيقات"</string>
@@ -627,7 +627,7 @@
     <string name="safety_center_background_location_access_revoked" msgid="6972274943343442213">"تم تغيير إذن الوصول."</string>
     <string name="safety_center_view_recent_location_access" msgid="3524391299490678243">"عرض أحدث بيانات استخدام للموقع الجغرافي"</string>
     <string name="privacy_controls_title" msgid="7605929972256835199">"عناصر التحكّم في الخصوصية"</string>
-    <string name="camera_toggle_title" msgid="1251201397431837666">"الوصول للكاميرا"</string>
+    <string name="camera_toggle_title" msgid="1251201397431837666">"الوصول إلى الكاميرا"</string>
     <string name="mic_toggle_title" msgid="2649991093496110162">"الوصول إلى الميكروفون"</string>
     <string name="perm_toggle_description" msgid="7801326363741451379">"للتطبيقات والخدمات"</string>
     <string name="mic_toggle_description" msgid="9163104307990677157">"للتطبيقات والخدمات. إذا كان هذا الخيار غير مفعّل، قد تتم مشاركة بيانات الميكروفون عند الاتصال برقم طوارئ"</string>
