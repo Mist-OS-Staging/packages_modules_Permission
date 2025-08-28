@@ -74,7 +74,7 @@
     <string name="days_ago" msgid="6650359081551335629">"{count,plural, =0{ఈరోజు}=1{1 రోజు క్రితం}other{# రోజుల క్రితం}}"</string>
     <string name="app_disable_dlg_positive" msgid="7418444149981904940">"యాప్‌ను డిజేబుల్‌ చేయండి"</string>
     <string name="app_disable_dlg_text" msgid="3126943217146120240">"మీరు ఈ యాప్‌ను డిజేబుల్‌ చేస్తే, Android మరియు ఇతర యాప్‌లు ఇకపై ఉద్దేశించిన రీతిలో పని చేయకపోవచ్చు. ఈ యాప్ మీ పరికరంలో ముందుగానే ఇన్‌స్టాల్ చేసి, అందించబడింది కాబట్టి మీరు దీనిని తొలగించలేరని గుర్తుంచుకోండి. డిజేబుల్‌ చేయడం ద్వారా, మీరు ఈ యాప్‌ను ఆఫ్ చేసి, మీ పరికరంలో దానిని దాస్తున్నారు."</string>
-    <string name="app_permission_manager" msgid="3903811137630909550">"అనుమతి మేనేజర్"</string>
+    <string name="app_permission_manager" msgid="3903811137630909550">"అనుమతి (పర్మిషన్) మేనేజర్"</string>
     <string name="never_ask_again" msgid="4728762438198560329">"మళ్లీ అడగవద్దు"</string>
     <string name="no_permissions" msgid="3881676756371148563">"అనుమతులు లేవు"</string>
     <string name="additional_permissions" msgid="5801285469338873430">"అదనపు అనుమతులు"</string>
@@ -102,7 +102,7 @@
     <string name="permission_summary_disabled_by_policy_background_only" msgid="221995005556362660">"విధానం ద్వారా నేపథ్య యాక్సెస్ నిలిపివేయబడింది"</string>
     <string name="permission_summary_enabled_by_policy_background_only" msgid="8287675974767104279">"విధానం ద్వారా నేపథ్య యాక్సెస్ ప్రారంభించబడింది"</string>
     <string name="permission_summary_enabled_by_policy_foreground_only" msgid="3844582916889767831">"విధానం ద్వారా ముందుభాగం యాక్సెస్ ప్రారంభించబడింది"</string>
-    <string name="permission_summary_enforced_by_admin" msgid="822702574117248700">"నిర్వాహకుల నియంత్రణలో ఉంటాయి"</string>
+    <string name="permission_summary_enforced_by_admin" msgid="822702574117248700">"అడ్మిన్, కంట్రోల్ చేస్తున్నారు"</string>
     <string name="permission_summary_disabled_by_admin_background_only" msgid="3127091456731845646">"నిర్వాహకులు నేపథ్య యాక్సెస్‌ను నిలిపివేసారు"</string>
     <string name="permission_summary_enabled_by_admin_background_only" msgid="9132423838440275757">"నిర్వాహకులు నేపథ్య యాక్సెస్‌ను అనుమతించారు"</string>
     <string name="permission_summary_enabled_by_admin_foreground_only" msgid="1298432715610745358">"నిర్వాహకులు స్క్రీన్ యాక్సెస్‌ను అనుమతించారు"</string>

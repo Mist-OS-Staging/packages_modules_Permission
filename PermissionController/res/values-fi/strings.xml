@@ -147,7 +147,7 @@
     <string name="permission_usage_any_permission" msgid="6358023078298106997">"Kaikki käyttöoikeudet"</string>
     <string name="permission_usage_any_time" msgid="3802087027301631827">"Milloin tahansa"</string>
     <string name="permission_usage_last_n_days" msgid="7882626467375714145">"{count,plural, =1{Edellinen päivä}other{Viimeiset # päivää}}"</string>
-    <string name="permission_usage_last_n_hours" msgid="8490466053680267858">"{count,plural, =1{Viimeisin tunti}other{Viimeiset # tuntia}}"</string>
+    <string name="permission_usage_last_n_hours" msgid="8490466053680267858">"{count,plural, =1{Viime tunti}other{# viime tuntia}}"</string>
     <string name="permission_usage_last_n_minutes" msgid="7817864229878281983">"{count,plural, =1{Viimeinen minuutti}other{Viimeiset # minuuttia}}"</string>
     <string name="no_permission_usages" msgid="9119517454177289331">"Käyttöoikeuksia ei käytetty"</string>
     <string name="permission_usage_list_title_any_time" msgid="8718257027381592407">"Viimeksi käytetyt koska tahansa"</string>
@@ -552,7 +552,7 @@
     <string name="privdash_label_location" msgid="6882400763866489291">"Sijainti"</string>
     <string name="privdash_label_other" msgid="3710394147423236033">"Muu"</string>
     <string name="privdash_label_none" msgid="5991866260360484858">"–"</string>
-    <string name="privdash_label_24h" msgid="1512532123865375319">"Viimeiset\n24 tuntia"</string>
+    <string name="privdash_label_24h" msgid="1512532123865375319">"24\nviime tuntia"</string>
     <string name="privdash_label_7d" msgid="5645301995348656931">"7 viime\npäivää"</string>
     <string name="privdash_usage_percent" msgid="6893824766124414127">"<xliff:g id="PERMISSION_NAME">%1$s</xliff:g> <xliff:g id="PERCENT">%2$d</xliff:g> prosenttia"</string>
     <string name="exempt_mic_camera_info_label" msgid="6273581737010902815">"<xliff:g id="APP_NAME">%1$s</xliff:g> on Androidin suojaama. Koska datasi käsitellään tällä laitteella, sovelluksen lupien käyttö ei näy tilapalkissa eikä yksityisyydenhallintapaneelisi."</string>

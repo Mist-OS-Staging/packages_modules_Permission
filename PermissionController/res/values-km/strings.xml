@@ -715,10 +715,8 @@
     <string name="app_function_target_access_title" msgid="7415628605578155761">"សិទ្ធិចូលប្រើរបស់ភ្នាក់ងារ"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"ភ្នាក់ងារដែលអាចចូលប្រើព័ត៌មាន និងធ្វើសកម្មភាពសម្រាប់អ្នកនៅក្នុងកម្មវិធីនេះ"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"ការកំណត់​ឧបករណ៍"</string>
-    <!-- no translation found for request_app_function_access_dialog_title (877934835928912474) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_description (155777384496379754) -->
-    <skip />
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"អនុញ្ញាតឱ្យ <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ធ្វើជាភ្នាក់ងារសម្រាប់ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ឬ?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"ភ្នាក់ងារនេះនឹងអាចចូលប្រើ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ដើម្បីទទួលបានព័ត៌មាន និងធ្វើសកម្មភាពជំនួសអ្នក"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"អនុញ្ញាត"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"មិនអនុញ្ញាត"</string>
 </resources>
