@@ -25,10 +25,6 @@ import com.android.permissioncontroller.appfunctions.AppFunctionsUtil
 class RequestAccessActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // RESULT_CANCELED means that an access request was denied. Will be changed to RESULT_OK
-        // if the user clicks the grant button in the dialog. Setting CANCELED here in case the
-        // activity finishes before showing a dialog.
-        setResult(RESULT_CANCELED)
 
         if (!AppFunctionsUtil.isAppFunctionUiEnabled(this)) {
             Log.w(
@@ -36,7 +32,7 @@ class RequestAccessActivity : FragmentActivity() {
                 "App Function isn't enabled: Either the platform is not supported " +
                     "or the UI flag FLAG_APP_FUNCTION_ACCESS_UI_ENABLED isn't enabled.",
             )
-            finish()
+            setResultAndFinish(RESULT_CANCELED)
             return
         }
 
@@ -53,7 +49,7 @@ class RequestAccessActivity : FragmentActivity() {
                 "Unknown/Invalid agent/target package. " +
                     "Target package: $targetPackageName. Agent package: $agentPackageName.",
             )
-            finish()
+            setResultAndFinish(RESULT_CANCELED)
             return
         }
 
@@ -62,6 +58,11 @@ class RequestAccessActivity : FragmentActivity() {
         val fragment =
             RequestAppFunctionAccessFragment.newInstance(agentPackageName, targetPackageName)
         supportFragmentManager.beginTransaction().add(fragment, null).commit()
+    }
+
+    private fun setResultAndFinish(resultCode: Int) {
+        setResult(resultCode)
+        finish()
     }
 
     companion object {

@@ -106,7 +106,7 @@
     <string name="permission_summary_disabled_by_admin_background_only" msgid="3127091456731845646">"నిర్వాహకులు నేపథ్య యాక్సెస్‌ను నిలిపివేసారు"</string>
     <string name="permission_summary_enabled_by_admin_background_only" msgid="9132423838440275757">"నిర్వాహకులు నేపథ్య యాక్సెస్‌ను అనుమతించారు"</string>
     <string name="permission_summary_enabled_by_admin_foreground_only" msgid="1298432715610745358">"నిర్వాహకులు స్క్రీన్ యాక్సెస్‌ను అనుమతించారు"</string>
-    <string name="permission_summary_enabled_system_fixed" msgid="2438344700184127274">"పరికరం దీనిని ఆపరేట్ చేయడానికి ఈ అనుమతి అవసరం"</string>
+    <string name="permission_summary_enabled_system_fixed" msgid="2438344700184127274">"డివైజ్ దీనిని ఆపరేట్ చేయడానికి ఈ అనుమతి అవసరం"</string>
     <!-- no translation found for background_access_chooser_dialog_choices:0 (1351721623256561996) -->
     <!-- no translation found for background_access_chooser_dialog_choices:1 (9127301153688725448) -->
     <!-- no translation found for background_access_chooser_dialog_choices:2 (4305536986042401191) -->
@@ -130,7 +130,7 @@
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> వినియోగం"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"ఇతర అనుమతులను చూడండి"</string>
     <string name="perm_usage_adv_info_summary_2_items" msgid="3702175198750127822">"<xliff:g id="PERMGROUP_0">%1$s</xliff:g>, <xliff:g id="PERMGROUP_1">%2$s</xliff:g>"</string>
-    <string name="perm_usage_adv_info_summary_more_items" msgid="949055326299562218">"<xliff:g id="PERMGROUP_0">%1$s</xliff:g>, <xliff:g id="PERMGROUP_1">%2$s</xliff:g>, మరియు మరో <xliff:g id="NUM">%3$s</xliff:g>"</string>
+    <string name="perm_usage_adv_info_summary_more_items" msgid="949055326299562218">"<xliff:g id="PERMGROUP_0">%1$s</xliff:g>, <xliff:g id="PERMGROUP_1">%2$s</xliff:g>, మరో <xliff:g id="NUM">%3$s</xliff:g>"</string>
     <string name="permission_group_usage_subtitle_24h" msgid="5120155996322114181">"గత 24 గంటలలో యాప్‌లు మీ <xliff:g id="PERMGROUP">%1$s</xliff:g>‌ను ఎప్పుడు ఉపయోగించాయో తెలిపే టైమ్‌లైన్"</string>
     <string name="permission_group_usage_subtitle_7d" msgid="1465828402260324654">"గత 7 రోజుల్లో యాప్‌లు మీ <xliff:g id="PERMGROUP">%1$s</xliff:g>‌ను ఎప్పుడు ఉపయోగించాయో తెలిపే టైమ్‌లైన్"</string>
     <string name="permission_usage_access_dialog_subtitle" msgid="4171772805196955753">"మీ <xliff:g id="PERMGROUP">%1$s</xliff:g> అనుమతిని యాప్ ఉపయోగించినప్పుడు"</string>
