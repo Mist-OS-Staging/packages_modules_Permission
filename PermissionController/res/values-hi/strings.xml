@@ -131,8 +131,8 @@
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"अन्य अनुमतियां देखें"</string>
     <string name="perm_usage_adv_info_summary_2_items" msgid="3702175198750127822">"<xliff:g id="PERMGROUP_0">%1$s</xliff:g>, <xliff:g id="PERMGROUP_1">%2$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_summary_more_items" msgid="949055326299562218">"<xliff:g id="PERMGROUP_0">%1$s</xliff:g>, <xliff:g id="PERMGROUP_1">%2$s</xliff:g>, और अन्य <xliff:g id="NUM">%3$s</xliff:g> अनुमतियां"</string>
-    <string name="permission_group_usage_subtitle_24h" msgid="5120155996322114181">"पिछले 24 घंटे में, ऐप्लिकेशन ने आपकी <xliff:g id="PERMGROUP">%1$s</xliff:g> का इस्तेमाल कब किया, इसकी टाइमलाइन"</string>
-    <string name="permission_group_usage_subtitle_7d" msgid="1465828402260324654">"पिछले सात दिनों में, ऐप्लिकेशन ने आपकी <xliff:g id="PERMGROUP">%1$s</xliff:g> का इस्तेमाल कब किया, इसकी टाइमलाइन"</string>
+    <string name="permission_group_usage_subtitle_24h" msgid="5120155996322114181">"पिछले 24 घंटे में, ऐप्लिकेशन ने <xliff:g id="PERMGROUP">%1$s</xliff:g> का इस्तेमाल कब-कब किया, इसकी टाइमलाइन"</string>
+    <string name="permission_group_usage_subtitle_7d" msgid="1465828402260324654">"किन ऐप्लिकेशन ने पिछले सात दिनों में कब-कब <xliff:g id="PERMGROUP">%1$s</xliff:g> का इस्तेमाल किया, इसकी टाइमलाइन"</string>
     <string name="permission_usage_access_dialog_subtitle" msgid="4171772805196955753">"जब इस ऐप्लिकेशन ने आपकी <xliff:g id="PERMGROUP">%1$s</xliff:g> अनुमति का इस्तेमाल किया"</string>
     <string name="permission_usage_access_dialog_learn_more" msgid="7121468469493184613">"ज़्यादा जानें"</string>
     <string name="learn_more_content_description" msgid="8673699744544502539">"<xliff:g id="PERMGROUP">%1$s</xliff:g> के बारे में ज़्यादा जानें"</string>
