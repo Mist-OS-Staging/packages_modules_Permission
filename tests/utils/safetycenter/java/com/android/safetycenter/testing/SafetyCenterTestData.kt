@@ -53,6 +53,7 @@ import com.android.safetycenter.internaldata.SafetyCenterIssueId
 import com.android.safetycenter.internaldata.SafetyCenterIssueKey
 import com.android.safetycenter.resources.SafetyCenterResourcesApk
 import com.android.safetycenter.testing.SafetyCenterTestConfigs.Companion.SINGLE_SOURCE_GROUP_ID
+import com.android.safetycenter.testing.SafetyCenterTestHelper.Companion.createSafetyCenterEntryBuilder
 import com.android.safetycenter.testing.SafetySourceTestData.Companion.CRITICAL_ISSUE_ACTION_ID
 import com.android.safetycenter.testing.SafetySourceTestData.Companion.CRITICAL_ISSUE_ID
 import com.android.safetycenter.testing.SafetySourceTestData.Companion.INFORMATION_ISSUE_ACTION_ID
@@ -166,7 +167,11 @@ class SafetyCenterTestData(context: Context) {
         pendingIntent: PendingIntent? =
             safetySourceTestData.createTestActivityRedirectPendingIntent(),
     ) =
-        SafetyCenterEntry.Builder(entryId(sourceId, userId), title)
+        createSafetyCenterEntryBuilder(
+                entryId(sourceId, userId),
+                title,
+                UserHandle.of(UserHandle.myUserId()),
+            )
             .setSeverityLevel(ENTRY_SEVERITY_LEVEL_UNKNOWN)
             .setSummary("OK")
             .setPendingIntent(pendingIntent)
@@ -195,7 +200,11 @@ class SafetyCenterTestData(context: Context) {
         userId: Int = UserHandle.myUserId(),
         title: CharSequence = "OK",
     ) =
-        SafetyCenterEntry.Builder(entryId(sourceId, userId), title)
+        createSafetyCenterEntryBuilder(
+                entryId(sourceId, userId),
+                title,
+                UserHandle.of(UserHandle.myUserId()),
+            )
             .setSeverityLevel(ENTRY_SEVERITY_LEVEL_UNSPECIFIED)
             .setSummary("OK")
             .setPendingIntent(
@@ -223,7 +232,11 @@ class SafetyCenterTestData(context: Context) {
         pendingIntent: PendingIntent? =
             safetySourceTestData.createTestActivityRedirectPendingIntent(),
     ) =
-        SafetyCenterEntry.Builder(entryId(sourceId), "Unspecified title")
+        createSafetyCenterEntryBuilder(
+                entryId(sourceId),
+                "Unspecified title",
+                UserHandle.of(UserHandle.myUserId()),
+            )
             .setSeverityLevel(ENTRY_SEVERITY_LEVEL_UNSPECIFIED)
             .setSummary("Unspecified summary")
             .setPendingIntent(pendingIntent)
@@ -241,7 +254,7 @@ class SafetyCenterTestData(context: Context) {
         userId: Int = UserHandle.myUserId(),
         title: CharSequence = "Ok title",
     ) =
-        SafetyCenterEntry.Builder(entryId(sourceId, userId), title)
+        createSafetyCenterEntryBuilder(entryId(sourceId, userId), title, UserHandle.of(userId))
             .setSeverityLevel(ENTRY_SEVERITY_LEVEL_OK)
             .setSummary("Ok summary")
             .setPendingIntent(safetySourceTestData.createTestActivityRedirectPendingIntent())
@@ -266,7 +279,11 @@ class SafetyCenterTestData(context: Context) {
         sourceId: String,
         summary: String = "Recommendation summary",
     ) =
-        SafetyCenterEntry.Builder(entryId(sourceId), "Recommendation title")
+        createSafetyCenterEntryBuilder(
+                entryId(sourceId),
+                "Recommendation title",
+                UserHandle.of(UserHandle.myUserId()),
+            )
             .setSeverityLevel(ENTRY_SEVERITY_LEVEL_RECOMMENDATION)
             .setSummary(summary)
             .setPendingIntent(safetySourceTestData.createTestActivityRedirectPendingIntent())
@@ -278,7 +295,11 @@ class SafetyCenterTestData(context: Context) {
      * standard summary, and a pending intent that redirects to [TestActivity] for the given source.
      */
     fun safetyCenterEntryCritical(sourceId: String) =
-        SafetyCenterEntry.Builder(entryId(sourceId), "Critical title")
+        createSafetyCenterEntryBuilder(
+                entryId(sourceId),
+                "Critical title",
+                UserHandle.of(UserHandle.myUserId()),
+            )
             .setSeverityLevel(ENTRY_SEVERITY_LEVEL_CRITICAL_WARNING)
             .setSummary("Critical summary")
             .setPendingIntent(safetySourceTestData.createTestActivityRedirectPendingIntent())

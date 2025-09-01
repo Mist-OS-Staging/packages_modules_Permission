@@ -19,9 +19,9 @@ package android.safetycenter.functional
 import android.Manifest.permission.MANAGE_SAFETY_CENTER
 import android.content.Context
 import android.content.Intent
+import android.os.Build.VERSION_CODES.BAKLAVA
 import android.os.Build.VERSION_CODES.TIRAMISU
 import android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE
-import android.os.Build.VERSION_CODES.BAKLAVA
 import android.os.UserHandle
 import android.platform.test.annotations.RequiresFlagsDisabled
 import android.platform.test.annotations.RequiresFlagsEnabled
@@ -122,6 +122,7 @@ import com.android.safetycenter.testing.SafetyCenterTestData.Companion.withAttri
 import com.android.safetycenter.testing.SafetyCenterTestData.Companion.withDismissedIssuesIfAtLeastU
 import com.android.safetycenter.testing.SafetyCenterTestData.Companion.withoutExtras
 import com.android.safetycenter.testing.SafetyCenterTestHelper
+import com.android.safetycenter.testing.SafetyCenterTestHelper.Companion.createSafetyCenterEntryBuilder
 import com.android.safetycenter.testing.SafetyCenterTestRule
 import com.android.safetycenter.testing.SafetySourceIntentHandler.Request
 import com.android.safetycenter.testing.SafetySourceIntentHandler.Response
@@ -333,9 +334,10 @@ class SafetyCenterManagerTest {
                     .setEntries(
                         listOf(
                             safetyCenterTestData.safetyCenterEntryDefault(DYNAMIC_IN_STATEFUL_ID),
-                            SafetyCenterEntry.Builder(
+                            createSafetyCenterEntryBuilder(
                                     SafetyCenterTestData.entryId(STATIC_IN_STATEFUL_ID),
                                     "OK",
+                                    UserHandle.of(UserHandle.myUserId()),
                                 )
                                 .setSeverityLevel(ENTRY_SEVERITY_LEVEL_UNSPECIFIED)
                                 .setSummary("OK")
@@ -1311,9 +1313,7 @@ class SafetyCenterManagerTest {
             SafetySourceErrorDetails(EVENT_SOURCE_STATE_CHANGED),
         )
         val expectedEntry =
-            SafetyCenterEntry.Builder(
-                    safetyCenterTestData.safetyCenterEntryError(SINGLE_SOURCE_ID)
-                )
+            SafetyCenterEntry.Builder(safetyCenterTestData.safetyCenterEntryError(SINGLE_SOURCE_ID))
                 .setHasError(true)
                 .build()
         val expectedSafetyCenterData =
@@ -1342,9 +1342,7 @@ class SafetyCenterManagerTest {
         safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.singleSourceConfig)
         safetyCenterTestHelper.setData(SINGLE_SOURCE_ID, safetySourceTestData.information)
         val expectedEntry =
-            SafetyCenterEntry.Builder(
-                    safetyCenterTestData.safetyCenterEntryOk(SINGLE_SOURCE_ID)
-                )
+            SafetyCenterEntry.Builder(safetyCenterTestData.safetyCenterEntryOk(SINGLE_SOURCE_ID))
                 .setHasError(false)
                 .build()
         val expectedSafetyCenterData =

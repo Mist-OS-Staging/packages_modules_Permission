@@ -21,6 +21,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE
 import android.os.Bundle
+import android.os.UserHandle
 import android.safetycenter.SafetyCenterData
 import android.safetycenter.SafetyCenterEntry
 import android.safetycenter.SafetyCenterEntryGroup
@@ -40,6 +41,7 @@ import com.android.safetycenter.internaldata.SafetyCenterBundles.STATIC_ENTRIES_
 import com.android.safetycenter.testing.EqualsHashCodeToStringTester
 import com.android.safetycenter.testing.SafetyCenterTestData.Companion.withDismissedIssuesIfAtLeastU
 import com.android.safetycenter.testing.SafetyCenterTestData.Companion.withExtrasIfAtLeastU
+import com.android.safetycenter.testing.SafetyCenterTestHelper.Companion.createSafetyCenterEntryBuilder
 import com.google.common.truth.Truth.assertThat
 import kotlin.test.assertFailsWith
 import org.junit.Test
@@ -72,12 +74,12 @@ class SafetyCenterDataTest {
             .build()
 
     private val entry1 =
-        SafetyCenterEntry.Builder("eNtRy_iD_OnE", "An entry title")
+        createSafetyCenterEntryBuilder("eNtRy_iD_OnE", "An entry title", UserHandle.of(1))
             .setPendingIntent(pendingIntent)
             .setSeverityLevel(SafetyCenterEntry.ENTRY_SEVERITY_LEVEL_OK)
             .build()
     private val entry2 =
-        SafetyCenterEntry.Builder("eNtRy_iD_TwO", "Another entry title")
+        createSafetyCenterEntryBuilder("eNtRy_iD_TwO", "Another entry title", UserHandle.of(1))
             .setPendingIntent(pendingIntent)
             .setSeverityLevel(SafetyCenterEntry.ENTRY_SEVERITY_LEVEL_RECOMMENDATION)
             .build()
