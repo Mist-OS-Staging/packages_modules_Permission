@@ -22,8 +22,10 @@ import android.Manifest.permission.SEND_SAFETY_CENTER_UPDATE
 import android.content.Context
 import android.os.Build.VERSION_CODES.TIRAMISU
 import android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE
+import android.os.UserHandle
 import android.os.UserManager
 import android.platform.test.flag.junit.DeviceFlagsValueProvider
+import android.safetycenter.SafetyCenterEntry
 import android.safetycenter.SafetyCenterManager
 import android.safetycenter.SafetyEvent
 import android.safetycenter.SafetySourceData
@@ -231,5 +233,17 @@ class SafetyCenterTestHelper(val context: Context) {
                 }
             return !safetyCenterEnabledNoDeviceConfig || !SdkLevel.isAtLeastU()
         }
+
+        /* Creates an appropriate [SafetyCenterEntry.Builder]. */
+        fun createSafetyCenterEntryBuilder(
+            id: String,
+            title: CharSequence,
+            user: UserHandle,
+        ): SafetyCenterEntry.Builder =
+            if (SdkLevel.isAtLeastB() && android.permission.flags.Flags.openSafetyCenterApis()) {
+                SafetyCenterEntry.Builder(id, title, user)
+            } else {
+                SafetyCenterEntry.Builder(id, title)
+            }
     }
 }
