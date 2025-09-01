@@ -325,10 +325,11 @@ public final class SafetyCenterDataFactory {
         int safetyCenterIssueSeverityLevel =
                 toSafetyCenterIssueSeverityLevel(safetySourceIssue.getSeverityLevel());
         SafetyCenterIssue.Builder safetyCenterIssueBuilder =
-                new SafetyCenterIssue.Builder(
+                createSafetyCenterIssueBuilder(
                                 SafetyCenterIds.encodeToString(safetyCenterIssueId),
                                 safetySourceIssue.getTitle(),
-                                safetySourceIssue.getSummary())
+                                safetySourceIssue.getSummary(),
+                                UserHandle.of(safetyCenterIssueKey.getUserId()))
                         .setSeverityLevel(safetyCenterIssueSeverityLevel)
                         .setShouldConfirmDismissal(
                                 safetyCenterIssueSeverityLevel
@@ -1344,6 +1345,17 @@ public final class SafetyCenterDataFactory {
     private static SafetySourceKey toSafetySourceKey(String safetyCenterEntryIdString) {
         SafetyCenterEntryId id = SafetyCenterIds.entryIdFromString(safetyCenterEntryIdString);
         return SafetySourceKey.of(id.getSafetySourceId(), id.getUserId());
+    }
+
+    private static SafetyCenterIssue.Builder createSafetyCenterIssueBuilder(
+            String id, CharSequence title, CharSequence summary, UserHandle user) {
+        SafetyCenterIssue.Builder builder;
+        if (android.permission.flags.Flags.openSafetyCenterApis()) {
+            builder = new SafetyCenterIssue.Builder(id, title, summary, user);
+        } else {
+            builder = new SafetyCenterIssue.Builder(id, title, summary);
+        }
+        return builder;
     }
 
     /**

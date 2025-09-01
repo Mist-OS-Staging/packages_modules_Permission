@@ -25,6 +25,7 @@ import android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE
 import android.os.UserHandle
 import android.os.UserManager
 import android.platform.test.flag.junit.DeviceFlagsValueProvider
+import android.safetycenter.SafetyCenterIssue
 import android.safetycenter.SafetyCenterEntry
 import android.safetycenter.SafetyCenterManager
 import android.safetycenter.SafetyEvent
@@ -221,6 +222,19 @@ class SafetyCenterTestHelper(val context: Context) {
 
     companion object {
         private const val TAG: String = "SafetyCenterTestHelper"
+
+        /* Creates an appropriate [SafetyCenterIssue.Builder]. */
+        fun createSafetyCenterIssueBuilder(
+            id: String,
+            title: CharSequence,
+            summary: CharSequence,
+            user: UserHandle,
+        ): SafetyCenterIssue.Builder =
+            if (SdkLevel.isAtLeastB() && android.permission.flags.Flags.openSafetyCenterApis()) {
+                SafetyCenterIssue.Builder(id, title, summary, user)
+            } else {
+                SafetyCenterIssue.Builder(id, title, summary)
+            }
 
         /** Returns whether Safety Center can be enabled / disabled using a DeviceConfig flag. */
         fun safetyCenterCanBeToggledUsingDeviceConfig(): Boolean {

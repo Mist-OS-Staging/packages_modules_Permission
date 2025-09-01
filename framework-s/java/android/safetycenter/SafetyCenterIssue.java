@@ -22,6 +22,7 @@ import static android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE;
 import static java.util.Collections.unmodifiableList;
 import static java.util.Objects.requireNonNull;
 
+import android.annotation.FlaggedApi;
 import android.annotation.IntDef;
 import android.annotation.NonNull;
 import android.annotation.Nullable;
@@ -30,6 +31,8 @@ import android.annotation.SystemApi;
 import android.app.PendingIntent;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.os.UserHandle;
+import android.permission.flags.Flags;
 import android.safetycenter.config.SafetySourcesGroup;
 import android.text.TextUtils;
 
@@ -91,17 +94,25 @@ public final class SafetyCenterIssue implements Parcelable {
             new Creator<SafetyCenterIssue>() {
                 @Override
                 public SafetyCenterIssue createFromParcel(Parcel in) {
+                    SafetyCenterIssue.Builder builder;
+
                     String id = in.readString();
                     CharSequence title = TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(in);
                     CharSequence subtitle = TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(in);
                     CharSequence summary = TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(in);
-                    SafetyCenterIssue.Builder builder =
-                            new Builder(id, title, summary)
-                                    .setSubtitle(subtitle)
-                                    .setSeverityLevel(in.readInt())
-                                    .setDismissible(in.readBoolean())
-                                    .setShouldConfirmDismissal(in.readBoolean())
-                                    .setActions(in.createTypedArrayList(Action.CREATOR));
+
+                    if (Flags.openSafetyCenterApis()) {
+                        UserHandle user = in.readTypedObject(UserHandle.CREATOR);
+                        builder = new Builder(id, title, summary, user);
+                    } else {
+                        builder = new Builder(id, title, summary);
+                    }
+
+                    builder.setSubtitle(subtitle)
+                            .setSeverityLevel(in.readInt())
+                            .setDismissible(in.readBoolean())
+                            .setShouldConfirmDismissal(in.readBoolean())
+                            .setActions(in.createTypedArrayList(Action.CREATOR));
                     if (SdkLevel.isAtLeastU()) {
                         builder.setAttributionTitle(
                                 TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(in));
@@ -126,6 +137,7 @@ public final class SafetyCenterIssue implements Parcelable {
     @NonNull private final List<Action> mActions;
     @Nullable private final CharSequence mAttributionTitle;
     @Nullable private final String mGroupId;
+    @Nullable private final UserHandle mUser;
 
     private SafetyCenterIssue(
             @NonNull String id,
@@ -137,7 +149,8 @@ public final class SafetyCenterIssue implements Parcelable {
             boolean shouldConfirmDismissal,
             @NonNull List<Action> actions,
             @Nullable CharSequence attributionTitle,
-            @Nullable String groupId) {
+            @Nullable String groupId,
+            @Nullable UserHandle user) {
         mId = id;
         mTitle = title;
         mSubtitle = subtitle;
@@ -148,6 +161,7 @@ public final class SafetyCenterIssue implements Parcelable {
         mActions = actions;
         mAttributionTitle = attributionTitle;
         mGroupId = groupId;
+        mUser = user;
     }
 
     /**
@@ -242,6 +256,13 @@ public final class SafetyCenterIssue implements Parcelable {
         return mGroupId;
     }
 
+    /** Returns the user handle related to this issue. */
+    @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+    @Nullable
+    public UserHandle getUser() {
+        return mUser;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -256,7 +277,8 @@ public final class SafetyCenterIssue implements Parcelable {
                 && TextUtils.equals(mSummary, that.mSummary)
                 && Objects.equals(mActions, that.mActions)
                 && TextUtils.equals(mAttributionTitle, that.mAttributionTitle)
-                && Objects.equals(mGroupId, that.mGroupId);
+                && Objects.equals(mGroupId, that.mGroupId)
+                && Objects.equals(mUser, that.mUser);
     }
 
     @Override
@@ -271,7 +293,8 @@ public final class SafetyCenterIssue implements Parcelable {
                 mShouldConfirmDismissal,
                 mActions,
                 mAttributionTitle,
-                mGroupId);
+                mGroupId,
+                mUser);
     }
 
     @Override
@@ -297,6 +320,7 @@ public final class SafetyCenterIssue implements Parcelable {
                 + mAttributionTitle
                 + ", mGroupId="
                 + mGroupId
+                + (Flags.openSafetyCenterApis() ? ", mUser=" + mUser : "")
                 + '}';
     }
 
@@ -311,6 +335,9 @@ public final class SafetyCenterIssue implements Parcelable {
         TextUtils.writeToParcel(mTitle, dest, flags);
         TextUtils.writeToParcel(mSubtitle, dest, flags);
         TextUtils.writeToParcel(mSummary, dest, flags);
+        if (Flags.openSafetyCenterApis()) {
+            dest.writeTypedObject(mUser, flags);
+        }
         dest.writeInt(mSeverityLevel);
         dest.writeBoolean(mDismissible);
         dest.writeBoolean(mShouldConfirmDismissal);
@@ -334,6 +361,7 @@ public final class SafetyCenterIssue implements Parcelable {
         private List<Action> mActions = new ArrayList<>();
         @Nullable private CharSequence mAttributionTitle;
         @Nullable private String mGroupId;
+        @Nullable private UserHandle mUser;
 
         /**
          * Creates a {@link Builder} for a {@link SafetyCenterIssue}.
@@ -341,12 +369,34 @@ public final class SafetyCenterIssue implements Parcelable {
          * @param id a unique encoded string ID, see {@link #getId()} for details
          * @param title a title that describes this issue
          * @param summary a summary of this issue
+         *
+         * @deprecated Use the builder with {@code user} field instead.
          */
+        @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+        @Deprecated
         public Builder(
                 @NonNull String id, @NonNull CharSequence title, @NonNull CharSequence summary) {
             mId = requireNonNull(id);
             mTitle = requireNonNull(title);
             mSummary = requireNonNull(summary);
+        }
+
+        /**
+         * Creates a {@link Builder} for a {@link SafetyCenterIssue}.
+         *
+         * @param id a unique encoded string ID, see {@link #getId()} for details
+         * @param title a title that describes this issue
+         * @param summary a summary of this issue
+         * @param user the user handle for this issue
+         */
+        @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+        public Builder(
+                @NonNull String id, @NonNull CharSequence title, @NonNull CharSequence summary,
+                @NonNull UserHandle user) {
+            mId = requireNonNull(id);
+            mTitle = requireNonNull(title);
+            mSummary = requireNonNull(summary);
+            mUser = requireNonNull(user);
         }
 
         /** Creates a {@link Builder} with the values from the given {@link SafetyCenterIssue}. */
@@ -361,6 +411,7 @@ public final class SafetyCenterIssue implements Parcelable {
             mActions = new ArrayList<>(issue.mActions);
             mAttributionTitle = issue.mAttributionTitle;
             mGroupId = issue.mGroupId;
+            mUser = issue.mUser;
         }
 
         /** Sets the ID for this issue. */
@@ -467,6 +518,18 @@ public final class SafetyCenterIssue implements Parcelable {
             return this;
         }
 
+        /**
+         * Sets the user handle for this issue.
+         *
+         * @param userHandle the user handle for this issue
+         */
+        @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+        @NonNull
+        public Builder setUser(@NonNull UserHandle user) {
+            mUser = requireNonNull(user);
+            return this;
+        }
+
         /** Creates the {@link SafetyCenterIssue} defined by this {@link Builder}. */
         @NonNull
         public SafetyCenterIssue build() {
@@ -480,7 +543,8 @@ public final class SafetyCenterIssue implements Parcelable {
                     mShouldConfirmDismissal,
                     unmodifiableList(new ArrayList<>(mActions)),
                     mAttributionTitle,
-                    mGroupId);
+                    mGroupId,
+                    mUser);
         }
     }
 

@@ -209,6 +209,7 @@ package android.safetycenter {
     method @Nullable public CharSequence getSubtitle();
     method @NonNull public CharSequence getSummary();
     method @NonNull public CharSequence getTitle();
+    method @FlaggedApi("android.permission.flags.open_safety_center_apis") @Nullable public android.os.UserHandle getUser();
     method public boolean isDismissible();
     method public boolean shouldConfirmDismissal();
     method public void writeToParcel(@NonNull android.os.Parcel, int);
@@ -256,7 +257,8 @@ package android.safetycenter {
   }
 
   public static final class SafetyCenterIssue.Builder {
-    ctor public SafetyCenterIssue.Builder(@NonNull String, @NonNull CharSequence, @NonNull CharSequence);
+    ctor @Deprecated @FlaggedApi("android.permission.flags.open_safety_center_apis") public SafetyCenterIssue.Builder(@NonNull String, @NonNull CharSequence, @NonNull CharSequence);
+    ctor @FlaggedApi("android.permission.flags.open_safety_center_apis") public SafetyCenterIssue.Builder(@NonNull String, @NonNull CharSequence, @NonNull CharSequence, @NonNull android.os.UserHandle);
     ctor public SafetyCenterIssue.Builder(@NonNull android.safetycenter.SafetyCenterIssue);
     method @NonNull public android.safetycenter.SafetyCenterIssue build();
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setActions(@NonNull java.util.List<android.safetycenter.SafetyCenterIssue.Action>);
@@ -269,6 +271,7 @@ package android.safetycenter {
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setSubtitle(@Nullable CharSequence);
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setSummary(@NonNull CharSequence);
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setTitle(@NonNull CharSequence);
+    method @FlaggedApi("android.permission.flags.open_safety_center_apis") @NonNull public android.safetycenter.SafetyCenterIssue.Builder setUser(@NonNull android.os.UserHandle);
   }
 
   public final class SafetyCenterManager {
