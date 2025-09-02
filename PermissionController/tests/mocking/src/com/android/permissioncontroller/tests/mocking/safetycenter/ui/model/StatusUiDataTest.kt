@@ -277,8 +277,8 @@ class StatusUiDataTest {
                 "issue title",
                 "issue summary",
                 UserHandle.of(UserHandle.myUserId()),
-                setOf("safety_source_id")
-            )
+                setOf("safety_source_id"),
+                "default_issue_type_id")
             .build()
 
         val DATA_WITH_ISSUES = SafetyCenterData(STATUS, listOf(ISSUE), listOf(), listOf())

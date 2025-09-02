@@ -344,7 +344,13 @@ class SafetyCenterUiDataTest {
             groupId: String,
             severityLevel: Int = ISSUE_SEVERITY_LEVEL_RECOMMENDATION,
         ) =
-            createSafetyCenterIssueBuilder(encodedIssueId, "issue title", "issue summary", UserHandle.of(UserHandle.myUserId()), setOf("defaultSourceId"))
+            createSafetyCenterIssueBuilder(
+                    encodedIssueId,
+                    "issue title",
+                    "issue summary",
+                    UserHandle.of(UserHandle.myUserId()),
+                    setOf("defaultSourceId"),
+                    "defaultIssueTypeId")
                 .setSeverityLevel(severityLevel)
                 .setGroupId(groupId)
                 .build()

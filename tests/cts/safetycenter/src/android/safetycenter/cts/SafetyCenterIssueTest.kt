@@ -79,7 +79,8 @@ class SafetyCenterIssueTest {
                 "Everything's good",
                 "Please acknowledge this",
                 UserHandle.of(1),
-                setOf("safety_source_id_1"))
+                setOf("safety_source_id_1"),
+                "issue_type_id_1")
             .setSubtitle("In the neighborhood")
             .setSeverityLevel(SafetyCenterIssue.ISSUE_SEVERITY_LEVEL_OK)
             .setDismissible(true)
@@ -93,7 +94,8 @@ class SafetyCenterIssueTest {
                 "Everything's good",
                 "Please acknowledge this",
                 UserHandle.of(1),
-                setOf("safety_source_id_1"))
+                setOf("safety_source_id_1"),
+                "issue_type_id_1")
             .setSeverityLevel(SafetyCenterIssue.ISSUE_SEVERITY_LEVEL_OK)
             .build()
 
@@ -158,7 +160,8 @@ class SafetyCenterIssueTest {
                 "Everything's good",
                 "Please acknowledge this",
                 UserHandle.of(1),
-                setOf("safety_source_id_1"))
+                setOf("safety_source_id_1"),
+                "issue_type_id_1")
             .build()
 
         assertThat(safetyCenterIssue.attributionTitle).isNull()
@@ -269,7 +272,8 @@ class SafetyCenterIssueTest {
                     "Everything's good",
                     "Please acknowledge this",
                     UserHandle.of(1),
-                    setOf("safety_source_id_1"))
+                    setOf("safety_source_id_1"),
+                    "issue_type_id_1")
                 .build()
 
         assertThat(issue.groupId).isNull()
@@ -284,7 +288,8 @@ class SafetyCenterIssueTest {
                 "Everything's good",
                 "Please acknowledge this",
                 UserHandle.of(1),
-                setOf("safety_source_id_1"))
+                setOf("safety_source_id_1"),
+                "issue_type_id_1")
             .build()
 
         assertFails { issue.groupId }
@@ -329,6 +334,20 @@ class SafetyCenterIssueTest {
             .containsExactly("safety_source_id_1", "safety_source_id_2")
     }
 
+    @SdkSuppress(minSdkVersion = BAKLAVA)
+    @RequiresFlagsEnabled(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+    @Test
+    fun getIssueTypeId_returnsIssueTypeId() {
+        assertThat(issue1.issueTypeId).isEqualTo("issue_type_id_1")
+        assertThat(
+                SafetyCenterIssue.Builder(issue1)
+                    .setIssueTypeId("issue_type_id_2")
+                    .build()
+                    .issueTypeId
+            )
+            .isEqualTo("issue_type_id_2")
+    }
+
     @Test
     fun describeContents_returns0() {
         assertThat(issue1.describeContents()).isEqualTo(0)
@@ -345,7 +364,7 @@ class SafetyCenterIssueTest {
     @SdkSuppress(minSdkVersion = UPSIDE_DOWN_CAKE)
     fun parcelRoundTrip_recreatesEqual_atLeastAndroidU() {
         val safetyCenterIssue =
-           createSafetyCenterIssueBuilder("issue_id", "Everything's good", "Please acknowledge this", UserHandle.of(1), setOf("safety_source_id_1"))
+           createSafetyCenterIssueBuilder("issue_id", "Everything's good", "Please acknowledge this", UserHandle.of(1), setOf("safety_source_id_1"), "issue_type_id_1")
                 .setSubtitle("In the neighborhood")
                 .setSeverityLevel(SafetyCenterIssue.ISSUE_SEVERITY_LEVEL_OK)
                 .setDismissible(true)
@@ -590,7 +609,8 @@ class SafetyCenterIssueTest {
                 "Everything's good",
                 "Please acknowledge this",
                 UserHandle.of(1),
-                setOf("safety_source_id_1"))
+                setOf("safety_source_id_1"),
+                "issue_type_id_1")
                 .setSubtitle("In the neighborhood")
                 .setSeverityLevel(SafetyCenterIssue.ISSUE_SEVERITY_LEVEL_OK)
                 .setDismissible(true)
@@ -658,7 +678,8 @@ class SafetyCenterIssueTest {
                 "Everything's good",
                 "Please acknowledge this",
                 UserHandle.of(1),
-                setOf("safety_source_id_1"))
+                setOf("safety_source_id_1"),
+                "issue_type_id_1")
                 .setSubtitle("In the neighborhood")
                 .setSeverityLevel(SafetyCenterIssue.ISSUE_SEVERITY_LEVEL_OK)
                 .setDismissible(true)
@@ -688,6 +709,14 @@ class SafetyCenterIssueTest {
                     .build(),
                 SafetyCenterIssue.Builder(issueWithUpsideDownCakeFields)
                     .setSafetySourceIds(setOf("safety_source_id_1", "safety_source_id_5"))
+                    .build(),
+            )
+            .addEqualityGroup(
+                SafetyCenterIssue.Builder(issueWithUpsideDownCakeFields)
+                    .setIssueTypeId("issue_type_id_2")
+                    .build(),
+                SafetyCenterIssue.Builder(issueWithUpsideDownCakeFields)
+                    .setIssueTypeId("issue_type_id_2")
                     .build(),
             )
     }
@@ -776,12 +805,20 @@ class SafetyCenterIssueTest {
                 "a title",
                 "Please acknowledge this",
                 UserHandle.of(1),
-                setOf("safety_source_id_1"))
+                setOf("safety_source_id_1"),
+                "issue_type_id_1")
                     .setSubtitle("In the neighborhood")
                     .setSeverityLevel(SafetyCenterIssue.ISSUE_SEVERITY_LEVEL_OK)
                     .setActions(listOf(action1))
                     .build(),
-                createSafetyCenterIssueBuilder("an id", "a title", "Please acknowledge this", UserHandle.of(1), setOf("safety_source_id_1"))
+                createSafetyCenterIssueBuilder(
+                        "an id",
+                        "a title",
+                        "Please acknowledge this",
+                        UserHandle.of(1),
+                        setOf("safety_source_id_1"),
+                        "issue_type_id_1",
+                    )
                     .setSubtitle("In the neighborhood")
                     .setSeverityLevel(SafetyCenterIssue.ISSUE_SEVERITY_LEVEL_OK)
                     .setActions(listOf(action1))

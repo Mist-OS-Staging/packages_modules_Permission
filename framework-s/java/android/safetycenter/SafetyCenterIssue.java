@@ -107,7 +107,8 @@ public final class SafetyCenterIssue implements Parcelable {
                     if (Flags.openSafetyCenterApis()) {
                         UserHandle user = in.readTypedObject(UserHandle.CREATOR);
                         Set<String> safetySourceIds = new ArraySet<>(in.createStringArrayList());
-                        builder = new Builder(id, title, summary, user, safetySourceIds);
+                        String issueTypeId = in.readString();
+                        builder = new Builder(id, title, summary, user, safetySourceIds, issueTypeId);
                     } else {
                         builder = new Builder(id, title, summary);
                     }
@@ -144,6 +145,7 @@ public final class SafetyCenterIssue implements Parcelable {
     @Nullable private final String mGroupId;
     @Nullable private final UserHandle mUser;
     @NonNull private final Set<String> mSafetySourceIds;
+    @Nullable private final String mIssueTypeId;
 
     private SafetyCenterIssue(
             @NonNull String id,
@@ -157,7 +159,8 @@ public final class SafetyCenterIssue implements Parcelable {
             @Nullable CharSequence attributionTitle,
             @Nullable String groupId,
             @Nullable UserHandle user,
-            @NonNull Set<String> safetySourceIds) {
+            @NonNull Set<String> safetySourceIds,
+            @Nullable String issueTypeId) {
         mId = id;
         mTitle = title;
         mSubtitle = subtitle;
@@ -170,6 +173,7 @@ public final class SafetyCenterIssue implements Parcelable {
         mGroupId = groupId;
         mUser = user;
         mSafetySourceIds = safetySourceIds;
+        mIssueTypeId = issueTypeId;
     }
 
     /**
@@ -278,6 +282,13 @@ public final class SafetyCenterIssue implements Parcelable {
         return mSafetySourceIds;
     }
 
+    /** Returns the issue type ID of this issue. */
+    @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+    @Nullable
+    public String getIssueTypeId() {
+        return mIssueTypeId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -294,7 +305,8 @@ public final class SafetyCenterIssue implements Parcelable {
                 && Objects.equals(mSafetySourceIds, that.mSafetySourceIds)
                 && TextUtils.equals(mAttributionTitle, that.mAttributionTitle)
                 && Objects.equals(mGroupId, that.mGroupId)
-                && Objects.equals(mUser, that.mUser);
+                && Objects.equals(mUser, that.mUser)
+                && Objects.equals(mIssueTypeId, that.mIssueTypeId);
     }
 
     @Override
@@ -311,7 +323,8 @@ public final class SafetyCenterIssue implements Parcelable {
                 mSafetySourceIds,
                 mAttributionTitle,
                 mGroupId,
-                mUser);
+                mUser,
+                mIssueTypeId);
     }
 
     @Override
@@ -339,6 +352,7 @@ public final class SafetyCenterIssue implements Parcelable {
                 + mGroupId
                 + (Flags.openSafetyCenterApis() ? ", mUser=" + mUser : "")
                 + (Flags.openSafetyCenterApis() ? ", mSafetySourceIds=" + mSafetySourceIds : "")
+                + (Flags.openSafetyCenterApis() ? ", mIssueTypeId=" + mIssueTypeId : "")
                 + '}';
     }
 
@@ -356,6 +370,7 @@ public final class SafetyCenterIssue implements Parcelable {
         if (Flags.openSafetyCenterApis()) {
             dest.writeTypedObject(mUser, flags);
             dest.writeStringList(new ArrayList<>(mSafetySourceIds));
+            dest.writeString(mIssueTypeId);
         }
         dest.writeInt(mSeverityLevel);
         dest.writeBoolean(mDismissible);
@@ -382,6 +397,7 @@ public final class SafetyCenterIssue implements Parcelable {
         @Nullable private String mGroupId;
         @Nullable private UserHandle mUser;
         private Set<String> mSafetySourceIds = new ArraySet<>();
+        @Nullable private String mIssueTypeId;
 
         /**
          * Creates a {@link Builder} for a {@link SafetyCenterIssue}.
@@ -390,7 +406,8 @@ public final class SafetyCenterIssue implements Parcelable {
          * @param title a title that describes this issue
          * @param summary a summary of this issue
          *
-         * @deprecated Use the builder with {@code user} and {@code safetySourceIds} fields instead.
+         * @deprecated Use {@link #Builder(String, CharSequence, CharSequence, UserHandle, Set,
+         *             String)} instead.
          */
         @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
         @Deprecated
@@ -409,11 +426,13 @@ public final class SafetyCenterIssue implements Parcelable {
          * @param summary a summary of this issue
          * @param user the user handle for this issue
          * @param safetySourceIds at least one safety source ID that sent this issue
+         * @param issueTypeId the issue type ID for this issue
          */
         @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
         public Builder(
                 @NonNull String id, @NonNull CharSequence title, @NonNull CharSequence summary,
-                @NonNull UserHandle user, @NonNull Set<String> safetySourceIds) {
+                @NonNull UserHandle user, @NonNull Set<String> safetySourceIds,
+                @NonNull String issueTypeId) {
             mId = requireNonNull(id);
             mTitle = requireNonNull(title);
             mSummary = requireNonNull(summary);
@@ -423,6 +442,7 @@ public final class SafetyCenterIssue implements Parcelable {
                 throw new IllegalArgumentException("At least one safety source ID must be "
                         + "provided when open_safety_center_apis is enabled");
             }
+            mIssueTypeId = requireNonNull(issueTypeId);
         }
 
         /** Creates a {@link Builder} with the values from the given {@link SafetyCenterIssue}. */
@@ -439,6 +459,7 @@ public final class SafetyCenterIssue implements Parcelable {
             mGroupId = issue.mGroupId;
             mUser = issue.mUser;
             mSafetySourceIds = new ArraySet<>(issue.mSafetySourceIds);
+            mIssueTypeId = issue.mIssueTypeId;
         }
 
         /** Sets the ID for this issue. */
@@ -575,6 +596,21 @@ public final class SafetyCenterIssue implements Parcelable {
             return this;
         }
 
+        /**
+         * Sets the issue type ID for this issue.
+         *
+         * <p>The issue type ID comes directly from the {@link SafetySourceIssue#getIssueTypeId()}.
+         *
+         * @param issueTypeId the issue type ID for this issue
+         */
+        @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+        @NonNull
+        public Builder setIssueTypeId(@NonNull String issueTypeId) {
+            mIssueTypeId = requireNonNull(issueTypeId);
+            return this;
+        }
+
+
         /** Creates the {@link SafetyCenterIssue} defined by this {@link Builder}. */
         @NonNull
         public SafetyCenterIssue build() {
@@ -590,7 +626,8 @@ public final class SafetyCenterIssue implements Parcelable {
                     mAttributionTitle,
                     mGroupId,
                     mUser,
-                    unmodifiableSet(new ArraySet<>(mSafetySourceIds)));
+                    unmodifiableSet(new ArraySet<>(mSafetySourceIds)),
+                    mIssueTypeId);
         }
     }
 
