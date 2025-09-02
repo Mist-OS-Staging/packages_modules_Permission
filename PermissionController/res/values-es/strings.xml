@@ -111,7 +111,7 @@
     <!-- no translation found for background_access_chooser_dialog_choices:1 (9127301153688725448) -->
     <!-- no translation found for background_access_chooser_dialog_choices:2 (4305536986042401191) -->
     <string name="permission_access_always" msgid="1474641821883823446">"Permitir siempre"</string>
-    <string name="permission_access_only_foreground" msgid="7801170728159326195">"Permitir solo mientras se usa la aplicación"</string>
+    <string name="permission_access_only_foreground" msgid="7801170728159326195">"Permitir solo mientras se usa la app"</string>
     <string name="permission_access_never" msgid="4647014230217936900">"No permitir"</string>
     <string name="loading" msgid="4789365003890741082">"Cargando…"</string>
     <string name="all_permissions" msgid="6911125611996872522">"Todos los permisos"</string>
@@ -188,7 +188,7 @@
     <string name="app_permission_button_allow_all_files" msgid="1792232272599018825">"Permitir gestionar todos los archivos"</string>
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Permitir acceso solo al contenido multimedia"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Permitir siempre"</string>
-    <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Permitir solo mientras se usa la aplicación"</string>
+    <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Permitir solo mientras se usa la app"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Permitir todo siempre"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Preguntar siempre"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"No permitir"</string>
@@ -715,10 +715,8 @@
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Acceso de agentes"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agentes que pueden acceder a información y realizar acciones por ti en esta aplicación"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Ajustes del dispositivo"</string>
-    <!-- no translation found for request_app_function_access_dialog_title (877934835928912474) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_description (155777384496379754) -->
-    <skip />
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"¿Permitir que <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> sea agente de <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Este agente podrá acceder a <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> para obtener información y realizar acciones por ti"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Permitir"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"No permitir"</string>
 </resources>

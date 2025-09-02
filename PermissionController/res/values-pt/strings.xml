@@ -345,7 +345,7 @@
     <string name="app_perms_content_provider_7d_all_files" msgid="7962416229708835558">"Acessado nos últimos sete dias • Todos os arquivos"</string>
     <string name="no_permissions_allowed" msgid="6081976856354669209">"Nenhuma permissão autorizada"</string>
     <string name="no_permissions_denied" msgid="8159923922804043282">"Nenhuma permissão negada"</string>
-    <string name="no_apps_allowed" msgid="7718822655254468631">"Nenhum app permitido"</string>
+    <string name="no_apps_allowed" msgid="7718822655254468631">"Nenhum app com permissão"</string>
     <string name="no_apps_allowed_full" msgid="8011716991498934104">"Nenhum app é permitido para todos os arquivos"</string>
     <string name="no_apps_allowed_scoped" msgid="4908850477787659501">"Nenhum app com permissão para acesso exclusivo a arquivos de mídia"</string>
     <string name="no_apps_denied" msgid="7663435886986784743">"Nenhum app negado"</string>
