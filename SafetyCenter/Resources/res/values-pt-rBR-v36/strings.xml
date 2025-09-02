@@ -17,7 +17,7 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="face_unlock_title" msgid="3991635517593572926">"Rosto"</string>
+    <string name="face_unlock_title" msgid="3991635517593572926">"Reconhecimento facial"</string>
     <string name="face_unlock_title_for_work" msgid="1451170625947022012">"Reconhecimento facial para o trabalho"</string>
     <string name="face_unlock_title_for_private_profile" msgid="2758692637409168420"></string>
     <string name="face_unlock_search_terms" msgid="2708195853333028283">"Desbloqueio facial, Rosto"</string>
