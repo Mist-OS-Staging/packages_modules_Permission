@@ -715,10 +715,8 @@
     <string name="app_function_target_access_title" msgid="7415628605578155761">"এজেণ্টৰ এক্সেছ"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"এই এপ্‌টোত তথ্য এক্সেছ কৰিব পৰা আৰু আপোনাৰ বাবে কাৰ্যব্যৱস্থা গ্ৰহণ কৰিব পৰা এজেণ্টসকল"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"ডিভাইচৰ ছেটিং"</string>
-    <!-- no translation found for request_app_function_access_dialog_title (877934835928912474) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_description (155777384496379754) -->
-    <skip />
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>ক <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>ৰ বাবে এজেণ্ট হ’বলৈ অনুমতি দিবনে?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"এই এজেণ্টগৰাকীয়ে তথ্য পাবলৈ আৰু আপোনাৰ বাবে কাৰ্য কৰিবলৈ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> এক্সেছ কৰিব পাৰিব"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"অনুমতি দিয়ক"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"অনুমতি নিদিব"</string>
 </resources>

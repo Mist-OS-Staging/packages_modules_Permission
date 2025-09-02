@@ -715,10 +715,8 @@
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Accesso agente"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agenti che possono accedere alle informazioni ed eseguire azioni per te in questa app"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Impostazioni del dispositivo"</string>
-    <!-- no translation found for request_app_function_access_dialog_title (877934835928912474) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_description (155777384496379754) -->
-    <skip />
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Consentire a <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> di essere l\'agente per <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"L\'agente potrà accedere a <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> per ottenere informazioni ed eseguire azioni per te"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Consenti"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Non consentire"</string>
 </resources>

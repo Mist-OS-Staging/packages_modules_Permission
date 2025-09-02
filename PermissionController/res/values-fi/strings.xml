@@ -715,10 +715,8 @@
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Agentin pääsyoikeudet"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agentit, joilla on pääsy tietoihin ja jotka voivat tehdä toimintoja puolestasi tässä sovelluksessa"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Laiteasetukset"</string>
-    <!-- no translation found for request_app_function_access_dialog_title (877934835928912474) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_description (155777384496379754) -->
-    <skip />
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Salli <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> olla agentti (<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>)?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Agentti pääsee <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ‑sovellukseen tietojen hakemista ja toimintoja varten"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Salli"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Älä salli"</string>
 </resources>
