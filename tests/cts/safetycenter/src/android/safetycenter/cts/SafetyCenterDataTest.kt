@@ -73,7 +73,7 @@ class SafetyCenterDataTest {
                 "An issue title",
                 "An issue summary",
                 UserHandle.of(1),
-            )
+                setOf("safety_source_id_1"))
             .setSeverityLevel(SafetyCenterIssue.ISSUE_SEVERITY_LEVEL_OK)
             .build()
     private val issue2 =
@@ -82,7 +82,7 @@ class SafetyCenterDataTest {
                 "Another issue title",
                 "Another issue summary",
                 UserHandle.of(1),
-            )
+                setOf("safety_source_id_2"))
             .setSeverityLevel(SafetyCenterIssue.ISSUE_SEVERITY_LEVEL_RECOMMENDATION)
             .build()
 

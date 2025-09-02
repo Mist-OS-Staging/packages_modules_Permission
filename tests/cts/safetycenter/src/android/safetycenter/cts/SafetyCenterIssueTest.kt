@@ -78,7 +78,8 @@ class SafetyCenterIssueTest {
                 "issue_id",
                 "Everything's good",
                 "Please acknowledge this",
-                UserHandle.of(1))
+                UserHandle.of(1),
+                setOf("safety_source_id_1"))
             .setSubtitle("In the neighborhood")
             .setSeverityLevel(SafetyCenterIssue.ISSUE_SEVERITY_LEVEL_OK)
             .setDismissible(true)
@@ -91,7 +92,8 @@ class SafetyCenterIssueTest {
                 "issue_id",
                 "Everything's good",
                 "Please acknowledge this",
-                UserHandle.of(1))
+                UserHandle.of(1),
+                setOf("safety_source_id_1"))
             .setSeverityLevel(SafetyCenterIssue.ISSUE_SEVERITY_LEVEL_OK)
             .build()
 
@@ -155,7 +157,8 @@ class SafetyCenterIssueTest {
                 "issue_id",
                 "Everything's good",
                 "Please acknowledge this",
-                UserHandle.of(1))
+                UserHandle.of(1),
+                setOf("safety_source_id_1"))
             .build()
 
         assertThat(safetyCenterIssue.attributionTitle).isNull()
@@ -265,7 +268,8 @@ class SafetyCenterIssueTest {
                     "issue_id",
                     "Everything's good",
                     "Please acknowledge this",
-                    UserHandle.of(1))
+                    UserHandle.of(1),
+                    setOf("safety_source_id_1"))
                 .build()
 
         assertThat(issue.groupId).isNull()
@@ -275,11 +279,12 @@ class SafetyCenterIssueTest {
     @SdkSuppress(maxSdkVersion = TIRAMISU)
     fun getGroupId_withVersionLessThanU_throws() {
         val issue =
-        createSafetyCenterIssueBuilder(
+            createSafetyCenterIssueBuilder(
                 "issue_id",
                 "Everything's good",
                 "Please acknowledge this",
-                UserHandle.of(1))
+                UserHandle.of(1),
+                setOf("safety_source_id_1"))
             .build()
 
         assertFails { issue.groupId }
@@ -310,6 +315,20 @@ class SafetyCenterIssueTest {
             .isEqualTo(UserHandle.of(123))
     }
 
+    @SdkSuppress(minSdkVersion = BAKLAVA)
+    @RequiresFlagsEnabled(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+    @Test
+    fun getSafetySourceIds_returnsSafetySourceIds() {
+        assertThat(issue1.safetySourceIds).containsExactly("safety_source_id_1")
+        assertThat(
+                SafetyCenterIssue.Builder(issue1)
+                    .setSafetySourceIds(setOf("safety_source_id_1", "safety_source_id_2"))
+                    .build()
+                    .safetySourceIds
+            )
+            .containsExactly("safety_source_id_1", "safety_source_id_2")
+    }
+
     @Test
     fun describeContents_returns0() {
         assertThat(issue1.describeContents()).isEqualTo(0)
@@ -326,7 +345,7 @@ class SafetyCenterIssueTest {
     @SdkSuppress(minSdkVersion = UPSIDE_DOWN_CAKE)
     fun parcelRoundTrip_recreatesEqual_atLeastAndroidU() {
         val safetyCenterIssue =
-           createSafetyCenterIssueBuilder("issue_id", "Everything's good", "Please acknowledge this", UserHandle.of(1))
+           createSafetyCenterIssueBuilder("issue_id", "Everything's good", "Please acknowledge this", UserHandle.of(1), setOf("safety_source_id_1"))
                 .setSubtitle("In the neighborhood")
                 .setSeverityLevel(SafetyCenterIssue.ISSUE_SEVERITY_LEVEL_OK)
                 .setDismissible(true)
@@ -570,7 +589,8 @@ class SafetyCenterIssueTest {
                 "issue_id",
                 "Everything's good",
                 "Please acknowledge this",
-                UserHandle.of(1))
+                UserHandle.of(1),
+                setOf("safety_source_id_1"))
                 .setSubtitle("In the neighborhood")
                 .setSeverityLevel(SafetyCenterIssue.ISSUE_SEVERITY_LEVEL_OK)
                 .setDismissible(true)
@@ -637,7 +657,8 @@ class SafetyCenterIssueTest {
                 "issue_id",
                 "Everything's good",
                 "Please acknowledge this",
-                UserHandle.of(1))
+                UserHandle.of(1),
+                setOf("safety_source_id_1"))
                 .setSubtitle("In the neighborhood")
                 .setSeverityLevel(SafetyCenterIssue.ISSUE_SEVERITY_LEVEL_OK)
                 .setDismissible(true)
@@ -659,6 +680,14 @@ class SafetyCenterIssueTest {
                     .build(),
                 SafetyCenterIssue.Builder(issueWithUpsideDownCakeFields)
                     .setUser(UserHandle.of(123))
+                    .build(),
+            )
+            .addEqualityGroup(
+                SafetyCenterIssue.Builder(issueWithUpsideDownCakeFields)
+                    .setSafetySourceIds(setOf("safety_source_id_5", "safety_source_id_1"))
+                    .build(),
+                SafetyCenterIssue.Builder(issueWithUpsideDownCakeFields)
+                    .setSafetySourceIds(setOf("safety_source_id_1", "safety_source_id_5"))
                     .build(),
             )
     }
@@ -746,12 +775,13 @@ class SafetyCenterIssueTest {
                 "an id",
                 "a title",
                 "Please acknowledge this",
-                UserHandle.of(1))
+                UserHandle.of(1),
+                setOf("safety_source_id_1"))
                     .setSubtitle("In the neighborhood")
                     .setSeverityLevel(SafetyCenterIssue.ISSUE_SEVERITY_LEVEL_OK)
                     .setActions(listOf(action1))
                     .build(),
-                createSafetyCenterIssueBuilder("an id", "a title", "Please acknowledge this", UserHandle.of(1))
+                createSafetyCenterIssueBuilder("an id", "a title", "Please acknowledge this", UserHandle.of(1), setOf("safety_source_id_1"))
                     .setSubtitle("In the neighborhood")
                     .setSeverityLevel(SafetyCenterIssue.ISSUE_SEVERITY_LEVEL_OK)
                     .setActions(listOf(action1))

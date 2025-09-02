@@ -339,12 +339,14 @@ class SafetyCenterTestData(context: Context) {
         userId: Int = UserHandle.myUserId(),
         attributionTitle: String? = "OK",
         groupId: String? = SINGLE_SOURCE_GROUP_ID,
+        safetySourceIds: Set<String> = setOf(sourceId),
     ) =
     createSafetyCenterIssueBuilder(
             issueId(sourceId, INFORMATION_ISSUE_ID, userId = userId),
             "Information issue title",
             "Information issue summary",
-            UserHandle.of(userId))
+            UserHandle.of(userId),
+            safetySourceIds)
             .setSeverityLevel(ISSUE_SEVERITY_LEVEL_OK)
             .setShouldConfirmDismissal(false)
             .setActions(
@@ -380,12 +382,14 @@ class SafetyCenterTestData(context: Context) {
         attributionTitle: String? = "OK",
         groupId: String? = SINGLE_SOURCE_GROUP_ID,
         confirmationDialog: Boolean = false,
+        safetySourceIds: Set<String> = setOf(sourceId),
     ) =
     createSafetyCenterIssueBuilder(
             issueId(sourceId, RECOMMENDATION_ISSUE_ID, userId = userId),
             "Recommendation issue title",
             "Recommendation issue summary",
-            UserHandle.of(userId))
+            UserHandle.of(userId),
+            safetySourceIds)
             .setSeverityLevel(ISSUE_SEVERITY_LEVEL_RECOMMENDATION)
             .setActions(
                 listOf(
@@ -432,12 +436,14 @@ class SafetyCenterTestData(context: Context) {
         userId: Int = UserHandle.myUserId(),
         attributionTitle: String? = "OK",
         groupId: String? = SINGLE_SOURCE_GROUP_ID,
+        safetySourceIds: Set<String> = setOf(sourceId),
     ) =
     createSafetyCenterIssueBuilder(
             issueId(sourceId, CRITICAL_ISSUE_ID, userId = userId),
             "Critical issue title",
             "Critical issue summary",
-            UserHandle.of(userId))
+            UserHandle.of(userId),
+            safetySourceIds)
             .setSeverityLevel(ISSUE_SEVERITY_LEVEL_CRITICAL_WARNING)
             .setActions(
                 listOf(

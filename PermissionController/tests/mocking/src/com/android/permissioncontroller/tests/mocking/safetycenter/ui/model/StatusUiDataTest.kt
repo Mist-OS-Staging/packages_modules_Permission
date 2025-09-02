@@ -277,6 +277,7 @@ class StatusUiDataTest {
                 "issue title",
                 "issue summary",
                 UserHandle.of(UserHandle.myUserId()),
+                setOf("safety_source_id")
             )
             .build()
 

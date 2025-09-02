@@ -229,9 +229,10 @@ class SafetyCenterTestHelper(val context: Context) {
             title: CharSequence,
             summary: CharSequence,
             user: UserHandle,
+            safetySourceIds: Set<String>,
         ): SafetyCenterIssue.Builder =
             if (SdkLevel.isAtLeastB() && android.permission.flags.Flags.openSafetyCenterApis()) {
-                SafetyCenterIssue.Builder(id, title, summary, user)
+                SafetyCenterIssue.Builder(id, title, summary, user, safetySourceIds)
             } else {
                 SafetyCenterIssue.Builder(id, title, summary)
             }

@@ -205,6 +205,7 @@ package android.safetycenter {
     method @Nullable public CharSequence getAttributionTitle();
     method @Nullable public String getGroupId();
     method @NonNull public String getId();
+    method @FlaggedApi("android.permission.flags.open_safety_center_apis") @NonNull public java.util.Set<java.lang.String> getSafetySourceIds();
     method public int getSeverityLevel();
     method @Nullable public CharSequence getSubtitle();
     method @NonNull public CharSequence getSummary();
@@ -258,7 +259,7 @@ package android.safetycenter {
 
   public static final class SafetyCenterIssue.Builder {
     ctor @Deprecated @FlaggedApi("android.permission.flags.open_safety_center_apis") public SafetyCenterIssue.Builder(@NonNull String, @NonNull CharSequence, @NonNull CharSequence);
-    ctor @FlaggedApi("android.permission.flags.open_safety_center_apis") public SafetyCenterIssue.Builder(@NonNull String, @NonNull CharSequence, @NonNull CharSequence, @NonNull android.os.UserHandle);
+    ctor @FlaggedApi("android.permission.flags.open_safety_center_apis") public SafetyCenterIssue.Builder(@NonNull String, @NonNull CharSequence, @NonNull CharSequence, @NonNull android.os.UserHandle, @NonNull java.util.Set<java.lang.String>);
     ctor public SafetyCenterIssue.Builder(@NonNull android.safetycenter.SafetyCenterIssue);
     method @NonNull public android.safetycenter.SafetyCenterIssue build();
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setActions(@NonNull java.util.List<android.safetycenter.SafetyCenterIssue.Action>);
@@ -266,6 +267,7 @@ package android.safetycenter {
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setDismissible(boolean);
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setGroupId(@Nullable String);
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setId(@NonNull String);
+    method @FlaggedApi("android.permission.flags.open_safety_center_apis") @NonNull public android.safetycenter.SafetyCenterIssue.Builder setSafetySourceIds(@NonNull java.util.Set<java.lang.String>);
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setSeverityLevel(int);
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setShouldConfirmDismissal(boolean);
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setSubtitle(@Nullable CharSequence);
