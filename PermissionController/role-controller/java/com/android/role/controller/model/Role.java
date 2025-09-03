@@ -1116,9 +1116,11 @@ public class Role {
             if (crossUserRoleUxBugfixEnabled && getExclusivity() == EXCLUSIVITY_PROFILE_GROUP) {
                 DevicePolicyManager devicePolicyManager =
                         context.getSystemService(DevicePolicyManager.class);
-                if (!devicePolicyManager.isOrganizationOwnedDeviceWithManagedProfile()) {
-                    // For profileGroup exclusive roles users on BYOD are free to choose personal or
-                    // work profile app regardless of DISALLOW_CONFIG_DEFAULT_APPS
+                if (!devicePolicyManager.isOrganizationOwnedDeviceWithManagedProfile()
+                        && devicePolicyManager.getDeviceOwnerComponentOnAnyUser() == null) {
+                    // For profileGroup exclusive roles users on BYOD (non-DO/non-DeviceOwner) are
+                    // free to choose personal or work profile app regardless of
+                    // DISALLOW_CONFIG_DEFAULT_APPS
                     return null;
                 }
             }
