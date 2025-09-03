@@ -715,10 +715,8 @@
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Ruhusa za ufikiaji za mifumo tekelezi"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Mifumo tekelezi inayoweza kufikia maelezo na kutekeleza vitendo kwa niaba yako katika programu hii"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Mipangilio ya Kifaa"</string>
-    <!-- no translation found for request_app_function_access_dialog_title (877934835928912474) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_description (155777384496379754) -->
-    <skip />
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Ungependa <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> kuwa kisaidizi cha <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Kisaidizi hiki kitaweza kufikia <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ili kupata taarifa na kuchukua hatua kwa niaba yako"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Ruhusu"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Usiruhusu"</string>
 </resources>

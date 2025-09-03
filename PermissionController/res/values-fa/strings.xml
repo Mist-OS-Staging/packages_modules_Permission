@@ -715,10 +715,8 @@
     <string name="app_function_target_access_title" msgid="7415628605578155761">"دسترسی عامل"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"عامل‌ها می‌توانند به اطلاعات دسترسی داشته باشند و ازطرف شما در این برنامه اقدام کنند"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"تنظیمات دستگاه"</string>
-    <!-- no translation found for request_app_function_access_dialog_title (877934835928912474) -->
-    <skip />
-    <!-- no translation found for request_app_function_access_dialog_description (155777384496379754) -->
-    <skip />
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"به <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> اجازه می دهید که نماینده <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> شود؟"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"این نماینده برای دریافت معلومات و انجام اعمال برای شما قادر به دسترسی به <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>خواهد بود"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"اجازه دادن"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"اجازه ندادن"</string>
 </resources>
