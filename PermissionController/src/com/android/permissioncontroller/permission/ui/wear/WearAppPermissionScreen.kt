@@ -18,12 +18,14 @@ package com.android.permissioncontroller.permission.ui.wear
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
+import androidx.lifecycle.asFlow
 import androidx.wear.compose.material.ToggleChipDefaults
 import com.android.permissioncontroller.R
 import com.android.permissioncontroller.permission.ui.model.AppPermissionViewModel
@@ -45,7 +47,10 @@ import com.android.permissioncontroller.wear.permission.components.material3.def
 import com.android.permissioncontroller.wear.permission.components.theme.ResourceHelper
 import com.android.permissioncontroller.wear.permission.components.theme.WearPermissionMaterialUIVersion
 import com.android.settingslib.RestrictedLockUtils
+import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.debounce
 
+@OptIn(FlowPreview::class)
 @Composable
 fun WearAppPermissionScreen(
     title: String,
@@ -61,14 +66,13 @@ fun WearAppPermissionScreen(
     onDisabledAllowButtonClick: () -> Unit,
 ) {
     val materialUIVersion = ResourceHelper.materialUIVersionInSettings
-    val buttonState = viewModel.buttonStateLiveData.observeAsState(null)
+    val buttonState = viewModel.buttonStateLiveData.asFlow().debounce(100L).collectAsState(null)
     val detailResIds = viewModel.detailResIdLiveData.observeAsState(null)
     val admin = viewModel.showAdminSupportLiveData.observeAsState(null)
     var isLoading by remember { mutableStateOf(true) }
     val showConfirmDialog = confirmDialogViewModel.showConfirmDialogLiveData.observeAsState(false)
     val showAdvancedConfirmDialog =
         confirmDialogViewModel.showAdvancedConfirmDialogLiveData.observeAsState(false)
-
     Box {
         WearAppPermissionContent(
             title,
