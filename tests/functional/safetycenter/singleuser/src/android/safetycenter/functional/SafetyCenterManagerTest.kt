@@ -338,6 +338,7 @@ class SafetyCenterManagerTest {
                                     SafetyCenterTestData.entryId(STATIC_IN_STATEFUL_ID),
                                     "OK",
                                     UserHandle.of(UserHandle.myUserId()),
+                                    STATIC_IN_STATEFUL_ID,
                                 )
                                 .setSeverityLevel(ENTRY_SEVERITY_LEVEL_UNSPECIFIED)
                                 .setSummary("OK")

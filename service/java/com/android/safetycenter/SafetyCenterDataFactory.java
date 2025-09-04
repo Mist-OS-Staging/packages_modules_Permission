@@ -718,7 +718,8 @@ public final class SafetyCenterDataFactory {
                         createSafetyCenterEntryBuilder(
                                         SafetyCenterIds.encodeToString(safetyCenterEntryId),
                                         safetySourceStatus.getTitle(),
-                                        UserHandle.of(userId))
+                                        UserHandle.of(userId),
+                                        safetySource.getId())
                                 .setSeverityLevel(severityLevel)
                                 .setSummary(
                                         inQuietMode
@@ -801,7 +802,8 @@ public final class SafetyCenterDataFactory {
                 createSafetyCenterEntryBuilder(
                                 SafetyCenterIds.encodeToString(safetyCenterEntryId),
                                 title,
-                                UserHandle.of(userId))
+                                UserHandle.of(userId),
+                                safetySource.getId())
                         .setSeverityLevel(entrySeverityLevel)
                         .setSummary(summary)
                         .setEnabled(enabled)
@@ -1335,10 +1337,10 @@ public final class SafetyCenterDataFactory {
     }
 
     private static SafetyCenterEntry.Builder createSafetyCenterEntryBuilder(
-            String id, CharSequence title, UserHandle user) {
+            String id, CharSequence title, UserHandle user, String safetySourceId) {
         SafetyCenterEntry.Builder builder;
         if (android.permission.flags.Flags.openSafetyCenterApis()) {
-            builder = new SafetyCenterEntry.Builder(id, title, user);
+            builder = new SafetyCenterEntry.Builder(id, title, user, safetySourceId);
         } else {
             builder = new SafetyCenterEntry.Builder(id, title);
         }

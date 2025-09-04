@@ -142,7 +142,8 @@ public final class SafetyCenterEntry implements Parcelable {
                     CharSequence title = TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(in);
                     if (Flags.openSafetyCenterApis()) {
                         UserHandle user = in.readTypedObject(UserHandle.CREATOR);
-                        builder = new Builder(id, title, user);
+                        String safetySourceId = in.readString();
+                        builder = new Builder(id, title, user, safetySourceId);
                     } else {
                         builder = new Builder(id, title);
                     }
@@ -174,6 +175,7 @@ public final class SafetyCenterEntry implements Parcelable {
     @Nullable private final IconAction mIconAction;
     private final boolean mHasError;
     @Nullable private final UserHandle mUser;
+    @Nullable private final String mSafetySourceId;
 
     private SafetyCenterEntry(
             @NonNull String id,
@@ -185,7 +187,8 @@ public final class SafetyCenterEntry implements Parcelable {
             @Nullable PendingIntent pendingIntent,
             @Nullable IconAction iconAction,
             boolean hasError,
-            @Nullable UserHandle userHandle) {
+            @Nullable UserHandle userHandle,
+            @Nullable String safetySourceId) {
         mId = id;
         mTitle = title;
         mSummary = summary;
@@ -196,6 +199,7 @@ public final class SafetyCenterEntry implements Parcelable {
         mIconAction = iconAction;
         mHasError = hasError;
         mUser = userHandle;
+        mSafetySourceId = safetySourceId;
     }
 
     /**
@@ -255,6 +259,13 @@ public final class SafetyCenterEntry implements Parcelable {
         return mUser;
     }
 
+    /** Returns the safety source ID related to this entry. */
+    @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+    @Nullable
+    public String getSafetySourceId() {
+        return mSafetySourceId;
+    }
+
     /**
      * Returns the optional {@link PendingIntent} to execute when this entry is selected if present,
      * or {@code null} otherwise.
@@ -285,6 +296,7 @@ public final class SafetyCenterEntry implements Parcelable {
                 && TextUtils.equals(mTitle, that.mTitle)
                 && TextUtils.equals(mSummary, that.mSummary)
                 && Objects.equals(mUser, that.mUser)
+                && Objects.equals(mSafetySourceId, that.mSafetySourceId)
                 && Objects.equals(mPendingIntent, that.mPendingIntent)
                 && Objects.equals(mIconAction, that.mIconAction);
     }
@@ -301,7 +313,8 @@ public final class SafetyCenterEntry implements Parcelable {
                 mPendingIntent,
                 mIconAction,
                 mHasError,
-                mUser);
+                mUser,
+                mSafetySourceId);
     }
 
     @Override
@@ -321,6 +334,7 @@ public final class SafetyCenterEntry implements Parcelable {
                 + mEnabled
                 + (Flags.openSafetyCenterApis() ? ", mHasError=" + mHasError : "")
                 + (Flags.openSafetyCenterApis() ? ", mUser=" + mUser : "")
+                + (Flags.openSafetyCenterApis() ? ", mSafetySourceId=" + mSafetySourceId : "")
                 + ", mPendingIntent="
                 + mPendingIntent
                 + ", mIconAction="
@@ -339,6 +353,7 @@ public final class SafetyCenterEntry implements Parcelable {
         TextUtils.writeToParcel(mTitle, dest, flags);
         if (Flags.openSafetyCenterApis()) {
             dest.writeTypedObject(mUser, flags);
+            dest.writeString(mSafetySourceId);
         }
         TextUtils.writeToParcel(mSummary, dest, flags);
         dest.writeInt(mSeverityLevel);
@@ -363,6 +378,7 @@ public final class SafetyCenterEntry implements Parcelable {
         private boolean mEnabled = true;
         private boolean mHasError = false;
         @Nullable private UserHandle mUser;
+        @Nullable private String mSafetySourceId;
         @Nullable private PendingIntent mPendingIntent;
         @Nullable private IconAction mIconAction;
 
@@ -386,12 +402,18 @@ public final class SafetyCenterEntry implements Parcelable {
          * @param id a unique encoded string ID, see {@link #getId()} for details
          * @param title a title that describes this entry
          * @param user a user handle for this entry
+         * @param safetySourceId the safety source ID for this entry
          */
         @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
-        public Builder(@NonNull String id, @NonNull CharSequence title, @NonNull UserHandle user) {
+        public Builder(
+                @NonNull String id,
+                @NonNull CharSequence title,
+                @NonNull UserHandle user,
+                @NonNull String safetySourceId) {
             mId = requireNonNull(id);
             mTitle = requireNonNull(title);
             mUser = requireNonNull(user);
+            mSafetySourceId = requireNonNull(safetySourceId);
         }
 
         /** Creates a {@link Builder} with the values from the given {@link SafetyCenterEntry}. */
@@ -404,6 +426,7 @@ public final class SafetyCenterEntry implements Parcelable {
             mEnabled = safetyCenterEntry.mEnabled;
             mHasError = safetyCenterEntry.mHasError;
             mUser = safetyCenterEntry.mUser;
+            mSafetySourceId = safetyCenterEntry.mSafetySourceId;
             mPendingIntent = safetyCenterEntry.mPendingIntent;
             mIconAction = safetyCenterEntry.mIconAction;
         }
@@ -455,6 +478,18 @@ public final class SafetyCenterEntry implements Parcelable {
         @NonNull
         public Builder setEnabled(boolean enabled) {
             mEnabled = enabled;
+            return this;
+        }
+
+        /**
+         * Sets the safety source ID for this entry.
+         *
+         * @param safetySourceId the safety source ID for this entry
+         */
+        @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+        @NonNull
+        public Builder setSafetySourceId(@NonNull String safetySourceId) {
+            mSafetySourceId = requireNonNull(safetySourceId);
             return this;
         }
 
@@ -517,7 +552,8 @@ public final class SafetyCenterEntry implements Parcelable {
                     mPendingIntent,
                     mIconAction,
                     mHasError,
-                    mUser);
+                    mUser,
+                    mSafetySourceId);
         }
     }
 

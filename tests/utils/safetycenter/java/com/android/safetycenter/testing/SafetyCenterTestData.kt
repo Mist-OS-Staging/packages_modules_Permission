@@ -172,6 +172,7 @@ class SafetyCenterTestData(context: Context) {
                 entryId(sourceId, userId),
                 title,
                 UserHandle.of(UserHandle.myUserId()),
+                sourceId,
             )
             .setSeverityLevel(ENTRY_SEVERITY_LEVEL_UNKNOWN)
             .setSummary("OK")
@@ -205,6 +206,7 @@ class SafetyCenterTestData(context: Context) {
                 entryId(sourceId, userId),
                 title,
                 UserHandle.of(UserHandle.myUserId()),
+                sourceId,
             )
             .setSeverityLevel(ENTRY_SEVERITY_LEVEL_UNSPECIFIED)
             .setSummary("OK")
@@ -234,6 +236,7 @@ class SafetyCenterTestData(context: Context) {
                 entryId(sourceId),
                 "Unspecified title",
                 UserHandle.of(UserHandle.myUserId()),
+                sourceId,
             )
             .setSeverityLevel(ENTRY_SEVERITY_LEVEL_UNSPECIFIED)
             .setSummary("Unspecified summary")
@@ -252,7 +255,12 @@ class SafetyCenterTestData(context: Context) {
         userId: Int = UserHandle.myUserId(),
         title: CharSequence = "Ok title",
     ) =
-        createSafetyCenterEntryBuilder(entryId(sourceId, userId), title, UserHandle.of(userId))
+        createSafetyCenterEntryBuilder(
+                entryId(sourceId, userId),
+                title,
+                UserHandle.of(userId),
+                sourceId,
+            )
             .setSeverityLevel(ENTRY_SEVERITY_LEVEL_OK)
             .setSummary("Ok summary")
             .setPendingIntent(safetySourceTestData.createTestActivityRedirectPendingIntent())
@@ -281,6 +289,7 @@ class SafetyCenterTestData(context: Context) {
                 entryId(sourceId),
                 "Recommendation title",
                 UserHandle.of(UserHandle.myUserId()),
+                sourceId,
             )
             .setSeverityLevel(ENTRY_SEVERITY_LEVEL_RECOMMENDATION)
             .setSummary(summary)
@@ -297,6 +306,7 @@ class SafetyCenterTestData(context: Context) {
                 entryId(sourceId),
                 "Critical title",
                 UserHandle.of(UserHandle.myUserId()),
+                sourceId,
             )
             .setSeverityLevel(ENTRY_SEVERITY_LEVEL_CRITICAL_WARNING)
             .setSummary("Critical summary")

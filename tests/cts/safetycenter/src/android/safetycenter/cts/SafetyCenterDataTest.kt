@@ -89,12 +89,22 @@ class SafetyCenterDataTest {
             .build()
 
     private val entry1 =
-        createSafetyCenterEntryBuilder("eNtRy_iD_OnE", "An entry title", UserHandle.of(1))
+        createSafetyCenterEntryBuilder(
+                "eNtRy_iD_OnE",
+                "An entry title",
+                UserHandle.of(1),
+                "source_id",
+            )
             .setPendingIntent(pendingIntent)
             .setSeverityLevel(SafetyCenterEntry.ENTRY_SEVERITY_LEVEL_OK)
             .build()
     private val entry2 =
-        createSafetyCenterEntryBuilder("eNtRy_iD_TwO", "Another entry title", UserHandle.of(1))
+        createSafetyCenterEntryBuilder(
+                "eNtRy_iD_TwO",
+                "Another entry title",
+                UserHandle.of(1),
+                "source_id",
+            )
             .setPendingIntent(pendingIntent)
             .setSeverityLevel(SafetyCenterEntry.ENTRY_SEVERITY_LEVEL_RECOMMENDATION)
             .build()
