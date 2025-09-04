@@ -15,7 +15,7 @@
   ~ limitations under the License
   -->
 <resources>
-    <style name="Theme.PermissionController.IncidentReportDialog" parent="@style/Theme.DeviceDefault.Dialog.Alert.DayNight">
+    <style name="Theme.PermissionController.IncidentReportDialog" parent="@style/Theme.DeviceDefault.Dialog.NoActionBar.DayNight">
         <item name="android:alertDialogTheme">@style/Theme.DeviceDefault.Dialog.Alert.DayNight</item>
     </style>
 </resources>
