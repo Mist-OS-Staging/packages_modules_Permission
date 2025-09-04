@@ -18,7 +18,6 @@ package com.android.permissioncontroller.permission.ui.wear
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.mutableStateOf
@@ -26,6 +25,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.asFlow
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.wear.compose.material.ToggleChipDefaults
 import com.android.permissioncontroller.R
 import com.android.permissioncontroller.permission.ui.model.AppPermissionViewModel
@@ -66,19 +66,23 @@ fun WearAppPermissionScreen(
     onDisabledAllowButtonClick: () -> Unit,
 ) {
     val materialUIVersion = ResourceHelper.materialUIVersionInSettings
-    val buttonState = viewModel.buttonStateLiveData.asFlow().debounce(100L).collectAsState(null)
-    val detailResIds = viewModel.detailResIdLiveData.observeAsState(null)
-    val admin = viewModel.showAdminSupportLiveData.observeAsState(null)
+    val buttonState by
+        remember(viewModel.buttonStateLiveData) {
+                viewModel.buttonStateLiveData.asFlow().debounce(100L)
+            }
+            .collectAsStateWithLifecycle(null)
+    val detailResIds by viewModel.detailResIdLiveData.observeAsState(null)
+    val admin by viewModel.showAdminSupportLiveData.observeAsState(null)
     var isLoading by remember { mutableStateOf(true) }
-    val showConfirmDialog = confirmDialogViewModel.showConfirmDialogLiveData.observeAsState(false)
-    val showAdvancedConfirmDialog =
+    val showConfirmDialog by confirmDialogViewModel.showConfirmDialogLiveData.observeAsState(false)
+    val showAdvancedConfirmDialog by
         confirmDialogViewModel.showAdvancedConfirmDialogLiveData.observeAsState(false)
     Box {
         WearAppPermissionContent(
             title,
-            buttonState.value,
-            detailResIds.value,
-            admin.value,
+            buttonState,
+            detailResIds,
+            admin,
             isLoading,
             onLocationSwitchChanged,
             onGrantedStateChanged,
@@ -87,20 +91,20 @@ fun WearAppPermissionScreen(
         )
         ConfirmDialog(
             materialUIVersion = materialUIVersion,
-            showDialog = showConfirmDialog.value,
+            showDialog = showConfirmDialog,
             args = confirmDialogViewModel.confirmDialogArgs,
             onOkButtonClick = onConfirmDialogOkButtonClick,
             onCancelButtonClick = onConfirmDialogCancelButtonClick,
         )
         AdvancedConfirmDialog(
             materialUIVersion = materialUIVersion,
-            showDialog = showAdvancedConfirmDialog.value,
+            showDialog = showAdvancedConfirmDialog,
             args = confirmDialogViewModel.advancedConfirmDialogArgs,
             onOkButtonClick = onAdvancedConfirmDialogOkButtonClick,
             onCancelButtonClick = onAdvancedConfirmDialogCancelButtonClick,
         )
     }
-    if (isLoading && !buttonState.value.isNullOrEmpty()) {
+    if (isLoading && !buttonState.isNullOrEmpty()) {
         isLoading = false
     }
 }
