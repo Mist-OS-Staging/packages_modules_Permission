@@ -27,6 +27,6 @@
     <TextView
         android:id="@+id/no_updates_message"
         android:text="@string/no_updates_at_this_time"
-        style="@style/AppDataSharingNoUpdatesMessage" />
+        style="@style/AppDataSharingNoUpdatesMessageExpressive" />
 
 </LinearLayout>
