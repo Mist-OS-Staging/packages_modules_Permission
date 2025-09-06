@@ -23,6 +23,8 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.lifecycle.asFlow
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.wear.compose.material.Text
 import com.android.permission.flags.Flags
 import com.android.permissioncontroller.role.ui.RoleApplicationItem
@@ -38,26 +40,36 @@ import com.android.permissioncontroller.wear.permission.components.material3.Wea
 import com.android.permissioncontroller.wear.permission.components.material3.WearPermissionToggleControlType
 import com.android.permissioncontroller.wear.permission.components.theme.ResourceHelper
 import com.android.permissioncontroller.wear.permission.components.theme.WearPermissionMaterialUIVersion
+import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.debounce
 
+@OptIn(FlowPreview::class)
 @Composable
 fun WearDefaultAppScreen(helper: WearDefaultAppHelper) {
-    val roleLiveData = helper.viewModel.liveData.observeAsState(emptyList())
-    val recommendedRoleLiveData = helper.viewModel.recommendedLiveData.observeAsState(emptyList())
-    val showConfirmDialog =
+
+    val roleLiveData by
+        remember(helper.viewModel.liveData) { helper.viewModel.liveData.asFlow().debounce(100) }
+            .collectAsStateWithLifecycle(initialValue = emptyList())
+
+    val recommendedRoleLiveData by
+        remember(helper.viewModel.recommendedLiveData) {
+                helper.viewModel.recommendedLiveData.asFlow().debounce(100)
+            }
+            .collectAsStateWithLifecycle(initialValue = emptyList())
+
+    val showConfirmDialog by
         helper.confirmDialogViewModel.showConfirmDialogLiveData.observeAsState(false)
     var isLoading by remember { mutableStateOf(true) }
     val materialUIVersion = ResourceHelper.materialUIVersionInSettings
     Box {
-        WearDefaultAppContent(isLoading, recommendedRoleLiveData.value, roleLiveData.value, helper)
+        WearDefaultAppContent(isLoading, recommendedRoleLiveData, roleLiveData, helper)
         ConfirmDialog(
             materialUIVersion = materialUIVersion,
-            showDialog = showConfirmDialog.value,
+            showDialog = showConfirmDialog,
             args = helper.confirmDialogViewModel.confirmDialogArgs,
         )
     }
-    if (
-        isLoading && (roleLiveData.value.isNotEmpty() || recommendedRoleLiveData.value.isNotEmpty())
-    ) {
+    if (isLoading && (roleLiveData.isNotEmpty() || recommendedRoleLiveData.isNotEmpty())) {
         isLoading = false
     }
 }

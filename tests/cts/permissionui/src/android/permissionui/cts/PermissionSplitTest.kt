@@ -81,13 +81,6 @@ class PermissionSplitTest : BaseUsePermissionTest() {
         testBodySensorPermissionSplitToBodySensorsBackground(true)
     }
 
-    @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
-    @Test
-    fun testBodySensorSplitPostBaklava() {
-        installPackage(APP_APK_PATH_31)
-        testBodySensorPermissionSplitToBodySensorsBackground(true)
-    }
-
     @SdkSuppress(
         minSdkVersion = Build.VERSION_CODES.TIRAMISU,
         maxSdkVersion = Build.VERSION_CODES.VANILLA_ICE_CREAM,
@@ -98,26 +91,12 @@ class PermissionSplitTest : BaseUsePermissionTest() {
         testBodySensorPermissionSplitToBodySensorsBackground(true)
     }
 
-    @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
-    @Test
-    fun testBodySensorSplit32PostBaklava() {
-        installPackage(APP_APK_PATH_32)
-        testBodySensorPermissionSplitToBodySensorsBackground(true)
-    }
-
     @SdkSuppress(
         minSdkVersion = Build.VERSION_CODES.TIRAMISU,
         maxSdkVersion = Build.VERSION_CODES.VANILLA_ICE_CREAM,
     )
     @Test
     fun testBodySensorNonSplitOnTToU() {
-        installPackage(APP_APK_PATH_LATEST)
-        testBodySensorPermissionSplitToBodySensorsBackground(false)
-    }
-
-    @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
-    @Test
-    fun testBodySensorNonSplitPostBalava() {
         installPackage(APP_APK_PATH_LATEST)
         testBodySensorPermissionSplitToBodySensorsBackground(false)
     }

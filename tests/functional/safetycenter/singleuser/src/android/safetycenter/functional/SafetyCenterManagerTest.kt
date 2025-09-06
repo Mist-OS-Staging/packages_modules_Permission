@@ -338,6 +338,7 @@ class SafetyCenterManagerTest {
                                     SafetyCenterTestData.entryId(STATIC_IN_STATEFUL_ID),
                                     "OK",
                                     UserHandle.of(UserHandle.myUserId()),
+                                    STATIC_IN_STATEFUL_ID,
                                 )
                                 .setSeverityLevel(ENTRY_SEVERITY_LEVEL_UNSPECIFIED)
                                 .setSummary("OK")
@@ -1913,6 +1914,7 @@ class SafetyCenterManagerTest {
                 safetyCenterTestData.safetyCenterIssueCritical(
                     SOURCE_ID_1,
                     groupId = MULTIPLE_SOURCES_GROUP_ID_1,
+                    safetySourceIds = setOf(SOURCE_ID_1, SOURCE_ID_5),
                 )
             )
     }
@@ -2114,6 +2116,7 @@ class SafetyCenterManagerTest {
                 safetyCenterTestData.safetyCenterIssueCritical(
                     SOURCE_ID_4,
                     groupId = MULTIPLE_SOURCES_GROUP_ID_1,
+                    safetySourceIds = setOf(SOURCE_ID_4, SOURCE_ID_6, SOURCE_ID_7),
                 )
             )
     }
@@ -2146,6 +2149,7 @@ class SafetyCenterManagerTest {
                 safetyCenterTestData.safetyCenterIssueCritical(
                     SOURCE_ID_5,
                     groupId = MULTIPLE_SOURCES_GROUP_ID_2,
+                    safetySourceIds = setOf(SOURCE_ID_2, SOURCE_ID_5),
                 )
             )
     }
@@ -2213,6 +2217,7 @@ class SafetyCenterManagerTest {
                 safetyCenterTestData.safetyCenterIssueCritical(
                     SOURCE_ID_5,
                     groupId = MULTIPLE_SOURCES_GROUP_ID_2,
+                    safetySourceIds = setOf(SOURCE_ID_1, SOURCE_ID_2, SOURCE_ID_5),
                 ),
                 safetyCenterTestData.safetyCenterIssueRecommendation(
                     SOURCE_ID_3,
@@ -2221,6 +2226,7 @@ class SafetyCenterManagerTest {
                 safetyCenterTestData.safetyCenterIssueRecommendation(
                     SOURCE_ID_4,
                     groupId = MULTIPLE_SOURCES_GROUP_ID_1,
+                    safetySourceIds = setOf(SOURCE_ID_4, SOURCE_ID_6, SOURCE_ID_7),
                 ),
             )
             .inOrder()
@@ -2263,6 +2269,7 @@ class SafetyCenterManagerTest {
                 safetyCenterTestData.safetyCenterIssueCritical(
                     SOURCE_ID_1,
                     groupId = MULTIPLE_SOURCES_GROUP_ID_1,
+                    safetySourceIds = setOf(SOURCE_ID_1, SOURCE_ID_5),
                 )
             )
     }
@@ -2300,6 +2307,7 @@ class SafetyCenterManagerTest {
                 safetyCenterTestData.safetyCenterIssueCritical(
                     SOURCE_ID_1,
                     groupId = MULTIPLE_SOURCES_GROUP_ID_1,
+                    safetySourceIds = setOf(SOURCE_ID_1, SOURCE_ID_5),
                 )
             )
         assertThat(apiSafetyCenterDismissedIssues).isEmpty()
@@ -2339,6 +2347,7 @@ class SafetyCenterManagerTest {
                 safetyCenterTestData.safetyCenterIssueCritical(
                     SOURCE_ID_1,
                     groupId = MULTIPLE_SOURCES_GROUP_ID_1,
+                    safetySourceIds = setOf(SOURCE_ID_1, SOURCE_ID_5),
                 )
             )
     }
@@ -2377,6 +2386,7 @@ class SafetyCenterManagerTest {
                 safetyCenterTestData.safetyCenterIssueCritical(
                     SOURCE_ID_1,
                     groupId = MULTIPLE_SOURCES_GROUP_ID_1,
+                    safetySourceIds = setOf(SOURCE_ID_1, SOURCE_ID_5),
                 )
             )
     }
@@ -2538,6 +2548,7 @@ class SafetyCenterManagerTest {
                 safetyCenterTestData.safetyCenterIssueCritical(
                     SOURCE_ID_1,
                     groupId = MULTIPLE_SOURCES_GROUP_ID_1,
+                    safetySourceIds = setOf(SOURCE_ID_1, SOURCE_ID_5),
                 )
             )
         assertFailsWith(TimeoutCancellationException::class) {
@@ -2550,6 +2561,7 @@ class SafetyCenterManagerTest {
                             safetyCenterTestData.safetyCenterIssueRecommendation(
                                 SOURCE_ID_5,
                                 groupId = MULTIPLE_SOURCES_GROUP_ID_2,
+                                safetySourceIds = setOf(SOURCE_ID_1, SOURCE_ID_5),
                             )
                         )
                 hasResurfaced
@@ -2601,6 +2613,7 @@ class SafetyCenterManagerTest {
                 safetyCenterTestData.safetyCenterIssueCritical(
                     SOURCE_ID_1,
                     groupId = MULTIPLE_SOURCES_GROUP_ID_1,
+                    safetySourceIds = setOf(SOURCE_ID_1, SOURCE_ID_5),
                 )
             )
         waitForWithTimeout(timeout = RESURFACE_TIMEOUT, checkPeriod = RESURFACE_CHECK) {
@@ -2612,6 +2625,7 @@ class SafetyCenterManagerTest {
                         safetyCenterTestData.safetyCenterIssueCritical(
                             SOURCE_ID_1,
                             groupId = MULTIPLE_SOURCES_GROUP_ID_1,
+                            safetySourceIds = setOf(SOURCE_ID_1, SOURCE_ID_5),
                         )
                     )
             hasResurfaced
