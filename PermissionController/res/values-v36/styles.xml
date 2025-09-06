@@ -240,6 +240,15 @@
         <item name="android:textAppearance">@style/AppDataSharingDetailsTextAppearance</item>
     </style>
 
+    <style name="AppDataSharingNoUpdatesMessageExpressive">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">28dp</item>
+        <item name="android:layout_marginBottom">24dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textAppearance">@style/AppDataSharingNoUpdatesTextAppearance</item>
+    </style>
+
     <style name="AppDataSharingUpdatesFooterContainerExpressive">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
