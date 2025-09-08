@@ -124,6 +124,16 @@ class TargetAccessTest : BaseUsePermissionTest() {
         // Trigger grant/revoke access from setting entry
         try {
             click(By.textContains(AGENT_APP_LABEL))
+
+            waitFindObject(
+                By.clickable(true)
+                    .hasDescendant(
+                        By.checkable(true)
+                            .checked(expectedAccessRequestState == ACCESS_REQUEST_STATE_GRANTED)
+                    )
+                    .hasDescendant(By.text(AGENT_APP_LABEL))
+            )
+
             assertThat(getAccessRequestState(AGENT_APP_PACKAGE_NAME, TARGET_APP_PACKAGE_NAME))
                 .isEqualTo(expectedAccessRequestState)
         } finally {

@@ -16,8 +16,8 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="permission_description_summary_contacts" msgid="2757597696923097587">"具有此权限的应用可以访问您的通讯录，并查看可在此设备上保存联系人信息的账号列表"</string>
-    <string name="permgrouprequest_contacts" msgid="4011412821869715229">"要允许&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;访问此设备上的通讯录和账号信息吗？"</string>
-    <string name="permgrouprequestdetail_contacts" msgid="3314989542973932720">"此应用将能够访问您的通讯录，并查看可以保存联系人信息的账号列表"</string>
+    <string name="permission_description_summary_contacts" msgid="2757597696923097587">"具有此权限的应用可以访问您的通讯录，并查看有哪些账号可在此设备上保存联系人信息"</string>
+    <string name="permgrouprequest_contacts" msgid="4011412821869715229">"要允许“&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;”访问此设备上的通讯录和账号信息吗？"</string>
+    <string name="permgrouprequestdetail_contacts" msgid="3314989542973932720">"此应用将能够访问您的通讯录，并查看有哪些账号可以保存联系人信息"</string>
     <string name="permgrouprequest_device_aware_contacts" msgid="2668046201497840127">"要允许&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;访问&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;上的通讯录和账号信息吗？"</string>
 </resources>
