@@ -39,7 +39,8 @@ import androidx.lifecycle.ViewModelStore
 import androidx.lifecycle.ViewModelStoreOwner
 import androidx.lifecycle.lifecycleScope
 import com.android.permissioncontroller.appfunctions.AdditionalPermissionsScreen
-import com.android.permissioncontroller.appfunctions.AppPermissionScreen
+import com.android.permissioncontroller.appfunctions.AppPermissionGrantStateScreen
+import com.android.permissioncontroller.appfunctions.AppPermissionSettingScreen
 import com.android.permissioncontroller.appfunctions.AppPermissionsScreen
 import com.android.permissioncontroller.appfunctions.DefaultAppListScreen
 import com.android.permissioncontroller.appfunctions.DefaultAppScreen
@@ -178,33 +179,21 @@ class DeviceStateAppFunctionService :
                 }
             }
             AppPermissionsScreen.KEY -> {
-                val allPackages =
-                    packageManager
-                        .getInstalledPackagesAsUser(0, UserHandle.myUserId())
-                        .map { packageInfo -> packageInfo.packageName }
-                        .toList()
-
-                val result = coroutineScope {
-                    allPackages
-                        .map {
-                            async {
-                                AppPermissionsScreen(this@DeviceStateAppFunctionService, it)
-                                    .toPerScreenDeviceStates()
-                            }
-                        }
-                        .awaitAll()
-                }
-
-                if (DEBUG) {
-                    Log.i(
-                        TAG,
-                        "Time spent on ${AppPermissionsScreen.KEY} = ${System.currentTimeMillis() - startTime} ms",
-                    )
-                }
+                return listOf(AppPermissionsScreen(this).toPerScreenDeviceStates())
+            }
+            AppPermissionSettingScreen.KEY -> {
+                val result =
+                    SUPPORTED_PERMISSION_GROUPS.map { permissionGroup ->
+                        AppPermissionSettingScreen(
+                                this@DeviceStateAppFunctionService,
+                                permissionGroup,
+                            )
+                            .toPerScreenDeviceStates()
+                    }
 
                 return result
             }
-            AppPermissionScreen.KEY -> {
+            AppPermissionGrantStateScreen.KEY -> {
                 val filterBeginTimeMillis =
                     System.currentTimeMillis() -
                         TimeUnit.DAYS.toMillis(PERMISSION_USAGE_START_DAY_FROM_NOW)
@@ -223,6 +212,12 @@ class DeviceStateAppFunctionService :
                 )
 
                 val appPermissionUsages = permissionUsages.usages
+                if (DEBUG) {
+                    Log.i(
+                        TAG,
+                        "Time spent on fetching permission usages = ${System.currentTimeMillis() - startTime} ms",
+                    )
+                }
 
                 val result = coroutineScope {
                     SUPPORTED_PERMISSION_GROUPS.map { permissionGroup ->
@@ -234,7 +229,7 @@ class DeviceStateAppFunctionService :
                                 val deviceStateScreens = mutableListOf<PerScreenDeviceStates>()
                                 packagePermissionInfoMap.forEach { (packageInfo, permissionInfo) ->
                                     deviceStateScreens.add(
-                                        AppPermissionScreen(
+                                        AppPermissionGrantStateScreen(
                                                 context = this@DeviceStateAppFunctionService,
                                                 permissionGroup = permissionGroup,
                                                 packageName = packageInfo.first,
@@ -264,11 +259,10 @@ class DeviceStateAppFunctionService :
                         .awaitAll()
                         .flatten()
                 }
-
                 if (DEBUG) {
                     Log.i(
                         TAG,
-                        "Time spent on ${AppPermissionScreen.KEY} = ${System.currentTimeMillis() - startTime} ms",
+                        "Time spent on ${AppPermissionGrantStateScreen.KEY} = ${System.currentTimeMillis() - startTime} ms",
                     )
                 }
 
@@ -356,6 +350,13 @@ class DeviceStateAppFunctionService :
                             ?.filterNotNull()
                             ?.also { deviceStateScreens.addAll(it) }
                     }
+                }
+
+                if (DEBUG) {
+                    Log.i(
+                        TAG,
+                        "Time spent on ${DefaultAppScreen.KEY} = ${System.currentTimeMillis() - startTime} ms",
+                    )
                 }
 
                 return deviceStateScreens
