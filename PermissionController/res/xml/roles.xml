@@ -2035,4 +2035,19 @@
             <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND" />
         </permissions>
     </role>
+
+    <role
+        name="android.app.role.CONTENT_RESTRICTION"
+        featureFlag="android.permission.flags.Flags.contentRestrictionRoleEnabled"
+        exclusive="false"
+        exclusivity="none"
+        visible="false">
+        <required-components>
+            <service permission="android.permission.BIND_CONTENT_RESTRICTION_SERVICE">
+                <intent-filter>
+                    <action name="android.app.action.CONTENT_RESTRICTION_SERVICE" />
+                </intent-filter>
+            </service>
+        </required-components>
+    </role>
 </roles>
