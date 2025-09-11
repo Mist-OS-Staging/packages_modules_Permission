@@ -82,6 +82,15 @@ class DeviceStateAppFunctionServiceTest {
             "3000",
         )
 
+    @get:Rule
+    val setAgentAllowlistRule: DeviceConfigStateChangerRule =
+        DeviceConfigStateChangerRule(
+            context,
+            "machine_learning",
+            "allowlisted_app_functions_agents",
+            context.packageName,
+        )
+
     @Before
     fun setUp() {
         Assume.assumeFalse(isAutomotive)
