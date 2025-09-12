@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.permissioncontroller.role.model;
+package com.android.permissioncontroller.role.ui.behavior;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
@@ -26,10 +26,9 @@ import androidx.annotation.Nullable;
 import com.android.permissioncontroller.R;
 import com.android.permissioncontroller.role.utils.PackageUtils;
 import com.android.role.controller.model.Role;
-import com.android.role.controller.model.RoleBehavior;
 
 /**
- * Mixin for {@link RoleBehavior#getConfirmationMessage(Role, String, Context)}
+ * Mixin for {@link RoleUiBehavior#getConfirmationMessage(Role, String, Context)}
  * that returns a confirmation message when the application is not direct boot aware.
  */
 public class EncryptionUnawareConfirmationMixin {
@@ -37,7 +36,7 @@ public class EncryptionUnawareConfirmationMixin {
     private static final String LOG_TAG = EncryptionUnawareConfirmationMixin.class.getSimpleName();
 
     /**
-     * @see RoleBehavior#getConfirmationMessage(Role, String, Context)
+     * @see RoleUiBehavior#getConfirmationMessage(Role, String, Context)
      */
     @Nullable
     public static CharSequence getConfirmationMessage(@NonNull Role role,
