@@ -119,8 +119,8 @@ class LocationAccuracyTest : BaseUsePermissionTest() {
             ACCESS_COARSE_LOCATION to true,
         ) {
             clickPreciseLocationOnlyView()
-            assertThat(uiDevice.findObject(By.res(ALLOW_FOREGROUND_BUTTON)).text)
-                .isEqualTo("While using the app")
+            assertThat(uiDevice.findObject(By.res(ALLOW_FOREGROUND_BUTTON)).text.uppercase())
+                .isEqualTo("WHILE USING THE APP")
             clickPermissionRequestAllowForegroundButton()
         }
     }
