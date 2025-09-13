@@ -155,7 +155,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
             "app_location_permission_rationale_subtitle"
         const val HEALTH_PERMISSION_SELECT_HEART_RATE_PLAIN_TEXT = "Heart rate"
         const val HEALTH_PERMISSION_ALLOW_ALL_PLAIN_TEXT = "Allow all"
-        const val HEALTH_PERMISSION_ALLOW_ALWAYS_PLAIN_TEXT = "All the time"
+        const val HEALTH_PERMISSION_ALLOW_ALWAYS_PLAIN_TEXT = "Allow all the time"
         const val GRANT_DIALOG_PERMISSION_RATIONALE_CONTAINER_VIEW =
             "com.android.permissioncontroller:id/permission_rationale_container"
         const val PERMISSION_RATIONALE_ACTIVITY_TITLE_VIEW =
@@ -659,12 +659,10 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
         vararg permissions: String?,
         crossinline block: () -> Unit,
     ) {
-        val intent = Intent().apply {
+        val intent =
+            Intent().apply {
                 component =
-                    ComponentName(
-                        APP_PACKAGE_NAME,
-                        "$APP_PACKAGE_NAME.RequestPermissionsActivity",
-                    )
+                    ComponentName(APP_PACKAGE_NAME, "$APP_PACKAGE_NAME.RequestPermissionsActivity")
                 putExtra("$APP_PACKAGE_NAME.PERMISSIONS", permissions)
                 addFlags(FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK)
             }
@@ -674,9 +672,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
             context.startActivity(intent)
             waitForPermissionRequestActivity()
         } else {
-            doAndWaitForWindowTransition {
-                context.startActivity(intent)
-            }
+            doAndWaitForWindowTransition { context.startActivity(intent) }
         }
         // Perform the post-request action
         block()
