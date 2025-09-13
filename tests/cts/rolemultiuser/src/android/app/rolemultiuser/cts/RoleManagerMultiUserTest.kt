@@ -33,7 +33,6 @@ import androidx.test.filters.SdkSuppress
 import androidx.test.rule.ActivityTestRule
 import androidx.test.uiautomator.By
 import com.android.bedstead.enterprise.annotations.EnsureDoesNotHaveUserRestriction
-import com.android.bedstead.enterprise.annotations.EnsureHasDeviceOwner
 import com.android.bedstead.enterprise.annotations.EnsureHasNoWorkProfile
 import com.android.bedstead.enterprise.annotations.EnsureHasUserRestriction
 import com.android.bedstead.enterprise.annotations.EnsureHasWorkProfile
@@ -42,6 +41,7 @@ import com.android.bedstead.enterprise.workProfile
 import com.android.bedstead.flags.annotations.RequireFlagsEnabled
 import com.android.bedstead.harrier.BedsteadJUnit4
 import com.android.bedstead.harrier.DeviceState
+import com.android.bedstead.harrier.UserType.INITIAL_USER
 import com.android.bedstead.harrier.UserType.WORK_PROFILE
 import com.android.bedstead.multiuser.annotations.EnsureCanAddUser
 import com.android.bedstead.multiuser.annotations.EnsureHasAdditionalUser
@@ -1691,12 +1691,12 @@ class RoleManagerMultiUserTest {
         com.android.permission.flags.Flags.FLAG_CROSS_USER_ROLE_UX_BUGFIX_ENABLED,
     )
     @EnsureHasPermission(INTERACT_ACROSS_USERS_FULL, MANAGE_ROLE_HOLDERS)
+    @EnsureHasUserRestriction(value = DISALLOW_CONFIG_DEFAULT_APPS, onUser = INITIAL_USER)
     @EnsureHasWorkProfile(isOrganizationOwned = false)
-    @EnsureHasUserRestriction(value = DISALLOW_CONFIG_DEFAULT_APPS, onUser = WORK_PROFILE)
     @RequireRunOnPrimaryUser
     @Test
     @Throws(java.lang.Exception::class)
-    fun openDefaultAppListAndOpenDefaultAppWhenBYODAndHasUserRestrictionOnWorkProfile() {
+    fun openDefaultAppListAndOpenDefaultAppWhenBYODHasUserRestrictionOnPrimaryProfile() {
         try {
             // Set test default role holder. Ensures fallbacks to a default holder
             setDefaultHoldersForTestForAllUsers()
@@ -1727,7 +1727,7 @@ class RoleManagerMultiUserTest {
         com.android.permission.flags.Flags.FLAG_CROSS_USER_ROLE_UX_BUGFIX_ENABLED,
     )
     @EnsureHasPermission(INTERACT_ACROSS_USERS_FULL, MANAGE_ROLE_HOLDERS)
-    @EnsureHasUserRestriction(value = DISALLOW_CONFIG_DEFAULT_APPS)
+    @EnsureHasUserRestriction(value = DISALLOW_CONFIG_DEFAULT_APPS, onUser = INITIAL_USER)
     @EnsureHasWorkProfile(isOrganizationOwned = true)
     @RequireRunOnPrimaryUser
     @Test
@@ -1809,53 +1809,12 @@ class RoleManagerMultiUserTest {
         com.android.permission.flags.Flags.FLAG_CROSS_USER_ROLE_UX_BUGFIX_ENABLED,
     )
     @EnsureHasPermission(INTERACT_ACROSS_USERS_FULL, MANAGE_ROLE_HOLDERS)
-    @EnsureHasUserRestriction(value = DISALLOW_CONFIG_DEFAULT_APPS)
-    @EnsureHasDeviceOwner
-    @RequireRunOnPrimaryUser
-    @Test
-    @Throws(java.lang.Exception::class)
-    fun openDefaultAppListAndCannotOpenDefaultAppWhenDOHasUserRestrictionOnPrimaryProfile() {
-        try {
-            // Set test default role holder. Ensures fallbacks to a default holder
-            setDefaultHoldersForTestForAllUsers()
-            setRoleVisibleForTestForAllUsers()
-
-            context.startActivity(
-                Intent(Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS)
-                    .addCategory(Intent.CATEGORY_DEFAULT)
-                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-            )
-            getUiDevice().waitForIdle()
-            waitFindObject(By.text(PROFILE_GROUP_EXCLUSIVITY_ROLE_SHORT_LABEL)).click()
-            getUiDevice().waitForIdle()
-
-            // CollapsingToolbar title can't be found by text, so using description instead.
-            assertNull(
-                waitFindObjectOrNull(
-                    By.desc(PROFILE_GROUP_EXCLUSIVITY_ROLE_LABEL),
-                    IDLE_TIMEOUT_MILLIS,
-                )
-            )
-
-            pressBack()
-            pressBack()
-        } finally {
-            clearDefaultHoldersForTestForAllUsers()
-            clearRoleVisibleForTestForAllUsers()
-        }
-    }
-
-    @RequireFlagsEnabled(
-        com.android.permission.flags.Flags.FLAG_CROSS_USER_ROLE_ENABLED,
-        com.android.permission.flags.Flags.FLAG_CROSS_USER_ROLE_UX_BUGFIX_ENABLED,
-    )
-    @EnsureHasPermission(INTERACT_ACROSS_USERS_FULL, MANAGE_ROLE_HOLDERS)
+    @EnsureHasUserRestriction(value = DISALLOW_CONFIG_DEFAULT_APPS, onUser = INITIAL_USER)
     @EnsureHasWorkProfile(isOrganizationOwned = false)
-    @EnsureHasUserRestriction(value = DISALLOW_CONFIG_DEFAULT_APPS, onUser = WORK_PROFILE)
     @RequireRunOnPrimaryUser
     @Test
     @Throws(java.lang.Exception::class)
-    fun openDefaultAppDetailsAndSetDefaultAppWhenBYODAndHasUserRestrictionOnWorkProfile() {
+    fun openDefaultAppDetailsAndSetDefaultAppWhenBYODHasUserRestrictionOnPrimaryProfile() {
         try {
             // Set test default role holder. Ensures fallbacks to a default holder
             setDefaultHoldersForTestForAllUsers()
@@ -1921,7 +1880,7 @@ class RoleManagerMultiUserTest {
         com.android.permission.flags.Flags.FLAG_CROSS_USER_ROLE_UX_BUGFIX_ENABLED,
     )
     @EnsureHasPermission(INTERACT_ACROSS_USERS_FULL, MANAGE_ROLE_HOLDERS)
-    @EnsureHasUserRestriction(value = DISALLOW_CONFIG_DEFAULT_APPS)
+    @EnsureHasUserRestriction(value = DISALLOW_CONFIG_DEFAULT_APPS, onUser = INITIAL_USER)
     @EnsureHasWorkProfile(isOrganizationOwned = true)
     @RequireRunOnPrimaryUser
     @Test
@@ -2082,93 +2041,33 @@ class RoleManagerMultiUserTest {
         com.android.permission.flags.Flags.FLAG_CROSS_USER_ROLE_ENABLED,
         com.android.permission.flags.Flags.FLAG_CROSS_USER_ROLE_UX_BUGFIX_ENABLED,
     )
-    @EnsureHasPermission(INTERACT_ACROSS_USERS_FULL, MANAGE_ROLE_HOLDERS)
-    @EnsureHasUserRestriction(value = DISALLOW_CONFIG_DEFAULT_APPS)
-    @EnsureHasDeviceOwner
-    @RequireRunOnPrimaryUser
-    @Test
-    @Throws(java.lang.Exception::class)
-    fun openDefaultAppDetailsAndCannotSetDefaultAppWhenDOHasUserRestrictionOnPrimaryProfile() {
-        try {
-            // Set test default role holder.
-            setDefaultHoldersForTestForAllUsers()
-            setRoleVisibleForTestForAllUsers()
-
-            // Ensure none selected first. Request exits early if user and package
-            // already the role holder
-            clearRoleAndDisableFallbackForAllUsers()
-
-            context.startActivity(
-                Intent(Intent.ACTION_MANAGE_DEFAULT_APP)
-                    .addCategory(Intent.CATEGORY_DEFAULT)
-                    .putExtra(Intent.EXTRA_ROLE_NAME, PROFILE_GROUP_EXCLUSIVITY_ROLE_NAME)
-                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-            )
-            getUiDevice().waitForIdle()
-
-            val targetActiveUser = users().current().userHandle()
-            val targetAppLabel = "$APP_LABEL@${targetActiveUser.identifier}"
-            if (isWatch) {
-                waitFindObject(By.clickable(true).hasDescendant(By.text(targetAppLabel))).click()
-            } else {
-                waitFindObject(
-                        By.clickable(true)
-                            .hasDescendant(By.checkable(true))
-                            .hasDescendant(By.text(targetAppLabel))
-                    )
-                    .click()
-            }
-
-            if (isWatch) {
-                assertNull(
-                    waitFindObjectOrNull(
-                        By.clickable(true).checked(true).hasDescendant(By.text(targetAppLabel)),
-                        IDLE_TIMEOUT_MILLIS,
-                    )
-                )
-            } else {
-                assertNull(
-                    waitFindObjectOrNull(
-                        By.clickable(true)
-                            .hasDescendant(By.checkable(true).checked(true))
-                            .hasDescendant(By.text(targetAppLabel)),
-                        IDLE_TIMEOUT_MILLIS,
-                    )
-                )
-            }
-
-            assertNoRoleHoldersUsingGetRoleHoldersAsUser()
-
-            pressBack()
-            pressBack()
-        } finally {
-            clearDefaultHoldersForTestForAllUsers()
-            clearRoleVisibleForTestForAllUsers()
-        }
-    }
-
-    @RequireFlagsEnabled(
-        com.android.permission.flags.Flags.FLAG_CROSS_USER_ROLE_ENABLED,
-        com.android.permission.flags.Flags.FLAG_CROSS_USER_ROLE_UX_BUGFIX_ENABLED,
-    )
+    @EnsureHasUserRestriction(value = DISALLOW_CONFIG_DEFAULT_APPS, onUser = INITIAL_USER)
     @EnsureHasWorkProfile(isOrganizationOwned = false)
-    @EnsureHasUserRestriction(value = DISALLOW_CONFIG_DEFAULT_APPS, onUser = WORK_PROFILE)
     @RequireRunOnPrimaryUser
     @Test
     @Throws(java.lang.Exception::class)
-    fun requestRoleAllowedWhenBYODAndHasUserRestrictionOnWorkProfile() {
+    fun requestRoleAllowedWhenBYODHasUserRestrictionOnPrimaryProfile() {
         try {
             // setDefaultHoldersForTestForAllUsers and setRoleVisibleForTestForAllUsers require
             // INTERACT_ACROSS_USERS_FULL and MANAGE_ROLE_HOLDERS permissions to validate cross user
             // role active user and role holder states
             permissions().withPermission(INTERACT_ACROSS_USERS_FULL, MANAGE_ROLE_HOLDERS).use {
-                // Set test default role holder.
+                // Set test default role holder. Ensures fallbacks to a default holder
                 setDefaultHoldersForTestForAllUsers()
                 setRoleVisibleForTestForAllUsers()
 
-                // Ensure none selected first. Request exits early if user and package
+                // Ensure non-primary selected first. Request exits early if user and package
                 // already the role holder
-                clearRoleAndDisableFallbackForAllUsers()
+                val future = CallbackFuture()
+                roleManager.addRoleHolderAsUser(
+                    PROFILE_GROUP_EXCLUSIVITY_ROLE_NAME,
+                    APP_PACKAGE_NAME,
+                    0,
+                    deviceState.workProfile().userHandle(),
+                    context.mainExecutor,
+                    future,
+                )
+                assertThat(future.get(TIMEOUT_MILLIS, TimeUnit.MILLISECONDS)).isTrue()
             }
 
             requestRole(PROFILE_GROUP_EXCLUSIVITY_ROLE_NAME)
@@ -2199,7 +2098,7 @@ class RoleManagerMultiUserTest {
         com.android.permission.flags.Flags.FLAG_CROSS_USER_ROLE_ENABLED,
         com.android.permission.flags.Flags.FLAG_CROSS_USER_ROLE_UX_BUGFIX_ENABLED,
     )
-    @EnsureHasUserRestriction(value = DISALLOW_CONFIG_DEFAULT_APPS)
+    @EnsureHasUserRestriction(value = DISALLOW_CONFIG_DEFAULT_APPS, onUser = INITIAL_USER)
     @EnsureHasWorkProfile(isOrganizationOwned = true)
     @RequireRunOnPrimaryUser
     @Test
@@ -2210,13 +2109,22 @@ class RoleManagerMultiUserTest {
             // INTERACT_ACROSS_USERS_FULL and MANAGE_ROLE_HOLDERS permissions to validate cross user
             // role active user and role holder states
             permissions().withPermission(INTERACT_ACROSS_USERS_FULL, MANAGE_ROLE_HOLDERS).use {
-                // Set test default role holder.
+                // Set test default role holder. Ensures fallbacks to a default holder
                 setDefaultHoldersForTestForAllUsers()
                 setRoleVisibleForTestForAllUsers()
 
-                // Ensure none selected first. Request exits early if user and package
+                // Ensure non-primary selected first. Request exits early if user and package
                 // already the role holder
-                clearRoleAndDisableFallbackForAllUsers()
+                val future = CallbackFuture()
+                roleManager.addRoleHolderAsUser(
+                    PROFILE_GROUP_EXCLUSIVITY_ROLE_NAME,
+                    APP_PACKAGE_NAME,
+                    0,
+                    deviceState.workProfile().userHandle(),
+                    context.mainExecutor,
+                    future,
+                )
+                assertThat(future.get(TIMEOUT_MILLIS, TimeUnit.MILLISECONDS)).isTrue()
             }
 
             requestRole(PROFILE_GROUP_EXCLUSIVITY_ROLE_NAME)
@@ -2247,50 +2155,22 @@ class RoleManagerMultiUserTest {
             // INTERACT_ACROSS_USERS_FULL and MANAGE_ROLE_HOLDERS permissions to validate cross user
             // role active user and role holder states
             permissions().withPermission(INTERACT_ACROSS_USERS_FULL, MANAGE_ROLE_HOLDERS).use {
-                // Set test default role holder.
+                // Set test default role holder. Ensures fallbacks to a default holder
                 setDefaultHoldersForTestForAllUsers()
                 setRoleVisibleForTestForAllUsers()
 
-                // Ensure none selected first. Request exits early if user and package
+                // Ensure non-primary selected first. Request exits early if user and package
                 // already the role holder
-                clearRoleAndDisableFallbackForAllUsers()
-            }
-
-            requestRole(PROFILE_GROUP_EXCLUSIVITY_ROLE_NAME)
-            roleRequestNotShown()
-        } finally {
-            // clearDefaultHoldersForTestForAllUsers and clearRoleVisibleForTestForAllUsers require
-            // INTERACT_ACROSS_USERS_FULL and MANAGE_ROLE_HOLDERS permissions to validate cross user
-            // role active user and role holder states
-            permissions().withPermission(INTERACT_ACROSS_USERS_FULL, MANAGE_ROLE_HOLDERS).use {
-                clearDefaultHoldersForTestForAllUsers()
-                clearRoleVisibleForTestForAllUsers()
-            }
-        }
-    }
-
-    @RequireFlagsEnabled(
-        com.android.permission.flags.Flags.FLAG_CROSS_USER_ROLE_ENABLED,
-        com.android.permission.flags.Flags.FLAG_CROSS_USER_ROLE_UX_BUGFIX_ENABLED,
-    )
-    @EnsureHasDeviceOwner
-    @EnsureHasUserRestriction(value = DISALLOW_CONFIG_DEFAULT_APPS)
-    @RequireRunOnPrimaryUser
-    @Test
-    @Throws(java.lang.Exception::class)
-    fun requestRoleDeniedWhenDOHasUserRestrictionOnPrimaryProfile() {
-        try {
-            // setDefaultHoldersForTestForAllUsers and setRoleVisibleForTestForAllUsers require
-            // INTERACT_ACROSS_USERS_FULL and MANAGE_ROLE_HOLDERS permissions to validate cross user
-            // role active user and role holder states
-            permissions().withPermission(INTERACT_ACROSS_USERS_FULL, MANAGE_ROLE_HOLDERS).use {
-                // Set test default role holder.
-                setDefaultHoldersForTestForAllUsers()
-                setRoleVisibleForTestForAllUsers()
-
-                // Ensure none selected first. Request exits early if user and package
-                // already the role holder
-                clearRoleAndDisableFallbackForAllUsers()
+                val future = CallbackFuture()
+                roleManager.addRoleHolderAsUser(
+                    PROFILE_GROUP_EXCLUSIVITY_ROLE_NAME,
+                    APP_PACKAGE_NAME,
+                    0,
+                    deviceState.workProfile().userHandle(),
+                    context.mainExecutor,
+                    future,
+                )
+                assertThat(future.get(TIMEOUT_MILLIS, TimeUnit.MILLISECONDS)).isTrue()
             }
 
             requestRole(PROFILE_GROUP_EXCLUSIVITY_ROLE_NAME)
@@ -2352,9 +2232,6 @@ class RoleManagerMultiUserTest {
     }
 
     private fun roleRequestNotShown() {
-        val requestRoleTitle =
-            waitFindObjectOrNull(By.textStartsWith(ROLE_REQUEST_TITLE), IDLE_TIMEOUT_MILLIS)
-        assertNull(requestRoleTitle)
         val requestRoleItem =
             waitFindObjectOrNull(By.textStartsWith(APP_LABEL), IDLE_TIMEOUT_MILLIS)
         assertNull(requestRoleItem)
@@ -2491,30 +2368,6 @@ class RoleManagerMultiUserTest {
         }
     }
 
-    private fun clearRoleAndDisableFallbackForAllUsers() {
-        for (userReference in users().profileGroup(users().current())) {
-            try {
-                val userRoleManager = getRoleManagerForUser(userReference)
-                userRoleManager.setRoleFallbackEnabled(PROFILE_GROUP_EXCLUSIVITY_ROLE_NAME, false)
-                userRoleManager.clearRoleHoldersAsUser(
-                    PROFILE_GROUP_EXCLUSIVITY_ROLE_NAME,
-                    0,
-                    userReference.userHandle(),
-                    context.mainExecutor,
-                    CallbackFuture(),
-                )
-            } catch (e: Exception) {
-                Log.w(
-                    LOG_TAG,
-                    "Encountered error clearing role holder and setting fallback disabled " +
-                        "for $PROFILE_GROUP_EXCLUSIVITY_ROLE_NAME@" +
-                        "${userReference.userHandle().identifier}",
-                    e,
-                )
-            }
-        }
-    }
-
     private fun getRoleManagerForUser(user: UserReference): RoleManager {
         val userContext = context().androidContextAsUser(user)
         return userContext.getSystemService(RoleManager::class.java)
@@ -2543,8 +2396,6 @@ class RoleManagerMultiUserTest {
         private const val APP_LABEL = "CtsRoleTestApp"
         private const val APP_REQUEST_ROLE_ACTIVITY_NAME = APP_PACKAGE_NAME + ".RequestRoleActivity"
         private const val NONE_LABEL = "None"
-        private const val ROLE_REQUEST_TITLE =
-            "Set $APP_LABEL as your default test profile group exclusive role app?"
 
         private val context: Context = context().instrumentedContext()
         private val roleManager: RoleManager = context.getSystemService(RoleManager::class.java)
