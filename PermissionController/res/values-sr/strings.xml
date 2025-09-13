@@ -17,7 +17,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="6098036489833144040">"Контролер дозвола"</string>
-    <string name="ok" msgid="1936281769725676272">"Потврди"</string>
+    <string name="ok" msgid="1936281769725676272">"Важи"</string>
     <string name="permission_search_keyword" msgid="1214451577494730543">"дозволе"</string>
     <string name="cancel" msgid="8943320028373963831">"Откажи"</string>
     <string name="back" msgid="6249950659061523680">"Назад"</string>

@@ -345,10 +345,10 @@
     <string name="app_perms_content_provider_7d_all_files" msgid="7962416229708835558">"Acceso durante los últimos 7 días • Todos los archivos"</string>
     <string name="no_permissions_allowed" msgid="6081976856354669209">"No se ha concedido ningún permiso"</string>
     <string name="no_permissions_denied" msgid="8159923922804043282">"No se ha denegado ningún permiso"</string>
-    <string name="no_apps_allowed" msgid="7718822655254468631">"No hay aplicaciones permitidas"</string>
+    <string name="no_apps_allowed" msgid="7718822655254468631">"No hay apps permitidas"</string>
     <string name="no_apps_allowed_full" msgid="8011716991498934104">"Ninguna aplicación tiene permiso para acceder a todos los archivos"</string>
     <string name="no_apps_allowed_scoped" msgid="4908850477787659501">"Ninguna aplicación tiene permiso para acceder solo a archivos multimedia"</string>
-    <string name="no_apps_denied" msgid="7663435886986784743">"No hay aplicaciones denegadas"</string>
+    <string name="no_apps_denied" msgid="7663435886986784743">"No hay apps denegadas"</string>
     <string name="car_permission_selected" msgid="180837028920791596">"Seleccionado"</string>
     <string name="settings" msgid="5409109923158713323">"Ajustes"</string>
     <string name="accessibility_service_dialog_title_single" msgid="7956432823014102366">"<xliff:g id="SERVICE_NAME">%s</xliff:g> tiene acceso completo a tu dispositivo"</string>

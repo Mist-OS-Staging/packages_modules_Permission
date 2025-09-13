@@ -18,6 +18,6 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="permission_description_summary_contacts" msgid="2757597696923097587">"برنامه‌هایی دارای این اجازه می‌توانند به مخاطبین شما دسترسی داشته باشند و فهرست حساب‌هایی را که می‌توانند مخاطبین را در این دستگاه ذخیره کنند، مشاهده کنند."</string>
     <string name="permgrouprequest_contacts" msgid="4011412821869715229">"‏آیا به &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; اجازه می دهید تا به مخاطبین و حساب‌های این دستگاه دسترسی داشته باشد؟"</string>
-    <string name="permgrouprequestdetail_contacts" msgid="3314989542973932720">"این برنامه قادر خواهد بود به مخاطبین شما دسترسی داشته باشد و فهرست حساب‌های شما را که می‌توانند مخاطبین را ذخیره کنند، مشاهده کند."</string>
+    <string name="permgrouprequestdetail_contacts" msgid="3314989542973932720">"این برنامه قادر خواهد بود به مخاطبین شما دسترسی داشته باشد و فهرست حساب‌های شما را که می‌توانند مخاطبین را ذخیره کنند مشاهده کند"</string>
     <string name="permgrouprequest_device_aware_contacts" msgid="2668046201497840127">"‏آیا به &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;اجازه می‌دهید تا به مخاطبین و حساب‌های کاربری در &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt; دسترسی داشته باشد؟"</string>
 </resources>
