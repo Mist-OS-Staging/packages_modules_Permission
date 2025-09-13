@@ -146,6 +146,12 @@ object PermissionMapping {
             PLATFORM_PERMISSIONS[Manifest.permission.RANGING] =
                 Manifest.permission_group.NEARBY_DEVICES
         }
+        // Local network permission will be supported from Android C+, update this when
+        // isAtLeastC() is available.
+        if (SdkLevel.isAtLeastB() && Flags.accessLocalNetworkPermissionEnabled()) {
+            PLATFORM_PERMISSIONS[Manifest.permission.ACCESS_LOCAL_NETWORK] =
+                Manifest.permission_group.NEARBY_DEVICES
+        }
         // Android XR permissions
         if (android.xr.Flags.xrManifestEntries()) {
             PLATFORM_PERMISSIONS[Manifest.permission.EYE_TRACKING_COARSE] =
