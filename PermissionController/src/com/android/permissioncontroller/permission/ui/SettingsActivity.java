@@ -26,7 +26,6 @@ import com.android.permissioncontroller.R;
 import com.android.settingslib.collapsingtoolbar.EdgeToEdgeUtils;
 import com.android.settingslib.collapsingtoolbar.SettingsTransitionActivity;
 import com.android.settingslib.widget.ExpressiveDesignEnabledProvider;
-import com.android.settingslib.widget.SettingsThemeHelper;
 import com.android.settingslib.widget.theme.flags.Flags;
 
 /**
@@ -36,7 +35,7 @@ public class SettingsActivity extends SettingsTransitionActivity implements
         ExpressiveDesignEnabledProvider {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        if (SettingsThemeHelper.isExpressiveTheme(this)) {
+        if (SdkLevel.isAtLeastV()) {
             EdgeToEdgeUtils.enable(this);
         }
 
