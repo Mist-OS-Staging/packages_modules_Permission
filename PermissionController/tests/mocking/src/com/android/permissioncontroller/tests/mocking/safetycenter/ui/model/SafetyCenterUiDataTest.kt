@@ -35,11 +35,12 @@ import com.android.permissioncontroller.safetycenter.ui.model.ActionId
 import com.android.permissioncontroller.safetycenter.ui.model.IssueId
 import com.android.permissioncontroller.safetycenter.ui.model.IssueUiData
 import com.android.permissioncontroller.safetycenter.ui.model.SafetyCenterUiData
+import com.android.permissioncontroller.tests.mocking.safetycenter.SafetyCenterTestUtils.createSafetyCenterIssueBuilder
 import com.android.safetycenter.internaldata.SafetyCenterBundles.ISSUES_TO_GROUPS_BUNDLE_KEY
 import com.android.safetycenter.internaldata.SafetyCenterIds
 import com.android.safetycenter.internaldata.SafetyCenterIssueId
 import com.android.safetycenter.internaldata.SafetyCenterIssueKey
-import com.android.safetycenter.testing.SafetyCenterTestHelper.Companion.createSafetyCenterIssueBuilder
+
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 import org.junit.runner.RunWith
