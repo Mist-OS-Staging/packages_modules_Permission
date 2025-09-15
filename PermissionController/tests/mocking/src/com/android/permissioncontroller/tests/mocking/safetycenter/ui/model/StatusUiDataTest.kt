@@ -34,7 +34,7 @@ import androidx.test.filters.SdkSuppress
 import com.android.modules.utils.build.SdkLevel
 import com.android.permissioncontroller.R
 import com.android.permissioncontroller.safetycenter.ui.model.StatusUiData
-import com.android.safetycenter.testing.SafetyCenterTestHelper.Companion.createSafetyCenterIssueBuilder
+import com.android.permissioncontroller.tests.mocking.safetycenter.SafetyCenterTestUtils.createSafetyCenterIssueBuilder
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Test
