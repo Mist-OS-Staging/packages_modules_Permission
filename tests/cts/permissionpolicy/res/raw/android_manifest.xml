@@ -9379,6 +9379,14 @@
             <valid-purpose android:name="notForIdentification" />
     </permission>
 
+    <!-- Permission required to bind content restriction service
+        <p>Protection level: signature
+        @FlaggedApi(android.permission.flags.Flags.FLAG_CONTENT_RESTRICTION_ROLE_ENABLED)
+    -->
+    <permission android:name="android.permission.BIND_CONTENT_RESTRICTION_SERVICE"
+        android:protectionLevel="signature"
+        android:featureFlag="android.permission.flags.content_restriction_role_enabled" />
+
     <!-- @SystemApi
         @FlaggedApi("android.content.pm.verification_service")
         Allows an application to set user's response for an incomplete developer verification. This can be

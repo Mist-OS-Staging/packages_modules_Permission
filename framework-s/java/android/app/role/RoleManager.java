@@ -252,6 +252,15 @@ public final class RoleManager {
             "android.app.role.RESERVED_FOR_TESTING_PROFILE_GROUP_EXCLUSIVITY";
 
     /**
+     * The name of the content restriction role.
+     *
+     * This role enables the ability to view and restrict content for the user.
+     *
+     */
+    @FlaggedApi(Flags.FLAG_CONTENT_RESTRICTION_ROLE_ENABLED)
+    public static final String ROLE_CONTENT_RESTRICTION = "android.app.role.CONTENT_RESTRICTION";
+
+    /**
      * @hide
      */
     @IntDef(flag = true, value = { MANAGE_HOLDERS_FLAG_DONT_KILL_APP })
