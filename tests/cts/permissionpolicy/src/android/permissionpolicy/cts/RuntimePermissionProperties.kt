@@ -19,6 +19,7 @@ package android.permissionpolicy.cts
 import android.Manifest.permission.ACCEPT_HANDOVER
 import android.Manifest.permission.ACCESS_COARSE_LOCATION
 import android.Manifest.permission.ACCESS_FINE_LOCATION
+import android.Manifest.permission.ACCESS_LOCAL_NETWORK
 import android.Manifest.permission.ACTIVITY_RECOGNITION
 import android.Manifest.permission.ADD_VOICEMAIL
 import android.Manifest.permission.ANSWER_PHONE_CALLS
@@ -185,6 +186,7 @@ class RuntimePermissionProperties {
         // runtime permission
         expectedPerms.add(POST_NOTIFICATIONS)
         expectedPerms.add(NEARBY_WIFI_DEVICES)
+        expectedPerms.add(ACCESS_LOCAL_NETWORK)
 
         // Add runtime permissions added in U which were _not_ split from a previously existing
         // runtime permission

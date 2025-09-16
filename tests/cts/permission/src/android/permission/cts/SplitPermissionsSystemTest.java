@@ -172,7 +172,7 @@ public class SplitPermissionsSystemTest {
             }
         }
 
-        assertEquals(23, seenSplits.size());
+        assertEquals(24, seenSplits.size());
     }
 
     @RequiresFlagsDisabled({Flags.FLAG_REPLACE_BODY_SENSOR_PERMISSION_ENABLED})
