@@ -9260,6 +9260,16 @@
         android:protectionLevel="signature|role"
         android:featureFlag="com.android.window.flags.enable_window_repositioning_api" />
 
+    <!-- Allows an application to use
+     {@link android.app.ActivityManager.AppTask#WINDOWING_LAYER_PINNED} for its Tasks.
+     <p>Protection level: normal
+     @FlaggedApi(com.android.window.flags.Flags.FLAG_ENABLE_INTERACTIVE_PICTURE_IN_PICTURE)
+    -->
+    <permission
+        android:name="android.permission.USE_PINNED_WINDOWING_LAYER"
+        android:protectionLevel="normal"
+        android:featureFlag="com.android.window.flags.enable_interactive_picture_in_picture" />
+
     <!-- @SystemApi
         @FlaggedApi("android.content.pm.verification_service")
         Allows app to be the developer verification agent to verify packages.
