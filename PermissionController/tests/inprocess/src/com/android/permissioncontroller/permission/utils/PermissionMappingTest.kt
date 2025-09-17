@@ -20,9 +20,6 @@ import android.Manifest
 import android.app.AppOpsManager
 import android.health.connect.HealthPermissions
 import android.os.Build
-import android.permission.flags.Flags
-import android.platform.test.annotations.RequiresFlagsDisabled;
-import android.platform.test.annotations.RequiresFlagsEnabled;
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
@@ -154,30 +151,6 @@ class PermissionMappingTest {
         assertNotNull(
             PermissionMapping.getGroupOfPlatformPermission(
                 Manifest.permission.BODY_SENSORS_BACKGROUND
-            )
-        )
-    }
-
-    // Local network permission will be supported from Android C, update the version when C is
-    // available.
-    @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
-    @RequiresFlagsEnabled(Flags.FLAG_ACCESS_LOCAL_NETWORK_PERMISSION_ENABLED)
-    @Test
-    fun getGroupOfPlatformPermission_postC_haveAccessLocalNetwork() {
-        assertThat(
-            PermissionMapping.getGroupOfPlatformPermission(
-                Manifest.permission.ACCESS_LOCAL_NETWORK
-            )
-        ).isEqualTo(Manifest.permission_group.NEARBY_DEVICES)
-    }
-
-    @SdkSuppress(maxSdkVersion = Build.VERSION_CODES.BAKLAVA)
-    @RequiresFlagsDisabled(Flags.FLAG_ACCESS_LOCAL_NETWORK_PERMISSION_ENABLED)
-    @Test
-    fun getGroupOfPlatformPermission_preC_notHaveAccessLocalNetwork() {
-        assertNull(
-            PermissionMapping.getGroupOfPlatformPermission(
-                Manifest.permission.ACCESS_LOCAL_NETWORK
             )
         )
     }
