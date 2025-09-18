@@ -186,7 +186,9 @@ class RuntimePermissionProperties {
         // runtime permission
         expectedPerms.add(POST_NOTIFICATIONS)
         expectedPerms.add(NEARBY_WIFI_DEVICES)
-        expectedPerms.add(ACCESS_LOCAL_NETWORK)
+        if (Flags.accessLocalNetworkPermissionEnabled()) {
+            expectedPerms.add(ACCESS_LOCAL_NETWORK)
+        }
 
         // Add runtime permissions added in U which were _not_ split from a previously existing
         // runtime permission
