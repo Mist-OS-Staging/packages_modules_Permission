@@ -155,7 +155,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
             "app_location_permission_rationale_subtitle"
         const val HEALTH_PERMISSION_SELECT_HEART_RATE_PLAIN_TEXT = "Heart rate"
         const val HEALTH_PERMISSION_ALLOW_ALL_PLAIN_TEXT = "Allow all"
-        const val HEALTH_PERMISSION_ALLOW_ALWAYS_PLAIN_TEXT = "Allow all the time"
+        val HEALTH_PERMISSION_ALLOW_ALWAYS_PATTERN = Pattern.compile("(Allow all|All) the time")
         const val GRANT_DIALOG_PERMISSION_RATIONALE_CONTAINER_VIEW =
             "com.android.permissioncontroller:id/permission_rationale_container"
         const val PERMISSION_RATIONALE_ACTIVITY_TITLE_VIEW =
@@ -1066,7 +1066,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
     protected fun clickAlwaysAllowReadHealthDataInBackground() {
         eventually {
             if (isWatch) {
-                click(By.text(HEALTH_PERMISSION_ALLOW_ALWAYS_PLAIN_TEXT).displayId(displayId))
+                click(By.text(HEALTH_PERMISSION_ALLOW_ALWAYS_PATTERN).displayId(displayId))
             } else {
                 clickPermissionRequestAllowButton(isHealthPermission = true)
             }
