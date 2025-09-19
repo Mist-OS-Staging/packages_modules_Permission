@@ -19,6 +19,7 @@ package android.permission.cts;
 import static android.Manifest.permission.ACCESS_BACKGROUND_LOCATION;
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
+import static android.Manifest.permission.ACCESS_LOCAL_NETWORK;
 import static android.Manifest.permission.ACCESS_MEDIA_LOCATION;
 import static android.Manifest.permission.BLUETOOTH;
 import static android.Manifest.permission.BLUETOOTH_ADMIN;
@@ -26,6 +27,7 @@ import static android.Manifest.permission.BLUETOOTH_CONNECT;
 import static android.Manifest.permission.BLUETOOTH_SCAN;
 import static android.Manifest.permission.BODY_SENSORS;
 import static android.Manifest.permission.BODY_SENSORS_BACKGROUND;
+import static android.Manifest.permission.INTERNET;
 import static android.Manifest.permission.READ_CALL_LOG;
 import static android.Manifest.permission.READ_CONTACTS;
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
@@ -42,6 +44,7 @@ import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assume.assumeTrue;
 
 import android.content.Context;
@@ -68,6 +71,7 @@ import org.junit.runner.RunWith;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 @RunWith(AndroidJUnit4.class)
@@ -103,7 +107,8 @@ public class SplitPermissionsSystemTest {
             boolean shouldSkip =
                     !splitPermission.startsWith("android")
                             || splitPermission.equals(BODY_SENSORS)
-                            || splitPermission.equals(BODY_SENSORS_BACKGROUND);
+                            || splitPermission.equals(BODY_SENSORS_BACKGROUND)
+                            || splitPermission.equals(INTERNET);
             if (shouldSkip) {
                 continue;
             }
@@ -172,7 +177,7 @@ public class SplitPermissionsSystemTest {
             }
         }
 
-        assertEquals(24, seenSplits.size());
+        assertEquals(23, seenSplits.size());
     }
 
     @RequiresFlagsDisabled({Flags.FLAG_REPLACE_BODY_SENSOR_PERMISSION_ENABLED})
@@ -222,6 +227,35 @@ public class SplitPermissionsSystemTest {
         assertSplit(
                 bodySensorBackgroundPermissionInfo,
                 HealthPermissions.READ_HEALTH_DATA_IN_BACKGROUND);
+    }
+
+    @RequiresFlagsDisabled({Flags.FLAG_ACCESS_LOCAL_NETWORK_PERMISSION_ENABLED})
+    @Test
+    public void
+            validateSplitInternetToAccessLocalNetwork_flagDisabled() {
+        assumeTrue(ApiLevelUtil.isAtLeast(Build.VERSION_CODES.Q));
+        Optional<SplitPermissionInfo> splitResult = mSplitPermissions.stream()
+                .filter(split -> split.getSplitPermission().equals(INTERNET))
+                .findFirst();
+
+        assertFalse(splitResult.isPresent());
+    }
+
+    @RequiresFlagsEnabled({Flags.FLAG_ACCESS_LOCAL_NETWORK_PERMISSION_ENABLED})
+    @Test
+    public void validateSplitInternetToAccessLocalNetwork_flagEnabled() {
+        // TODO: Change this to 26Q2 when available.
+        assumeTrue(ApiLevelUtil.isAtLeast(Build.VERSION_CODES.BAKLAVA));
+
+        mSplitPermissions.stream()
+                .filter(split -> split.getSplitPermission().equals(INTERNET))
+                .findFirst()
+                .ifPresent(
+                        split ->
+                                assertSplit(
+                                        split,
+                                        37, // TODO: Change this to 26Q2 when available.
+                                        ACCESS_LOCAL_NETWORK));
     }
 
     private void assertSplit(SplitPermissionInfo split, int targetSdk, String... permission) {
