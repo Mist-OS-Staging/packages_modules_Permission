@@ -1548,6 +1548,10 @@
                 featureFlag="android.app.appfunctions.flags.Flags.enableAppFunctionManager" />
             <permission name="android.permission.MANAGE_DEFAULT_APPLICATIONS" minSdkVersion="36"
                 featureFlag="com.android.permission.flags.Flags.crossUserRoleEnabled" />
+            <permission name="android.permission.COPY_ACCOUNTS"
+                        featureFlag="android.permission.flags.Flags.devicePolicyManagementRoleSplitCreateManagedProfileEnabled" />
+            <permission name="android.permission.REMOVE_ACCOUNTS"
+                        featureFlag="android.permission.flags.Flags.devicePolicyManagementRoleSplitCreateManagedProfileEnabled" />
         </permissions>
     </role>
 
