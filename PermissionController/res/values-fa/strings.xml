@@ -258,7 +258,7 @@
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"مجاز فقط برای دسترسی به رسانه‌ها"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"مجاز برای مدیریت همه فایل‌ها"</string>
     <string name="ask_header" msgid="2633816846459944376">"هربار پرسیده شود"</string>
-    <string name="denied_header" msgid="903209608358177654">"مجاز نیست"</string>
+    <string name="denied_header" msgid="903209608358177654">"اجازه نداشتن"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> در <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"دیدن برنامه‌های دیگری که به همه فایل‌ها دسترسی دارند"</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{یک روز}one{# روز}other{# روز}}"</string>
@@ -345,9 +345,9 @@
     <string name="app_perms_content_provider_7d_all_files" msgid="7962416229708835558">"آخرین دسترسی: در ۷ روز گذشته • همه فایل‌ها"</string>
     <string name="no_permissions_allowed" msgid="6081976856354669209">"هیچ مجوزی اعطا نشده است"</string>
     <string name="no_permissions_denied" msgid="8159923922804043282">"هیچ اجازه‌ای رد نشده"</string>
-    <string name="no_apps_allowed" msgid="7718822655254468631">"برنامه‌ای مجاز نشده"</string>
-    <string name="no_apps_allowed_full" msgid="8011716991498934104">"برنامه‌ای برای همه فایل‌ها مجاز نشده"</string>
-    <string name="no_apps_allowed_scoped" msgid="4908850477787659501">"برنامه‌ای برای فقط رسانه مجاز نشده"</string>
+    <string name="no_apps_allowed" msgid="7718822655254468631">"هیچ برنامه‌ای اجازه ندارد"</string>
+    <string name="no_apps_allowed_full" msgid="8011716991498934104">"هیچ برنامه‌ای برای همه فایل‌ها اجازه ندارد"</string>
+    <string name="no_apps_allowed_scoped" msgid="4908850477787659501">"هیچ برنامه‌ای برای فقط رسانه اجازه ندارد"</string>
     <string name="no_apps_denied" msgid="7663435886986784743">"برنامه‌ای رد نشده"</string>
     <string name="car_permission_selected" msgid="180837028920791596">"انتخاب‌شده"</string>
     <string name="settings" msgid="5409109923158713323">"تنظیمات"</string>
