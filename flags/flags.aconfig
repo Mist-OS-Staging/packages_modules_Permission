@@ -191,3 +191,13 @@ flag {
     bug: "409105506"
     is_fixed_read_only: true
 }
+
+flag {
+    name: "safety_center_notification_style"
+    namespace: "permission"
+    description: "This flag enabled big text style for safety center notification"
+    bug: "443322314"
+    metadata {
+        purpose: PURPOSE_BUGFIX
+    }
+}
