@@ -16,8 +16,10 @@
 package com.android.permissioncontroller.appfunctions.ui.viewmodel
 
 import android.app.Application
+import android.app.appfunctions.AppFunctionManager.OnAppFunctionAccessChangedListener
 import android.icu.text.Collator
 import android.os.Process
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -54,6 +56,7 @@ class TargetAccessViewModel(
     private val agentListComparator: Comparator<AgentItem> =
         compareBy(collator) { it.packageInfo.label }
 
+    private val accessChangedListener = OnAppFunctionAccessChangedListener { refresh() }
     private val packageChangeListener = PackageChangeListener(::refresh)
 
     // Backing property to avoid state updates from other classes
@@ -61,11 +64,16 @@ class TargetAccessViewModel(
     val uiStateFlow: StateFlow<Stateful<TargetAccessUiState>> = _uiStateFlow
 
     init {
+        appFunctionRepository.addAccessChangedListener(
+            ContextCompat.getMainExecutor(application.applicationContext),
+            accessChangedListener,
+        )
         packageChangeListener.register()
         refresh()
     }
 
     override fun onCleared() {
+        appFunctionRepository.removeAccessChangedListener(accessChangedListener)
         packageChangeListener.unregister()
     }
 
@@ -107,7 +115,6 @@ class TargetAccessViewModel(
     fun updateAccessState(agentPackageName: String, granted: Boolean) {
         coroutineScope.launch(dispatcher) {
             updateAccessUseCase(agentPackageName, targetPackageName, granted)
-            refresh()
         }
     }
 }

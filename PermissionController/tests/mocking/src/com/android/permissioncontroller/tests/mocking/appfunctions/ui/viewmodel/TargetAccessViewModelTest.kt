@@ -36,6 +36,7 @@ import com.android.permissioncontroller.tests.mocking.appfunctions.data.reposito
 import com.android.permissioncontroller.tests.mocking.coroutines.collectLastValue
 import com.android.permissioncontroller.tests.mocking.pm.data.repository.FakePackageRepository
 import com.google.common.truth.Truth.assertThat
+import java.util.concurrent.Executor
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.TestScope
 import kotlinx.coroutines.test.runTest
@@ -46,6 +47,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.ArgumentMatchers.any
 import org.mockito.Mock
+import org.mockito.Mockito
 import org.mockito.Mockito.`when` as whenever
 import org.mockito.MockitoAnnotations
 import org.mockito.MockitoSession
@@ -76,6 +78,7 @@ class TargetAccessViewModelTest {
                 .startMocking()
         ExtendedMockito.doReturn(application).`when` { PermissionControllerApplication.get() }
         whenever(application.applicationContext).thenReturn(application)
+        whenever(application.mainExecutor).thenReturn(Mockito.mock(Executor::class.java))
         whenever(application.registerReceiverForAllUsers(any(), any(), any(), any()))
             .thenReturn(null)
 

@@ -117,15 +117,15 @@ class AgentAccessTest : BaseUsePermissionTest() {
 
     @Test
     fun clickTargetApp_whenAccessDenied_grantAccess() {
-        testChangeAccess(ACCESS_FLAG_USER_DENIED, ACCESS_REQUEST_STATE_GRANTED)
+        testChangeAccessOnClick(ACCESS_FLAG_USER_DENIED, ACCESS_REQUEST_STATE_GRANTED)
     }
 
     @Test
     fun clickTargetApp_whenAccessGranted_revokeAccess() {
-        testChangeAccess(ACCESS_FLAG_USER_GRANTED, ACCESS_REQUEST_STATE_DENIED)
+        testChangeAccessOnClick(ACCESS_FLAG_USER_GRANTED, ACCESS_REQUEST_STATE_DENIED)
     }
 
-    private fun testChangeAccess(initialAccessFlags: Int, expectedAccessRequestState: Int) {
+    private fun testChangeAccessOnClick(initialAccessFlags: Int, expectedAccessRequestState: Int) {
         // Set granted/denied via API
         setAppFunctionFlags(initialAccessFlags, AGENT_APP_PACKAGE_NAME, TARGET_APP_PACKAGE_NAME)
 
@@ -146,6 +146,38 @@ class AgentAccessTest : BaseUsePermissionTest() {
 
             assertThat(getAccessRequestState(AGENT_APP_PACKAGE_NAME, TARGET_APP_PACKAGE_NAME))
                 .isEqualTo(expectedAccessRequestState)
+        } finally {
+            pressBack()
+        }
+    }
+
+    @Test
+    fun onAccessChanged_deniedToGranted() {
+        testChangeAccess(ACCESS_FLAG_USER_DENIED, ACCESS_FLAG_USER_GRANTED)
+    }
+
+    @Test
+    fun onAccessChanged_grantedToDenied() {
+        testChangeAccess(ACCESS_FLAG_USER_GRANTED, ACCESS_FLAG_USER_DENIED)
+    }
+
+    private fun testChangeAccess(initialAccessFlags: Int, accessFlags: Int) {
+        // Set granted/denied via API
+        setAppFunctionFlags(initialAccessFlags, AGENT_APP_PACKAGE_NAME, TARGET_APP_PACKAGE_NAME)
+
+        startAppFunctionAgentAccessActivity()
+
+        // Trigger granted/denied via API
+        try {
+            setAppFunctionFlags(accessFlags, AGENT_APP_PACKAGE_NAME, TARGET_APP_PACKAGE_NAME)
+
+            waitFindObject(
+                By.clickable(true)
+                    .hasDescendant(
+                        By.checkable(true).checked(accessFlags == ACCESS_FLAG_USER_GRANTED)
+                    )
+                    .hasDescendant(By.text(TARGET_APP_LABEL))
+            )
         } finally {
             pressBack()
         }
