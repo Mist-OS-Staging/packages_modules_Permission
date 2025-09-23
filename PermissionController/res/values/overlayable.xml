@@ -577,6 +577,8 @@
 
             <!-- START EXPRESSIVE DESIGN CONFIGS -->
             <item type="bool" name="config_enableExpressiveDesignInPermissionSettings"/>
+            <!-- config for opting out of the 2dp spacing between preferences -->
+            <item type="bool" name="config_usePreferenceSpacingInPermissionSettings"/>
             <!-- config for opting out of expressive permission dialogs -->
             <item type="bool" name="config_enableExpressiveDesignInRequestPermissionDialog"/>
             <!-- config for opting out of expressive enhanced confirmation dialogs -->
