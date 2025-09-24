@@ -302,10 +302,21 @@ public final class RoleManager {
      *
      * @hide
      */
+    @SuppressWarnings("FlaggedApiLiteral")
     @FlaggedApi("android.content.pm.sdk_dependency_installer")
     @SystemApi
     public static final String ROLE_SYSTEM_DEPENDENCY_INSTALLER =
             "android.app.role.SYSTEM_DEPENDENCY_INSTALLER";
+
+    /**
+     * The name of the role for the active watch face on Wear devices.
+     * This role is managed from a Wear system component for the lifecycle of the active watch face.
+     *
+     * @hide
+     */
+    @FlaggedApi(android.permission.flags.Flags.FLAG_ACTIVE_WATCH_FACE_ROLE_ENABLED)
+    @SystemApi
+    public static final String ROLE_WATCH_FACE = "android.app.role.WATCH_FACE";
 
     @NonNull
     private final Context mContext;

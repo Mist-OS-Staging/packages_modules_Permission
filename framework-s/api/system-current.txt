@@ -69,6 +69,7 @@ package android.app.role {
     field @FlaggedApi("com.android.permission.flags.system_financed_device_controller") public static final String ROLE_SYSTEM_FINANCED_DEVICE_CONTROLLER = "android.app.role.SYSTEM_FINANCED_DEVICE_CONTROLLER";
     field public static final String ROLE_SYSTEM_SUPERVISION = "android.app.role.SYSTEM_SUPERVISION";
     field public static final String ROLE_SYSTEM_WELLBEING = "android.app.role.SYSTEM_WELLBEING";
+    field @FlaggedApi("android.permission.flags.active_watch_face_role_enabled") public static final String ROLE_WATCH_FACE = "android.app.role.WATCH_FACE";
   }
 
 }
