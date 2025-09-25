@@ -22,11 +22,13 @@ import android.content.pm.PackageManager
 import android.graphics.Point
 import android.os.Build
 import android.os.SystemClock
+import android.platform.test.annotations.AsbSecurityTest
 import android.view.MotionEvent
 import androidx.test.filters.FlakyTest
 import androidx.test.filters.SdkSuppress
 import androidx.test.uiautomator.By
 import com.android.compatibility.common.util.SystemUtil
+import java.util.concurrent.TimeoutException
 import org.junit.Assume.assumeFalse
 import org.junit.Before
 import org.junit.Test
@@ -115,6 +117,27 @@ class PermissionTapjackingTest : BaseUsePermissionTest() {
                 .visibleCenter
 
         tryClicking(foregroundButtonCenter)
+    }
+
+    @Test
+    @AsbSecurityTest(cveBugId = [433958378L])
+    fun testCantTapjackWithNewTaskPermissionDialogs() {
+        installPackage(APP_APK_PATH_LATEST)
+        assertAppHasPermission(ACCESS_FINE_LOCATION, false)
+        // Starting in a new task should result in an automatically closed dialog
+        try {
+            requestAppPermissionsAndAssertResult(
+                arrayOf(ACCESS_FINE_LOCATION),
+                emptyArray(),
+                waitForWindowTransition = false,
+                inNewTask = true,
+            ) {}
+        } catch (_: TimeoutException) {
+            // Rethrow the exception with a more informative message
+            throw AssertionError(
+                "Permission dialogs opened in a new task should automatically close"
+            )
+        }
     }
 
     private fun tryClicking(buttonCenter: Point) {

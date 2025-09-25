@@ -682,13 +682,15 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
         vararg permissions: String?,
         askTwice: Boolean = false,
         waitForWindowTransition: Boolean = !isWatch,
+        inNewTask: Boolean = false,
         crossinline block: () -> Unit,
     ): Instrumentation.ActivityResult {
         // Request the permissions
         lateinit var future: CompletableFuture<Instrumentation.ActivityResult>
         // The WindowManagerStateHelper#waitForValidState only supports S+
         if (SdkLevel.isAtLeastS()) {
-            future = startActivityForFuture(*permissions, askTwice = askTwice)
+            future =
+                startActivityForFuture(*permissions, askTwice = askTwice, inNewTask = inNewTask)
             waitForPermissionRequestActivity()
         } else {
             doAndWaitForWindowTransition {
@@ -717,12 +719,14 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
     fun startActivityForFuture(
         vararg permissions: String?,
         askTwice: Boolean,
+        inNewTask: Boolean = false,
     ): CompletableFuture<Instrumentation.ActivityResult> =
         startActivityForFuture(
             Intent().apply {
                 component =
                     ComponentName(APP_PACKAGE_NAME, "$APP_PACKAGE_NAME.RequestPermissionsActivity")
                 putExtra("$APP_PACKAGE_NAME.PERMISSIONS", permissions)
+                putExtra("$APP_PACKAGE_NAME.IS_NEW_TASK", inNewTask)
                 putExtra("$APP_PACKAGE_NAME.ASK_TWICE", askTwice)
             }
         )
@@ -750,6 +754,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
         permissions: Array<out String?>,
         permissionAndExpectedGrantResults: Array<out Pair<String?, Boolean>>,
         askTwice: Boolean = false,
+        inNewTask: Boolean = false,
         waitForWindowTransition: Boolean = !isWatch,
         crossinline block: () -> Unit,
     ) {
@@ -772,6 +777,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
             requestAppPermissions(
                 *permissions,
                 askTwice = askTwice,
+                inNewTask = inNewTask,
                 waitForWindowTransition = shouldWaitForWindowTransition,
                 block = block,
             )
@@ -816,6 +822,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
     protected inline fun requestAppPermissionsAndAssertResult(
         vararg permissionAndExpectedGrantResults: Pair<String?, Boolean>,
         askTwice: Boolean = false,
+        inNewTask: Boolean = false,
         waitForWindowTransition: Boolean = !isWatch,
         crossinline block: () -> Unit,
     ) {
@@ -823,6 +830,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
             permissionAndExpectedGrantResults.map { it.first }.toTypedArray(),
             permissionAndExpectedGrantResults,
             askTwice,
+            inNewTask,
             waitForWindowTransition,
             block,
         )
