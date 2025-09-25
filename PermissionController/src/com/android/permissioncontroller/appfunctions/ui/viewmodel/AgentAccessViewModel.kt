@@ -16,9 +16,11 @@
 package com.android.permissioncontroller.appfunctions.ui.viewmodel
 
 import android.app.Application
+import android.app.appfunctions.AppFunctionManager.OnAppFunctionAccessChangedListener
 import android.graphics.drawable.Drawable
 import android.icu.text.Collator
 import android.os.Process
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -58,6 +60,7 @@ class AgentAccessViewModel(
     private val targetListComparator: Comparator<TargetItem> =
         compareBy(collator) { it.packageInfo.label }
 
+    private val accessChangedListener = OnAppFunctionAccessChangedListener { refresh() }
     private val packageChangeListener = PackageChangeListener(::refresh)
 
     // Backing property to avoid state updates from other classes
@@ -65,11 +68,16 @@ class AgentAccessViewModel(
     val uiStateFlow: StateFlow<Stateful<AgentAccessUiState>> = _uiStateFlow
 
     init {
+        appFunctionRepository.addAccessChangedListener(
+            ContextCompat.getMainExecutor(application.applicationContext),
+            accessChangedListener,
+        )
         packageChangeListener.register()
         refresh()
     }
 
     override fun onCleared() {
+        appFunctionRepository.removeAccessChangedListener(accessChangedListener)
         packageChangeListener.unregister()
     }
 
@@ -115,14 +123,12 @@ class AgentAccessViewModel(
     fun updateDeviceSettingsAccessState(granted: Boolean) {
         coroutineScope.launch(dispatcher) {
             updateAccessUseCase(agentPackageName, DEVICE_SETTINGS_TARGET_PACKAGE_NAME, granted)
-            refresh()
         }
     }
 
     fun updateAccessState(targetPackageName: String, granted: Boolean) {
         coroutineScope.launch(dispatcher) {
             updateAccessUseCase(agentPackageName, targetPackageName, granted)
-            refresh()
         }
     }
 }
