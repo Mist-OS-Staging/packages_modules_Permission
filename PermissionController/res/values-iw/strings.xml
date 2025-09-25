@@ -200,7 +200,7 @@
     <string name="app_permission_title" msgid="2090897901051370711">"הרשאה: <xliff:g id="PERM">%1$s</xliff:g>"</string>
     <string name="app_permission_header" msgid="2951363137032603806">"לאפליקציה תהיה גישה ל<xliff:g id="PERM">%1$s</xliff:g>"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"גישה ל<xliff:g id="PERM">%1$s</xliff:g> לאפליקציה הזו ב<xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
-    <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"הצגת כל ההרשאות של <xliff:g id="APP">%1$s</xliff:g>"</string>
+    <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"כל ההרשאות של \"<xliff:g id="APP">%1$s</xliff:g>\""</string>
     <string name="app_permission_footer_permission_apps_link" msgid="3941988129992794327">"אני רוצה לראות את כל האפליקציות עם ההרשאה הזו"</string>
     <string name="app_permission_info_button" msgid="8973692370208562556">"מידע"</string>
     <string name="app_permission_settings_button" msgid="4582916817451973752">"הגדרות"</string>

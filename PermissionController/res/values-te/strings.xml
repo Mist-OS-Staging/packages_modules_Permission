@@ -245,7 +245,7 @@
     <string name="permission_description_summary_phone" msgid="4515277217435233619">"ఈ అనుమతులు ఉన్న యాప్‌లు ఫోన్ కాల్స్‌ చేయగలవు, మేనేజ్ చేయగలవు"</string>
     <string name="permission_description_summary_sensors" msgid="1836045815643119949">"ఈ అనుమతి ఉన్న యాప్‌లు మీ ఆరోగ్య స్థితిని తెలియజేసే గణాంకాల సెన్సార్ డేటాను యాక్సెస్ చేయగలవు"</string>
     <string name="permission_description_summary_sms" msgid="725999468547768517">"ఈ అనుమతి ఉన్న యాప్‌లు SMSలను పంపగలవు, అందుకోగలవు"</string>
-    <string name="permission_description_summary_storage" msgid="6575759089065303346">"మీ అనుమతితో, యాప్‌లు మీ పరికరంలోని ఫోటోలు, మీడియా అలాగే ఫైళ్లను యాక్సెస్ చేయగలవు"</string>
+    <string name="permission_description_summary_storage" msgid="6575759089065303346">"ఈ అనుమతితో, యాప్‌లు మీ డివైజ్‌లోని ఫోటోలను, మీడియాను, ఫైళ్లను యాక్సెస్ చేయగలవు"</string>
     <string name="permission_description_summary_read_media_aural" msgid="3354728149930482199">"ఈ అనుమతి ఉన్న యాప్‌లు ఈ పరికరంలో మ్యూజిక్, ఇతర ఆడియో ఫైళ్లను యాక్సెస్ చేయగలవు"</string>
     <string name="permission_description_summary_read_media_visual" msgid="4991801977881732641">"ఈ అనుమతి ఉన్న యాప్‌లు ఈ పరికరంలో ఫోటోలు, వీడియోలను యాక్సెస్ చేయగలవు"</string>
     <string name="app_permission_most_recent_summary" msgid="4292074449384040590">"చివరిసారి యాక్సెస్ చేసింది: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
@@ -495,7 +495,7 @@
     <string name="permgrouprequest_device_aware_calendar" msgid="7161929851377463612">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;‌లో మీ క్యాలెండర్‌ను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; యాప్‌ను అనుమతించాలనుకుంటున్నారా?"</string>
     <string name="permgrouprequest_sms" msgid="5672063688745420991">"SMS మెసేజ్‌లు పంపడం, చూడటం చేయగలిగేలా &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ను అనుమతించాలా?"</string>
     <string name="permgrouprequest_device_aware_sms" msgid="6639977653040502291">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;‌లో SMS మెసేజ్‌లను పంపడానికి, వాటిని చూడటానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌ను అనుమతించాలా?"</string>
-    <string name="permgrouprequest_storage" msgid="8717773092518621602">"మీ పరికరంలోని ఫోటోలు, మీడియా, ఫైళ్లను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌ను అనుమతించాలా?"</string>
+    <string name="permgrouprequest_storage" msgid="8717773092518621602">"మీ డివైజ్‌లోని ఫోటోలను, మీడియాను, ఫైళ్లను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ను అనుమతించాలా?"</string>
     <string name="permgrouprequest_device_aware_storage" msgid="6933251810928606636">"lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;‌లో ఫోటోలను, మీడియాను, ఫైల్స్‌ను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌ను అనుమతించాలా?"</string>
     <string name="permgrouprequest_storage_q_to_s" msgid="8213701872983685505">"ఈ పరికరంలో &lt;b&gt;ఫోటోలు, వీడియోలు, మ్యూజిక్, ఆడియో&lt;/b&gt;ను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ను అనుమతించాలా?"</string>
     <string name="permgrouprequest_storage_pre_q" msgid="168130651144569428">"ఈపరికరంలో &lt;b&gt;ఫోటోలు, వీడియోలు, మ్యూజిక్, ఆడియో, ఇతర ఫైళ్ల&lt;/b&gt; యాక్సెస్‌కు &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ను అనుమతించాలా?"</string>
@@ -503,7 +503,7 @@
     <string name="permgrouprequest_device_aware_read_media_aural" msgid="7927884506238101064">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;‌లో మ్యూజిక్‌ను, ఆడియోను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌కు అనుమతినివ్వాలా?"</string>
     <string name="permgrouprequest_read_media_visual" msgid="5548780620779729975">"ఈ డివైజ్‌లోని ఫోటోలను, వీడియోలను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌ను అనుమతించాలా?"</string>
     <string name="permgrouprequest_device_aware_read_media_visual" msgid="3122576538319059333">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;‌లో ఫోటోలను, వీడియోలను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌కు అనుమతినివ్వాలా?"</string>
-    <string name="permgrouprequest_more_photos" msgid="128933814654231321">"ఈ పరికరంలోని మరిన్ని ఫోటోలను, వీడియోలను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; యాప్‌ను అనుమతించాలా?"</string>
+    <string name="permgrouprequest_more_photos" msgid="128933814654231321">"ఈ డివైజ్‌లోని మరిన్ని ఫోటోలను, వీడియోలను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; యాప్‌ను అనుమతించాలా?"</string>
     <string name="permgrouprequest_device_aware_more_photos" msgid="1703469013613723053">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;‌లో మరిన్ని ఫోటోలను, వీడియోలను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; యాప్‌ను అనుమతించాలా?"</string>
     <string name="permgrouprequest_microphone" msgid="2825208549114811299">"ఆడియోను రికార్డ్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ను అనుమతించాలా?"</string>
     <string name="permgrouprequest_device_aware_microphone" msgid="8821701550505437951">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;‌లో ఆడియోను రికార్డ్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; యాప్‌ను అనుమతించాలనుకుంటున్నారా?"</string>
