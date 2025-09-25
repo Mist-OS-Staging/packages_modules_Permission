@@ -197,7 +197,7 @@
     <string name="approximate_image_description" msgid="938803699637069884">"தோராயமான இருப்பிடம்"</string>
     <string name="app_permission_location_accuracy" msgid="7166912915040018669">"துல்லியமான இருப்பிடத்தைப் பயன்படுத்து"</string>
     <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"துல்லியமான இருப்பிடம் ஆஃப் செய்யப்பட்டிருக்கும்போது உங்கள் தோராயமான இருப்பிடத்தை ஆப்ஸ் அணுகலாம்"</string>
-    <string name="app_permission_title" msgid="2090897901051370711">"<xliff:g id="PERM">%1$s</xliff:g> என்பதற்கான அனுமதி"</string>
+    <string name="app_permission_title" msgid="2090897901051370711">"<xliff:g id="PERM">%1$s</xliff:g> அனுமதி"</string>
     <string name="app_permission_header" msgid="2951363137032603806">"இந்த ஆப்ஸிற்கு <xliff:g id="PERM">%1$s</xliff:g> அணுகல்"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g> சாதனத்தில் இந்த ஆப்ஸுக்கான <xliff:g id="PERM">%1$s</xliff:g> அணுகல்"</string>
     <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"அனைத்து <xliff:g id="APP">%1$s</xliff:g> அனுமதிகளையும் காட்டு"</string>
