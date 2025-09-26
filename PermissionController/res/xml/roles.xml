@@ -1573,6 +1573,8 @@
             <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND" />
             <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND" />
             <permission name="android.permission.SYSTEM_APPLICATION_OVERLAY" />
+            <permission name="android.permission.SET_CONTENT_PROTECTION_ALLOWLIST"
+                featureFlag="android.view.contentprotection.flags.Flags.setContentProtectionAllowlistEnabled" />
         </permissions>
         <app-op-permissions>
             <app-op-permission name="android.permission.SYSTEM_ALERT_WINDOW" />
