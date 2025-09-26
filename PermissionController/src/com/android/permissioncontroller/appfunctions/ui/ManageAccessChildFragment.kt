@@ -16,6 +16,7 @@
 package com.android.permissioncontroller.appfunctions.ui
 
 import android.os.Bundle
+import android.os.Process
 import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle.State
@@ -26,12 +27,16 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceFragmentCompat
 import com.android.permissioncontroller.R
-import com.android.permissioncontroller.appfunctions.data.repository.AppFunctionRepository
-import com.android.permissioncontroller.appfunctions.ui.viewmodel.ManageAccessUiState
+import com.android.permissioncontroller.appfunctions.domain.model.AppFunctionPackageInfo
+import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCase
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.ManageAccessViewModel
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.ManageAccessViewModelFactory
 import com.android.permissioncontroller.common.model.Stateful
+import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
 import com.android.settingslib.widget.SelectorWithWidgetPreference
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
 /**
@@ -54,6 +59,7 @@ class ManageAccessChildFragment<PF> : Fragment()
     private lateinit var denyRadioPreference: SelectorWithWidgetPreference
 
     private lateinit var viewModel: ManageAccessViewModel
+    private lateinit var getAppFunctionPackageInfoUseCase: GetAppFunctionPackageInfoUseCase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,6 +75,8 @@ class ManageAccessChildFragment<PF> : Fragment()
                 targetPackageName,
             )
         viewModel = ViewModelProvider(this, factory).get(ManageAccessViewModel::class.java)
+        val packageRepository = PackageRepository.createInstance(requireContext())
+        getAppFunctionPackageInfoUseCase = GetAppFunctionPackageInfoUseCase(packageRepository)
 
         val preferenceFragment = requirePreferenceFragment()
         preferenceFragment.lifecycleScope.launch {
@@ -93,12 +101,41 @@ class ManageAccessChildFragment<PF> : Fragment()
         }
         preferenceFragment.lifecycleScope.launch {
             preferenceFragment.lifecycle.repeatOnLifecycle(State.STARTED) {
-                viewModel.uiStateFlow.collect(::onUiStateChanged)
+                viewModel.uiStateFlow
+                    .map { uiState ->
+                        when (uiState) {
+                            is Stateful.Failure -> Stateful.Failure(throwable = uiState.throwable)
+                            is Stateful.Loading -> Stateful.Loading()
+                            is Stateful.Success -> {
+                                val agentPackageInfo =
+                                    getAppFunctionPackageInfoUseCase(
+                                        uiState.value.agentPackageName,
+                                        requireActivity(),
+                                        Process.myUserHandle(),
+                                    )
+                                val targetPackageInfo =
+                                    getAppFunctionPackageInfoUseCase(
+                                        uiState.value.targetPackageName,
+                                        requireActivity(),
+                                        Process.myUserHandle(),
+                                    )
+                                Stateful.Success(
+                                    ManageAccessRichUiState(
+                                        agentPackageInfo,
+                                        targetPackageInfo,
+                                        uiState.value.accessGranted,
+                                    )
+                                )
+                            }
+                        }
+                    }
+                    .flowOn(Dispatchers.Default)
+                    .collect(::onUiStateChanged)
             }
         }
     }
 
-    private fun onUiStateChanged(uiState: Stateful<ManageAccessUiState>) {
+    private fun onUiStateChanged(uiState: Stateful<ManageAccessRichUiState>) {
         when (uiState) {
             // Do nothing
             is Stateful.Loading -> {}
@@ -107,16 +144,8 @@ class ManageAccessChildFragment<PF> : Fragment()
             is Stateful.Success -> {
                 val preferenceFragment = requirePreferenceFragment()
 
-                val agentLabel = uiState.value.agentLabel
-                val targetLabel =
-                    if (
-                        targetPackageName ==
-                            AppFunctionRepository.DEVICE_SETTINGS_TARGET_PACKAGE_NAME
-                    ) {
-                        getString(R.string.app_function_device_settings_target_title)
-                    } else {
-                        uiState.value.targetLabel
-                    }
+                val agentLabel = uiState.value.agentPackageInfo.label
+                val targetLabel = uiState.value.targetPackageInfo.label
 
                 val title = getString(R.string.app_function_manage_access_title, targetLabel)
                 preferenceFragment.setTitle(title)
@@ -130,15 +159,7 @@ class ManageAccessChildFragment<PF> : Fragment()
 
                 introPreference.apply {
                     setTitle(targetLabel)
-                    if (
-                        targetPackageName ==
-                            AppFunctionRepository.DEVICE_SETTINGS_TARGET_PACKAGE_NAME &&
-                            uiState.value.targetIcon == null
-                    ) {
-                        setIcon(R.drawable.ic_appfunction_target_device_settings)
-                    } else {
-                        icon = uiState.value.targetIcon
-                    }
+                    icon = uiState.value.targetPackageInfo.icon
                 }
                 radioButtonCategory.apply { setTitle(groupTitle) }
 
@@ -155,6 +176,13 @@ class ManageAccessChildFragment<PF> : Fragment()
 
     @Suppress("UNCHECKED_CAST")
     private fun requirePreferenceFragment(): PF = requireParentFragment() as PF
+
+    /** The data class for UI state of ManageAccess screen that includes drawables and labels. */
+    data class ManageAccessRichUiState(
+        val agentPackageInfo: AppFunctionPackageInfo,
+        val targetPackageInfo: AppFunctionPackageInfo,
+        val accessGranted: Boolean,
+    )
 
     /** Interface that the parent fragment must implement. */
     interface Parent {

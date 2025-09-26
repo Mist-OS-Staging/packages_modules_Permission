@@ -22,19 +22,14 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
 import com.android.dx.mockito.inline.extended.ExtendedMockito
 import com.android.permissioncontroller.PermissionControllerApplication
-import com.android.permissioncontroller.R
 import com.android.permissioncontroller.appfunctions.data.repository.AppFunctionRepository
 import com.android.permissioncontroller.appfunctions.domain.usecase.GetAccessRequestStateUseCase
-import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCase
-import com.android.permissioncontroller.appfunctions.domain.usecase.GetDeviceSettingsTargetIconUseCase
 import com.android.permissioncontroller.appfunctions.domain.usecase.UpdateAccessUseCase
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.ManageAccessUiState
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.ManageAccessViewModel
 import com.android.permissioncontroller.common.model.Stateful
-import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
 import com.android.permissioncontroller.tests.mocking.appfunctions.data.repository.FakeAppFunctionRepository
 import com.android.permissioncontroller.tests.mocking.coroutines.collectLastValue
-import com.android.permissioncontroller.tests.mocking.pm.data.repository.FakePackageRepository
 import com.google.common.truth.Truth.assertThat
 import java.util.concurrent.Executor
 import kotlinx.coroutines.test.StandardTestDispatcher
@@ -64,7 +59,6 @@ class ManageAccessViewModelTest {
     @Mock private lateinit var application: PermissionControllerApplication
 
     private lateinit var appFunctionRepository: AppFunctionRepository
-    private lateinit var packageRepository: PackageRepository
 
     private var mockitoSession: MockitoSession? = null
 
@@ -82,8 +76,6 @@ class ManageAccessViewModelTest {
         whenever(application.mainExecutor).thenReturn(Mockito.mock(Executor::class.java))
         whenever(application.registerReceiverForAllUsers(any(), any(), any(), any()))
             .thenReturn(null)
-        whenever(application.getString(R.string.app_function_device_settings_target_title))
-            .thenReturn(TEST_DEVICE_SETTINGS_LABEL)
 
         appFunctionRepository =
             FakeAppFunctionRepository(
@@ -91,7 +83,6 @@ class ManageAccessViewModelTest {
                 targets = systemTargetPackageNames + targetPackageNames,
                 accessFlags = accessFlags,
             )
-        packageRepository = FakePackageRepository(packagesAndLabels = packagesToLabelMap)
     }
 
     @After
@@ -107,9 +98,9 @@ class ManageAccessViewModelTest {
         assertTrue(uiState is Stateful.Success)
 
         // Correct Agent label returned
-        assertThat(uiState.value!!.agentLabel).isEqualTo(TEST_AGENT_LABEL)
+        assertThat(uiState.value!!.agentPackageName).isEqualTo(TEST_AGENT_PACKAGE_NAME)
         // Correct Target label returned
-        assertThat(uiState.value!!.targetLabel).isEqualTo(TEST_TARGET_LABEL)
+        assertThat(uiState.value!!.targetPackageName).isEqualTo(TEST_TARGET_PACKAGE_NAME)
         // Correct expected access state
         assertThat(uiState.value!!.accessGranted).isTrue()
     }
@@ -122,9 +113,9 @@ class ManageAccessViewModelTest {
         assertTrue(uiState is Stateful.Success)
 
         // Correct Agent label returned
-        assertThat(uiState.value!!.agentLabel).isEqualTo(TEST_AGENT_LABEL)
+        assertThat(uiState.value!!.agentPackageName).isEqualTo(TEST_AGENT_PACKAGE_NAME)
         // Correct Target label returned, for device settings it should be the package name.
-        assertThat(uiState.value!!.targetLabel).isEqualTo(DEVICE_SETTINGS_TARGET_PACKAGE_NAME)
+        assertThat(uiState.value!!.targetPackageName).isEqualTo(DEVICE_SETTINGS_TARGET_PACKAGE_NAME)
         // Correct expected access state
         assertThat(uiState.value!!.accessGranted).isFalse()
     }
@@ -149,8 +140,6 @@ class ManageAccessViewModelTest {
             agentPackageName,
             targetPackageName,
             appFunctionRepository,
-            GetAppFunctionPackageInfoUseCase(packageRepository),
-            GetDeviceSettingsTargetIconUseCase(packageRepository),
             GetAccessRequestStateUseCase(appFunctionRepository),
             UpdateAccessUseCase(appFunctionRepository),
             backgroundScope,
@@ -169,18 +158,10 @@ class ManageAccessViewModelTest {
         private const val TEST_AGENT_PACKAGE_NAME = "test.agent.package"
         private const val TEST_TARGET_PACKAGE_NAME = "test.target.package"
         private const val DEVICE_SETTINGS_TARGET_PACKAGE_NAME = "android"
-        private const val TEST_AGENT_LABEL = "Test Agent"
-        private const val TEST_TARGET_LABEL = "Test Target"
-        private const val TEST_DEVICE_SETTINGS_LABEL = "Device Settings"
 
         private val agentPackageNames = listOf(TEST_AGENT_PACKAGE_NAME)
         private val systemTargetPackageNames = listOf(DEVICE_SETTINGS_TARGET_PACKAGE_NAME)
         private val targetPackageNames = listOf(TEST_TARGET_PACKAGE_NAME)
-        private val packagesToLabelMap =
-            mapOf(
-                TEST_AGENT_PACKAGE_NAME to TEST_AGENT_LABEL,
-                TEST_TARGET_PACKAGE_NAME to TEST_TARGET_LABEL,
-            )
         private val accessFlags =
             mapOf(
                 (TEST_AGENT_PACKAGE_NAME to DEVICE_SETTINGS_TARGET_PACKAGE_NAME) to
