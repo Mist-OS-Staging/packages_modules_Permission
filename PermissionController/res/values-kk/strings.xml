@@ -566,7 +566,7 @@
     <string name="automotive_blocked_camera_title" msgid="6142362431548829416">"Камераны пайдалану рұқсаты өшірулі"</string>
     <string name="automotive_blocked_microphone_title" msgid="3956311098238620220">"Микрофон рұқсаты өшірулі"</string>
     <string name="automotive_blocked_location_title" msgid="6047574747593264689">"Локация рұқсаты өшірулі"</string>
-    <string name="automotive_blocked_infotainment_app_summary" msgid="8217099645064950860">"Ақпараттық-сауықтық қолданбалар"</string>
+    <string name="automotive_blocked_infotainment_app_summary" msgid="8217099645064950860">"Ақпарат және ойын-сауық қолданбалары"</string>
     <string name="automotive_blocked_required_app_summary" msgid="8591513745681168088">"Қажетті қолданбалар үшін"</string>
     <string name="automotive_required_app_title" msgid="2992168288249988735">"Осы қолданба қажет"</string>
     <string name="automotive_required_app_summary" msgid="6514902316658090465">"Осы қолданба көлік өндірушісі үшін қажет."</string>
