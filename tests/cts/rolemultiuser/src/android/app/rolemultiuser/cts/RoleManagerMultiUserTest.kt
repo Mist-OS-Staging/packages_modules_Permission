@@ -43,7 +43,6 @@ import com.android.bedstead.harrier.BedsteadJUnit4
 import com.android.bedstead.harrier.DeviceState
 import com.android.bedstead.harrier.UserType.INITIAL_USER
 import com.android.bedstead.harrier.UserType.WORK_PROFILE
-import com.android.bedstead.multiuser.annotations.EnsureCanAddUser
 import com.android.bedstead.multiuser.annotations.EnsureHasAdditionalUser
 import com.android.bedstead.multiuser.annotations.EnsureHasPrivateProfile
 import com.android.bedstead.multiuser.annotations.EnsureHasSecondaryUser
@@ -662,7 +661,7 @@ class RoleManagerMultiUserTest {
 
     @RequireFlagsEnabled(com.android.permission.flags.Flags.FLAG_CROSS_USER_ROLE_ENABLED)
     @EnsureHasPermission(INTERACT_ACROSS_USERS_FULL, MANAGE_ROLE_HOLDERS)
-    @EnsureCanAddUser
+    // TODO(b/442891661) Check that Managed Profile is supported?
     @EnsureHasNoWorkProfile
     @RequireRunOnPrimaryUser
     @EnsureDoesNotHaveUserRestriction(DISALLOW_ADD_MANAGED_PROFILE)
