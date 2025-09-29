@@ -714,6 +714,16 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"應用程式"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"代理存取權"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"代理可以存取資訊，並在這個應用程式中代表你執行操作"</string>
+    <!-- no translation found for app_function_manage_access_default_title (2992299728169265212) -->
+    <skip />
+    <!-- no translation found for app_function_manage_access_title (5805361194157907463) -->
+    <skip />
+    <!-- no translation found for app_function_manage_access_radiobutton_group_title (995463553024931659) -->
+    <skip />
+    <!-- no translation found for manage_app_function_access_allow (957884395966109578) -->
+    <skip />
+    <!-- no translation found for manage_app_function_access_dont_allow (4282220224010484177) -->
+    <skip />
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"裝置設定"</string>
     <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"要將「<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>」設為「<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>」的代理嗎？"</string>
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"這個代理將可存取「<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>」取得資訊，並代表你執行操作"</string>
