@@ -17,6 +17,7 @@
 package com.android.permissioncontroller.pm.data.repository.v31
 
 import android.app.Application
+import android.content.Context
 import android.content.pm.PackageManager
 import android.content.res.Resources
 import android.graphics.drawable.Drawable
@@ -77,18 +78,20 @@ interface PackageRepository {
 
         fun getInstance(app: Application): PackageRepository =
             instance ?: synchronized(this) { PackageRepositoryImpl(app).also { instance = it } }
+
+        fun createInstance(context: Context): PackageRepository = PackageRepositoryImpl(context)
     }
 }
 
 class PackageRepositoryImpl(
-    private val app: Application,
+    private val context: Context,
     private val dispatcher: CoroutineDispatcher = Dispatchers.Default,
 ) : PackageRepository {
     override fun getPackageLabel(packageName: String, user: UserHandle): String {
         return try {
-            val userContext = Utils.getUserContext(app, user)
+            val userContext = Utils.getUserContext(context, user)
             val appInfo = userContext.packageManager.getApplicationInfo(packageName, 0)
-            Utils.getFullAppLabel(appInfo, app)
+            Utils.getFullAppLabel(appInfo, context)
         } catch (e: PackageManager.NameNotFoundException) {
             packageName
         }
@@ -96,9 +99,9 @@ class PackageRepositoryImpl(
 
     override fun getBadgedPackageIcon(packageName: String, user: UserHandle): Drawable? {
         return try {
-            val userContext = Utils.getUserContext(app, user)
+            val userContext = Utils.getUserContext(context, user)
             val appInfo = userContext.packageManager.getApplicationInfo(packageName, 0)
-            Utils.getBadgedIcon(app, appInfo)
+            Utils.getBadgedIcon(context, appInfo)
         } catch (e: PackageManager.NameNotFoundException) {
             null
         }
@@ -112,7 +115,7 @@ class PackageRepositoryImpl(
         withContext(dispatcher) {
             try {
                 val packageInfo =
-                    Utils.getUserContext(app, user)
+                    Utils.getUserContext(context, user)
                         .packageManager
                         .getPackageInfo(packageName, flags)
                 PackageInfoModel(packageInfo)
@@ -130,13 +133,13 @@ class PackageRepositoryImpl(
         withContext(dispatcher) {
             try {
                 val packageInfo =
-                    Utils.getUserContext(app, user)
+                    Utils.getUserContext(context, user)
                         .packageManager
                         .getPackageInfo(packageName, PackageManager.GET_ATTRIBUTIONS)
                 val attributionUserVisible =
                     packageInfo.applicationInfo?.areAttributionsUserVisible() ?: false
                 if (attributionUserVisible && SdkLevel.isAtLeastS()) {
-                    val pkgContext = app.createPackageContext(packageName, 0)
+                    val pkgContext = context.createPackageContext(packageName, 0)
                     val attributionTagToLabelRes =
                         packageInfo.attributions?.associate { it.tag to it.label }
                     val labelResToLabelStringMap =
@@ -168,7 +171,7 @@ class PackageRepositoryImpl(
 
     override fun getSettingsPackageName(user: UserHandle): String? =
         try {
-            val userContext = Utils.getUserContext(app, user)
+            val userContext = Utils.getUserContext(context, user)
             KotlinUtils.getPackageNameForIntent(
                 userContext.packageManager,
                 Settings.ACTION_SETTINGS,

@@ -15,7 +15,10 @@
  */
 package com.android.permissioncontroller.appfunctions.domain.usecase
 
+import android.content.Context
 import android.os.UserHandle
+import com.android.permissioncontroller.R
+import com.android.permissioncontroller.appfunctions.data.repository.AppFunctionRepository
 import com.android.permissioncontroller.appfunctions.domain.model.AppFunctionPackageInfo
 import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
 
@@ -28,6 +31,30 @@ class GetAppFunctionPackageInfoUseCase(private val packageRepository: PackageRep
     operator fun invoke(packageName: String, user: UserHandle): AppFunctionPackageInfo {
         val label = packageRepository.getPackageLabel(packageName, user)
         val icon = packageRepository.getBadgedPackageIcon(packageName, user)
+        return AppFunctionPackageInfo(packageName, label, icon)
+    }
+
+    operator fun invoke(
+        packageName: String,
+        context: Context,
+        user: UserHandle,
+    ): AppFunctionPackageInfo {
+        val label =
+            if (packageName == AppFunctionRepository.DEVICE_SETTINGS_TARGET_PACKAGE_NAME) {
+                context.getString(R.string.app_function_device_settings_target_title)
+            } else {
+                packageRepository.getPackageLabel(packageName, user)
+            }
+
+        val icon =
+            if (packageName == AppFunctionRepository.DEVICE_SETTINGS_TARGET_PACKAGE_NAME) {
+                val settingsPackageName = packageRepository.getSettingsPackageName(user)
+                settingsPackageName?.let {
+                    packageRepository.getBadgedPackageIcon(settingsPackageName, user)
+                } ?: context.getDrawable(R.drawable.ic_appfunction_target_device_settings)
+            } else {
+                packageRepository.getBadgedPackageIcon(packageName, user)
+            }
         return AppFunctionPackageInfo(packageName, label, icon)
     }
 }
