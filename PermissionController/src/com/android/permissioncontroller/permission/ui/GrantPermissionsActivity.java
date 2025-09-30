@@ -306,6 +306,15 @@ public class GrantPermissionsActivity extends SettingsActivity
             }
         }
 
+        if (!mIsSystemTriggered) {
+            if (isTaskRoot() || (getIntent().getFlags()
+                    & (Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NEW_DOCUMENT)) != 0) {
+                Log.e(LOG_TAG, "Cannot call the permissions dialog in a new task.");
+                finishAfterTransition();
+                return;
+            }
+        }
+
         String[] requestedPermissionsArray =
                 getIntent().getStringArrayExtra(PackageManager.EXTRA_REQUEST_PERMISSIONS_NAMES);
         if (requestedPermissionsArray == null) {
