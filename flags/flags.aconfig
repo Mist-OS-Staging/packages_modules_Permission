@@ -194,7 +194,7 @@ flag {
 
 flag {
     name: "safety_center_notification_style"
-    namespace: "permission"
+    namespace: "permissions"
     description: "This flag enabled big text style for safety center notification"
     bug: "443322314"
     metadata {
