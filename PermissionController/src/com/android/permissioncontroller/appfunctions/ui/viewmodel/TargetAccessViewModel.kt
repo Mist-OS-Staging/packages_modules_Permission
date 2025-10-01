@@ -25,7 +25,6 @@ import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.CreationExtras
 import com.android.permissioncontroller.appfunctions.data.repository.AppFunctionRepository
 import com.android.permissioncontroller.appfunctions.domain.usecase.GetAccessRequestStateUseCase
-import com.android.permissioncontroller.appfunctions.domain.usecase.UpdateAccessUseCase
 import com.android.permissioncontroller.common.model.Stateful
 import com.android.permissioncontroller.data.repository.v31.PackageChangeListener
 import kotlinx.coroutines.CoroutineDispatcher
@@ -40,7 +39,6 @@ class TargetAccessViewModel(
     private val targetPackageName: String,
     private val appFunctionRepository: AppFunctionRepository,
     private val getAccessRequestStateUseCase: GetAccessRequestStateUseCase,
-    private val updateAccessUseCase: UpdateAccessUseCase,
     scope: CoroutineScope? = null,
     val dispatcher: CoroutineDispatcher = Dispatchers.Default,
 ) : AndroidViewModel(application) {
@@ -97,12 +95,6 @@ class TargetAccessViewModel(
             notAllowedAgentPackageNames,
         )
     }
-
-    fun updateAccessState(agentPackageName: String, granted: Boolean) {
-        coroutineScope.launch(dispatcher) {
-            updateAccessUseCase(agentPackageName, targetPackageName, granted)
-        }
-    }
 }
 
 data class TargetAccessUiState(
@@ -120,13 +112,11 @@ class TargetAccessViewModelFactory(
     override fun <T : ViewModel> create(modelClass: Class<T>, extras: CreationExtras): T {
         val appFunctionRepository = AppFunctionRepository.getInstance(application)
         val getAccessRequestStateUseCase = GetAccessRequestStateUseCase(appFunctionRepository)
-        val updateAccessUseCase = UpdateAccessUseCase(appFunctionRepository)
         return TargetAccessViewModel(
             application,
             targetPackageName,
             appFunctionRepository,
             getAccessRequestStateUseCase,
-            updateAccessUseCase,
         )
             as T
     }

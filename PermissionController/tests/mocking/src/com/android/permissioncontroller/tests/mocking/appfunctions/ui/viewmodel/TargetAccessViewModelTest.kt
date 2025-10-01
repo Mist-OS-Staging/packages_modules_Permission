@@ -105,7 +105,7 @@ class TargetAccessViewModelTest {
         val uiState = getTargetAccessUiState(viewModel)
 
         assertTrue(uiState is Stateful.Success)
-        // Correct Target AppFunctionPackageInfo returned
+        // Correct Target returned
         assertThat(uiState.value!!.targetPackageName).isEqualTo(testTarget)
 
         // Correct Agents returned
@@ -136,7 +136,7 @@ class TargetAccessViewModelTest {
         val uiState = getTargetAccessUiState(viewModel)
 
         assertTrue(uiState is Stateful.Success)
-        // Correct Target AppFunctionPackageInfo returned
+        // Correct Target returned
         assertThat(uiState.value!!.targetPackageName).isEqualTo(testTarget)
 
         // Correct Targets returned
@@ -147,11 +147,12 @@ class TargetAccessViewModelTest {
     }
 
     @Test
-    fun updateAccessState() = runTest {
+    fun onAccessStateUpdated() = runTest {
         val testAgent = TEST_AGENT_PACKAGE_NAME
         val viewModel = getViewModel(TEST_TARGET_PACKAGE_NAME)
+        val updateAccessUseCase = UpdateAccessUseCase(appFunctionRepository)
 
-        viewModel.updateAccessState(testAgent, false)
+        updateAccessUseCase(TEST_AGENT_PACKAGE_NAME, TEST_TARGET_PACKAGE_NAME, false)
         assertThat(
                 getTargetAccessUiState(viewModel).value!!.allowedAgentPackageNames.filter {
                     it == testAgent
@@ -165,7 +166,7 @@ class TargetAccessViewModelTest {
             )
             .contains(testAgent)
 
-        viewModel.updateAccessState(testAgent, true)
+        updateAccessUseCase(TEST_AGENT_PACKAGE_NAME, TEST_TARGET_PACKAGE_NAME, true)
         assertThat(
                 getTargetAccessUiState(viewModel).value!!.allowedAgentPackageNames.filter {
                     it == testAgent
@@ -186,7 +187,6 @@ class TargetAccessViewModelTest {
             agentPackageName,
             appFunctionRepository,
             GetAccessRequestStateUseCase(appFunctionRepository),
-            UpdateAccessUseCase(appFunctionRepository),
             backgroundScope,
             StandardTestDispatcher(testScheduler),
         )
