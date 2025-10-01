@@ -714,6 +714,16 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Қолданбалар"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Агенттің кіру рұқсаты"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Бұл қолданбада ақпаратты пайдаланып, сіздің орныңызға әрекетке кірісе алатын агенттер"</string>
+    <!-- no translation found for app_function_manage_access_default_title (2992299728169265212) -->
+    <skip />
+    <!-- no translation found for app_function_manage_access_title (5805361194157907463) -->
+    <skip />
+    <!-- no translation found for app_function_manage_access_radiobutton_group_title (995463553024931659) -->
+    <skip />
+    <!-- no translation found for manage_app_function_access_allow (957884395966109578) -->
+    <skip />
+    <!-- no translation found for manage_app_function_access_dont_allow (4282220224010484177) -->
+    <skip />
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Құрылғы параметрлері"</string>
     <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> қолданбасына <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> агенті болуға рұқсат беру қажет пе?"</string>
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Бұл агент ақпарат алу және сізге қажетті әрекеттерді орындау үшін <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> пайдалана алады"</string>

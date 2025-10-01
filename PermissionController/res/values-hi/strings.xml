@@ -714,6 +714,16 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"ऐप्लिकेशन"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"एजेंट को मिलने वाला ऐक्सेस"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"वे एजेंट जो इस ऐप्लिकेशन में आपकी जानकारी ऐक्सेस कर सकते हैं और आपकी ओर से कार्रवाइयां कर सकते हैं"</string>
+    <!-- no translation found for app_function_manage_access_default_title (2992299728169265212) -->
+    <skip />
+    <!-- no translation found for app_function_manage_access_title (5805361194157907463) -->
+    <skip />
+    <!-- no translation found for app_function_manage_access_radiobutton_group_title (995463553024931659) -->
+    <skip />
+    <!-- no translation found for manage_app_function_access_allow (957884395966109578) -->
+    <skip />
+    <!-- no translation found for manage_app_function_access_dont_allow (4282220224010484177) -->
+    <skip />
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"डिवाइस की सेटिंग"</string>
     <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"क्या <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> को <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> के लिए एजेंट के तौर पर काम करने की अनुमति देनी है?"</string>
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"यह एजेंट, <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> को ऐक्सेस करेगा, ताकि यह आपको जानकारी दे सके और आपके लिए कार्रवाइयां कर सके"</string>
