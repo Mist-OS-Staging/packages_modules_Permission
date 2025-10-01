@@ -2113,6 +2113,19 @@
     <!-- Summary for App Function Target Access Settings page. [CHAR LIMIT=130] -->
     <string name="app_function_target_access_summary" description="The summary of the App Function Target Access Settings, which describes the page contents">Agents that can access info and take actions for you in this app</string>
 
+    <!-- Header for allowed app function agent access of target [CHAR LIMIT=40] -->
+    <string name="app_function_access_allowed_header">Allowed</string>
+    <!-- Header for denied app function agent access of target [CHAR LIMIT=40] -->
+    <string name="app_function_access_denied_header">Not allowed</string>
+    <!-- Label when there are no allowed agent-app access associations [CHAR LIMIT=70] -->
+    <string name="app_function_agent_access_none_allowed_title">No agent accesses allowed</string>
+    <!-- Label when there are no denied agent-app access associations [CHAR LIMIT=70] -->
+    <string name="app_function_agent_access_none_denied_title">No agent accesses denied</string>
+    <!-- Label when there are no allowed agent-app access associations [CHAR LIMIT=70] -->
+    <string name="app_function_target_access_none_allowed_title">No app accesses allowed</string>
+    <!-- Label when there are no denied agent-app access associations [CHAR LIMIT=70] -->
+    <string name="app_function_target_access_none_denied_title">No app accesses denied</string>
+
     <!-- Default Title for App Function Manage Access Settings page. [CHAR LIMIT=70] -->
     <string name="app_function_manage_access_default_title">Access to app</string>
     <!-- Title for App Function Manage Access Settings page. [CHAR LIMIT=70] -->
