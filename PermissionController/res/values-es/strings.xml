@@ -59,7 +59,7 @@
     <string name="grant_dialog_button_allow_background" msgid="8236044729434367833">"Permitir siempre"</string>
     <string name="grant_dialog_button_allow_all_files" msgid="4955436994954829894">"Permitir gestionar todos los archivos"</string>
     <string name="grant_dialog_button_allow_media_only" msgid="4832877658422573832">"Permitir acceso al contenido multimedia"</string>
-    <string name="app_permissions_breadcrumb" msgid="5136969550489411650">"Apps"</string>
+    <string name="app_permissions_breadcrumb" msgid="5136969550489411650">"Aplicaciones"</string>
     <string name="app_permissions" msgid="3369917736607944781">"Permisos de apps"</string>
     <string name="unused_apps" msgid="2058057455175955094">"Aplicaciones no usadas"</string>
     <string name="edit_photos_description" msgid="5540108003480078892">"Cambia las fotos seleccionadas para esta aplicación"</string>
@@ -711,9 +711,21 @@
     <string name="app_function_agent_access_summary" msgid="6732843077882189740">"apps y ajustes a los que este agente puede acceder para obtener información y realizar acciones por ti"</string>
     <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"No hay apps disponibles para acceder a <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"Sistema"</string>
-    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"apps"</string>
+    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Aplicaciones"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Acceso de agentes"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agentes que pueden acceder a información y realizar acciones por ti en esta aplicación"</string>
+    <!-- no translation found for app_function_access_allowed_header (139473645426829908) -->
+    <skip />
+    <!-- no translation found for app_function_access_denied_header (6934818996725728911) -->
+    <skip />
+    <!-- no translation found for app_function_agent_access_none_allowed_title (4922794509336759858) -->
+    <skip />
+    <!-- no translation found for app_function_agent_access_none_denied_title (5745249773152088458) -->
+    <skip />
+    <!-- no translation found for app_function_target_access_none_allowed_title (5994321178244800275) -->
+    <skip />
+    <!-- no translation found for app_function_target_access_none_denied_title (3717686680310691344) -->
+    <skip />
     <!-- no translation found for app_function_manage_access_default_title (2992299728169265212) -->
     <skip />
     <!-- no translation found for app_function_manage_access_title (5805361194157907463) -->

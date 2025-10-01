@@ -714,6 +714,18 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"应用"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"智能体访问权限"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"可在此应用中访问信息并为您执行操作的智能体"</string>
+    <!-- no translation found for app_function_access_allowed_header (139473645426829908) -->
+    <skip />
+    <!-- no translation found for app_function_access_denied_header (6934818996725728911) -->
+    <skip />
+    <!-- no translation found for app_function_agent_access_none_allowed_title (4922794509336759858) -->
+    <skip />
+    <!-- no translation found for app_function_agent_access_none_denied_title (5745249773152088458) -->
+    <skip />
+    <!-- no translation found for app_function_target_access_none_allowed_title (5994321178244800275) -->
+    <skip />
+    <!-- no translation found for app_function_target_access_none_denied_title (3717686680310691344) -->
+    <skip />
     <!-- no translation found for app_function_manage_access_default_title (2992299728169265212) -->
     <skip />
     <!-- no translation found for app_function_manage_access_title (5805361194157907463) -->

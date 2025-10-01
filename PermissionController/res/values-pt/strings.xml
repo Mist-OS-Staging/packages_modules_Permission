@@ -197,7 +197,7 @@
     <string name="approximate_image_description" msgid="938803699637069884">"Local aproximado"</string>
     <string name="app_permission_location_accuracy" msgid="7166912915040018669">"Usar local exato"</string>
     <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"Apps podem acessar a localização aproximada quando o local exato está desativado"</string>
-    <string name="app_permission_title" msgid="2090897901051370711">"Permissão para acessar <xliff:g id="PERM">%1$s</xliff:g>"</string>
+    <string name="app_permission_title" msgid="2090897901051370711">"Permissões de <xliff:g id="PERM">%1$s</xliff:g>"</string>
     <string name="app_permission_header" msgid="2951363137032603806">"Permitir que este app acesse: <xliff:g id="PERM">%1$s</xliff:g>"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"Acesso de <xliff:g id="PERM">%1$s</xliff:g> para esse app no <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"Ver todas as permissões do app <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -714,6 +714,18 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Apps"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Acesso do agente"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agentes que podem acessar informações e realizar ações para você neste app"</string>
+    <!-- no translation found for app_function_access_allowed_header (139473645426829908) -->
+    <skip />
+    <!-- no translation found for app_function_access_denied_header (6934818996725728911) -->
+    <skip />
+    <!-- no translation found for app_function_agent_access_none_allowed_title (4922794509336759858) -->
+    <skip />
+    <!-- no translation found for app_function_agent_access_none_denied_title (5745249773152088458) -->
+    <skip />
+    <!-- no translation found for app_function_target_access_none_allowed_title (5994321178244800275) -->
+    <skip />
+    <!-- no translation found for app_function_target_access_none_denied_title (3717686680310691344) -->
+    <skip />
     <!-- no translation found for app_function_manage_access_default_title (2992299728169265212) -->
     <skip />
     <!-- no translation found for app_function_manage_access_title (5805361194157907463) -->
