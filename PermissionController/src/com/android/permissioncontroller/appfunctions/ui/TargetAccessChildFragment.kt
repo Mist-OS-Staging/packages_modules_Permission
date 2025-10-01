@@ -87,11 +87,10 @@ class TargetAccessChildFragment<PF>() : Fragment(), Preference.OnPreferenceClick
                             is Stateful.Failure -> Stateful.Failure(throwable = uiState.throwable)
                             is Stateful.Loading -> Stateful.Loading()
                             is Stateful.Success -> {
-                                // TODO: update getAppFunctionPackageInfoUseCase to new
-                                // implementation
                                 val targetPackageInfo =
                                     getAppFunctionPackageInfoUseCase(
                                         uiState.value.targetPackageName,
+                                        requireContext(),
                                         Process.myUserHandle(),
                                     )
                                 val allowedAgentPackageInfos =
@@ -99,6 +98,7 @@ class TargetAccessChildFragment<PF>() : Fragment(), Preference.OnPreferenceClick
                                         .map {
                                             getAppFunctionPackageInfoUseCase(
                                                 it,
+                                                requireContext(),
                                                 Process.myUserHandle(),
                                             )
                                         }
@@ -108,6 +108,7 @@ class TargetAccessChildFragment<PF>() : Fragment(), Preference.OnPreferenceClick
                                         .map {
                                             getAppFunctionPackageInfoUseCase(
                                                 it,
+                                                requireContext(),
                                                 Process.myUserHandle(),
                                             )
                                         }
