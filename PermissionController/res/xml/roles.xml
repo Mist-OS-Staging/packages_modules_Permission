@@ -1778,6 +1778,10 @@
             <permission name="android.permission.ACCESS_BACKGROUND_LOCATION" />
             <permission name="android.permission.ACTIVITY_RECOGNITION" />
             <permission name="android.permission.health.READ_HEART_RATE" minSdkVersion="36"/>
+            <permission name="android.permission.health.READ_OXYGEN_SATURATION"
+                featureFlag="android.permission.flags.Flags.granularHealthPermissionsPhaseTwoEnabled" />
+            <permission name="android.permission.health.READ_SKIN_TEMPERATURE"
+                featureFlag="android.permission.flags.Flags.granularHealthPermissionsPhaseTwoEnabled" />
             <permission name="android.permission.health.READ_HEALTH_DATA_IN_BACKGROUND" minSdkVersion="36"/>
         </permissions>
     </role>
