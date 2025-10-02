@@ -204,6 +204,12 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
         const val MAX_SDK_FOR_SDK_WARNING = 27
         const val MIN_SDK_FOR_RUNTIME_PERMS = 23
 
+        // The timeout for the "Deny in Settings" button to appear in the permission dialog.
+        // This is longer than the default because the "Deny in Settings" button is the last option
+        // in the dialog, and it can take a few seconds to scroll to it, especially on low-end
+        // devices or if permission rationale view is present.
+        private const val DENY_IN_SETTINGS_TIMEOUT_MILLIS = 30_000L
+
         val TEST_INSTALLER_ACTIVITY_COMPONENT_NAME =
             ComponentName(context, TestInstallerActivity::class.java)
 
@@ -937,11 +943,14 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
         if (isAutomotive || isWatch) {
             click(
                 By.text(getPermissionControllerString("app_permission_button_deny"))
-                    .displayId(displayId)
+                    .displayId(displayId),
+                DENY_IN_SETTINGS_TIMEOUT_MILLIS,
             )
         } else {
             click(
-                By.res("com.android.permissioncontroller:id/deny_radio_button").displayId(displayId)
+                By.res("com.android.permissioncontroller:id/deny_radio_button")
+                    .displayId(displayId),
+                DENY_IN_SETTINGS_TIMEOUT_MILLIS,
             )
         }
     }
