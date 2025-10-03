@@ -16,6 +16,8 @@
 package com.android.permissioncontroller.tests.mocking.appfunctions.ui.viewmodel
 
 import android.os.Build
+import android.platform.test.annotations.RequiresFlagsEnabled
+import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
 import com.android.dx.mockito.inline.extended.ExtendedMockito
@@ -38,6 +40,7 @@ import kotlinx.coroutines.test.runTest
 import org.junit.After
 import org.junit.Assert.assertTrue
 import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.ArgumentMatchers.any
@@ -53,8 +56,14 @@ import org.mockito.quality.Strictness
  * [AgentListViewModel]
  */
 @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
+@RequiresFlagsEnabled(
+    AgentListViewModelTest.FLAG_APP_FUNCTION_ACCESS_API_ENABLED,
+    AgentListViewModelTest.FLAG_APP_FUNCTION_ACCESS_UI_ENABLED,
+)
 @RunWith(AndroidJUnit4::class)
 class AgentListViewModelTest {
+    @get:Rule val checkFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
+
     @Mock private lateinit var application: PermissionControllerApplication
     private var mockitoSession: MockitoSession? = null
 
@@ -121,6 +130,13 @@ class AgentListViewModelTest {
     }
 
     companion object {
+        // Flag lib changes has caused issues with jarjar and now annotations require the jarjar
+        // package prepended to the flag string
+        const val FLAG_APP_FUNCTION_ACCESS_API_ENABLED =
+            "com.android.permissioncontroller.jarjar.android.permission.flags.app_function_access_api_enabled"
+        const val FLAG_APP_FUNCTION_ACCESS_UI_ENABLED =
+            "com.android.permissioncontroller.jarjar.android.permission.flags.app_function_access_ui_enabled"
+
         private const val TEST_AGENT_PACKAGE_NAME = "test.agent.package"
         private const val TEST_AGENT_PACKAGE_NAME2 = "test.agent.package2"
         private const val TEST_AGENT_LABEL = "Test Agent"
