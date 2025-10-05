@@ -99,8 +99,8 @@
     <string name="deny_read_media_aural_warning" msgid="8928699919508646732">"এই এপ্‌টো Androidৰ এটা পুৰণা সংস্কৰণৰ বাবে ডিজাইন কৰা হৈছিল। আপুনি যদি সংগীত আৰু অন্য অডিঅ’লৈ এই এপ্‌টোৰ এক্সেছ অস্বীকাৰ কৰে, তেন্তে ফট’ আৰু ভিডিঅ’সমূহৰ এক্সেছো অস্বীকাৰ কৰা হ’ব।"</string>
     <string name="cdm_profile_revoke_warning" msgid="4443893270719106700">"আপুনি যদি এই অনুমতি প্ৰদান নকৰে, তেন্তে এই এপ্‌টোৱে পৰিচালনা কৰা আপোনাৰ ডিভাইচৰ কিছুমান সুবিধাই বিচৰা ধৰণে কাম নকৰিবও পাৰে।"</string>
     <string name="permission_summary_enforced_by_policy" msgid="4443598170942950519">"নীতিৰ যোগেদি বলৱৎ কৰা"</string>
-    <string name="permission_summary_disabled_by_policy_background_only" msgid="221995005556362660">"নীতি অনুসৰি নেপথ্য়ৰ এক্সেছ অক্ষম কৰা হ’ল"</string>
-    <string name="permission_summary_enabled_by_policy_background_only" msgid="8287675974767104279">"নীতি অনুসৰি নেপথ্য়ৰ এক্সেছ সক্ষম কৰা হ’ল"</string>
+    <string name="permission_summary_disabled_by_policy_background_only" msgid="221995005556362660">"নীতি অনুসৰি নেপথ্যৰ এক্সেছ অক্ষম কৰা হ’ল"</string>
+    <string name="permission_summary_enabled_by_policy_background_only" msgid="8287675974767104279">"নীতি অনুসৰি নেপথ্যৰ এক্সেছ সক্ষম কৰা হ’ল"</string>
     <string name="permission_summary_enabled_by_policy_foreground_only" msgid="3844582916889767831">"নীতি অনুসৰি অগ্ৰভূমিৰ এক্সেছ সক্ষম কৰা হ’ল"</string>
     <string name="permission_summary_enforced_by_admin" msgid="822702574117248700">"প্ৰশাসকে নিয়ন্ত্ৰিত কৰা"</string>
     <string name="permission_summary_disabled_by_admin_background_only" msgid="3127091456731845646">"প্ৰশাসকে নেপথ্যৰ এক্সেছ অক্ষম কৰি ৰাখিছে"</string>
@@ -726,16 +726,11 @@
     <skip />
     <!-- no translation found for app_function_target_access_none_denied_title (3717686680310691344) -->
     <skip />
-    <!-- no translation found for app_function_manage_access_default_title (2992299728169265212) -->
-    <skip />
-    <!-- no translation found for app_function_manage_access_title (5805361194157907463) -->
-    <skip />
-    <!-- no translation found for app_function_manage_access_radiobutton_group_title (995463553024931659) -->
-    <skip />
-    <!-- no translation found for manage_app_function_access_allow (957884395966109578) -->
-    <skip />
-    <!-- no translation found for manage_app_function_access_dont_allow (4282220224010484177) -->
-    <skip />
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"এপৰ এক্সেছে"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"<xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>লৈ এক্সেছে"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>লৈ <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>ৰ এক্সেছ"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"অনুমতি দিয়ক"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"অনুমতি নিদিব"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"ডিভাইচৰ ছেটিং"</string>
     <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>ক <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>ৰ বাবে এজেণ্ট হ’বলৈ অনুমতি দিবনে?"</string>
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"এই এজেণ্টগৰাকীয়ে তথ্য পাবলৈ আৰু আপোনাৰ বাবে কাৰ্য কৰিবলৈ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> এক্সেছ কৰিব পাৰিব"</string>

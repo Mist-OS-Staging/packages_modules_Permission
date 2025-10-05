@@ -479,7 +479,7 @@
     <string name="permgroupbackgroundrequest_location" msgid="1085680897265734809">"¿Permitir que &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; acceda a la ubicación de este dispositivo?"</string>
     <string name="permgroupbackgroundrequest_device_aware_location" msgid="1264484517831380016">"¿Permitir que &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; acceda a la ubicación de &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="permgroupbackgroundrequestdetail_location" msgid="8021219324989662957">"Es posible que esta aplicación quiera acceder a tu ubicación siempre, aunque no la estés usando. Puedes darle permiso en "<annotation id="link">"Ajustes"</annotation>"."</string>
-    <string name="permgroupupgraderequest_location" msgid="8328408946822691636">"¿Quieres cambiar el acceso a la ubicación de &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
+    <string name="permgroupupgraderequest_location" msgid="8328408946822691636">"¿Cambiar el acceso a la ubicación al &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="permgroupupgraderequest_device_aware_location" msgid="1812338666887726191">"¿Cambiar el acceso a la ubicación de &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; en &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="permgroupupgraderequestdetail_location" msgid="1550899076845189165">"Esta aplicación quiere acceder a tu ubicación siempre, incluso aunque no la estés usando. Puedes darle permiso en "<annotation id="link">"Ajustes"</annotation>"."</string>
     <string name="permgrouprequest_nearby_devices" msgid="2272829282660436700">"¿Permitir que &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; busque, se conecte y determine la posición relativa de dispositivos cercanos?"</string>
@@ -726,16 +726,11 @@
     <skip />
     <!-- no translation found for app_function_target_access_none_denied_title (3717686680310691344) -->
     <skip />
-    <!-- no translation found for app_function_manage_access_default_title (2992299728169265212) -->
-    <skip />
-    <!-- no translation found for app_function_manage_access_title (5805361194157907463) -->
-    <skip />
-    <!-- no translation found for app_function_manage_access_radiobutton_group_title (995463553024931659) -->
-    <skip />
-    <!-- no translation found for manage_app_function_access_allow (957884395966109578) -->
-    <skip />
-    <!-- no translation found for manage_app_function_access_dont_allow (4282220224010484177) -->
-    <skip />
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"Acceso a la aplicación"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"Acceso a <xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"Acceso de <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> a <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"Permitir"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"No permitir"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Ajustes del dispositivo"</string>
     <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"¿Permitir que <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> sea agente de <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Este agente podrá acceder a <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> para obtener información y realizar acciones por ti"</string>

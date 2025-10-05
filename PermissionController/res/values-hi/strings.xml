@@ -197,7 +197,7 @@
     <string name="approximate_image_description" msgid="938803699637069884">"अनुमानित जगह"</string>
     <string name="app_permission_location_accuracy" msgid="7166912915040018669">"जगह की सटीक जानकारी का इस्तेमाल करें"</string>
     <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"जगह की सटीक जानकारी देने की सुविधा बंद होने पर, ऐप्लिकेशन आपकी जगह की अनुमानित जानकारी को ऐक्सेस कर सकते हैं"</string>
-    <string name="app_permission_title" msgid="2090897901051370711">"<xliff:g id="PERM">%1$s</xliff:g> की अनुमति"</string>
+    <string name="app_permission_title" msgid="2090897901051370711">"<xliff:g id="PERM">%1$s</xliff:g> ऐक्सेस करने की अनुमति"</string>
     <string name="app_permission_header" msgid="2951363137032603806">"इस ऐप्लिकेशन को <xliff:g id="PERM">%1$s</xliff:g> ऐक्सेस करने की:"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g> पर इस ऐप्लिकेशन के लिए <xliff:g id="PERM">%1$s</xliff:g> का ऐक्सेस"</string>
     <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"<xliff:g id="APP">%1$s</xliff:g> को मिली सभी अनुमतियां देखें"</string>
@@ -726,16 +726,11 @@
     <skip />
     <!-- no translation found for app_function_target_access_none_denied_title (3717686680310691344) -->
     <skip />
-    <!-- no translation found for app_function_manage_access_default_title (2992299728169265212) -->
-    <skip />
-    <!-- no translation found for app_function_manage_access_title (5805361194157907463) -->
-    <skip />
-    <!-- no translation found for app_function_manage_access_radiobutton_group_title (995463553024931659) -->
-    <skip />
-    <!-- no translation found for manage_app_function_access_allow (957884395966109578) -->
-    <skip />
-    <!-- no translation found for manage_app_function_access_dont_allow (4282220224010484177) -->
-    <skip />
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"ऐप्लिकेशन का ऐक्सेस"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"<xliff:g id="TARGET_APP_NAME">%1$s</xliff:g> का ऐक्सेस"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> के लिए <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> का ऐक्सेस"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"अनुमति दें"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"अनुमति न दें"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"डिवाइस की सेटिंग"</string>
     <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"क्या <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> को <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> के लिए एजेंट के तौर पर काम करने की अनुमति देनी है?"</string>
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"यह एजेंट, <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> को ऐक्सेस करेगा, ताकि यह आपको जानकारी दे सके और आपके लिए कार्रवाइयां कर सके"</string>

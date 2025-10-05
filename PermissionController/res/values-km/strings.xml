@@ -726,16 +726,11 @@
     <skip />
     <!-- no translation found for app_function_target_access_none_denied_title (3717686680310691344) -->
     <skip />
-    <!-- no translation found for app_function_manage_access_default_title (2992299728169265212) -->
-    <skip />
-    <!-- no translation found for app_function_manage_access_title (5805361194157907463) -->
-    <skip />
-    <!-- no translation found for app_function_manage_access_radiobutton_group_title (995463553024931659) -->
-    <skip />
-    <!-- no translation found for manage_app_function_access_allow (957884395966109578) -->
-    <skip />
-    <!-- no translation found for manage_app_function_access_dont_allow (4282220224010484177) -->
-    <skip />
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"សិទ្ធិចូលប្រើប្រាស់កម្មវិធី"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"សិទ្ធិចូលប្រើប្រាស់ <xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"សិទ្ធិចូលប្រើប្រាស់របស់ <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ទៅកាន់ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"អនុញ្ញាត"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"មិនអនុញ្ញាត"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"ការកំណត់​ឧបករណ៍"</string>
     <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"អនុញ្ញាតឱ្យ <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ធ្វើជាភ្នាក់ងារសម្រាប់ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ឬ?"</string>
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"ភ្នាក់ងារនេះនឹងអាចចូលប្រើ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ដើម្បីទទួលបានព័ត៌មាន និងធ្វើសកម្មភាពជំនួសអ្នក"</string>
