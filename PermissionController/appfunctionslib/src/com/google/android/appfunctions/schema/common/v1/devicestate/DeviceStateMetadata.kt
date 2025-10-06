@@ -183,7 +183,7 @@ class DeviceStateItemMetadata(
      * The sensitivity of the preference, could be one of "REQUIRES_CONFIRMATION" or
      * "MUST_PROVIDE_UNDO" or can be null.
      */
-    @Sensitivity @Document.StringProperty val sensitivity: String? = null,
+    @param:Sensitivity @Document.StringProperty val sensitivity: String? = null,
     /** Whether this item is settable or not. */
     @Document.BooleanProperty val writable: Boolean? = null,
     /**
