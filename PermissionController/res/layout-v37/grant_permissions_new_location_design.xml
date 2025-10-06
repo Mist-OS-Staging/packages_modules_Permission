@@ -89,37 +89,44 @@
             </LinearLayout>
 
             <!-- location (precise/approximate) animations -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/permission_location_accuracy">
+            <FrameLayout
+                android:id="@+id/permission_location_accuracy"
+                style="@style/PermissionLocationAccuracyContainer ">
 
-                <RadioGroup
-                    android:id="@+id/permission_location_accuracy_radio_container"
-                    style="@style/PermissionLocationAccuracyRadioGroupMaterial3">
+                <HorizontalScrollView
+                    android:id="@id/permission_location_accuracy_radio_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:fillViewport="true">
 
-                    <RadioButton
-                        android:id="@+id/permission_location_accuracy_radio_fine"
-                        android:text="@string/permgrouprequest_finelocation_imagetext"
-                        style="@style/PermissionLocationAccuracyRadioFine"/>
+                    <RadioGroup
+                        android:id="@+id/permission_location_accuracy_radio_group"
+                        style="@style/PermissionLocationAccuracyRadioGroupNewLocationDesign">
 
-                    <RadioButton
-                        android:id="@+id/permission_location_accuracy_radio_coarse"
-                        android:text="@string/permgrouprequest_coarselocation_imagetext"
-                        style="@style/PermissionLocationAccuracyRadioCoarse" />
-                </RadioGroup>
+                        <RadioButton
+                            android:id="@+id/permission_location_accuracy_radio_fine"
+                            android:text="@string/permgrouprequest_finelocation_imagetext"
+                            style="@style/PermissionLocationAccuracyRadioFineNewLocationDesign" />
 
-                <ImageView
-                    android:id="@+id/permission_location_accuracy_fine_only"
-                    android:contentDescription="@string/precise_image_description"
-                    style="@style/PermissionLocationAccuracyFineImageViewMaterial3" />
+                        <RadioButton
+                            android:id="@+id/permission_location_accuracy_radio_coarse"
+                            android:text="@string/permgrouprequest_coarselocation_imagetext"
+                            style="@style/PermissionLocationAccuracyRadioNewLocationDesign" />
 
-                <ImageView
+                    </RadioGroup>
+                </HorizontalScrollView>
+
+                <RadioButton
                     android:id="@+id/permission_location_accuracy_coarse_only"
-                    android:contentDescription="@string/approximate_image_description"
-                    style="@style/PermissionLocationAccuracyCoarseImageViewMaterial3" />
+                    android:text="@string/permgrouprequest_coarselocation_imagetext"
+                    style="@style/PermissionLocationAccuracySingleRadio" />
 
-            </LinearLayout>
+                <RadioButton
+                    android:id="@+id/permission_location_accuracy_fine_only"
+                    android:text="@string/permgrouprequest_finelocation_imagetext"
+                    style="@style/PermissionLocationAccuracySingleRadio" />
+            </FrameLayout>
 
             <!-- Buttons on bottom of dialog -->
             <LinearLayout
