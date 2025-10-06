@@ -28,12 +28,6 @@ import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
  * @param packageRepository The repository to use to get the package labels and icons.
  */
 class GetAppFunctionPackageInfoUseCase(private val packageRepository: PackageRepository) {
-    operator fun invoke(packageName: String, user: UserHandle): AppFunctionPackageInfo {
-        val label = packageRepository.getPackageLabel(packageName, user)
-        val icon = packageRepository.getBadgedPackageIcon(packageName, user)
-        return AppFunctionPackageInfo(packageName, label, icon)
-    }
-
     operator fun invoke(
         packageName: String,
         context: Context,
