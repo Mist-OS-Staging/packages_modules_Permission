@@ -726,16 +726,11 @@
     <skip />
     <!-- no translation found for app_function_target_access_none_denied_title (3717686680310691344) -->
     <skip />
-    <!-- no translation found for app_function_manage_access_default_title (2992299728169265212) -->
-    <skip />
-    <!-- no translation found for app_function_manage_access_title (5805361194157907463) -->
-    <skip />
-    <!-- no translation found for app_function_manage_access_radiobutton_group_title (995463553024931659) -->
-    <skip />
-    <!-- no translation found for manage_app_function_access_allow (957884395966109578) -->
-    <skip />
-    <!-- no translation found for manage_app_function_access_dont_allow (4282220224010484177) -->
-    <skip />
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"앱 액세스"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"<xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>에 대한 액세스"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>에 대한 <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>의 액세스"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"허용"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"허용 안함"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"기기 설정"</string>
     <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> 앱이 <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> 앱의 에이전트가 되도록 허용하시겠습니까?"</string>
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"이 에이전트가 <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>에 액세스하여 정보를 확인하고 작업을 실행할 수 있게 됩니다."</string>
