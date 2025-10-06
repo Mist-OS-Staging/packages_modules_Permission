@@ -1136,7 +1136,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
 
     protected fun clickPermissionRationaleViewInGrantDialog() {
         assertPermissionRationaleContainerOnGrantDialogIsVisible(true)
-        clickAndWaitForWindowTransition(
+        waitForFocusThenClickAndWaitForWindowTransition(
             By.res(GRANT_DIALOG_PERMISSION_RATIONALE_CONTAINER_VIEW).displayId(displayId)
         )
     }
