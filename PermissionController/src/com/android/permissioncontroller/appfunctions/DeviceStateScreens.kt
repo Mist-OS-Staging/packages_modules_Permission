@@ -145,7 +145,7 @@ class AppPermissionSettingScreen(context: Context, val permissionGroup: String) 
     override val intent = null
 
     private val intentWithPlaceholder =
-        Intent(AppFunctionsUtil.ACTION_MANAGE_APP_PERMISSIONS)
+        Intent(AppFunctionsUtil.ACTION_MANAGE_APP_PERMISSION)
             .apply {
                 putExtra(Intent.EXTRA_PERMISSION_GROUP_NAME, permissionGroup)
                 putExtra(Intent.EXTRA_PACKAGE_NAME, "\$packageName")

@@ -238,7 +238,7 @@ class DeviceStateAppFunctionServiceTest {
         val matchResult = regex.find(description!!)
         val intentUri = matchResult!!.groups[1]!!.value
         val intent = Intent.parseUri(intentUri, 0)
-        assertThat(intent.action).isEqualTo(ACTION_MANAGE_APP_PERMISSIONS)
+        assertThat(intent.action).isEqualTo(ACTION_MANAGE_APP_PERMISSION)
         assertThat(intent.getStringExtra(Intent.EXTRA_PACKAGE_NAME)).isEqualTo("\$packageName")
         assertThat(intent.getStringExtra(Intent.EXTRA_PERMISSION_GROUP_NAME)).isNotNull()
         assertThat(intent.getStringExtra(EXTRA_DEVICE_STATE_KEY)).isNotNull()
