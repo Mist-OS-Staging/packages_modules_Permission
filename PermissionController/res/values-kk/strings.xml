@@ -436,7 +436,7 @@
     <string name="default_apps" msgid="5119201969348748639">"Әдепкі қолданбалар"</string>
     <string name="no_default_apps" msgid="2593466527182950231">"Әдепкі қолданбалар жоқ"</string>
     <string name="default_apps_more" msgid="4078194675848858093">"Басқа да әдепкі қолданбалар"</string>
-    <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Сілтемелер ашу"</string>
+    <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Сілтемелерді ашу"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"Жұмыс үшін әдепкі қолданба"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"Құпия кеңістікке арналған әдепкі қолданбалар"</string>
     <string name="default_app_others" msgid="7793029848126079876">"Басқа"</string>
