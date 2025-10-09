@@ -714,18 +714,12 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Ama-app"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Ukufinyelela komenzeli"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Abenzeli bangafinyelela ulwazi futhi bakuthathele izinyathelo kule app"</string>
-    <!-- no translation found for app_function_access_allowed_header (139473645426829908) -->
-    <skip />
-    <!-- no translation found for app_function_access_denied_header (6934818996725728911) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_none_allowed_title (4922794509336759858) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_none_denied_title (5745249773152088458) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_none_allowed_title (5994321178244800275) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_none_denied_title (3717686680310691344) -->
-    <skip />
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"Kuvumelekile"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"Akuvunyelwe"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"Akukho ukufinyelela komenzeli okuvunyelwe"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"Akukho ukufinyelela komenzeli okunqatshiwe"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"Akukho ukufinyelela kwe-app okuvunyelwe"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"Akukho ukufinyelela kwe-app okunqatshiwe"</string>
     <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"Ukufinyelela ku-app"</string>
     <string name="app_function_manage_access_title" msgid="5805361194157907463">"Ukufinyelela ku-<xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>"</string>
     <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"Ukufinyelela kwe-<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ku-<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>

@@ -436,7 +436,7 @@
     <string name="default_apps" msgid="5119201969348748639">"Әдепкі қолданбалар"</string>
     <string name="no_default_apps" msgid="2593466527182950231">"Әдепкі қолданбалар жоқ"</string>
     <string name="default_apps_more" msgid="4078194675848858093">"Басқа да әдепкі қолданбалар"</string>
-    <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Сілтемелер ашу"</string>
+    <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Сілтемелерді ашу"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"Жұмыс үшін әдепкі қолданба"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"Құпия кеңістікке арналған әдепкі қолданбалар"</string>
     <string name="default_app_others" msgid="7793029848126079876">"Басқа"</string>
@@ -714,18 +714,12 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Қолданбалар"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Агенттің кіру рұқсаты"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Бұл қолданбада ақпаратты пайдаланып, сіздің орныңызға әрекетке кірісе алатын агенттер"</string>
-    <!-- no translation found for app_function_access_allowed_header (139473645426829908) -->
-    <skip />
-    <!-- no translation found for app_function_access_denied_header (6934818996725728911) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_none_allowed_title (4922794509336759858) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_none_denied_title (5745249773152088458) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_none_allowed_title (5994321178244800275) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_none_denied_title (3717686680310691344) -->
-    <skip />
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"Рұқсат етілген"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"Рұқсат етілмеген"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"Агенттерге кіруге рұқсат етілмеген"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"Агенттерге кіруге рұқсат етілген"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"Қолданбаларға кіруге рұқсат етілмеген"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"Қолданбаларға кіруге рұқсат етілген"</string>
     <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"Қолданбаны пайдалану"</string>
     <string name="app_function_manage_access_title" msgid="5805361194157907463">"<xliff:g id="TARGET_APP_NAME">%1$s</xliff:g> қолданбасын пайдалану"</string>
     <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> пайдалану рұқсаты (<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>)"</string>

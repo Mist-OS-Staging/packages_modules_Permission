@@ -714,18 +714,12 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"App"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Accesso agente"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agenti che possono accedere alle informazioni ed eseguire azioni per te in questa app"</string>
-    <!-- no translation found for app_function_access_allowed_header (139473645426829908) -->
-    <skip />
-    <!-- no translation found for app_function_access_denied_header (6934818996725728911) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_none_allowed_title (4922794509336759858) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_none_denied_title (5745249773152088458) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_none_allowed_title (5994321178244800275) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_none_denied_title (3717686680310691344) -->
-    <skip />
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"Consentito"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"Non consentito"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"Nessun accesso agente consentito"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"Nessun accesso agente negato"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"Nessun accesso app consentito"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"Nessun accesso app negato"</string>
     <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"Accesso all\'app"</string>
     <string name="app_function_manage_access_title" msgid="5805361194157907463">"Accesso a: <xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>"</string>
     <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"Accesso da <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> a <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>

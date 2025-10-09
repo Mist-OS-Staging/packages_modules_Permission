@@ -714,18 +714,12 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"এপ্‌সমূহ"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"এজেণ্টৰ এক্সেছ"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"এই এপ্‌টোত তথ্য এক্সেছ কৰিব পৰা আৰু আপোনাৰ বাবে কাৰ্যব্যৱস্থা গ্ৰহণ কৰিব পৰা এজেণ্টসকল"</string>
-    <!-- no translation found for app_function_access_allowed_header (139473645426829908) -->
-    <skip />
-    <!-- no translation found for app_function_access_denied_header (6934818996725728911) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_none_allowed_title (4922794509336759858) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_none_denied_title (5745249773152088458) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_none_allowed_title (5994321178244800275) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_none_denied_title (3717686680310691344) -->
-    <skip />
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"অনুমতি দিয়া হৈছে"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"অনুমতি দিয়া হোৱা নাই"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"কোনো এজেণ্টৰ এক্সেছৰ অনুমতি দিয়া হোৱা নাই"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"কোনো এজেণ্টৰ এক্সেছ অস্বীকাৰ কৰা হোৱা নাই"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"কোনো এপ্‌ এক্সেছ কৰাৰ অনুমতি দিয়া হোৱা নাই"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"কোনো এপৰ এক্সেছ অস্বীকাৰ কৰা হোৱা নাই"</string>
     <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"এপৰ এক্সেছে"</string>
     <string name="app_function_manage_access_title" msgid="5805361194157907463">"<xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>লৈ এক্সেছে"</string>
     <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>লৈ <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>ৰ এক্সেছ"</string>
