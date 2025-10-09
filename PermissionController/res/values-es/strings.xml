@@ -59,7 +59,7 @@
     <string name="grant_dialog_button_allow_background" msgid="8236044729434367833">"Permitir siempre"</string>
     <string name="grant_dialog_button_allow_all_files" msgid="4955436994954829894">"Permitir gestionar todos los archivos"</string>
     <string name="grant_dialog_button_allow_media_only" msgid="4832877658422573832">"Permitir acceso al contenido multimedia"</string>
-    <string name="app_permissions_breadcrumb" msgid="5136969550489411650">"Apps"</string>
+    <string name="app_permissions_breadcrumb" msgid="5136969550489411650">"Aplicaciones"</string>
     <string name="app_permissions" msgid="3369917736607944781">"Permisos de apps"</string>
     <string name="unused_apps" msgid="2058057455175955094">"Aplicaciones no usadas"</string>
     <string name="edit_photos_description" msgid="5540108003480078892">"Cambia las fotos seleccionadas para esta aplicación"</string>
@@ -479,7 +479,7 @@
     <string name="permgroupbackgroundrequest_location" msgid="1085680897265734809">"¿Permitir que &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; acceda a la ubicación de este dispositivo?"</string>
     <string name="permgroupbackgroundrequest_device_aware_location" msgid="1264484517831380016">"¿Permitir que &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; acceda a la ubicación de &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="permgroupbackgroundrequestdetail_location" msgid="8021219324989662957">"Es posible que esta aplicación quiera acceder a tu ubicación siempre, aunque no la estés usando. Puedes darle permiso en "<annotation id="link">"Ajustes"</annotation>"."</string>
-    <string name="permgroupupgraderequest_location" msgid="8328408946822691636">"¿Quieres cambiar el acceso a la ubicación de &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
+    <string name="permgroupupgraderequest_location" msgid="8328408946822691636">"¿Cambiar el acceso a la ubicación al &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="permgroupupgraderequest_device_aware_location" msgid="1812338666887726191">"¿Cambiar el acceso a la ubicación de &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; en &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="permgroupupgraderequestdetail_location" msgid="1550899076845189165">"Esta aplicación quiere acceder a tu ubicación siempre, incluso aunque no la estés usando. Puedes darle permiso en "<annotation id="link">"Ajustes"</annotation>"."</string>
     <string name="permgrouprequest_nearby_devices" msgid="2272829282660436700">"¿Permitir que &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; busque, se conecte y determine la posición relativa de dispositivos cercanos?"</string>
@@ -711,7 +711,7 @@
     <string name="app_function_agent_access_summary" msgid="6732843077882189740">"apps y ajustes a los que este agente puede acceder para obtener información y realizar acciones por ti"</string>
     <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"No hay apps disponibles para acceder a <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"Sistema"</string>
-    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"apps"</string>
+    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Aplicaciones"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Acceso de agentes"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agentes que pueden acceder a información y realizar acciones por ti en esta aplicación"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Ajustes del dispositivo"</string>
