@@ -714,18 +714,12 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Приложения"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Доступ агента"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Агенты, которые могут получать доступ к информации и выполнять действия в этом приложении от вашего лица"</string>
-    <!-- no translation found for app_function_access_allowed_header (139473645426829908) -->
-    <skip />
-    <!-- no translation found for app_function_access_denied_header (6934818996725728911) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_none_allowed_title (4922794509336759858) -->
-    <skip />
-    <!-- no translation found for app_function_agent_access_none_denied_title (5745249773152088458) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_none_allowed_title (5994321178244800275) -->
-    <skip />
-    <!-- no translation found for app_function_target_access_none_denied_title (3717686680310691344) -->
-    <skip />
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"Доступ разрешен"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"Доступ запрещен"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"Доступ запрещен для агентов"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"Доступ разрешен для агентов"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"Доступ к приложениям запрещен"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"Доступ к приложениям разрешен"</string>
     <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"Доступ к приложению"</string>
     <string name="app_function_manage_access_title" msgid="5805361194157907463">"Доступ к приложению \"<xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>\""</string>
     <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"Доступ агента \"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>\" к приложению \"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>\""</string>
