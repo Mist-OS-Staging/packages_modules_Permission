@@ -15,7 +15,7 @@
 -->
 <resources>
     <overlayable name="WearPermissionControllerStyles">
-        <policy type="public|product|system|vendor|odm|oem">
+        <policy type="product|system|vendor|odm|oem">
             <!--START WEAR SPECIFIC MATERIAL3 COLOR TOKENS-->
             <item type="color" name="wear_compose_material3_primary_fixed" />
             <item type="color" name="wear_compose_material3_primary_fixed_dim" />
