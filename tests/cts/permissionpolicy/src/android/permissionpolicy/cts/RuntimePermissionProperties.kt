@@ -70,6 +70,7 @@ import com.google.common.truth.Truth.assertThat
 import com.google.common.truth.Truth.assertWithMessage
 import org.junit.Test
 import org.junit.runner.RunWith
+import com.android.modules.utils.build.SdkLevel
 
 @RunWith(AndroidJUnit4::class)
 class RuntimePermissionProperties {
@@ -201,7 +202,7 @@ class RuntimePermissionProperties {
         }
 
         // Separately check health permissions.
-        if (Flags.replaceBodySensorPermissionEnabled()) {
+        if (SdkLevel.isAtLeastB()) {
             assertThat(expectedPerms).contains(HealthPermissions.READ_HEART_RATE);
             assertThat(expectedPerms).contains(HealthPermissions.READ_HEALTH_DATA_IN_BACKGROUND);
 
