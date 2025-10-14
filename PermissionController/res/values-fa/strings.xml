@@ -252,7 +252,7 @@
     <string name="app_permission_most_recent_denied_summary" msgid="7659497197737708112">"درحال‌حاضر رد شده است / آخرین دسترسی: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="app_permission_never_accessed_summary" msgid="401346181461975090">"هرگز دسترسی نداشته است"</string>
     <string name="app_permission_never_accessed_denied_summary" msgid="6596000497490905146">"غیرمجاز / هرگز دسترسی نداشته است"</string>
-    <string name="allowed_header" msgid="7769277978004790414">"مجاز بودن"</string>
+    <string name="allowed_header" msgid="7769277978004790414">"اجازه داشتن"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"همیشه مجاز بودن"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"مجاز فقط هنگام استفاده"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"مجاز فقط برای دسترسی به رسانه‌ها"</string>
@@ -714,8 +714,8 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"برنامه‌ها"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"دسترسی عامل"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"عامل‌ها می‌توانند به اطلاعات دسترسی داشته باشند و ازطرف شما در این برنامه اقدام کنند"</string>
-    <string name="app_function_access_allowed_header" msgid="139473645426829908">"مجاز"</string>
-    <string name="app_function_access_denied_header" msgid="6934818996725728911">"غیرمجاز"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"اجازه داشتن"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"اجازه نداشتن"</string>
     <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"هیچ دسترسی برای عامل مجاز نشده است"</string>
     <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"هیچ دسترسی برای عامل رد نشده است"</string>
     <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"هیچ دسترسی برای برنامه مجاز نشده است"</string>
