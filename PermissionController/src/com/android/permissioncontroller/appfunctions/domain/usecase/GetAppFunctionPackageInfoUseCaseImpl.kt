@@ -19,7 +19,8 @@ import android.content.Context
 import android.os.UserHandle
 import com.android.permissioncontroller.R
 import com.android.permissioncontroller.appfunctions.data.repository.AppFunctionRepository
-import com.android.permissioncontroller.appfunctions.domain.model.AppFunctionPackageInfo
+import com.android.permissioncontroller.appfunctions.domain.model.v31.AppFunctionPackageInfo
+import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAppFunctionPackageInfoUseCase
 import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
 
 /**
@@ -27,8 +28,9 @@ import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
  *
  * @param packageRepository The repository to use to get the package labels and icons.
  */
-class GetAppFunctionPackageInfoUseCase(private val packageRepository: PackageRepository) {
-    operator fun invoke(
+class GetAppFunctionPackageInfoUseCaseImpl(private val packageRepository: PackageRepository) :
+    GetAppFunctionPackageInfoUseCase {
+    override operator fun invoke(
         packageName: String,
         context: Context,
         user: UserHandle,

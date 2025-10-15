@@ -22,6 +22,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.permission.flags.Flags
 import android.util.Log
+import com.android.modules.utils.build.SdkLevel
 import com.android.permissioncontroller.permission.utils.Utils
 import java.util.UUID
 
@@ -89,6 +90,16 @@ object AppFunctionsUtil {
     fun isAppFunctionUiEnabled(context: Context): Boolean {
         val packageManager = context.packageManager
         return Flags.appFunctionAccessUiEnabled() &&
+            !packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK) &&
+            !packageManager.hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE) &&
+            !packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)
+    }
+
+    @JvmStatic
+    fun isPrivacyDashboardAgentActivityEnabled(context: Context): Boolean {
+        val packageManager = context.packageManager
+        return SdkLevel.isAtLeastB() &&
+            com.android.permissioncontroller.flags.Flags.privacyDashboardAgentActivityEnabled() &&
             !packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK) &&
             !packageManager.hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE) &&
             !packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)

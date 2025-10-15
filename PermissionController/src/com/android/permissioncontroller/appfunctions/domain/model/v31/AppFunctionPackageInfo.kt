@@ -14,5 +14,15 @@
  * limitations under the License.
  */
 
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.BAKLAVA)
-package com.android.permissioncontroller.appfunctions.domain.model;
+package com.android.permissioncontroller.appfunctions.domain.model.v31
+
+import android.graphics.drawable.Drawable
+
+/**
+ * Model for an app function agent or target package.
+ *
+ * @param packageName The package name of the app function agent.
+ * @param label The label of the app function agent.
+ * @param icon The icon of the app function agent.
+ */
+data class AppFunctionPackageInfo(val packageName: String, val label: String, val icon: Drawable?)

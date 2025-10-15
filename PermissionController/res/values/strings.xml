@@ -374,6 +374,12 @@
     <!-- Title for permission usage [CHAR LIMIT=30] -->
     <string name="permission_usage_title">Privacy dashboard</string>
 
+    <!-- Title for app permissions category in privacy dashboard [CHAR LIMIT=30] -->
+    <string name="permission_usage_app_permissions_title">App permissions</string>
+
+    <!-- Title for agent activity category in privacy dashboard [CHAR LIMIT=30] -->
+    <string name="permission_usage_agent_activity_title">Agent activity</string>
+
     <!-- Summary for permission usage preference row [CHAR LIMIT=60] -->
     <string name="auto_permission_usage_summary">View which apps recently used permissions</string>
 
@@ -519,6 +525,12 @@
     <string name="permission_usage_preference_label">{count, plural,
         =1      {Used by 1 app}
         other   {Used by # apps}
+    }</string>
+
+    <!-- Label for the agent usage preference that shows how many apps the agent have accessed [CHAR LIMIT=50] -->
+    <string name="agent_usage_preference_label">{count, plural,
+        =1      {Accessed 1 app}
+        other   {Accessed # apps}
     }</string>
 
     <!-- Label for the button to bring the user to view the details of recent permission accesses [CHAR LIMIT=42] -->
