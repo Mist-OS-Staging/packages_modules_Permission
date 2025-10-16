@@ -47,6 +47,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assume.assumeTrue;
 
+import androidx.test.filters.SdkSuppress;
 import android.content.Context;
 import android.health.connect.HealthPermissions;
 import android.os.Build;
@@ -180,7 +181,7 @@ public class SplitPermissionsSystemTest {
         assertEquals(23, seenSplits.size());
     }
 
-    @RequiresFlagsDisabled({Flags.FLAG_REPLACE_BODY_SENSOR_PERMISSION_ENABLED})
+    @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA, codeName = "Baklava")
     @Test
     public void
             validateBodySensors_beforeGranularHealthPermissions_isSplitToBodySensorsBackground() {
@@ -197,11 +198,9 @@ public class SplitPermissionsSystemTest {
                                         BODY_SENSORS_BACKGROUND));
     }
 
-    @RequiresFlagsEnabled({Flags.FLAG_REPLACE_BODY_SENSOR_PERMISSION_ENABLED})
+    @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA, codeName = "Baklava")
     @Test
     public void validateBodySensors_afterGranularHealthPermissions_isSplitToReadHeartRate() {
-        // TODO: Change this to Baklava when available.
-        assumeTrue(ApiLevelUtil.isAtLeast(36));
 
         SplitPermissionInfo legacyBodySensorPermissionInfo = null;
         SplitPermissionInfo readHeartRatePermissionInfo = null;
