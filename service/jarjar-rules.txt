@@ -52,6 +52,10 @@ rule android.view.contentprotection.flags.*FeatureFlags* com.android.permission.
 rule android.view.contentprotection.flags.FeatureFlags* com.android.permission.jarjar.@0
 rule android.view.contentprotection.flags.FeatureFlags com.android.permission.jarjar.@0
 rule android.view.contentprotection.flags.Flags com.android.permission.jarjar.@0
+rule com.android.input.flags.*FeatureFlags* com.android.permission.jarjar.@0
+rule com.android.input.flags.FeatureFlags* com.android.permission.jarjar.@0
+rule com.android.input.flags.FeatureFlags com.android.permission.jarjar.@0
+rule com.android.input.flags.Flags com.android.permission.jarjar.@0
 rule com.android.internal.** com.android.permission.jarjar.@0
 rule com.android.modules.** com.android.permission.jarjar.@0
 rule com.android.permission.flags.*FeatureFlags* com.android.permission.jarjar.@0
