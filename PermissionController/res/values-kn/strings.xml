@@ -200,7 +200,7 @@
     <string name="app_permission_title" msgid="2090897901051370711">"<xliff:g id="PERM">%1$s</xliff:g> ಅನುಮತಿ"</string>
     <string name="app_permission_header" msgid="2951363137032603806">"ಈ ಆ್ಯಪ್‌ಗಾಗಿ <xliff:g id="PERM">%1$s</xliff:g> ಆ್ಯಕ್ಸೆಸ್"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g> ನಲ್ಲಿ ಈ ಆ್ಯಪ್‌ಗಾಗಿ <xliff:g id="PERM">%1$s</xliff:g> ಆ್ಯಕ್ಸೆಸ್"</string>
-    <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"ಎಲ್ಲಾ <xliff:g id="APP">%1$s</xliff:g> ಅನುಮತಿಗಳನ್ನು ವೀಕ್ಷಿಸಿ"</string>
+    <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"<xliff:g id="APP">%1$s</xliff:g> ಆ್ಯಪ್‍ನ ಎಲ್ಲಾ ಅನುಮತಿಗಳನ್ನು ವೀಕ್ಷಿಸಿ"</string>
     <string name="app_permission_footer_permission_apps_link" msgid="3941988129992794327">"ಈ ಅನುಮತಿಯನ್ನು ಹೊಂದಿರುವ ಎಲ್ಲಾ ಆ್ಯಪ್‌ಗಳನ್ನು ವೀಕ್ಷಿಸಿ"</string>
     <string name="app_permission_info_button" msgid="8973692370208562556">"ಮಾಹಿತಿ"</string>
     <string name="app_permission_settings_button" msgid="4582916817451973752">"ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"ಆ್ಯಪ್‌ಗಳು"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"ಏಜೆಂಟ್ ಆ್ಯಕ್ಸೆಸ್"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"ಈ ಆ್ಯಪ್‌ನಲ್ಲಿ ಮಾಹಿತಿಯನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಬಹುದಾದ ಮತ್ತು ನಿಮಗಾಗಿ ಕ್ರಮಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದಾದ ಏಜೆಂಟ್‌ಗಳು"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"ಅನುಮತಿಸಲಾಗಿದೆ"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"ಅನುಮತಿಸಲಾಗುವುದಿಲ್ಲ"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"ಯಾವುದೇ ಏಜೆಂಟ್ ಆ್ಯಕ್ಸೆಸ್ ಅನ್ನು ಅನುಮತಿಸಲಾಗುವುದಿಲ್ಲ"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"ಯಾವುದೇ ಏಜೆಂಟ್ ಆ್ಯಕ್ಸೆಸ್ ಅನ್ನು ನಿರಾಕರಿಸಲಾಗಿಲ್ಲ"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"ಯಾವುದೇ ಆ್ಯಪ್ ಆ್ಯಕ್ಸೆಸ್ ಅನ್ನು ಅನುಮತಿಸಲಾಗುವುದಿಲ್ಲ"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"ಯಾವುದೇ ಆ್ಯಪ್ ಆ್ಯಕ್ಸೆಸ್ ಅನ್ನು ನಿರಾಕರಿಸಲಾಗಿಲ್ಲ"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"ಆ್ಯಪ್‌ಗೆ ಆ್ಯಕ್ಸೆಸ್"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"<xliff:g id="TARGET_APP_NAME">%1$s</xliff:g> ಗೆ ಆ್ಯಕ್ಸೆಸ್"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ಗೆ <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ಆ್ಯಕ್ಸೆಸ್"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"ಅನುಮತಿಸಿ"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"ಅನುಮತಿಸಬೇಡಿ"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"ಸಾಧನ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ಗೆ ಅನುಮತಿಸಬೇಕೇ?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"ಇದು <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ನಲ್ಲಿನ ಮಾಹಿತಿ ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು ಹಾಗೂ ಬಳಕೆದಾರರ ಪರವಾಗಿ ಕ್ರಮ ತೆಗೆದುಕೊಳ್ಳಲು <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ಗೆ ಅನುಮತಿಸುತ್ತದೆ."</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ಗೆ ಏಜೆಂಟ್ ಆಗಲು <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ಅನ್ನು ಅನುಮತಿಸಬೇಕೆ?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"ಈ ಏಜೆಂಟ್ ಮಾಹಿತಿ ಪಡೆಯಲು ಹಾಗೂ ನಿಮಗಾಗಿ ಕ್ರಮ ತೆಗೆದುಕೊಳ್ಳಲು <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ಅನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"ಅನುಮತಿಸಿ"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"ಅನುಮತಿಸಬೇಡಿ"</string>
 </resources>

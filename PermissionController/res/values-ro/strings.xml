@@ -633,7 +633,7 @@
     <string name="mic_toggle_description" msgid="9163104307990677157">"Pentru aplicații și servicii. Chiar dacă setarea e dezactivată, datele de la microfon pot fi trimise când suni la un număr de urgență."</string>
     <string name="location_settings_subtitle" msgid="2328360561197430695">"Vezi aplicațiile și serviciile care au acces la locație"</string>
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"Afișează accesările clipboardului"</string>
-    <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"Afișează un mesaj când aplicațiile accesează text, imagini sau alte tipuri de conținut pe care le-ai copiat"</string>
+    <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"Afișează un mesaj când aplicațiile accesează text, imagini sau alte tipuri de conținut pe care l-ai copiat"</string>
     <string name="show_password_title" msgid="2877269286984684659">"Afișează parolele"</string>
     <string name="show_password_summary" msgid="1110166488865981610">"Caracterele se afișează pentru scurt timp, pe măsură ce tastezi"</string>
     <string name="permission_rationale_message_location" msgid="2153841534298068414">"Aplicația afirmă că poate trimite terților date privind locațiile"</string>
@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Aplicații"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Acces pentru agenți"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agenți care pot să acceseze informații și să acționeze pentru tine în această aplicație"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"Permis"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"Nepermis"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"Nu este permis accesul agenților"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"Nu s-a refuzat accesul agenților"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"Nu este permis accesul aplicațiilor"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"Nu s-a refuzat accesul aplicațiilor"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"Acces la aplicație"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"Acces la <xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"Accesul <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> la <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"Permite"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"Nu permite"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Setările dispozitivului"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"Permiți ca <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> să acceseze <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"Astfel, <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> poate să acceseze informațiile din <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> și să acționeze în numele utilizatorului."</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Permiți ca <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> să fie agent pentru <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Acest agent va putea să acceseze <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> pentru a obține informații și a acționa pentru tine"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Permite"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Nu permite"</string>
 </resources>

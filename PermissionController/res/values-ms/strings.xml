@@ -659,9 +659,9 @@
     <string name="app_location_permission_rationale_subtitle" msgid="6986985722752868692">"Apl ini menyatakan bahawa data lokasi anda mungkin dikongsi dengan pihak ketiga"</string>
     <string name="data_sharing_updates_title" msgid="7996933386875213859">"Kemaskinian perkongsian data untuk lokasi"</string>
     <string name="data_sharing_updates_summary" msgid="764113985772233889">"Semak apl yang mengubah cara apl itu boleh berkongsi data lokasi anda"</string>
-    <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"Apl ini telah mengubah cara apl boleh berkongsi data lokasi anda. Apl mungkin tidak berkongsi data lokasi sebelum ini atau mungkin berkongsi data lokasi sekarang untuk tujuan pengiklanan atau pemasaran."</string>
+    <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"Apl ini telah mengubah cara berkongsi data lokasi anda. Sebelum ini apl mungkin tidak berkongsi data lokasi, tetapi sekarang apl mungkin berkongsi data lokasi untuk tujuan pengiklanan atau pemasaran."</string>
     <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Pembangun apl ini memberikan maklumat tentang amalan perkongsian data mereka kepada gedung apl. Mereka mungkin mengemaskinikan maklumat tersebut dari semasa ke semasa.\n\nAmalan perkongsian data mungkin berbeza-beza berdasarkan versi apl, penggunaan, wilayah dan umur anda."</string>
-    <string name="learn_about_data_sharing" msgid="4200480587079488045">"Ketahui tentang perkongsian data"</string>
+    <string name="learn_about_data_sharing" msgid="4200480587079488045">"Ketahui perkongsian data"</string>
     <string name="shares_location_with_third_parties" msgid="2278051743742057767">"Data lokasi anda kini dikongsi dengan pihak ketiga"</string>
     <string name="shares_location_with_third_parties_for_advertising" msgid="1918588064014480513">"Data lokasi anda kini dikongsi dengan pihak ketiga untuk pengiklanan atau pemasaran"</string>
     <string name="updated_in_last_days" msgid="8371811947153042322">"{count,plural, =0{Dikemaskinikan pada hari terakhir}=1{Dikemaskinikan pada hari terakhir}other{Dikemaskinikan dalam masa # hari}}"</string>
@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Apl"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Akses ejen"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Ejen yang boleh mengakses maklumat dan mengambil tindakan untuk anda dalam apl ini"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"Dibenarkan"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"Tidak dibenarkan"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"Tiada akses ejen yang dibenarkan"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"Tiada akses ejen yang ditolak"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"Tiada akses apl yang dibenarkan"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"Tiada akses apl ejen yang ditolak"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"Akses kepada apl"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"Akses kepada <xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"Akses <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> kepada <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"Benarkan"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"Jangan benarkan"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Tetapan Peranti"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"Benarkan <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> mengakses <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"Ciri ini membenarkan <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> mengakses maklumat <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> dan mengambil tindakan bagi pihak pengguna."</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Benarkan <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> untuk menjadi ejen bagi <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Ejen ini akan dapat mengakses <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> untuk mendapatkan maklumat dan mengambil tindakan untuk anda"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Benarkan"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Jangan benarkan"</string>
 </resources>

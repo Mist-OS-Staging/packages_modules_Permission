@@ -147,7 +147,7 @@
     <string name="permission_usage_any_permission" msgid="6358023078298106997">"Kaikki käyttöoikeudet"</string>
     <string name="permission_usage_any_time" msgid="3802087027301631827">"Milloin tahansa"</string>
     <string name="permission_usage_last_n_days" msgid="7882626467375714145">"{count,plural, =1{Edellinen päivä}other{Viimeiset # päivää}}"</string>
-    <string name="permission_usage_last_n_hours" msgid="8490466053680267858">"{count,plural, =1{Viimeisin tunti}other{Viimeiset # tuntia}}"</string>
+    <string name="permission_usage_last_n_hours" msgid="8490466053680267858">"{count,plural, =1{Viime tunti}other{# viime tuntia}}"</string>
     <string name="permission_usage_last_n_minutes" msgid="7817864229878281983">"{count,plural, =1{Viimeinen minuutti}other{Viimeiset # minuuttia}}"</string>
     <string name="no_permission_usages" msgid="9119517454177289331">"Käyttöoikeuksia ei käytetty"</string>
     <string name="permission_usage_list_title_any_time" msgid="8718257027381592407">"Viimeksi käytetyt koska tahansa"</string>
@@ -197,7 +197,7 @@
     <string name="approximate_image_description" msgid="938803699637069884">"Likimääräinen sijainti"</string>
     <string name="app_permission_location_accuracy" msgid="7166912915040018669">"Käytä tarkkaa sijaintia"</string>
     <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"Kun tarkka sijainti ei ole päällä, sovellukset voivat käyttää likimääräistä sijaintiasi"</string>
-    <string name="app_permission_title" msgid="2090897901051370711">"<xliff:g id="PERM">%1$s</xliff:g>lupa"</string>
+    <string name="app_permission_title" msgid="2090897901051370711">"<xliff:g id="PERM">%1$s</xliff:g> -lupa"</string>
     <string name="app_permission_header" msgid="2951363137032603806">"Sovellus pyytää <xliff:g id="PERM">%1$s</xliff:g>-lupaa"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"Tällä sovelluksella on pääsy (<xliff:g id="PERM">%1$s</xliff:g>) laitteella <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"Näytä kaikki luvat, jotka <xliff:g id="APP">%1$s</xliff:g> on saanut"</string>
@@ -552,7 +552,7 @@
     <string name="privdash_label_location" msgid="6882400763866489291">"Sijainti"</string>
     <string name="privdash_label_other" msgid="3710394147423236033">"Muu"</string>
     <string name="privdash_label_none" msgid="5991866260360484858">"–"</string>
-    <string name="privdash_label_24h" msgid="1512532123865375319">"Viimeiset\n24 tuntia"</string>
+    <string name="privdash_label_24h" msgid="1512532123865375319">"24\nviime tuntia"</string>
     <string name="privdash_label_7d" msgid="5645301995348656931">"7 viime\npäivää"</string>
     <string name="privdash_usage_percent" msgid="6893824766124414127">"<xliff:g id="PERMISSION_NAME">%1$s</xliff:g> <xliff:g id="PERCENT">%2$d</xliff:g> prosenttia"</string>
     <string name="exempt_mic_camera_info_label" msgid="6273581737010902815">"<xliff:g id="APP_NAME">%1$s</xliff:g> on Androidin suojaama. Koska datasi käsitellään tällä laitteella, sovelluksen lupien käyttö ei näy tilapalkissa eikä yksityisyydenhallintapaneelisi."</string>
@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Sovellukset"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Agentin pääsyoikeudet"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agentit, joilla on pääsy tietoihin ja jotka voivat tehdä toimintoja puolestasi tässä sovelluksessa"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"Sallittu"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"Ei sallittu"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"Agenttien pääsyä ei sallita"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"Agenttien pääsyä ei ole estetty"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"Sovellusten pääsyä ei sallita"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"Sovellusten pääsyä ei ole estetty"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"Pääsy sovellukseen"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"Pääsy sovellukseen: <xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"Sovelluksen (<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>) pääsy sovellukseen: <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"Salli"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"Älä salli"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Laiteasetukset"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"Saako <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> pääsyn (<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>)?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> saa pääsyn tietoihin (<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>) ja voi tehdä toimintoja käyttäjän puolesta."</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Salli <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> olla agentti (<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>)?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Agentti pääsee <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ‑sovellukseen tietojen hakemista ja toimintoja varten"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Salli"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Älä salli"</string>
 </resources>

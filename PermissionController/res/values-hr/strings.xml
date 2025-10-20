@@ -60,7 +60,7 @@
     <string name="grant_dialog_button_allow_all_files" msgid="4955436994954829894">"Omogući upravljanja svim datotekama"</string>
     <string name="grant_dialog_button_allow_media_only" msgid="4832877658422573832">"Omogući pristup medijskim datotekama"</string>
     <string name="app_permissions_breadcrumb" msgid="5136969550489411650">"Aplikacije"</string>
-    <string name="app_permissions" msgid="3369917736607944781">"Dopuštenja za aplikacije"</string>
+    <string name="app_permissions" msgid="3369917736607944781">"Dopuštenja aplikacije"</string>
     <string name="unused_apps" msgid="2058057455175955094">"Nekorištene aplikacije"</string>
     <string name="edit_photos_description" msgid="5540108003480078892">"Uređivanje odabranih fotografija za ovu aplikaciju"</string>
     <string name="no_unused_apps" msgid="12809387670415295">"Nema nekorištenih aplikacija"</string>
@@ -132,7 +132,7 @@
     <string name="perm_usage_adv_info_summary_2_items" msgid="3702175198750127822">"<xliff:g id="PERMGROUP_0">%1$s</xliff:g>, <xliff:g id="PERMGROUP_1">%2$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_summary_more_items" msgid="949055326299562218">"<xliff:g id="PERMGROUP_0">%1$s</xliff:g>, <xliff:g id="PERMGROUP_1">%2$s</xliff:g> i još <xliff:g id="NUM">%3$s</xliff:g>"</string>
     <string name="permission_group_usage_subtitle_24h" msgid="5120155996322114181">"Vremenski slijed u kojem su aplikacije koristile dopuštenje <xliff:g id="PERMGROUP">%1$s</xliff:g> u posljednja 24 sata"</string>
-    <string name="permission_group_usage_subtitle_7d" msgid="1465828402260324654">"Kad su aplikacije koristile dopuštenje <xliff:g id="PERMGROUP">%1$s</xliff:g> u posljednjih sedam dana"</string>
+    <string name="permission_group_usage_subtitle_7d" msgid="1465828402260324654">"Vremenski slijed u kojem su aplikacije koristile dopuštenje <xliff:g id="PERMGROUP">%1$s</xliff:g> u posljednjih sedam dana"</string>
     <string name="permission_usage_access_dialog_subtitle" msgid="4171772805196955753">"Kad je ova aplikacija koristili vaše dopuštenje <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="permission_usage_access_dialog_learn_more" msgid="7121468469493184613">"Saznajte više"</string>
     <string name="learn_more_content_description" msgid="8673699744544502539">"Saznajte što podrazumijeva <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
@@ -252,13 +252,13 @@
     <string name="app_permission_most_recent_denied_summary" msgid="7659497197737708112">"Trenutačno odbijeno/posljednji pristup: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="app_permission_never_accessed_summary" msgid="401346181461975090">"Nikad pristupljeno"</string>
     <string name="app_permission_never_accessed_denied_summary" msgid="6596000497490905146">"Odbijeno/nikad pristupljeno"</string>
-    <string name="allowed_header" msgid="7769277978004790414">"Imaju dopuštenje"</string>
+    <string name="allowed_header" msgid="7769277978004790414">"Dopušteno"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Pristup je dopušten cijelo vrijeme"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Imaju dopuštenje samo tijekom upotrebe"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Dopušten pristup samo medijima"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Dopušteno upravljanje svim datotekama"</string>
     <string name="ask_header" msgid="2633816846459944376">"Pitaj svaki put"</string>
-    <string name="denied_header" msgid="903209608358177654">"Nemaju dopuštenje"</string>
+    <string name="denied_header" msgid="903209608358177654">"Nije dopušteno"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>, <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Pogledajte koje još aplikacije imaju pristup svim datotekama"</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 dan}one{# dan}few{# dana}other{# dana}}"</string>
@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Aplikacije"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Pristup agenta"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agenti koji mogu pristupati informacijama i poduzimati radnje u ovoj aplikaciji u vaše ime"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"Dopušteno"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"Nije dopušteno"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"Nije dopušten nijedan pristup agenta"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"Nije odbijen nijedan pristup agenta"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"Nije dopušten nijedan pristup aplikaciji"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"Nije odbijen nijedan pristup aplikaciji"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"Pristup aplikaciji"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"Pristup aplikaciji <xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"Pristup aplikacije <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> aplikaciji <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"Dopusti"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"Nemoj dopustiti"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Postavke uređaja"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"Želite li aplikaciji <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> dopustiti pristup aplikaciji <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"To omogućuje aplikaciji <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> da pristupa podacima aplikacije <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> i poduzima radnje u ime korisnika."</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Dopuštate li da <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> bude agent za <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Ovaj će agent moći pristupati aplikaciji <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> da bi dobio podatke i poduzeo radnje umjesto vas"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Dopusti"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Nemoj dopustiti"</string>
 </resources>

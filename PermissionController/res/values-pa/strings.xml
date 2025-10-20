@@ -189,7 +189,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"ਸਿਰਫ਼ ਮੀਡੀਆ ਲਈ ਪਹੁੰਚ ਕਰਨ ਦਿਓ"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"ਹਰ ਵੇਲੇ ਕਰਨ ਦਿਓ"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"ਸਿਰਫ਼ ਐਪ ਵਰਤੇ ਜਾਣ ਵੇਲੇ ਕਰਨ ਦਿਓ"</string>
-    <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"ਹਮੇਸ਼ਾਂ ਸਭ ਦੀ ਇਜਾਜ਼ਤ ਹੈ"</string>
+    <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"ਹਮੇਸ਼ਾਂ ਸਭ ਦੀ ਆਗਿਆ ਦਿਓ"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"ਹਰ ਵਾਰ ਪੁੱਛੋ"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"ਨਾ ਕਰਨ ਦਿਓ"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"ਸੀਮਤ ਪਹੁੰਚ ਦੀ ਆਗਿਆ ਦਿਓ"</string>
@@ -198,7 +198,7 @@
     <string name="app_permission_location_accuracy" msgid="7166912915040018669">"ਸਹੀ ਟਿਕਾਣਾ ਵਰਤੋ"</string>
     <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"ਸਹੀ ਟਿਕਾਣੇ ਦੀ ਜਾਣਕਾਰੀ ਬੰਦ ਹੋਣ \'ਤੇ, ਐਪਾਂ ਤੁਹਾਡੇ ਅੰਦਾਜ਼ਨ ਟਿਕਾਣੇ ਦੀ ਜਾਣਕਾਰੀ ਤੱਕ ਪਹੁੰਚ ਕਰ ਸਕਦੀਆਂ ਹਨ"</string>
     <string name="app_permission_title" msgid="2090897901051370711">"<xliff:g id="PERM">%1$s</xliff:g> ਸੰਬੰਧੀ ਇਜਾਜ਼ਤ"</string>
-    <string name="app_permission_header" msgid="2951363137032603806">"ਇਸ ਐਪ ਲਈ <xliff:g id="PERM">%1$s</xliff:g> ਪਹੁੰਚ"</string>
+    <string name="app_permission_header" msgid="2951363137032603806">"ਇਸ ਐਪ ਨੂੰ <xliff:g id="PERM">%1$s</xliff:g> ਤੱਕ ਪਹੁੰਚ"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g> \'ਤੇ ਇਸ ਐਪ ਲਈ <xliff:g id="PERM">%1$s</xliff:g> ਦੀ ਪਹੁੰਚ"</string>
     <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"<xliff:g id="APP">%1$s</xliff:g> ਦੀਆਂ ਸਾਰੀਆਂ ਇਜਾਜ਼ਤਾਂ ਦੇਖੋ"</string>
     <string name="app_permission_footer_permission_apps_link" msgid="3941988129992794327">"ਇਸ ਇਜਾਜ਼ਤ ਵਾਲੀਆਂ ਸਾਰੀਆਂ ਐਪਾਂ ਦੇਖੋ"</string>
@@ -630,7 +630,7 @@
     <string name="camera_toggle_title" msgid="1251201397431837666">"ਕੈਮਰਾ ਪਹੁੰਚ"</string>
     <string name="mic_toggle_title" msgid="2649991093496110162">"ਮਾਈਕ੍ਰੋਫ਼ੋਨ ਤੱਕ ਪਹੁੰਚ"</string>
     <string name="perm_toggle_description" msgid="7801326363741451379">"ਐਪਾਂ ਅਤੇ ਸੇਵਾਵਾਂ ਲਈ"</string>
-    <string name="mic_toggle_description" msgid="9163104307990677157">"ਐਪਾਂ ਅਤੇ ਸੇਵਾਵਾਂ ਲਈ। ਇਸ ਸੈਟਿੰਗ ਦੇ ਬੰਦ ਹੋਣ \'ਤੇ, ਜਦੋਂ ਤੁਸੀਂ ਕਿਸੇ ਐਮਰਜੈਂਸੀ ਨੰਬਰ \'ਤੇ ਕਾਲ ਕਰਦੇ ਹੋ ਤਾਂ ਮਾਈਕ੍ਰੋਫ਼ੋਨ ਡਾਟੇ ਨੂੰ ਫਿਰ ਵੀ ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।"</string>
+    <string name="mic_toggle_description" msgid="9163104307990677157">"ਐਪਾਂ ਅਤੇ ਸੇਵਾਵਾਂ ਲਈ। ਇਸ ਸੈਟਿੰਗ ਦੇ ਬੰਦ ਹੋਣ \'ਤੇ, ਜਦੋਂ ਤੁਸੀਂ ਕਿਸੇ ਐਮਰਜੈਂਸੀ ਨੰਬਰ \'ਤੇ ਕਾਲ ਕਰਦੇ ਹੋ, ਤਾਂ ਮਾਈਕ੍ਰੋਫ਼ੋਨ ਡਾਟੇ ਨੂੰ ਫਿਰ ਵੀ ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।"</string>
     <string name="location_settings_subtitle" msgid="2328360561197430695">"ਉਨ੍ਹਾਂ ਐਪਾਂ ਅਤੇ ਸੇਵਾਵਾਂ ਨੂੰ ਦੇਖੋ ਜਿਨ੍ਹਾਂ ਕੋਲ ਟਿਕਾਣੇ ਤੱਕ ਪਹੁੰਚ ਹੈ"</string>
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"ਕਲਿੱਪਬੋਰਡ ਪਹੁੰਚ ਦਿਖਾਓ"</string>
     <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"ਜਦੋਂ ਐਪਾਂ ਲਿਖਤ, ਚਿੱਤਰ ਜਾਂ ਤੁਹਾਡੇ ਵੱਲੋਂ ਕਾਪੀ ਕੀਤੀ ਹੋਰ ਸਮੱਗਰੀ ਤੱਕ ਪਹੁੰਚ ਕਰਦੀਆਂ ਹਨ, ਤਾਂ ਕੋਈ ਸੁਨੇਹਾ ਦਿਖਾਓ"</string>
@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"ਐਪਾਂ"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"ਏਜੰਟ ਦੀ ਪਹੁੰਚ"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"ਉਹ ਏਜੰਟ, ਜੋ ਇਸ ਐਪ ਵਿੱਚ ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਤੱਕ ਪਹੁੰਚ ਕਰ ਸਕਦੇ ਹਨ ਅਤੇ ਤੁਹਾਡੀ ਤਰਫ਼ੋਂ ਕਾਰਵਾਈਆਂ ਕਰ ਸਕਦੇ ਹਨ"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"ਆਗਿਆ ਹੈ"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"ਆਗਿਆ ਨਹੀਂ ਹੈ"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"ਕਿਸੇ ਵੀ ਏਜੰਟ ਦੀ ਪਹੁੰਚ ਨੂੰ ਆਗਿਆ ਨਹੀਂ ਦਿੱਤੀ ਗਈ ਹੈ"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"ਕਿਸੇ ਵੀ ਏਜੰਟ ਦੀ ਪਹੁੰਚ ਨੂੰ ਅਸਵੀਕਾਰ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਹੈ"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"ਕਿਸੇ ਵੀ ਐਪ ਦੀ ਪਹੁੰਚ ਨੂੰ ਆਗਿਆ ਨਹੀਂ ਦਿੱਤੀ ਗਈ ਹੈ"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"ਕਿਸੇ ਵੀ ਐਪ ਦੀ ਪਹੁੰਚ ਨੂੰ ਅਸਵੀਕਾਰ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਹੈ"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"ਐਪ ਤੱਕ ਪਹੁੰਚ"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"<xliff:g id="TARGET_APP_NAME">%1$s</xliff:g> ਤੱਕ ਪਹੁੰਚ"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ਲਈ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ਤੱਕ ਪਹੁੰਚ"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"ਆਗਿਆ ਦਿਓ"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"ਆਗਿਆ ਨਾ ਦਿਓ"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"ਡੀਵਾਈਸ ਸੈਟਿੰਗਾਂ"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"ਕੀ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ਤੱਕ <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ਨੂੰ ਪਹੁੰਚ ਕਰਨ ਦੇਣੀ ਹੈ?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"ਇਸ ਨਾਲ <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ਨੂੰ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ਦੀ ਜਾਣਕਾਰੀ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਅਤੇ ਵਰਤੋਂਕਾਰ ਦੀ ਤਰਫ਼ੋਂ ਕਾਰਵਾਈਆਂ ਕਰਨ ਦੀ ਆਗਿਆ ਮਿਲਦੀ ਹੈ।"</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"ਕੀ <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ਨੂੰ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ਲਈ ਏਜੰਟ ਵਜੋਂ ਕੰਮ ਕਰਨ ਦੀ ਆਗਿਆ ਦੇਣੀ ਹੈ?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"ਇਹ ਏਜੰਟ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ਤੱਕ ਪਹੁੰਚ ਕਰ ਸਕੇਗਾ, ਤਾਂ ਜੋ ਇਹ ਤੁਹਾਨੂੰ ਜਾਣਕਾਰੀ ਦੇ ਸਕੇ ਅਤੇ ਤੁਹਾਡੇ ਲਈ ਕਾਰਵਾਈਆਂ ਕਰ ਸਕੇ"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"ਆਗਿਆ ਦਿਓ"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"ਆਗਿਆ ਨਾ ਦਿਓ"</string>
 </resources>

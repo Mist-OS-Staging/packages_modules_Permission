@@ -106,7 +106,7 @@
     <string name="permission_summary_disabled_by_admin_background_only" msgid="3127091456731845646">"管理员已停用后台使用权"</string>
     <string name="permission_summary_enabled_by_admin_background_only" msgid="9132423838440275757">"管理员已启用后台使用权"</string>
     <string name="permission_summary_enabled_by_admin_foreground_only" msgid="1298432715610745358">"管理员已启用前台使用权"</string>
-    <string name="permission_summary_enabled_system_fixed" msgid="2438344700184127274">"设备需要具有此权限才能运行"</string>
+    <string name="permission_summary_enabled_system_fixed" msgid="2438344700184127274">"设备需要此权限才能运行"</string>
     <!-- no translation found for background_access_chooser_dialog_choices:0 (1351721623256561996) -->
     <!-- no translation found for background_access_chooser_dialog_choices:1 (9127301153688725448) -->
     <!-- no translation found for background_access_chooser_dialog_choices:2 (4305536986042401191) -->
@@ -196,7 +196,7 @@
     <string name="precise_image_description" msgid="6349638632303619872">"确切位置"</string>
     <string name="approximate_image_description" msgid="938803699637069884">"大致位置"</string>
     <string name="app_permission_location_accuracy" msgid="7166912915040018669">"使用精确位置"</string>
-    <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"精确位置关闭时，应用可以获取您的大致位置"</string>
+    <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"精确位置处于关闭状态时，应用可获取您的大致位置"</string>
     <string name="app_permission_title" msgid="2090897901051370711">"<xliff:g id="PERM">%1$s</xliff:g>权限"</string>
     <string name="app_permission_header" msgid="2951363137032603806">"是否允许此应用获得“<xliff:g id="PERM">%1$s</xliff:g>”权限"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"此应用在<xliff:g id="DEVICE_NAME">%2$s</xliff:g>上的<xliff:g id="PERM">%1$s</xliff:g>访问权限"</string>
@@ -659,8 +659,8 @@
     <string name="app_location_permission_rationale_subtitle" msgid="6986985722752868692">"此应用已声明它可能会与第三方分享您的位置数据"</string>
     <string name="data_sharing_updates_title" msgid="7996933386875213859">"位置数据共享方面的更新"</string>
     <string name="data_sharing_updates_summary" msgid="764113985772233889">"查看改变了位置数据共享方式的应用"</string>
-    <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"这些应用改变了它们在分享您位置数据上的做法。它们之前可能未分享过位置数据，也可能现在是为了广告或营销目的而分享此类数据。"</string>
-    <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"这些应用的开发者已将其数据分享做法的相关信息提供给应用商店，并且可能会随时间更新此类信息。\n\n数据分享做法可能会因应用版本、使用情况、地区和年龄而异。"</string>
+    <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"这些应用更改了分享位置数据的做法。它们之前可能未分享过位置数据，也可能现在是为了广告或营销目的而分享位置数据。"</string>
+    <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"这些应用的开发者已将其数据分享做法的相关信息提供给应用商店，并且可能会随时间推移而更新此类信息。\n\n数据分享做法可能会因应用版本、使用情况、地区和年龄而异。"</string>
     <string name="learn_about_data_sharing" msgid="4200480587079488045">"了解数据分享"</string>
     <string name="shares_location_with_third_parties" msgid="2278051743742057767">"现在会将您的位置数据分享给第三方"</string>
     <string name="shares_location_with_third_parties_for_advertising" msgid="1918588064014480513">"现在会将您的位置数据分享给第三方，用于广告或营销目的"</string>
@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"应用"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"智能体访问权限"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"可在此应用中访问信息并为您执行操作的智能体"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"允许"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"不允许"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"未允许任何代理访问"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"未拒绝任何代理访问"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"未允许任何应用访问"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"未拒绝任何应用访问"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"对应用的访问"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"对“<xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>”的访问"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"“<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>”对“<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>”的访问"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"允许"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"不允许"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"设备设置"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"允许“<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>”访问“<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>”？"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"这会允许“<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>”访问“<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>”信息并代用户行动。"</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"要允许“<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>”作为智能体访问“<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>”吗？"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"此智能体将能够访问“<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>”，帮助您获取信息和执行操作"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"允许"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"不允许"</string>
 </resources>

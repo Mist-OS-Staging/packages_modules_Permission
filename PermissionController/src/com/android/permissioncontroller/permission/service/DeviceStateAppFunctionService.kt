@@ -19,7 +19,9 @@ package com.android.permissioncontroller.permission.service
 import android.Manifest
 import android.Manifest.permission.ACCESS_COARSE_LOCATION
 import android.Manifest.permission.ACCESS_FINE_LOCATION
+import android.app.KeyguardManager
 import android.app.appfunctions.AppFunctionException
+import android.app.appfunctions.AppFunctionException.ERROR_DENIED
 import android.app.appfunctions.AppFunctionException.ERROR_FUNCTION_NOT_FOUND
 import android.app.appfunctions.ExecuteAppFunctionRequest
 import android.app.appfunctions.ExecuteAppFunctionResponse
@@ -39,7 +41,8 @@ import androidx.lifecycle.ViewModelStore
 import androidx.lifecycle.ViewModelStoreOwner
 import androidx.lifecycle.lifecycleScope
 import com.android.permissioncontroller.appfunctions.AdditionalPermissionsScreen
-import com.android.permissioncontroller.appfunctions.AppPermissionScreen
+import com.android.permissioncontroller.appfunctions.AppPermissionGrantStateScreen
+import com.android.permissioncontroller.appfunctions.AppPermissionSettingScreen
 import com.android.permissioncontroller.appfunctions.AppPermissionsScreen
 import com.android.permissioncontroller.appfunctions.DefaultAppListScreen
 import com.android.permissioncontroller.appfunctions.DefaultAppScreen
@@ -115,6 +118,19 @@ class DeviceStateAppFunctionService :
             return
         }
 
+        if (
+            shouldCheckForDeviceLock(request.parameters) &&
+                applicationContext.getSystemService(KeyguardManager::class.java).isDeviceLocked
+        ) {
+            callback.onError(
+                AppFunctionException(
+                    ERROR_DENIED,
+                    "Attempting to execute a device state app function while " +
+                        "the device is locked.",
+                )
+            )
+        }
+
         lifecycleScope.launch {
             val jetpackDocument =
                 androidx.appsearch.app.GenericDocument.fromDocumentClass(buildDeviceStateResponse())
@@ -138,6 +154,12 @@ class DeviceStateAppFunctionService :
         val configuration = Configuration(resources.configuration)
         configuration.setLocale(Locale.US)
         return createConfigurationContext(configuration)
+    }
+
+    private fun shouldCheckForDeviceLock(params: GenericDocument): Boolean {
+        return params
+            .getPropertyDocument(APP_FUNCTION_PARAMS_KEY)
+            ?.getPropertyBoolean(REQUEST_INITIATED_WHILE_UNLOCKED_KEY) != true
     }
 
     private suspend fun buildDeviceStateResponse(): DeviceStateResponse {
@@ -178,33 +200,21 @@ class DeviceStateAppFunctionService :
                 }
             }
             AppPermissionsScreen.KEY -> {
-                val allPackages =
-                    packageManager
-                        .getInstalledPackagesAsUser(0, UserHandle.myUserId())
-                        .map { packageInfo -> packageInfo.packageName }
-                        .toList()
-
-                val result = coroutineScope {
-                    allPackages
-                        .map {
-                            async {
-                                AppPermissionsScreen(this@DeviceStateAppFunctionService, it)
-                                    .toPerScreenDeviceStates()
-                            }
-                        }
-                        .awaitAll()
-                }
-
-                if (DEBUG) {
-                    Log.i(
-                        TAG,
-                        "Time spent on ${AppPermissionsScreen.KEY} = ${System.currentTimeMillis() - startTime} ms",
-                    )
-                }
+                return listOf(AppPermissionsScreen(this).toPerScreenDeviceStates())
+            }
+            AppPermissionSettingScreen.KEY -> {
+                val result =
+                    SUPPORTED_PERMISSION_GROUPS.map { permissionGroup ->
+                        AppPermissionSettingScreen(
+                                this@DeviceStateAppFunctionService,
+                                permissionGroup,
+                            )
+                            .toPerScreenDeviceStates()
+                    }
 
                 return result
             }
-            AppPermissionScreen.KEY -> {
+            AppPermissionGrantStateScreen.KEY -> {
                 val filterBeginTimeMillis =
                     System.currentTimeMillis() -
                         TimeUnit.DAYS.toMillis(PERMISSION_USAGE_START_DAY_FROM_NOW)
@@ -223,6 +233,12 @@ class DeviceStateAppFunctionService :
                 )
 
                 val appPermissionUsages = permissionUsages.usages
+                if (DEBUG) {
+                    Log.i(
+                        TAG,
+                        "Time spent on fetching permission usages = ${System.currentTimeMillis() - startTime} ms",
+                    )
+                }
 
                 val result = coroutineScope {
                     SUPPORTED_PERMISSION_GROUPS.map { permissionGroup ->
@@ -234,7 +250,7 @@ class DeviceStateAppFunctionService :
                                 val deviceStateScreens = mutableListOf<PerScreenDeviceStates>()
                                 packagePermissionInfoMap.forEach { (packageInfo, permissionInfo) ->
                                     deviceStateScreens.add(
-                                        AppPermissionScreen(
+                                        AppPermissionGrantStateScreen(
                                                 context = this@DeviceStateAppFunctionService,
                                                 permissionGroup = permissionGroup,
                                                 packageName = packageInfo.first,
@@ -264,11 +280,10 @@ class DeviceStateAppFunctionService :
                         .awaitAll()
                         .flatten()
                 }
-
                 if (DEBUG) {
                     Log.i(
                         TAG,
-                        "Time spent on ${AppPermissionScreen.KEY} = ${System.currentTimeMillis() - startTime} ms",
+                        "Time spent on ${AppPermissionGrantStateScreen.KEY} = ${System.currentTimeMillis() - startTime} ms",
                     )
                 }
 
@@ -356,6 +371,13 @@ class DeviceStateAppFunctionService :
                             ?.filterNotNull()
                             ?.also { deviceStateScreens.addAll(it) }
                     }
+                }
+
+                if (DEBUG) {
+                    Log.i(
+                        TAG,
+                        "Time spent on ${DefaultAppScreen.KEY} = ${System.currentTimeMillis() - startTime} ms",
+                    )
                 }
 
                 return deviceStateScreens
@@ -496,6 +518,8 @@ class DeviceStateAppFunctionService :
     companion object {
         private const val TAG = "DeviceStateService"
         private const val APP_FUNCTION_IDENTIFIER = "getPermissionsDeviceState"
+        private const val APP_FUNCTION_PARAMS_KEY = "getPermissionsDeviceStateParams"
+        private const val REQUEST_INITIATED_WHILE_UNLOCKED_KEY = "requestInitiatedWhileUnlocked"
         private const val DEBUG = false
         private val SUPPORTED_PERMISSION_GROUPS =
             setOf(

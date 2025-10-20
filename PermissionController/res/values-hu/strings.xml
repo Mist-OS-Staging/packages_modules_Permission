@@ -189,14 +189,14 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Csak a médiatartalmakhoz való hozzáférés engedélyezése"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Mindig engedélyezett"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Csak az alkalmazás használatakor engedélyezett"</string>
-    <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Mindig az összes engedélyezése"</string>
+    <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Összes engedélyezése mindig"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Mindig kérdezzen rá"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Tiltás"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Korlátozott hozzáférés engedélyezése"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Pontos hely"</string>
     <string name="approximate_image_description" msgid="938803699637069884">"Hozzávetőleges hely"</string>
     <string name="app_permission_location_accuracy" msgid="7166912915040018669">"Pontos helyadatok használata"</string>
-    <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"Ha a pontos hely ki van kapcsolva, akkor az alkalmazások az Ön hozzávetőleges tartózkodási helyéhez férhetnek hozzá"</string>
+    <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"Ha a pontos hely ki van kapcsolva, akkor az alkalmazások az Ön hozzávetőleges tartózkodási helyéhez férhetnek hozzá."</string>
     <string name="app_permission_title" msgid="2090897901051370711">"<xliff:g id="PERM">%1$s</xliff:g> – engedély"</string>
     <string name="app_permission_header" msgid="2951363137032603806">"Alkalmazás hozzáférése a következőhöz: <xliff:g id="PERM">%1$s</xliff:g>"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"<xliff:g id="PERM">%1$s</xliff:g> – hozzáférés az alkalmazás számára a(z) <xliff:g id="DEVICE_NAME">%2$s</xliff:g> eszközön"</string>
@@ -574,7 +574,7 @@
     <string name="safety_center_rescan_button" msgid="4517514567809409596">"Eszközvizsgálat"</string>
     <string name="safety_center_issue_card_dismiss_button" msgid="5113965506144222402">"Elvetés"</string>
     <string name="safety_center_issue_card_dismiss_confirmation_title" msgid="2734809473425036382">"Elveti ezt az értesítést?"</string>
-    <string name="safety_center_issue_card_dismiss_confirmation_message" msgid="3775418736671093563">"Bármikor áttekintheti biztonsági és adatvédelmi beállításait, és növelheti a védelmet"</string>
+    <string name="safety_center_issue_card_dismiss_confirmation_message" msgid="3775418736671093563">"Bármikor áttekintheti biztonsági és adatvédelmi beállításait, és fokozhatja a védelmet"</string>
     <string name="safety_center_issue_card_confirm_dismiss_button" msgid="5884137843083634556">"Bezárás"</string>
     <string name="safety_center_issue_card_cancel_dismiss_button" msgid="2874578798877712346">"Mégse"</string>
     <string name="safety_center_entries_category_title" msgid="34356964062813115">"Beállítások"</string>
@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Alkalmazások"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Ügynöki hozzáférés"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Ügynökök, amelyek hozzáférhetnek az információkhoz, és műveleteket végezhetnek az Ön nevében ebben az alkalmazásban"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"Engedélyezve"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"Nem engedélyezett"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"Nincs engedélyezett ügynöki hozzáférés"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"Nincs megtagadott ügynöki hozzáférés"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"Nincs engedélyezett alkalmazás-hozzáférés"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"Nincs megtagadott alkalmazás-hozzáférés"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"Alkalmazás-hozzáférés"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"Hozzáférés a következőhöz: <xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> hozzáférése a következőhöz: <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"Engedélyezés"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"Tiltás"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Eszközbeállítások"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"Engedélyezi a(z) <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> számára, hogy hozzáférjen a következőhöz: <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"Ez lehetővé teszi a(z) <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> számára, hogy hozzáférjen a(z) <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> információihoz, és műveleteket végezzen a felhasználó nevében."</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Engedélyezi, hogy a(z) <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ügynök legyen a(z) <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> számára?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Ez az ügynök hozzáférhet majd a(z) <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> apphoz, hogy információt kérhessen le, és műveleteket hajthasson végre az Ön nevében."</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Engedélyezés"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Tiltás"</string>
 </resources>

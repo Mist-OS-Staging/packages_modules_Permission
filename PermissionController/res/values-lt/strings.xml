@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Programos"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Tarpininko prieiga"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Tarpininkai, galintys pasiekti informaciją ir atlikti veiksmus už jus šioje programoje"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"Leidžiama"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"Neleidžiama"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"Nėra leidžiamos tarpininko prieigos"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"Nėra atmestos tarpininko prieigos"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"Nėra leidžiamos programos prieigos"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"Nėra atmestos programos prieigos"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"Prieiga prie programos"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"Prieiga prie „<xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>“"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"„<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>“ prieiga prie „<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>“"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"Leisti"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"Neleisti"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Įrenginio nustatymai"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"Leisti „<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>“ pasiekti „<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>“?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"Tai leidžia „<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>“ pasiekti „<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>“ informaciją ir imtis veiksmų naudotojo vardu."</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Leisti programai „<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>“ būti „<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>“ tarpininku?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Šis tarpininkas galės pasiekti „<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>“, kad gautų informacijos ir imtųsi veiksmų jūsų vardu"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Leisti"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Neleisti"</string>
 </resources>

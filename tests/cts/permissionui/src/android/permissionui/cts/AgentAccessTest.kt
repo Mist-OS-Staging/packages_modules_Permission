@@ -17,10 +17,6 @@ package android.permissionui.cts
 
 import android.app.appfunctions.AppFunctionManager
 import android.app.appfunctions.AppFunctionManager.ACCESS_FLAG_MASK_ALL
-import android.app.appfunctions.AppFunctionManager.ACCESS_FLAG_USER_DENIED
-import android.app.appfunctions.AppFunctionManager.ACCESS_FLAG_USER_GRANTED
-import android.app.appfunctions.AppFunctionManager.ACCESS_REQUEST_STATE_DENIED
-import android.app.appfunctions.AppFunctionManager.ACCESS_REQUEST_STATE_GRANTED
 import android.app.appfunctions.AppFunctionManager.ACTION_MANAGE_AGENT_APP_FUNCTION_ACCESS
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
@@ -30,9 +26,10 @@ import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import androidx.test.filters.SdkSuppress
 import androidx.test.uiautomator.By
+import com.android.compatibility.common.util.DeviceConfigStateChangerRule
 import com.android.compatibility.common.util.SystemUtil.callWithShellPermissionIdentity
+import com.android.compatibility.common.util.SystemUtil.eventually
 import com.android.compatibility.common.util.SystemUtil.runWithShellPermissionIdentity
-import com.google.common.truth.Truth.assertThat
 import org.junit.After
 import org.junit.Assume.assumeFalse
 import org.junit.Before
@@ -48,6 +45,15 @@ import org.junit.Test
 )
 class AgentAccessTest : BaseUsePermissionTest() {
     @get:Rule val checkFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
+
+    @get:Rule
+    val setAgentAllowlistRule: DeviceConfigStateChangerRule =
+        DeviceConfigStateChangerRule(
+            context,
+            "machine_learning",
+            "allowlisted_app_functions_agents",
+            "android.permissionui.cts.appfunctions.agent",
+        )
 
     private val appFunctionManager = context.getSystemService(AppFunctionManager::class.java)!!
 
@@ -105,26 +111,36 @@ class AgentAccessTest : BaseUsePermissionTest() {
     }
 
     @Test
-    fun clickTargetApp_whenAccessDenied_grantAccess() {
-        testChangeAccess(ACCESS_FLAG_USER_DENIED, ACCESS_REQUEST_STATE_GRANTED)
-    }
-
-    @Test
-    fun clickTargetApp_whenAccessGranted_revokeAccess() {
-        testChangeAccess(ACCESS_FLAG_USER_GRANTED, ACCESS_REQUEST_STATE_DENIED)
-    }
-
-    private fun testChangeAccess(initialAccessFlags: Int, expectedAccessRequestState: Int) {
-        // Set granted/denied via API
-        setAppFunctionFlags(initialAccessFlags, AGENT_APP_PACKAGE_NAME, TARGET_APP_PACKAGE_NAME)
-
+    fun clickTargetApp_startsManageAccess() {
         startAppFunctionAgentAccessActivity()
 
         // Trigger grant/revoke access from setting entry
         try {
-            click(By.textContains(TARGET_APP_LABEL))
-            assertThat(getAccessRequestState(AGENT_APP_PACKAGE_NAME, TARGET_APP_PACKAGE_NAME))
-                .isEqualTo(expectedAccessRequestState)
+            doAndWaitForWindowTransition { click(By.textContains(TARGET_APP_LABEL)) }
+
+            // Manage Access title in collapsing toolbar requires descContains
+            findView(By.descContains(APP_FUNCTION_MANAGE_ACCESS_TITLE), true)
+        } finally {
+            pressBack()
+            pressBack()
+        }
+    }
+
+    @Test
+    fun targetAppAddedAndRemoved_uiStateUpdated() {
+        startAppFunctionAgentAccessActivity()
+
+        try {
+            // Verify target is shown initially
+            findView(By.textContains(TARGET_APP_LABEL), true)
+
+            // Uninstall target and verify it's not shown
+            uninstallPackage(TARGET_APP_PACKAGE_NAME)
+            eventually { findView(By.textContains(TARGET_APP_LABEL), false) }
+
+            // Install target and verify it's shown
+            installPackage(TARGET_APP_APK_PATH)
+            eventually { findView(By.textContains(TARGET_APP_LABEL), true) }
         } finally {
             pressBack()
         }
@@ -143,11 +159,6 @@ class AgentAccessTest : BaseUsePermissionTest() {
             }
         }
     }
-
-    private fun getAccessRequestState(agentPackageName: String, targetPackageName: String): Int =
-        callWithShellPermissionIdentity {
-            appFunctionManager.getAccessRequestState(agentPackageName, targetPackageName)
-        }
 
     private fun setAppFunctionFlags(
         flags: Int,
@@ -173,5 +184,7 @@ class AgentAccessTest : BaseUsePermissionTest() {
         private const val APP_FUNCTION_AGENT_ACCESS_TITLE = "App access"
         private const val APP_FUNCTION_AGENT_ACCESS_SUMMARY =
             "Apps and settings this agent can access to get info and take actions for you"
+
+        private const val APP_FUNCTION_MANAGE_ACCESS_TITLE = "Access to $TARGET_APP_LABEL"
     }
 }

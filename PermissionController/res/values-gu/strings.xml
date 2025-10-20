@@ -635,7 +635,7 @@
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"ક્લિપબોર્ડનો ઍક્સેસ બતાવો"</string>
     <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"જ્યારે ઍપ તમે કૉપિ કરેલી ટેક્સ્ટ, છબીઓ કે અન્ય કન્ટેન્ટનો ઍક્સેસ કરે, ત્યારે મેસેજ બતાવો"</string>
     <string name="show_password_title" msgid="2877269286984684659">"પાસવર્ડ બતાવો"</string>
-    <string name="show_password_summary" msgid="1110166488865981610">"તમે ટાઇપ કરો ત્યારે થોડા સમય માટે અક્ષરો બતાવો"</string>
+    <string name="show_password_summary" msgid="1110166488865981610">"તમે ટાઇપ કરો ત્યારે થોડા સમય માટે અક્ષરો ડિસ્પ્લે કરો"</string>
     <string name="permission_rationale_message_location" msgid="2153841534298068414">"આ ઍપ દ્વારા જણાવવામાં આવ્યું છે કે તે ત્રીજા પક્ષો સાથે લોકેશન ડેટા શેર કરી શકે છે"</string>
     <string name="permission_rationale_location_title" msgid="2404797182678793506">"ડેટા શેરિંગ અને લોકેશન"</string>
     <string name="permission_rationale_data_sharing_source_title" msgid="6874604543125814316">"ડેટા શેરિંગ સંબંધિત માહિતી ક્યાંથી આવે છે"</string>
@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"ઍપ"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"એજન્ટ ઍક્સેસ"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"આ ઍપમાં માહિતીનો ઍક્સેસ કરી શકે અને તમારા માટે પગલાં લઈ શકે તેવા એજન્ટ"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"મંજૂરી છે"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"મંજૂરી નથી"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"કોઈ એજન્ટ ઍક્સેસની મંજૂરી નથી"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"કોઈ એજન્ટ ઍક્સેસ નકારવામાં આવ્યો નથી"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"કોઈ ઍપ ઍક્સેસની મંજૂરી નથી"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"કોઈ ઍપ ઍક્સેસ નકારવામાં આવ્યો નથી"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"ઍપનો ઍક્સેસ"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"<xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>નો ઍક્સેસ"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> માટે <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>નો ઍક્સેસ"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"મંજૂરી આપો"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"મંજૂરી આપશો નહીં"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"ડિવાઇસના સેટિંગ"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>ને <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ઍક્સેસ કરવા દઈએ?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"આનાથી <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>ને <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>ની માહિતી ઍક્સેસ કરવાની અને વપરાશકર્તા વતી પગલાં લેવાની મંજૂરી મળશે."</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>ને <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> માટેના એજન્ટ બનવાની મંજૂરી આપીએ?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"માહિતી મેળવવા અને તમારા માટે પગલાં લેવા માટે આ એજન્ટ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ઍક્સેસ કરી શકશે"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"મંજૂરી આપો"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"મંજૂરી આપશો નહીં"</string>
 </resources>

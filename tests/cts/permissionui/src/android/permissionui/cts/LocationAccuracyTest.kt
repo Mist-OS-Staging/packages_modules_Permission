@@ -62,7 +62,7 @@ class LocationAccuracyTest : BaseUsePermissionTest() {
 
         requestAppPermissionsAndAssertResult(
             ACCESS_FINE_LOCATION to false,
-            ACCESS_COARSE_LOCATION to true
+            ACCESS_COARSE_LOCATION to true,
         ) {
             clickCoarseLocationRadioButton()
             clickPreciseLocationRadioButton()
@@ -80,12 +80,12 @@ class LocationAccuracyTest : BaseUsePermissionTest() {
         assertAppHasPermission(ACCESS_FINE_LOCATION, false)
         assertAppHasPermission(ACCESS_COARSE_LOCATION, false)
         assertAppHasPermission(ACCESS_BACKGROUND_LOCATION, false)
-        val waitForWindowTransition = SdkLevel.isAtLeastB();
+        val waitForWindowTransition = SdkLevel.isAtLeastB()
 
         requestAppPermissionsAndAssertResult(
             ACCESS_FINE_LOCATION to true,
             ACCESS_COARSE_LOCATION to true,
-            waitForWindowTransition = waitForWindowTransition
+            waitForWindowTransition = waitForWindowTransition,
         ) {
             clickPreciseLocationRadioButton()
             clickCoarseLocationRadioButton()
@@ -104,7 +104,7 @@ class LocationAccuracyTest : BaseUsePermissionTest() {
 
         requestAppPermissionsAndAssertResult(
             ACCESS_FINE_LOCATION to false,
-            ACCESS_COARSE_LOCATION to true
+            ACCESS_COARSE_LOCATION to true,
         ) {
             clickCoarseLocationRadioButton()
             clickPreciseLocationRadioButton()
@@ -115,7 +115,7 @@ class LocationAccuracyTest : BaseUsePermissionTest() {
         // now request again to change to precise location
         requestAppPermissionsAndAssertResult(
             ACCESS_FINE_LOCATION to true,
-            ACCESS_COARSE_LOCATION to true
+            ACCESS_COARSE_LOCATION to true,
         ) {
             clickPreciseLocationOnlyView()
             clickPermissionRequestAllowForegroundButton()
@@ -149,7 +149,7 @@ class LocationAccuracyTest : BaseUsePermissionTest() {
         assertAppHasPermission(ACCESS_FINE_LOCATION, false)
         requestAppPermissionsAndAssertResult(
             ACCESS_FINE_LOCATION to true,
-            waitForWindowTransition = false
+            waitForWindowTransition = false,
         ) {}
     }
 

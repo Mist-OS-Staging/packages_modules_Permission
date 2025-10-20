@@ -173,6 +173,10 @@ public class EnhancedConfirmationService extends SystemService {
     private Map<String, List<byte[]>> toTrustedPackageMap(Set<SignedPackage> signedPackages) {
         ArrayMap<String, List<byte[]>> trustedPackageMap = new ArrayMap<>();
         for (SignedPackage signedPackage : signedPackages) {
+            if (Flags.appFunctionAccessApiEnabled() && !signedPackage.hasCertificateDigest()) {
+                // certs are mandatory for ECM
+                continue;
+            }
             ArrayList<byte[]> certDigests = (ArrayList<byte[]>) trustedPackageMap.computeIfAbsent(
                     signedPackage.getPackageName(), packageName -> new ArrayList<>(1));
             certDigests.add(signedPackage.getCertificateDigest());

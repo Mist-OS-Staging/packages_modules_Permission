@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"ॲप्स"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"एजंट अ‍ॅक्सेस"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"या अ‍ॅपमधील माहिती अ‍ॅक्सेस करू शकणारे आणि तुमच्यासाठी कृती करू शकणारे एजंट"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"अनुमती आहे"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"अनुमती नाही"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"एजंट अ‍ॅक्सेसला अनुमती नाही"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"एजंट अ‍ॅक्सेस नाकारलेला नाही"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"अ‍ॅप अ‍ॅक्सेस करण्याची अनुमती नाही"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"अ‍ॅप अ‍ॅक्सेस करणे नाकारले नाही"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"अ‍ॅपचा अ‍ॅक्सेस"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"<xliff:g id="TARGET_APP_NAME">%1$s</xliff:g> चा अ‍ॅक्सेस"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ला <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> चा असलेला अ‍ॅक्सेस"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"अनुमती द्या"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"अनुमती देऊ नका"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"डिव्हाइस सेटिंग्ज"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ला <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ॲक्सेस करू द्यायचे का?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"यामुळे <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ला <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ची माहिती ॲक्सेस करता येते व वापरकर्त्याच्या वतीने कृती करता येतात."</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ला <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> चा एजंट म्हणून अनुमती द्यायची?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"हा एजंट तुमच्यासाठी माहिती मिळवण्याकरिता आणि कृती करण्यासाठी <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> अ‍ॅक्सेस करू शकेल"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"अनुमती द्या"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"अनुमती देऊ नका"</string>
 </resources>

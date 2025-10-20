@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Праграмы"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Доступ для агента"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Агенты, якія маюць доступ да інфармацыі і могуць выконваць дзеянні ад вашага імені ў гэтай праграме"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"Дазволена"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"Забаронена"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"Доступ агентаў забаронены"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"Доступ агентаў дазволены"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"Доступ праграм забаронены"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"Доступ праграм дазволены"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"Доступ да праграмы"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"Доступ да праграмы \"<xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>\""</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"Доступ праграмы \"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>\" да праграмы \"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>\""</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"Дазволіць"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"Не дазваляць"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Налады прылады"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>: даць доступ да \"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>\"?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"Праграма \"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>\" атрымае доступ да інфармацыі з праграмы \"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>\" і зможа выконваць дзеянні ад імя карыстальніка."</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"\"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>\" будзе агентам \"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>\""</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Доступ агента да \"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>\""</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Дазволіць"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Не дазваляць"</string>
 </resources>

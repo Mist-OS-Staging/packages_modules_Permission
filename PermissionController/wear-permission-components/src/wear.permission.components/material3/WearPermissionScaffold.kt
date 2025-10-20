@@ -28,7 +28,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.style.Hyphens
 import androidx.compose.ui.text.style.TextAlign
@@ -136,7 +135,7 @@ private class ScalingScopeConverter(private val scope: ScalingLazyListScope) : L
 @Composable
 fun WearPermissionScaffold(
     materialUIVersion: WearPermissionMaterialUIVersion = ResourceHelper.materialUIVersionInSettings,
-    asScalingList: Boolean = false,
+    asScalingList: Boolean = true,
     showTimeText: Boolean,
     title: String?,
     subtitle: CharSequence?,
@@ -240,13 +239,7 @@ private fun BoxScope.LazyColumnView(
     titleTestTag: String? = null,
     subtitleTestTag: String? = null,
 ) {
-    val screenWidth = LocalConfiguration.current.screenWidthDp
-    val screenHeight = LocalConfiguration.current.screenHeightDp
-    val paddingDefaults =
-        WearPermissionScaffoldPaddingDefaults(
-            screenWidth = screenWidth,
-            screenHeight = screenHeight,
-        )
+    val paddingDefaults = rememberPaddingDefaults()
     val scrollContentPadding =
         if (showTimeText) {
             paddingDefaults.scrollContentPadding
@@ -357,6 +350,7 @@ private fun ListScopeWrapper.titleItem(
                     text = it,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.optionalTestTag(testTag),
+                    maxLines = Int.MAX_VALUE,
                     style = style.copy(hyphens = Hyphens.Auto, lineHeight = 1.1.em),
                 )
             }

@@ -562,6 +562,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="com.android.permissioncontroller.appfunctions.ui.ManageAccessActivity"
+            android:enabled="@bool/is_at_least_v37"
+            android:exported="false"
+            android:label="@string/app_function_manage_access_default_title"
+            android:theme="@style/Theme.PermissionController.Settings.FilterTouches">
+        </activity>
+
         <provider android:name="com.android.permissioncontroller.permission.service.PermissionSearchIndexablesProvider"
             android:authorities="com.android.permissioncontroller"
             android:multiprocess="false"

@@ -16,8 +16,10 @@
 
 package com.android.permissioncontroller.appfunctions.ui
 
+import android.app.Activity
 import android.app.Dialog
 import android.content.DialogInterface
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.os.Process
 import android.view.LayoutInflater
@@ -30,10 +32,14 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.android.permissioncontroller.R
-import com.android.permissioncontroller.appfunctions.ui.viewmodel.RequestAccessUiState
+import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCase
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.RequestAppFunctionAccessViewModel
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.RequestAppFunctionAccessViewModelFactory
 import com.android.permissioncontroller.common.model.Stateful
+import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
 class RequestAppFunctionAccessFragment : DialogFragment() {
@@ -41,6 +47,7 @@ class RequestAppFunctionAccessFragment : DialogFragment() {
     private lateinit var targetPackageName: String
 
     private lateinit var viewModel: RequestAppFunctionAccessViewModel
+    private lateinit var getAppFunctionPackageInfoUseCase: GetAppFunctionPackageInfoUseCase
 
     private lateinit var agentIconView: ImageView
     private lateinit var targetIconView: ImageView
@@ -63,16 +70,50 @@ class RequestAppFunctionAccessFragment : DialogFragment() {
         val factory =
             RequestAppFunctionAccessViewModelFactory(
                 requireActivity().getApplication(),
-                Process.myUserHandle(),
                 agentPackageName,
                 targetPackageName,
             )
 
         viewModel =
             ViewModelProvider(this, factory).get(RequestAppFunctionAccessViewModel::class.java)
+
+        val packageRepository = PackageRepository.createInstance(requireContext())
+        getAppFunctionPackageInfoUseCase = GetAppFunctionPackageInfoUseCase(packageRepository)
+
         lifecycleScope.launch {
             lifecycle.repeatOnLifecycle(State.STARTED) {
-                viewModel.uiStateFlow.collect(::onUiStateChanged)
+                viewModel.uiStateFlow
+                    .map { uiState ->
+                        when (uiState) {
+                            is Stateful.Failure -> Stateful.Failure(throwable = uiState.throwable)
+                            is Stateful.Loading -> Stateful.Loading()
+                            is Stateful.Success -> {
+                                val agentPackageInfo =
+                                    getAppFunctionPackageInfoUseCase(
+                                        uiState.value.agentPackageName,
+                                        requireContext(),
+                                        Process.myUserHandle(),
+                                    )
+                                val targetPackageInfo =
+                                    getAppFunctionPackageInfoUseCase(
+                                        uiState.value.targetPackageName,
+                                        requireContext(),
+                                        Process.myUserHandle(),
+                                    )
+                                Stateful.Success(
+                                    RequestAccessRichUiState(
+                                        agentPackageInfo.label,
+                                        targetPackageInfo.label,
+                                        agentPackageInfo.icon,
+                                        targetPackageInfo.icon,
+                                        uiState.value.isRequestable,
+                                    )
+                                )
+                            }
+                        }
+                    }
+                    .flowOn(Dispatchers.Default)
+                    .collect(::onUiStateChanged)
             }
         }
     }
@@ -95,7 +136,7 @@ class RequestAppFunctionAccessFragment : DialogFragment() {
         return Dialog(activity).apply { setContentView(view) }
     }
 
-    private fun onUiStateChanged(uiState: Stateful<RequestAccessUiState>) {
+    private fun onUiStateChanged(uiState: Stateful<RequestAccessRichUiState>) {
         if (uiState is Stateful.Loading || uiState is Stateful.Failure) {
             // TODO: We should show a loading indicator in the dialog when in loading state
             return
@@ -123,22 +164,32 @@ class RequestAppFunctionAccessFragment : DialogFragment() {
 
     fun onAppFunctionGrant() {
         viewModel.grantAccess()
-        finish()
+        setResultAndFinish(Activity.RESULT_OK)
     }
 
     override fun onCancel(dialog: DialogInterface) {
         super.onCancel(dialog)
-        finish()
+        setResultAndFinish(Activity.RESULT_CANCELED)
     }
 
-    private fun finish() {
-        requireActivity().finish()
+    private fun setResultAndFinish(resultCode: Int) {
+        val activity = requireActivity()
+        activity.setResult(resultCode)
+        activity.finish()
     }
+
+    /** The data class for UI state of RequestAppFunctionAccess dialog. */
+    data class RequestAccessRichUiState(
+        val agentLabel: String,
+        val targetLabel: String,
+        val agentIcon: Drawable?,
+        val targetIcon: Drawable?,
+        val isRequestable: Boolean,
+    )
 
     companion object {
         private const val AGENT_PACKAGE_NAME = "AGENT_PACKAGE_NAME"
         private const val TARGET_PACKAGE_NAME = "TARGET_PACKAGE_NAME"
-        private const val LOG_TAG = "RequestAppFunctionAccessFragment"
 
         fun newInstance(
             agentPackageName: String,

@@ -190,7 +190,7 @@
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"כן, כל הזמן"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"רק כשהאפליקציה בשימוש"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"אישור של הכול תמיד"</string>
-    <string name="app_permission_button_ask" msgid="3342950658789427">"יש לשאול בכל פעם"</string>
+    <string name="app_permission_button_ask" msgid="3342950658789427">"צריך לשאול אותי בכל פעם"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"אין אישור"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"הרשאה לגישה מוגבלת"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"מיקום מדויק"</string>
@@ -200,7 +200,7 @@
     <string name="app_permission_title" msgid="2090897901051370711">"הרשאה: <xliff:g id="PERM">%1$s</xliff:g>"</string>
     <string name="app_permission_header" msgid="2951363137032603806">"לאפליקציה תהיה גישה ל<xliff:g id="PERM">%1$s</xliff:g>"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"גישה ל<xliff:g id="PERM">%1$s</xliff:g> לאפליקציה הזו ב<xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
-    <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"הצגת כל ההרשאות של \'<xliff:g id="APP">%1$s</xliff:g>\'"</string>
+    <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"כל ההרשאות של \"<xliff:g id="APP">%1$s</xliff:g>\""</string>
     <string name="app_permission_footer_permission_apps_link" msgid="3941988129992794327">"אני רוצה לראות את כל האפליקציות עם ההרשאה הזו"</string>
     <string name="app_permission_info_button" msgid="8973692370208562556">"מידע"</string>
     <string name="app_permission_settings_button" msgid="4582916817451973752">"הגדרות"</string>
@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"אפליקציות"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"גישת סוכן"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"סוכנים שיכולים לגשת למידע ולבצע פעולות בשמך באפליקציה הזו"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"יש הרשאה"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"אין הרשאה"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"אין הרשאת גישה לסוכנים"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"אין הרשאות גישה לסוכנים שנדחו"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"אין הרשאת גישה לאפליקציות"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"אין אפליקציות שבקשות הגישה שלהן נדחו"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"גישה לאפליקציה"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"גישה אל <xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"גישה של <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> אל <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"אישור"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"אין אישור"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"הגדרות המכשיר"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"לתת לאפליקציה <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> גישה אל <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"ההרשאה הזו מאפשרת ל-<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> לגשת למידע של <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ולבצע פעולות בשם המשתמש."</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"לאפשר לאפליקציה <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> לפעול כסוכנת ב-<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"הסוכן הזה יוכל להיכנס אל <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> כדי לקבל מידע ולבצע פעולות בשבילך"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"אישור"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"אין אישור"</string>
 </resources>

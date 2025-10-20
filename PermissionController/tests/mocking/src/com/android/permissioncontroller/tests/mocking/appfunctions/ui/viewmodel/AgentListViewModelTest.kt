@@ -16,21 +16,18 @@
 package com.android.permissioncontroller.tests.mocking.appfunctions.ui.viewmodel
 
 import android.os.Build
+import android.platform.test.annotations.RequiresFlagsEnabled
+import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
 import com.android.dx.mockito.inline.extended.ExtendedMockito
 import com.android.permissioncontroller.PermissionControllerApplication
 import com.android.permissioncontroller.appfunctions.data.repository.AppFunctionRepository
-import com.android.permissioncontroller.appfunctions.domain.model.AppFunctionPackageInfo
-import com.android.permissioncontroller.appfunctions.domain.usecase.GetAgentListUseCase
-import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCase
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.AgentListUiState
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.AgentListViewModel
 import com.android.permissioncontroller.common.model.Stateful
-import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
 import com.android.permissioncontroller.tests.mocking.appfunctions.data.repository.FakeAppFunctionRepository
 import com.android.permissioncontroller.tests.mocking.coroutines.collectLastValue
-import com.android.permissioncontroller.tests.mocking.pm.data.repository.FakePackageRepository
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.TestScope
@@ -38,9 +35,12 @@ import kotlinx.coroutines.test.runTest
 import org.junit.After
 import org.junit.Assert.assertTrue
 import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.ArgumentMatchers.any
 import org.mockito.Mock
+import org.mockito.Mockito.`when` as whenever
 import org.mockito.MockitoAnnotations
 import org.mockito.MockitoSession
 import org.mockito.quality.Strictness
@@ -51,13 +51,18 @@ import org.mockito.quality.Strictness
  * [AgentListViewModel]
  */
 @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
+@RequiresFlagsEnabled(
+    AgentListViewModelTest.FLAG_APP_FUNCTION_ACCESS_API_ENABLED,
+    AgentListViewModelTest.FLAG_APP_FUNCTION_ACCESS_UI_ENABLED,
+)
 @RunWith(AndroidJUnit4::class)
 class AgentListViewModelTest {
+    @get:Rule val checkFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
+
     @Mock private lateinit var application: PermissionControllerApplication
     private var mockitoSession: MockitoSession? = null
 
     private lateinit var appFunctionRepository: AppFunctionRepository
-    private lateinit var packageRepository: PackageRepository
 
     @Before
     fun setup() {
@@ -67,9 +72,12 @@ class AgentListViewModelTest {
                 .mockStatic(PermissionControllerApplication::class.java)
                 .strictness(Strictness.LENIENT)
                 .startMocking()
+        ExtendedMockito.doReturn(application).`when` { PermissionControllerApplication.get() }
+        whenever(application.applicationContext).thenReturn(application)
+        whenever(application.registerReceiverForAllUsers(any(), any(), any(), any()))
+            .thenReturn(null)
 
         appFunctionRepository = FakeAppFunctionRepository(agents = agentPackageNames)
-        packageRepository = FakePackageRepository(packagesAndLabels = agentPackagesAndLabels)
     }
 
     @After
@@ -79,20 +87,19 @@ class AgentListViewModelTest {
 
     @Test
     fun allAgentsShown() = runTest {
-        val expectedAgents =
-            agentPackagesAndLabels.map { AppFunctionPackageInfo(it.key, it.value, null) }
+        val expectedAgents = agentPackageNames
 
         val viewModel = getViewModel()
         val uiState = getAgentListUiState(viewModel)
 
         assertTrue(uiState is Stateful.Success)
-        assertThat(uiState.value!!.agents).containsExactlyElementsIn(expectedAgents)
+        assertThat(uiState.value!!.agentPackageNames).containsExactlyElementsIn(expectedAgents)
     }
 
     private fun TestScope.getViewModel(): AgentListViewModel {
         return AgentListViewModel(
             application,
-            getAgentListUseCase(),
+            appFunctionRepository,
             backgroundScope,
             StandardTestDispatcher(testScheduler),
         )
@@ -105,25 +112,16 @@ class AgentListViewModelTest {
         return result!!
     }
 
-    private fun getAgentListUseCase(): GetAgentListUseCase {
-        return GetAgentListUseCase(
-            appFunctionRepository,
-            GetAppFunctionPackageInfoUseCase(
-                FakePackageRepository(packagesAndLabels = agentPackagesAndLabels)
-            ),
-        )
-    }
-
     companion object {
+        // Flag lib changes has caused issues with jarjar and now annotations require the jarjar
+        // package prepended to the flag string
+        const val FLAG_APP_FUNCTION_ACCESS_API_ENABLED =
+            "com.android.permissioncontroller.jarjar.android.permission.flags.app_function_access_api_enabled"
+        const val FLAG_APP_FUNCTION_ACCESS_UI_ENABLED =
+            "com.android.permissioncontroller.jarjar.android.permission.flags.app_function_access_ui_enabled"
+
         private const val TEST_AGENT_PACKAGE_NAME = "test.agent.package"
         private const val TEST_AGENT_PACKAGE_NAME2 = "test.agent.package2"
-        private const val TEST_AGENT_LABEL = "Test Agent"
-        private const val TEST_AGENT_LABEL2 = "Test Agent 2"
         private val agentPackageNames = listOf(TEST_AGENT_PACKAGE_NAME, TEST_AGENT_PACKAGE_NAME2)
-        private val agentPackagesAndLabels =
-            mapOf(
-                TEST_AGENT_PACKAGE_NAME to TEST_AGENT_LABEL,
-                TEST_AGENT_PACKAGE_NAME2 to TEST_AGENT_LABEL2,
-            )
     }
 }

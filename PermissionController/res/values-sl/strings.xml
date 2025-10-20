@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Aplikacije"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Dostop agenta"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agenti, ki lahko dostopajo do informacij in izvajajo dejanja za vas v tej aplikaciji"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"Dovoljeno"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"Ni dovoljeno"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"Agentske aplikacije nimajo dostopa"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"Agentske aplikacije imajo dostop"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"Aplikacije nimajo dostopa"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"Aplikacije imajo dostop"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"Dostop do aplikacije"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"Dostop do ciljne aplikacije <xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"Dostop agentske aplikacije <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> do ciljne aplikacije <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"Dovoli"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"Ne dovoli"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Nastavitve naprave"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"Ali aplikaciji <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> dovolite dostop do aplikacije <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"Tako lahko <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> dostopa do podatkov v aplikaciji <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> in izvaja dejanja v imenu uporabnika."</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Ali dovolite, da agent <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> zastopa aplikacijo <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Ta agent bo lahko dostopal do aplikacije <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>, da bo pridobival informacije in izvajal dejanja za vas"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Dovoli"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Ne dovoli"</string>
 </resources>

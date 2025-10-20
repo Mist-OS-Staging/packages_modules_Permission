@@ -24,6 +24,7 @@ import android.app.appfunctions.ExecuteAppFunctionResponse
 import android.app.appsearch.GenericDocument
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Build
 import android.os.CancellationSignal
 import android.os.OutcomeReceiver
@@ -45,6 +46,7 @@ import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.test.runTest
 import org.junit.After
 import org.junit.Assert
+import org.junit.Assume
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -63,6 +65,10 @@ class DeviceStateAppFunctionServiceTest {
     private val packageManager = context.packageManager
     private val permissionControllerPackageName = packageManager.permissionControllerPackageName
 
+    private val isTv = packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK)
+    private val isWatch = packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)
+    private val isAutomotive = packageManager.hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE)
+
     private lateinit var appFunctionManager: AppFunctionManager
 
     @get:Rule val checkFlagsRule: CheckFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
@@ -76,8 +82,21 @@ class DeviceStateAppFunctionServiceTest {
             "3000",
         )
 
+    @get:Rule
+    val setAgentAllowlistRule: DeviceConfigStateChangerRule =
+        DeviceConfigStateChangerRule(
+            context,
+            "machine_learning",
+            "allowlisted_app_functions_agents",
+            context.packageName,
+        )
+
     @Before
     fun setUp() {
+        Assume.assumeFalse(isAutomotive)
+        Assume.assumeFalse(isTv)
+        Assume.assumeFalse(isWatch)
+
         appFunctionManager = context.getSystemService(AppFunctionManager::class.java)
         assertThat(appFunctionManager).isNotNull()
         installTestAppAndGrantPermission()
@@ -145,10 +164,12 @@ class DeviceStateAppFunctionServiceTest {
                     assertPermissionManagerScreen(it, screenValidations)
                 } else if (description.startsWith("Permission Manager:")) {
                     assertPermissionAppsScreen(it, screenValidations)
-                } else if (description.startsWith("App Permissions:")) {
+                } else if (description.startsWith("App Permissions Screen")) {
                     assertAppPermissionsScreen(it, screenValidations)
+                } else if (description.contains("permission setting screen for a package")) {
+                    assertAppPermissionSettingScreen(it, screenValidations)
                 } else if (description.matches("""\w+\sPermission:\s.*""".toRegex())) {
-                    assertAppPermissionScreen(it, screenValidations)
+                    assertAppPermissionGrantStateScreen(it, screenValidations)
                 } else if (description == "Unused apps") {
                     assertUnusedAppsScreen(it, screenValidations)
                 } else if (description.startsWith("Unused app details:")) {
@@ -196,23 +217,39 @@ class DeviceStateAppFunctionServiceTest {
         screen: GenericDocument,
         screenValidations: MutableMap<String, Boolean>,
     ) {
-        val intent = Intent.parseUri(screen.getPropertyString("intentUri"), 0)
+        val description = screen.getPropertyString("description")
+        val regex = """the intent uri is (.*)""".toRegex()
+        val matchResult = regex.find(description!!)
+        val intentUri = matchResult!!.groups[1]!!.value
+        val intent = Intent.parseUri(intentUri, 0)
         assertThat(intent.action).isEqualTo(ACTION_MANAGE_APP_PERMISSIONS)
+        assertThat(intent.getStringExtra(Intent.EXTRA_PACKAGE_NAME)).isEqualTo("\$packageName")
         assertThat(intent.getStringExtra(EXTRA_DEVICE_STATE_KEY)).isNotNull()
-        assertThat(intent.getStringExtra(Intent.EXTRA_PACKAGE_NAME)).isNotNull()
+
         screenValidations.putIfAbsent("AppPermissionsScreen", true)
     }
 
-    private fun assertAppPermissionScreen(
+    private fun assertAppPermissionSettingScreen(
         screen: GenericDocument,
         screenValidations: MutableMap<String, Boolean>,
     ) {
-        val intent = Intent.parseUri(screen.getPropertyString("intentUri"), 0)
+        val description = screen.getPropertyString("description")
+        val regex = """The intent uri is (.*)""".toRegex()
+        val matchResult = regex.find(description!!)
+        val intentUri = matchResult!!.groups[1]!!.value
+        val intent = Intent.parseUri(intentUri, 0)
         assertThat(intent.action).isEqualTo(ACTION_MANAGE_APP_PERMISSION)
+        assertThat(intent.getStringExtra(Intent.EXTRA_PACKAGE_NAME)).isEqualTo("\$packageName")
         assertThat(intent.getStringExtra(Intent.EXTRA_PERMISSION_GROUP_NAME)).isNotNull()
-        assertThat(intent.getStringExtra(Intent.EXTRA_PACKAGE_NAME)).isNotNull()
         assertThat(intent.getStringExtra(EXTRA_DEVICE_STATE_KEY)).isNotNull()
 
+        screenValidations.putIfAbsent("AppPermissionSettingScreen", true)
+    }
+
+    private fun assertAppPermissionGrantStateScreen(
+        screen: GenericDocument,
+        screenValidations: MutableMap<String, Boolean>,
+    ) {
         if (screen.getPropertyString("description") == "Location Permission: $TEST_PACKAGE_NAME") {
             val deviceStateItem = screen.getPropertyDocumentArray("deviceStateItems")!![0]
             assertThat(deviceStateItem.getPropertyString("key"))
@@ -220,7 +257,7 @@ class DeviceStateAppFunctionServiceTest {
             assertThat(deviceStateItem.getPropertyString("jsonValue")).isEqualTo("Always Allowed")
             assertThat(deviceStateItem.getPropertyDocument("name")!!.getPropertyString("english"))
                 .isEqualTo("Location access for this app")
-            screenValidations.putIfAbsent("AppPermissionScreen", true)
+            screenValidations.putIfAbsent("AppPermissionGrantStateScreen", true)
         }
     }
 
@@ -330,7 +367,8 @@ class DeviceStateAppFunctionServiceTest {
                 "PermissionManagerScreen",
                 "PermissionAppsScreen",
                 "AppPermissionsScreen",
-                "AppPermissionScreen",
+                "AppPermissionSettingScreen",
+                "AppPermissionGrantStateScreen",
                 "UnusedAppsScreen",
                 "AdditionalPermissionsScreen",
                 "DefaultAppListScreen",

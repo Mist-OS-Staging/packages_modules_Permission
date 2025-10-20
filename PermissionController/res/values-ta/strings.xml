@@ -197,7 +197,7 @@
     <string name="approximate_image_description" msgid="938803699637069884">"தோராயமான இருப்பிடம்"</string>
     <string name="app_permission_location_accuracy" msgid="7166912915040018669">"துல்லியமான இருப்பிடத்தைப் பயன்படுத்து"</string>
     <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"துல்லியமான இருப்பிடம் ஆஃப் செய்யப்பட்டிருக்கும்போது உங்கள் தோராயமான இருப்பிடத்தை ஆப்ஸ் அணுகலாம்"</string>
-    <string name="app_permission_title" msgid="2090897901051370711">"<xliff:g id="PERM">%1$s</xliff:g> என்பதற்கான அனுமதி"</string>
+    <string name="app_permission_title" msgid="2090897901051370711">"<xliff:g id="PERM">%1$s</xliff:g> அனுமதி"</string>
     <string name="app_permission_header" msgid="2951363137032603806">"இந்த ஆப்ஸிற்கு <xliff:g id="PERM">%1$s</xliff:g> அணுகல்"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g> சாதனத்தில் இந்த ஆப்ஸுக்கான <xliff:g id="PERM">%1$s</xliff:g> அணுகல்"</string>
     <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"அனைத்து <xliff:g id="APP">%1$s</xliff:g> அனுமதிகளையும் காட்டு"</string>
@@ -631,7 +631,7 @@
     <string name="mic_toggle_title" msgid="2649991093496110162">"மைக்ரோஃபோன் அணுகல்"</string>
     <string name="perm_toggle_description" msgid="7801326363741451379">"ஆப்ஸ் &amp; சேவைகளுக்கு"</string>
     <string name="mic_toggle_description" msgid="9163104307990677157">"ஆப்ஸ் &amp; சேவைகளுக்கு. இந்த அமைப்பு முடக்கப்பட்டிருந்தாலும் அவசர உதவி எண்ணை நீங்கள் அழைக்கும்போது மைக்ரோஃபோன் தரவு பகிரப்படலாம்."</string>
-    <string name="location_settings_subtitle" msgid="2328360561197430695">"இருப்பிடத்திற்கான அணுகலைக் கொண்ட ஆப்ஸையும் சேவைகளையும் பாருங்கள்"</string>
+    <string name="location_settings_subtitle" msgid="2328360561197430695">"இருப்பிடத்திற்கான அணுகலைக் கொண்ட ஆப்ஸையும் சேவைகளையும் பார்க்கலாம்"</string>
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"கிளிப்போர்டுக்கான அணுகலைக் காட்டுதல்"</string>
     <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"நீங்கள் நகலெடுத்த வார்த்தைகளையோ படங்களையோ பிறவற்றையோ ஆப்ஸ் அணுகும்போது ஓர் அறிவிப்பைக் காட்டும்"</string>
     <string name="show_password_title" msgid="2877269286984684659">"கடவுச்சொற்களைக் காட்டுதல்"</string>
@@ -658,7 +658,7 @@
     <string name="app_location_permission_rationale_title" msgid="925420340572401350">"இருப்பிடத் தரவு பகிரப்படலாம்"</string>
     <string name="app_location_permission_rationale_subtitle" msgid="6986985722752868692">"இந்த ஆப்ஸில் குறிப்பிட்டுள்ளபடி மூன்றாம் தரப்பினருடன் இருப்பிடத் தரவை இது பகிரலாம்"</string>
     <string name="data_sharing_updates_title" msgid="7996933386875213859">"இருப்பிடத்திற்கான தரவுப் பகிர்வு குறித்த அறிவிப்புகள்"</string>
-    <string name="data_sharing_updates_summary" msgid="764113985772233889">"உங்கள் இருப்பிடத் தரவைப் பகிரும் விதத்தை மாற்றிய ஆப்ஸ் எவை எனப் பாருங்கள்"</string>
+    <string name="data_sharing_updates_summary" msgid="764113985772233889">"உங்கள் இருப்பிடத் தரவைப் பகிரும் விதத்தை மாற்றிய ஆப்ஸ் எவை எனப் பார்க்கலாம்"</string>
     <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"உங்கள் இருப்பிடத் தரவைப் பகிரும் விதத்தை இந்த ஆப்ஸ் மாற்றியுள்ளன. இதற்குமுன் அவற்றைப் பகிராமல் இருந்திருக்கலாம் அல்லது விளம்பரப்படுத்தல், மார்கெட்டிங் போன்ற நோக்கங்களுக்காக இப்போது பகிரக்கூடும்."</string>
     <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"இந்த ஆப்ஸின் டெவெலப்பர்கள் தங்கள் தரவுப் பகிர்வு நடைமுறைகள் குறித்த தகவல்களை ஆப்ஸ்டோருக்கு வழங்கியுள்ளனர். காலப்போக்கில் அவற்றை அவர்கள் மாற்றக்கூடும்.\n\nஆப்ஸ் பதிப்பு, உபயோகம், பிராந்தியம், வயது ஆகியவற்றின் அடிப்படையில் தரவுப் பகிர்வு நடைமுறைகள் மாறுபடக்கூடும்."</string>
     <string name="learn_about_data_sharing" msgid="4200480587079488045">"தரவுப் பகிர்வு குறித்துத் தெரிந்துகொள்ளுங்கள்"</string>
@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"ஆப்ஸ்"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"ஏஜெண்ட் அணுகல்"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"இந்த ஆப்ஸில் தகவல்களை அணுகி உங்களுக்காகச் செயல்களைச் செய்யக்கூடிய ஏஜெண்ட்டுகள்"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"அனுமதிக்கப்பட்டது"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"அனுமதிக்கப்படவில்லை"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"ஏஜெண்ட் அணுகல்கள் அனுமதிக்கப்படவில்லை"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"ஏஜெண்ட் அணுகல்கள் மறுக்கப்படவில்லை"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"ஆப்ஸ் அணுகல்கள் அனுமதிக்கப்படவில்லை"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"ஆப்ஸ் அணுகல்கள் மறுக்கப்படவில்லை"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"ஆப்ஸுக்கான அணுகல்"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"<xliff:g id="TARGET_APP_NAME">%1$s</xliff:g> ஆப்ஸுக்கான அணுகல்"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ஆப்ஸுக்கான <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> அணுகல்"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"அனுமதி"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"அனுமதிக்காதே"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"சாதன அமைப்புகள்"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ஆப்ஸை <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> அணுக அனுமதிக்கவா?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> தகவல்களை அணுகவும் பயனரின் சார்பாகச் செயல்களைச் செய்யவும் <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ஆப்ஸை இது அனுமதிக்கிறது."</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ஆப்ஸுக்கு ஏஜெண்ட்டாக இருக்க <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> ஆப்ஸை அனுமதிக்கவா?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"உங்களுக்காகத் தகவல்களைப் பெற்று நடவடிக்கைகள் எடுக்க இந்த ஏஜெண்ட்டால் <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ஆப்ஸை அணுக முடியும்"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"அனுமதி"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"அனுமதிக்காதே"</string>
 </resources>

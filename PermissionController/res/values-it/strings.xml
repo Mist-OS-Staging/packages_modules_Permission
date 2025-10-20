@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"App"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Accesso agente"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agenti che possono accedere alle informazioni ed eseguire azioni per te in questa app"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"Consentito"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"Non consentito"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"Nessun accesso agente consentito"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"Nessun accesso agente negato"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"Nessun accesso app consentito"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"Nessun accesso app negato"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"Accesso all\'app"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"Accesso a: <xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"Accesso da <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> a <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"Consenti"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"Non consentire"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Impostazioni del dispositivo"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"Consentire all\'app <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> di accedere a <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"In questo modo, <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> può accedere alle informazioni di <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ed eseguire azioni per conto dell\'utente."</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Consentire a <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> di essere l\'agente per <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"L\'agente potrà accedere a <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> per ottenere informazioni ed eseguire azioni per te"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Consenti"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Non consentire"</string>
 </resources>

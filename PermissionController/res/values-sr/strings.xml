@@ -17,7 +17,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="6098036489833144040">"Контролер дозвола"</string>
-    <string name="ok" msgid="1936281769725676272">"Потврди"</string>
+    <string name="ok" msgid="1936281769725676272">"Важи"</string>
     <string name="permission_search_keyword" msgid="1214451577494730543">"дозволе"</string>
     <string name="cancel" msgid="8943320028373963831">"Откажи"</string>
     <string name="back" msgid="6249950659061523680">"Назад"</string>
@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Апликације"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Приступ агента"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Агенти који могу да приступају информацијама и предузимају радње уместо вас у овој апликацији"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"Дозвољено"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"Није дозвољено"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"Није дозвољен приступ ниједном агенту"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"Није одбијен приступ ниједном агенту"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"Није дозвољен приступ ниједној апликацији"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"Није одбијен приступ ниједној апликацији"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"Приступ апликацији"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"Приступ за: <xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"Приступ апликације <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> за: <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"Дозволи"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"Не дозволи"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Подешавања уређаја"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> има дозволу за приступ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"То омогућава да <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> приступа информацијама о <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> и обавља радње у име корисника."</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Желите ли да дозволите да <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> буде агент за апликацију <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Овај агент ће моћи да приступа апликацији <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> да би добијао информације и реаговао уместо вас"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Дозволи"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Не дозволи"</string>
 </resources>

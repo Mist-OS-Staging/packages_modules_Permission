@@ -132,7 +132,7 @@
     <string name="perm_usage_adv_info_summary_2_items" msgid="3702175198750127822">"<xliff:g id="PERMGROUP_0">%1$s</xliff:g>, <xliff:g id="PERMGROUP_1">%2$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_summary_more_items" msgid="949055326299562218">"<xliff:g id="PERMGROUP_0">%1$s</xliff:g>, <xliff:g id="PERMGROUP_1">%2$s</xliff:g> eta beste <xliff:g id="NUM">%3$s</xliff:g>"</string>
     <string name="permission_group_usage_subtitle_24h" msgid="5120155996322114181">"Azken 24 orduetan aplikazioek <xliff:g id="PERMGROUP">%1$s</xliff:g> noiz erabili duten adierazten duen kronologia"</string>
-    <string name="permission_group_usage_subtitle_7d" msgid="1465828402260324654">"Azken zazpi egunetan aplikazioek <xliff:g id="PERMGROUP">%1$s</xliff:g> noiz erabili duten adierazten duen kronologia"</string>
+    <string name="permission_group_usage_subtitle_7d" msgid="1465828402260324654">"Azken 7 egunetan aplikazioek <xliff:g id="PERMGROUP">%1$s</xliff:g> noiz erabili duten adierazten duen kronologia"</string>
     <string name="permission_usage_access_dialog_subtitle" msgid="4171772805196955753">"Aplikazioak noiz erabili duen <xliff:g id="PERMGROUP">%1$s</xliff:g> erabiltzeko baimena"</string>
     <string name="permission_usage_access_dialog_learn_more" msgid="7121468469493184613">"Lortu informazio gehiago"</string>
     <string name="learn_more_content_description" msgid="8673699744544502539">"Lortu <xliff:g id="PERMGROUP">%1$s</xliff:g> baimenari buruzko informazio gehiago"</string>
@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Aplikazioak"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Agenteen sarbidea"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Informazioa atzi dezaketen eta aplikazio honetan zure ordez ekintzak egin ditzaketen agenteak"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"Baimena dauka"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"Ez dauka baimenik"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"Ez zaie eman baimenik agenteei"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"Ez zaie ukatu baimenik agenteei"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"Ez zaie eman baimenik aplikazioei"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"Ez zaie ukatu baimenik aplikazioei"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"Aplikaziorako sarbidea"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"<xliff:g id="TARGET_APP_NAME">%1$s</xliff:g> aplikaziorako sarbidea"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> aplikazioak <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> aplikaziorako duen sarbidea"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"Eman baimena"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"Ez eman baimenik"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Gailuaren ezarpenak"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> atzitzeko baimena eman nahi diozu <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> aplikazioari?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"Honi esker, <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> aplikazioak <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> aplikazioko informazioa atzi dezake, eta zure izenean neurriak hartu."</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> aplikaziorako agente izateko baimena eman nahi diozu <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> aplikazioari?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Agente honek <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> atzitu ahalko du informazioa lortzeko eta zure izenean neurriak hartzeko"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Eman baimena"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Ez eman baimenik"</string>
 </resources>

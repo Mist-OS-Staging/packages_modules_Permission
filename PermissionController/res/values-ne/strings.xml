@@ -47,8 +47,8 @@
     <string name="allow_permission_foreground_only" msgid="116465816039675404">"एप प्रयोग गर्दा मात्र"</string>
     <string name="allow_permission_always" msgid="5194342531206054051">"सधैँ"</string>
     <string name="deny_permission_deny_and_dont_ask_again" msgid="6106035221490102341">"अनुमति नदिनुहोस् र फेरि नसोध्नुहोस्"</string>
-    <string name="permission_revoked_count" msgid="4785082705441547086">"<xliff:g id="COUNT">%1$d</xliff:g> अनुमति असक्षम पारिएको छ"</string>
-    <string name="permission_revoked_all" msgid="3397649017727222283">"सबै अनुमति असक्षम पारिएको छ"</string>
+    <string name="permission_revoked_count" msgid="4785082705441547086">"<xliff:g id="COUNT">%1$d</xliff:g> अनुमति अफ गरिएको छ"</string>
+    <string name="permission_revoked_all" msgid="3397649017727222283">"सबै अनुमति अफ गरिएको छ"</string>
     <string name="permission_revoked_none" msgid="9213345075484381180">"कुनै पनि असक्षम पारिएको छैन"</string>
     <string name="grant_dialog_button_allow" msgid="5314677880021102550">"अनुमति दिनुहोस्"</string>
     <string name="grant_dialog_button_allow_always" msgid="4485552579273565981">"सधैँ अनुमति दिनुहोस्"</string>
@@ -198,7 +198,7 @@
     <string name="app_permission_location_accuracy" msgid="7166912915040018669">"सटीक लोकेसन प्रयोग गर्नुहोस्"</string>
     <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"सटीक लोकेसन अफ हुँदा एपहरूलाई मेरो अनुमानित लोकेसन प्रयोग गर्न दिनुहोस्"</string>
     <string name="app_permission_title" msgid="2090897901051370711">"<xliff:g id="PERM">%1$s</xliff:g>सम्बन्धी अनुमति"</string>
-    <string name="app_permission_header" msgid="2951363137032603806">"यो एप <xliff:g id="PERM">%1$s</xliff:g> प्रयोग गर्ने अनुमति दिने वा नदिने"</string>
+    <string name="app_permission_header" msgid="2951363137032603806">"यो एपलाई <xliff:g id="PERM">%1$s</xliff:g> प्रयोग गर्ने अनुमति दिने वा नदिने"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"यो एपलाई <xliff:g id="DEVICE_NAME">%2$s</xliff:g> को <xliff:g id="PERM">%1$s</xliff:g> प्रयोग गर्ने अनुमति"</string>
     <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"<xliff:g id="APP">%1$s</xliff:g> सँग भएका सबै अनुमति हेर्नुहोस्"</string>
     <string name="app_permission_footer_permission_apps_link" msgid="3941988129992794327">"यो अनुमति पाएका सबै एपहरू हेर्नुहोस्"</string>
@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"एपहरू"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"एजेन्ट एक्सेस"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"तपाईंका लागि यो एपमा जानकारी एक्सेस गर्न र कारबाहीहरू गर्न सक्ने एजेन्टहरू"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"अनुमति दिइएको"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"अनुमति नदिइएको"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"कुनै पनि एजेन्टलाई एक्सेस दिइएको छैन"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"सबै एजेन्टलाई एक्सेस दिइएको छ"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"कुनै पनि एपलाई एक्सेस दिइएको छैन"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"सबै एपलाई एक्सेस दिइएको छ"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"एपको एक्सेस"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"<xliff:g id="TARGET_APP_NAME">%1$s</xliff:g> को एक्सेस"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> लाई दिइएको <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> को एक्सेस"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"अनुमति दिनुहोस्"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"अनुमति नदिनुहोस्"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"डिभाइसका सेटिङ"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> लाई <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> एक्सेस गर्ने अनुमति दिने हो?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"यसले <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> लाई <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> सम्बन्धी जानकारी एक्सेस गर्ने र प्रयोगकर्ताका तर्फबाट कारबाही गर्ने अनुमति दिन्छ।"</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> लाई <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> को एजेन्ट बन्ने अनुमति दिने हो?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"यो एजेन्टले जानकारी प्राप्त गर्न र तपाईंका तर्फबाट कारबाहीहरू गरिदिनका निम्ति <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> एक्सेस गर्न सक्ने छ"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"अनुमति दिनुहोस्"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"अनुमति नदिनुहोस्"</string>
 </resources>

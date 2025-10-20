@@ -32,7 +32,7 @@ class RequestAccessActivity : FragmentActivity() {
                 "App Function isn't enabled: Either the platform is not supported " +
                     "or the UI flag FLAG_APP_FUNCTION_ACCESS_UI_ENABLED isn't enabled.",
             )
-            finish()
+            setResultAndFinish(RESULT_CANCELED)
             return
         }
 
@@ -49,7 +49,7 @@ class RequestAccessActivity : FragmentActivity() {
                 "Unknown/Invalid agent/target package. " +
                     "Target package: $targetPackageName. Agent package: $agentPackageName.",
             )
-            finish()
+            setResultAndFinish(RESULT_CANCELED)
             return
         }
 
@@ -58,6 +58,11 @@ class RequestAccessActivity : FragmentActivity() {
         val fragment =
             RequestAppFunctionAccessFragment.newInstance(agentPackageName, targetPackageName)
         supportFragmentManager.beginTransaction().add(fragment, null).commit()
+    }
+
+    private fun setResultAndFinish(resultCode: Int) {
+        setResult(resultCode)
+        finish()
     }
 
     companion object {

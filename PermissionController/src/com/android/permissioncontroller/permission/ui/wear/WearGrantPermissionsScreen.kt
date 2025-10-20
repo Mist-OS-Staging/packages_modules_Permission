@@ -23,7 +23,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.res.stringResource
 import androidx.core.util.size
-import androidx.wear.compose.material3.Dialog
 import androidx.wear.compose.material3.LocalContentColor
 import com.android.permissioncontroller.R
 import com.android.permissioncontroller.permission.ui.GrantPermissionsActivity.ALLOW_ALWAYS_BUTTON
@@ -47,7 +46,6 @@ import com.android.permissioncontroller.wear.permission.components.material3.Wea
 import com.android.permissioncontroller.wear.permission.components.material3.WearPermissionToggleControl
 import com.android.permissioncontroller.wear.permission.components.material3.WearPermissionToggleControlType
 import com.android.permissioncontroller.wear.permission.components.theme.ResourceHelper
-import com.android.permissioncontroller.wear.permission.components.theme.WearPermissionMaterialUIVersion.MATERIAL3
 
 @Composable
 fun WearGrantPermissionsScreen(
@@ -120,29 +118,12 @@ fun WearGrantPermissionsScreen(
 fun setContent(
     composeView: ComposeView,
     viewModel: WearGrantPermissionsViewModel,
-    onCancelled: () -> Unit,
     onButtonClicked: (Int) -> Unit,
     onLocationSwitchChanged: (Boolean) -> Unit,
 ) {
     composeView.setContent {
-        if (ResourceHelper.materialUIVersionInApp == MATERIAL3) {
-            AsDialog(viewModel, onCancelled) {
-                WearGrantPermissionsScreen(viewModel, onButtonClicked, onLocationSwitchChanged)
-            }
-        } else {
-            WearGrantPermissionsScreen(viewModel, onButtonClicked, onLocationSwitchChanged)
-        }
+        WearGrantPermissionsScreen(viewModel, onButtonClicked, onLocationSwitchChanged)
     }
-}
-
-@Composable
-private fun AsDialog(
-    viewModel: WearGrantPermissionsViewModel,
-    onDismissRequest: () -> Unit,
-    content: @Composable () -> Unit,
-) {
-    val showDialog = viewModel.showDialog.observeAsState(false)
-    Dialog(visible = showDialog.value, onDismissRequest = onDismissRequest, content = content)
 }
 
 @Composable

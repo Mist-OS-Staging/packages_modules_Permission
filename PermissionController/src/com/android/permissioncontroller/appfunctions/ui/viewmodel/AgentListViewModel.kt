@@ -22,11 +22,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.CreationExtras
 import com.android.permissioncontroller.appfunctions.data.repository.AppFunctionRepository
-import com.android.permissioncontroller.appfunctions.domain.model.AppFunctionPackageInfo
-import com.android.permissioncontroller.appfunctions.domain.usecase.GetAgentListUseCase
-import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCase
 import com.android.permissioncontroller.common.model.Stateful
-import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
+import com.android.permissioncontroller.data.repository.v31.PackageChangeListener
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -36,20 +33,32 @@ import kotlinx.coroutines.launch
 
 class AgentListViewModel(
     application: Application,
-    private val getAgentListUseCase: GetAgentListUseCase,
+    private val appFunctionRepository: AppFunctionRepository,
     scope: CoroutineScope? = null,
-    dispatcher: CoroutineDispatcher = Dispatchers.Default,
+    private val dispatcher: CoroutineDispatcher = Dispatchers.Default,
 ) : AndroidViewModel(application) {
     private val coroutineScope = scope ?: viewModelScope
+
+    private val packageChangeListener = PackageChangeListener(::refresh)
 
     // Backing property to avoid state updates from other classes
     private val _uiStateFlow = MutableStateFlow<Stateful<AgentListUiState>>(Stateful.Loading())
     val uiStateFlow: StateFlow<Stateful<AgentListUiState>> = _uiStateFlow
 
     init {
+        packageChangeListener.register()
+        refresh()
+    }
+
+    override fun onCleared() {
+        packageChangeListener.unregister()
+    }
+
+    private fun refresh() {
         coroutineScope.launch(dispatcher) {
             try {
-                _uiStateFlow.value = Stateful.Success(AgentListUiState(getAgentListUseCase()))
+                val agentPackageNames = appFunctionRepository.getValidAgents()
+                _uiStateFlow.value = Stateful.Success(AgentListUiState(agentPackageNames))
             } catch (e: Exception) {
                 _uiStateFlow.value = Stateful.Failure(throwable = e)
             }
@@ -57,17 +66,13 @@ class AgentListViewModel(
     }
 }
 
-data class AgentListUiState(val agents: List<AppFunctionPackageInfo> = emptyList())
+data class AgentListUiState(val agentPackageNames: List<String> = emptyList())
 
 /** Factory for [AgentListViewModel]. */
 class AgentListViewModelFactory(private val application: Application) : ViewModelProvider.Factory {
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>, extras: CreationExtras): T {
         val appFunctionRepository = AppFunctionRepository.getInstance(application)
-        val packageRepository = PackageRepository.getInstance(application)
-        val getAppFunctionPackageInfoUseCase = GetAppFunctionPackageInfoUseCase(packageRepository)
-        val getAgentListUseCase =
-            GetAgentListUseCase(appFunctionRepository, getAppFunctionPackageInfoUseCase)
-        return AgentListViewModel(application, getAgentListUseCase) as T
+        return AgentListViewModel(application, appFunctionRepository) as T
     }
 }

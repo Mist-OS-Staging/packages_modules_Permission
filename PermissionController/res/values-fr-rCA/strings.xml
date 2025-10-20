@@ -24,7 +24,7 @@
     <string name="dialog_close" msgid="6840699812532384661">"Fermer"</string>
     <string name="available" msgid="6007778121920339498">"Accessible"</string>
     <string name="blocked" msgid="9195547604866033708">"Bloqué"</string>
-    <string name="on" msgid="280241003226755921">"Activé"</string>
+    <string name="on" msgid="280241003226755921">"Activée"</string>
     <string name="off" msgid="1438489226422866263">"Désactivé"</string>
     <string name="uninstall_or_disable" msgid="4496612999740858933">"Désinstaller ou désactiver"</string>
     <string name="app_not_found_dlg_title" msgid="6029482906093859756">"Appli non trouvée"</string>
@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Applis"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Accès de l\'agent"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Les agents qui peuvent accéder à des informations et effectuer des actions pour vous dans cette appli"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"Autorisé"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"Non autorisé"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"Aucun accès d\'agent autorisé"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"Aucun accès d\'agent refusé"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"Aucun accès aux applis autorisé"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"Aucun accès aux applis refusé"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"Accès à l\'appli"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"Accès à <xliff:g id="TARGET_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"Accès à <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> par le biais de <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"Autoriser"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"Ne pas autoriser"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Paramètres de l\'appareil"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"Autor. <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> à accéd. à <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"Permet à <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> d\'acc. aux infos de <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> et d\'effectuer des actions pour l\'utilisat."</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Autor. <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> comme agent pour <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Cet agent pourra acc. à <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> pour obtenir des infos et exécuter des actions"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Autoriser"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Interdire"</string>
 </resources>

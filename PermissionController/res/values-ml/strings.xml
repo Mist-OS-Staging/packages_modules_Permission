@@ -714,9 +714,20 @@
     <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"ആപ്പുകൾ"</string>
     <string name="app_function_target_access_title" msgid="7415628605578155761">"ഏജന്റ് ആക്സസ്"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"ഈ ആപ്പിൽ വിവരങ്ങൾ ആക്സസ് ചെയ്യാനും നിങ്ങൾക്കായി പ്രവർത്തനങ്ങൾ നടത്താനും കഴിയുന്ന ഏജന്റുകൾ"</string>
+    <string name="app_function_access_allowed_header" msgid="139473645426829908">"അനുവദിച്ചു"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"അനുവദിച്ചില്ല"</string>
+    <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"ഏജന്റ് ആക്‌സസുകളൊന്നും അനുവദിച്ചില്ല"</string>
+    <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"ഏജന്റ് ആക്‌സസുകളെല്ലാം നിരസിച്ചു"</string>
+    <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"ആപ്പ് ആക്‌സസുകളൊന്നും അനുവദിച്ചില്ല"</string>
+    <string name="app_function_target_access_none_denied_title" msgid="3717686680310691344">"ആപ്പ് ആക്‌സസുകളെല്ലാം നിരസിച്ചു"</string>
+    <string name="app_function_manage_access_default_title" msgid="2992299728169265212">"ആപ്പിലേക്കുള്ള ആക്‌സസ്"</string>
+    <string name="app_function_manage_access_title" msgid="5805361194157907463">"<xliff:g id="TARGET_APP_NAME">%1$s</xliff:g> എന്നതിലേക്കുള്ള ആക്‌സസ്"</string>
+    <string name="app_function_manage_access_radiobutton_group_title" msgid="995463553024931659">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> എന്നതിലേക്കുള്ള <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> എന്നതിന്റെ ആക്‌സസ്"</string>
+    <string name="manage_app_function_access_allow" msgid="957884395966109578">"അനുവദിക്കുക"</string>
+    <string name="manage_app_function_access_dont_allow" msgid="4282220224010484177">"അനുവദിക്കരുത്"</string>
     <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"ഉപകരണ ക്രമീകരണം"</string>
-    <string name="request_app_function_access_dialog_title" msgid="6549957496184641967">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ആക്സസ് ചെയ്യാൻ <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> എന്നതിനെ അനുവദിക്കണോ?"</string>
-    <string name="request_app_function_access_dialog_description" msgid="8841298093381343286">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> വിവരങ്ങൾ ആക്സസ് ചെയ്യാനും ഉപയോക്താവിനായി നടപടിയെടുക്കാനും <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> എന്നതിനെ ഇത് അനുവദിക്കുന്നു."</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>-ന്റെ ഏജന്റാകാൻ <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>-നെ അനുവദിക്കണോ?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"വിവരങ്ങൾ നേടാനും നിങ്ങൾക്കായി പ്രവർത്തനങ്ങൾ നടത്താനും ഈ ഏജന്റിന് <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ആക്സസ് ചെയ്യാനാകും"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"അനുവദിക്കുക"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"അനുവദിക്കരുത്"</string>
 </resources>

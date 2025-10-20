@@ -116,6 +116,16 @@
         <option name="push" value="CtsAppThatRequestsSystemAlertWindow23.apk->/data/local/tmp/cts-permission/CtsAppThatRequestsSystemAlertWindow23.apk" />
         <option name="push" value="CtsAppThatRequestCustomCameraPermission.apk->/data/local/tmp/cts-permission/CtsAppThatRequestCustomCameraPermission.apk" />
         <option name="push" value="CtsAppThatRequestsDevicePermissions.apk->/data/local/tmp/cts-permission/CtsAppThatRequestsDevicePermissions.apk" />
+        <option name="push"
+            value="CtsAppThatRequestPermissionWithInvalidPurpose37.apk->/data/local/tmp/cts-permission/CtsAppThatRequestPermissionWithInvalidPurpose37.apk" />
+        <option name="push"
+            value="CtsAppThatRequestPermissionWithNoPurpose37.apk->/data/local/tmp/cts-permission/CtsAppThatRequestPermissionWithNoPurpose37.apk" />
+        <option name="push"
+            value="CtsAppThatRequestPermissionWithValidPurpose37.apk->/data/local/tmp/cts-permission/CtsAppThatRequestPermissionWithValidPurpose37.apk" />
+        <option name="push"
+            value="CtsAppThatRequestPermissionWithNoPurposeOldTargetSdk36.apk->/data/local/tmp/cts-permission/CtsAppThatRequestPermissionWithNoPurposeOldTargetSdk36.apk" />
+        <option name="push"
+            value="CtsAppThatRequestPermissionWithNoPurposeUsingMinMaxAttrs37.apk->/data/local/tmp/cts-permission/CtsAppThatRequestPermissionWithNoPurposeUsingMinMaxAttrs37.apk" />
     </target_preparer>
 
     <!-- Remove additional apps if installed -->
