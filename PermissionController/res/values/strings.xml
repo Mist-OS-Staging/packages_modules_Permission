@@ -2207,4 +2207,15 @@
     <string name="assist_structure_setting_description">Allow <xliff:g id="assistant_app_name" example="Example Assistant App">%1$s</xliff:g> to access the screen and data shared by the visible app</string>
 
     <!-- END ASSIST STRUCTURE SETTINGS  -->
+
+    <!-- START LOCATION BUTTON GRANT DIALOG -->
+
+    <!-- Label for the allow button for location button permissions request dialog. -->
+    <string name="request_location_button_permissions_dialog_button_allow">Allow</string>
+    <!-- Label for the deny button for location button permissions request dialog. -->
+    <string name="request_location_button_permissions_dialog_button_dont_allow">Don\u2019t allow</string>
+    <!-- Label for the title of location button permissions request dialog. -->
+    <string name="request_location_button_permissions_dialog_title">Allow &lt;b><xliff:g id="app_name" example="Gmail">%1$s</xliff:g>&lt;/b> to access precise location using a location button?</string>
+
+    <!-- END LOCATION BUTTON GRANT DIALOG -->
 </resources>
