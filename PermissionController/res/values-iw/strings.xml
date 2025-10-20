@@ -355,7 +355,7 @@
     <string name="accessibility_service_dialog_title_multiple" msgid="5527879210683548175">"ל-<xliff:g id="NUM_SERVICES">%s</xliff:g> אפליקציות נגישות יש גישה מלאה אל המכשיר שלך"</string>
     <string name="accessibility_service_dialog_bottom_text_single" msgid="1128666197822205958">"השירות <xliff:g id="SERVICE_NAME">%s</xliff:g> יכול להציג את המסך, הפעולות ופריטי הפלט שלך, וכן לבצע פעולות ולשלוט בתצוגה."</string>
     <string name="accessibility_service_dialog_bottom_text_multiple" msgid="7009848932395519852">"האפליקציות האלה יכולות להציג את המסך, הפעולות והקלט שלך, וכן לבצע פעולות ולשלוט בתצוגה."</string>
-    <string name="role_assistant_label" msgid="4727586018198208128">"עוזר דיגיטלי כברירת המחדל"</string>
+    <string name="role_assistant_label" msgid="4727586018198208128">"עוזר אישי כברירת המחדל"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"אפליקציית עוזר דיגיטלי"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"אפליקציות של עוזרים אישיים יכולות לסייע לפי המידע שמופיע על במסך. יש אפליקציות שתומכות גם בשירותי מרכז אפליקציות וגם בקלט קולי כדי לספק סיוע משולב."</string>
     <string name="role_assistant_recommended_title" msgid="2093873159106905257">"בהמלצת <xliff:g id="OEM_NAME">%s</xliff:g>"</string>
