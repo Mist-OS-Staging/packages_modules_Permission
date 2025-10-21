@@ -325,19 +325,24 @@ package android.safetycenter {
   public final class SafetyCenterStaticEntry implements android.os.Parcelable {
     method public int describeContents();
     method @Nullable public android.app.PendingIntent getPendingIntent();
+    method @FlaggedApi("android.permission.flags.open_safety_center_apis") @Nullable public String getSafetySourceId();
     method @Nullable public CharSequence getSummary();
     method @NonNull public CharSequence getTitle();
+    method @FlaggedApi("android.permission.flags.open_safety_center_apis") @Nullable public android.os.UserHandle getUser();
     method public void writeToParcel(@NonNull android.os.Parcel, int);
     field @NonNull public static final android.os.Parcelable.Creator<android.safetycenter.SafetyCenterStaticEntry> CREATOR;
   }
 
   public static final class SafetyCenterStaticEntry.Builder {
-    ctor public SafetyCenterStaticEntry.Builder(@NonNull CharSequence);
+    ctor @Deprecated @FlaggedApi("android.permission.flags.open_safety_center_apis") public SafetyCenterStaticEntry.Builder(@NonNull CharSequence);
+    ctor @FlaggedApi("android.permission.flags.open_safety_center_apis") public SafetyCenterStaticEntry.Builder(@NonNull CharSequence, @NonNull android.os.UserHandle, @NonNull String);
     ctor public SafetyCenterStaticEntry.Builder(@NonNull android.safetycenter.SafetyCenterStaticEntry);
     method @NonNull public android.safetycenter.SafetyCenterStaticEntry build();
     method @NonNull public android.safetycenter.SafetyCenterStaticEntry.Builder setPendingIntent(@Nullable android.app.PendingIntent);
+    method @FlaggedApi("android.permission.flags.open_safety_center_apis") @NonNull public android.safetycenter.SafetyCenterStaticEntry.Builder setSafetySourceId(@NonNull String);
     method @NonNull public android.safetycenter.SafetyCenterStaticEntry.Builder setSummary(@Nullable CharSequence);
     method @NonNull public android.safetycenter.SafetyCenterStaticEntry.Builder setTitle(@NonNull CharSequence);
+    method @FlaggedApi("android.permission.flags.open_safety_center_apis") @NonNull public android.safetycenter.SafetyCenterStaticEntry.Builder setUser(@NonNull android.os.UserHandle);
   }
 
   public final class SafetyCenterStaticEntryGroup implements android.os.Parcelable {
