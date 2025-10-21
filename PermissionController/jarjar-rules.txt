@@ -34,6 +34,10 @@ rule android.os.*FeatureFlags* com.android.permissioncontroller.jarjar.@0
 rule android.os.FeatureFlags* com.android.permissioncontroller.jarjar.@0
 rule android.os.FeatureFlags com.android.permissioncontroller.jarjar.@0
 rule android.os.Flags com.android.permissioncontroller.jarjar.@0
+rule android.security.*FeatureFlags* com.android.permissioncontroller.jarjar.@0
+rule android.security.FeatureFlags* com.android.permissioncontroller.jarjar.@0
+rule android.security.FeatureFlags com.android.permissioncontroller.jarjar.@0
+rule android.security.Flags com.android.permissioncontroller.jarjar.@0
 rule android.view.contentprotection.flags.*FeatureFlags* com.android.permissioncontroller.jarjar.@0
 rule android.view.contentprotection.flags.FeatureFlags* com.android.permissioncontroller.jarjar.@0
 rule android.view.contentprotection.flags.FeatureFlags com.android.permissioncontroller.jarjar.@0
