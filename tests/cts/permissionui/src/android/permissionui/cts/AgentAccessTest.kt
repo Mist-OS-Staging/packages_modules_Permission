@@ -26,7 +26,6 @@ import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import androidx.test.filters.SdkSuppress
 import androidx.test.uiautomator.By
-import com.android.compatibility.common.util.DeviceConfigStateChangerRule
 import com.android.compatibility.common.util.SystemUtil.callWithShellPermissionIdentity
 import com.android.compatibility.common.util.SystemUtil.eventually
 import com.android.compatibility.common.util.SystemUtil.runWithShellPermissionIdentity
@@ -46,14 +45,16 @@ import org.junit.Test
 class AgentAccessTest : BaseUsePermissionTest() {
     @get:Rule val checkFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
 
-    @get:Rule
+    // Uncomment this once the agent allowlist can be updated. Currently causing a failure due to
+    // DeviceConfigStateChangerRule being evaluated when required flags are disabled
+    /* @get:Rule
     val setAgentAllowlistRule: DeviceConfigStateChangerRule =
         DeviceConfigStateChangerRule(
             context,
             "machine_learning",
             "allowlisted_app_functions_agents",
             "android.permissionui.cts.appfunctions.agent",
-        )
+        ) */
 
     private val appFunctionManager = context.getSystemService(AppFunctionManager::class.java)!!
 
