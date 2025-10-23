@@ -143,7 +143,11 @@ public final class SafetyCenterEntry implements Parcelable {
                     if (Flags.openSafetyCenterApis()) {
                         UserHandle user = in.readTypedObject(UserHandle.CREATOR);
                         String safetySourceId = in.readString();
-                        builder = new Builder(id, title, user, safetySourceId);
+                        if (user != null && safetySourceId != null) {
+                            builder = new Builder(id, title, user, safetySourceId);
+                        } else {
+                            builder = new Builder(id, title);
+                        }
                     } else {
                         builder = new Builder(id, title);
                     }
@@ -240,7 +244,8 @@ public final class SafetyCenterEntry implements Parcelable {
         return mEnabled;
     }
 
-    /** Returns whether this entry has an error.
+    /**
+     * Returns whether this entry has an error.
      *
      * <p>When an error is present, this object hasn't received the latest status from the safety
      * feature it's related to because of an error during the refresh process. This is to
