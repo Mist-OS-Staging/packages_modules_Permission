@@ -16,7 +16,7 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="permission_description_summary_contacts" msgid="2757597696923097587">"Las apps con este permiso pueden acceder a tus contactos y ver la lista de cuentas que pueden guardar contactos en este dispositivo"</string>
+    <string name="permission_description_summary_contacts" msgid="2757597696923097587">"Las aplicaciones con este permiso pueden acceder a tus contactos y ver la lista de cuentas que pueden guardar contactos en este dispositivo"</string>
     <string name="permgrouprequest_contacts" msgid="4011412821869715229">"¿Permitir que &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; acceda a los contactos y las cuentas de este dispositivo?"</string>
     <string name="permgrouprequestdetail_contacts" msgid="3314989542973932720">"Esta app podrá acceder a tus contactos y ver la lista de tus cuentas que pueden guardar contactos"</string>
     <string name="permgrouprequest_device_aware_contacts" msgid="2668046201497840127">"¿Permitir que &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; acceda a los contactos y las cuentas de &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;?"</string>
