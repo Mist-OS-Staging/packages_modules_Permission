@@ -76,6 +76,9 @@ import com.android.role.controller.model.Roles;
 
 import kotlin.Pair;
 
+import kotlinx.coroutines.BuildersKt;
+import kotlinx.coroutines.GlobalScope;
+
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlSerializer;
 
@@ -96,9 +99,6 @@ import java.util.concurrent.Executor;
 import java.util.function.Consumer;
 import java.util.function.IntConsumer;
 import java.util.stream.Collectors;
-
-import kotlinx.coroutines.BuildersKt;
-import kotlinx.coroutines.GlobalScope;
 
 /**
  * Calls from the system into the permission controller.
@@ -693,12 +693,14 @@ public final class PermissionControllerServiceImpl extends PermissionControllerL
         long requestId = Utils.getValidSessionId();
         for (AppPermissionGroup group : groups) {
             AppPermissionGroup bgGroup = group.getBackgroundPermissions();
+            // Revoke only one time granted permissions if not all
+            Set<String> oneTimeGrantedPermissions = null;
             if (group.areRuntimePermissionsGranted(null, true, false)) {
                 logOneTimeSessionRevoke(packageName, uid, group, requestId);
                 // Revoke only one time granted permissions if not all
-                List<String> oneTimeGrantedPermissions = group.getPermissions().stream()
+                oneTimeGrantedPermissions = group.getPermissions().stream()
                         .filter(Permission::isOneTime).filter(Permission::isGranted)
-                        .map(Permission::getName).collect(Collectors.toList());
+                        .map(Permission::getName).collect(Collectors.toSet());
                 if (group.getPermissions().size() == oneTimeGrantedPermissions.size()) {
                     group.revokeRuntimePermissions(false);
                 } else {
@@ -731,15 +733,21 @@ public final class PermissionControllerServiceImpl extends PermissionControllerL
                     }
                 }
             }
+            if (oneTimeGrantedPermissions == null) {
+                Log.w(LOG_TAG, "No permission granted as one time in " + group.getName());
+                continue;
+            }
             if (!group.supportsOneTimeGrant()) {
                 group.setOneTime(false);
             }
-            group.persistChanges(false, ONE_TIME_PERMISSION_REVOKED_REASON);
+            group.persistChanges(false, ONE_TIME_PERMISSION_REVOKED_REASON,
+                    oneTimeGrantedPermissions);
             if (bgGroup != null) {
                 if (!bgGroup.supportsOneTimeGrant()) {
                     bgGroup.setOneTime(false);
                 }
-                bgGroup.persistChanges(false, ONE_TIME_PERMISSION_REVOKED_REASON);
+                bgGroup.persistChanges(false, ONE_TIME_PERMISSION_REVOKED_REASON,
+                        oneTimeGrantedPermissions);
             }
         }
     }
