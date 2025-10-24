@@ -3499,6 +3499,16 @@
     <permission android:name="android.permission.INTERACT_ACROSS_PROFILES"
         android:protectionLevel="signature|appop" />
 
+    <!-- Required to be able to interact with other applications over loopback interface.
+         @FlaggedApi(android.permission.flags.Flags.FLAG_USE_LOOPBACK_INTERFACE_PERMISSION_ENABLED)
+         <p>Protection level: normal -->
+    <permission
+        android:name="android.permission.USE_LOOPBACK_INTERFACE"
+        android:description="@string/permdesc_use_loopback_interface"
+        android:label="@string/permlab_use_loopback_interface"
+        android:protectionLevel="normal"
+        android:featureFlag="android.permission.flags.use_loopback_interface_permission_enabled" />
+
     <!-- Allows applications to access profiles with
         {@code android.content.pm.UserProperties#PROFILE_API_VISIBILITY_HIDDEN} user property, e.g.
         {@link android.os.UserManager#USER_TYPE_PROFILE_PRIVATE}.
