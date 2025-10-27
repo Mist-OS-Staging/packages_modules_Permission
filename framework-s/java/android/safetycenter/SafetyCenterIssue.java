@@ -36,8 +36,8 @@ import android.os.UserHandle;
 import android.permission.flags.Flags;
 import android.safetycenter.config.SafetySourcesGroup;
 import android.text.TextUtils;
-
 import android.util.ArraySet;
+
 import androidx.annotation.RequiresApi;
 
 import com.android.modules.utils.build.SdkLevel;
@@ -108,7 +108,13 @@ public final class SafetyCenterIssue implements Parcelable {
                         UserHandle user = in.readTypedObject(UserHandle.CREATOR);
                         Set<String> safetySourceIds = new ArraySet<>(in.createStringArrayList());
                         String issueTypeId = in.readString();
-                        builder = new Builder(id, title, summary, user, safetySourceIds, issueTypeId);
+                        if (user != null && issueTypeId != null) {
+                            builder =
+                                    new Builder(
+                                            id, title, summary, user, safetySourceIds, issueTypeId);
+                        } else {
+                            builder = new Builder(id, title, summary);
+                        }
                     } else {
                         builder = new Builder(id, title, summary);
                     }
@@ -405,9 +411,8 @@ public final class SafetyCenterIssue implements Parcelable {
          * @param id a unique encoded string ID, see {@link #getId()} for details
          * @param title a title that describes this issue
          * @param summary a summary of this issue
-         *
          * @deprecated Use {@link #Builder(String, CharSequence, CharSequence, UserHandle, Set,
-         *             String)} instead.
+         *     String)} instead.
          */
         @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
         @Deprecated
@@ -430,8 +435,11 @@ public final class SafetyCenterIssue implements Parcelable {
          */
         @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
         public Builder(
-                @NonNull String id, @NonNull CharSequence title, @NonNull CharSequence summary,
-                @NonNull UserHandle user, @NonNull Set<String> safetySourceIds,
+                @NonNull String id,
+                @NonNull CharSequence title,
+                @NonNull CharSequence summary,
+                @NonNull UserHandle user,
+                @NonNull Set<String> safetySourceIds,
                 @NonNull String issueTypeId) {
             mId = requireNonNull(id);
             mTitle = requireNonNull(title);
@@ -439,8 +447,9 @@ public final class SafetyCenterIssue implements Parcelable {
             mUser = requireNonNull(user);
             mSafetySourceIds = requireNonNull(safetySourceIds);
             if (mSafetySourceIds.isEmpty()) {
-                throw new IllegalArgumentException("At least one safety source ID must be "
-                        + "provided when open_safety_center_apis is enabled");
+                throw new IllegalArgumentException(
+                        "At least one safety source ID must be "
+                                + "provided when open_safety_center_apis is enabled");
             }
             mIssueTypeId = requireNonNull(issueTypeId);
         }
@@ -582,7 +591,6 @@ public final class SafetyCenterIssue implements Parcelable {
          * Sets the set of safety source IDs that sent this issue.
          *
          * @param safetySourceIds at least one safety source ID that sent this issue
-         *
          * @throws IllegalArgumentException if no safety source IDs are provided
          */
         @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
@@ -590,8 +598,9 @@ public final class SafetyCenterIssue implements Parcelable {
         public Builder setSafetySourceIds(@NonNull Set<String> safetySourceIds) {
             mSafetySourceIds = requireNonNull(safetySourceIds);
             if (mSafetySourceIds.isEmpty()) {
-                throw new IllegalArgumentException("At least one safety source ID must be "
-                        + "provided when open_safety_center_apis is enabled");
+                throw new IllegalArgumentException(
+                        "At least one safety source ID must be "
+                                + "provided when open_safety_center_apis is enabled");
             }
             return this;
         }
@@ -609,7 +618,6 @@ public final class SafetyCenterIssue implements Parcelable {
             mIssueTypeId = requireNonNull(issueTypeId);
             return this;
         }
-
 
         /** Creates the {@link SafetyCenterIssue} defined by this {@link Builder}. */
         @NonNull

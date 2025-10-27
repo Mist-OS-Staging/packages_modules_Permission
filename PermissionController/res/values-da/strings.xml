@@ -78,7 +78,7 @@
     <string name="never_ask_again" msgid="4728762438198560329">"Spørg ikke igen"</string>
     <string name="no_permissions" msgid="3881676756371148563">"Ingen tilladelser"</string>
     <string name="additional_permissions" msgid="5801285469338873430">"Yderligere tilladelser"</string>
-    <string name="app_permissions_info_button_label" msgid="7633312050729974623">"Åbn appinfo"</string>
+    <string name="app_permissions_info_button_label" msgid="7633312050729974623">"Åbn appoplysninger"</string>
     <string name="additional_permissions_more" msgid="5681220714755304407">"{count,plural, =1{# anden}one{# more}other{# andre}}"</string>
     <string name="old_sdk_deny_warning" msgid="2382236998845153919">"Denne app er udviklet til en ældre version af Android. Hvis du ikke giver den tilladelse, vil den muligvis ikke længere virke efter hensigten."</string>
     <string name="storage_supergroup_warning_allow" msgid="103093462784523190">"Denne app er udviklet til en ældre version af Android. Med denne tilladelse giver du adgang til alt lagerindhold (bl.a. billeder, videoer, musik, lyd og andre filer)."</string>

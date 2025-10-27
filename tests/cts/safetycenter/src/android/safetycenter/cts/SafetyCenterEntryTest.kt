@@ -249,6 +249,8 @@ class SafetyCenterEntryTest {
                     .build()
             )
             .recreatesEqual(SafetyCenterEntry.CREATOR)
+        assertThat(SafetyCenterEntry.Builder("id", "title").build())
+            .recreatesEqual(SafetyCenterEntry.CREATOR)
     }
 
     @SdkSuppress(minSdkVersion = VERSION_CODES.BAKLAVA)

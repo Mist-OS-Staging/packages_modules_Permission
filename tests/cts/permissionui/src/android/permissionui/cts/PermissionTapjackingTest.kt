@@ -22,7 +22,6 @@ import android.content.pm.PackageManager
 import android.graphics.Point
 import android.os.Build
 import android.os.SystemClock
-import android.platform.test.annotations.AsbSecurityTest
 import android.view.MotionEvent
 import androidx.test.filters.FlakyTest
 import androidx.test.filters.SdkSuppress
@@ -120,7 +119,6 @@ class PermissionTapjackingTest : BaseUsePermissionTest() {
     }
 
     @Test
-    @AsbSecurityTest(cveBugId = [433958378L])
     fun testCantTapjackWithNewTaskPermissionDialogs() {
         installPackage(APP_APK_PATH_LATEST)
         assertAppHasPermission(ACCESS_FINE_LOCATION, false)
