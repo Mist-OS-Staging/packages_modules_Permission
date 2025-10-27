@@ -17,6 +17,7 @@
 package android.safetycenter.hostside.device
 
 import android.content.Context
+import android.content.Intent.ACTION_SAFETY_CENTER
 import android.safetycenter.SafetySourceData
 import android.safetycenter.SafetySourceIssue
 import androidx.test.core.app.ApplicationProvider
@@ -24,6 +25,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.android.safetycenter.pendingintents.PendingIntentSender
 import com.android.safetycenter.testing.NotificationCharacteristics
 import com.android.safetycenter.testing.SafetyCenterActivityLauncher
+import com.android.safetycenter.testing.SafetyCenterActivityLauncher.handledByPermissionControllerSafetyCenter
 import com.android.safetycenter.testing.SafetyCenterFlags
 import com.android.safetycenter.testing.SafetyCenterTestConfigs
 import com.android.safetycenter.testing.SafetyCenterTestConfigs.Companion.SINGLE_SOURCE_ID
@@ -32,6 +34,7 @@ import com.android.safetycenter.testing.SafetyCenterTestRule
 import com.android.safetycenter.testing.SafetySourceTestData
 import com.android.safetycenter.testing.StatusBarNotificationWithChannel
 import com.android.safetycenter.testing.TestNotificationListener
+import org.junit.Assume.assumeTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -79,6 +82,7 @@ class SafetyCenterNotificationLoggingHelperTests {
 
     @Test
     fun openSafetyCenterFromNotification() {
+        assumeTrue(handledByPermissionControllerSafetyCenter(context, ACTION_SAFETY_CENTER))
         safetyCenterTestHelper.setData(SINGLE_SOURCE_ID, newTestDataWithNotifiableIssue())
 
         sendContentPendingIntent(
