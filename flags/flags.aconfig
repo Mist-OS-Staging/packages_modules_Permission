@@ -192,3 +192,10 @@ flag {
         purpose: PURPOSE_BUGFIX
     }
 }
+
+flag {
+    name: "migrate_to_new_safety_center_ui_features"
+    namespace: "safety_center"
+    description: "Migrates permission module functionality to better support latest Safety Center UI in the Settings app"
+    bug: "424092847"
+}
