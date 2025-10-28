@@ -2038,7 +2038,7 @@
     <role
         name="android.app.role.WATCH_FACE"
         behavior="v37.WatchFaceRoleBehavior"
-        featureFlag="android.permission.flags.Flags.watchFaceRoleEnabled"
+        featureFlag="android.permission.flags.Flags.activeWatchFaceRoleEnabled"
         exclusive="true"
         exclusivity="user"
         visible="false">
