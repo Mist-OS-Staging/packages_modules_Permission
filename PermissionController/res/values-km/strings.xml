@@ -730,4 +730,12 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"ភ្នាក់ងារនេះនឹងអាចចូលប្រើ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ដើម្បីទទួលបានព័ត៌មាន និងធ្វើសកម្មភាពជំនួសអ្នក"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"អនុញ្ញាត"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"មិនអនុញ្ញាត"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (1108220895681014081) -->
+    <skip />
+    <!-- no translation found for request_assist_structure_dialog_description (6651318204248848550) -->
+    <skip />
+    <!-- no translation found for request_assist_structure_dialog_button_allow (3054444233802281800) -->
+    <skip />
+    <!-- no translation found for request_assist_structure_dialog_button_dont_allow (6260296016278652911) -->
+    <skip />
 </resources>

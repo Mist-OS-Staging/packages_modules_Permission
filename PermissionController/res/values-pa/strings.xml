@@ -730,4 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"ਇਹ ਏਜੰਟ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ਤੱਕ ਪਹੁੰਚ ਕਰ ਸਕੇਗਾ, ਤਾਂ ਜੋ ਇਹ ਤੁਹਾਨੂੰ ਜਾਣਕਾਰੀ ਦੇ ਸਕੇ ਅਤੇ ਤੁਹਾਡੇ ਲਈ ਕਾਰਵਾਈਆਂ ਕਰ ਸਕੇ"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"ਆਗਿਆ ਦਿਓ"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"ਆਗਿਆ ਨਾ ਦਿਓ"</string>
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"ਕੀ <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> ਨੂੰ ਸਕ੍ਰੀਨ ਅਤੇ ਐਪ ਸੰਦਰਭ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੀ ਆਗਿਆ ਦੇਣੀ ਹੈ?"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"ਪੂਰਵ-ਨਿਰਧਾਰਿਤ ਸਹਾਇਕ ਐਪ ਨੂੰ ਸਕ੍ਰੀਨ ਸਮੱਗਰੀ ਅਤੇ ਦਿਖਣਯੋਗ ਐਪ ਵੱਲੋਂ ਸਾਂਝੇ ਕੀਤੇ ਡਾਟੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦਿਓ"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"ਆਗਿਆ ਦਿਓ"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"ਆਗਿਆ ਨਾ ਦਿਓ"</string>
 </resources>

@@ -730,4 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"വിവരങ്ങൾ നേടാനും നിങ്ങൾക്കായി പ്രവർത്തനങ്ങൾ നടത്താനും ഈ ഏജന്റിന് <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ആക്സസ് ചെയ്യാനാകും"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"അനുവദിക്കുക"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"അനുവദിക്കരുത്"</string>
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"സ്ക്രീനും ആപ്പ് സന്ദർഭവും ആക്സസ് ചെയ്യാൻ <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>-നെ അനുവദിക്കണോ?"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"സ്ക്രീൻ ഉള്ളടക്കവും ദൃശ്യമായ ആപ്പ് പങ്കിട്ട ഡാറ്റയും ആക്സസ് ചെയ്യാൻ ഡിഫോൾട്ട് സഹായ ആപ്പിനെ അനുവദിക്കൂ"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"അനുവദിക്കുക"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"അനുവദിക്കരുത്"</string>
 </resources>

@@ -730,4 +730,12 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"මෙම නියෝජිතයාට තතු ලබා ගැනීමට සහ ඔබ වෙනුවෙන් ක්‍රියාමාර්ග ගැනීමට <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> වෙත ප්‍රවේශ විය හැක"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"ඉඩ දෙන්න"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"ඉඩ නොදෙන්න"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (1108220895681014081) -->
+    <skip />
+    <!-- no translation found for request_assist_structure_dialog_description (6651318204248848550) -->
+    <skip />
+    <!-- no translation found for request_assist_structure_dialog_button_allow (3054444233802281800) -->
+    <skip />
+    <!-- no translation found for request_assist_structure_dialog_button_dont_allow (6260296016278652911) -->
+    <skip />
 </resources>

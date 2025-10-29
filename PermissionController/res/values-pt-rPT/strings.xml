@@ -730,4 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Este agente vai poder aceder a <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> para ver informações e tomar medidas por si"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Permitir"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Não permitir"</string>
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"Perm. que <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> aceda ao contex. da app/ecrã?"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Permita que a app de assist. predef. aceda ao cont. do ecrã/dados partilhados pela app visível"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Permitir"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Não permitir"</string>
 </resources>

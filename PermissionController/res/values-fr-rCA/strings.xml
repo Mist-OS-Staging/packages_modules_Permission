@@ -687,7 +687,7 @@
     <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"L\'appli n\'a pas obtenu l\'accès à <xliff:g id="PERMISSION_NAME">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"L\'appli a demandé l\'accès à une autorisation sensible qui pose un risque pour vos renseignements personnels et financiers.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Il est possible que l\'appli ne fonctionne pas correctement sans cette autorisation limitée. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Découvrir comment autoriser l\'accès&lt;/a&gt;"</string>
-    <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"L\'appli n\'a pas obtenu l\'accès pour avoir le rôle<xliff:g id="ROLE_NAME">%1$s</xliff:g> par défaut"</string>
+    <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"L\'appli n\'a pas obtenu l\'accès pour avoir le rôle <xliff:g id="ROLE_NAME">%1$s</xliff:g> par défaut"</string>
     <string name="enhanced_confirmation_dialog_desc_role" msgid="6369601947905234551">"L\'appli a demandé l\'accès à des autorisations sensibles qui posent un risque pour vos renseignements personnels et financiers.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Il est possible que l\'appli ne fonctionne pas correctement sans ces autorisations limitées. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Découvrir comment autoriser l\'accès&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_settings_default" msgid="1858092969721041576">"L\'appli n\'a pas obtenu l\'accès"</string>
     <string name="enhanced_confirmation_dialog_desc_settings_default" msgid="6911632348359332981">"L\'accès à cette autorisation pose un risque pour vos renseignements personnels et financiers.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Il est possible que l\'appli ne fonctionne pas correctement sans cette autorisation limitée. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Découvrir comment autoriser l\'accès&lt;/a&gt;"</string>
@@ -730,4 +730,12 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Cet agent pourra acc. à <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> pour obtenir des infos et exécuter des actions"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Autoriser"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Interdire"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (1108220895681014081) -->
+    <skip />
+    <!-- no translation found for request_assist_structure_dialog_description (6651318204248848550) -->
+    <skip />
+    <!-- no translation found for request_assist_structure_dialog_button_allow (3054444233802281800) -->
+    <skip />
+    <!-- no translation found for request_assist_structure_dialog_button_dont_allow (6260296016278652911) -->
+    <skip />
 </resources>

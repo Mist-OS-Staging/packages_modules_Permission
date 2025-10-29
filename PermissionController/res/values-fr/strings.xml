@@ -730,4 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Cet agent pourra accéder à <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> pour obtenir des informations et effectuer des actions pour vous"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Autoriser"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Ne pas autoriser"</string>
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"Autoriser <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> à accéder à l\'écran et au contexte de l\'appli ?"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Autoriser l\'appli d\'assistance par défaut à accéder au contenu de l\'écran et aux données partagées par l\'appli visible"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Autoriser"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Ne pas autoriser"</string>
 </resources>

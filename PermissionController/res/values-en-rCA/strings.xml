@@ -730,4 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"This agent will be able to access <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> to get info and take actions for you"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Allow"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Don’t allow"</string>
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"Allow <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> to access screen and app context?"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Allow the default assistant app to access the screen contents and data shared by the visible app"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Allow"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Don’t allow"</string>
 </resources>
