@@ -17,3 +17,10 @@ flag {
     description: "Flag to enable showing agent access activities in privacy dashboard"
     bug: "436261702"
 }
+
+flag {
+    name: "support_new_safety_center_ui_in_settings"
+    namespace: "safety_center"
+    description: "Guard minor changes to old UI code to support new Safety Center UI in Settings"
+    bug: "408241976"
+}
