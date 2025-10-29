@@ -20,6 +20,7 @@ import android.Manifest.permission.SEND_SAFETY_CENTER_UPDATE
 import android.app.Notification
 import android.app.NotificationManager
 import android.content.Context
+import android.content.Intent.ACTION_SAFETY_CENTER
 import android.os.Build.VERSION_CODES.CINNAMON_BUN
 import android.os.Build.VERSION_CODES.TIRAMISU
 import android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE
@@ -47,6 +48,7 @@ import com.android.safetycenter.testing.Coroutines
 import com.android.safetycenter.testing.Coroutines.TIMEOUT_SHORT
 import com.android.safetycenter.testing.NotificationCharacteristics
 import com.android.safetycenter.testing.SafetyCenterActivityLauncher.executeBlockAndExit
+import com.android.safetycenter.testing.SafetyCenterActivityLauncher.handledByPermissionControllerSafetyCenter
 import com.android.safetycenter.testing.SafetyCenterApisWithShellPermissions.clearAllSafetySourceDataForTestsWithPermission
 import com.android.safetycenter.testing.SafetyCenterApisWithShellPermissions.dismissSafetyCenterIssueWithPermission
 import com.android.safetycenter.testing.SafetyCenterApisWithShellPermissions.reportSafetySourceErrorWithPermission
@@ -73,6 +75,7 @@ import com.google.common.truth.Truth.assertThat
 import java.time.Duration
 import kotlin.test.assertFailsWith
 import kotlinx.coroutines.TimeoutCancellationException
+import org.junit.Assume.assumeTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -1297,6 +1300,7 @@ class SafetyCenterNotificationTest {
 
     @Test
     fun sendContentPendingIntent_singleIssue_opensSafetyCenterWithIssueVisible() {
+        assumeTrue(handledByPermissionControllerSafetyCenter(context, ACTION_SAFETY_CENTER))
         safetyCenterTestHelper.setData(
             uniqueSafetySourceId,
             safetySourceTestData.recommendationWithDeviceIssue,
@@ -1317,6 +1321,7 @@ class SafetyCenterNotificationTest {
     @Test
     @SdkSuppress(maxSdkVersion = TIRAMISU)
     fun sendContentPendingIntent_anotherHigherSeverityIssue_opensSafetyCenterAndIssueVisible() {
+        assumeTrue(handledByPermissionControllerSafetyCenter(context, ACTION_SAFETY_CENTER))
         safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.multipleSourcesConfig)
         setFlagsForImmediateNotifications(SOURCE_ID_1)
         safetyCenterTestHelper.setData(
@@ -1344,6 +1349,7 @@ class SafetyCenterNotificationTest {
     @Test
     @SdkSuppress(minSdkVersion = UPSIDE_DOWN_CAKE)
     fun sendContentPendingIntent_onU_anotherHigherSeverityIssue_opensSafetyCenterAndIssueVisible() {
+        assumeTrue(handledByPermissionControllerSafetyCenter(context, ACTION_SAFETY_CENTER))
         safetyCenterTestHelper.setConfig(
             safetyCenterTestConfigs.multipleSourcesWithDeduplicationInfoConfig
         )
