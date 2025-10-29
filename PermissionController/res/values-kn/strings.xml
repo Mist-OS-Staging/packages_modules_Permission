@@ -326,7 +326,7 @@
     <string name="app_perms_24h_access" msgid="99069906850627181">"ಕೊನೆಯ ಬಾರಿ ಪ್ರವೇಶಿಸಿರುವುದು <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="app_perms_24h_access_yest" msgid="5411926024794555022">"ನಿನ್ನೆ <xliff:g id="TIME_DATE">%1$s</xliff:g> ರ ಸಮಯದಲ್ಲಿ ಕೊನೆಯ ಬಾರಿ ಪ್ರವೇಶಿಸಲಾಗಿದೆ"</string>
     <string name="app_perms_7d_access" msgid="4945055548894683751">"ಕೊನೆಯದಾಗಿ <xliff:g id="TIME_DATE_0">%1$s</xliff:g> ರಂದು <xliff:g id="TIME_DATE_1">%2$s</xliff:g> ಸಮಯಕ್ಕೆ ಪ್ರವೇಶಿಸಲಾಗಿದೆ"</string>
-    <string name="app_perms_content_provider_24h" msgid="1055526027667508972">"ಕಳೆದ 24 ಗಂಟೆಗಳಲ್ಲಿ ಪ್ರವೇಶಿಸಲಾಗಿದೆ"</string>
+    <string name="app_perms_content_provider_24h" msgid="1055526027667508972">"ಕಳೆದ 24 ಗಂಟೆಗಳಲ್ಲಿ ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲಾಗಿದೆ"</string>
     <string name="app_perms_content_provider_7d" msgid="3215454898257814868">"ಕಳೆದ 7 ದಿನಗಳಲ್ಲಿ ಪ್ರವೇಶಿಸಲಾಗಿದೆ"</string>
     <string name="app_perms_24h_access_background" msgid="3413674718969576843">"ಕೊನೆಯ ಬಾರಿ <xliff:g id="TIME_DATE">%1$s</xliff:g>ಕ್ಕೆ ಪ್ರವೇಶಿಸಲಾಗಿದೆ • ಎಲ್ಲಾ ಸಮಯದಲ್ಲಿ ಅನುಮತಿಸಲಾಗಿದೆ"</string>
     <string name="app_perms_24h_access_yest_background" msgid="9174750810998076725">"ಕೊನೆಯದಾಗಿ ನಿನ್ನೆ <xliff:g id="TIME_DATE">%1$s</xliff:g> ಗೆ ಪ್ರವೇಶಿಸಲಾಗಿದೆ • ಎಲ್ಲಾ ಸಮಯದಲ್ಲಿ ಅನುಮತಿಸಲಾಗಿದೆ"</string>

@@ -196,7 +196,7 @@
     <string name="precise_image_description" msgid="6349638632303619872">"الموقع الجغرافي الدقيق"</string>
     <string name="approximate_image_description" msgid="938803699637069884">"الموقع الجغرافي التقريبي"</string>
     <string name="app_permission_location_accuracy" msgid="7166912915040018669">"استخدام الموقع الجغرافي الدقيق"</string>
-    <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"التطبيقات يمكنها الوصول إلى الموقع الجغرافي التقريبي عندما يكون الموقع الجغرافي الدقيق غير مفعّل"</string>
+    <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"عندما يكون الموقع الجغرافي الدقيق غير مفعّل، يمكن أن تصل التطبيقات إلى الموقع الجغرافي التقريبي"</string>
     <string name="app_permission_title" msgid="2090897901051370711">"إذن \"<xliff:g id="PERM">%1$s</xliff:g>\""</string>
     <string name="app_permission_header" msgid="2951363137032603806">"منح هذا التطبيق الإذن بالوصول إلى \"<xliff:g id="PERM">%1$s</xliff:g>\""</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"إذن \"<xliff:g id="PERM">%1$s</xliff:g>\" لهذا التطبيق على \"<xliff:g id="DEVICE_NAME">%2$s</xliff:g>\""</string>
@@ -326,7 +326,7 @@
     <string name="app_perms_24h_access" msgid="99069906850627181">"تم استخدامه آخر مرة في <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="app_perms_24h_access_yest" msgid="5411926024794555022">"تم استخدامه آخر مرة أمس في <xliff:g id="TIME_DATE">%1$s</xliff:g>."</string>
     <string name="app_perms_7d_access" msgid="4945055548894683751">"تم الوصول آخر مرة بتاريخ <xliff:g id="TIME_DATE_0">%1$s</xliff:g> في <xliff:g id="TIME_DATE_1">%2$s</xliff:g>."</string>
-    <string name="app_perms_content_provider_24h" msgid="1055526027667508972">"تم الوصول للأذونات في آخر 24 ساعة."</string>
+    <string name="app_perms_content_provider_24h" msgid="1055526027667508972">"تم الوصول إلى البيانات في آخر 24 ساعة"</string>
     <string name="app_perms_content_provider_7d" msgid="3215454898257814868">"تم الوصول للأذونات في آخر 7 أيام."</string>
     <string name="app_perms_24h_access_background" msgid="3413674718969576843">"تم استخدامه آخر مرة في <xliff:g id="TIME_DATE">%1$s</xliff:g> • مسموح بالوصول إليه طوال الوقت"</string>
     <string name="app_perms_24h_access_yest_background" msgid="9174750810998076725">"تم استخدامه آخر مرة أمس في <xliff:g id="TIME_DATE">%1$s</xliff:g> • مسموح بالوصول إليه طوال الوقت"</string>
@@ -336,12 +336,12 @@
     <string name="app_perms_24h_access_media_only" msgid="6651699644199132054">"تم استخدامه آخر مرة في <xliff:g id="TIME_DATE">%1$s</xliff:g> • الوسائط"</string>
     <string name="app_perms_24h_access_yest_media_only" msgid="7213187706424998792">"تم استخدامه آخر مرة أمس في <xliff:g id="TIME_DATE">%1$s</xliff:g> • الوسائط"</string>
     <string name="app_perms_7d_access_media_only" msgid="1031096653668235200">"تم استخدامه آخر مرة بتاريخ <xliff:g id="TIME_DATE_0">%1$s</xliff:g> عند <xliff:g id="TIME_DATE_1">%2$s</xliff:g> • الوسائط"</string>
-    <string name="app_perms_content_provider_24h_media_only" msgid="7797963000596179491">"تم الوصول في آخر 24 ساعة • الوسائط"</string>
+    <string name="app_perms_content_provider_24h_media_only" msgid="7797963000596179491">"تم الوصول إلى البيانات في آخر 24 ساعة • الوسائط"</string>
     <string name="app_perms_content_provider_7d_media_only" msgid="8446239884570262243">"تم الوصول في آخر 7 أيام • الوسائط"</string>
     <string name="app_perms_24h_access_all_files" msgid="8902360456978159091">"تم استخدامه آخر مرة في <xliff:g id="TIME_DATE">%1$s</xliff:g> • كل الملفات"</string>
     <string name="app_perms_24h_access_yest_all_files" msgid="5708424073126844909">"تم استخدامه آخر مرة أمس في <xliff:g id="TIME_DATE">%1$s</xliff:g> • كل الملفات"</string>
     <string name="app_perms_7d_access_all_files" msgid="8246193786397635824">"تم الوصول آخر مرة بتاريخ <xliff:g id="TIME_DATE_0">%1$s</xliff:g> في <xliff:g id="TIME_DATE_1">%2$s</xliff:g> • جميع الملفات"</string>
-    <string name="app_perms_content_provider_24h_all_files" msgid="573104317727770850">"تم الوصول في آخر 24 ساعة • كل الملفات"</string>
+    <string name="app_perms_content_provider_24h_all_files" msgid="573104317727770850">"تم الوصول إلى البيانات في آخر 24 ساعة • كل الملفات"</string>
     <string name="app_perms_content_provider_7d_all_files" msgid="7962416229708835558">"تم الوصول في آخر 7 أيام • جميع الملفات"</string>
     <string name="no_permissions_allowed" msgid="6081976856354669209">"لم يتم منح أي أذونات"</string>
     <string name="no_permissions_denied" msgid="8159923922804043282">"لم يتم رفض أي أذونات."</string>

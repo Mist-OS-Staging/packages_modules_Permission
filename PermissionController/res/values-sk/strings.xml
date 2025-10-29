@@ -84,7 +84,7 @@
     <string name="storage_supergroup_warning_allow" msgid="103093462784523190">"Táto aplikácia bola navrhnutá pre staršiu verziu Androidu. Ak zapnete toto povolenie, povolíte prístup k celému svojmu ukladaciemu priestoru (vrátane fotiek, videí, hudby, zvuku a ďalších súborov)."</string>
     <string name="storage_supergroup_warning_deny" msgid="6420765672683284347">"Táto aplikácia bola navrhnutá pre staršiu verziu Androidu. Ak toto povolenie odmietnete, zakážete prístup k celému svojmu ukladaciemu priestoru (vrátane fotiek, videí, hudby, zvuku a ďalších súborov)."</string>
     <string name="default_permission_description" msgid="4624464917726285203">"umožňuje vykonať neznámu akciu"</string>
-    <string name="app_permissions_group_summary" msgid="8788419008958284002">"Povolené pri <xliff:g id="COUNT_0">%1$d</xliff:g> z(o) <xliff:g id="COUNT_1">%2$d</xliff:g> aplik."</string>
+    <string name="app_permissions_group_summary" msgid="8788419008958284002">"Povolené pri <xliff:g id="COUNT_0">%1$d</xliff:g> z <xliff:g id="COUNT_1">%2$d</xliff:g> aplik."</string>
     <string name="app_permissions_group_summary2" msgid="4329922444840521150">"Počet povolených aplikácií: <xliff:g id="COUNT_0">%1$d</xliff:g>/<xliff:g id="COUNT_1">%2$d</xliff:g>"</string>
     <string name="menu_show_system" msgid="4254021607027872504">"Zobraziť systémové aplikácie"</string>
     <string name="menu_hide_system" msgid="3855390843744028465">"Skryť systémové aplikácie"</string>

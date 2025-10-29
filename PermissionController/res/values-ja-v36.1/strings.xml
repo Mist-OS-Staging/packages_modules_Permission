@@ -16,8 +16,8 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="permission_description_summary_contacts" msgid="2757597696923097587">"この権限があるアプリは、連絡先にアクセスして、このデバイスで連絡先を保存できるアカウントの一覧を表示できます。"</string>
+    <string name="permission_description_summary_contacts" msgid="2757597696923097587">"この権限があるアプリは、連絡先にアクセスしたり、このデバイスで連絡先を保存できるアカウントの一覧を参照したりできます。"</string>
     <string name="permgrouprequest_contacts" msgid="4011412821869715229">"このデバイス内の連絡先とアカウントへのアクセスを &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; に許可しますか？"</string>
-    <string name="permgrouprequestdetail_contacts" msgid="3314989542973932720">"このアプリは、連絡先にアクセスして、連絡先を保存できるアカウントの一覧を表示できるようになります。"</string>
+    <string name="permgrouprequestdetail_contacts" msgid="3314989542973932720">"このアプリは、連絡先にアクセスしたり、連絡先を保存できるアカウントの一覧を参照したりできるようになります。"</string>
     <string name="permgrouprequest_device_aware_contacts" msgid="2668046201497840127">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;内の写真とメディアへのアクセスを &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; に許可しますか？"</string>
 </resources>
