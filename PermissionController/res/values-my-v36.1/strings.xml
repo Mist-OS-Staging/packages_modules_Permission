@@ -17,7 +17,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="permission_description_summary_contacts" msgid="2757597696923097587">"ဤခွင့်ပြုချက်ရှိသော အက်ပ်များသည် သင့်အဆက်အသွယ်များကို သုံးနိုင်ပြီး ဤစက်ရှိ အဆက်အသွယ်များကို သိမ်းနိုင်သော အကောင့်စာရင်းကို ကြည့်နိုင်သည်"</string>
-    <string name="permgrouprequest_contacts" msgid="4011412821869715229">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ကို ဤစက်ရှိ အဆက်အသွယ်များ၊ အကောင့်များ သုံးခွင့်ပြုမလား။"</string>
+    <string name="permgrouprequest_contacts" msgid="4011412821869715229">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ကို ဤစက်ရှိ အဆက်အသွယ်များ၊ အကောင့်များ သုံးခွင့်ပြုမလား"</string>
     <string name="permgrouprequestdetail_contacts" msgid="3314989542973932720">"ဤအက်ပ်သည် သင့်အဆက်အသွယ်များကို သုံးနိုင်ပြီး အဆက်အသွယ်များကို သိမ်းနိုင်သော သင့်အကောင့်စာရင်းကို ကြည့်နိုင်မည်"</string>
     <string name="permgrouprequest_device_aware_contacts" msgid="2668046201497840127">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ကို &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt; ရှိ အဆက်အသွယ်များ၊ အကောင့်များ သုံးခွင့်ပြုမလား။"</string>
 </resources>
