@@ -20,6 +20,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import androidx.wear.compose.foundation.lazy.rememberScalingLazyListState
 import androidx.wear.compose.material3.AlertDialog as Material3AlertDialog
@@ -94,11 +97,17 @@ private fun WearPermissionConfirmationDialogInternal(
             { it.modifier(Modifier.size(36.dp).align(Alignment.CenterVertically)).build() }
         } ?: AlertDialogDefaults.ConfirmIcon
 
+    val edgeButtonDescription = stringResource(android.R.string.ok)
+
     Material3AlertDialog(
         visible = show,
         onDismissRequest = edgeButtonContent.onClick,
         edgeButton = {
-            AlertDialogDefaults.EdgeButton(onClick = edgeButtonContent.onClick, content = edgeIcon)
+            AlertDialogDefaults.EdgeButton(
+                modifier = Modifier.semantics { contentDescription = edgeButtonDescription },
+                onClick = edgeButtonContent.onClick,
+                content = edgeIcon,
+            )
         },
         icon = { iconRes?.build() },
         title = title?.let { { Text(text = title) } } ?: {},
@@ -115,6 +124,9 @@ private fun WearPermissionConfirmationDialogInternal(
     title: String?,
     message: String?,
 ) {
+    val positiveButtonDescription = stringResource(android.R.string.ok)
+    val negativeButtonDescription = stringResource(android.R.string.cancel)
+
     val positiveButton: (@Composable RowScope.() -> Unit)? =
         positiveButtonContent?.let {
             {
@@ -127,6 +139,8 @@ private fun WearPermissionConfirmationDialogInternal(
                     } ?: AlertDialogDefaults.ConfirmIcon
 
                 AlertDialogDefaults.ConfirmButton(
+                    modifier =
+                        Modifier.semantics { contentDescription = positiveButtonDescription },
                     onClick = positiveButtonContent.onClick,
                     content = positiveIcon,
                 )
@@ -145,6 +159,8 @@ private fun WearPermissionConfirmationDialogInternal(
                     } ?: AlertDialogDefaults.DismissIcon
 
                 AlertDialogDefaults.DismissButton(
+                    modifier =
+                        Modifier.semantics { contentDescription = negativeButtonDescription },
                     onClick = negativeButtonContent.onClick,
                     content = negativeIcon,
                 )
