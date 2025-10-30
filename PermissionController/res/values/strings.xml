@@ -2156,13 +2156,13 @@
 
     <!-- START REQUEST ASSIST STRUCTURE DIALOG -->
 
-    <!-- Label for the title of request app function access dialog [CHAR LIMIT=20]-->
+    <!-- Label for the title of request assist structure dialog [CHAR LIMIT=100]-->
     <string name="request_assist_structure_dialog_title">Allow <xliff:g id="assistant_app_name" example="Example Assistant App">%1$s</xliff:g> to access screen and app context?</string>
-    <!-- Label for the description of request app function access dialog [CHAR LIMIT=20]-->
+    <!-- Label for the description of request assist structure dialog [CHAR LIMIT=150]-->
     <string name="request_assist_structure_dialog_description">Allow the default assistant app to access the screen contents and data shared by the visible app</string>
-    <!-- Label for the allow button for request app function dialog. [CHAR LIMIT=15]  -->
+    <!-- Label for the allow button for request assist structure dialog. [CHAR LIMIT=15]  -->
     <string name="request_assist_structure_dialog_button_allow">Allow</string>
-    <!-- Label for the deny button for request app function dialog. [CHAR LIMIT=15]  -->
+    <!-- Label for the deny button for request assist structure dialog. [CHAR LIMIT=15]  -->
     <string name="request_assist_structure_dialog_button_dont_allow">Don\u2019t allow</string>
 
     <!-- END REQUEST ASSIST STRUCTURE DIALOG -->
