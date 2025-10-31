@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.permissioncontroller.role.ui
+package com.android.permissioncontroller.role.ui.v37
 
 import android.app.Activity
 import android.app.Dialog
