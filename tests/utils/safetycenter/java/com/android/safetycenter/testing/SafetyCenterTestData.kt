@@ -357,6 +357,7 @@ class SafetyCenterTestData(context: Context) {
                 UserHandle.of(userId),
                 safetySourceIds,
                 ISSUE_TYPE_ID,
+                INFORMATION_ISSUE_ID,
             )
             .setSeverityLevel(ISSUE_SEVERITY_LEVEL_OK)
             .setShouldConfirmDismissal(false)
@@ -402,6 +403,7 @@ class SafetyCenterTestData(context: Context) {
                 UserHandle.of(userId),
                 safetySourceIds,
                 ISSUE_TYPE_ID,
+                RECOMMENDATION_ISSUE_ID,
             )
             .setSeverityLevel(ISSUE_SEVERITY_LEVEL_RECOMMENDATION)
             .setActions(
@@ -458,6 +460,7 @@ class SafetyCenterTestData(context: Context) {
                 UserHandle.of(userId),
                 safetySourceIds,
                 ISSUE_TYPE_ID,
+                CRITICAL_ISSUE_ID,
             )
             .setSeverityLevel(ISSUE_SEVERITY_LEVEL_CRITICAL_WARNING)
             .setActions(

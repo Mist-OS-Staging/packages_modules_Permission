@@ -17,11 +17,11 @@
 package com.android.permissioncontroller.tests.mocking.safetycenter
 
 import android.os.UserHandle
+import android.permission.flags.Flags
 import android.safetycenter.SafetyCenterIssue
 import com.android.modules.utils.build.SdkLevel
-import android.permission.flags.Flags
 
-object SafetyCenterTestUtils {
+object SafetyCenterTestUtil {
 
     fun createSafetyCenterIssueBuilder(
         id: String,
@@ -29,10 +29,19 @@ object SafetyCenterTestUtils {
         summary: CharSequence,
         user: UserHandle,
         safetySourceIds: Set<String>,
-        issueTypeId: String
+        issueTypeId: String,
+        safetySourceIssueId: String,
     ): SafetyCenterIssue.Builder =
         if (SdkLevel.isAtLeastB() && Flags.openSafetyCenterApis()) {
-            SafetyCenterIssue.Builder(id, title, summary, user, safetySourceIds, issueTypeId)
+            SafetyCenterIssue.Builder(
+                id,
+                title,
+                summary,
+                user,
+                safetySourceIds,
+                issueTypeId,
+                safetySourceIssueId,
+            )
         } else {
             SafetyCenterIssue.Builder(id, title, summary)
         }
