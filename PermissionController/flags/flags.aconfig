@@ -10,3 +10,10 @@ flag {
        purpose: PURPOSE_BUGFIX
     }
 }
+
+flag {
+    name: "privacy_dashboard_agent_activity_enabled"
+    namespace: "permissions"
+    description: "Flag to enable showing agent access activities in privacy dashboard"
+    bug: "436261702"
+}
