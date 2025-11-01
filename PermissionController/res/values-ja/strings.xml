@@ -730,4 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"このエージェントは <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> にアクセスして、情報の取得と各種の操作が可能になります"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"許可"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"許可しない"</string>
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"画面とアプリのコンテキストへのアクセスを <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> に許可しますか？"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"画面内容や表示中のアプリが共有するデータへのアクセスをデフォルトのアシスタント アプリに許可します"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"許可"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"許可しない"</string>
 </resources>

@@ -730,4 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"ಈ ಏಜೆಂಟ್ ಮಾಹಿತಿ ಪಡೆಯಲು ಹಾಗೂ ನಿಮಗಾಗಿ ಕ್ರಮ ತೆಗೆದುಕೊಳ್ಳಲು <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ಅನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"ಅನುಮತಿಸಿ"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"ಅನುಮತಿಸಬೇಡಿ"</string>
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"ಸ್ಕ್ರೀನ್, ಆ್ಯಪ್ ಸಂದರ್ಭ ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> ಗೆ ಅನುಮತಿಸಬೇಕೇ?"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"ಸ್ಕ್ರೀನ್ ಕಂಟೆಂಟ್, ಕಾಣಿಸುತ್ತಿರುವ ಆ್ಯಪ್ ಹಂಚಿಕೊಂಡ ಡೇಟಾ ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು ಡೀಫಾಲ್ಟ್ ಅಸಿಸ್ಟೆಂಟ್ ಆ್ಯಪ್‌ಗೆ ಅನುಮತಿಸಿ"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"ಅನುಮತಿಸಿ"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"ಅನುಮತಿಸಬೇಡಿ"</string>
 </resources>

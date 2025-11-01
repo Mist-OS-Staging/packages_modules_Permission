@@ -730,4 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Hierdie agent sal toegang tot <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> hê om inligting te kry en aksies vir jou te neem"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Laat toe"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Moenie toelaat nie"</string>
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"Gee <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> toegang tot skerm- en appkonteks?"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Gee die verstekassistentapp toegang tot die skerminhoud en data wat deur die sigbare app gedeel word"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Laat toe"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Moenie toelaat nie"</string>
 </resources>
