@@ -914,6 +914,16 @@
         android:protectionLevel="signature|privileged"
         android:featureFlag="android.content.flags.enable_system_contacts_picker" />
 
+    <!-- Allows an application to act as Private Compute Services, which allows
+         the application to communicate with Private Compute Core components.
+         <p>Protection level: signature|privileged
+         @FlaggedApi(android.app.privatecompute.flags.Flags.FLAG_ENABLE_PCC_FRAMEWORK_SUPPORT)
+    -->
+    <permission
+        android:name="android.permission.PROVIDE_PRIVATE_COMPUTE_SERVICES"
+        android:protectionLevel="signature|privileged"
+        android:featureFlag="android.app.privatecompute.flags.enable_pcc_framework_support" />
+
     <!-- Allows an app to update the verification status of E2EE contact keys owned by other apps.
         <p>This permission is only granted to system apps.
         <p>Protection level: signature|privileged
