@@ -304,10 +304,12 @@ public final class RoleManager {
      * A dependency installer installs missing SDK or static shared library dependencies that an app
      * requires to be installed.
      *
+     * @deprecated The automatic dependency installation feature is no longer supported.
      * @hide
      */
     @SuppressWarnings("FlaggedApiLiteral")
-    @FlaggedApi("android.content.pm.sdk_dependency_installer")
+    @Deprecated
+    @FlaggedApi("android.content.pm.sdk_dependency_installer_deprecation")
     @SystemApi
     public static final String ROLE_SYSTEM_DEPENDENCY_INSTALLER =
             "android.app.role.SYSTEM_DEPENDENCY_INSTALLER";
