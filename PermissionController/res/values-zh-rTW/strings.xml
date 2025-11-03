@@ -730,12 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"這個代理將可存取「<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>」取得資訊，並代表你執行操作"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"允許"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"不允許"</string>
-    <!-- no translation found for request_assist_structure_dialog_title (1108220895681014081) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_description (6651318204248848550) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_button_allow (3054444233802281800) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_button_dont_allow (6260296016278652911) -->
-    <skip />
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"要允許「<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>」存取畫面和應用程式內容嗎？"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"允許預設助理應用程式存取可見應用程式分享的畫面內容和資料"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"允許"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"不允許"</string>
 </resources>

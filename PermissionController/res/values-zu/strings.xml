@@ -730,12 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Lo menzeli uzokwazi ukufinyelela ku-<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ukuze athole ulwazi aphinde akuthathele izinyathelo"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Vumela"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Ungavumeli"</string>
-    <!-- no translation found for request_assist_structure_dialog_title (1108220895681014081) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_description (6651318204248848550) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_button_allow (3054444233802281800) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_button_dont_allow (6260296016278652911) -->
-    <skip />
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"Vumela i-<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> ukuba ifinyelele ikhontenti yesikrini neye-app?"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Vumela i-app yokusiza ezenzakalelayo ukuthi ifinyelele ikhontenti yesikrini kanye nedatha eyabelwe nge-app ebonakalayo"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Vumela"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Ungavumeli"</string>
 </resources>

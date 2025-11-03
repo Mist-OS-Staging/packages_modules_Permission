@@ -730,12 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"માહિતી મેળવવા અને તમારા માટે પગલાં લેવા માટે આ એજન્ટ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ઍક્સેસ કરી શકશે"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"મંજૂરી આપો"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"મંજૂરી આપશો નહીં"</string>
-    <!-- no translation found for request_assist_structure_dialog_title (1108220895681014081) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_description (6651318204248848550) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_button_allow (3054444233802281800) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_button_dont_allow (6260296016278652911) -->
-    <skip />
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>ને સ્ક્રીન અને ઍપના સંદર્ભને ઍક્સેસ કરવાની મંજૂરી આપીએ?"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"ડિફૉલ્ટ આસિસ્ટંટ ઍપને સ્ક્રીનનું કન્ટેન્ટ અને દેખાઈ રહેલી ઍપ દ્વારા શેર કરાયેલો ડેટા ઍક્સેસ કરવાની મંજૂરી આપો"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"મંજૂરી આપો"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"મંજૂરી નકારો"</string>
 </resources>
