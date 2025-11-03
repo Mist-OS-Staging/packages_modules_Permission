@@ -73,6 +73,7 @@ class SafetyCenterDataTest {
                 UserHandle.of(1),
                 setOf("safety_source_id_1"),
                 "issue_type_id_1",
+                "safety_source_issue_id_1",
             )
             .setSeverityLevel(SafetyCenterIssue.ISSUE_SEVERITY_LEVEL_OK)
             .build()
@@ -84,6 +85,7 @@ class SafetyCenterDataTest {
                 UserHandle.of(1),
                 setOf("safety_source_id_2"),
                 "issue_type_id_2",
+                "safety_source_issue_id_2",
             )
             .setSeverityLevel(SafetyCenterIssue.ISSUE_SEVERITY_LEVEL_RECOMMENDATION)
             .build()
