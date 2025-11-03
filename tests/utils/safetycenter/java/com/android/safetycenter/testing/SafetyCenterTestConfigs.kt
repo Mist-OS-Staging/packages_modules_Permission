@@ -839,7 +839,10 @@ class SafetyCenterTestConfigs(private val context: Context) {
 
     @RequiresApi(Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
     private fun issueOnlySafetySourceWithDuplicationInfo(id: String, deduplicationGroup: String) =
-        issueOnlySafetySourceBuilder(id).setDeduplicationGroup(deduplicationGroup).build()
+        issueOnlySafetySourceBuilder(id)
+            .setDeduplicationGroup(deduplicationGroup)
+            .setNotificationsAllowed(true)
+            .build()
 
     private fun issueOnlySafetySource(id: String) = issueOnlySafetySourceBuilder(id).build()
 

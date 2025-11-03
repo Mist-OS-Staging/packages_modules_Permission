@@ -21,6 +21,9 @@ import androidx.compose.ui.platform.LocalContext
 import com.android.permissioncontroller.wear.permission.components.R
 
 data class WearPermissionCustomDimensions(
+    val scrollScreenTitleIconSize: Int,
+    val buttonMinHeight: Int,
+    val toggleMinHeight: Int,
     val scrollHorizontalPaddingMultiplier: Float,
     val scrollTopMultiplier: Float,
     val scrollBottomMultiplier: Float,
@@ -30,6 +33,9 @@ data class WearPermissionCustomDimensions(
     companion object {
         val default =
             WearPermissionCustomDimensions(
+                scrollScreenTitleIconSize = 32,
+                buttonMinHeight = 52,
+                toggleMinHeight = 52,
                 scrollHorizontalPaddingMultiplier = 0.052f,
                 scrollTopMultiplier = 0.1664f,
                 scrollBottomMultiplier = 0.3646f,
@@ -49,23 +55,32 @@ fun rememberWearPermissionCustomDimensions(): WearPermissionCustomDimensions {
                 ResourceHelper.getDimen(
                     context,
                     R.dimen.scroll_content_horizontal_padding_multiplier,
-                ) ?: 0.052f,
+                ) ?: WearPermissionCustomDimensions.default.subtitleHorizontalPaddingMultiplier,
             scrollTopMultiplier =
                 ResourceHelper.getDimen(context, R.dimen.scroll_content_top_padding_multiplier)
-                    ?: 0.1664f,
+                    ?: WearPermissionCustomDimensions.default.scrollTopMultiplier,
             scrollBottomMultiplier =
                 ResourceHelper.getDimen(context, R.dimen.scroll_content_bottom_padding_multiplier)
-                    ?: 0.3646f,
+                    ?: WearPermissionCustomDimensions.default.scrollBottomMultiplier,
             titleHorizontalPaddingMultiplier =
                 ResourceHelper.getDimen(
                     context,
                     R.dimen.scroll_title_additional_horizonal_padding_multiplier,
-                ) ?: 0.1200f,
+                ) ?: WearPermissionCustomDimensions.default.titleHorizontalPaddingMultiplier,
             subtitleHorizontalPaddingMultiplier =
                 ResourceHelper.getDimen(
                     context,
                     R.dimen.scroll_subtitle_additional_horizonal_padding_multiplier,
-                ) ?: 0.0416f,
+                ) ?: WearPermissionCustomDimensions.default.subtitleHorizontalPaddingMultiplier,
+            scrollScreenTitleIconSize =
+                ResourceHelper.getDimen(context, R.dimen.title_icon_size)?.toInt()
+                    ?: WearPermissionCustomDimensions.default.scrollScreenTitleIconSize,
+            buttonMinHeight =
+                ResourceHelper.getDimen(context, R.dimen.button_min_height)?.toInt()
+                    ?: WearPermissionCustomDimensions.default.buttonMinHeight,
+            toggleMinHeight =
+                ResourceHelper.getDimen(context, R.dimen.toggle_min_height)?.toInt()
+                    ?: WearPermissionCustomDimensions.default.toggleMinHeight,
         )
     }
 }

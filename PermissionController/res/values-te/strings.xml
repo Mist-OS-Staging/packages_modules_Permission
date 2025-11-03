@@ -690,7 +690,7 @@
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"ఆటోమేటిక్ <xliff:g id="ROLE_NAME">%1$s</xliff:g>‌గా ఉండటానికి యాప్‌నకు యాక్సెస్ నిరాకరించబడింది"</string>
     <string name="enhanced_confirmation_dialog_desc_role" msgid="6369601947905234551">"మీ వ్యక్తిగత, ఆర్థిక సమాచారాన్ని ప్రమాదంలో పడేయగల గోప్యమైన సమాచారాన్ని యాక్సెస్ చేయడానికి అనుమతులు (సెన్సిటివ్ పర్మిషన్స్) కావాలని ఈ యాప్ కోరింది.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>అయితే ఈ అదనపు అవసరాలు గల అనుమతులను (రిస్ట్రిక్టెడ్ పర్మిషన్స్‌ను) ఇవ్వకపోతే యాప్ సరిగ్గా పని చేయకుండా పోయే అవకాశం ఉంది. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;యాక్సెస్‌ను అనుమతించడం ఎలాగో తెలుసుకోండి&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_settings_default" msgid="1858092969721041576">"యాప్‌నకు యాక్సెస్ తిరస్కరించబడింది"</string>
-    <string name="enhanced_confirmation_dialog_desc_settings_default" msgid="6911632348359332981">"ఈ అనుమతికి యాక్సెస్‌ను ఇవ్వడం వల్ల మీ వ్యక్తిగత, ఆర్థిక సమాచారం ప్రమాదంలో పడవచ్చు.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>ఈ అదనపు అవసరాలు గల అనుమతులు లేకుండా యాప్ సరిగ్గా పని చేయకపోయే అవకాశం ఉంది. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;యాక్సెస్‌ను అనుమతించడం ఎలాగో తెలుసుకోండి&lt;/a&gt;"</string>
+    <string name="enhanced_confirmation_dialog_desc_settings_default" msgid="6911632348359332981">"ఈ అనుమతికి యాక్సెస్‌ను ఇవ్వడం వల్ల మీ వ్యక్తిగత, ఆర్థిక సమాచారం ప్రమాదంలో పడవచ్చు.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>అయితే ఈ అదనపు అవసరాలు గల అనుమతులను ఇవ్వకపోతే యాప్ సరిగ్గా పని చేయకుండా పోయే అవకాశం ఉంది. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;యాక్సెస్‌ను అనుమతించడం ఎలాగో తెలుసుకోండి&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_learn_more" msgid="5226619861379095709">"మరింత తెలుసుకోండి"</string>
     <string name="enhanced_confirmation_dialog_ok" msgid="8560373821598619924">"సరే"</string>
     <string name="permission_grant_dialog_streaming_blocked_title" msgid="8905241017017043649">"అనుమతి రిక్వెస్ట్ బ్లాక్ చేయబడింది"</string>
@@ -730,4 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"ఈ ఏజెంట్ సమాచారాన్ని పొందడానికి, మీ కోసం చర్యలు తీసుకోవడానికి, <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>‌ను యాక్సెస్ చేయగలరు."</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"అనుమతించండి"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"అనుమతించవద్దు"</string>
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"స్క్రీన్, యాప్ సందర్భాన్ని యాక్సెస్ చేయడానికి <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>‌ను అనుమతించాలా?"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"స్క్రీన్ కంటెంట్‌లను, కనిపించే యాప్ షేర్ చేసిన డేటాను యాక్సెస్ చేయడానికి ఆటోమేటిక్ అసిస్టెంట్ యాప్‌ను అనుమతించండి"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"అనుమతించండి"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"అనుమతించవద్దు"</string>
 </resources>

@@ -689,7 +689,7 @@
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"Հավելվածը հայցել է կոնֆիդենցիալ տեղեկությունների օգտագործման թույլտվություն, որը կարող է վտանգի ենթարկել ձեր անձնական և ֆինանսական տեղեկությունները։<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Հնարավոր է, որ առանց այս սահմանափակված թույլտվության՝ հավելվածը չաշխատի պատշաճ կերպով։ &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Ինչպես տրամադրել տվյալների օգտագործման թույլտվություն&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"Հավելվածին մերժվել է «<xliff:g id="ROLE_NAME">%1$s</xliff:g>» կատեգորիայում կանխադրված լինելու թույլտվությունը"</string>
     <string name="enhanced_confirmation_dialog_desc_role" msgid="6369601947905234551">"Հավելվածը հայցել է կոնֆիդենցիալ տեղեկությունների օգտագործման թույլտվություններ, որոնք կարող են վտանգի ենթարկել ձեր անձնական և ֆինանսական տեղեկությունները։<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Հնարավոր է, որ առանց այս սահմանափակված թույլտվությունների՝ հավելվածը չաշխատի պատշաճ կերպով։ &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Ինչպես տրամադրել տվյալների օգտագործման թույլտվություն&lt;/a&gt;"</string>
-    <string name="enhanced_confirmation_dialog_title_settings_default" msgid="1858092969721041576">"Հավելվածին մերժվել է թույլտվությունը"</string>
+    <string name="enhanced_confirmation_dialog_title_settings_default" msgid="1858092969721041576">"Հավելվածը թույլտվություն չի ստացել"</string>
     <string name="enhanced_confirmation_dialog_desc_settings_default" msgid="6911632348359332981">"Եթե տրամադրեք այս թույլտվությունը, ձեր անձնական և ֆինանսական տեղեկությունները կարող են վտանգված լինել։<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Հնարավոր է, որ առանց այս սահմանափակված թույլտվության՝ հավելվածը չաշխատի պատշաճ կերպով։ &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Ինչպես տրամադրել տվյալների օգտագործման թույլտվություն&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_learn_more" msgid="5226619861379095709">"Իմանալ ավելին"</string>
     <string name="enhanced_confirmation_dialog_ok" msgid="8560373821598619924">"Եղավ"</string>
@@ -730,4 +730,12 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Այս գործակալին հասանելի կդառնա <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> հավելվածը՝ տեղեկություններ ստանալու և ձեր փոխարեն գործողություններ ձեռնարկելու համար"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Թույլատրել"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Չթույլատրել"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (1108220895681014081) -->
+    <skip />
+    <!-- no translation found for request_assist_structure_dialog_description (6651318204248848550) -->
+    <skip />
+    <!-- no translation found for request_assist_structure_dialog_button_allow (3054444233802281800) -->
+    <skip />
+    <!-- no translation found for request_assist_structure_dialog_button_dont_allow (6260296016278652911) -->
+    <skip />
 </resources>

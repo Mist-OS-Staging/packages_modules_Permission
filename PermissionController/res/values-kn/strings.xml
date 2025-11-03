@@ -326,7 +326,7 @@
     <string name="app_perms_24h_access" msgid="99069906850627181">"ಕೊನೆಯ ಬಾರಿ ಪ್ರವೇಶಿಸಿರುವುದು <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="app_perms_24h_access_yest" msgid="5411926024794555022">"ನಿನ್ನೆ <xliff:g id="TIME_DATE">%1$s</xliff:g> ರ ಸಮಯದಲ್ಲಿ ಕೊನೆಯ ಬಾರಿ ಪ್ರವೇಶಿಸಲಾಗಿದೆ"</string>
     <string name="app_perms_7d_access" msgid="4945055548894683751">"ಕೊನೆಯದಾಗಿ <xliff:g id="TIME_DATE_0">%1$s</xliff:g> ರಂದು <xliff:g id="TIME_DATE_1">%2$s</xliff:g> ಸಮಯಕ್ಕೆ ಪ್ರವೇಶಿಸಲಾಗಿದೆ"</string>
-    <string name="app_perms_content_provider_24h" msgid="1055526027667508972">"ಕಳೆದ 24 ಗಂಟೆಗಳಲ್ಲಿ ಪ್ರವೇಶಿಸಲಾಗಿದೆ"</string>
+    <string name="app_perms_content_provider_24h" msgid="1055526027667508972">"ಕಳೆದ 24 ಗಂಟೆಗಳಲ್ಲಿ ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲಾಗಿದೆ"</string>
     <string name="app_perms_content_provider_7d" msgid="3215454898257814868">"ಕಳೆದ 7 ದಿನಗಳಲ್ಲಿ ಪ್ರವೇಶಿಸಲಾಗಿದೆ"</string>
     <string name="app_perms_24h_access_background" msgid="3413674718969576843">"ಕೊನೆಯ ಬಾರಿ <xliff:g id="TIME_DATE">%1$s</xliff:g>ಕ್ಕೆ ಪ್ರವೇಶಿಸಲಾಗಿದೆ • ಎಲ್ಲಾ ಸಮಯದಲ್ಲಿ ಅನುಮತಿಸಲಾಗಿದೆ"</string>
     <string name="app_perms_24h_access_yest_background" msgid="9174750810998076725">"ಕೊನೆಯದಾಗಿ ನಿನ್ನೆ <xliff:g id="TIME_DATE">%1$s</xliff:g> ಗೆ ಪ್ರವೇಶಿಸಲಾಗಿದೆ • ಎಲ್ಲಾ ಸಮಯದಲ್ಲಿ ಅನುಮತಿಸಲಾಗಿದೆ"</string>
@@ -730,4 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"ಈ ಏಜೆಂಟ್ ಮಾಹಿತಿ ಪಡೆಯಲು ಹಾಗೂ ನಿಮಗಾಗಿ ಕ್ರಮ ತೆಗೆದುಕೊಳ್ಳಲು <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ಅನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"ಅನುಮತಿಸಿ"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"ಅನುಮತಿಸಬೇಡಿ"</string>
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"ಸ್ಕ್ರೀನ್, ಆ್ಯಪ್ ಸಂದರ್ಭ ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> ಗೆ ಅನುಮತಿಸಬೇಕೇ?"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"ಸ್ಕ್ರೀನ್ ಕಂಟೆಂಟ್, ಕಾಣಿಸುತ್ತಿರುವ ಆ್ಯಪ್ ಹಂಚಿಕೊಂಡ ಡೇಟಾ ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು ಡೀಫಾಲ್ಟ್ ಅಸಿಸ್ಟೆಂಟ್ ಆ್ಯಪ್‌ಗೆ ಅನುಮತಿಸಿ"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"ಅನುಮತಿಸಿ"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"ಅನುಮತಿಸಬೇಡಿ"</string>
 </resources>

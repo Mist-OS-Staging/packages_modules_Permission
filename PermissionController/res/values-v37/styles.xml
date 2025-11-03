@@ -95,4 +95,72 @@
     </style>
 
     <!-- END REQUEST APP FUNCTION DIALOG -->
+
+    <!-- START REQUEST ASSIST STRUCTURE DIALOG -->
+
+    <style name="RequestAssistStructureDialogScrollView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingHorizontal">@dimen/settingslib_expressive_space_small4</item>
+        <item name="android:paddingTop">@dimen/settingslib_expressive_space_small4</item>
+        <item name="android:paddingBottom">@dimen/settingslib_expressive_space_small4</item>
+        <item name="android:background">@color/settingslib_materialColorSurfaceContainerHigh</item>
+    </style>
+
+    <style name="RequestAssistStructureDialogContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="RequestAssistStructureDialogAssistantIcon">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">28dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="RequestAssistStructureDialogTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/settingslib_expressive_space_small4</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textAppearance">@style/TextAppearance.SettingsLib.HeadlineSmall</item>
+    </style>
+
+    <style name="RequestAssistStructureDialogDescription">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/settingslib_expressive_space_small4</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textAppearance">@style/TextAppearance.SettingsLib.BodyMedium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="RequestAssistStructureDialogAllowButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/settingslib_expressive_space_extrasmall2</item>
+        <item name="android:layout_marginBottom">@dimen/settingslib_expressive_space_extrasmall2</item>
+        <item name="android:minHeight">@dimen/settingslib_expressive_space_medium3</item>
+        <item name="android:background">@drawable/settingslib_expressive_button_background_filled</item>
+        <item name="android:textAppearance">@style/TextAppearance.SettingsLib.LabelLarge</item>
+        <item name="android:textColor">@color/settingslib_materialColorOnPrimary</item>
+    </style>
+
+    <style name="RequestAssistStructureDialogDontAllowButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/settingslib_expressive_space_extrasmall6</item>
+        <item name="android:layout_marginBottom">@dimen/settingslib_expressive_space_extrasmall2</item>
+        <item name="android:minHeight">@dimen/settingslib_expressive_space_medium3</item>
+        <item name="android:background">@drawable/settingslib_expressive_button_background_filled</item>
+        <item name="android:textAppearance">@style/TextAppearance.SettingsLib.LabelLarge</item>
+        <item name="android:textColor">@color/settingslib_materialColorOnPrimary</item>
+    </style>
+
+    <!-- END REQUEST ASSIST STRUCTURE DIALOG -->
 </resources>

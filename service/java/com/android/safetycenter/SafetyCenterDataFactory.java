@@ -931,7 +931,10 @@ public final class SafetyCenterDataFactory {
                         //  null.
                         return null;
                     }
-                    return new SafetyCenterStaticEntry.Builder(safetySourceStatus.getTitle())
+                    return createSafetyCenterStaticEntryBuilder(
+                                    safetySourceStatus.getTitle(),
+                                    UserHandle.of(userId),
+                                    safetySource.getId())
                             .setSummary(
                                     inQuietMode
                                             ? DevicePolicyResources.getWorkProfilePausedString(
@@ -992,7 +995,9 @@ public final class SafetyCenterDataFactory {
         if (isQuietModeEnabled) {
             summary = DevicePolicyResources.getWorkProfilePausedString(mSafetyCenterResourcesApk);
         }
-        return new SafetyCenterStaticEntry.Builder(title)
+
+        return createSafetyCenterStaticEntryBuilder(
+                        title, UserHandle.of(userId), safetySource.getId())
                 .setSummary(summary)
                 .setPendingIntent(pendingIntent)
                 .build();
@@ -1347,16 +1352,34 @@ public final class SafetyCenterDataFactory {
         return builder;
     }
 
+    private static SafetyCenterStaticEntry.Builder createSafetyCenterStaticEntryBuilder(
+            CharSequence title, UserHandle user, String safetySourceId) {
+        SafetyCenterStaticEntry.Builder builder;
+        if (android.permission.flags.Flags.openSafetyCenterApis()) {
+            builder = new SafetyCenterStaticEntry.Builder(title, user, safetySourceId);
+        } else {
+            builder = new SafetyCenterStaticEntry.Builder(title);
+        }
+        return builder;
+    }
+
     private static SafetySourceKey toSafetySourceKey(String safetyCenterEntryIdString) {
         SafetyCenterEntryId id = SafetyCenterIds.entryIdFromString(safetyCenterEntryIdString);
         return SafetySourceKey.of(id.getSafetySourceId(), id.getUserId());
     }
 
     private static SafetyCenterIssue.Builder createSafetyCenterIssueBuilder(
-            String id, CharSequence title, CharSequence summary, UserHandle user, Set<String> safetySourceIds, String issueTypeId) {
+            String id,
+            CharSequence title,
+            CharSequence summary,
+            UserHandle user,
+            Set<String> safetySourceIds,
+            String issueTypeId) {
         SafetyCenterIssue.Builder builder;
         if (android.permission.flags.Flags.openSafetyCenterApis()) {
-            builder = new SafetyCenterIssue.Builder(id, title, summary, user, safetySourceIds, issueTypeId);
+            builder =
+                    new SafetyCenterIssue.Builder(
+                            id, title, summary, user, safetySourceIds, issueTypeId);
         } else {
             builder = new SafetyCenterIssue.Builder(id, title, summary);
         }

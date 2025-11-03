@@ -47,7 +47,6 @@ import androidx.wear.compose.foundation.lazy.rememberScalingLazyListState
 import androidx.wear.compose.foundation.lazy.rememberTransformingLazyColumnState
 import androidx.wear.compose.material3.AppScaffold
 import androidx.wear.compose.material3.CircularProgressIndicator
-import androidx.wear.compose.material3.IconButtonDefaults
 import androidx.wear.compose.material3.ListHeader
 import androidx.wear.compose.material3.MaterialTheme
 import androidx.wear.compose.material3.ScreenScaffold
@@ -57,6 +56,7 @@ import androidx.wear.compose.material3.TimeText
 import com.android.permissioncontroller.wear.permission.components.AnnotatedText
 import com.android.permissioncontroller.wear.permission.components.ListScopeWrapper
 import com.android.permissioncontroller.wear.permission.components.material2.Wear2Scaffold
+import com.android.permissioncontroller.wear.permission.components.theme.LocalCustomDimensions
 import com.android.permissioncontroller.wear.permission.components.theme.ResourceHelper
 import com.android.permissioncontroller.wear.permission.components.theme.WearPermissionMaterialUIVersion
 import com.android.permissioncontroller.wear.permission.components.theme.WearPermissionMaterialUIVersion.MATERIAL2_5
@@ -249,10 +249,7 @@ private fun BoxScope.LazyColumnView(
 
     fun BoxScope.scrollingViewContent(scopeWrapper: ListScopeWrapper) {
         with(scopeWrapper) {
-            iconItem(
-                imageBuilder =
-                    imageBuilder?.modifier(Modifier.size(IconButtonDefaults.LargeIconSize))
-            )
+            iconItem(imageBuilder = imageBuilder)
             titleItem(
                 text = title,
                 testTag = titleTestTag,
@@ -325,7 +322,13 @@ private fun Modifier.optionalTestTag(tag: String?): Modifier {
 }
 
 private fun ListScopeWrapper.iconItem(imageBuilder: WearPermissionIconBuilder?) =
-    imageBuilder?.let { item { imageBuilder.buildAsImage() } }
+    imageBuilder?.let {
+        item {
+            imageBuilder
+                .modifier(Modifier.size(LocalCustomDimensions.current.scrollScreenTitleIconSize.dp))
+                .buildAsImage()
+        }
+    }
 
 private fun ListScopeWrapper.titleItem(
     text: String?,

@@ -23,7 +23,6 @@ import android.os.Build.VERSION_CODES.TIRAMISU
 import android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE
 import android.os.Bundle
 import android.os.UserHandle
-import android.permission.flags.Flags
 import android.safetycenter.SafetyCenterData
 import android.safetycenter.SafetyCenterEntry
 import android.safetycenter.SafetyCenterEntry.ENTRY_SEVERITY_LEVEL_CRITICAL_WARNING
@@ -171,7 +170,7 @@ class SafetyCenterTestData(context: Context) {
         createSafetyCenterEntryBuilder(
                 entryId(sourceId, userId),
                 title,
-                UserHandle.of(UserHandle.myUserId()),
+                UserHandle.of(userId),
                 sourceId,
             )
             .setSeverityLevel(ENTRY_SEVERITY_LEVEL_UNKNOWN)
@@ -205,7 +204,7 @@ class SafetyCenterTestData(context: Context) {
         createSafetyCenterEntryBuilder(
                 entryId(sourceId, userId),
                 title,
-                UserHandle.of(UserHandle.myUserId()),
+                UserHandle.of(userId),
                 sourceId,
             )
             .setSeverityLevel(ENTRY_SEVERITY_LEVEL_UNSPECIFIED)
@@ -351,13 +350,14 @@ class SafetyCenterTestData(context: Context) {
         groupId: String? = SINGLE_SOURCE_GROUP_ID,
         safetySourceIds: Set<String> = setOf(sourceId),
     ) =
-    createSafetyCenterIssueBuilder(
-            issueId(sourceId, INFORMATION_ISSUE_ID, userId = userId),
-            "Information issue title",
-            "Information issue summary",
-            UserHandle.of(userId),
-            safetySourceIds,
-            ISSUE_TYPE_ID)
+        createSafetyCenterIssueBuilder(
+                issueId(sourceId, INFORMATION_ISSUE_ID, userId = userId),
+                "Information issue title",
+                "Information issue summary",
+                UserHandle.of(userId),
+                safetySourceIds,
+                ISSUE_TYPE_ID,
+            )
             .setSeverityLevel(ISSUE_SEVERITY_LEVEL_OK)
             .setShouldConfirmDismissal(false)
             .setActions(
@@ -395,13 +395,14 @@ class SafetyCenterTestData(context: Context) {
         confirmationDialog: Boolean = false,
         safetySourceIds: Set<String> = setOf(sourceId),
     ) =
-    createSafetyCenterIssueBuilder(
-            issueId(sourceId, RECOMMENDATION_ISSUE_ID, userId = userId),
-            "Recommendation issue title",
-            "Recommendation issue summary",
-            UserHandle.of(userId),
-            safetySourceIds,
-            ISSUE_TYPE_ID)
+        createSafetyCenterIssueBuilder(
+                issueId(sourceId, RECOMMENDATION_ISSUE_ID, userId = userId),
+                "Recommendation issue title",
+                "Recommendation issue summary",
+                UserHandle.of(userId),
+                safetySourceIds,
+                ISSUE_TYPE_ID,
+            )
             .setSeverityLevel(ISSUE_SEVERITY_LEVEL_RECOMMENDATION)
             .setActions(
                 listOf(
@@ -450,13 +451,14 @@ class SafetyCenterTestData(context: Context) {
         groupId: String? = SINGLE_SOURCE_GROUP_ID,
         safetySourceIds: Set<String> = setOf(sourceId),
     ) =
-    createSafetyCenterIssueBuilder(
-            issueId(sourceId, CRITICAL_ISSUE_ID, userId = userId),
-            "Critical issue title",
-            "Critical issue summary",
-            UserHandle.of(userId),
-            safetySourceIds,
-            ISSUE_TYPE_ID)
+        createSafetyCenterIssueBuilder(
+                issueId(sourceId, CRITICAL_ISSUE_ID, userId = userId),
+                "Critical issue title",
+                "Critical issue summary",
+                UserHandle.of(userId),
+                safetySourceIds,
+                ISSUE_TYPE_ID,
+            )
             .setSeverityLevel(ISSUE_SEVERITY_LEVEL_CRITICAL_WARNING)
             .setActions(
                 listOf(

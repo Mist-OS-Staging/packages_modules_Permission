@@ -25,6 +25,7 @@ import android.os.UserHandle
 import android.provider.Settings
 import android.util.Log
 import com.android.modules.utils.build.SdkLevel
+import com.android.permissioncontroller.permission.data.LightPackageInfoLiveData
 import com.android.permissioncontroller.permission.utils.KotlinUtils
 import com.android.permissioncontroller.permission.utils.Utils
 import com.android.permissioncontroller.pm.data.model.v31.PackageAttributionModel
@@ -114,10 +115,14 @@ class PackageRepositoryImpl(
     ): PackageInfoModel? =
         withContext(dispatcher) {
             try {
+                val pm = Utils.getUserContext(context, user).packageManager
                 val packageInfo =
-                    Utils.getUserContext(context, user)
-                        .packageManager
-                        .getPackageInfo(packageName, flags)
+                    LightPackageInfoLiveData.mergePermissionsInSharedUid(
+                        pm.getPackageInfo(packageName, flags),
+                        flags,
+                        pm,
+                    )
+
                 PackageInfoModel(packageInfo)
             } catch (e: PackageManager.NameNotFoundException) {
                 Log.w(LOG_TAG, "package $packageName not found for user ${user.identifier}")

@@ -730,4 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"এই এজেণ্টগৰাকীয়ে তথ্য পাবলৈ আৰু আপোনাৰ বাবে কাৰ্য কৰিবলৈ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> এক্সেছ কৰিব পাৰিব"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"অনুমতি দিয়ক"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"অনুমতি নিদিব"</string>
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>ক স্ক্ৰীন আৰু এপৰ প্ৰসংগ এক্সেছ কৰিবলৈ দিবনে?"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"ডিফ’ল্ট সহায়ক এপ্‌টোক স্ক্ৰীনৰ সমল আৰু দৃশ্যমান এপ্‌টোৱে শ্বেয়াৰ কৰা ডেটা এক্সেছ কৰিবলৈ অনুমতি দিয়ক"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"অনুমতি দিয়ক"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"অনুমতি নিদিব"</string>
 </resources>

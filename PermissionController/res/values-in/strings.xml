@@ -685,11 +685,11 @@
 
 </xliff:g>Scammer mungkin mencoba mengambil kendali perangkat Anda dengan meminta Anda mengizinkan akses aksesibilitas untuk suatu aplikasi."</string>
     <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
-    <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"Aplikasi ditolak aksesnya ke <xliff:g id="PERMISSION_NAME">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"Aplikasi tidak diberi akses ke <xliff:g id="PERMISSION_NAME">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"Aplikasi meminta akses ke izin sensitif yang dapat membahayakan info pribadi dan keuangan Anda.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Aplikasi mungkin tidak dapat berfungsi dengan baik tanpa izin terbatas ini. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&amp;gtPelajari cara mengizinkan akses&lt;/a&gt;"</string>
-    <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"Aplikasi ditolak aksesnya untuk menjadi <xliff:g id="ROLE_NAME">%1$s</xliff:g> default"</string>
+    <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"Aplikasi tidak diberi akses untuk menjadi <xliff:g id="ROLE_NAME">%1$s</xliff:g> default"</string>
     <string name="enhanced_confirmation_dialog_desc_role" msgid="6369601947905234551">"Aplikasi meminta akses ke izin sensitif yang dapat membahayakan info pribadi dan keuangan Anda.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Aplikasi mungkin tidak dapat berfungsi dengan baik tanpa izin terbatas ini. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&amp;gtPelajari cara mengizinkan akses&lt;/a&gt;"</string>
-    <string name="enhanced_confirmation_dialog_title_settings_default" msgid="1858092969721041576">"Aplikasi ditolak aksesnya"</string>
+    <string name="enhanced_confirmation_dialog_title_settings_default" msgid="1858092969721041576">"Aplikasi tidak diberi akses"</string>
     <string name="enhanced_confirmation_dialog_desc_settings_default" msgid="6911632348359332981">"Akses ke izin ini dapat membahayakan info pribadi dan keuangan Anda.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Aplikasi mungkin tidak dapat berfungsi dengan baik tanpa izin terbatas ini. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&amp;gtPelajari cara mengizinkan akses&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_learn_more" msgid="5226619861379095709">"Pelajari lebih lanjut"</string>
     <string name="enhanced_confirmation_dialog_ok" msgid="8560373821598619924">"Oke"</string>
@@ -730,4 +730,12 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Agen ini akan dapat mengakses <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> untuk mendapatkan info dan mengambil tindakan untuk Anda"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Izinkan"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Jangan izinkan"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (1108220895681014081) -->
+    <skip />
+    <!-- no translation found for request_assist_structure_dialog_description (6651318204248848550) -->
+    <skip />
+    <!-- no translation found for request_assist_structure_dialog_button_allow (3054444233802281800) -->
+    <skip />
+    <!-- no translation found for request_assist_structure_dialog_button_dont_allow (6260296016278652911) -->
+    <skip />
 </resources>

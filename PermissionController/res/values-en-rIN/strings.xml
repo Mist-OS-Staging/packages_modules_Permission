@@ -730,4 +730,12 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"This agent will be able to access <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> to get info and take actions for you"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Allow"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Don\'t allow"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (1108220895681014081) -->
+    <skip />
+    <!-- no translation found for request_assist_structure_dialog_description (6651318204248848550) -->
+    <skip />
+    <!-- no translation found for request_assist_structure_dialog_button_allow (3054444233802281800) -->
+    <skip />
+    <!-- no translation found for request_assist_structure_dialog_button_dont_allow (6260296016278652911) -->
+    <skip />
 </resources>
