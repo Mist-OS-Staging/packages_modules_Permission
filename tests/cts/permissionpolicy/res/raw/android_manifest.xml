@@ -9643,6 +9643,16 @@
             <valid-purpose android:name="notForIdentification" />
     </permission>
 
+    <!-- Allows an application to access npu model manager api.
+         <p>Protection level: signature|privileged
+         @FlaggedApi(com.android.npumanager.Flags.FLAG_NPUMANAGER_ENABLED)
+         @SystemApi
+         @hide -->
+    <permission
+        android:name="android.permission.ACCESS_NPU_MODEL_MANAGER_API"
+        android:protectionLevel="signature|privileged"
+        android:featureFlag="com.android.npumanager.npumanager_enabled" />
+
     <!-- Attribution for Geofencing service. -->
     <attribution android:tag="GeofencingService" android:label="@string/geofencing_service"/>
     <!-- Attribution for Country Detector. -->
