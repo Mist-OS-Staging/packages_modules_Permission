@@ -730,12 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"यह एजेंट, <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> को ऐक्सेस करेगा, ताकि यह आपको जानकारी दे सके और आपके लिए कार्रवाइयां कर सके"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"अनुमति दें"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"अनुमति न दें"</string>
-    <!-- no translation found for request_assist_structure_dialog_title (1108220895681014081) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_description (6651318204248848550) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_button_allow (3054444233802281800) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_button_dont_allow (6260296016278652911) -->
-    <skip />
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> को स्क्रीन और ऐप्लिकेशन का कॉन्टेक्स्ट ऐक्सेस करने की अनुमति देनी है?"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"डिफ़ॉल्ट सहायक ऐप्लिकेशन को स्क्रीन पर मौजूद कॉन्टेंट और दिखने वाले ऐप्लिकेशन से शेयर किया गया डेटा ऐक्सेस करने की अनुमति दें"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"अनुमति दें"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"अनुमति न दें"</string>
 </resources>
