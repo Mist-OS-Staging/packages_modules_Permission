@@ -379,8 +379,8 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
                     RoleUiBehaviorUtils.getConfirmationMessage(mRole, packageName,
                             requireContext());
             if (confirmationMessage != null) {
-                DefaultAppConfirmationDialogFragment.show(packageName, uid, confirmationMessage,
-                        this);
+                DefaultAppConfirmationDialogFragment.show(mRoleName, packageName, uid,
+                        confirmationMessage, this);
             } else {
                 setDefaultApp(packageName, uid);
             }
