@@ -9672,6 +9672,15 @@
         android:protectionLevel="signature|privileged"
         android:featureFlag="com.android.npumanager.npumanager_enabled" />
 
+    <!-- @hide @SystemApi Allows an app to write device level data to Health Connect.
+             <p>Protection level: signature|privileged
+         @FlaggedApi(android.permission.flags.Flags.FLAG_HEALTH_CONNECT_PROVIDE_DEVICE_DATA_PERMISSION_ENABLED)
+    -->
+    <permission
+        android:name="android.permission.PROVIDE_HEALTH_CONNECT_DEVICE_DATA"
+        android:protectionLevel="signature|privileged"
+        android:featureFlag="android.permission.flags.health_connect_provide_device_data_permission_enabled" />
+
     <!-- Attribution for Geofencing service. -->
     <attribution android:tag="GeofencingService" android:label="@string/geofencing_service"/>
     <!-- Attribution for Country Detector. -->
