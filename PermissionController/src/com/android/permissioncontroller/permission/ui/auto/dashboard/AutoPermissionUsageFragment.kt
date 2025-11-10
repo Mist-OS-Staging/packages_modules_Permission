@@ -21,6 +21,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.ViewModelProvider
+import androidx.preference.Preference
 import com.android.car.ui.preference.CarUiPreference
 import com.android.permissioncontroller.Constants
 import com.android.permissioncontroller.PermissionControllerStatsLog
@@ -28,6 +29,7 @@ import com.android.permissioncontroller.PermissionControllerStatsLog.PERMISSION_
 import com.android.permissioncontroller.PermissionControllerStatsLog.PERMISSION_USAGE_FRAGMENT_INTERACTION__ACTION__SHOW_SYSTEM_CLICKED
 import com.android.permissioncontroller.R
 import com.android.permissioncontroller.auto.AutoSettingsFrameFragment
+import com.android.permissioncontroller.flags.Flags
 import com.android.permissioncontroller.permission.ui.model.v31.PermissionUsageControlPreferenceUtils
 import com.android.permissioncontroller.permission.ui.viewmodel.v31.PermissionUsageViewModel
 import com.android.permissioncontroller.permission.ui.viewmodel.v31.PermissionUsageViewModelFactory
@@ -49,12 +51,14 @@ class AutoPermissionUsageFragment : AutoSettingsFrameFragment() {
                 2,
             )
         private const val DEFAULT_ORDER: Int = 3
+        private const val COLLAPSED_ITEM_COUNT = 3
     }
 
     private val SESSION_ID_KEY = (AutoPermissionUsageFragment::class.java.name + KEY_SESSION_ID)
 
     private var showSystem = false
     private var hasSystemApps = false
+    private var isExpanded = false
 
     /** Unique Id of a request */
     private var sessionId: Long = 0
@@ -118,44 +122,74 @@ class AutoPermissionUsageFragment : AutoSettingsFrameFragment() {
         if (activity == null || uiData is PermissionUsagesUiState.Loading) {
             return
         }
+        val successData = uiData as? PermissionUsagesUiState.Success
+        if (successData == null) {
+            Log.w(LOG_TAG, "UI state is not Success, returning")
+            setLoading(false)
+            return
+        }
+
         getPreferenceScreen().removeAll()
-        val permissionUsagesUiData = uiData as PermissionUsagesUiState.Success
-        if (hasSystemApps != permissionUsagesUiData.containsSystemAppUsage) {
-            hasSystemApps = permissionUsagesUiData.containsSystemAppUsage
+
+        if (hasSystemApps != successData.containsSystemAppUsage) {
+            hasSystemApps = successData.containsSystemAppUsage
             updateAction()
         }
 
-        val permissionGroupWithUsageCounts = permissionUsagesUiData.permissionGroupUsageCount
+        val permissionGroupWithUsageCounts = successData.permissionGroupUsageCount
         val permissionGroupWithUsageCountsEntries = permissionGroupWithUsageCounts.entries.toList()
 
-        permissionGroupWithUsageCountsEntries.sortedWith(
-            Comparator.comparing { permissionGroupWithUsageCount: Map.Entry<String, Int> ->
-                    PERMISSION_GROUP_ORDER.getOrDefault(
-                        permissionGroupWithUsageCount.key,
-                        DEFAULT_ORDER,
-                    )
-                }
-                .thenComparing { permissionGroupWithUsageCount: Map.Entry<String, Int> ->
-                    mViewModel.getPermissionGroupLabel(
-                        requireContext(),
-                        permissionGroupWithUsageCount.key,
-                    )
-                }
+        val sortedEntries = permissionGroupWithUsageCountsEntries.sortedWith(
+            Comparator.comparingInt { permissionGroupWithUsageCount: Map.Entry<String, Int> ->
+                PERMISSION_GROUP_ORDER.getOrDefault(
+                    permissionGroupWithUsageCount.key,
+                    DEFAULT_ORDER,
+                )
+            }.thenComparing { permissionGroupWithUsageCount: Map.Entry<String, Int> ->
+                mViewModel.getPermissionGroupLabel(
+                    requireContext(),
+                    permissionGroupWithUsageCount.key,
+                )
+            }
         )
 
-        for (i in permissionGroupWithUsageCountsEntries.indices) {
-            val permissionUsagePreference = CarUiPreference(requireContext())
-            PermissionUsageControlPreferenceUtils.initPreference(
-                permissionUsagePreference,
-                requireContext(),
-                permissionGroupWithUsageCountsEntries[i].key,
-                permissionGroupWithUsageCountsEntries[i].value,
-                showSystem,
-                sessionId,
-                false,
-            )
-            getPreferenceScreen().addPreference(permissionUsagePreference)
+        val shouldCollapse = !isExpanded && sortedEntries.size > COLLAPSED_ITEM_COUNT
+        if (shouldCollapse && Flags.automotivePrivacyDashboardAgentActivityEnabled()) {
+            for (i in 0 until COLLAPSED_ITEM_COUNT) {
+                addPermissionPreference(sortedEntries[i])
+            }
+            addExpandPreference()
+        } else {
+            for (entry in sortedEntries) {
+                addPermissionPreference(entry)
+            }
         }
         setLoading(false)
+    }
+
+    private fun addPermissionPreference(entry: Map.Entry<String, Int>) {
+        val permissionUsagePreference = CarUiPreference(requireContext())
+        PermissionUsageControlPreferenceUtils.initPreference(
+            permissionUsagePreference,
+            requireContext(),
+            entry.key,
+            entry.value,
+            showSystem,
+            sessionId,
+            false,
+        )
+        getPreferenceScreen().addPreference(permissionUsagePreference)
+    }
+
+    private fun addExpandPreference() {
+        val expandPreference = CarUiPreference(requireContext())
+        expandPreference.title = getString(R.string.perm_usage_adv_info_title)
+        expandPreference.setIcon(R.drawable.ic_expand_more)
+        expandPreference.onPreferenceClickListener = Preference.OnPreferenceClickListener {
+            isExpanded = true
+            mViewModel.permissionUsagesUiLiveData.value?.let { updateAllUI(it) }
+            true
+        }
+        getPreferenceScreen().addPreference(expandPreference)
     }
 }
