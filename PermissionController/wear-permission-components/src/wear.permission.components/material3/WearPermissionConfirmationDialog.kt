@@ -15,9 +15,11 @@
  */
 package com.android.permissioncontroller.wear.permission.components.material3
 
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -49,6 +51,11 @@ fun WearPermissionConfirmationDialog(
 ) {
 
     if (materialUIVersion == WearPermissionMaterialUIVersion.MATERIAL3) {
+        val scrollPaddingDefaults = rememberPaddingDefaults()
+        val dialogPaddingDefaults =
+            remember(iconRes) {
+                scrollPaddingDefaults.scrollContentPaddingForDialogs(iconRes == null)
+            }
         if (
             (positiveButtonContent == null && negativeButtonContent != null) ||
                 (positiveButtonContent != null && negativeButtonContent == null)
@@ -60,6 +67,7 @@ fun WearPermissionConfirmationDialog(
                 iconRes = iconRes,
                 title = title,
                 message = message,
+                contentPadding = dialogPaddingDefaults,
             )
         } else {
             WearPermissionConfirmationDialogInternal(
@@ -69,6 +77,7 @@ fun WearPermissionConfirmationDialog(
                 iconRes = iconRes,
                 title = title,
                 message = message,
+                contentPadding = dialogPaddingDefaults,
             )
         }
     } else {
@@ -88,6 +97,7 @@ fun WearPermissionConfirmationDialog(
 private fun WearPermissionConfirmationDialogInternal(
     show: Boolean,
     edgeButtonContent: DialogButtonContent,
+    contentPadding: PaddingValues,
     iconRes: WearPermissionIconBuilder?,
     title: String?,
     message: String?,
@@ -112,12 +122,14 @@ private fun WearPermissionConfirmationDialogInternal(
         icon = { iconRes?.build() },
         title = title?.let { { Text(text = title) } } ?: {},
         text = message?.let { { Text(text = message) } },
+        contentPadding = contentPadding,
     )
 }
 
 @Composable
 private fun WearPermissionConfirmationDialogInternal(
     show: Boolean,
+    contentPadding: PaddingValues,
     positiveButtonContent: DialogButtonContent?,
     negativeButtonContent: DialogButtonContent?,
     iconRes: WearPermissionIconBuilder?,
@@ -175,5 +187,6 @@ private fun WearPermissionConfirmationDialogInternal(
         icon = { iconRes?.build() },
         title = title?.let { { Text(text = title) } } ?: {},
         text = message?.let { { Text(text = message) } },
+        contentPadding = contentPadding,
     )
 }
