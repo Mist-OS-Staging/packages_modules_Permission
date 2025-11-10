@@ -730,12 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Esse agente poderá acessar o app <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> para receber informações e realizar ações para você"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Permitir"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Não permitir"</string>
-    <!-- no translation found for request_assist_structure_dialog_title (1108220895681014081) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_description (6651318204248848550) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_button_allow (3054444233802281800) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_button_dont_allow (6260296016278652911) -->
-    <skip />
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"Permitir que <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> acesse o contexto da tela e do app?"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Permitir que o app assistivo padrão acesse o conteúdo da tela e os dados compartilhados pelo app visível"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Permitir"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Não permitir"</string>
 </resources>

@@ -730,12 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Cet agent pourra acc. à <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> pour obtenir des infos et exécuter des actions"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Autoriser"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Interdire"</string>
-    <!-- no translation found for request_assist_structure_dialog_title (1108220895681014081) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_description (6651318204248848550) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_button_allow (3054444233802281800) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_button_dont_allow (6260296016278652911) -->
-    <skip />
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"Autoriser <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> à accéder au contexte de l\'écran et de l\'appli?"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Autoriser l\'appli d\'assistance par défaut à accéder au contenu de l\'écran et aux données partagées par l\'appli visible"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Autoriser"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Ne pas autoriser"</string>
 </resources>

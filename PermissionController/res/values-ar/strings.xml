@@ -730,7 +730,7 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"سيتمكّن هذا الوكيل من الوصول إلى \"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>\" للحصول على المعلومات وتنفيذ الإجراءات نيابةً عنك"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"السماح"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"عدم السماح"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"السماح لتطبيق \"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>\" بالاطّلاع على سياق الشاشة والتطبيق؟"</string>
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"السماح لتطبيق \"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>\" بالوصول إلى سياق الشاشة والتطبيق؟"</string>
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"السماح لتطبيق المساعد التلقائي بالوصول إلى محتوى الشاشة والبيانات التي يشاركها التطبيق المرئي"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"السماح"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"عدم السماح"</string>

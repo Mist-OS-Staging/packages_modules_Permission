@@ -730,12 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Tác nhân này sẽ có thể truy cập vào <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> để lấy thông tin và thực hiện thao tác cho bạn"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Cho phép"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Không cho phép"</string>
-    <!-- no translation found for request_assist_structure_dialog_title (1108220895681014081) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_description (6651318204248848550) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_button_allow (3054444233802281800) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_button_dont_allow (6260296016278652911) -->
-    <skip />
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"Cho phép <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> xem ngữ cảnh trên màn hình và ngữ cảnh của ứng dụng?"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Cho phép ứng dụng trợ lý mặc định truy cập vào nội dung trên màn hình và dữ liệu do ứng dụng hiển thị chia sẻ"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Cho phép"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Không cho phép"</string>
 </resources>

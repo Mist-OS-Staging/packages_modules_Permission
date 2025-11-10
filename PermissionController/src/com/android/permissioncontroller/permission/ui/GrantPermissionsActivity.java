@@ -80,6 +80,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.StringRes;
 import androidx.core.util.Preconditions;
+import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.Lifecycle;
 
 import com.android.modules.utils.build.SdkLevel;
@@ -112,7 +113,7 @@ import java.util.Set;
 /**
  * An activity which displays runtime permission prompts on behalf of an app.
  */
-public class GrantPermissionsActivity extends SettingsActivity
+public class GrantPermissionsActivity extends FragmentActivity
         implements GrantPermissionsViewHandler.ResultListener, ExpressiveDesignEnabledProvider {
 
     private static final String LOG_TAG = "GrantPermissionsActivity";

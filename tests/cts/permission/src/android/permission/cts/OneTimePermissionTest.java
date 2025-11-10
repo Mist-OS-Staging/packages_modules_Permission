@@ -107,8 +107,8 @@ public class OneTimePermissionTest {
     @Before
     public void wakeUpScreen() {
         SystemUtil.runShellCommand("input keyevent KEYCODE_WAKEUP");
-
-        SystemUtil.runShellCommand("input keyevent 82");
+        SystemUtil.runShellCommand("input keyevent KEYCODE_MENU");
+        SystemUtil.runShellCommand("input keyevent KEYCODE_HOME");
     }
 
     @Before

@@ -65,7 +65,7 @@ package android.app.role {
     field @FlaggedApi("android.permission.flags.supervision_role_enabled") public static final String ROLE_SUPERVISION = "android.app.role.SUPERVISION";
     field public static final String ROLE_SYSTEM_ACTIVITY_RECOGNIZER = "android.app.role.SYSTEM_ACTIVITY_RECOGNIZER";
     field public static final String ROLE_SYSTEM_CALL_STREAMING = "android.app.role.SYSTEM_CALL_STREAMING";
-    field @FlaggedApi("android.content.pm.sdk_dependency_installer") public static final String ROLE_SYSTEM_DEPENDENCY_INSTALLER = "android.app.role.SYSTEM_DEPENDENCY_INSTALLER";
+    field @Deprecated @FlaggedApi("android.content.pm.sdk_dependency_installer_deprecation") public static final String ROLE_SYSTEM_DEPENDENCY_INSTALLER = "android.app.role.SYSTEM_DEPENDENCY_INSTALLER";
     field @FlaggedApi("com.android.permission.flags.system_financed_device_controller") public static final String ROLE_SYSTEM_FINANCED_DEVICE_CONTROLLER = "android.app.role.SYSTEM_FINANCED_DEVICE_CONTROLLER";
     field public static final String ROLE_SYSTEM_SUPERVISION = "android.app.role.SYSTEM_SUPERVISION";
     field public static final String ROLE_SYSTEM_WELLBEING = "android.app.role.SYSTEM_WELLBEING";
@@ -210,6 +210,7 @@ package android.safetycenter {
     method @NonNull public String getId();
     method @FlaggedApi("android.permission.flags.open_safety_center_apis") @Nullable public String getIssueTypeId();
     method @FlaggedApi("android.permission.flags.open_safety_center_apis") @NonNull public java.util.Set<java.lang.String> getSafetySourceIds();
+    method @FlaggedApi("android.permission.flags.open_safety_center_apis") @Nullable public String getSafetySourceIssueId();
     method public int getSeverityLevel();
     method @Nullable public CharSequence getSubtitle();
     method @NonNull public CharSequence getSummary();
@@ -263,7 +264,7 @@ package android.safetycenter {
 
   public static final class SafetyCenterIssue.Builder {
     ctor @Deprecated @FlaggedApi("android.permission.flags.open_safety_center_apis") public SafetyCenterIssue.Builder(@NonNull String, @NonNull CharSequence, @NonNull CharSequence);
-    ctor @FlaggedApi("android.permission.flags.open_safety_center_apis") public SafetyCenterIssue.Builder(@NonNull String, @NonNull CharSequence, @NonNull CharSequence, @NonNull android.os.UserHandle, @NonNull java.util.Set<java.lang.String>, @NonNull String);
+    ctor @FlaggedApi("android.permission.flags.open_safety_center_apis") public SafetyCenterIssue.Builder(@NonNull String, @NonNull CharSequence, @NonNull CharSequence, @NonNull android.os.UserHandle, @NonNull java.util.Set<java.lang.String>, @NonNull String, @NonNull String);
     ctor public SafetyCenterIssue.Builder(@NonNull android.safetycenter.SafetyCenterIssue);
     method @NonNull public android.safetycenter.SafetyCenterIssue build();
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setActions(@NonNull java.util.List<android.safetycenter.SafetyCenterIssue.Action>);
@@ -273,6 +274,7 @@ package android.safetycenter {
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setId(@NonNull String);
     method @FlaggedApi("android.permission.flags.open_safety_center_apis") @NonNull public android.safetycenter.SafetyCenterIssue.Builder setIssueTypeId(@NonNull String);
     method @FlaggedApi("android.permission.flags.open_safety_center_apis") @NonNull public android.safetycenter.SafetyCenterIssue.Builder setSafetySourceIds(@NonNull java.util.Set<java.lang.String>);
+    method @FlaggedApi("android.permission.flags.open_safety_center_apis") @NonNull public android.safetycenter.SafetyCenterIssue.Builder setSafetySourceIssueId(@NonNull String);
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setSeverityLevel(int);
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setShouldConfirmDismissal(boolean);
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setSubtitle(@Nullable CharSequence);

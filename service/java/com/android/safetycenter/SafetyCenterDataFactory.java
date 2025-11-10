@@ -332,7 +332,10 @@ public final class SafetyCenterDataFactory {
                                 UserHandle.of(safetyCenterIssueKey.getUserId()),
                                 mSafetyCenterDataManager.getSafetySourceIdsForIssue(
                                         safetyCenterIssueKey),
-                                safetySourceIssue.getIssueTypeId())
+                                safetySourceIssue.getIssueTypeId(),
+                                safetyCenterIssueId
+                                        .getSafetyCenterIssueKey()
+                                        .getSafetySourceIssueId())
                         .setSeverityLevel(safetyCenterIssueSeverityLevel)
                         .setShouldConfirmDismissal(
                                 safetyCenterIssueSeverityLevel
@@ -1374,12 +1377,19 @@ public final class SafetyCenterDataFactory {
             CharSequence summary,
             UserHandle user,
             Set<String> safetySourceIds,
-            String issueTypeId) {
+            String issueTypeId,
+            String safetySourceIssueId) {
         SafetyCenterIssue.Builder builder;
         if (android.permission.flags.Flags.openSafetyCenterApis()) {
             builder =
                     new SafetyCenterIssue.Builder(
-                            id, title, summary, user, safetySourceIds, issueTypeId);
+                            id,
+                            title,
+                            summary,
+                            user,
+                            safetySourceIds,
+                            issueTypeId,
+                            safetySourceIssueId);
         } else {
             builder = new SafetyCenterIssue.Builder(id, title, summary);
         }

@@ -550,7 +550,7 @@
     <string name="privdash_label_camera" msgid="1426440033626198096">"دوربین"</string>
     <string name="privdash_label_microphone" msgid="8415035835803511693">"میکروفون"</string>
     <string name="privdash_label_location" msgid="6882400763866489291">"مکان"</string>
-    <string name="privdash_label_other" msgid="3710394147423236033">"موارد دیگر"</string>
+    <string name="privdash_label_other" msgid="3710394147423236033">"غیره"</string>
     <string name="privdash_label_none" msgid="5991866260360484858">"هیچ‌کدام"</string>
     <string name="privdash_label_24h" msgid="1512532123865375319">"۲۴\nساعت گذشته"</string>
     <string name="privdash_label_7d" msgid="5645301995348656931">"۷ روز\nگذشته"</string>
@@ -730,12 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"این نماینده برای دریافت معلومات و انجام اعمال برای شما قادر به دسترسی به <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>خواهد بود"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"اجازه دادن"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"اجازه ندادن"</string>
-    <!-- no translation found for request_assist_structure_dialog_title (1108220895681014081) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_description (6651318204248848550) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_button_allow (3054444233802281800) -->
-    <skip />
-    <!-- no translation found for request_assist_structure_dialog_button_dont_allow (6260296016278652911) -->
-    <skip />
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"به <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> اجازه می‌دهید به بافت برنامه و صفحه‌نمایش دسترسی داشته باشد؟"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"به برنامه دستیار پیش‌فرض اجازه داده می‌شود به محتوای صفحه‌نمایش و داده‌های هم‌رسانی‌شده توسط برنامه نمایان دسترسی داشته باشد"</string>
+    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"اجازه دادن"</string>
+    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"اجازه ندادن"</string>
 </resources>
