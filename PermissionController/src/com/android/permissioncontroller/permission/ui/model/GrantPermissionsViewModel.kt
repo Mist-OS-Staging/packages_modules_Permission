@@ -1371,7 +1371,7 @@ class GrantPermissionsViewModel(
         clickedButton: Int,
         presentedButtons: Int,
         isPermissionRationaleShown: Boolean,
-        prompt: Prompt,
+        prompt: Prompt?,
         initialLocationPrecision: Int = 0,
         selectedLocationPrecision: Int = 0,
         locationAccuracyButtonClicked: Boolean = false
@@ -1386,8 +1386,8 @@ class GrantPermissionsViewModel(
                 "Logged buttons presented and clicked permissionGroupName=" +
                     "$groupName package=$packageName presentedButtons=$presentedButtons " +
                     "clickedButton=$clickedButton isPermissionRationaleShown=" +
-                    "$isPermissionRationaleShown sessionId=$sessionId, but requests were not yet" +
-                    "initialized",
+                    "$isPermissionRationaleShown sessionId=$sessionId, but requests were not " +
+                     "yet initialized",
                 IllegalStateException()
             )
             return
@@ -1422,7 +1422,7 @@ class GrantPermissionsViewModel(
         )
     }
 
-    private fun getLocationPromptType(prompt: Prompt): Int {
+    private fun getLocationPromptType(prompt: Prompt?): Int {
         return when (prompt) {
             Prompt.LOCATION_TWO_BUTTON_COARSE_HIGHLIGHT,
             Prompt.LOCATION_TWO_BUTTON_FINE_HIGHLIGHT -> GRANT_PERMISSIONS_ACTIVITY_BUTTON_ACTIONS__LOCATION_PROMPT_TYPE__BOTH_PRECISIONS
