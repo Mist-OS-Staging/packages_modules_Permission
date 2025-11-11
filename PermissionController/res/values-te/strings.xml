@@ -730,8 +730,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"ఈ ఏజెంట్ సమాచారాన్ని పొందడానికి, మీ కోసం చర్యలు తీసుకోవడానికి, <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>‌ను యాక్సెస్ చేయగలరు."</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"అనుమతించండి"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"అనుమతించవద్దు"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"స్క్రీన్, యాప్ సందర్భాన్ని యాక్సెస్ చేయడానికి <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>‌ను అనుమతించాలా?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"స్క్రీన్ కంటెంట్‌లను, కనిపించే యాప్ షేర్ చేసిన డేటాను యాక్సెస్ చేయడానికి ఆటోమేటిక్ అసిస్టెంట్ యాప్‌ను అనుమతించండి"</string>
+    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"స్క్రీన్‌ను, యాప్ కాంటెక్ట్స్‌ను (సందర్భాన్ని) యాక్సెస్ చేసేందుకు <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>‌ను అనుమతించాలా?"</string>
+    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"స్క్రీన్ కంటెంట్‌లను, అలాగే మీరు ప్రస్తుతం యాక్టివ్‌గా ఉన్న యాప్ డేటాను యాక్సెస్ చేసేందుకు ఆటోమేటిక్ అసిస్టెంట్ యాప్‌ను అనుమతించండి"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"అనుమతించండి"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"అనుమతించవద్దు"</string>
 </resources>
