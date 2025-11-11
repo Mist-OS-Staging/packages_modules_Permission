@@ -1296,6 +1296,9 @@ public class GrantPermissionsActivity extends FragmentActivity
     }
 
     private List<String> getPermissionsForPrompt(Prompt prompt) {
+        if (prompt == null) {
+            return List.of();
+        }
         return switch (prompt) {
             case LOCATION_COARSE_ONLY, LOCATION_TWO_BUTTON_COARSE_HIGHLIGHT -> List.of(
                     ACCESS_COARSE_LOCATION);
