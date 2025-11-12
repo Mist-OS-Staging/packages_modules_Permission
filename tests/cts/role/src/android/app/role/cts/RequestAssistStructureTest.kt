@@ -16,6 +16,7 @@
 package android.app.role.cts
 
 import android.app.Activity
+import android.app.AppOpsManager
 import android.app.role.RoleManager
 import android.content.ComponentName
 import android.content.Intent
@@ -31,7 +32,6 @@ import androidx.test.filters.SdkSuppress
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.rule.ActivityTestRule
 import androidx.test.uiautomator.By
-import androidx.test.uiautomator.UiObjectNotFoundException
 import androidx.test.uiautomator.Until
 import com.android.compatibility.common.util.DisableAnimationRule
 import com.android.compatibility.common.util.FreezeRotationRule
@@ -51,7 +51,8 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 /** Tests {@link RequestAssistStructureActivity} */
-@SdkSuppress(minSdkVersion = Build.VERSION_CODES.CINNAMON_BUN, codeName = "CinnamonBun")
+// TODO: update to correct version once available
+@SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
 @RunWith(AndroidJUnit4::class)
 @RequiresFlagsEnabled(FLAG_ASSIST_SETTINGS_PRIVACY_IMPROVEMENTS_ENABLED)
 class RequestAssistStructureTest {
@@ -60,7 +61,10 @@ class RequestAssistStructureTest {
     @get:Rule val freezeRotationRule = FreezeRotationRule()
     @get:Rule val activityRule = ActivityTestRule(WaitForResultActivity::class.java)
 
+    private val appOpsManager = context.getSystemService(AppOpsManager::class.java)!!
     private val roleManager = context.getSystemService(RoleManager::class.java)!!
+
+    private var assistantRoleHolderPackageUid: Int = Process.INVALID_UID
 
     private var roleHolder: String? = null
 
@@ -69,6 +73,7 @@ class RequestAssistStructureTest {
         assumeTrue(RoleManagerUtil.isCddCompliantScreenSize())
         saveRoleHolder()
         installPackage(APP_APK_PATH)
+        assistantRoleHolderPackageUid = context.packageManager.getPackageUid(APP_PACKAGE_NAME, 0)
     }
 
     @After
@@ -82,14 +87,28 @@ class RequestAssistStructureTest {
 
     @Test
     fun startRequestAssistStructureActivity_finishIfNotRoleHolder() {
+        setAppOpMode(AppOpsManager.MODE_IGNORED)
         requestAssistStructure()
         val result: Pair<Int?, Intent?> = waitForResult()
         Truth.assertThat(result.first).isEqualTo(Activity.RESULT_CANCELED)
+        Truth.assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_IGNORED)
+    }
+
+    @Test
+    fun startRequestAssistStructureActivity_finishIfAlreadyAllowed() {
+        addRoleHolder(RoleManager.ROLE_ASSISTANT, APP_PACKAGE_NAME)
+        setAppOpMode(AppOpsManager.MODE_ALLOWED)
+
+        requestAssistStructure()
+        val result: Pair<Int?, Intent?> = waitForResult()
+        Truth.assertThat(result.first).isEqualTo(Activity.RESULT_OK)
+        Truth.assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_ALLOWED)
     }
 
     @Test
     fun startRequestAssistStructureActivity_verifyCopy() {
         addRoleHolder(RoleManager.ROLE_ASSISTANT, APP_PACKAGE_NAME)
+        setAppOpMode(AppOpsManager.MODE_IGNORED)
 
         requestAssistStructure()
         UiAutomatorUtils2.waitFindObject(By.text(TITLE))
@@ -102,18 +121,40 @@ class RequestAssistStructureTest {
     @Test
     fun startRequestAssistStructureActivity_allow() {
         addRoleHolder(RoleManager.ROLE_ASSISTANT, APP_PACKAGE_NAME)
+        setAppOpMode(AppOpsManager.MODE_IGNORED)
 
         requestAssistStructure()
         respondToRequestAndWaitForResult(true)
+        Truth.assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_ALLOWED)
     }
 
     @Test
     fun startRequestAssistStructureActivity_dontAllow() {
         addRoleHolder(RoleManager.ROLE_ASSISTANT, APP_PACKAGE_NAME)
+        setAppOpMode(AppOpsManager.MODE_IGNORED)
 
         requestAssistStructure()
         respondToRequestAndWaitForResult(false)
+        Truth.assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_IGNORED)
     }
+
+    private fun getAppOpMode(): Int =
+        SystemUtil.runWithShellPermissionIdentity<Int> {
+            appOpsManager.checkOpNoThrow(
+                AppOpsManager.OPSTR_ASSIST_STRUCTURE,
+                assistantRoleHolderPackageUid,
+                APP_PACKAGE_NAME,
+            )
+        }
+
+    private fun setAppOpMode(mode: Int) =
+        SystemUtil.runWithShellPermissionIdentity {
+            appOpsManager.setUidMode(
+                AppOpsManager.OPSTR_ASSIST_STRUCTURE,
+                assistantRoleHolderPackageUid,
+                mode,
+            )
+        }
 
     private fun saveRoleHolder() {
         val roleHolders = getRoleHolders(RoleManager.ROLE_ASSISTANT)
@@ -224,7 +265,6 @@ class RequestAssistStructureTest {
         waitForFocus()
     }
 
-    @Throws(InterruptedException::class, UiObjectNotFoundException::class)
     private fun respondToRequestAndWaitForResult(allow: Boolean) {
         if (allow) {
             UiAutomatorUtils2.waitFindObject(ALLOW_BUTTON_SELECTOR).click()
@@ -263,8 +303,7 @@ class RequestAssistStructureTest {
             "$APP_PACKAGE_NAME.RequestAssistStructureActivity"
 
         private const val APP_LABEL = "CtsRoleTestApp"
-        // TODO: fix placeholder text once implemented
-        private const val TITLE = "Allow %1\$s to access screen and app context?"
+        private const val TITLE = "Allow $APP_LABEL to access screen and app context?"
         private const val DESCRIPTION =
             "Allow the default assistant app to access the screen contents and data shared by the" +
                 " visible app"

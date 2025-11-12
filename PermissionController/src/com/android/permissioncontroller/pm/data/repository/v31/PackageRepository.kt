@@ -40,6 +40,13 @@ import kotlinx.coroutines.withContext
  */
 interface PackageRepository {
     /**
+     * Returns an integer UID who owns the given package name
+     *
+     * @see PackageManager.getPackageUid
+     */
+    fun getPackageUid(packageName: String, user: UserHandle): Int
+
+    /**
      * Returns a package label for the given [packageName] and [user] Returns [packageName] if the
      * package is not found.
      */
@@ -87,6 +94,15 @@ class PackageRepositoryImpl(
     private val context: Context,
     private val dispatcher: CoroutineDispatcher = Dispatchers.Default,
 ) : PackageRepository {
+    override fun getPackageUid(packageName: String, user: UserHandle): Int {
+        return try {
+            val userContext = Utils.getUserContext(context, user)
+            userContext.packageManager.getPackageUid(packageName, 0)
+        } catch (e: PackageManager.NameNotFoundException) {
+            android.os.Process.INVALID_UID
+        }
+    }
+
     override fun getPackageLabel(packageName: String, user: UserHandle): String {
         return try {
             val userContext = Utils.getUserContext(context, user)
