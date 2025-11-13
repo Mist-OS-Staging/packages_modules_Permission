@@ -729,7 +729,7 @@ public class EnhancedConfirmationService extends SystemService {
                 // telephony service is unavailable.
             }
             UserHandle user = mContext.getUser();
-            if (com.android.server.telecom.flags.Flags.callDetailsGetAssociatedUserApi()) {
+            if (android.telecom.flags.Flags.callDetailsGetAssociatedUserApi2()) {
                 user = call.getDetails().getAssociatedUser();
             }
             if (number != null) {
