@@ -29,7 +29,7 @@ class FakeAppOpRepository(
 ) : AppOpRepository {
     override fun getDiscreteOps(
         opNames: List<String>,
-        coroutineScope: CoroutineScope
+        coroutineScope: CoroutineScope,
     ): Flow<List<DiscretePackageOpsModel>> {
         return discreteOps
     }

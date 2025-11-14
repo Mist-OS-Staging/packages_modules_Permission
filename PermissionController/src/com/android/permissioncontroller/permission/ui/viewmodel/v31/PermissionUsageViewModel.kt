@@ -70,7 +70,7 @@ class PermissionUsageViewModel(
             .stateIn(
                 coroutineScope,
                 SharingStarted.WhileSubscribed(5000),
-                PermissionGroupUsageModelWrapper.Loading
+                PermissionGroupUsageModelWrapper.Loading,
             )
     }
 
@@ -132,7 +132,7 @@ class PermissionUsageViewModel(
             permGroupOps.any { !it.isUserSensitive },
             permissionUsageCountMap,
             showSystemApps,
-            show7DaysData
+            show7DaysData,
         )
     }
 
@@ -163,7 +163,7 @@ class PermissionUsageViewModel(
         return runBlocking(coroutineScope.coroutineContext + Dispatchers.Default) {
             permissionGroupLabels.getOrDefault(
                 permissionGroup,
-                permissionRepository.getPermissionGroupLabel(context, permissionGroup).toString()
+                permissionRepository.getPermissionGroupLabel(context, permissionGroup).toString(),
             )
         }
     }
@@ -198,7 +198,7 @@ class PermissionUsageViewModelFactory(private val app: Application) : ViewModelP
             app,
             permissionRepository,
             permissionUsageUseCase,
-            savedState = extras.createSavedStateHandle()
+            savedState = extras.createSavedStateHandle(),
         )
             as T
     }

@@ -35,8 +35,10 @@ class UpdateAccessUseCase(private val appFunctionRepository: AppFunctionReposito
         appFunctionRepository.updateAccessFlags(
             agentPackageName,
             targetPackageName,
-            ACCESS_FLAG_USER_GRANTED or ACCESS_FLAG_USER_DENIED or
-                    ACCESS_FLAG_OTHER_GRANTED or ACCESS_FLAG_OTHER_DENIED,
+            ACCESS_FLAG_USER_GRANTED or
+                ACCESS_FLAG_USER_DENIED or
+                ACCESS_FLAG_OTHER_GRANTED or
+                ACCESS_FLAG_OTHER_DENIED,
             if (isGranted) ACCESS_FLAG_USER_GRANTED else ACCESS_FLAG_USER_DENIED,
         )
     }

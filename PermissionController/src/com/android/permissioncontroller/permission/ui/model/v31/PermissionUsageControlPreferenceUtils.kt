@@ -40,7 +40,7 @@ object PermissionUsageControlPreferenceUtils {
         listOf(
             Manifest.permission_group.LOCATION,
             Manifest.permission_group.CAMERA,
-            Manifest.permission_group.MICROPHONE
+            Manifest.permission_group.MICROPHONE,
         )
 
     @JvmStatic
@@ -51,7 +51,7 @@ object PermissionUsageControlPreferenceUtils {
         count: Int,
         showSystem: Boolean,
         sessionId: Long,
-        show7Days: Boolean
+        show7Days: Boolean,
     ): Preference {
         val permGroupLabel = KotlinUtils.getPermGroupLabel(context, groupName)
         return preference.apply {
@@ -61,7 +61,7 @@ object PermissionUsageControlPreferenceUtils {
                 StringUtils.getIcuPluralsString(
                     context,
                     R.string.permission_usage_preference_label,
-                    count
+                    count,
                 )
             if (count == 0) {
                 isEnabled = false
@@ -70,13 +70,13 @@ object PermissionUsageControlPreferenceUtils {
                         StringUtils.getIcuPluralsString(
                             context,
                             R.string.permission_usage_preference_summary_not_used_in_past_n_days,
-                            7
+                            7,
                         )
                     } else {
                         StringUtils.getIcuPluralsString(
                             context,
                             R.string.permission_usage_preference_summary_not_used_in_past_n_hours,
-                            24
+                            24,
                         )
                     }
                 setSummary(permissionUsageSummaryNotUsed)

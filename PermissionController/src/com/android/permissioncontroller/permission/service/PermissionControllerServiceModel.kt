@@ -69,7 +69,7 @@ class PermissionControllerServiceModel(private val service: PermissionController
     fun <T> observeAndCheckForLifecycleState(
         liveData: LiveData<T>,
         forceUpdate: Boolean = false,
-        onChangedFun: (t: T?) -> Unit
+        onChangedFun: (t: T?) -> Unit,
     ) {
         GlobalScope.launch(Main.immediate) {
             if (service.lifecycle.currentState != Lifecycle.State.STARTED) {
@@ -129,7 +129,7 @@ class PermissionControllerServiceModel(private val service: PermissionController
     fun onCountPermissionAppsLiveData(
         permissionNames: List<String>,
         flags: Int,
-        callback: IntConsumer
+        callback: IntConsumer,
     ) {
         val packageInfosLiveData = UserPackageInfosLiveData[Process.myUserHandle()]
         observeAndCheckForLifecycleState(packageInfosLiveData) { packageInfos ->
@@ -153,7 +153,7 @@ class PermissionControllerServiceModel(private val service: PermissionController
         permissionNames: List<String>,
         flags: Int,
         callback: IntConsumer,
-        packageInfos: List<LightPackageInfo>?
+        packageInfos: List<LightPackageInfo>?,
     ) {
         if (packageInfos == null) {
             callback.accept(0)
@@ -245,7 +245,7 @@ class PermissionControllerServiceModel(private val service: PermissionController
      */
     fun onGetAppPermissions(
         packageName: String,
-        callback: Consumer<List<Pair<String, AppPermGroupUiInfo>>>
+        callback: Consumer<List<Pair<String, AppPermGroupUiInfo>>>,
     ) {
         val packageGroupsLiveData = PackagePermissionsLiveData[packageName, Process.myUserHandle()]
         observeAndCheckForLifecycleState(packageGroupsLiveData) { groups ->

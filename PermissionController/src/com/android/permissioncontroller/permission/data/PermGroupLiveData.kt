@@ -80,7 +80,7 @@ private constructor(private val app: Application, private val groupName: String)
                     permInfos.addAll(
                         Utils.getInstalledRuntimePermissionInfosForGroup(
                             context.packageManager,
-                            groupName
+                            groupName,
                         )
                     )
                 } catch (e: PackageManager.NameNotFoundException) {

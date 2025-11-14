@@ -157,7 +157,7 @@ object MultiDeviceUtils {
         persistentDeviceId: String,
         packageName: String,
         permissions: Set<String>,
-        userSet: Boolean
+        userSet: Boolean,
     ) {
         if (!SdkLevel.isAtLeastV() || isDefaultDeviceId(persistentDeviceId)) {
             return
@@ -170,7 +170,7 @@ object MultiDeviceUtils {
                     persistentDeviceId,
                     packageName,
                     permission,
-                    userSet
+                    userSet,
                 )
             }
     }
@@ -196,7 +196,7 @@ object MultiDeviceUtils {
         persistentDeviceId: String,
         packageName: String,
         permission: String,
-        userSet: Boolean
+        userSet: Boolean,
     ) {
         if (!SdkLevel.isAtLeastV() || isDefaultDeviceId(persistentDeviceId)) {
             return
@@ -213,7 +213,7 @@ object MultiDeviceUtils {
             permission,
             persistentDeviceId,
             DEVICE_AWARE_PERMISSION_FLAG_MASK,
-            newFlag
+            newFlag,
         )
         permissionManager.grantRuntimePermission(packageName, permission, persistentDeviceId)
     }
@@ -244,7 +244,7 @@ object MultiDeviceUtils {
         permissions: Set<String>,
         userSet: Boolean,
         oneTime: Boolean,
-        reason: String? = null
+        reason: String? = null,
     ) {
         if (!SdkLevel.isAtLeastV() || isDefaultDeviceId(persistentDeviceId)) {
             return
@@ -259,7 +259,7 @@ object MultiDeviceUtils {
                     permission,
                     userSet,
                     oneTime,
-                    reason
+                    reason,
                 )
             }
     }
@@ -289,7 +289,7 @@ object MultiDeviceUtils {
         permission: String,
         userSet: Boolean,
         oneTime: Boolean,
-        reason: String? = null
+        reason: String? = null,
     ) {
         if (!SdkLevel.isAtLeastV() || isDefaultDeviceId(persistentDeviceId)) {
             return
@@ -312,13 +312,13 @@ object MultiDeviceUtils {
             permission,
             persistentDeviceId,
             DEVICE_AWARE_PERMISSION_FLAG_MASK,
-            newFlag
+            newFlag,
         )
         permissionManager.revokeRuntimePermission(
             packageName,
             permission,
             persistentDeviceId,
-            reason
+            reason,
         )
     }
 
@@ -331,7 +331,7 @@ object MultiDeviceUtils {
         app: Application,
         persistentDeviceId: String,
         packageName: String,
-        permission: String
+        permission: String,
     ): Boolean {
         if (!SdkLevel.isAtLeastV()) {
             return true

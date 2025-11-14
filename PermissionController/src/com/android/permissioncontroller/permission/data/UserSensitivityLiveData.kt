@@ -44,7 +44,7 @@ class UserSensitivityLiveData
 private constructor(
     private val app: Application,
     private val uid: Int,
-    private val user: UserHandle
+    private val user: UserHandle,
 ) : SmartAsyncMediatorLiveData<Map<Int, UidSensitivityState>?>() {
 
     private val context: Context
@@ -186,7 +186,7 @@ private constructor(
             return UserSensitivityLiveData(
                 PermissionControllerApplication.get(),
                 key.first,
-                key.second
+                key.second,
             )
         }
 

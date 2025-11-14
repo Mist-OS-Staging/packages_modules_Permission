@@ -86,7 +86,7 @@ class PackageRepositoryTest {
         whenever(
                 packageManager.getPackageInfo(
                     eq(testPackageName),
-                    eq(PackageManager.GET_ATTRIBUTIONS)
+                    eq(PackageManager.GET_ATTRIBUTIONS),
                 )
             )
             .thenReturn(mockData)
@@ -109,7 +109,7 @@ class PackageRepositoryTest {
         whenever(
                 packageManager.getPackageInfo(
                     eq(testPackageName),
-                    eq(PackageManager.GET_ATTRIBUTIONS)
+                    eq(PackageManager.GET_ATTRIBUTIONS),
                 )
             )
             .thenReturn(mockData)

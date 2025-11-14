@@ -52,7 +52,7 @@ private constructor(
     private val packageName: String,
     private val permGroupName: String,
     private val user: UserHandle,
-    private val deviceId: Int
+    private val deviceId: Int,
 ) : SmartUpdateMediatorLiveData<LightAppPermGroup?>(), LocationUtils.LocationListener {
 
     private val LOG_TAG = this::class.java.simpleName
@@ -69,7 +69,7 @@ private constructor(
                 LocationUtils.isLocationGroupAndControllerExtraPackage(
                     app,
                     permGroupName,
-                    packageName
+                    packageName,
                 )
 
         addSource(fgPermNamesLiveData) { update() }
@@ -127,7 +127,6 @@ private constructor(
                 LightPermission(packageInfo, permInfo, permState, foregroundPerms)
         }
 
-
         val hasInstallToRuntimeSplit = hasInstallToRuntimeSplit(packageInfo, permissionMap)
         value =
             LightAppPermGroup(
@@ -136,7 +135,7 @@ private constructor(
                 permissionMap,
                 hasInstallToRuntimeSplit,
                 isSpecialLocationGranted(app, packageName, permGroupName, user),
-                isSpecialFixedStorageGranted(app, packageName, permGroupName, packageInfo.uid)
+                isSpecialFixedStorageGranted(app, packageName, permGroupName, packageInfo.uid),
             )
     }
 
@@ -148,7 +147,7 @@ private constructor(
      */
     private fun hasInstallToRuntimeSplit(
         packageInfo: LightPackageInfo,
-        permissionMap: Map<String, LightPermission>
+        permissionMap: Map<String, LightPermission>,
     ): Boolean {
         val permissionManager = app.getSystemService(PermissionManager::class.java) ?: return false
 
@@ -214,18 +213,19 @@ private constructor(
      */
     companion object :
         DataRepositoryForDevice<
-            KotlinUtils.Quadruple<String, String, UserHandle, Int>, LightAppPermGroupLiveData
+            KotlinUtils.Quadruple<String, String, UserHandle, Int>,
+            LightAppPermGroupLiveData,
         >() {
         override fun newValue(
             key: KotlinUtils.Quadruple<String, String, UserHandle, Int>,
-            deviceId: Int
+            deviceId: Int,
         ): LightAppPermGroupLiveData {
             return LightAppPermGroupLiveData(
                 PermissionControllerApplication.get(),
                 key.first,
                 key.second,
                 key.third,
-                deviceId
+                deviceId,
             )
         }
 
@@ -238,7 +238,7 @@ private constructor(
             app: Application,
             packageName: String,
             permGroupName: String,
-            user: UserHandle
+            user: UserHandle,
         ): Boolean? {
             val userContext = Utils.getUserContext(app, user)
             return if (
@@ -246,9 +246,14 @@ private constructor(
             ) {
                 LocationUtils.isLocationEnabled(userContext)
             } else if (
-                LocationUtils.isLocationGroupAndControllerExtraPackage(app, permGroupName, packageName)
+                LocationUtils.isLocationGroupAndControllerExtraPackage(
+                    app,
+                    permGroupName,
+                    packageName,
+                )
             ) {
-                // The permission of the extra location controller package is determined by the status
+                // The permission of the extra location controller package is determined by the
+                // status
                 // of the controller package itself.
                 LocationUtils.isExtraLocationControllerPackageEnabled(userContext)
             } else {
@@ -258,8 +263,9 @@ private constructor(
 
         // Gallery role is static, so we only need to get the set gallery app once
         private val systemGalleryApps: List<String> by lazy {
-            val roleManager = PermissionControllerApplication.get()
-                .getSystemService(RoleManager::class.java) ?: return@lazy emptyList()
+            val roleManager =
+                PermissionControllerApplication.get().getSystemService(RoleManager::class.java)
+                    ?: return@lazy emptyList()
             roleManager.getRoleHolders(SYSTEM_GALLERY_ROLE_NAME)
         }
 
@@ -267,7 +273,7 @@ private constructor(
             app: Application,
             packageName: String,
             permGroupName: String,
-            uid: Int
+            uid: Int,
         ): Boolean {
             if (permGroupName != READ_MEDIA_VISUAL && permGroupName != STORAGE) {
                 return false

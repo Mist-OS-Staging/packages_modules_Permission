@@ -98,7 +98,7 @@ class PermissionUsageViewModelTest {
                     systemPackageName to
                         getPackageInfoModel(
                             systemPackageName,
-                            applicationFlags = ApplicationInfo.FLAG_SYSTEM
+                            applicationFlags = ApplicationInfo.FLAG_SYSTEM,
                         ),
                 )
                 .toMutableMap()
@@ -138,7 +138,7 @@ class PermissionUsageViewModelTest {
         val permissionUsageViewModel =
             getViewModel(
                 useCase = permissionUsageUseCase,
-                savedStateHandle = SavedStateHandle(mapOf("showSystem" to false))
+                savedStateHandle = SavedStateHandle(mapOf("showSystem" to false)),
             )
         val uiData = getPermissionUsageUiState(permissionUsageViewModel)
 
@@ -164,7 +164,7 @@ class PermissionUsageViewModelTest {
         val permissionUsageViewModel =
             getViewModel(
                 useCase = permissionUsageUseCase,
-                savedStateHandle = SavedStateHandle(mapOf("showSystem" to true))
+                savedStateHandle = SavedStateHandle(mapOf("showSystem" to true)),
             )
         val uiData = getPermissionUsageUiState(permissionUsageViewModel)
 
@@ -202,14 +202,12 @@ class PermissionUsageViewModelTest {
                 AppOpUsageModel(AppOpsManager.OPSTR_PHONE_CALL_MICROPHONE, timestamp),
             )
         val appOpsUsageModels =
-            listOf(
-                PackageAppOpUsageModel(testPackageName, appOpsUsage, currentUser.identifier),
-            )
+            listOf(PackageAppOpUsageModel(testPackageName, appOpsUsage, currentUser.identifier))
         val permissionUsageUseCase = getPermissionGroupUsageUseCase(appOpsUsageModels)
         val permissionUsageViewModel =
             getViewModel(
                 useCase = permissionUsageUseCase,
-                savedStateHandle = SavedStateHandle(mapOf("show7Days" to true))
+                savedStateHandle = SavedStateHandle(mapOf("show7Days" to true)),
             )
         val permissionGroupsCount =
             getPermissionUsageUiState(permissionUsageViewModel).permissionGroupUsageCount
@@ -227,14 +225,12 @@ class PermissionUsageViewModelTest {
                 AppOpUsageModel(AppOpsManager.OPSTR_PHONE_CALL_MICROPHONE, timestamp),
             )
         val appOpsUsageModels =
-            listOf(
-                PackageAppOpUsageModel(testPackageName, appOpsUsage, currentUser.identifier),
-            )
+            listOf(PackageAppOpUsageModel(testPackageName, appOpsUsage, currentUser.identifier))
         val permissionUsageUseCase = getPermissionGroupUsageUseCase(appOpsUsageModels)
         val permissionUsageViewModel =
             getViewModel(
                 useCase = permissionUsageUseCase,
-                savedStateHandle = SavedStateHandle(mapOf("show7Days" to false))
+                savedStateHandle = SavedStateHandle(mapOf("show7Days" to false)),
             )
 
         val uiState = getPermissionUsageUiState(permissionUsageViewModel)
@@ -248,7 +244,7 @@ class PermissionUsageViewModelTest {
 
     private fun TestScope.getViewModel(
         useCase: GetPermissionGroupUsageUseCase = getPermissionGroupUsageUseCase(),
-        savedStateHandle: SavedStateHandle = SavedStateHandle(emptyMap())
+        savedStateHandle: SavedStateHandle = SavedStateHandle(emptyMap()),
     ): PermissionUsageViewModel {
         return PermissionUsageViewModel(
             application,
@@ -256,7 +252,7 @@ class PermissionUsageViewModelTest {
             useCase,
             backgroundScope,
             StandardTestDispatcher(testScheduler),
-            savedState = savedStateHandle
+            savedState = savedStateHandle,
         )
     }
 
@@ -268,7 +264,7 @@ class PermissionUsageViewModelTest {
     }
 
     private fun getPermissionGroupUsageUseCase(
-        packageAppOpsUsages: List<PackageAppOpUsageModel> = emptyList(),
+        packageAppOpsUsages: List<PackageAppOpUsageModel> = emptyList()
     ): GetPermissionGroupUsageUseCase {
         val userRepository = FakeUserRepository(listOf(currentUser.identifier))
         val roleRepository = FakeRoleRepository()
@@ -279,7 +275,7 @@ class PermissionUsageViewModelTest {
             permissionRepository,
             appOpUsageRepository,
             roleRepository,
-            userRepository
+            userRepository,
         )
     }
 
@@ -289,7 +285,7 @@ class PermissionUsageViewModelTest {
         permissionsFlags: List<Int> =
             listOf(
                 PackageInfo.REQUESTED_PERMISSION_GRANTED,
-                PackageInfo.REQUESTED_PERMISSION_GRANTED
+                PackageInfo.REQUESTED_PERMISSION_GRANTED,
             ),
         applicationFlags: Int = 0,
     ) = PackageInfoModel(packageName, requestedPermissions, permissionsFlags, applicationFlags)
