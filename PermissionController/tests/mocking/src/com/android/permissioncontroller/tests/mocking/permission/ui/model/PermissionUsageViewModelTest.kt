@@ -22,6 +22,8 @@ import android.content.pm.ApplicationInfo
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.platform.test.annotations.RequiresFlagsEnabled
+import android.platform.test.flag.junit.CheckFlagsRule
+import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import androidx.lifecycle.SavedStateHandle
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.android.dx.mockito.inline.extended.ExtendedMockito
@@ -58,6 +60,7 @@ import kotlinx.coroutines.test.runTest
 import org.junit.After
 import org.junit.Assume
 import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
@@ -68,6 +71,8 @@ import org.mockito.quality.Strictness
 
 @RunWith(AndroidJUnit4::class)
 class PermissionUsageViewModelTest {
+    @get:Rule val checkFlagsRule: CheckFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
+
     @Mock private lateinit var application: PermissionControllerApplication
     @Mock private lateinit var context: Context
     @Mock private lateinit var packageManager: PackageManager
@@ -257,7 +262,10 @@ class PermissionUsageViewModelTest {
     }
 
     @Test
-    @RequiresFlagsEnabled(Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED)
+    @RequiresFlagsEnabled(
+        Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED,
+        FLAG_APP_FUNCTION_ACCESS_API_ENABLED,
+    )
     fun verifyAgentUsagesAreShownForPast24Hours() = runTest {
         val now = System.currentTimeMillis()
         val accessHistory =
@@ -299,7 +307,10 @@ class PermissionUsageViewModelTest {
     }
 
     @Test
-    @RequiresFlagsEnabled(Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED)
+    @RequiresFlagsEnabled(
+        Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED,
+        FLAG_APP_FUNCTION_ACCESS_API_ENABLED,
+    )
     fun verifyAgentUsagesAreShownForPast7Days() = runTest {
         val now = System.currentTimeMillis()
         val accessHistory =
@@ -372,7 +383,6 @@ class PermissionUsageViewModelTest {
             null,
             null,
             null,
-            null,
             accessTime,
             ACCESS_DURATION,
         )
@@ -427,5 +437,10 @@ class PermissionUsageViewModelTest {
         const val TARGET_NAME_2 = "target2"
         const val TARGET_NAME_3 = "target3"
         const val ACCESS_DURATION = 1000L
+
+        // Flag lib changes has caused issues with jarjar and now annotations require the jarjar
+        // package prepended to the flag string
+        const val FLAG_APP_FUNCTION_ACCESS_API_ENABLED =
+            "com.android.permissioncontroller.jarjar.${android.app.appfunctions.flags.Flags.FLAG_ENABLE_APP_INTERACTION_API}"
     }
 }

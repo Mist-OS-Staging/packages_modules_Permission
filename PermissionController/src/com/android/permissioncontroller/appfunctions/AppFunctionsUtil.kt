@@ -99,6 +99,7 @@ object AppFunctionsUtil {
     fun isPrivacyDashboardAgentActivityEnabled(context: Context): Boolean {
         val packageManager = context.packageManager
         return SdkLevel.isAtLeastB() &&
+            android.app.appfunctions.flags.Flags.enableAppInteractionApi() &&
             com.android.permissioncontroller.flags.Flags.privacyDashboardAgentActivityEnabled() &&
             !packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK) &&
             !packageManager.hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE) &&

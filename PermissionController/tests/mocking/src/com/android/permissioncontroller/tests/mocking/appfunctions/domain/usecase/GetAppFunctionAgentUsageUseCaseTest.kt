@@ -163,7 +163,6 @@ class GetAppFunctionAgentUsageUseCaseTest {
             null,
             null,
             null,
-            null,
             accessTime,
             ACCESS_DURATION,
         )
