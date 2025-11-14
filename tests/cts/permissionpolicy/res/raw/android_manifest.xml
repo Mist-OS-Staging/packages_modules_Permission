@@ -2717,6 +2717,14 @@
     <permission android:name="android.permission.SECURE_ELEMENT_PRIVILEGED_OPERATION"
         android:protectionLevel="signature|privileged" />
 
+    <!-- @SystemApi Allows applications to perform gesture exchange activities.
+         <p>Protection level: signature|privileged
+         @FlaggedApi(com.android.nfc.module.flags.Flags.FLAG_TAP_TO_X)
+         @hide -->
+    <permission android:name="android.permission.PERFORM_GESTURE_EXCHANGE"
+         android:protectionLevel="signature|privileged"
+         android:featureFlag="com.android.nfc.module.flags.tap_to_x"/>
+
     <!-- @deprecated This permission used to allow too broad access to sensitive methods and all its
          uses have been replaced by a more appropriate permission. Most uses have been replaced with
          a NETWORK_STACK or NETWORK_SETTINGS check. Please look up the documentation of the
