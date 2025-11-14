@@ -2178,4 +2178,15 @@
     <string name="request_assist_structure_dialog_button_dont_allow">Don\u2019t allow</string>
 
     <!-- END REQUEST ASSIST STRUCTURE DIALOG -->
+
+    <!-- START ASSIST STRUCTURE SETTINGS  -->
+
+    <!-- Label for the title of request assist structure dialog [CHAR LIMIT=60]-->
+    <string name="assist_structure_setting_title">Use screen and app context</string>
+    <!-- Label for the description of request assist structure dialog [CHAR LIMIT=150]-->
+    <string name="assist_structure_setting_default_description">Allow the default assistant app to access the screen and data shared by the visible app</string>
+    <!-- Label for the description of request assist structure dialog [CHAR LIMIT=150]-->
+    <string name="assist_structure_setting_description">Allow <xliff:g id="assistant_app_name" example="Example Assistant App">%1$s</xliff:g> to access the screen and data shared by the visible app</string>
+
+    <!-- END ASSIST STRUCTURE SETTINGS  -->
 </resources>

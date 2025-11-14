@@ -36,13 +36,8 @@ import androidx.test.uiautomator.Until
 import com.android.compatibility.common.util.DisableAnimationRule
 import com.android.compatibility.common.util.FreezeRotationRule
 import com.android.compatibility.common.util.SystemUtil
-import com.android.compatibility.common.util.ThrowingRunnable
 import com.android.compatibility.common.util.UiAutomatorUtils2
 import com.google.common.truth.Truth
-import java.util.concurrent.Callable
-import java.util.concurrent.CompletableFuture
-import java.util.concurrent.TimeUnit
-import java.util.function.Consumer
 import org.junit.After
 import org.junit.Assume.assumeTrue
 import org.junit.Before
@@ -141,7 +136,7 @@ class RequestAssistStructureTest {
     private fun getAppOpMode(): Int =
         SystemUtil.runWithShellPermissionIdentity<Int> {
             appOpsManager.checkOpNoThrow(
-                AppOpsManager.OPSTR_ASSIST_STRUCTURE,
+                AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
                 assistantRoleHolderPackageUid,
                 APP_PACKAGE_NAME,
             )
@@ -150,78 +145,48 @@ class RequestAssistStructureTest {
     private fun setAppOpMode(mode: Int) =
         SystemUtil.runWithShellPermissionIdentity {
             appOpsManager.setUidMode(
-                AppOpsManager.OPSTR_ASSIST_STRUCTURE,
+                AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
                 assistantRoleHolderPackageUid,
                 mode,
             )
         }
 
     private fun saveRoleHolder() {
-        val roleHolders = getRoleHolders(RoleManager.ROLE_ASSISTANT)
-        roleHolder = if (!roleHolders.isEmpty()) roleHolders.get(0) else null
+        val roleHolders = RoleManagerUtil.getRoleHolders(roleManager, RoleManager.ROLE_ASSISTANT)
+        roleHolder = roleHolders.firstOrNull()
 
         if (roleHolder == APP_PACKAGE_NAME) {
-            removeRoleHolder(RoleManager.ROLE_ASSISTANT, APP_PACKAGE_NAME)
+            RoleManagerUtil.removeRoleHolder(
+                roleManager,
+                context,
+                RoleManager.ROLE_ASSISTANT,
+                APP_PACKAGE_NAME,
+            )
             roleHolder = null
         }
     }
 
     private fun restoreRoleHolder() {
-        removeRoleHolder(RoleManager.ROLE_ASSISTANT, APP_PACKAGE_NAME)
+        RoleManagerUtil.removeRoleHolder(
+            roleManager,
+            context,
+            RoleManager.ROLE_ASSISTANT,
+            APP_PACKAGE_NAME,
+        )
 
-        roleHolder?.let { addRoleHolder(RoleManager.ROLE_ASSISTANT, it) }
+        roleHolder?.let {
+            RoleManagerUtil.addRoleHolder(roleManager, context, RoleManager.ROLE_ASSISTANT, it)
+        }
 
         assertIsRoleHolder(RoleManager.ROLE_ASSISTANT, APP_PACKAGE_NAME, false)
     }
 
-    private fun getRoleHolders(roleName: String): List<String> {
-        return SystemUtil.callWithShellPermissionIdentity<List<String>>(
-            Callable { roleManager.getRoleHolders(roleName) }
-        )
+    private fun addRoleHolder(roleName: String, packageName: String) {
+        RoleManagerUtil.addRoleHolder(roleManager, context, roleName, packageName)
     }
 
-    private fun addRoleHolder(
-        roleName: String,
-        packageName: String,
-        userHandle: UserHandle = Process.myUserHandle(),
-        expectSuccess: Boolean = true,
-    ) {
-        val future = CallbackFuture()
-        SystemUtil.runWithShellPermissionIdentity(
-            ThrowingRunnable {
-                roleManager.addRoleHolderAsUser(
-                    roleName,
-                    packageName,
-                    0,
-                    userHandle,
-                    context.mainExecutor,
-                    future,
-                )
-            }
-        )
-        Truth.assertThat(future.get(TIMEOUT_MILLIS, TimeUnit.MILLISECONDS)).isEqualTo(expectSuccess)
-    }
-
-    private fun removeRoleHolder(
-        roleName: String,
-        packageName: String,
-        userHandle: UserHandle = Process.myUserHandle(),
-        expectSuccess: Boolean = true,
-    ) {
-        val future = CallbackFuture()
-        SystemUtil.runWithShellPermissionIdentity(
-            ThrowingRunnable {
-                roleManager.removeRoleHolderAsUser(
-                    roleName,
-                    packageName,
-                    0,
-                    userHandle,
-                    context.mainExecutor,
-                    future,
-                )
-            }
-        )
-        Truth.assertThat(future.get(TIMEOUT_MILLIS, TimeUnit.MILLISECONDS)).isEqualTo(expectSuccess)
+    private fun removeRoleHolder(roleName: String, packageName: String) {
+        RoleManagerUtil.removeRoleHolder(roleManager, context, roleName, packageName)
     }
 
     private fun assertIsRoleHolder(
@@ -229,7 +194,7 @@ class RequestAssistStructureTest {
         packageName: String,
         shouldBeRoleHolder: Boolean,
     ) {
-        val packageNames = getRoleHolders(roleName)
+        val packageNames = RoleManagerUtil.getRoleHolders(roleManager, roleName)
 
         if (shouldBeRoleHolder) {
             Truth.assertThat(packageNames).contains(packageName)
@@ -285,12 +250,6 @@ class RequestAssistStructureTest {
 
     private fun waitForResult(): Pair<Int?, Intent?> {
         return activityRule.getActivity().waitForActivityResult(TIMEOUT_MILLIS)
-    }
-
-    class CallbackFuture : CompletableFuture<Boolean?>(), Consumer<Boolean?> {
-        override fun accept(successful: Boolean?) {
-            complete(successful)
-        }
     }
 
     private companion object {
