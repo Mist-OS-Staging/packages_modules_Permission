@@ -9128,13 +9128,6 @@
                 android:protectionLevel="signature|recents"
                 android:featureFlag="com.android.window.flags.grant_manage_key_gestures_to_recents" />
 
-    <!-- Allows low-level access to re-map controllers.
-         <p>Not for use by third-party applications.
-         @hide
-         @FlaggedApi(com.android.hardware.input.Flags.FLAG_CONTROLLER_REMAPPING) -->
-    <permission android:name="android.permission.CONTROLLER_REMAPPING"
-                android:protectionLevel="signature"
-                android:featureFlag="com.android.hardware.input.controller_remapping"
 
     <!-- Allows applications to register listeners for key activeness through
          InputManagerService.
