@@ -489,7 +489,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.android.permissioncontroller.role.ui.RequestAssistStructureActivity"
+        <activity android:name="com.android.permissioncontroller.role.ui.v37.RequestAssistStructureActivity"
             android:theme="@style/Theme.RequestAssistStructureActivity.FilterTouches"
             android:excludeFromRecents="true"
             android:exported="true"

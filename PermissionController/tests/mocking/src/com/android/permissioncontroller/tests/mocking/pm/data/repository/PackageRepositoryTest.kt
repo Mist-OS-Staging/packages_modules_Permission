@@ -35,6 +35,7 @@ import org.junit.Assume
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.ArgumentMatchers.anyInt
 import org.mockito.Mock
 import org.mockito.Mockito.eq
 import org.mockito.Mockito.mock
@@ -56,6 +57,7 @@ class PackageRepositoryTest {
 
     private val currentUser = android.os.Process.myUserHandle()
     private val testPackageName = "test.package"
+    private val testPackageUid = 100203
 
     @Before
     fun setup() {
@@ -86,7 +88,7 @@ class PackageRepositoryTest {
         whenever(
                 packageManager.getPackageInfo(
                     eq(testPackageName),
-                    eq(PackageManager.GET_ATTRIBUTIONS)
+                    eq(PackageManager.GET_ATTRIBUTIONS),
                 )
             )
             .thenReturn(mockData)
@@ -109,7 +111,7 @@ class PackageRepositoryTest {
         whenever(
                 packageManager.getPackageInfo(
                     eq(testPackageName),
-                    eq(PackageManager.GET_ATTRIBUTIONS)
+                    eq(PackageManager.GET_ATTRIBUTIONS),
                 )
             )
             .thenReturn(mockData)
@@ -126,6 +128,21 @@ class PackageRepositoryTest {
         assertThat(attributionInfo?.areUserVisible).isEqualTo(true)
         assertThat(attributionInfo?.tagResourceMap).isEqualTo(expectedTagToLabelResMap)
         assertThat(attributionInfo?.resourceLabelMap).isEqualTo(expectedAttributionMap)
+    }
+
+    @Test
+    fun verifyGetPackageUid() {
+        whenever(packageManager.getPackageUid(eq(testPackageName), anyInt()))
+            .thenReturn(testPackageUid)
+        assertThat(underTest.getPackageUid(testPackageName, currentUser)).isEqualTo(testPackageUid)
+    }
+
+    @Test
+    fun verifyGetPackageUid_unknownPackageName() {
+        whenever(packageManager.getPackageUid(eq(testPackageName), anyInt()))
+            .thenThrow(PackageManager.NameNotFoundException::class.java)
+        assertThat(underTest.getPackageUid(testPackageName, currentUser))
+            .isEqualTo(android.os.Process.INVALID_UID)
     }
 
     private fun getPackageInfoWithoutAttribution(): PackageInfo {
