@@ -121,14 +121,24 @@ public final class SafetyCenterStaticEntry implements Parcelable {
         return mPendingIntent;
     }
 
-    /** Returns the safety source ID related to this entry. */
+    /**
+     * Returns the safety source ID related to this entry.
+     *
+     * <p>The field is only nullable for legacy reasons, it should always be present, and if it's
+     * not present it's expected that the UI can't display the information related to this entry.
+     */
     @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
     @Nullable
     public String getSafetySourceId() {
         return mSafetySourceId;
     }
 
-    /** Returns the user handle related to this entry. */
+    /**
+     * Returns the user handle related to this entry.
+     *
+     * <p>The field is only nullable for legacy reasons, it should always be present, and if it's
+     * not present it's expected that the UI can't display the information related to this entry.
+     */
     @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
     @Nullable
     public UserHandle getUser() {
