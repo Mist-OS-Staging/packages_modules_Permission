@@ -77,7 +77,7 @@
     <string name="app_permission_manager" msgid="3903811137630909550">"مدیر اجازه‌ها"</string>
     <string name="never_ask_again" msgid="4728762438198560329">"دوباره پرسیده نشود"</string>
     <string name="no_permissions" msgid="3881676756371148563">"مجوزی موجود نیست"</string>
-    <string name="additional_permissions" msgid="5801285469338873430">"اجازه‌های جانبی"</string>
+    <string name="additional_permissions" msgid="5801285469338873430">"اجازه‌های اضافی"</string>
     <string name="app_permissions_info_button_label" msgid="7633312050729974623">"باز کردن اطلاعات برنامه"</string>
     <string name="additional_permissions_more" msgid="5681220714755304407">"{count,plural, =1{# اجازه دیگر}one{# اجازه دیگر}other{# اجازه دیگر}}"</string>
     <string name="old_sdk_deny_warning" msgid="2382236998845153919">"‏این برنامه برای نسخه قدیمی‌تری از Android طراحی شده بود. رد کردن مجوز ممکن است باعث شود که برنامه دیگر عملکرد موردانتظار را نداشته باشند."</string>
@@ -545,7 +545,7 @@
     <string name="other_permissions_label" msgid="8986184335503271992">"اجازه‌های دیگر"</string>
     <string name="not_used_permissions_label" msgid="3939839426115141264">"اجازه‌هایی که سیستم استفاده می‌کند"</string>
     <string name="not_used_permissions_description" msgid="7595514824169388718">"اجازه‌هایی که فقط برنامه‌های سیستم استفاده می‌کنند."</string>
-    <string name="additional_permissions_label" msgid="7693557637462569046">"اجازه‌های جانبی"</string>
+    <string name="additional_permissions_label" msgid="7693557637462569046">"اجازه‌های اضافی"</string>
     <string name="additional_permissions_description" msgid="2186611950890732112">"اجازه‌هایی که برنامه‌ها تعریف کرده‌اند."</string>
     <string name="privdash_label_camera" msgid="1426440033626198096">"دوربین"</string>
     <string name="privdash_label_microphone" msgid="8415035835803511693">"میکروفون"</string>
