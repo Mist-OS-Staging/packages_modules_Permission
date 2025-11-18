@@ -56,7 +56,7 @@ private constructor(
     private val app: Application,
     private val packageName: String,
     private val permGroupName: String,
-    private val user: UserHandle
+    private val user: UserHandle,
 ) : SmartAsyncMediatorLiveData<AppPermGroupUiInfo>(), LocationUtils.LocationListener {
 
     private var isSpecialLocation = false
@@ -67,8 +67,13 @@ private constructor(
     private val isHealth = Utils.isHealthPermissionGroup(permGroupName)
 
     init {
-        isSpecialLocation = LightAppPermGroupLiveData
-            .isSpecialLocationGranted(app, packageName, permGroupName, user) != null
+        isSpecialLocation =
+            LightAppPermGroupLiveData.isSpecialLocationGranted(
+                app,
+                packageName,
+                permGroupName,
+                user,
+            ) != null
 
         addSource(packageInfoLiveData) { update() }
 
@@ -102,7 +107,7 @@ private constructor(
                 packageInfo,
                 permissionGroup.groupInfo,
                 permissionGroup.permissionInfos,
-                permissionState
+                permissionState,
             )
         )
     }
@@ -121,7 +126,7 @@ private constructor(
         packageInfo: LightPackageInfo,
         groupInfo: LightPermGroupInfo,
         allPermInfos: Map<String, LightPermInfo>,
-        permissionState: Map<String, PermState>
+        permissionState: Map<String, PermState>,
     ): AppPermGroupUiInfo {
         /*
          * Filter out any permission infos in the permission group that this package
@@ -160,7 +165,7 @@ private constructor(
     private fun isGrantableAndNotLegacyPlatform(
         packageInfo: LightPackageInfo,
         groupInfo: LightPermGroupInfo,
-        permissionInfos: Collection<LightPermInfo>
+        permissionInfos: Collection<LightPermInfo>,
     ): Boolean {
         if (groupInfo.packageName == Utils.OS_PKG && !isPlatformPermissionGroup(groupInfo.name)) {
             return false
@@ -229,8 +234,10 @@ private constructor(
      *   user
      */
     private fun isUserSet(permissionState: Map<String, PermState>): Boolean {
-        val flagMask = PackageManager.FLAG_PERMISSION_USER_SET or
-            PackageManager.FLAG_PERMISSION_USER_FIXED or PackageManager.FLAG_PERMISSION_ONE_TIME
+        val flagMask =
+            PackageManager.FLAG_PERMISSION_USER_SET or
+                PackageManager.FLAG_PERMISSION_USER_FIXED or
+                PackageManager.FLAG_PERMISSION_ONE_TIME
         return permissionState.any { (it.value.permFlags and flagMask) != 0 }
     }
 
@@ -252,12 +259,22 @@ private constructor(
     private fun getGrantedIncludingBackground(
         permissionState: Map<String, PermState>,
         allPermInfos: Map<String, LightPermInfo>,
-        pkg: LightPackageInfo
+        pkg: LightPackageInfo,
     ): PermGrantState {
-        val specialLocationState = LightAppPermGroupLiveData
-            .isSpecialLocationGranted(app, packageName, permGroupName, user)
-        val specialFixedStorage = LightAppPermGroupLiveData
-            .isSpecialFixedStorageGranted(app, packageName, permGroupName, pkg.uid)
+        val specialLocationState =
+            LightAppPermGroupLiveData.isSpecialLocationGranted(
+                app,
+                packageName,
+                permGroupName,
+                user,
+            )
+        val specialFixedStorage =
+            LightAppPermGroupLiveData.isSpecialFixedStorageGranted(
+                app,
+                packageName,
+                permGroupName,
+                pkg.uid,
+            )
         if (isStorage && isFullFilesAccessGranted(pkg)) {
             return PermGrantState.PERMS_ALLOWED
         } else if (permGroupName == READ_MEDIA_VISUAL && specialFixedStorage) {
@@ -388,7 +405,7 @@ private constructor(
                 PermissionControllerApplication.get(),
                 key.first,
                 key.second,
-                key.third
+                key.third,
             )
         }
     }

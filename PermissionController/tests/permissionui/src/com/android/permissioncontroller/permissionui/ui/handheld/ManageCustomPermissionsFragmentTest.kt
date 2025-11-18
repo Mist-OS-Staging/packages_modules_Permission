@@ -18,14 +18,13 @@ package com.android.permissioncontroller.permissionui.ui.handheld
 
 import android.content.Intent
 import android.os.Build
-import android.permission.flags.Flags
 import android.permission.cts.PermissionUtils.grantPermission
 import android.permission.cts.PermissionUtils.install
 import android.permission.cts.PermissionUtils.revokePermission
 import android.permission.cts.PermissionUtils.uninstallApp
+import android.permission.flags.Flags
 import android.platform.test.annotations.RequiresFlagsDisabled
 import android.platform.test.annotations.RequiresFlagsEnabled
-import android.platform.test.flag.junit.CheckFlagsRule
 import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
@@ -106,7 +105,6 @@ class ManageCustomPermissionsFragmentTest : BaseHandheldPermissionUiTest() {
         revokePermission(USER_PKG, PERM)
         eventually { assertThat(getUsageCountsFromUi(PERM_LABEL)).isEqualTo(original) }
     }
-
 
     @SdkSuppress(
         minSdkVersion = Build.VERSION_CODES.TIRAMISU,

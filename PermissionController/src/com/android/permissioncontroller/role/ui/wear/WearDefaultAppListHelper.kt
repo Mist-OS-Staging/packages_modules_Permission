@@ -42,7 +42,7 @@ class WearDefaultAppListHelper(val context: Context, val user: UserHandle) {
                                 intent = DefaultAppActivity.createIntent(roleName, user, context)
                             }
                             context.startActivity(intent)
-                        }
+                        },
                     )
                     .apply {
                         setRestrictionIntent(
@@ -62,7 +62,7 @@ class WearDefaultAppListHelper(val context: Context, val user: UserHandle) {
                             roleItem.holderApplicationInfos,
                             this,
                             user,
-                            context
+                            context,
                         )
                     }
             }

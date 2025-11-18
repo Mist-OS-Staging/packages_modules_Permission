@@ -38,7 +38,6 @@ import com.android.permissioncontroller.permission.utils.Utils
  * @param specialFixedStorageGrant If this package holds the SYSTEM_GALLERY role, and has the
  *   WRITE_MEDIA_IMAGES app op granted, then we should show the grant state of the storage
  *   permissions as system fixed and granted.
- *
  */
 data class LightAppPermGroup(
     val packageInfo: LightPackageInfo,
@@ -51,7 +50,7 @@ data class LightAppPermGroup(
     constructor(
         pI: LightPackageInfo,
         pGI: LightPermGroupInfo,
-        perms: Map<String, LightPermission>
+        perms: Map<String, LightPermission>,
     ) : this(pI, pGI, perms, false, null, false)
 
     /** All unrestricted permissions. Usually restricted permissions are ignored */
@@ -89,7 +88,7 @@ data class LightAppPermGroup(
             packageInfo,
             isPlatformPermissionGroup,
             specialLocationGrant,
-            specialFixedStorageGrant
+            specialFixedStorageGrant,
         )
 
     val background =
@@ -98,7 +97,7 @@ data class LightAppPermGroup(
             packageInfo,
             isPlatformPermissionGroup,
             specialLocationGrant,
-            specialFixedStorageGrant
+            specialFixedStorageGrant,
         )
 
     /** Whether or not this App Permission Group has a permission which has a background mode */
@@ -182,12 +181,12 @@ data class LightAppPermGroup(
         private val packageInfo: LightPackageInfo,
         private val isPlatformPermissionGroup: Boolean,
         private val specialLocationGrant: Boolean?,
-        private val specialFixedStorageGrant: Boolean
+        private val specialFixedStorageGrant: Boolean,
     ) {
         /** Whether any of this App Permission SubGroup's permissions are granted */
         val isGranted =
-            specialLocationGrant
-                ?: specialFixedStorageGrant || permissions.any {
+            specialLocationGrant ?: specialFixedStorageGrant ||
+                permissions.any {
                     val mayGrantByPlatformOrSystem =
                         !isPlatformPermissionGroup || it.value.isPlatformOrSystem
                     it.value.isGranted && mayGrantByPlatformOrSystem

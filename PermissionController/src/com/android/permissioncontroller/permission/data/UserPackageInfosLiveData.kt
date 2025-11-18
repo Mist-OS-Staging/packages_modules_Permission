@@ -81,17 +81,17 @@ private constructor(private val app: Application, private val user: UserHandle) 
                     PackageManager.PackageInfoFlags.of(
                         GET_PERMISSIONS.toLong() or GET_ATTRIBUTIONS_LONG or MATCH_ALL.toLong()
                     ),
-                    user.identifier
+                    user.identifier,
                 )
             } else if (SdkLevel.isAtLeastS()) {
                 app.applicationContext.packageManager.getInstalledPackagesAsUser(
                     GET_PERMISSIONS or GET_ATTRIBUTIONS or MATCH_ALL,
-                    user.identifier
+                    user.identifier,
                 )
             } else {
                 app.applicationContext.packageManager.getInstalledPackagesAsUser(
                     GET_PERMISSIONS or MATCH_ALL,
-                    user.identifier
+                    user.identifier,
                 )
             }
 

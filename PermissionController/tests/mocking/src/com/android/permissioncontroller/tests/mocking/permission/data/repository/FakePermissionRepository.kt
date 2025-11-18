@@ -27,14 +27,14 @@ class FakePermissionRepository(private val permissionFlags: Map<String, Int> = e
     override suspend fun getPermissionFlags(
         permissionName: String,
         packageName: String,
-        user: UserHandle
+        user: UserHandle,
     ): Int {
         return permissionFlags[permissionName] ?: 0
     }
 
     override suspend fun getPermissionGroupLabel(
         context: Context,
-        groupName: String
+        groupName: String,
     ): CharSequence {
         TODO("Not yet implemented")
     }

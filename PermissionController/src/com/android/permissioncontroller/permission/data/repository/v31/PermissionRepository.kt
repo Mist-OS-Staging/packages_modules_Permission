@@ -43,7 +43,7 @@ interface PermissionRepository {
     suspend fun getPermissionFlags(
         permissionName: String,
         packageName: String,
-        user: UserHandle
+        user: UserHandle,
     ): Int
 
     /**
@@ -77,7 +77,7 @@ class PermissionRepositoryImpl(
     override suspend fun getPermissionFlags(
         permissionName: String,
         packageName: String,
-        user: UserHandle
+        user: UserHandle,
     ): Int =
         withContext(dispatcher) {
             packageManager.getPermissionFlags(permissionName, packageName, user)
@@ -92,16 +92,15 @@ class PermissionRepositoryImpl(
      */
     override suspend fun getPermissionGroupLabel(
         context: Context,
-        groupName: String
+        groupName: String,
     ): CharSequence =
         withContext(dispatcher) {
             val groupInfo = getPermissionGroupInfo(groupName, context)
             groupInfo?.loadSafeLabel(
                 context.packageManager,
                 0f,
-                TextUtils.SAFE_STRING_FLAG_FIRST_LINE or TextUtils.SAFE_STRING_FLAG_TRIM
-            )
-                ?: groupName
+                TextUtils.SAFE_STRING_FLAG_FIRST_LINE or TextUtils.SAFE_STRING_FLAG_TRIM,
+            ) ?: groupName
         }
 
     /**

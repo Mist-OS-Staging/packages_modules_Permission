@@ -65,7 +65,7 @@ private val SERVER_LOG_ID =
 suspend fun revokeAppPermissions(
     apps: Map<UserHandle, List<LightPackageInfo>>,
     context: Context,
-    sessionId: Long = INVALID_SESSION_ID
+    sessionId: Long = INVALID_SESSION_ID,
 ): Set<Pair<String, UserHandle>> {
     val revokedApps = mutableSetOf<Pair<String, UserHandle>>()
     val userManager = context.getSystemService(UserManager::class.java)
@@ -97,7 +97,7 @@ suspend fun revokeAppPermissions(
                     DumpableLog.i(
                         LOG_TAG,
                         "Not revoking because permissions were changed " +
-                            "recently for package $packageName"
+                            "recently for package $packageName",
                     )
                 }
                 return@forEachInParallelOuter
@@ -157,7 +157,7 @@ suspend fun revokeAppPermissions(
                 val permissionGroups =
                     splitPermissions.getPermissionGroupsFromSplitPermission(
                         permissionName,
-                        appTargetSdk
+                        appTargetSdk,
                     )
                 for (permissionGroup in permissionGroups) {
                     revocableGroups.remove(permissionGroup)
@@ -175,7 +175,7 @@ suspend fun revokeAppPermissions(
                     val newPermissionGroups =
                         splitPermissions.getPermissionGroupsFromSplitPermissionGroup(
                             groupName,
-                            appTargetSdk
+                            appTargetSdk,
                         )
                     for (permissionGroup in newPermissionGroups) {
                         revocableGroups.remove(permissionGroup)
@@ -214,7 +214,7 @@ suspend fun revokeAppPermissions(
                             EnhancedConfirmationStatsLogUtils.isPackageEcmRestricted(
                                 context,
                                 packageName,
-                                uid
+                                uid,
                             )
                         PermissionControllerStatsLog.write(
                             PERMISSION_GRANT_REQUEST_RESULT_REPORTED,
@@ -225,7 +225,7 @@ suspend fun revokeAppPermissions(
                             false,
                             SERVER_LOG_ID,
                             /* permission_rationale_shown = */ false,
-                            isPackageRestrictedByEnhancedConfirmation
+                            isPackageRestrictedByEnhancedConfirmation,
                         )
                     }
 
@@ -241,12 +241,12 @@ suspend fun revokeAppPermissions(
                             group,
                             userFixed = false,
                             oneTime = false,
-                            filterPermissions = revocablePermissions
+                            filterPermissions = revocablePermissions,
                         )
                     if (DEBUG_AUTO_REVOKE) {
                         DumpableLog.i(
                             LOG_TAG,
-                            "Bg state post revocation: ${bgRevokedState.allPermissions}"
+                            "Bg state post revocation: ${bgRevokedState.allPermissions}",
                         )
                     }
                     val fgRevokedState =
@@ -255,12 +255,12 @@ suspend fun revokeAppPermissions(
                             group,
                             userFixed = false,
                             oneTime = false,
-                            filterPermissions = revocablePermissions
+                            filterPermissions = revocablePermissions,
                         )
                     if (DEBUG_AUTO_REVOKE) {
                         DumpableLog.i(
                             LOG_TAG,
-                            "Fg state post revocation: ${fgRevokedState.allPermissions}"
+                            "Fg state post revocation: ${fgRevokedState.allPermissions}",
                         )
                     }
 
@@ -270,7 +270,7 @@ suspend fun revokeAppPermissions(
                             packageName,
                             user,
                             FLAG_PERMISSION_AUTO_REVOKED to true,
-                            FLAG_PERMISSION_USER_SET to false
+                            FLAG_PERMISSION_USER_SET to false,
                         )
                     }
                 }
@@ -284,7 +284,7 @@ suspend fun revokeAppPermissions(
             synchronized(revokedApps) {
                 DumpableLog.i(
                     LOG_TAG,
-                    "Done auto-revoke for user ${user.identifier} - revoked $revokedApps"
+                    "Done auto-revoke for user ${user.identifier} - revoked $revokedApps",
                 )
             }
         }

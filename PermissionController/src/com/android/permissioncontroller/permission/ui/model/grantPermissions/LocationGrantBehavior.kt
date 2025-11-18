@@ -33,7 +33,7 @@ object LocationGrantBehavior : GrantBehavior() {
     override fun getPrompt(
         group: LightAppPermGroup,
         requestedPerms: Set<String>,
-        isSystemTriggeredPrompt: Boolean
+        isSystemTriggeredPrompt: Boolean,
     ): Prompt {
         val backgroundPrompt = BackgroundGrantBehavior.getPrompt(group, requestedPerms)
         val requestsBackground = requestedPerms.any { it in group.backgroundPermNames }
@@ -58,14 +58,14 @@ object LocationGrantBehavior : GrantBehavior() {
     override fun getDenyButton(
         group: LightAppPermGroup,
         requestedPerms: Set<String>,
-        prompt: Prompt
+        prompt: Prompt,
     ): DenyButton {
         return BackgroundGrantBehavior.getDenyButton(group, requestedPerms, prompt)
     }
 
     override fun isGroupFullyGranted(
         group: LightAppPermGroup,
-        requestedPerms: Set<String>
+        requestedPerms: Set<String>,
     ): Boolean {
         val requestsBackground = requestedPerms.any { it in group.backgroundPermNames }
         if (!supportsLocationAccuracy(group) || requestsBackground) {
@@ -76,7 +76,7 @@ object LocationGrantBehavior : GrantBehavior() {
 
     override fun isForegroundFullyGranted(
         group: LightAppPermGroup,
-        requestedPerms: Set<String>
+        requestedPerms: Set<String>,
     ): Boolean {
         if (!supportsLocationAccuracy(group)) {
             return BackgroundGrantBehavior.isForegroundFullyGranted(group, requestedPerms)

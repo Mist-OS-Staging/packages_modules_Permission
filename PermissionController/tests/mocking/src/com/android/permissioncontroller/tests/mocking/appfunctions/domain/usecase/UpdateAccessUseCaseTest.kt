@@ -42,7 +42,7 @@ class UpdateAccessUseCaseTest {
             TEST_AGENT_PACKAGE_NAME,
             TEST_TARGET_PACKAGE_NAME,
             FLAG_MASK,
-            ACCESS_FLAG_OTHER_DENIED
+            ACCESS_FLAG_OTHER_DENIED,
         )
 
         useCase(TEST_AGENT_PACKAGE_NAME, TEST_TARGET_PACKAGE_NAME, true)
@@ -63,7 +63,10 @@ class UpdateAccessUseCaseTest {
     companion object {
         private const val TEST_AGENT_PACKAGE_NAME = "test.agent.package"
         private const val TEST_TARGET_PACKAGE_NAME = "test.target.package"
-        private const val FLAG_MASK = ACCESS_FLAG_USER_GRANTED or ACCESS_FLAG_USER_DENIED or
-                ACCESS_FLAG_OTHER_GRANTED or ACCESS_FLAG_OTHER_DENIED
+        private const val FLAG_MASK =
+            ACCESS_FLAG_USER_GRANTED or
+                ACCESS_FLAG_USER_DENIED or
+                ACCESS_FLAG_OTHER_GRANTED or
+                ACCESS_FLAG_OTHER_DENIED
     }
 }

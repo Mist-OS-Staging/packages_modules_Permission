@@ -36,7 +36,8 @@ class DefaultAppConfirmDialogViewModel : ViewModel() {
 /** Factory for a DefaultAppConfirmDialogViewModel */
 class DefaultAppConfirmDialogViewModelFactory : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        @Suppress("UNCHECKED_CAST") return DefaultAppConfirmDialogViewModel() as T
+        @Suppress("UNCHECKED_CAST")
+        return DefaultAppConfirmDialogViewModel() as T
     }
 }
 
@@ -44,5 +45,5 @@ class DefaultAppConfirmDialogViewModelFactory : ViewModelProvider.Factory {
 data class ConfirmDialogArgs(
     val message: String,
     val onOkButtonClick: () -> Unit,
-    val onCancelButtonClick: () -> Unit
+    val onCancelButtonClick: () -> Unit,
 )
