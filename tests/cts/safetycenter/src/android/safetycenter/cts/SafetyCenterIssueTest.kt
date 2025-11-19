@@ -22,8 +22,10 @@ import android.content.Intent
 import android.os.Build.VERSION_CODES.BAKLAVA
 import android.os.Build.VERSION_CODES.TIRAMISU
 import android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE
+import android.os.Build.VERSION_CODES.VANILLA_ICE_CREAM
 import android.os.UserHandle
 import android.permission.flags.Flags
+import android.platform.test.annotations.RequiresFlagsDisabled
 import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import android.safetycenter.SafetyCenterIssue
@@ -410,6 +412,33 @@ class SafetyCenterIssueTest {
     fun parcelRoundTrip_recreatesEqual() {
         assertThat(issue1).recreatesEqual(SafetyCenterIssue.CREATOR)
         assertThat(issueWithRequiredFieldsOnly).recreatesEqual(SafetyCenterIssue.CREATOR)
+    }
+
+    @Test
+    @SdkSuppress(minSdkVersion = BAKLAVA)
+    @RequiresFlagsDisabled(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+    @ApiTest(
+        apis =
+            [
+                "android.safetycenter.SafetyCenterIssue.CREATOR",
+                "android.safetycenter.SafetyCenterIssue#writeToParcel",
+            ]
+    )
+    fun parcelRoundTrip_forSimpleBuilderConstructor_onBPlus_recreatesEqual() {
+        assertThat(SafetyCenterIssue.Builder("id", "title", "summary").build())
+            .recreatesEqual(SafetyCenterIssue.CREATOR)
+    }
+
+    @Test
+    @SdkSuppress(maxSdkVersion = VANILLA_ICE_CREAM)
+    @ApiTest(
+        apis =
+            [
+                "android.safetycenter.SafetyCenterIssue.CREATOR",
+                "android.safetycenter.SafetyCenterIssue#writeToParcel",
+            ]
+    )
+    fun parcelRoundTrip_forSimpleBuilderConstructor_recreatesEqual() {
         assertThat(SafetyCenterIssue.Builder("id", "title", "summary").build())
             .recreatesEqual(SafetyCenterIssue.CREATOR)
     }
