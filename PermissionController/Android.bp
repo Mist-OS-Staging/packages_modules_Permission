@@ -215,6 +215,7 @@ android_app {
 
     lint: {
         error_checks: ["Recycle"],
+        baseline_filename: "lint-baseline2.xml",
     },
 
     optimize: {
