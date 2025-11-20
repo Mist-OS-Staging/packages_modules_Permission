@@ -24,8 +24,8 @@ import androidx.test.filters.SdkSuppress
 import com.android.dx.mockito.inline.extended.ExtendedMockito
 import com.android.permissioncontroller.PermissionControllerApplication
 import com.android.permissioncontroller.R
-import com.android.permissioncontroller.appfunctions.domain.model.AppFunctionPackageInfo
-import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCase
+import com.android.permissioncontroller.appfunctions.domain.model.v31.AppFunctionPackageInfo
+import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCaseImpl
 import com.android.permissioncontroller.tests.mocking.pm.data.repository.FakePackageRepository
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
@@ -40,7 +40,7 @@ import org.mockito.MockitoSession
 import org.mockito.quality.Strictness
 
 // TODO(b/424004217): Update this to the correct version code
-/** Unit tests for [GetAppFunctionPackageInfoUseCase]. */
+/** Unit tests for [GetAppFunctionPackageInfoUseCaseImpl]. */
 @RunWith(AndroidJUnit4::class)
 @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
 class GetAppFunctionPackageInfoUseCaseTest {
@@ -83,7 +83,7 @@ class GetAppFunctionPackageInfoUseCaseTest {
     fun getAppFunctionPackageInfo_returnsAppFunctionPackageInfo() = runTest {
         val expectedPackageInfo = AppFunctionPackageInfo(TEST_PACKAGE_NAME, TEST_LABEL, packageIcon)
         val useCase =
-            GetAppFunctionPackageInfoUseCase(
+            GetAppFunctionPackageInfoUseCaseImpl(
                 FakePackageRepository(
                     packagesAndLabels = packagesAndLabels,
                     packageIcons = packagesAndIcons,
@@ -102,7 +102,7 @@ class GetAppFunctionPackageInfoUseCaseTest {
                 deviceSettingsIcon,
             )
         val useCase =
-            GetAppFunctionPackageInfoUseCase(
+            GetAppFunctionPackageInfoUseCaseImpl(
                 FakePackageRepository(
                     packagesAndLabels = packagesAndLabels,
                     packageIcons = packagesAndIcons,
@@ -124,7 +124,7 @@ class GetAppFunctionPackageInfoUseCaseTest {
                     fallbackDeviceSettingsIcon,
                 )
             val useCase =
-                GetAppFunctionPackageInfoUseCase(
+                GetAppFunctionPackageInfoUseCaseImpl(
                     FakePackageRepository(
                         packagesAndLabels = packagesAndLabels,
                         packageIcons = packagesAndIcons,
@@ -145,7 +145,7 @@ class GetAppFunctionPackageInfoUseCaseTest {
                     fallbackDeviceSettingsIcon,
                 )
             val useCase =
-                GetAppFunctionPackageInfoUseCase(
+                GetAppFunctionPackageInfoUseCaseImpl(
                     FakePackageRepository(
                         packagesAndLabels = packagesAndLabels,
                         settingsPackageName = DEVICE_SETTINGS_PACKAGE_NAME,

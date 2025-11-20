@@ -21,13 +21,17 @@ import android.app.appfunctions.AppFunctionManager.ACCESS_REQUEST_STATE_DENIED
 import android.app.appfunctions.AppFunctionManager.ACCESS_REQUEST_STATE_GRANTED
 import android.app.appfunctions.AppFunctionManager.ACCESS_REQUEST_STATE_UNREQUESTABLE
 import android.app.appfunctions.AppFunctionManager.OnAppFunctionAccessChangedListener
+import android.content.Context
+import android.net.Uri
 import com.android.permissioncontroller.appfunctions.data.repository.AppFunctionRepository
+import com.android.permissioncontroller.appfunctions.domain.model.v37.AccessHistory
 import java.util.concurrent.Executor
 
 /** Fake implementation of [AppFunctionRepository] for testing. */
 class FakeAppFunctionRepository(
     private val agents: List<String> = emptyList(),
     private val targets: List<String> = emptyList(),
+    private val accessHistory: List<AccessHistory> = emptyList(),
     accessFlags: Map<Pair<String, String>, Int> = mutableMapOf(),
 ) : AppFunctionRepository {
     private val _accessFlags: MutableMap<Pair<String, String>, Int> = accessFlags.toMutableMap()
@@ -72,6 +76,10 @@ class FakeAppFunctionRepository(
     override fun removeAccessChangedListener(listener: OnAppFunctionAccessChangedListener) {
         listeners.remove(listener)
     }
+
+    override fun getAccessHistoryContentUri(): Uri = Uri.EMPTY
+
+    override suspend fun getAccessHistory(context: Context): List<AccessHistory> = accessHistory
 
     private fun notifyListeners() {
         // TODO: Implement agentPackageName to agentUid

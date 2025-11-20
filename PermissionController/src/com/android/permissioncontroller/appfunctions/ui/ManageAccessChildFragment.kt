@@ -27,8 +27,9 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceFragmentCompat
 import com.android.permissioncontroller.R
-import com.android.permissioncontroller.appfunctions.domain.model.AppFunctionPackageInfo
-import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCase
+import com.android.permissioncontroller.appfunctions.domain.model.v31.AppFunctionPackageInfo
+import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCaseImpl
+import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAppFunctionPackageInfoUseCase
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.ManageAccessViewModel
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.ManageAccessViewModelFactory
 import com.android.permissioncontroller.common.model.Stateful
@@ -76,7 +77,7 @@ class ManageAccessChildFragment<PF> : Fragment()
             )
         viewModel = ViewModelProvider(this, factory).get(ManageAccessViewModel::class.java)
         val packageRepository = PackageRepository.createInstance(requireContext())
-        getAppFunctionPackageInfoUseCase = GetAppFunctionPackageInfoUseCase(packageRepository)
+        getAppFunctionPackageInfoUseCase = GetAppFunctionPackageInfoUseCaseImpl(packageRepository)
 
         val preferenceFragment = requirePreferenceFragment()
         preferenceFragment.lifecycleScope.launch {
@@ -112,13 +113,13 @@ class ManageAccessChildFragment<PF> : Fragment()
                                         uiState.value.agentPackageName,
                                         requireActivity(),
                                         Process.myUserHandle(),
-                                    )
+                                    )!!
                                 val targetPackageInfo =
                                     getAppFunctionPackageInfoUseCase(
                                         uiState.value.targetPackageName,
                                         requireActivity(),
                                         Process.myUserHandle(),
-                                    )
+                                    )!!
                                 Stateful.Success(
                                     ManageAccessRichUiState(
                                         agentPackageInfo,

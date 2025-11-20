@@ -13,6 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.android.permissioncontroller.appfunctions.domain.usecase.v31
 
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.BAKLAVA)
-package com.android.permissioncontroller.appfunctions.domain.model;
+import android.content.Context
+import android.os.UserHandle
+import com.android.permissioncontroller.appfunctions.domain.model.v31.AppFunctionPackageInfo
+
+/**
+ * A no-op implementation of [GetAppFunctionPackageInfoUseCase].
+ *
+ * This implementation always returns null.
+ */
+class NoOpAppFunctionPackageInfoUseCase : GetAppFunctionPackageInfoUseCase {
+    override operator fun invoke(
+        packageName: String,
+        context: Context,
+        user: UserHandle,
+    ): AppFunctionPackageInfo? {
+        return null
+    }
+}

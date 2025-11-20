@@ -32,7 +32,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.android.permissioncontroller.R
-import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCase
+import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCaseImpl
+import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAppFunctionPackageInfoUseCase
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.RequestAppFunctionAccessViewModel
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.RequestAppFunctionAccessViewModelFactory
 import com.android.permissioncontroller.common.model.Stateful
@@ -78,7 +79,7 @@ class RequestAppFunctionAccessFragment : DialogFragment() {
             ViewModelProvider(this, factory).get(RequestAppFunctionAccessViewModel::class.java)
 
         val packageRepository = PackageRepository.createInstance(requireContext())
-        getAppFunctionPackageInfoUseCase = GetAppFunctionPackageInfoUseCase(packageRepository)
+        getAppFunctionPackageInfoUseCase = GetAppFunctionPackageInfoUseCaseImpl(packageRepository)
 
         lifecycleScope.launch {
             lifecycle.repeatOnLifecycle(State.STARTED) {
@@ -93,13 +94,13 @@ class RequestAppFunctionAccessFragment : DialogFragment() {
                                         uiState.value.agentPackageName,
                                         requireContext(),
                                         Process.myUserHandle(),
-                                    )
+                                    )!!
                                 val targetPackageInfo =
                                     getAppFunctionPackageInfoUseCase(
                                         uiState.value.targetPackageName,
                                         requireContext(),
                                         Process.myUserHandle(),
-                                    )
+                                    )!!
                                 Stateful.Success(
                                     RequestAccessRichUiState(
                                         agentPackageInfo.label,

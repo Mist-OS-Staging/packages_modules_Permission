@@ -13,6 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.android.permissioncontroller.appfunctions.domain.usecase.v31
 
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.BAKLAVA)
-package com.android.permissioncontroller.appfunctions.domain.model;
+import android.content.Context
+import com.android.permissioncontroller.appfunctions.domain.model.v31.AccessCount
+
+/**
+ * A no-op implementation of [GetAppFunctionAgentUsageUseCase].
+ *
+ * This implementation always returns an empty map, indicating no usage.
+ */
+class NoOpAppFunctionAgentUsageUseCase : GetAppFunctionAgentUsageUseCase {
+    override suspend operator fun invoke(context: Context): Map<String, AccessCount> {
+        return emptyMap()
+    }
+}

@@ -14,5 +14,5 @@
  * limitations under the License.
  */
 
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.BAKLAVA)
-package com.android.permissioncontroller.appfunctions.domain.model;
+@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.CINNAMON_BUN)
+package com.android.permissioncontroller.appfunctions.domain.usecase.v37;

@@ -21,20 +21,28 @@ import android.content.Context
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
+import android.platform.test.annotations.RequiresFlagsEnabled
 import androidx.lifecycle.SavedStateHandle
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.android.dx.mockito.inline.extended.ExtendedMockito
 import com.android.modules.utils.build.SdkLevel
 import com.android.permissioncontroller.DeviceUtils
 import com.android.permissioncontroller.PermissionControllerApplication
+import com.android.permissioncontroller.appfunctions.domain.model.v37.AccessHistory
+import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCaseImpl
+import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAppFunctionAgentUsageUseCase
+import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAppFunctionPackageInfoUseCase
+import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAppFunctionAgentUsageUseCaseImpl
 import com.android.permissioncontroller.appops.data.model.v31.PackageAppOpUsageModel
 import com.android.permissioncontroller.appops.data.model.v31.PackageAppOpUsageModel.AppOpUsageModel
+import com.android.permissioncontroller.flags.Flags
 import com.android.permissioncontroller.permission.data.repository.v31.PermissionRepository
 import com.android.permissioncontroller.permission.domain.usecase.v31.GetPermissionGroupUsageUseCase
 import com.android.permissioncontroller.permission.ui.viewmodel.v31.PermissionUsageViewModel
 import com.android.permissioncontroller.permission.ui.viewmodel.v31.PermissionUsagesUiState
 import com.android.permissioncontroller.permission.utils.PermissionMapping
 import com.android.permissioncontroller.pm.data.model.v31.PackageInfoModel
+import com.android.permissioncontroller.tests.mocking.appfunctions.data.repository.FakeAppFunctionRepository
 import com.android.permissioncontroller.tests.mocking.appops.data.repository.FakeAppOpRepository
 import com.android.permissioncontroller.tests.mocking.coroutines.collectLastValue
 import com.android.permissioncontroller.tests.mocking.permission.data.repository.FakePermissionRepository
@@ -62,6 +70,7 @@ import org.mockito.quality.Strictness
 class PermissionUsageViewModelTest {
     @Mock private lateinit var application: PermissionControllerApplication
     @Mock private lateinit var context: Context
+    @Mock private lateinit var packageManager: PackageManager
     private var mockitoSession: MockitoSession? = null
 
     private lateinit var permissionRepository: PermissionRepository
@@ -84,6 +93,11 @@ class PermissionUsageViewModelTest {
         whenever(PermissionControllerApplication.get()).thenReturn(application)
         whenever(application.applicationContext).thenReturn(context)
         whenever(DeviceUtils.isHandheld()).thenReturn(true)
+        whenever(context.packageManager).thenReturn(packageManager)
+        whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK)).thenReturn(false)
+        whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE))
+            .thenReturn(false)
+        whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)).thenReturn(false)
         PermissionMapping.addHealthPermissionsToPlatform(setOf("health1"))
 
         val permissionFlags =
@@ -137,7 +151,7 @@ class PermissionUsageViewModelTest {
         val permissionUsageUseCase = getPermissionGroupUsageUseCase(appOpsUsageModels)
         val permissionUsageViewModel =
             getViewModel(
-                useCase = permissionUsageUseCase,
+                permissionUsageUseCase = permissionUsageUseCase,
                 savedStateHandle = SavedStateHandle(mapOf("showSystem" to false)),
             )
         val uiData = getPermissionUsageUiState(permissionUsageViewModel)
@@ -163,7 +177,7 @@ class PermissionUsageViewModelTest {
         val permissionUsageUseCase = getPermissionGroupUsageUseCase(appOpsUsageModels)
         val permissionUsageViewModel =
             getViewModel(
-                useCase = permissionUsageUseCase,
+                permissionUsageUseCase = permissionUsageUseCase,
                 savedStateHandle = SavedStateHandle(mapOf("showSystem" to true)),
             )
         val uiData = getPermissionUsageUiState(permissionUsageViewModel)
@@ -187,7 +201,7 @@ class PermissionUsageViewModelTest {
                 PackageAppOpUsageModel(systemPackageName, appOpsUsage, currentUser.identifier),
             )
         val permissionUsageUseCase = getPermissionGroupUsageUseCase(appOpsUsageModels)
-        val permissionUsageViewModel = getViewModel(useCase = permissionUsageUseCase)
+        val permissionUsageViewModel = getViewModel(permissionUsageUseCase = permissionUsageUseCase)
         val uiData = getPermissionUsageUiState(permissionUsageViewModel)
 
         assertThat(uiData.containsSystemAppUsage).isFalse()
@@ -206,7 +220,7 @@ class PermissionUsageViewModelTest {
         val permissionUsageUseCase = getPermissionGroupUsageUseCase(appOpsUsageModels)
         val permissionUsageViewModel =
             getViewModel(
-                useCase = permissionUsageUseCase,
+                permissionUsageUseCase = permissionUsageUseCase,
                 savedStateHandle = SavedStateHandle(mapOf("show7Days" to true)),
             )
         val permissionGroupsCount =
@@ -229,7 +243,7 @@ class PermissionUsageViewModelTest {
         val permissionUsageUseCase = getPermissionGroupUsageUseCase(appOpsUsageModels)
         val permissionUsageViewModel =
             getViewModel(
-                useCase = permissionUsageUseCase,
+                permissionUsageUseCase = permissionUsageUseCase,
                 savedStateHandle = SavedStateHandle(mapOf("show7Days" to false)),
             )
 
@@ -242,14 +256,98 @@ class PermissionUsageViewModelTest {
         assertThat(uiState2.show7Days).isTrue()
     }
 
+    @Test
+    @RequiresFlagsEnabled(Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED)
+    fun verifyAgentUsagesAreShownForPast24Hours() = runTest {
+        val now = System.currentTimeMillis()
+        val accessHistory =
+            listOf(
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_1,
+                    accessTime = now - TimeUnit.HOURS.toMillis(1),
+                ),
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_2,
+                    accessTime = now - TimeUnit.HOURS.toMillis(1),
+                ),
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_3,
+                    accessTime = now - TimeUnit.DAYS.toMillis(3),
+                ),
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_2,
+                    targetPackageName = TARGET_NAME_1,
+                    accessTime = now - TimeUnit.HOURS.toMillis(3),
+                ),
+            )
+        val permissionUsageUseCase = getPermissionGroupUsageUseCase()
+        val appFunctionPackageInfoUseCase = getAppFunctionPackageInfoUseCase()
+        val appFunctionAgentUsageUseCase = getAppFunctionAgentUsageUseCase(accessHistory)
+        val permissionUsageViewModel =
+            getViewModel(
+                permissionUsageUseCase = permissionUsageUseCase,
+                appFunctionAgentUsageUseCase = appFunctionAgentUsageUseCase,
+                appFunctionPackageInfoUseCase = appFunctionPackageInfoUseCase,
+                savedStateHandle = SavedStateHandle(mapOf("show7Days" to false)),
+            )
+        val agentAccessCount = getPermissionUsageUiState(permissionUsageViewModel).agentAccessCount
+        assertThat(agentAccessCount[AGENT_NAME_1]).isEqualTo(2)
+        assertThat(agentAccessCount[AGENT_NAME_2]).isEqualTo(1)
+    }
+
+    @Test
+    @RequiresFlagsEnabled(Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED)
+    fun verifyAgentUsagesAreShownForPast7Days() = runTest {
+        val now = System.currentTimeMillis()
+        val accessHistory =
+            listOf(
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_1,
+                    accessTime = now - TimeUnit.HOURS.toMillis(1),
+                ),
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_2,
+                    accessTime = now - TimeUnit.DAYS.toMillis(3),
+                ),
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_3,
+                    accessTime = now - TimeUnit.DAYS.toMillis(10),
+                ),
+            )
+        val permissionUsageUseCase = getPermissionGroupUsageUseCase()
+        val appFunctionPackageInfoUseCase = getAppFunctionPackageInfoUseCase()
+        val appFunctionAgentUsageUseCase = getAppFunctionAgentUsageUseCase(accessHistory)
+        val permissionUsageViewModel =
+            getViewModel(
+                permissionUsageUseCase = permissionUsageUseCase,
+                appFunctionAgentUsageUseCase = appFunctionAgentUsageUseCase,
+                appFunctionPackageInfoUseCase = appFunctionPackageInfoUseCase,
+                savedStateHandle = SavedStateHandle(mapOf("show7Days" to true)),
+            )
+        val agentAccessCount = getPermissionUsageUiState(permissionUsageViewModel).agentAccessCount
+        assertThat(agentAccessCount[AGENT_NAME_1]).isEqualTo(2)
+    }
+
     private fun TestScope.getViewModel(
-        useCase: GetPermissionGroupUsageUseCase = getPermissionGroupUsageUseCase(),
+        permissionUsageUseCase: GetPermissionGroupUsageUseCase = getPermissionGroupUsageUseCase(),
+        appFunctionAgentUsageUseCase: GetAppFunctionAgentUsageUseCase =
+            getAppFunctionAgentUsageUseCase(),
+        appFunctionPackageInfoUseCase: GetAppFunctionPackageInfoUseCase =
+            getAppFunctionPackageInfoUseCase(),
         savedStateHandle: SavedStateHandle = SavedStateHandle(emptyMap()),
     ): PermissionUsageViewModel {
         return PermissionUsageViewModel(
             application,
             permissionRepository,
-            useCase,
+            permissionUsageUseCase,
+            appFunctionAgentUsageUseCase,
+            appFunctionPackageInfoUseCase,
             backgroundScope,
             StandardTestDispatcher(testScheduler),
             savedState = savedStateHandle,
@@ -262,6 +360,22 @@ class PermissionUsageViewModelTest {
         val result by collectLastValue(viewModel.permissionUsagesUiDataFlow)
         return result as PermissionUsagesUiState.Success
     }
+
+    private fun createAccessHistory(
+        agentPackageName: String,
+        targetPackageName: String,
+        accessTime: Long,
+    ) =
+        AccessHistory(
+            agentPackageName,
+            targetPackageName,
+            null,
+            null,
+            null,
+            null,
+            accessTime,
+            ACCESS_DURATION,
+        )
 
     private fun getPermissionGroupUsageUseCase(
         packageAppOpsUsages: List<PackageAppOpUsageModel> = emptyList()
@@ -277,6 +391,18 @@ class PermissionUsageViewModelTest {
             roleRepository,
             userRepository,
         )
+    }
+
+    private fun getAppFunctionAgentUsageUseCase(
+        accessHistory: List<AccessHistory> = emptyList()
+    ): GetAppFunctionAgentUsageUseCase {
+        val appFunctionRepository = FakeAppFunctionRepository(accessHistory = accessHistory)
+        return GetAppFunctionAgentUsageUseCaseImpl(appFunctionRepository)
+    }
+
+    private fun getAppFunctionPackageInfoUseCase(): GetAppFunctionPackageInfoUseCase {
+        val packageRepository = FakePackageRepository(packageInfos)
+        return GetAppFunctionPackageInfoUseCaseImpl(packageRepository)
     }
 
     private fun getPackageInfoModel(
@@ -295,5 +421,11 @@ class PermissionUsageViewModelTest {
         private val RECORD_AUDIO_PERMISSION = android.Manifest.permission.RECORD_AUDIO
         private val CAMERA_PERMISSION_GROUP = android.Manifest.permission_group.CAMERA
         private val MICROPHONE_PERMISSION_GROUP = android.Manifest.permission_group.MICROPHONE
+        const val AGENT_NAME_1 = "agent1"
+        const val AGENT_NAME_2 = "agent2"
+        const val TARGET_NAME_1 = "target1"
+        const val TARGET_NAME_2 = "target2"
+        const val TARGET_NAME_3 = "target3"
+        const val ACCESS_DURATION = 1000L
     }
 }

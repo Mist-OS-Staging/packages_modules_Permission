@@ -13,6 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.android.permissioncontroller.appfunctions.domain.model.v31
 
-@androidx.annotation.RequiresApi(android.os.Build.VERSION_CODES.BAKLAVA)
-package com.android.permissioncontroller.appfunctions.domain.model;
+/**
+ * Model for an app function agent or target package.
+ *
+ * @param accessCount24Hours The count of target apps that an agent has accessed in past 24 hours
+ * @param accessCount7Days The count of target apps that an agent has accessed in past 7 days
+ */
+data class AccessCount(val accessCount24Hours: Int, val accessCount7Days: Int)
