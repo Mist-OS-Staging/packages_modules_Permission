@@ -21,6 +21,7 @@ import android.app.Application
 import android.content.Context
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
+import android.content.pm.PackageManager.PackageInfoFlags
 import android.os.UserHandle
 import android.os.UserManager
 import android.util.Log
@@ -103,13 +104,22 @@ private constructor(
         }
         postValue(
             try {
-                var flags = PackageManager.GET_PERMISSIONS
-                if (SdkLevel.isAtLeastS()) {
-                    flags = flags or PackageManager.GET_ATTRIBUTIONS
-                }
-
                 val packageManager = Utils.getUserContext(app, user).packageManager
-                val pI = packageManager.getPackageInfo(packageName, flags)
+                val pI =
+                    if (SdkLevel.isAtLeastU()) {
+                        val flags =
+                            PackageInfoFlags.of(
+                                PackageManager.GET_ATTRIBUTIONS_LONG or
+                                    PackageManager.GET_PERMISSIONS.toLong()
+                            )
+                        packageManager.getPackageInfo(packageName, flags)
+                    } else {
+                        var flags = PackageManager.GET_PERMISSIONS
+                        if (SdkLevel.isAtLeastS()) {
+                            flags = flags or PackageManager.GET_ATTRIBUTIONS
+                        }
+                        packageManager.getPackageInfo(packageName, flags)
+                    }
 
                 // PackageInfo#requestedPermissionsFlags is not device aware. Hence for device aware
                 // permissions if the deviceId is not the primary device we need to separately check

@@ -180,6 +180,15 @@ class RuntimePermissionsUpgradeControllerTest {
                 ?: throw PackageManager.NameNotFoundException()
         }
 
+        whenever(packageManager.getPackageInfo(anyString(), any<PackageManager.PackageInfoFlags>()))
+            .thenAnswer {
+                val packageName = it.arguments[0] as String
+
+                packageManager.getInstalledPackagesAsUser(0, 0).find {
+                    it.packageName == packageName
+                } ?: throw PackageManager.NameNotFoundException()
+            }
+
         whenever(packageManager.getPermissionFlags(any(), any(), any())).thenAnswer {
             val permissionName = it.arguments[0] as String
             val packageName = it.arguments[1] as String
