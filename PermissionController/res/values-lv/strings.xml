@@ -126,6 +126,10 @@
     <string name="message_staging" msgid="9110563899955511866">"Lietotne tiek izstādīta…"</string>
     <string name="app_name_unknown" msgid="1319665005754048952">"Nezināma"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Konfidenc. panelis"</string>
+    <!-- no translation found for permission_usage_app_permissions_title (7238764049615371525) -->
+    <skip />
+    <!-- no translation found for permission_usage_agent_activity_title (8169150514365050522) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Skatiet, kuras lietotnes nesen izmantoja atļaujas."</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> — lietojums"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Skatiet citas atļaujas"</string>
@@ -165,6 +169,8 @@
     <string name="permission_usage_preference_summary_not_used_in_past_n_days" msgid="4771868094611359651">"{count,plural, =1{Pēdējās # dienas laikā nav izmantota}zero{Pēdējo # dienu laikā nav izmantota}one{Pēdējās # dienas laikā nav izmantota}other{Pēdējo # dienu laikā nav izmantota}}"</string>
     <string name="permission_usage_preference_summary_not_used_in_past_n_hours" msgid="3828973177433435742">"{count,plural, =1{Pēdējās # stundas laikā nav izmantota}zero{Pēdējo # stundu laikā nav izmantota}one{Pēdējās # stundas laikā nav izmantota}other{Pēdējo # stundu laikā nav izmantota}}"</string>
     <string name="permission_usage_preference_label" msgid="8343167938128676378">"{count,plural, =1{Izmanto 1 lietotne}zero{Izmanto # lietotnes}one{Izmanto # lietotne}other{Izmanto # lietotnes}}"</string>
+    <!-- no translation found for agent_usage_preference_label (3123976176446237103) -->
+    <skip />
     <string name="permission_usage_view_details" msgid="6675335735468752787">"Skatīt visu rīkā Permission Dashboard"</string>
     <string name="app_permission_usage_filter_label" msgid="7182861154638631550">"Filtrēts pēc: <xliff:g id="PERM">%1$s</xliff:g>"</string>
     <string name="app_permission_usage_remove_filter" msgid="2926157607436428207">"Noņemt filtru"</string>
