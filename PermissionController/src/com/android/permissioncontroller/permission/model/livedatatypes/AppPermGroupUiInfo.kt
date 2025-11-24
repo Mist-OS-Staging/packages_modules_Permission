@@ -29,13 +29,13 @@ data class AppPermGroupUiInfo(
     val shouldShow: Boolean,
     val permGrantState: PermGrantState,
     val isSystem: Boolean,
-    val isUserSet: Boolean
+    val isUserSet: Boolean,
 ) {
     enum class PermGrantState(private val grantState: Int) {
         PERMS_DENIED(0),
         PERMS_ALLOWED(1),
         PERMS_ALLOWED_FOREGROUND_ONLY(2),
         PERMS_ALLOWED_ALWAYS(3),
-        PERMS_ASK(4)
+        PERMS_ASK(4),
     }
 }

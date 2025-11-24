@@ -13,16 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.android.permissioncontroller.appfunctions.domain.usecase.v31
 
-package com.android.permissioncontroller.appfunctions.domain.model
+import android.content.Context
+import com.android.permissioncontroller.appfunctions.domain.model.v31.AccessCount
 
-import android.graphics.drawable.Drawable
-
-/**
- * Model for an app function agent or target package.
- *
- * @param packageName The package name of the app function agent.
- * @param label The label of the app function agent.
- * @param icon The icon of the app function agent.
- */
-data class AppFunctionPackageInfo(val packageName: String, val label: String, val icon: Drawable?)
+/** A use case for getting the usage of app function agents. */
+interface GetAppFunctionAgentUsageUseCase {
+    /**
+     * Retrieves the usages for app function agents.
+     *
+     * @param context The [Context] of the application.
+     */
+    suspend operator fun invoke(context: Context): Map<String, AccessCount>
+}

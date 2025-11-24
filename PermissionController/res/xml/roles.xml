@@ -155,6 +155,8 @@
                 minSdkVersion="35" optionalMinSdkVersion="34" />
             <permission name="android.permission.EMBED_ANY_APP_IN_UNTRUSTED_MODE"
                 minSdkVersion="35" />
+            <permission name="android.permission.SHOW_POWER_MENU"
+                featureFlag="android.app.Flags.statusbarApiShowPowerMenu" />
         </permissions>
         <app-op-permissions>
             <app-op-permission name="android.permission.SYSTEM_ALERT_WINDOW" />
@@ -736,6 +738,8 @@
                 minSdkVersion="35" />
             <permission name="android.permission.MANAGE_DEVICE_POLICY_MTE"
                 minSdkVersion="36" />
+            <permission name="android.permission.SHOW_POWER_MENU"
+                featureFlag="android.app.Flags.statusbarApiShowPowerMenu" />
         </permissions>
         <!-- App ops needed to allow background access to audio APIs for CTS -->
         <app-ops>

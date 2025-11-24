@@ -32,7 +32,7 @@ import kotlinx.coroutines.launch
  */
 abstract class SmartAsyncMediatorLiveData<T>(
     isStaticVal: Boolean = false,
-    private val alwaysUpdateOnActive: Boolean = true
+    private val alwaysUpdateOnActive: Boolean = true,
 ) : SmartUpdateMediatorLiveData<T>(isStaticVal) {
 
     private var currentJob: Job? = null

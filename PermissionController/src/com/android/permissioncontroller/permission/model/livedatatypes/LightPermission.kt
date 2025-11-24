@@ -39,14 +39,14 @@ data class LightPermission(
     val permInfo: LightPermInfo,
     val isGranted: Boolean,
     val flags: Int,
-    val foregroundPerms: List<String>?
+    val foregroundPerms: List<String>?,
 ) {
 
     constructor(
         pkgInfo: LightPackageInfo,
         permInfo: LightPermInfo,
         permState: PermState,
-        foregroundPerms: List<String>?
+        foregroundPerms: List<String>?,
     ) : this(pkgInfo, permInfo, permState.granted, permState.permFlags, foregroundPerms)
 
     /** The name of this permission */

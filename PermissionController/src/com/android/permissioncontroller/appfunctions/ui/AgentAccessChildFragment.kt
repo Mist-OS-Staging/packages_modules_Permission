@@ -33,8 +33,9 @@ import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceGroup
 import androidx.preference.PreferenceScreen
 import com.android.permissioncontroller.R
-import com.android.permissioncontroller.appfunctions.domain.model.AppFunctionPackageInfo
-import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCase
+import com.android.permissioncontroller.appfunctions.domain.model.v31.AppFunctionPackageInfo
+import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCaseImpl
+import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAppFunctionPackageInfoUseCase
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.AgentAccessViewModel
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.AgentAccessViewModelFactory
 import com.android.permissioncontroller.common.model.Stateful
@@ -70,7 +71,7 @@ class AgentAccessChildFragment<PF> : Fragment(), Preference.OnPreferenceClickLis
         viewModel = ViewModelProvider(this, factory).get(AgentAccessViewModel::class.java)
 
         val packageRepository = PackageRepository.createInstance(requireContext())
-        getAppFunctionPackageInfoUseCase = GetAppFunctionPackageInfoUseCase(packageRepository)
+        getAppFunctionPackageInfoUseCase = GetAppFunctionPackageInfoUseCaseImpl(packageRepository)
 
         val collator =
             Collator.getInstance(
@@ -92,7 +93,7 @@ class AgentAccessChildFragment<PF> : Fragment(), Preference.OnPreferenceClickLis
                                         uiState.value.agentPackageName,
                                         requireContext(),
                                         Process.myUserHandle(),
-                                    )
+                                    )!!
                                 val allowedTargets =
                                     uiState.value.allowedTargetPackageNames
                                         .map {
@@ -100,7 +101,7 @@ class AgentAccessChildFragment<PF> : Fragment(), Preference.OnPreferenceClickLis
                                                 it,
                                                 requireContext(),
                                                 Process.myUserHandle(),
-                                            )
+                                            )!!
                                         }
                                         .sortedWith(targetListComparator)
                                 val notAllowedTargets =
@@ -110,7 +111,7 @@ class AgentAccessChildFragment<PF> : Fragment(), Preference.OnPreferenceClickLis
                                                 it,
                                                 requireContext(),
                                                 Process.myUserHandle(),
-                                            )
+                                            )!!
                                         }
                                         .sortedWith(targetListComparator)
                                 Stateful.Success(

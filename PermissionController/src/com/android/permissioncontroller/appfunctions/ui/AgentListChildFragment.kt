@@ -29,8 +29,9 @@ import androidx.preference.Preference.OnPreferenceClickListener
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceGroup
 import com.android.permissioncontroller.R
-import com.android.permissioncontroller.appfunctions.domain.model.AppFunctionPackageInfo
-import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCase
+import com.android.permissioncontroller.appfunctions.domain.model.v31.AppFunctionPackageInfo
+import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCaseImpl
+import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAppFunctionPackageInfoUseCase
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.AgentListViewModel
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.AgentListViewModelFactory
 import com.android.permissioncontroller.common.model.Stateful
@@ -62,7 +63,7 @@ class AgentListChildFragment<PF> : Fragment(), OnPreferenceClickListener
         viewModel = ViewModelProvider(this, factory).get(AgentListViewModel::class.java)
 
         val packageRepository = PackageRepository.createInstance(requireContext())
-        getAppFunctionPackageInfoUseCase = GetAppFunctionPackageInfoUseCase(packageRepository)
+        getAppFunctionPackageInfoUseCase = GetAppFunctionPackageInfoUseCaseImpl(packageRepository)
 
         val collator =
             Collator.getInstance(
@@ -86,7 +87,7 @@ class AgentListChildFragment<PF> : Fragment(), OnPreferenceClickListener
                                                 it,
                                                 requireContext(),
                                                 Process.myUserHandle(),
-                                            )
+                                            )!!
                                         }
                                         .sortedWith(agentListComparator)
                                 Stateful.Success(AgentListRichUiState(agentPackageInfos))
