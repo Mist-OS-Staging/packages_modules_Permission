@@ -24,3 +24,10 @@ flag {
     description: "Guard minor changes to old UI code to support new Safety Center UI in Settings"
     bug: "408241976"
 }
+
+flag {
+    name: "automotive_privacy_dashboard_agent_activity_enabled"
+    namespace: "permissions"
+    description: "Flag to show the update dashboard with agent access activity in automotive"
+    bug: "428696180"
+}
