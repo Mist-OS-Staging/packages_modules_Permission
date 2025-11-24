@@ -126,6 +126,10 @@
     <string name="message_staging" msgid="9110563899955511866">"Inihahanda ang app…"</string>
     <string name="app_name_unknown" msgid="1319665005754048952">"Hindi alam"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Privacy dashboard"</string>
+    <!-- no translation found for permission_usage_app_permissions_title (7238764049615371525) -->
+    <skip />
+    <!-- no translation found for permission_usage_agent_activity_title (8169150514365050522) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Tingnan kung aling app ang gumamit kamakailan ng pahintulot"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Paggamit ng <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Tingnan ang ibang pahintulot"</string>
@@ -165,6 +169,8 @@
     <string name="permission_usage_preference_summary_not_used_in_past_n_days" msgid="4771868094611359651">"{count,plural, =1{Hindi ginamit sa nakalipas na # araw}one{Hindi ginamit sa nakalipas na # araw}other{Hindi ginamit sa nakalipas na # na araw}}"</string>
     <string name="permission_usage_preference_summary_not_used_in_past_n_hours" msgid="3828973177433435742">"{count,plural, =1{Hindi ginamit sa nakalipas na # oras}one{Hindi ginamit sa nakalipas na # oras}other{Hindi ginamit sa nakalipas na # na oras}}"</string>
     <string name="permission_usage_preference_label" msgid="8343167938128676378">"{count,plural, =1{Ginagamit ng 1 app}one{Ginagamit ng # app}other{Ginagamit ng # na app}}"</string>
+    <!-- no translation found for agent_usage_preference_label (3123976176446237103) -->
+    <skip />
     <string name="permission_usage_view_details" msgid="6675335735468752787">"Tingnan lahat sa Dashboard"</string>
     <string name="app_permission_usage_filter_label" msgid="7182861154638631550">"Na-filter ng: <xliff:g id="PERM">%1$s</xliff:g>"</string>
     <string name="app_permission_usage_remove_filter" msgid="2926157607436428207">"Alisin ang filter"</string>
