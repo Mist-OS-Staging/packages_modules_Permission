@@ -257,6 +257,15 @@ object KotlinUtils {
             !DeviceUtils.isWear(context)
     }
 
+    @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.CINNAMON_BUN, codename = "CinnamonBun")
+    fun isLocationPermissionNewRadioButtonsEnabled(context: Context): Boolean {
+        return SdkLevel.isAtLeastB() &&
+            android.permission.flags.Flags.locationPermissionNewRadioButtonsEnabled() &&
+            !DeviceUtils.isAuto(context) &&
+            !DeviceUtils.isTelevision(context) &&
+            !DeviceUtils.isWear(context)
+    }
+
     /** How often the safety label changes job will run. */
     @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.UPSIDE_DOWN_CAKE, codename = "UpsideDownCake")
     fun getSafetyLabelChangesJobIntervalMillis(): Long {
