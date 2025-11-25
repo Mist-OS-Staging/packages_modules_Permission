@@ -60,7 +60,7 @@ class RequestAssistStructureViewModel(
                 // TODO: finish if already enabled or request denied multiple times
                 val assistStructureEnabled =
                     appOpRepository.checkOpNoThrow(
-                        AppOpsManager.OPSTR_ASSIST_STRUCTURE,
+                        AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
                         packageUid,
                         packageName,
                     )
@@ -81,7 +81,7 @@ class RequestAssistStructureViewModel(
         // TODO: Clear previous record of denials
         coroutineScope.launch(dispatcher) {
             appOpRepository.setUidMode(
-                AppOpsManager.OPSTR_ASSIST_STRUCTURE,
+                AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
                 packageUid,
                 MODE_ALLOWED,
             )

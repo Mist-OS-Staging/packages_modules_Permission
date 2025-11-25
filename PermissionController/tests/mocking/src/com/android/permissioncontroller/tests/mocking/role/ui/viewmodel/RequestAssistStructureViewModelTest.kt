@@ -82,7 +82,11 @@ class RequestAssistStructureViewModelTest {
 
     @Test
     fun requestAssistState_requestable() = runTest {
-        appOpsRepository.setUidMode(AppOpsManager.OPSTR_ASSIST_STRUCTURE, PACKAGE_UID, MODE_IGNORED)
+        appOpsRepository.setUidMode(
+            AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
+            PACKAGE_UID,
+            MODE_IGNORED,
+        )
 
         val viewModel = getViewModel()
 
@@ -92,7 +96,11 @@ class RequestAssistStructureViewModelTest {
 
     @Test
     fun requestAssistState_allowed() = runTest {
-        appOpsRepository.setUidMode(AppOpsManager.OPSTR_ASSIST_STRUCTURE, PACKAGE_UID, MODE_ALLOWED)
+        appOpsRepository.setUidMode(
+            AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
+            PACKAGE_UID,
+            MODE_ALLOWED,
+        )
 
         val viewModel = getViewModel()
 
@@ -101,7 +109,11 @@ class RequestAssistStructureViewModelTest {
 
     @Test
     fun setAllowed() = runTest {
-        appOpsRepository.setUidMode(AppOpsManager.OPSTR_ASSIST_STRUCTURE, PACKAGE_UID, MODE_IGNORED)
+        appOpsRepository.setUidMode(
+            AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
+            PACKAGE_UID,
+            MODE_IGNORED,
+        )
 
         val viewModel = getViewModel()
         viewModel.setAllowed()
@@ -109,7 +121,7 @@ class RequestAssistStructureViewModelTest {
 
         assertThat(
                 appOpsRepository.checkOpNoThrow(
-                    AppOpsManager.OPSTR_ASSIST_STRUCTURE,
+                    AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
                     PACKAGE_UID,
                     PACKAGE_NAME,
                 )
@@ -119,7 +131,11 @@ class RequestAssistStructureViewModelTest {
 
     @Test
     fun markRequestDenied() = runTest {
-        appOpsRepository.setUidMode(AppOpsManager.OPSTR_ASSIST_STRUCTURE, PACKAGE_UID, MODE_IGNORED)
+        appOpsRepository.setUidMode(
+            AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
+            PACKAGE_UID,
+            MODE_IGNORED,
+        )
 
         val viewModel = getViewModel()
         viewModel.markRequestDenied()
@@ -127,7 +143,7 @@ class RequestAssistStructureViewModelTest {
 
         assertThat(
                 appOpsRepository.checkOpNoThrow(
-                    AppOpsManager.OPSTR_ASSIST_STRUCTURE,
+                    AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
                     PACKAGE_UID,
                     PACKAGE_NAME,
                 )
