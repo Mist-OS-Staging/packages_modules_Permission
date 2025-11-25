@@ -95,22 +95,7 @@ private constructor(private val app: Application, private val user: UserHandle) 
                 )
             }
 
-        postValue(
-            packageInfos.map { packageInfo ->
-                val mergedPackageInfo =
-                    if (packageInfo.sharedUserId != null) {
-                        val otherPackages =
-                            packageInfos.filter { it.sharedUserId == packageInfo.sharedUserId }
-                        LightPackageInfoLiveData.mergePermissionsInSharedUid(
-                            packageInfo,
-                            otherPackages,
-                        )
-                    } else {
-                        packageInfo
-                    }
-                LightPackageInfo(mergedPackageInfo)
-            }
-        )
+        postValue(packageInfos.map { packageInfo -> LightPackageInfo(packageInfo) })
     }
 
     override fun onActive() {
