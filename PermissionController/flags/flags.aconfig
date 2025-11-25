@@ -2,16 +2,6 @@ package: "com.android.permissioncontroller.flags"
 container: "com.android.permission"
 
 flag {
-    name: "grant_activity_pause_handover"
-    namespace: "permissions"
-    description: "This flag controls the onPause behavior in the grant activity, which handles a rare edge case when two dialogs start at the same time"
-    bug: "420375604"
-    metadata {
-       purpose: PURPOSE_BUGFIX
-    }
-}
-
-flag {
     name: "privacy_dashboard_agent_activity_enabled"
     namespace: "permissions"
     description: "Flag to enable showing agent access activities in privacy dashboard"
