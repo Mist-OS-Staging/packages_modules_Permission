@@ -126,10 +126,8 @@
     <string name="message_staging" msgid="9110563899955511866">"正在準備安裝應用程式…"</string>
     <string name="app_name_unknown" msgid="1319665005754048952">"不明"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"私隱資訊主頁"</string>
-    <!-- no translation found for permission_usage_app_permissions_title (7238764049615371525) -->
-    <skip />
-    <!-- no translation found for permission_usage_agent_activity_title (8169150514365050522) -->
-    <skip />
+    <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"應用程式權限"</string>
+    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"代理應用程式活動"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"查看最近曾使用權限的應用程式"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>使用情況"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"查看其他權限"</string>
@@ -169,8 +167,7 @@
     <string name="permission_usage_preference_summary_not_used_in_past_n_days" msgid="4771868094611359651">"{count,plural, =1{過去 # 天內並未使用}other{過去 # 天內並未使用}}"</string>
     <string name="permission_usage_preference_summary_not_used_in_past_n_hours" msgid="3828973177433435742">"{count,plural, =1{過去 # 小時內並未使用}other{過去 # 小時內並未使用}}"</string>
     <string name="permission_usage_preference_label" msgid="8343167938128676378">"{count,plural, =1{有 1 個應用程式使用過}other{有 # 個應用程式使用過}}"</string>
-    <!-- no translation found for agent_usage_preference_label (3123976176446237103) -->
-    <skip />
+    <string name="agent_usage_preference_label" msgid="3123976176446237103">"{count,plural, =1{已存取 1 個應用程式}other{已存取 # 個應用程式}}"</string>
     <string name="permission_usage_view_details" msgid="6675335735468752787">"在「資訊主頁」查看全部"</string>
     <string name="app_permission_usage_filter_label" msgid="7182861154638631550">"篩選條件：<xliff:g id="PERM">%1$s</xliff:g>"</string>
     <string name="app_permission_usage_remove_filter" msgid="2926157607436428207">"移除篩選器"</string>
@@ -740,4 +737,10 @@
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"允許預設數碼助理應用程式存取可見應用程式分享的畫面內容和資料"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"允許"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"不允許"</string>
+    <!-- no translation found for assist_structure_setting_title (3448963992289353882) -->
+    <skip />
+    <!-- no translation found for assist_structure_setting_default_description (5286942439766192730) -->
+    <skip />
+    <!-- no translation found for assist_structure_setting_description (2865330212261060313) -->
+    <skip />
 </resources>
