@@ -101,8 +101,6 @@ class PermissionUsageViewModelTest {
         whenever(DeviceUtils.isHandheld()).thenReturn(true)
         whenever(context.packageManager).thenReturn(packageManager)
         whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK)).thenReturn(false)
-        whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE))
-            .thenReturn(false)
         whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)).thenReturn(false)
         PermissionMapping.addHealthPermissionsToPlatform(setOf("health1"))
 
@@ -268,7 +266,9 @@ class PermissionUsageViewModelTest {
         FLAG_ENABLE_APP_INTERACTION_API,
     )
     fun verifyAgentUsagesAreShownForPast24Hours() = runTest {
-        assumeFalse(isTv() || isAutomotive() || isWatch())
+        assumeFalse(isTv() || isWatch())
+        assumeTrue("Skipping: Feature not supported on Auto when flag is disabled",
+            !isAutomotive() || Flags.automotivePrivacyDashboardAgentActivityEnabled())
         val now = System.currentTimeMillis()
         val accessHistory =
             listOf(
@@ -314,7 +314,9 @@ class PermissionUsageViewModelTest {
         FLAG_ENABLE_APP_INTERACTION_API,
     )
     fun verifyAgentUsagesAreShownForPast7Days() = runTest {
-        assumeFalse(isTv() || isAutomotive() || isWatch())
+        assumeFalse(isTv() || isWatch())
+        assumeTrue("Skipping: Feature not supported on Auto when flag is disabled",
+            !isAutomotive() || Flags.automotivePrivacyDashboardAgentActivityEnabled())
         val now = System.currentTimeMillis()
         val accessHistory =
             listOf(

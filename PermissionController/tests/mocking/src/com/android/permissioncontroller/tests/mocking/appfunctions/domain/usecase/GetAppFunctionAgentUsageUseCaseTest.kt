@@ -22,6 +22,7 @@ import android.platform.test.annotations.RequiresFlagsDisabled
 import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.CheckFlagsRule
 import android.platform.test.flag.junit.DeviceFlagsValueProvider
+import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
 import com.android.permissioncontroller.appfunctions.domain.model.v31.AccessCount
@@ -33,6 +34,7 @@ import com.android.permissioncontroller.tests.mocking.appfunctions.data.reposito
 import com.google.common.truth.Truth.assertThat
 import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.test.runTest
+import org.junit.Assume.assumeTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -56,14 +58,14 @@ class GetAppFunctionAgentUsageUseCaseTest {
         MockitoAnnotations.initMocks(this)
         whenever(mockContext.packageManager).thenReturn(packageManager)
         whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK)).thenReturn(false)
-        whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE))
-            .thenReturn(false)
         whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)).thenReturn(false)
     }
 
     @Test
     @RequiresFlagsEnabled(Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED)
     fun getAgentUsages_success() = runTest {
+        assumeTrue("Skipping: Feature not supported on Auto when flag is disabled",
+            !isAutomotive() || Flags.automotivePrivacyDashboardAgentActivityEnabled())
         val now = System.currentTimeMillis()
         val accessHistory =
             listOf(
@@ -104,6 +106,8 @@ class GetAppFunctionAgentUsageUseCaseTest {
     @Test
     @RequiresFlagsEnabled(Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED)
     fun getAgentUsages_resultIsDistinct() = runTest {
+        assumeTrue("Skipping: Feature not supported on Auto when flag is disabled",
+            !isAutomotive() || Flags.automotivePrivacyDashboardAgentActivityEnabled())
         val now = System.currentTimeMillis()
         val accessHistory =
             listOf(
@@ -135,6 +139,8 @@ class GetAppFunctionAgentUsageUseCaseTest {
     @Test
     @RequiresFlagsDisabled(Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED)
     fun getAgentUsages_flagOff_emptyResult() = runTest {
+        assumeTrue("Skipping: skip test if feature is enabled and on automotive",
+            !isAutomotive() || !Flags.automotivePrivacyDashboardAgentActivityEnabled())
         val now = System.currentTimeMillis()
         val accessHistory =
             listOf(
@@ -166,6 +172,11 @@ class GetAppFunctionAgentUsageUseCaseTest {
             accessTime,
             ACCESS_DURATION,
         )
+
+    private fun isAutomotive() : Boolean {
+        val testContext : Context = ApplicationProvider.getApplicationContext()
+        return testContext.packageManager.hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE)
+    }
 
     companion object {
         const val AGENT_NAME_1 = "agent1"
