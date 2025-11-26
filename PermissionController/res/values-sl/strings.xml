@@ -737,4 +737,10 @@
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Privzeti aplikaciji pomočnika dovolite dostop do vsebine zaslona in podatkov, ki jih deli vidna aplikacija."</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Dovoli"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Ne dovoli"</string>
+    <!-- no translation found for assist_structure_setting_title (3448963992289353882) -->
+    <skip />
+    <!-- no translation found for assist_structure_setting_default_description (5286942439766192730) -->
+    <skip />
+    <!-- no translation found for assist_structure_setting_description (2865330212261060313) -->
+    <skip />
 </resources>

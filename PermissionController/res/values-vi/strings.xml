@@ -126,10 +126,8 @@
     <string name="message_staging" msgid="9110563899955511866">"Đang thử nghiệm ứng dụng…"</string>
     <string name="app_name_unknown" msgid="1319665005754048952">"Không xác định"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Bảng tổng quan về quyền riêng tư"</string>
-    <!-- no translation found for permission_usage_app_permissions_title (7238764049615371525) -->
-    <skip />
-    <!-- no translation found for permission_usage_agent_activity_title (8169150514365050522) -->
-    <skip />
+    <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Quyền cho ứng dụng"</string>
+    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Hoạt động của tác nhân"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Xem những ứng dụng nào gần đây đã sử dụng các quyền"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Hoạt động sử dụng <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Xem các quyền khác"</string>
@@ -169,8 +167,7 @@
     <string name="permission_usage_preference_summary_not_used_in_past_n_days" msgid="4771868094611359651">"{count,plural, =1{Không sử dụng trong # ngày qua}other{Không sử dụng trong # ngày qua}}"</string>
     <string name="permission_usage_preference_summary_not_used_in_past_n_hours" msgid="3828973177433435742">"{count,plural, =1{Không sử dụng trong # giờ qua}other{Không sử dụng trong # giờ qua}}"</string>
     <string name="permission_usage_preference_label" msgid="8343167938128676378">"{count,plural, =1{1 ứng dụng đã dùng}other{# ứng dụng đã dùng}}"</string>
-    <!-- no translation found for agent_usage_preference_label (3123976176446237103) -->
-    <skip />
+    <string name="agent_usage_preference_label" msgid="3123976176446237103">"{count,plural, =1{Đã truy cập 1 ứng dụng}other{Đã truy cập # ứng dụng}}"</string>
     <string name="permission_usage_view_details" msgid="6675335735468752787">"Xem tất cả trong Trang tổng quan"</string>
     <string name="app_permission_usage_filter_label" msgid="7182861154638631550">"Lọc theo: <xliff:g id="PERM">%1$s</xliff:g>"</string>
     <string name="app_permission_usage_remove_filter" msgid="2926157607436428207">"Xóa bộ lọc"</string>
@@ -740,4 +737,10 @@
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Cho phép ứng dụng trợ lý mặc định truy cập vào nội dung trên màn hình và dữ liệu do ứng dụng hiển thị chia sẻ"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Cho phép"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Không cho phép"</string>
+    <!-- no translation found for assist_structure_setting_title (3448963992289353882) -->
+    <skip />
+    <!-- no translation found for assist_structure_setting_default_description (5286942439766192730) -->
+    <skip />
+    <!-- no translation found for assist_structure_setting_description (2865330212261060313) -->
+    <skip />
 </resources>

@@ -126,10 +126,8 @@
     <string name="message_staging" msgid="9110563899955511866">"Апликација се припрема…"</string>
     <string name="app_name_unknown" msgid="1319665005754048952">"Непознато"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Контролна табла за приватност"</string>
-    <!-- no translation found for permission_usage_app_permissions_title (7238764049615371525) -->
-    <skip />
-    <!-- no translation found for permission_usage_agent_activity_title (8169150514365050522) -->
-    <skip />
+    <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Дозволе за апликације"</string>
+    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Активности агента"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Прегледајте које су апликације недавно користиле дозволе"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Коришћење дозволе <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Погледајте друге дозволе"</string>
@@ -169,8 +167,7 @@
     <string name="permission_usage_preference_summary_not_used_in_past_n_days" msgid="4771868094611359651">"{count,plural, =1{Није коришћено током последњег # дана}one{Није коришћено током последњег # дана}few{Није коришћено током последња # дана}other{Није коришћено током последњих # дана}}"</string>
     <string name="permission_usage_preference_summary_not_used_in_past_n_hours" msgid="3828973177433435742">"{count,plural, =1{Није коришћено током последњег # сата}one{Није коришћено током последњег # сата}few{Није коришћено током последња # сата}other{Није коришћено током последњих # сати}}"</string>
     <string name="permission_usage_preference_label" msgid="8343167938128676378">"{count,plural, =1{Користи 1 апликација}one{Користи # апликација}few{Користе # апликације}other{Користи # апликација}}"</string>
-    <!-- no translation found for agent_usage_preference_label (3123976176446237103) -->
-    <skip />
+    <string name="agent_usage_preference_label" msgid="3123976176446237103">"{count,plural, =1{Приступљено једној апликацији}one{Приступљено – # апликацији}few{Приступљено – # апликације}other{Приступљено – # апликација}}"</string>
     <string name="permission_usage_view_details" msgid="6675335735468752787">"Прикажи све на контролној табли"</string>
     <string name="app_permission_usage_filter_label" msgid="7182861154638631550">"Филтрирано према: <xliff:g id="PERM">%1$s</xliff:g>"</string>
     <string name="app_permission_usage_remove_filter" msgid="2926157607436428207">"Уклони филтер"</string>
@@ -740,4 +737,10 @@
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Дозвољава подразумеваном помоћнику да приступа садржају екрана и подацима које дели апликација"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Дозволи"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Не дозволи"</string>
+    <!-- no translation found for assist_structure_setting_title (3448963992289353882) -->
+    <skip />
+    <!-- no translation found for assist_structure_setting_default_description (5286942439766192730) -->
+    <skip />
+    <!-- no translation found for assist_structure_setting_description (2865330212261060313) -->
+    <skip />
 </resources>

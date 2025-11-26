@@ -126,10 +126,8 @@
     <string name="message_staging" msgid="9110563899955511866">"অ্যাপ স্টেজ করা হচ্ছে…"</string>
     <string name="app_name_unknown" msgid="1319665005754048952">"অজানা"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"প্রাইভেসি ড্যাশবোর্ড"</string>
-    <!-- no translation found for permission_usage_app_permissions_title (7238764049615371525) -->
-    <skip />
-    <!-- no translation found for permission_usage_agent_activity_title (8169150514365050522) -->
-    <skip />
+    <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"অ্যাপকে দেওয়া অনুমতি"</string>
+    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"এজেন্টের অ্যাক্টিভিটি"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"সম্প্রতি কোন কোন অ্যাপ অনুমতি ব্যবহার করেছে দেখুন"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> ব্যবহার"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"অন্য অনুমতি দেখুন"</string>
@@ -169,8 +167,7 @@
     <string name="permission_usage_preference_summary_not_used_in_past_n_days" msgid="4771868094611359651">"{count,plural, =1{গত # দিনে ব্যবহার করা হয়নি}one{গত # দিনে ব্যবহার করা হয়নি}other{গত # দিনে ব্যবহার করা হয়নি}}"</string>
     <string name="permission_usage_preference_summary_not_used_in_past_n_hours" msgid="3828973177433435742">"{count,plural, =1{গত # ঘণ্টায় ব্যবহার করা হয়নি}one{গত # ঘণ্টায় ব্যবহার করা হয়নি}other{গত # ঘণ্টায় ব্যবহার করা হয়নি}}"</string>
     <string name="permission_usage_preference_label" msgid="8343167938128676378">"{count,plural, =1{১টি অ্যাপ ব্যবহার করেছে}one{#টি অ্যাপ ব্যবহার করেছে}other{#টি অ্যাপ ব্যবহার করেছে}}"</string>
-    <!-- no translation found for agent_usage_preference_label (3123976176446237103) -->
-    <skip />
+    <string name="agent_usage_preference_label" msgid="3123976176446237103">"{count,plural, =1{১টি অ্যাপ অ্যাক্সেস করা হয়েছে}one{#টি অ্যাপ অ্যাক্সেস করা হয়েছে}other{#টি অ্যাপ অ্যাক্সেস করা হয়েছে}}"</string>
     <string name="permission_usage_view_details" msgid="6675335735468752787">"সবকিছু ড্যাশবোর্ডে দেখুন"</string>
     <string name="app_permission_usage_filter_label" msgid="7182861154638631550">"এই অনুযায়ী ফিল্টার করা হয়েছে: <xliff:g id="PERM">%1$s</xliff:g>"</string>
     <string name="app_permission_usage_remove_filter" msgid="2926157607436428207">"ফিল্টার সরান"</string>
@@ -740,4 +737,10 @@
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"ডিফল্ট অ্যাসিস্ট্যান্ট অ্যাপকে স্ক্রিনের কন্টেন্ট ও দৃশ্যমান অ্যাপের শেয়ার করা ডেটা অ্যাক্সেস করার অনুমতি দিন"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"অনুমতি দিন"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"অনুমতি দেবেন না"</string>
+    <!-- no translation found for assist_structure_setting_title (3448963992289353882) -->
+    <skip />
+    <!-- no translation found for assist_structure_setting_default_description (5286942439766192730) -->
+    <skip />
+    <!-- no translation found for assist_structure_setting_description (2865330212261060313) -->
+    <skip />
 </resources>
