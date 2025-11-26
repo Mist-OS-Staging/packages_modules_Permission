@@ -469,6 +469,7 @@
             <item type="string" name="config_recommendedAssistantsBy" />
             <item type="string" name="config_recommendedAssistantsDescription" />
             <item type="string" name="config_recommendedAssistants" />
+            <item type="bool" name="config_showHomeConfirmationDialog" />
             <!-- END ROLE CONFIGS -->
 
             <!-- START CAR DIMENS -->

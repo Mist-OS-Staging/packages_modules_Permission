@@ -30,9 +30,9 @@ public class EmergencyRoleUiBehavior implements RoleUiBehavior {
 
     @Nullable
     @Override
-    public CharSequence getConfirmationMessage(@NonNull Role role, @NonNull String packageName,
-            @NonNull Context context) {
-        return EncryptionUnawareConfirmationMixin.getConfirmationMessage(role, packageName,
+    public ConfirmationDialogInfo getConfirmationDialogInfo(@NonNull Role role,
+            @NonNull String packageName, @NonNull Context context) {
+        return EncryptionUnawareConfirmationMixin.getConfirmationDialogInfo(role, packageName,
                 context);
     }
 }
