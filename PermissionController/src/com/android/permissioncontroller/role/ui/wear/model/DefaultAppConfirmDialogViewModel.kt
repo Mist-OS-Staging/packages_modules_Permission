@@ -19,6 +19,7 @@ package com.android.permissioncontroller.role.ui.wear.model
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.android.permissioncontroller.role.ui.behavior.ConfirmationDialogInfo
 
 /** ViewModel for a default app confirm dialog. */
 class DefaultAppConfirmDialogViewModel : ViewModel() {
@@ -43,7 +44,7 @@ class DefaultAppConfirmDialogViewModelFactory : ViewModelProvider.Factory {
 
 /** Data class for arguments of a default app confirm dialog. */
 data class ConfirmDialogArgs(
-    val message: String,
+    val info: ConfirmationDialogInfo,
     val onOkButtonClick: () -> Unit,
     val onCancelButtonClick: () -> Unit,
 )

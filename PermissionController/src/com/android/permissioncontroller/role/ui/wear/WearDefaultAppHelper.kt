@@ -22,6 +22,7 @@ import com.android.permissioncontroller.R
 import com.android.permissioncontroller.permission.utils.Utils
 import com.android.permissioncontroller.role.ui.DefaultAppViewModel
 import com.android.permissioncontroller.role.ui.RoleApplicationItem
+import com.android.permissioncontroller.role.ui.behavior.ConfirmationDialogInfo
 import com.android.permissioncontroller.role.ui.wear.model.ConfirmDialogArgs
 import com.android.permissioncontroller.role.ui.wear.model.DefaultAppConfirmDialogViewModel
 import com.android.permissioncontroller.role.utils.RoleUiBehaviorUtils
@@ -78,17 +79,17 @@ class WearDefaultAppHelper(
                         onDefaultCheckChanged = { _ ->
                             run {
                                 val packageName = appInfo.packageName
-                                val confirmationMessage =
-                                    RoleUiBehaviorUtils.getConfirmationMessage(
+                                val confirmationDialogInfo =
+                                    RoleUiBehaviorUtils.getConfirmationDialogInfo(
                                         role,
                                         packageName,
                                         context,
                                     )
-                                if (confirmationMessage != null) {
+                                if (confirmationDialogInfo != null) {
                                     showConfirmDialog(
                                         packageName,
                                         user,
-                                        confirmationMessage.toString(),
+                                        confirmationDialogInfo,
                                     )
                                 } else {
                                     setDefaultApp(packageName, user)
@@ -113,10 +114,14 @@ class WearDefaultAppHelper(
             .toList()
     }
 
-    private fun showConfirmDialog(packageName: String, userHandle: UserHandle, message: String) {
+    private fun showConfirmDialog(
+        packageName: String,
+        userHandle: UserHandle,
+        info: ConfirmationDialogInfo
+    ) {
         confirmDialogViewModel.confirmDialogArgs =
             ConfirmDialogArgs(
-                message = message,
+                info = info,
                 onOkButtonClick = {
                     setDefaultApp(packageName, userHandle)
                     dismissConfirmDialog()

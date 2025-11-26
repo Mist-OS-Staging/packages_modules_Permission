@@ -150,7 +150,8 @@ private fun ConfirmDialog(
         WearPermissionConfirmationDialog(
             materialUIVersion = materialUIVersion,
             show = showDialog,
-            message = message,
+            title = info.title?.toString(),
+            message = info.message.toString(),
             positiveButtonContent = DialogButtonContent(onClick = onOkButtonClick),
             negativeButtonContent = DialogButtonContent(onClick = onCancelButtonClick),
         )

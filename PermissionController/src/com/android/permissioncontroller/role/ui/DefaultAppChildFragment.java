@@ -48,6 +48,7 @@ import com.android.permission.flags.Flags;
 import com.android.permissioncontroller.PermissionControllerStatsLog;
 import com.android.permissioncontroller.R;
 import com.android.permissioncontroller.permission.utils.Utils;
+import com.android.permissioncontroller.role.ui.behavior.ConfirmationDialogInfo;
 import com.android.permissioncontroller.role.utils.PackageUtils;
 import com.android.permissioncontroller.role.utils.RoleUiBehaviorUtils;
 import com.android.permissioncontroller.role.utils.SettingsCompat;
@@ -409,12 +410,12 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
             String packageName =
                     preference.getExtras().getString(PREFERENCE_EXTRA_PACKAGE_NAME);
             int uid = preference.getExtras().getInt(PREFERENCE_EXTRA_UID);
-            CharSequence confirmationMessage =
-                    RoleUiBehaviorUtils.getConfirmationMessage(mRole, packageName,
+            ConfirmationDialogInfo confirmationDialogInfo =
+                    RoleUiBehaviorUtils.getConfirmationDialogInfo(mRole, packageName,
                             requireContext());
-            if (confirmationMessage != null) {
+            if (confirmationDialogInfo != null) {
                 DefaultAppConfirmationDialogFragment.show(mRoleName, packageName, uid,
-                        confirmationMessage, this);
+                        confirmationDialogInfo, this);
             } else {
                 setDefaultApp(packageName, uid);
             }

@@ -19,6 +19,7 @@ package com.android.permissioncontroller.role.ui.behavior;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.UserHandle;
 import android.provider.Settings;
 
@@ -95,8 +96,20 @@ public class AssistantRoleUiBehavior implements RoleUiBehavior {
 
     @Nullable
     @Override
-    public CharSequence getConfirmationMessage(@NonNull Role role, @NonNull String packageName,
-            @NonNull Context context) {
-        return context.getString(R.string.assistant_confirmation_message);
+    public ConfirmationDialogInfo getConfirmationDialogInfo(@NonNull Role role,
+            @NonNull String packageName, @NonNull Context context) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.BAKLAVA &&
+                android.permission.flags.Flags.newDefaultAppConfirmationDialogEnabled()) {
+            return new ConfirmationDialogInfo(
+                    context.getString(R.string.assistant_confirmation_title_v37),
+                    context.getString(R.string.assistant_confirmation_message_v37),
+                    context.getString(R.string.default_app_confirmation_positive_button),
+                    context.getString(R.string.default_app_confirmation_negative_button), true);
+        } else {
+            return new ConfirmationDialogInfo(null,
+                    context.getString(R.string.assistant_confirmation_message),
+                    context.getString(android.R.string.ok),
+                    context.getString(android.R.string.cancel), true);
+        }
     }
 }
