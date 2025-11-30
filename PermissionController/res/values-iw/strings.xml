@@ -446,6 +446,8 @@
     <string name="default_app_none" msgid="9084592086808194457">"ללא"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(ברירת מחדל של המערכת)"</string>
     <string name="default_app_no_apps" msgid="115720991680586885">"אין אפליקציות"</string>
+    <string name="default_app_confirmation_positive_button" msgid="7870227561758833590">"שינוי"</string>
+    <string name="default_app_confirmation_negative_button" msgid="2564849389728106051">"שמירת האפליקציה הנוכחית"</string>
     <string name="default_payment_app_other_nfc_services" msgid="5957633798695758917">"‏שירותי NFC אחרים"</string>
     <string name="car_default_app_selected" msgid="5416420830430644174">"נבחרה"</string>
     <string name="car_default_app_selected_with_info" msgid="1932204186080593500">"נבחרה – <xliff:g id="ADDITIONAL_INFO">%1$s</xliff:g>"</string>
@@ -454,8 +456,12 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"אין גישה מיוחדת לאפליקציה"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"אין אפליקציות"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"לא תומכת בפרופיל עבודה"</string>
+    <string name="home_confirmation_title" msgid="5244574290223747640">"להחליף את ברירת המחדל של אפליקציית מסך הבית?"</string>
+    <string name="home_confirmation_message" msgid="248811491851505593">"‏הפעולה הזו תחליף את מסך הבית שלך, והיא יכולה להשפיע על הגישה לתכונות במכשיר.&lt;br&gt;&lt;br&gt;אפשר לשנות את הבחירה בכל שלב, בהגדרות של &lt;b&gt;אפליקציית מסך הבית שהגדרת כברירת מחדל&lt;/b&gt;."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"הערה: אם ביצעת הפעלה מחדש למכשיר ונעילת המסך מוגדרת, ניתן יהיה להפעיל את האפליקציה הזו רק לאחר ביטול נעילת המכשיר."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"האסיסטנט יוכל לקרוא מידע על אפליקציות שבהן נעשה שימוש במערכת שלך, כולל מידע המופיע במסך או שניתן לגשת אליו באפליקציות."</string>
+    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"לשנות את אפליקציית העוזר הדיגיטלי שמוגדרת כברירת מחדל?"</string>
+    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"העוזר הדיגיטלי יוכל לקרוא מידע על אפליקציות שנעשה בהן שימוש במערכת שלך."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"שיתוף נתונים של ניפוי באגים"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"לשתף נתונים מפורטים של ניפוי באגים?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"האפליקציה <xliff:g id="APP_NAME">%1$s</xliff:g> מבקשת להעלות נתונים של ניפוי באגים."</string>
@@ -737,10 +743,7 @@
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"אפליקציית העזרה שמוגדרת כברירת מחדל תוכל לגשת לתוכן המסך ולנתונים שהאפליקציה המוצגת משתפת"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"אישור"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"אין אישור"</string>
-    <!-- no translation found for assist_structure_setting_title (3448963992289353882) -->
-    <skip />
-    <!-- no translation found for assist_structure_setting_default_description (5286942439766192730) -->
-    <skip />
-    <!-- no translation found for assist_structure_setting_description (2865330212261060313) -->
-    <skip />
+    <string name="assist_structure_setting_title" msgid="3448963992289353882">"שימוש בהקשר למה שמופיע במסך ובאפליקציה"</string>
+    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"אפליקציית העזרה שהגדרת כברירת מחדל תוכל לגשת למסך ולנתונים שהאפליקציה המוצגת משתפת"</string>
+    <string name="assist_structure_setting_description" msgid="2865330212261060313">"אפליקציית <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> יכולה לגשת למסך ולנתונים שהאפליקציה המוצגת משתפת"</string>
 </resources>

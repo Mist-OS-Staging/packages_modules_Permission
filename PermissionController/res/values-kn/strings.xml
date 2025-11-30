@@ -446,6 +446,8 @@
     <string name="default_app_none" msgid="9084592086808194457">"ಯಾವುದೂ ಬೇಡ"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(ಸಿಸ್ಟಂ ಡಿಫಾಲ್ಟ್)"</string>
     <string name="default_app_no_apps" msgid="115720991680586885">"ಯಾವುದೇ ಆ್ಯಪ್‌ಗಳು ಇಲ್ಲ"</string>
+    <string name="default_app_confirmation_positive_button" msgid="7870227561758833590">"ಬದಲಿಸಿ"</string>
+    <string name="default_app_confirmation_negative_button" msgid="2564849389728106051">"ಪ್ರಸ್ತುತ ಫೋಟೋ ಇರಲಿ"</string>
     <string name="default_payment_app_other_nfc_services" msgid="5957633798695758917">"ಇತರ NFC ಸೇವೆಗಳು"</string>
     <string name="car_default_app_selected" msgid="5416420830430644174">"ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ"</string>
     <string name="car_default_app_selected_with_info" msgid="1932204186080593500">"<xliff:g id="ADDITIONAL_INFO">%1$s</xliff:g> - ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ"</string>
@@ -454,8 +456,12 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"ಆ್ಯಪ್‌ಗೆ ವಿಶೇಷ ಪ್ರವೇಶವಿಲ್ಲ"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"ಯಾವುದೇ ಆ್ಯಪ್‌ಗಳು ಇಲ್ಲ"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"ಉದ್ಯೋಗ ಪ್ರೊಫೈಲ್ ಅನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ"</string>
+    <string name="home_confirmation_title" msgid="5244574290223747640">"ಡೀಫಾಲ್ಟ್ ಹೋಮ್ ಆ್ಯಪ್ ಅನ್ನು ಬದಲಾಯಿಸಬೇಕೆ?"</string>
+    <string name="home_confirmation_message" msgid="248811491851505593">"ಇದು ನಿಮ್ಮ ಹೋಮ್ ಸ್ಕ್ರೀನ್ ಅನ್ನು ಬದಲಾಯಿಸುತ್ತದೆ ಮತ್ತು ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿನ ಫೀಚರ್‌ಗಳಿಗೆ ಆ್ಯಕ್ಸೆಸ್ ಅನ್ನು ಪರಿಣಾಮ ಬೀರಬಹುದು.&lt;br&gt;&lt;br&gt;ನೀವು &lt;b&gt;ಡೀಫಾಲ್ಟ್ ಹೋಮ್ ಆ್ಯಪ್&lt;/b&gt; ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಯಾವಾಗ ಬೇಕಾದರೂ ಈ ಆಯ್ಕೆಯನ್ನು ಬದಲಾಯಿಸಬಹುದು."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"ಗಮನಿಸಿ: ನೀವು ನಿಮ್ಮ ಸಾಧನವನ್ನು ಮರುಪ್ರಾರಂಭಿಸಿದಲ್ಲಿ ಮತ್ತು ಪರದೆಯ ಲಾಕ್‌ ಹೊಂದಿದ್ದರೆ, ನಿಮ್ಮ ಸಾಧನವನ್ನು ಅನ್‌ಲಾಕ್‌ ಮಾಡುವವರೆಗೂ ಈ ಆ್ಯಪ್‌ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"ನಿಮ್ಮ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ಗೋಚರಿಸುವ ಅಥವಾ ಆ್ಯಪ್‌ಗಳಲ್ಲಿಯೇ ಪ್ರವೇಶಿಸಬಹುದಾದಂತಹ ಮಾಹಿತಿ ಸೇರಿದಂತೆ, ನಿಮ್ಮ ಸಿಸ್ಟಂನಲ್ಲಿ ಬಳಕೆಯಲ್ಲಿರುವ ಆ್ಯಪ್‌ಗಳ ಕುರಿತ ಮಾಹಿತಿಯನ್ನು ಓದಲು ಸಹಾಯಕಕ್ಕೆ ಸಾಧ್ಯವಾಗುತ್ತದೆ."</string>
+    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"ಡೀಫಾಲ್ಟ್ ಡಿಜಿಟಲ್ ಅಸಿಸ್ಟೆಂಟ್ ಆ್ಯಪ್ ಅನ್ನು ಬದಲಾಯಿಸಬೇಕೇ?"</string>
+    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"ನಿಮ್ಮ ಸಿಸ್ಟಂನಲ್ಲಿ ಬಳಕೆಯಲ್ಲಿರುವ ಆ್ಯಪ್‌ಗಳ ಕುರಿತ ಮಾಹಿತಿಯನ್ನು ಓದಲು ಈ ಅಸಿಸ್ಟೆಂಟ್‌ಗೆ ಸಾಧ್ಯವಾಗುತ್ತದೆ."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"ಡೀಬಗ್ ಮಾಡುವಿಕೆ ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಿ"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"ವಿವರವಾದ ಡೀಬಗ್ ಮಾಡುವಿಕೆಯ ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಬೇಕೆ?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ಆ್ಯಪ್, ಡೀಬಗ್ ಮಾಡುವಿಕೆಯ ಮಾಹಿತಿಯನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಲು ಬಯಸುತ್ತದೆ."</string>
@@ -737,10 +743,7 @@
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"ಸ್ಕ್ರೀನ್ ಕಂಟೆಂಟ್, ಕಾಣಿಸುತ್ತಿರುವ ಆ್ಯಪ್ ಹಂಚಿಕೊಂಡ ಡೇಟಾ ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು ಡೀಫಾಲ್ಟ್ ಅಸಿಸ್ಟೆಂಟ್ ಆ್ಯಪ್‌ಗೆ ಅನುಮತಿಸಿ"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"ಅನುಮತಿಸಿ"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"ಅನುಮತಿಸಬೇಡಿ"</string>
-    <!-- no translation found for assist_structure_setting_title (3448963992289353882) -->
-    <skip />
-    <!-- no translation found for assist_structure_setting_default_description (5286942439766192730) -->
-    <skip />
-    <!-- no translation found for assist_structure_setting_description (2865330212261060313) -->
-    <skip />
+    <string name="assist_structure_setting_title" msgid="3448963992289353882">"ಸ್ಕ್ರೀನ್ ಮತ್ತು ಆ್ಯಪ್ ಕಂಟೆಕ್ಸ್ಟ್ ಅನ್ನು ಬಳಸಿ"</string>
+    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"ಗೋಚರಿಸುವ ಆ್ಯಪ್‌ನ ಸ್ಕ್ರೀನ್ ಮತ್ತು ಹಂಚಿಕೊಂಡ ಡೇಟಾವನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು ಡೀಫಾಲ್ಟ್ ಅಸಿಸ್ಟೆಂಟ್ ಆ್ಯಪ್‌ಗೆ ಅನುಮತಿಸಿ"</string>
+    <string name="assist_structure_setting_description" msgid="2865330212261060313">"ಗೋಚರಿಸುವ ಆ್ಯಪ್‌ನ ಸ್ಕ್ರೀನ್ ಮತ್ತು ಹಂಚಿಕೊಂಡ ಡೇಟಾವನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> ಗೆ ಅನುಮತಿಸಿ"</string>
 </resources>

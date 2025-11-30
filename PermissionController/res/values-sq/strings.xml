@@ -126,10 +126,8 @@
     <string name="message_staging" msgid="9110563899955511866">"Po vihet në përdorim aplikacioni..."</string>
     <string name="app_name_unknown" msgid="1319665005754048952">"I panjohur"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Paneli i privatësisë"</string>
-    <!-- no translation found for permission_usage_app_permissions_title (7238764049615371525) -->
-    <skip />
-    <!-- no translation found for permission_usage_agent_activity_title (8169150514365050522) -->
-    <skip />
+    <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Lejet e aplikacionit"</string>
+    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Aktiviteti i agjentit"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Shiko se cilat aplikacione kanë përdorur së fundi leje"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Përdorimi i lejeve: <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Shiko lejet e tjera"</string>
@@ -169,8 +167,7 @@
     <string name="permission_usage_preference_summary_not_used_in_past_n_days" msgid="4771868094611359651">"{count,plural, =1{Nuk është përdorur gjatë ditës së fundit}other{Nuk është përdorur gjatë # ditëve të fundit}}"</string>
     <string name="permission_usage_preference_summary_not_used_in_past_n_hours" msgid="3828973177433435742">"{count,plural, =1{Nuk është përdorur gjatë orës së fundit}other{Nuk është përdorur gjatë # orëve të fundit}}"</string>
     <string name="permission_usage_preference_label" msgid="8343167938128676378">"{count,plural, =1{Përdorur nga 1 aplikacion}other{Përdorur nga # aplikacione}}"</string>
-    <!-- no translation found for agent_usage_preference_label (3123976176446237103) -->
-    <skip />
+    <string name="agent_usage_preference_label" msgid="3123976176446237103">"{count,plural, =1{Është qasur në 1 aplikacion}other{Është qasur në # aplikacione}}"</string>
     <string name="permission_usage_view_details" msgid="6675335735468752787">"Shikoji të gjitha te \"Paneli\""</string>
     <string name="app_permission_usage_filter_label" msgid="7182861154638631550">"Filtruar sipas: <xliff:g id="PERM">%1$s</xliff:g>"</string>
     <string name="app_permission_usage_remove_filter" msgid="2926157607436428207">"Hiq filtrin"</string>
@@ -449,6 +446,10 @@
     <string name="default_app_none" msgid="9084592086808194457">"Asnjë"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(Parazgjedhja e sistemit)"</string>
     <string name="default_app_no_apps" msgid="115720991680586885">"Nuk ka aplikacione"</string>
+    <!-- no translation found for default_app_confirmation_positive_button (7870227561758833590) -->
+    <skip />
+    <!-- no translation found for default_app_confirmation_negative_button (2564849389728106051) -->
+    <skip />
     <string name="default_payment_app_other_nfc_services" msgid="5957633798695758917">"Shërbime të tjera të NFC-së"</string>
     <string name="car_default_app_selected" msgid="5416420830430644174">"Zgjedhur"</string>
     <string name="car_default_app_selected_with_info" msgid="1932204186080593500">"Zgjedhur - <xliff:g id="ADDITIONAL_INFO">%1$s</xliff:g>"</string>
@@ -457,8 +458,16 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"Jo qasje e veçantë aplikacioni"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"Nuk ka aplikacione"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"Profili i punës nuk mbështetet"</string>
+    <!-- no translation found for home_confirmation_title (5244574290223747640) -->
+    <skip />
+    <!-- no translation found for home_confirmation_message (248811491851505593) -->
+    <skip />
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Shënim: Nëse e rinis pajisjen dhe ke caktuar një kyçje të ekranit, ky aplikacion nuk mund të niset derisa ta shkyçësh pajisjen."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Asistenti do të jetë në gjendje të lexojë informacion rreth aplikacioneve në përdorim në sistemin tënd, duke përfshirë informacionin e dukshëm në ekran ose të qasshëm brenda aplikacioneve."</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (1700973760643407047) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (7518084182823372974) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Ndaj të dhënat e korrigjimit"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Të ndahen të dhënat e detajuara të korrigjimit?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> dëshiron të ngarkojë informacionin e korrigjimit."</string>
