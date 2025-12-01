@@ -59,6 +59,7 @@ import com.android.permissioncontroller.PermissionControllerApplication
 import com.android.permissioncontroller.permission.service.RuntimePermissionsUpgradeController
 import com.android.permissioncontroller.tests.mocking.permission.data.dataRepositories
 import java.util.concurrent.CompletableFuture
+import java.util.concurrent.TimeUnit
 import org.junit.After
 import org.junit.Assume
 import org.junit.Before
@@ -270,7 +271,7 @@ class RuntimePermissionsUpgradeControllerTest {
                 application,
                 Runnable { completionCallback.complete(Unit) },
             )
-            completionCallback.join()
+            completionCallback.get(30L, TimeUnit.SECONDS)
         }
     }
 
