@@ -16,7 +16,9 @@
 
 package com.android.permissioncontroller.role.ui;
 
+import android.app.AppOpsManager;
 import android.app.Application;
+import android.app.role.RoleManager;
 import android.content.Context;
 import android.os.UserHandle;
 import android.util.Log;
@@ -33,6 +35,7 @@ import com.android.permissioncontroller.role.utils.UserUtils;
 import com.android.role.controller.model.Role;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Predicate;
 
 /**
@@ -57,16 +60,22 @@ public class DefaultAppViewModel extends AndroidViewModel {
     private final ManageRoleHolderStateLiveData mManageRoleHolderStateLiveData =
             new ManageRoleHolderStateLiveData();
 
+    private final AppOpsManager mAppOpsManager;
+
     public DefaultAppViewModel(@NonNull Role role, @NonNull UserHandle user,
             @NonNull Application application) {
         super(application);
+
+        mAppOpsManager = application.getSystemService(AppOpsManager.class);
 
         mRole = role;
         // If EXCLUSIVITY_PROFILE_GROUP this user should be profile parent
         mUser = role.getExclusivity() == Role.EXCLUSIVITY_PROFILE_GROUP
                 ? UserUtils.getProfileParentOrSelf(user, application)
                 : user;
-        RoleLiveData userLiveData = new RoleLiveData(role, mUser, application);
+
+        RoleLiveData userLiveData = createRoleLiveData(role, mUser, application);
+
         RoleSortFunction sortFunction = new RoleSortFunction(application);
         LiveData<List<RoleApplicationItem>> liveData;
         if (role.getExclusivity() == Role.EXCLUSIVITY_PROFILE_GROUP) {
@@ -74,7 +83,7 @@ public class DefaultAppViewModel extends AndroidViewModel {
             // profile exists. getWorkProfile returns null if context user is work profile.
             UserHandle workProfile  = UserUtils.getWorkProfileOrSelf(application);
             if (workProfile != null) {
-                RoleLiveData workLiveData = new RoleLiveData(role, workProfile, application);
+                RoleLiveData workLiveData = createRoleLiveData(role, workProfile, application);
                 liveData = Transformations.map(new MergeRoleLiveData(userLiveData, workLiveData),
                         sortFunction);
             } else {
@@ -134,6 +143,26 @@ public class DefaultAppViewModel extends AndroidViewModel {
             return;
         }
         mManageRoleHolderStateLiveData.clearRoleHoldersAsUser(mRole.getName(), 0, user, context);
+    }
+
+    /** Sets assist structure enabled for specified application */
+    public void setAssistStructureSettingEnabled(RoleApplicationItem holderApplicationItem,
+            boolean enabled) {
+        // TODO: Clear previous record of denials
+        int appOpMode = enabled ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_IGNORED;
+        mAppOpsManager.setUidMode(AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
+                holderApplicationItem.getApplicationInfo().uid, appOpMode);
+    }
+
+    @NonNull
+    private RoleLiveData createRoleLiveData(@NonNull Role role, @NonNull UserHandle user,
+            @NonNull Application application) {
+        if (android.permission.flags.Flags.assistSettingsPrivacyImprovementsEnabled()
+                && Objects.equals(role.getName(), RoleManager.ROLE_ASSISTANT)) {
+            return new AssistantRoleLiveData(role, user, application);
+        } else {
+            return new RoleLiveData(role, user, application);
+        }
     }
 
     /**

@@ -16,6 +16,7 @@
 
 package com.android.permissioncontroller.appfunctions.data.repository
 
+import android.app.AppInteractionContract
 import android.app.Application
 import android.app.appfunctions.AppFunctionManager
 import android.app.appfunctions.AppFunctionManager.ACCESS_REQUEST_STATE_UNREQUESTABLE
@@ -24,6 +25,7 @@ import android.content.ContentResolver
 import android.content.Context
 import android.database.Cursor
 import android.net.Uri
+import android.os.Process
 import android.permission.flags.Flags
 import com.android.permissioncontroller.appfunctions.domain.model.v37.AccessHistory
 import java.util.concurrent.Executor
@@ -175,7 +177,7 @@ class AppFunctionRepositoryImpl(
     }
 
     override fun getAccessHistoryContentUri(): Uri =
-        appFunctionManager?.getAccessHistoryContentUri() ?: Uri.EMPTY
+        AppInteractionContract.getInteractionHistoryUriAsUser(Process.myUserHandle())
 
     override suspend fun getAccessHistory(context: Context): List<AccessHistory> {
         val uri = getAccessHistoryContentUri()
@@ -200,29 +202,17 @@ class AppFunctionRepositoryImpl(
         fun createAccessHistory(cursor: Cursor): AccessHistory =
             AccessHistory(
                 agentPackageName =
-                    cursor.requireStringOrThrow(
-                        AppFunctionManager.AccessHistory.COLUMN_AGENT_PACKAGE_NAME
-                    ),
+                    cursor.requireStringOrThrow(AppInteractionContract.COLUMN_AGENT_PACKAGE_NAME),
                 targetPackageName =
-                    cursor.requireStringOrThrow(
-                        AppFunctionManager.AccessHistory.COLUMN_TARGET_PACKAGE_NAME
-                    ),
+                    cursor.requireStringOrThrow(AppInteractionContract.COLUMN_TARGET_PACKAGE_NAME),
                 interactionType =
-                    cursor.getIntOrThrow(AppFunctionManager.AccessHistory.COLUMN_INTERACTION_TYPE),
+                    cursor.getIntOrThrow(AppInteractionContract.COLUMN_INTERACTION_TYPE),
                 customInteractionType =
-                    cursor.getStringOrThrow(
-                        AppFunctionManager.AccessHistory.COLUMN_CUSTOM_INTERACTION_TYPE
-                    ),
+                    cursor.getStringOrThrow(AppInteractionContract.COLUMN_CUSTOM_INTERACTION_TYPE),
                 interactionUri =
-                    cursor.getStringOrThrow(
-                        AppFunctionManager.AccessHistory.COLUMN_INTERACTION_URI
-                    ),
-                threadId =
-                    cursor.getStringOrThrow(AppFunctionManager.AccessHistory.COLUMN_THREAD_ID),
-                accessTime =
-                    cursor.requireLongOrThrow(AppFunctionManager.AccessHistory.COLUMN_ACCESS_TIME),
-                duration =
-                    cursor.requireLongOrThrow(AppFunctionManager.AccessHistory.COLUMN_DURATION),
+                    cursor.getStringOrThrow(AppInteractionContract.COLUMN_INTERACTION_URI),
+                accessTime = cursor.requireLongOrThrow(AppInteractionContract.COLUMN_ACCESS_TIME),
+                duration = cursor.requireLongOrThrow(AppInteractionContract.COLUMN_DURATION),
             )
     }
 }

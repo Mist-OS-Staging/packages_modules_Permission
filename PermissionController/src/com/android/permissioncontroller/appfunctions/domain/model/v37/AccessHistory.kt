@@ -24,7 +24,6 @@ package com.android.permissioncontroller.appfunctions.domain.model.v37
  * @param interactionType The type of interaction that triggered the function call
  * @param customInteractionType The custom interaction type
  * @param interactionUri A URI linking to the original interaction context
- * @param threadId An identifier to group related function calls
  * @param accessTime The timestamp (in milliseconds) when the app function was accessed
  * @param duration The duration (in milliseconds) of the app function execution
  */
@@ -34,7 +33,6 @@ data class AccessHistory(
     val interactionType: Int?,
     val customInteractionType: String?,
     val interactionUri: String?,
-    val threadId: String?,
     val accessTime: Long,
     val duration: Long,
 )

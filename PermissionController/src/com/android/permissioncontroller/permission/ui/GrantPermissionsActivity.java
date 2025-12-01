@@ -24,7 +24,6 @@ import static android.view.WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM;
 import static android.view.WindowManager.LayoutParams.SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS;
 
 import static com.android.permissioncontroller.Constants.EXTRA_IS_ECM_IN_APP;
-import static com.android.permissioncontroller.flags.Flags.grantActivityPauseHandover;
 import static com.android.permissioncontroller.permission.ui.GrantPermissionsViewHandler.CANCELED;
 import static com.android.permissioncontroller.permission.ui.GrantPermissionsViewHandler.DENIED;
 import static com.android.permissioncontroller.permission.ui.GrantPermissionsViewHandler.DENIED_DO_NOT_ASK_AGAIN;
@@ -672,10 +671,6 @@ public class GrantPermissionsActivity extends FragmentActivity
     @Override
     public void onPause() {
         super.onPause();
-        if (!grantActivityPauseHandover()) {
-            return;
-        }
-
         synchronized (sCurrentGrantRequests) {
             for (GrantPermissionsActivity follower: mFollowerActivities) {
                 if (follower.getLifecycle().getCurrentState() == Lifecycle.State.RESUMED) {

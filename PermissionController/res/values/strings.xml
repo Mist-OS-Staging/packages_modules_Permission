@@ -1357,6 +1357,12 @@
     <!-- Label when there are no apps available for a default app [CHAR LIMIT=30] -->
     <string name="default_app_no_apps">No apps</string>
 
+    <!-- Dialog positive button text for warning about implications of changing a default app, displayed when the user selects an app as default. [CHAR LIMIT=20] [SCREENSHOT=screen/4wJyeY6r53KvJfz] -->
+    <string name="default_app_confirmation_positive_button">Change</string>
+
+    <!-- Dialog negative button text for warning about implications of changing a default app, displayed when the user selects an app as default. [CHAR LIMIT=20] [SCREENSHOT=screen/4wJyeY6r53KvJfz] -->
+    <string name="default_app_confirmation_negative_button">Keep current</string>
+
     <!-- Title for preference item that will open a screen to manage other NFC services [CHAR LIMIT=50] -->
     <string name="default_payment_app_other_nfc_services">Other NFC services</string>
 
@@ -1384,11 +1390,23 @@
     <!-- Summary indicating that a home app is missing work profile support [CHAR LIMIT=60] -->
     <string name="home_missing_work_profile_support">Doesn\u2019t support work profile</string>
 
+    <!-- Dialog title for warning about implications of changing the default home app, displayed when the user selects a home app as default. The home app here is a generic concept and can be any home app. [CHAR LIMIT=NONE] [SCREENSHOT=screen/4wJyeY6r53KvJfz] -->
+    <string name="home_confirmation_title">Change default home app?</string>
+
+    <!-- Dialog message for warning about implications of changing the default home app, displayed when the user selects a home app as default. The home app here is a generic concept and can be any home app. [CHAR LIMIT=NONE] [SCREENSHOT=screen/4wJyeY6r53KvJfz] -->
+    <string name="home_confirmation_message">This will replace your home screen and may affect access to features on your device.&lt;br>&lt;br>You can change this selection anytime in &lt;b>Default home app&lt;/b> settings.</string>
+
     <!-- Dialog message explaining that the app just selected by the user will not work after a reboot until the user enters their credentials, such as a PIN or password. [CHAR LIMIT=NONE] -->
     <string name="encryption_unaware_confirmation_message">Note: If you restart your device and have a screen lock set, this app can\u2019t start until you unlock your device.</string>
 
     <!-- Dialog message warning about security implications of setting an assistant, displayed when the user selects an assistant. The assitant app here is a generic concept and can be any assistant app. [CHAR LIMIT=NONE] -->
     <string name="assistant_confirmation_message">The assistant will be able to read information about apps in use on your system, including information visible on your screen or accessible within the apps.</string>
+
+    <!-- Dialog title for warning about implications of changing the default digital assistant app, displayed when the user selects a digital assistant app as default. The digital assistant app here is a generic concept and can be any digital assistant app. [CHAR LIMIT=NONE] [SCREENSHOT=screen/8WjJDQmXdL8dAVn] -->
+    <string name="assistant_confirmation_title_v37">Change default digital assistant app?</string>
+
+    <!-- Dialog message for warning about implications of changing the default digital assistant app, displayed when the user selects an assistant as default. The digital assistant app here is a generic concept and can be any digital assistant app. [CHAR LIMIT=NONE] [SCREENSHOT=screen/8WjJDQmXdL8dAVn] -->
+    <string name="assistant_confirmation_message_v37">This assistant will be able to read information about apps in use on your system.</string>
 
     <!-- Name for the notification channel for incident / bug report confirmation. Appears in
     Settings.
@@ -2178,4 +2196,15 @@
     <string name="request_assist_structure_dialog_button_dont_allow">Don\u2019t allow</string>
 
     <!-- END REQUEST ASSIST STRUCTURE DIALOG -->
+
+    <!-- START ASSIST STRUCTURE SETTINGS  -->
+
+    <!-- Label for the title of request assist structure dialog [CHAR LIMIT=60]-->
+    <string name="assist_structure_setting_title">Use screen and app context</string>
+    <!-- Label for the description of request assist structure dialog [CHAR LIMIT=150]-->
+    <string name="assist_structure_setting_default_description">Allow the default assistant app to access the screen and data shared by the visible app</string>
+    <!-- Label for the description of request assist structure dialog [CHAR LIMIT=150]-->
+    <string name="assist_structure_setting_description">Allow <xliff:g id="assistant_app_name" example="Example Assistant App">%1$s</xliff:g> to access the screen and data shared by the visible app</string>
+
+    <!-- END ASSIST STRUCTURE SETTINGS  -->
 </resources>
