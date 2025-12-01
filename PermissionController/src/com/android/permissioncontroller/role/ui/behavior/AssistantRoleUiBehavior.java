@@ -45,9 +45,14 @@ public class AssistantRoleUiBehavior implements RoleUiBehavior {
     @Override
     public Intent getManageIntentAsUser(@NonNull Role role, @NonNull UserHandle user,
             @NonNull Context context) {
-        boolean isAutomotive =
-                context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE);
+        PackageManager packageManager = context.getPackageManager();
+        boolean isAutomotive = packageManager.hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE);
         if (isAutomotive) {
+            return null;
+        }
+        if (android.permission.flags.Flags.assistSettingsPrivacyImprovementsEnabled()
+                && !packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK)
+                && !packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)) {
             return null;
         }
         return new Intent(Settings.ACTION_VOICE_INPUT_SETTINGS);
