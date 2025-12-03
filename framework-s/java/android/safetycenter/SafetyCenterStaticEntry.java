@@ -25,6 +25,7 @@ import android.annotation.NonNull;
 import android.annotation.Nullable;
 import android.annotation.SystemApi;
 import android.app.PendingIntent;
+import android.app.compat.CompatChanges;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.UserHandle;
@@ -58,7 +59,9 @@ public final class SafetyCenterStaticEntry implements Parcelable {
                         String safetySourceId = in.readString();
                         UserHandle user = in.readTypedObject(UserHandle.CREATOR);
                         if (safetySourceId == null || user == null) {
-                            builder = new SafetyCenterStaticEntry.Builder(title);
+                            builder =
+                                    new SafetyCenterStaticEntry.Builder(
+                                            title, /* checkTargetSdk= */ false);
                         } else {
                             builder =
                                     new SafetyCenterStaticEntry.Builder(
@@ -205,12 +208,32 @@ public final class SafetyCenterStaticEntry implements Parcelable {
          * Creates a {@link Builder} for a {@link SafetyCenterStaticEntry}.
          *
          * @param title a title that describes this static entry
+         * @throws UnsupportedOperationException If the target SDK version of the app is above or
+         *     equal to Android C
          * @deprecated Use the builder with the {@code safetySourceId} and {@code user} fields
          *     instead.
          */
         @FlaggedApi(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
         @Deprecated
         public Builder(@NonNull CharSequence title) {
+            this(title, /* checkTargetSdk= */ true);
+        }
+
+        /**
+         * Creates a {@link Builder} for a {@link SafetyCenterStaticEntry}.
+         *
+         * @param checkTargetSdk whether to check for the target SDK level
+         * @throws UnsupportedOperationException If the target SDK version of the app is above or
+         *     equal to Android C, when the {@code checkTargetSdk} argument is true
+         */
+        private Builder(@NonNull CharSequence title, boolean checkTargetSdk) {
+            if (checkTargetSdk
+                    && Flags.openSafetyCenterApis()
+                    && CompatChanges.isChangeEnabled(
+                            SafetyCenterManager.RESTRICT_DEPRECATED_DATA_BUILDER_CONSTRUCTORS)) {
+                throw new UnsupportedOperationException(
+                        "Deprecated constructor no longer accessible.");
+            }
             mTitle = requireNonNull(title);
         }
 
