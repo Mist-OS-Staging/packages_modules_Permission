@@ -1333,6 +1333,10 @@ class SafetyCenterManagerTest {
             SINGLE_SOURCE_ID,
             SafetySourceErrorDetails(EVENT_SOURCE_STATE_CHANGED),
         )
+        val expectedEntry =
+            SafetyCenterEntry.Builder(safetyCenterTestData.safetyCenterEntryError(SINGLE_SOURCE_ID))
+                .setHasError(true)
+                .build()
         val expectedSafetyCenterData =
             SafetyCenterData(
                 safetyCenterTestData.safetyCenterStatusUnknown,
@@ -1340,7 +1344,7 @@ class SafetyCenterManagerTest {
                 listOf(
                     safetyCenterTestData.singletonSafetyCenterEntryOrGroup(
                         SINGLE_SOURCE_GROUP_ID,
-                        safetyCenterTestData.safetyCenterEntryError(SINGLE_SOURCE_ID),
+                        expectedEntry,
                         "Couldn’t check setting",
                     )
                 ),

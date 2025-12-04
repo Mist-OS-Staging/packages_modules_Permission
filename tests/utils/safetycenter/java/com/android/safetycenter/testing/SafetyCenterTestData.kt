@@ -23,7 +23,6 @@ import android.os.Build.VERSION_CODES.TIRAMISU
 import android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE
 import android.os.Bundle
 import android.os.UserHandle
-import android.permission.flags.Flags
 import android.safetycenter.SafetyCenterData
 import android.safetycenter.SafetyCenterEntry
 import android.safetycenter.SafetyCenterEntry.ENTRY_SEVERITY_LEVEL_CRITICAL_WARNING
@@ -221,14 +220,7 @@ class SafetyCenterTestData(context: Context) {
      * and title.
      */
     fun safetyCenterEntryError(sourceId: String) =
-        safetyCenterEntryDefaultBuilder(sourceId)
-            .apply {
-                setSummary(getRefreshErrorString(1))
-                if (Flags.openSafetyCenterApis()) {
-                    setHasError(true)
-                }
-            }
-            .build()
+        safetyCenterEntryDefaultBuilder(sourceId).setSummary(getRefreshErrorString(1)).build()
 
     /**
      * Returns a disabled [SafetyCenterEntry] with a grey icon (for unspecified severity), a
