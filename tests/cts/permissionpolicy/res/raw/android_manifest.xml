@@ -8647,7 +8647,7 @@
         android:label="@string/permlab_postPromotedNotifications"
         android:description="@string/permdesc_postPromotedNotifications"
         android:protectionLevel="normal|appop"
-        tools:ignore="PlatformPermissionWithoutFlag"/>
+        android:featureFlag="android.app.api_rich_ongoing_permission" />
 
     <!-- @SystemApi Required for the privileged assistant apps targeting
          {@link android.os.Build.VERSION_CODES#VANILLA_ICE_CREAM}
