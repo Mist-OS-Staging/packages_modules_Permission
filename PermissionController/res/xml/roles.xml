@@ -86,6 +86,10 @@
         <permission name="android.permission.BLUETOOTH_CONNECT" minSdkVersion="31" />
         <permission name="android.permission.BLUETOOTH_SCAN" minSdkVersion="31" />
         <permission name="android.permission.NEARBY_WIFI_DEVICES" minSdkVersion="33" />
+        <permission
+            name="android.permission.ACCESS_LOCAL_NETWORK"
+            minSdkVersion="36"
+            featureFlag="android.permission.flags.Flags.accessLocalNetworkPermissionEnabled" />
     </permission-set>
 
     <permission-set name="notifications">
