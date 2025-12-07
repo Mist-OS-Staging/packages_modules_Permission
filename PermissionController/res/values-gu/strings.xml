@@ -346,7 +346,7 @@
     <string name="app_perms_7d_access_all_files" msgid="8246193786397635824">"છેલ્લે <xliff:g id="TIME_DATE_0">%1$s</xliff:g>ના રોજ <xliff:g id="TIME_DATE_1">%2$s</xliff:g> વાગ્યે ઍક્સેસ કરી • બધી ફાઇલો"</string>
     <string name="app_perms_content_provider_24h_all_files" msgid="573104317727770850">"છેલ્લા 24 કલાકમાં ઍક્સેસ કરી • બધી ફાઇલો"</string>
     <string name="app_perms_content_provider_7d_all_files" msgid="7962416229708835558">"છેલ્લા 7 દિવસમાં ઍક્સેસ કરી • બધી ફાઇલો"</string>
-    <string name="no_permissions_allowed" msgid="6081976856354669209">"કોઈ પરવાનગીઓની મંજૂરી નથી"</string>
+    <string name="no_permissions_allowed" msgid="6081976856354669209">"કોઈ પરવાનગીની મંજૂરી નથી"</string>
     <string name="no_permissions_denied" msgid="8159923922804043282">"કોઈ પરવાનગીઓ નકારવામાં આવી નથી"</string>
     <string name="no_apps_allowed" msgid="7718822655254468631">"કોઈ ઍપની મંજૂરી નથી"</string>
     <string name="no_apps_allowed_full" msgid="8011716991498934104">"બધી ફાઇલો માટે કોઈ ઍપની મંજૂરી નથી"</string>

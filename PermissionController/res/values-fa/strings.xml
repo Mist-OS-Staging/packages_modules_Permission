@@ -33,7 +33,7 @@
     <string name="grant_dialog_button_no_upgrade" msgid="8344732743633736625">"تغییر ندادن اجازه «هنگامی که از برنامه استفاده می‌شود»"</string>
     <string name="grant_dialog_button_no_upgrade_one_time" msgid="5125892775684968694">"«فقط این بار» نگه داشته شود"</string>
     <string name="grant_dialog_button_more_info" msgid="213350268561945193">"اطلاعات بیشتر"</string>
-    <string name="grant_dialog_button_allow_all" msgid="5939066403732409516">"مجاز بودن همه"</string>
+    <string name="grant_dialog_button_allow_all" msgid="5939066403732409516">"اجازه دادن همه"</string>
     <string name="grant_dialog_button_always_allow_all" msgid="1719900027660252167">"همه موارد همیشه مجازاند"</string>
     <string name="grant_dialog_button_allow_limited_access" msgid="5713551784422137594">"مجاز کردن دسترسی محدود"</string>
     <string name="grant_dialog_button_allow_selected_photos" msgid="5497042471576153842">"انتخاب عکس و ویدیو"</string>
@@ -446,10 +446,8 @@
     <string name="default_app_none" msgid="9084592086808194457">"هیچ‌کدام"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(پیش‌فرض سیستم)"</string>
     <string name="default_app_no_apps" msgid="115720991680586885">"برنامه‌ای موجود نیست"</string>
-    <!-- no translation found for default_app_confirmation_positive_button (7870227561758833590) -->
-    <skip />
-    <!-- no translation found for default_app_confirmation_negative_button (2564849389728106051) -->
-    <skip />
+    <string name="default_app_confirmation_positive_button" msgid="7870227561758833590">"تغییر دادن"</string>
+    <string name="default_app_confirmation_negative_button" msgid="2564849389728106051">"حفظ برنامه فعلی"</string>
     <string name="default_payment_app_other_nfc_services" msgid="5957633798695758917">"‏دیگر سرویس‌های NFC"</string>
     <string name="car_default_app_selected" msgid="5416420830430644174">"انتخاب شد"</string>
     <string name="car_default_app_selected_with_info" msgid="1932204186080593500">"انتخاب‌شده - <xliff:g id="ADDITIONAL_INFO">%1$s</xliff:g>"</string>
@@ -458,16 +456,12 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"دسترسی ویژه برنامه وجود ندارد"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"برنامه‌ای موجود نیست"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"از نمایه کاری پشتیبانی نمی‌کند"</string>
-    <!-- no translation found for home_confirmation_title (5244574290223747640) -->
-    <skip />
-    <!-- no translation found for home_confirmation_message (248811491851505593) -->
-    <skip />
+    <string name="home_confirmation_title" msgid="5244574290223747640">"برنامه صفحه اصلی پیش‌فرض را تغییر می‌دهید؟"</string>
+    <string name="home_confirmation_message" msgid="248811491851505593">"‏با این کار، صفحه اصلی جایگزین خواهد شد و ممکن است بر دسترسی به ویژگی‌های دستگاهتان تأثیر بگذارد.&lt;br&gt;&lt;br&gt;همیشه می‌توانید این انتخاب را در تنظیمات &lt;b&gt;برنامه صفحه اصلی پیش‌فرض&lt;/b&gt; تغییر دهید."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"توجه: اگر دستگاهتان را بازراه‌اندازی کنید و قفل صفحه تنظیم کرده باشید، تا قفل تلفن را باز نکنید، این برنامه نمی‌تواند شروع به کار کند."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"دستیار می‌تواند اطلاعات مربوط به برنامه‌های درحال استفاده در سیستم شما را بخواند، ازجمله اطلاعاتی که در صفحه‌نمایش شما قابل‌مشاهده است یا در برنامه‌ها قابل‌دسترسی است."</string>
-    <!-- no translation found for assistant_confirmation_title_v37 (1700973760643407047) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_v37 (7518084182823372974) -->
-    <skip />
+    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"برنامه دستیار دیجیتال پیش‌فرض را تغییر می‌دهید؟"</string>
+    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"این دستیار می‌تواند اطلاعات مربوط به برنامه‌های درحال استفاده در سیستم شما را بخواند."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"هم‌رسانی داده‌های اشکال‌زدایی"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"جزئیات داده‌های اشکال‌زدایی هم‌رسانی شود؟"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> می‌خواهد اطلاعات اشکال‌زدایی را بارگذاری کند."</string>
@@ -749,10 +743,7 @@
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"به برنامه دستیار پیش‌فرض اجازه داده می‌شود به محتوای صفحه‌نمایش و داده‌های هم‌رسانی‌شده توسط برنامه نمایان دسترسی داشته باشد"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"اجازه دادن"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"اجازه ندادن"</string>
-    <!-- no translation found for assist_structure_setting_title (3448963992289353882) -->
-    <skip />
-    <!-- no translation found for assist_structure_setting_default_description (5286942439766192730) -->
-    <skip />
-    <!-- no translation found for assist_structure_setting_description (2865330212261060313) -->
-    <skip />
+    <string name="assist_structure_setting_title" msgid="3448963992289353882">"استفاده کردن از بافت صفحه و برنامه"</string>
+    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"به برنامه دستیار پیش‌فرض اجازه داده می‌شود به صفحه‌نمایش و داده‌های هم‌رسانی‌شده توسط برنامه نمایان دسترسی داشته باشد"</string>
+    <string name="assist_structure_setting_description" msgid="2865330212261060313">"به <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> اجازه داده می‌شود به صفحه‌نمایش و داده‌های هم‌رسانی‌شده توسط برنامه نمایان دسترسی داشته باشد"</string>
 </resources>
