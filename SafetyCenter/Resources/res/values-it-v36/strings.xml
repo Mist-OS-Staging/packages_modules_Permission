@@ -17,10 +17,6 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- no translation found for app_function_access_settings_title (3894819108224606683) -->
-    <skip />
-    <!-- no translation found for app_function_access_settings_summary (2719347800336419237) -->
-    <skip />
     <string name="face_unlock_title" msgid="3991635517593572926">"Volto"</string>
     <string name="face_unlock_title_for_work" msgid="1451170625947022012">"Volto per lavoro"</string>
     <string name="face_unlock_title_for_private_profile" msgid="2758692637409168420"></string>
