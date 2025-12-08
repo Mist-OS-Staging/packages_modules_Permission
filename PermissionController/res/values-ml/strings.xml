@@ -446,6 +446,8 @@
     <string name="default_app_none" msgid="9084592086808194457">"ഒന്നുമില്ല"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(സിസ്‌റ്റം ഡിഫോൾട്ട്)"</string>
     <string name="default_app_no_apps" msgid="115720991680586885">"ആപ്പുകൾ ഒന്നുമില്ല"</string>
+    <string name="default_app_confirmation_positive_button" msgid="7870227561758833590">"മാറ്റുക"</string>
+    <string name="default_app_confirmation_negative_button" msgid="2564849389728106051">"നിലവിലുള്ളതിൽ തുടരുക"</string>
     <string name="default_payment_app_other_nfc_services" msgid="5957633798695758917">"മറ്റ് NFC സേവനങ്ങൾ"</string>
     <string name="car_default_app_selected" msgid="5416420830430644174">"തിരഞ്ഞെടുത്തു"</string>
     <string name="car_default_app_selected_with_info" msgid="1932204186080593500">"<xliff:g id="ADDITIONAL_INFO">%1$s</xliff:g> - തിരഞ്ഞെടുത്തു"</string>
@@ -454,8 +456,12 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"പ്രത്യേക ആപ്പ് ആക്‌സസില്ല"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"ആപ്പുകൾ ലഭ്യമല്ല"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"ഔദ്യോഗിക പ്രൊഫൈലിനെ പിന്തുണയ്‌ക്കുന്നില്ല"</string>
+    <string name="home_confirmation_title" msgid="5244574290223747640">"ഡിഫോൾട്ട് ഹോം ആപ്പ് മാറ്റണോ?"</string>
+    <string name="home_confirmation_message" msgid="248811491851505593">"ഇത് നിങ്ങളുടെ ഹോം സ്ക്രീൻ റീപ്ലെയ്‌സ് ചെയ്യും, നിങ്ങളുടെ ഉപകരണത്തിലെ ഫീച്ചറുകളിലേക്കുള്ള ആക്സസിനെ ഇത് ബാധിച്ചേക്കാം.&lt;br&gt;&lt;br&gt;&lt;b&gt;ഡിഫോൾട്ട് ഹോം ആപ്പ്&lt;/b&gt; ക്രമീകരണത്തിൽ നിങ്ങൾക്ക് എപ്പോൾ വേണമെങ്കിലും ഈ തിരഞ്ഞെടുപ്പ് മാറ്റാം."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"ശ്രദ്ധിക്കുക: നിങ്ങളുടെ ഉപകരണം റീസ്‌റ്റാർട്ട് ചെയ്‌ത്, സ്‌ക്രീൻ ലോക്ക് സജ്ജീകരിച്ചിട്ടുണ്ടെങ്കിൽ, നിങ്ങളുടെ ഉപകരണം അൺലോക്ക് ചെയ്യുന്നത് വരെ ഈ ആപ്പ് ആരംഭിക്കാനാവില്ല."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"നിങ്ങളുടെ സ്ക്രീനിൽ ദൃശ്യമാകുന്നതോ ആപ്പുകൾക്കുള്ളിൽ ആക്‌സസ് ചെയ്യാവുന്നതോ ആയ വിവരങ്ങൾ ഉൾപ്പെടെ, നിങ്ങളുടെ സിസ്‌റ്റത്തിൽ ഉപയോഗത്തിലുള്ള ആപ്പുകളെ കുറിച്ചുള്ള വിവരങ്ങൾ വായിക്കാൻ അസിസ്‌റ്റൻ്റിനാവും."</string>
+    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"ഡിഫോൾട്ട് ഡിജിറ്റൽ അസിസ്‌റ്റന്റ് ആപ്പ് മാറ്റണോ?"</string>
+    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"നിങ്ങളുടെ സിസ്റ്റത്തിൽ ഉപയോഗത്തിലുള്ള ആപ്പുകളെ കുറിച്ചുള്ള വിവരങ്ങൾ വായിക്കാൻ ഈ അസിസ്റ്റന്റിന് കഴിയും."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"ഡീബഗ്ഗ് ചെയ്യൽ ഡാറ്റ പങ്കിടുക"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"വിശദമായ ഡീബഗ്ഗ് ചെയ്യൽ വിവരങ്ങൾ പങ്കിടണോ?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"ഡീബഗ്ഗ് ചെയ്യൽ വിവരങ്ങൾ അപ്‌ലോഡ് ചെയ്യാൻ <xliff:g id="APP_NAME">%1$s</xliff:g> താൽപ്പര്യപ്പെടുന്നു."</string>
@@ -737,10 +743,7 @@
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"സ്ക്രീൻ ഉള്ളടക്കവും ദൃശ്യമായ ആപ്പ് പങ്കിട്ട ഡാറ്റയും ആക്സസ് ചെയ്യാൻ ഡിഫോൾട്ട് സഹായ ആപ്പിനെ അനുവദിക്കൂ"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"അനുവദിക്കുക"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"അനുവദിക്കരുത്"</string>
-    <!-- no translation found for assist_structure_setting_title (3448963992289353882) -->
-    <skip />
-    <!-- no translation found for assist_structure_setting_default_description (5286942439766192730) -->
-    <skip />
-    <!-- no translation found for assist_structure_setting_description (2865330212261060313) -->
-    <skip />
+    <string name="assist_structure_setting_title" msgid="3448963992289353882">"സ്ക്രീനും ആപ്പ് കോൺടെക്സ്റ്റും ഉപയോഗിക്കുക"</string>
+    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"ദൃശ്യമായ ആപ്പിന്റെ സ്ക്രീനും പങ്കിട്ട ഡാറ്റയും ആക്സസ് ചെയ്യാൻ ഡിഫോൾട്ട് അസിസ്റ്റന്റ് ആപ്പിനെ അനുവദിക്കുക"</string>
+    <string name="assist_structure_setting_description" msgid="2865330212261060313">"ദൃശ്യമായ ആപ്പിന്റെ സ്ക്രീനും പങ്കിട്ട ഡാറ്റയും ആക്സസ് ചെയ്യാൻ <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> എന്നതിനെ അനുവദിക്കുക"</string>
 </resources>

@@ -5867,10 +5867,34 @@
     <permission android:name="android.permission.INJECT_EVENTS"
         android:protectionLevel="signature" />
 
+    <!-- @SystemApi Allows privileged applications to inject key events into the event stream by
+         creating a virtual keyboard. Key events may be delivered to ANY window. Allows for
+         arbitrary keycode injections (e.g. AKEYCODE_BRIGHTNESS_UP) and modifier events
+         (e.g. META_META_ON + AKEYCODE_L).
+         <p>Not for use by third-party applications.
+         @hide
+         @FlaggedApi(com.android.hardware.input.Flags.FLAG_CREATE_VIRTUAL_KEYBOARD_API)
+    -->
+    <permission android:name="android.permission.INJECT_KEY_EVENTS"
+        android:protectionLevel="signature|privileged"
+        android:featureFlag="com.android.hardware.input.create_virtual_keyboard_api" />
+
     <!-- @hide Allows an application to register an input filter which filters the stream
          of user events (keys, touch, trackball) before they are dispatched to any window. -->
     <permission android:name="android.permission.FILTER_EVENTS"
         android:protectionLevel="signature" />
+
+    <!-- @SystemApi Allows privileged applications to inject key events into the event stream by
+         creating a virtual keyboard. Key events may be delivered to ANY window. Allows for
+         arbitrary keycode injections (e.g. AKEYCODE_BRIGHTNESS_UP) and modifier events
+         (e.g. META_META_ON + AKEYCODE_L).
+         <p>Not for use by third-party applications.
+         @hide
+         @FlaggedApi(com.android.hardware.input.Flags.FLAG_CREATE_VIRTUAL_KEYBOARD_API)
+    -->
+    <permission android:name="android.permission.INJECT_KEY_EVENTS"
+        android:protectionLevel="signature|privileged"
+        android:featureFlag="com.android.hardware.input.create_virtual_keyboard_api" />
 
     <!-- @hide Allows an application to retrieve the window token from the accessibility manager. -->
     <permission android:name="android.permission.RETRIEVE_WINDOW_TOKEN"
@@ -6121,6 +6145,17 @@
     -->
     <permission android:name="android.permission.MANAGE_HOTWORD_DETECTION"
                 android:protectionLevel="internal|preinstalled" />
+
+    <!-- @SystemApi Allows an app to manage AiSeal Virtual Machine.
+         {@see android.aiseal.AiSealManager}
+         <p>Protection level: signature|privileged
+         @FlaggedApi(android.aiseal.Flags.FLAG_AISEAL_HOST_APIS)
+         @SystemApi
+         @hide
+    -->
+    <permission android:name="android.permission.MANAGE_AISEAL_VIRTUAL_MACHINE"
+        android:protectionLevel="signature|privileged"
+        android:featureFlag="android.aiseal.aiseal_host_apis" />
 
     <!-- @SystemApi Must be required by a {@link android.service.voice.VisualQueryDetectionService},
          to ensure that only the system can bind to it.
@@ -8612,7 +8647,7 @@
         android:label="@string/permlab_postPromotedNotifications"
         android:description="@string/permdesc_postPromotedNotifications"
         android:protectionLevel="normal|appop"
-        tools:ignore="PlatformPermissionWithoutFlag"/>
+        android:featureFlag="android.app.api_rich_ongoing_permission" />
 
     <!-- @SystemApi Required for the privileged assistant apps targeting
          {@link android.os.Build.VERSION_CODES#VANILLA_ICE_CREAM}
@@ -9244,15 +9279,15 @@
 
 
     <!-- @SystemApi Allows an app to bind the on-device intelligence service.
-             <p>Protection level: signature|privileged
+             <p>Protection level: signature
              @hide
         -->
     <permission android:name="android.permission.BIND_ON_DEVICE_INTELLIGENCE_SERVICE"
-        android:protectionLevel="signature|privileged" />
+        android:protectionLevel="signature" />
 
 
     <!-- @SystemApi Allows an app to bind the on-device sandboxed service.
-             <p>Protection level: signature|privileged
+             <p>Protection level: signature
              @hide
         -->
     <permission android:name="android.permission.BIND_ON_DEVICE_SANDBOXED_INFERENCE_SERVICE"
@@ -9740,32 +9775,6 @@
     <permission android:name="android.permission.SET_CONTENT_PROTECTION_ALLOWLIST"
         android:protectionLevel="signature|role"
         android:featureFlag="android.view.contentprotection.flags.set_content_protection_allowlist_enabled" />
-
-    <!-- @FlaggedApi(com.android.internal.telephony.flags.Flags.FLAG_GUARD_IDENTIFIER_AND_NETWORK_COUNTRY_APIS)
-        Purpose guarded permission to query subscriber ID API.
-        {@link android.telephony.TelephonyManager}
-        <p>Protection level: normal
-    -->
-    <permission android:name="android.permission.QUERY_NETWORK_IDENTIFIERS"
-            android:protectionLevel="normal"
-            android:featureFlag="com.android.internal.telephony.flags.guard_identifier_and_network_country_apis"
-            android:requiresPurpose="true"
-            android:requiresPurposeTargetSdkVersion="37">
-            <valid-purpose android:name="notForIdentification" />
-    </permission>
-
-    <!-- @FlaggedApi(com.android.internal.telephony.flags.Flags.FLAG_GUARD_IDENTIFIER_AND_NETWORK_COUNTRY_APIS)
-            Purpose guarded permission to query network country ISO API.
-            {@link android.telephony.TelephonyManager}
-            <p>Protection level: normal
-    -->
-    <permission android:name="android.permission.QUERY_NETWORK_COUNTRY"
-            android:protectionLevel="normal"
-            android:featureFlag="com.android.internal.telephony.flags.guard_identifier_and_network_country_apis"
-            android:requiresPurpose="true"
-            android:requiresPurposeTargetSdkVersion="37">
-            <valid-purpose android:name="notForIdentification" />
-    </permission>
 
     <!-- Allows an application to access npu model manager api.
          <p>Protection level: signature|privileged

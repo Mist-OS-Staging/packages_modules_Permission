@@ -30,6 +30,7 @@ import android.annotation.Nullable;
 import android.annotation.SuppressLint;
 import android.annotation.SystemApi;
 import android.app.PendingIntent;
+import android.app.compat.CompatChanges;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.UserHandle;
@@ -120,7 +121,7 @@ public final class SafetyCenterIssue implements Parcelable {
                                             issueTypeId,
                                             safetySourceIssueId);
                         } else {
-                            builder = new Builder(id, title, summary);
+                            builder = new Builder(id, title, summary, /* checkTargetSdk= */ false);
                         }
                     } else {
                         builder = new Builder(id, title, summary);
@@ -442,6 +443,8 @@ public final class SafetyCenterIssue implements Parcelable {
          * @param id a unique encoded string ID, see {@link #getId()} for details
          * @param title a title that describes this issue
          * @param summary a summary of this issue
+         * @throws UnsupportedOperationException If the target SDK version of the app is above or
+         *     equal to Android C
          * @deprecated Use {@link #Builder(String, CharSequence, CharSequence, UserHandle, Set,
          *     String, String)} instead.
          */
@@ -449,6 +452,28 @@ public final class SafetyCenterIssue implements Parcelable {
         @Deprecated
         public Builder(
                 @NonNull String id, @NonNull CharSequence title, @NonNull CharSequence summary) {
+            this(id, title, summary, /* checkTargetSdk= */ true);
+        }
+
+        /**
+         * Creates a {@link SafetyCenterIssue.Builder} for a {@link SafetyCenterIssue}.
+         *
+         * @param checkTargetSdk whether to check for the target SDK level
+         * @throws UnsupportedOperationException If the target SDK version of the app is above or
+         *     equal to Android C, when the {@code checkTargetSdk} argument is true
+         */
+        private Builder(
+                @NonNull String id,
+                @NonNull CharSequence title,
+                @NonNull CharSequence summary,
+                boolean checkTargetSdk) {
+            if (checkTargetSdk
+                    && Flags.openSafetyCenterApis()
+                    && CompatChanges.isChangeEnabled(
+                            SafetyCenterManager.RESTRICT_DEPRECATED_DATA_BUILDER_CONSTRUCTORS)) {
+                throw new UnsupportedOperationException(
+                        "Deprecated constructor no longer accessible.");
+            }
             mId = requireNonNull(id);
             mTitle = requireNonNull(title);
             mSummary = requireNonNull(summary);

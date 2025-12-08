@@ -20,8 +20,11 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.Build.VERSION_CODES
+import android.os.Build.VERSION_CODES.BAKLAVA
+import android.os.Build.VERSION_CODES.VANILLA_ICE_CREAM
 import android.os.UserHandle
 import android.permission.flags.Flags
+import android.platform.test.annotations.RequiresFlagsDisabled
 import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import android.safetycenter.SafetyCenterStaticEntry
@@ -157,6 +160,33 @@ class SafetyCenterStaticEntryTest {
         assertThat(staticEntry1).recreatesEqual(SafetyCenterStaticEntry.CREATOR)
         assertThat(staticEntry2).recreatesEqual(SafetyCenterStaticEntry.CREATOR)
         assertThat(staticEntryMinimal).recreatesEqual(SafetyCenterStaticEntry.CREATOR)
+    }
+
+    @Test
+    @SdkSuppress(minSdkVersion = BAKLAVA)
+    @RequiresFlagsDisabled(Flags.FLAG_OPEN_SAFETY_CENTER_APIS)
+    @ApiTest(
+        apis =
+            [
+                "android.safetycenter.SafetyCenterStaticEntry#writeToParcel",
+                "android.safetycenter.SafetyCenterStaticEntry#CREATOR",
+            ]
+    )
+    fun parcelRoundTrip_forSimpleBuilderConstructor_onBPlus_recreatesEqual() {
+        assertThat(SafetyCenterStaticEntry.Builder("").build())
+            .recreatesEqual(SafetyCenterStaticEntry.CREATOR)
+    }
+
+    @Test
+    @SdkSuppress(maxSdkVersion = VANILLA_ICE_CREAM)
+    @ApiTest(
+        apis =
+            [
+                "android.safetycenter.SafetyCenterStaticEntry#writeToParcel",
+                "android.safetycenter.SafetyCenterStaticEntry#CREATOR",
+            ]
+    )
+    fun parcelRoundTrip_forSimpleBuilderConstructor_recreatesEqual() {
         assertThat(SafetyCenterStaticEntry.Builder("").build())
             .recreatesEqual(SafetyCenterStaticEntry.CREATOR)
     }
@@ -228,7 +258,6 @@ class SafetyCenterStaticEntryTest {
                     .setSafetySourceId("source_id")
                     .build(),
             )
-            .addEqualityGroup(SafetyCenterStaticEntry.Builder("").build())
             .test()
     }
 

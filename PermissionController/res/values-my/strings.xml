@@ -446,6 +446,10 @@
     <string name="default_app_none" msgid="9084592086808194457">"မရှိ"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(စနစ်မူရင်း)"</string>
     <string name="default_app_no_apps" msgid="115720991680586885">"အက်ပ် မရှိပါ"</string>
+    <!-- no translation found for default_app_confirmation_positive_button (7870227561758833590) -->
+    <skip />
+    <!-- no translation found for default_app_confirmation_negative_button (2564849389728106051) -->
+    <skip />
     <string name="default_payment_app_other_nfc_services" msgid="5957633798695758917">"အခြား NFC ဝန်ဆောင်မှုများ"</string>
     <string name="car_default_app_selected" msgid="5416420830430644174">"ရွေးထားသည်"</string>
     <string name="car_default_app_selected_with_info" msgid="1932204186080593500">"ရွေးထားသည် - <xliff:g id="ADDITIONAL_INFO">%1$s</xliff:g>"</string>
@@ -454,8 +458,16 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"အထူးအက်ပ်များ သုံးခွင့်မရှိပါ"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"အက်ပ် မရှိပါ"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"အလုပ်ပရိုဖိုင်ကို မပံ့ပိုးပါ"</string>
+    <!-- no translation found for home_confirmation_title (5244574290223747640) -->
+    <skip />
+    <!-- no translation found for home_confirmation_message (248811491851505593) -->
+    <skip />
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"မှတ်ချက်- သင်၏စက်ပစ္စည်းကို ပြန်လည်စတင်ပြီး မျက်နှာပြင်လော့ခ်ချထားလျှင် ၎င်းကို လော့ခ်မဖွင့်မချင်း ဤအက်ပ်ကို အသုံးပြု၍မရပါ။"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"ဤ assistant သည် သင်၏ မျက်နှာပြင်ပေါ်တွင် မြင်ရသည့် သို့မဟုတ် အက်ပ်များအတွင်း ရယူအသုံးပြုနိုင်သည့် အချက်အလက်များအပါအဝင် သင်၏ စနစ်ထဲတွင် အသုံးပြုနေသည့် အက်ပ်များနှင့် ပတ်သက်သည့် အချက်အလက်များကို ဖတ်ရှုနိုင်မည်ဖြစ်သည်။"</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (1700973760643407047) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (7518084182823372974) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"အမှားရှာပြင်သည့် ဒေတာ မျှဝေခြင်း"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"အမှားရှာပြင်သည့် ဒေတာ အသေးစိတ်ကို မျှဝေလိုသလား။"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> က အမှားရှာပြင်သည့် အချက်အလက်ကို အပ်လုဒ်လုပ်လိုသည်။"</string>

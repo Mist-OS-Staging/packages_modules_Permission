@@ -39,6 +39,10 @@ rule android.security.*FeatureFlags* com.android.permission.jarjar.@0
 rule android.security.FeatureFlags* com.android.permission.jarjar.@0
 rule android.security.FeatureFlags com.android.permission.jarjar.@0
 rule android.security.Flags com.android.permission.jarjar.@0
+rule android.telecom.flags.*FeatureFlags* com.android.permission.jarjar.@0
+rule android.telecom.flags.FeatureFlags* com.android.permission.jarjar.@0
+rule android.telecom.flags.FeatureFlags com.android.permission.jarjar.@0
+rule android.telecom.flags.Flags com.android.permission.jarjar.@0
 rule android.util.IndentingPrintWriter com.android.permission.jarjar.@0
 rule android.view.contentprotection.flags.*FeatureFlags* com.android.permission.jarjar.@0
 rule android.view.contentprotection.flags.FeatureFlags* com.android.permission.jarjar.@0
