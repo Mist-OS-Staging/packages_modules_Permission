@@ -18,6 +18,7 @@ package android.app.role.cts
 import android.app.AppOpsManager
 import android.app.role.RoleManager
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Process
 import android.os.UserHandle
@@ -60,6 +61,10 @@ class DefaultAssistantActivityTest {
 
     @Before
     fun setup() {
+        val packageManager = context.packageManager
+        Assume.assumeFalse(packageManager.hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE))
+        Assume.assumeFalse(packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK))
+        Assume.assumeFalse(packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH))
         Assume.assumeTrue(RoleManagerUtil.isCddCompliantScreenSize())
         saveRoleHolder()
         installPackage(APP_APK_PATH)
