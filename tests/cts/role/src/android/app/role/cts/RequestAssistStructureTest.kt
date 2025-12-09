@@ -20,6 +20,7 @@ import android.app.AppOpsManager
 import android.app.role.RoleManager
 import android.content.ComponentName
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Process
 import android.os.UserHandle
@@ -39,6 +40,7 @@ import com.android.compatibility.common.util.SystemUtil
 import com.android.compatibility.common.util.UiAutomatorUtils2
 import com.google.common.truth.Truth
 import org.junit.After
+import org.junit.Assume.assumeFalse
 import org.junit.Assume.assumeTrue
 import org.junit.Before
 import org.junit.Rule
@@ -65,6 +67,10 @@ class RequestAssistStructureTest {
 
     @Before
     fun setUp() {
+        val packageManager = context.packageManager
+        assumeFalse(packageManager.hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE))
+        assumeFalse(packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK))
+        assumeFalse(packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH))
         assumeTrue(RoleManagerUtil.isCddCompliantScreenSize())
         saveRoleHolder()
         installPackage(APP_APK_PATH)
