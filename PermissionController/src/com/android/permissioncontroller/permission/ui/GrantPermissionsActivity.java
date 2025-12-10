@@ -671,6 +671,9 @@ public class GrantPermissionsActivity extends FragmentActivity
     @Override
     public void onPause() {
         super.onPause();
+        if (isFinishing()) {
+            return;
+        }
         synchronized (sCurrentGrantRequests) {
             for (GrantPermissionsActivity follower: mFollowerActivities) {
                 if (follower.getLifecycle().getCurrentState() == Lifecycle.State.RESUMED) {
@@ -678,6 +681,7 @@ public class GrantPermissionsActivity extends FragmentActivity
                     // activities is resumed. That means that activity needs to be made the leader
                     follower.mDelegated = false;
                     follower.onNewFollowerActivityLocked(this, mRequestedPermissions, true);
+                    sCurrentGrantRequests.put(follower.mKey, follower);
                     mViewModel.getRequestInfosLiveData()
                             .observe(follower, follower::onRequestInfoLoad);
                     if (!mViewModel.getRequestInfosLiveData().isStale()) {
