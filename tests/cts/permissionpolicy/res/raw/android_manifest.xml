@@ -2395,9 +2395,10 @@
                 android:featureFlag="android.bluetooth.platform.flags.grant_permission_via_module_protection_level"
                 android:protectionLevel="signature|role|module" />
 
-    <!-- @hide Allows applications to register a NetworkAgent for its own use.
+    <!-- @SystemApi @hide Allows applications to register a NetworkAgent for its own use.
          <p>Such networks are not available to other applications on the device unless they have
          the CONNECTIVITY_USE_RESTRICTED_NETWORKS permission.
+         @FlaggedApi(android.net.platform.flags.Flags.FLAG_MAKE_APP_SPECIFIC_NETWORK_PERMISSION_API)
     -->
     <permission android:name="android.permission.CREATE_APP_SPECIFIC_NETWORK"
                 android:protectionLevel="signature|privileged"
@@ -5883,18 +5884,6 @@
          of user events (keys, touch, trackball) before they are dispatched to any window. -->
     <permission android:name="android.permission.FILTER_EVENTS"
         android:protectionLevel="signature" />
-
-    <!-- @SystemApi Allows privileged applications to inject key events into the event stream by
-         creating a virtual keyboard. Key events may be delivered to ANY window. Allows for
-         arbitrary keycode injections (e.g. AKEYCODE_BRIGHTNESS_UP) and modifier events
-         (e.g. META_META_ON + AKEYCODE_L).
-         <p>Not for use by third-party applications.
-         @hide
-         @FlaggedApi(com.android.hardware.input.Flags.FLAG_CREATE_VIRTUAL_KEYBOARD_API)
-    -->
-    <permission android:name="android.permission.INJECT_KEY_EVENTS"
-        android:protectionLevel="signature|privileged"
-        android:featureFlag="com.android.hardware.input.create_virtual_keyboard_api" />
 
     <!-- @hide Allows an application to retrieve the window token from the accessibility manager. -->
     <permission android:name="android.permission.RETRIEVE_WINDOW_TOKEN"

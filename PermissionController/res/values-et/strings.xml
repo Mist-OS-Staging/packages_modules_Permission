@@ -446,10 +446,8 @@
     <string name="default_app_none" msgid="9084592086808194457">"Puudub"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(Süsteemi vaikeseade)"</string>
     <string name="default_app_no_apps" msgid="115720991680586885">"Rakendusi pole"</string>
-    <!-- no translation found for default_app_confirmation_positive_button (7870227561758833590) -->
-    <skip />
-    <!-- no translation found for default_app_confirmation_negative_button (2564849389728106051) -->
-    <skip />
+    <string name="default_app_confirmation_positive_button" msgid="7870227561758833590">"Muuda"</string>
+    <string name="default_app_confirmation_negative_button" msgid="2564849389728106051">"Kasuta praegust"</string>
     <string name="default_payment_app_other_nfc_services" msgid="5957633798695758917">"Muud NFC teenused"</string>
     <string name="car_default_app_selected" msgid="5416420830430644174">"Valitud"</string>
     <string name="car_default_app_selected_with_info" msgid="1932204186080593500">"Valitud – <xliff:g id="ADDITIONAL_INFO">%1$s</xliff:g>"</string>
@@ -458,16 +456,12 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"Rakenduse erijuurdepääs puudub"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"Rakendusi pole"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"Ei toeta tööprofiili"</string>
-    <!-- no translation found for home_confirmation_title (5244574290223747640) -->
-    <skip />
-    <!-- no translation found for home_confirmation_message (248811491851505593) -->
-    <skip />
+    <string name="home_confirmation_title" msgid="5244574290223747640">"Kas soovite muuta avakuva vaikerakendust?"</string>
+    <string name="home_confirmation_message" msgid="248811491851505593">"See asendab teie avakuva ja võib mõjutada juurdepääsu teie seadme funktsioonidele.&lt;br&gt;&lt;br&gt;Saate seda valikut igal ajal muuta &lt;b&gt;avakuva vaikerakenduse&lt;/b&gt; seadetes."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Märkus Kui taaskäivitate seadme ja olete määranud ekraaniluku, ei saa see rakendus käivituda enne, kui oma seadme avate."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Assistent saab teie süsteemis kasutatavate rakenduste kohta teavet (sh teie ekraanil kuvatud või rakendustes juurdepääsetavat teavet) lugeda."</string>
-    <!-- no translation found for assistant_confirmation_title_v37 (1700973760643407047) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_v37 (7518084182823372974) -->
-    <skip />
+    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"Kas soovite muuta digitaalse assistendi vaikerakendust?"</string>
+    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"See assistent saab teie süsteemis kasutatavate rakenduste kohta teavet lugeda."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Silumisandmete jagamine"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Kas jagada üksikasjalikke silumisandmeid?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> soovib üles laadida silumisteavet."</string>
@@ -749,10 +743,7 @@
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Andke assistendi vaikerakendusele juurdepääs kuvasisule ja nähtava rakenduse jagatud andmetele."</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Luba"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Ära luba"</string>
-    <!-- no translation found for assist_structure_setting_title (3448963992289353882) -->
-    <skip />
-    <!-- no translation found for assist_structure_setting_default_description (5286942439766192730) -->
-    <skip />
-    <!-- no translation found for assist_structure_setting_description (2865330212261060313) -->
-    <skip />
+    <string name="assist_structure_setting_title" msgid="3448963992289353882">"Ekraanikuva ja rakenduse konteksti kasutamine"</string>
+    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Andke assistendi vaikerakendusele juurdepääs ekraanikuvale ja nähtava rakenduse jagatud andmetele."</string>
+    <string name="assist_structure_setting_description" msgid="2865330212261060313">"Kas lubada rakendusel <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> pääseda juurde ekraanikuvale ja nähtava rakenduse jagatud andmetele?"</string>
 </resources>

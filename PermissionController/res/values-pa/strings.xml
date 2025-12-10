@@ -446,10 +446,8 @@
     <string name="default_app_none" msgid="9084592086808194457">"ਕੋਈ ਨਹੀਂ"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(ਸਿਸਟਮ ਪੂਰਵ-ਨਿਰਧਾਰਿਤ)"</string>
     <string name="default_app_no_apps" msgid="115720991680586885">"ਕੋਈ ਐਪਾਂ ਨਹੀਂ"</string>
-    <!-- no translation found for default_app_confirmation_positive_button (7870227561758833590) -->
-    <skip />
-    <!-- no translation found for default_app_confirmation_negative_button (2564849389728106051) -->
-    <skip />
+    <string name="default_app_confirmation_positive_button" msgid="7870227561758833590">"ਬਦਲੋ"</string>
+    <string name="default_app_confirmation_negative_button" msgid="2564849389728106051">"ਮੌਜੂਦਾ ਐਪ ਰੱਖੋ"</string>
     <string name="default_payment_app_other_nfc_services" msgid="5957633798695758917">"ਹੋਰ NFC ਸੇਵਾਵਾਂ"</string>
     <string name="car_default_app_selected" msgid="5416420830430644174">"ਚੁਣੀ ਗਈ"</string>
     <string name="car_default_app_selected_with_info" msgid="1932204186080593500">"ਚੁਣੀ ਗਈ - <xliff:g id="ADDITIONAL_INFO">%1$s</xliff:g>"</string>
@@ -458,16 +456,12 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"ਕੋਈ ਵਿਸ਼ੇਸ਼ ਐਪ ਪਹੁੰਚ ਨਹੀਂ"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"ਕੋਈ ਐਪਾਂ ਨਹੀਂ"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"ਕਾਰਜ ਪ੍ਰੋਫਾਈਲ ਦੀ ਸੁਵਿਧਾ ਨਹੀਂ ਹੈ"</string>
-    <!-- no translation found for home_confirmation_title (5244574290223747640) -->
-    <skip />
-    <!-- no translation found for home_confirmation_message (248811491851505593) -->
-    <skip />
+    <string name="home_confirmation_title" msgid="5244574290223747640">"ਕੀ ਪੂਰਵ-ਨਿਰਧਾਰਿਤ ਹੋਮ ਐਪ ਨੂੰ ਬਦਲਣਾ ਹੈ?"</string>
+    <string name="home_confirmation_message" msgid="248811491851505593">"ਇਸ ਨਾਲ ਤੁਹਾਡੀ ਹੋਮ ਸਕ੍ਰੀਨ ਬਦਲ ਜਾਵੇਗੀ ਅਤੇ ਤੁਹਾਡੇ ਡੀਵਾਈਸ \'ਤੇ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਤੱਕ ਪਹੁੰਚ ਪ੍ਰਭਾਵਿਤ ਹੋ ਸਕਦੀ ਹੈ।&lt;br&gt;&lt;br&gt;ਤੁਸੀਂ ਕਿਸੇ ਵੀ ਵੇਲੇ &lt;b&gt;ਪੂਰਵ-ਨਿਰਧਾਰਿਤ ਹੋਮ ਐਪ&lt;/b&gt; ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਜਾ ਕੇ ਇਸ ਚੋਣ ਨੂੰ ਬਦਲ ਸਕਦੇ ਹੋ।"</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"ਨੋਟ-ਕਥਨ: ਜੇਕਰ ਤੁਸੀਂ ਆਪਣੇ ਡੀਵਾਈਸ ਨੂੰ ਮੁੜ-ਸ਼ੁਰੂ ਕਰਦੇ ਹੋ ਅਤੇ ਸਕ੍ਰੀਨ ਲਾਕ ਸੈੱਟ ਕੀਤਾ ਹੋਇਆ ਹੈ, ਤਾਂ ਇਹ ਐਪਾ ਤੁਹਾਡੇ ਵੱਲੋਂ ਆਪਣੇ ਡੀਵਾਈਸ ਨੂੰ ਅਣਲਾਕ ਕੀਤੇ ਨਾ ਹੋਣ ਤੱਕ ਸ਼ੁਰੂ ਨਹੀਂ ਹੋਵੇਗੀ।"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"ਸਹਾਇਕ ਐਪ ਤੁਹਾਡੀ ਸਕ੍ਰੀਨ \'ਤੇ ਦਿਸਣਯੋਗ ਜਾਂ ਐਪਾਂ ਵਿੱਚ ਪਹੁੰਚਯੋਗ ਜਾਣਕਾਰੀ ਸਮੇਤ ਤੁਹਾਡੇ ਸਿਸਟਮ \'ਤੇ ਵਰਤੋਂ ਵਿੱਚ ਐਪਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਪੜ੍ਹ ਸਕੇਗੀ।"</string>
-    <!-- no translation found for assistant_confirmation_title_v37 (1700973760643407047) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_v37 (7518084182823372974) -->
-    <skip />
+    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"ਕੀ ਪੂਰਵ-ਨਿਰਧਾਰਿਤ ਡਿਜੀਟਲ ਸਹਾਇਕ ਐਪ ਨੂੰ ਬਦਲਣਾ ਹੈ?"</string>
+    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"ਇਹ ਸਹਾਇਕ ਤੁਹਾਡੇ ਸਿਸਟਮ \'ਤੇ ਵਰਤੋਂ ਵਿੱਚ ਐਪਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਪੜ੍ਹ ਸਕੇਗੀ।"</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"ਡੀਬੱਗਿੰਗ ਡਾਟਾ ਸਾਂਝਾ ਕਰੋ"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"ਕੀ ਵੇਰਵੇ ਸਮੇਤ ਡੀਬੱਗਿੰਗ ਡਾਟਾ ਸਾਂਝਾ ਕਰਨਾ ਹੈ?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ਡੀਬੱਗਿੰਗ ਜਾਣਕਾਰੀ ਨੂੰ ਅੱਪਲੋਡ ਕਰਨਾ ਚਾਹੁੰਦੀ ਹੈ।"</string>
@@ -749,10 +743,7 @@
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"ਪੂਰਵ-ਨਿਰਧਾਰਿਤ ਸਹਾਇਕ ਐਪ ਨੂੰ ਸਕ੍ਰੀਨ ਸਮੱਗਰੀ ਅਤੇ ਦਿਖਣਯੋਗ ਐਪ ਵੱਲੋਂ ਸਾਂਝੇ ਕੀਤੇ ਡਾਟੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦਿਓ"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"ਆਗਿਆ ਦਿਓ"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"ਆਗਿਆ ਨਾ ਦਿਓ"</string>
-    <!-- no translation found for assist_structure_setting_title (3448963992289353882) -->
-    <skip />
-    <!-- no translation found for assist_structure_setting_default_description (5286942439766192730) -->
-    <skip />
-    <!-- no translation found for assist_structure_setting_description (2865330212261060313) -->
-    <skip />
+    <string name="assist_structure_setting_title" msgid="3448963992289353882">"ਸਕ੍ਰੀਨ ਅਤੇ ਐਪ ਸੰਦਰਭ ਦੀ ਵਰਤੋਂ ਕਰੋ"</string>
+    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"ਪੂਰਵ-ਨਿਰਧਾਰਿਤ ਸਹਾਇਕ ਐਪ ਨੂੰ ਸਕ੍ਰੀਨ ਅਤੇ ਦਿਖਣਯੋਗ ਐਪ ਵੱਲੋਂ ਸਾਂਝੇ ਕੀਤੇ ਡਾਟੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦਿਓ"</string>
+    <string name="assist_structure_setting_description" msgid="2865330212261060313">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> ਨੂੰ ਸਕ੍ਰੀਨ ਅਤੇ ਦਿਖਣਯੋਗ ਐਪ ਵੱਲੋਂ ਸਾਂਝੇ ਕੀਤੇ ਡਾਟੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦਿਓ"</string>
 </resources>
