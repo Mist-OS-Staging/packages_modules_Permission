@@ -5524,7 +5524,15 @@
     <!-- Permissions for XR perception data   -->
     <!-- ==================================== -->
     <eat-comment />
+    <!-- Used for permissions that are associated with accessing
+         sensitive XR eye tracking data. -->
 
+         @FlaggedApi(android.xr.Flags.FLAG_XR_MANIFEST_ENTRIES) -->
+    <permission-group android:name="android.permission-group.XR_EYE_SENSITIVE"
+                      android:label="@string/permgrouplab_xr_eye_sensitive"
+                      android:description="@string/permgroupdesc_xr_eye_sensitive"
+                      android:priority="100"
+                      android:featureFlag="android.xr.xr_manifest_entries" />
     <!-- Used for permissions that are associated with accessing XR
          tracked information about the person using the device and the
          environment around them.
