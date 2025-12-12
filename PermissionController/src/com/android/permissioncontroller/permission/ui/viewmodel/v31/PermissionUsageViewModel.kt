@@ -210,11 +210,11 @@ class PermissionUsageViewModel(
 
     private val permissionGroupLabels = mutableMapOf<String, String>()
 
-    fun getPermissionGroupLabel(context: Context, permissionGroup: String): String {
+    fun getPermissionGroupLabel(permissionGroup: String): String {
         return runBlocking(coroutineScope.coroutineContext + Dispatchers.Default) {
             permissionGroupLabels.getOrDefault(
                 permissionGroup,
-                permissionRepository.getPermissionGroupLabel(context, permissionGroup).toString(),
+                permissionRepository.getPermissionGroupLabel(permissionGroup).toString(),
             )
         }
     }
