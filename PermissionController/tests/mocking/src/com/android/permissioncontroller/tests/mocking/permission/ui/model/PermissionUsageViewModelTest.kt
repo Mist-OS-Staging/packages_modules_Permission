@@ -58,7 +58,8 @@ import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.TestScope
 import kotlinx.coroutines.test.runTest
 import org.junit.After
-import org.junit.Assume
+import org.junit.Assume.assumeFalse
+import org.junit.Assume.assumeTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -86,7 +87,7 @@ class PermissionUsageViewModelTest {
 
     @Before
     fun setup() {
-        Assume.assumeTrue(SdkLevel.isAtLeastS())
+        assumeTrue(SdkLevel.isAtLeastS())
         MockitoAnnotations.initMocks(this)
         mockitoSession =
             ExtendedMockito.mockitoSession()
@@ -264,9 +265,10 @@ class PermissionUsageViewModelTest {
     @Test
     @RequiresFlagsEnabled(
         Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED,
-        FLAG_APP_FUNCTION_ACCESS_API_ENABLED,
+        FLAG_ENABLE_APP_INTERACTION_API,
     )
     fun verifyAgentUsagesAreShownForPast24Hours() = runTest {
+        assumeFalse(isTv() || isAutomotive() || isWatch())
         val now = System.currentTimeMillis()
         val accessHistory =
             listOf(
@@ -309,9 +311,10 @@ class PermissionUsageViewModelTest {
     @Test
     @RequiresFlagsEnabled(
         Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED,
-        FLAG_APP_FUNCTION_ACCESS_API_ENABLED,
+        FLAG_ENABLE_APP_INTERACTION_API,
     )
     fun verifyAgentUsagesAreShownForPast7Days() = runTest {
+        assumeFalse(isTv() || isAutomotive() || isWatch())
         val now = System.currentTimeMillis()
         val accessHistory =
             listOf(
@@ -426,6 +429,15 @@ class PermissionUsageViewModelTest {
         applicationFlags: Int = 0,
     ) = PackageInfoModel(packageName, requestedPermissions, permissionsFlags, applicationFlags)
 
+    private fun isTv(): Boolean =
+        context.packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK)
+
+    private fun isAutomotive(): Boolean =
+        context.packageManager.hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE)
+
+    private fun isWatch(): Boolean =
+        context.packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)
+
     companion object {
         private val CAMERA_PERMISSION = android.Manifest.permission.CAMERA
         private val RECORD_AUDIO_PERMISSION = android.Manifest.permission.RECORD_AUDIO
@@ -440,7 +452,7 @@ class PermissionUsageViewModelTest {
 
         // Flag lib changes has caused issues with jarjar and now annotations require the jarjar
         // package prepended to the flag string
-        const val FLAG_APP_FUNCTION_ACCESS_API_ENABLED =
+        const val FLAG_ENABLE_APP_INTERACTION_API =
             "com.android.permissioncontroller.jarjar.${android.app.appfunctions.flags.Flags.FLAG_ENABLE_APP_INTERACTION_API}"
     }
 }

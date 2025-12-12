@@ -479,6 +479,19 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="com.android.permissioncontroller.role.ui.v37.AssistantSettingsActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:featureFlag="android.permission.flags.assist_settings_privacy_improvements_enabled"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter android:priority="2">
+                <action android:name="android.settings.VOICE_INPUT_SETTINGS" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <activity android:name="com.android.permissioncontroller.role.ui.HomeSettingsActivity"
                   android:excludeFromRecents="true"
                   android:noHistory="true"

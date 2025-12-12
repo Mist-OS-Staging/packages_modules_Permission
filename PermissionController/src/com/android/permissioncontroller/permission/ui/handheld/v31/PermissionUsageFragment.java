@@ -290,7 +290,7 @@ public class PermissionUsageFragment extends SettingsWithLargeHeader {
                 .thenComparing((Map.Entry<String, Integer> permissionGroupWithUsageCount) ->
                         mViewModel.getPermissionGroupLabel(
                                 context, permissionGroupWithUsageCount.getKey())));
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.BAKLAVA) {
+        if (AppFunctionsUtil.isPrivacyDashboardAgentActivityEnabled(context)) {
             appFunctionAgentAccessCountEntries.sort(Comparator.comparing(
                     (Map.Entry<String, Integer> entry) ->
                             mViewModel.getAppFunctionAgentLabel(context, entry.getKey())
@@ -317,9 +317,10 @@ public class PermissionUsageFragment extends SettingsWithLargeHeader {
         mGraphic.setShowOtherCategory(mOtherExpanded);
 
         // Add the preference category for agent activity
-        PreferenceCategory agentsCategory = new PreferenceCategory(context);
-        agentsCategory.setTitle(R.string.permission_usage_agent_activity_title);
+        PreferenceCategory agentsCategory = null;
         if (AppFunctionsUtil.isPrivacyDashboardAgentActivityEnabled(context)) {
+            agentsCategory = new PreferenceCategory(context);
+            agentsCategory.setTitle(R.string.permission_usage_agent_activity_title);
             screen.addPreference(agentsCategory);
         }
 
@@ -334,7 +335,13 @@ public class PermissionUsageFragment extends SettingsWithLargeHeader {
         );
     }
 
-    /** Add preferences for permission usages. */
+    /**
+     * Add preferences for permission usages.
+     *
+     * @param agentsCategory The PreferenceCategory for agents. If this is null, it indicates that
+     *                       the gating feature flag is disabled and we shouldn't attempt to add
+     *                       preferences to this category.
+     */
     private void addUiContent(
             Context context,
             List<Map.Entry<String, Integer>> permissionGroupWithUsageCountEntries,
@@ -368,30 +375,32 @@ public class PermissionUsageFragment extends SettingsWithLargeHeader {
         mExpandButton.setVisible(!mOtherExpanded);
         permissionsCategory.addPreference(mExpandButton);
 
-        for (int i = 0; i < appFunctionAgentAccessCountEntries.size(); i++) {
-            Map.Entry<String, Integer> agentUsageEntry =
-                    appFunctionAgentAccessCountEntries.get(i);
-            Preference agentUsagePreference = new Preference(context);
-            agentUsagePreference.setIcon(
-                    KotlinUtils.INSTANCE.getBadgedPackageIcon(
-                            getActivity().getApplication(),
-                            agentUsageEntry.getKey(),
-                            Process.myUserHandle()
-                    )
-            );
-            agentUsagePreference.setTitle(
-                    KotlinUtils.INSTANCE.getPackageLabel(
-                            getActivity().getApplication(),
-                            agentUsageEntry.getKey(),
-                            Process.myUserHandle()
-                    )
-            );
-            agentUsagePreference.setSummary(StringUtils.getIcuPluralsString(
-                    context,
-                    R.string.agent_usage_preference_label,
-                    agentUsageEntry.getValue()
-            ));
-            agentsCategory.addPreference(agentUsagePreference);
+        if (agentsCategory != null) {
+            for (int i = 0; i < appFunctionAgentAccessCountEntries.size(); i++) {
+                Map.Entry<String, Integer> agentUsageEntry =
+                        appFunctionAgentAccessCountEntries.get(i);
+                Preference agentUsagePreference = new Preference(context);
+                agentUsagePreference.setIcon(
+                        KotlinUtils.INSTANCE.getBadgedPackageIcon(
+                                getActivity().getApplication(),
+                                agentUsageEntry.getKey(),
+                                Process.myUserHandle()
+                        )
+                );
+                agentUsagePreference.setTitle(
+                        KotlinUtils.INSTANCE.getPackageLabel(
+                                getActivity().getApplication(),
+                                agentUsageEntry.getKey(),
+                                Process.myUserHandle()
+                        )
+                );
+                agentUsagePreference.setSummary(StringUtils.getIcuPluralsString(
+                        context,
+                        R.string.agent_usage_preference_label,
+                        agentUsageEntry.getValue()
+                ));
+                agentsCategory.addPreference(agentUsagePreference);
+            }
         }
 
         setLoading(false, true);

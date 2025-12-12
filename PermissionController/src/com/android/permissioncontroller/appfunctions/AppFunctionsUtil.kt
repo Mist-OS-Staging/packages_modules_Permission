@@ -20,8 +20,10 @@ import android.app.appfunctions.AppFunctionManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.os.Build
 import android.permission.flags.Flags
 import android.util.Log
+import androidx.annotation.ChecksSdkIntAtLeast
 import com.android.modules.utils.build.SdkLevel
 import com.android.permissioncontroller.permission.utils.Utils
 import java.util.UUID
@@ -96,6 +98,7 @@ object AppFunctionsUtil {
     }
 
     @JvmStatic
+    @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.BAKLAVA)
     fun isPrivacyDashboardAgentActivityEnabled(context: Context): Boolean {
         val packageManager = context.packageManager
         return SdkLevel.isAtLeastB() &&

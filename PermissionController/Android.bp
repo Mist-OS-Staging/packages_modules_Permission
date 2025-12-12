@@ -208,6 +208,7 @@ android_app {
     rename_resources_package: false,
     privapp_allowlist: ":privapp_allowlist_com.android.permissioncontroller.xml",
     flags_packages: [
+        "android.permission.flags-aconfig",
         "com.android.permission.flags-aconfig",
     ],
 
