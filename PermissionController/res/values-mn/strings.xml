@@ -300,8 +300,8 @@
     <string name="notification_listener_review_app_button_label" msgid="3433073281029143924">"Дэлгэрэнгүй харах сонголт"</string>
     <string name="notification_listener_remove_access_success_label" msgid="2477611529875633107">"Хандалтыг хассан"</string>
     <string name="accessibility_access_reminder_notification_title" msgid="2971317234668807566">"Төхөөрөмжийн бүрэн хандалттай аппыг шалгана уу"</string>
-    <string name="accessibility_access_reminder_notification_content" msgid="7389454158175306720">"<xliff:g id="APP_NAME">%s</xliff:g> таны дэлгэцийг харах болон төхөөрөмж дээр тань үйлдэл гүйцэтгэх боломжтой. Хандалтын аппууд зориулалтын дагуу ажиллахын тулд тэдгээрт энэ төрлийн хандалт шаардлагатай."</string>
-    <string name="accessibility_access_warning_card_content" msgid="4370327190293217358">"Энэ апп таны дэлгэцийг харах болон төхөөрөмж дээр тань үйлдэл гүйцэтгэх боломжтой. Хандалтын аппууд зориулалтын дагуу ажиллахын тулд тэдгээрт энэ төрлийн хандалт шаардлагатай ч аппыг шалгаад, та үүнд итгэдэг эсэхээ баталгаажуулна уу."</string>
+    <string name="accessibility_access_reminder_notification_content" msgid="7389454158175306720">"<xliff:g id="APP_NAME">%s</xliff:g> таны дэлгэцийг харах болон төхөөрөмж дээр тань үйлдэл гүйцэтгэх боломжтой. Хүртээмжтэй аппууд зориулалтын дагуу ажиллахын тулд тэдгээрт энэ төрлийн хандалт шаардлагатай."</string>
+    <string name="accessibility_access_warning_card_content" msgid="4370327190293217358">"Энэ апп таны дэлгэцийг харах болон төхөөрөмж дээр тань үйлдэл гүйцэтгэх боломжтой. Хүртээмжтэй аппууд зориулалтын дагуу ажиллахын тулд тэдгээрт энэ төрлийн хандалт шаардлагатай ч аппыг шалгаад, та үүнд итгэдэг эсэхээ баталгаажуулна уу."</string>
     <string name="accessibility_remove_access_button_label" msgid="44145801526711640">"Хандалтын эрхийг хасах"</string>
     <string name="accessibility_show_all_apps_button_label" msgid="960067249326392280">"Бүрэн хандалттай аппуудыг харах"</string>
     <string name="accessibility_remove_access_success_label" msgid="4380995302917014670">"Хандалтын эрхийг хассан"</string>
@@ -355,7 +355,7 @@
     <string name="car_permission_selected" msgid="180837028920791596">"Сонгосон"</string>
     <string name="settings" msgid="5409109923158713323">"Тохиргоо"</string>
     <string name="accessibility_service_dialog_title_single" msgid="7956432823014102366">"<xliff:g id="SERVICE_NAME">%s</xliff:g> таны төхөөрөмжид хандах бүрэн эрхтэй байна"</string>
-    <string name="accessibility_service_dialog_title_multiple" msgid="5527879210683548175">"Таны төхөөрөмжид хүртээмжийн <xliff:g id="NUM_SERVICES">%s</xliff:g> апп хандах бүрэн эрхтэй байна"</string>
+    <string name="accessibility_service_dialog_title_multiple" msgid="5527879210683548175">"Таны төхөөрөмжид хүртээмжтэй <xliff:g id="NUM_SERVICES">%s</xliff:g> апп хандах бүрэн эрхтэй байна"</string>
     <string name="accessibility_service_dialog_bottom_text_single" msgid="1128666197822205958">"<xliff:g id="SERVICE_NAME">%s</xliff:g> таны дэлгэц, үйлдэл, оролтыг харах, үйлдэл гүйцэтгэх болон дэлгэцийг хянах боломжтой."</string>
     <string name="accessibility_service_dialog_bottom_text_multiple" msgid="7009848932395519852">"Эдгээр апп таны дэлгэц, үйлдэл, оролтыг харах, үйлдэл хийх болон дэлгэцийг хянах боломжтой."</string>
     <string name="role_assistant_label" msgid="4727586018198208128">"Өгөгдмөл дижитал туслах апп"</string>
@@ -692,7 +692,7 @@
 </xliff:g>Залилагч танаас шинэ эх сурвалжаас тодорхойгүй апп суулгахыг хүсэж хор хөнөөлтэй апп суулгахаар оролдож магадгүй."</string>
     <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
 
-</xliff:g>Залилагч танаас аппын хандалтын эрхийг зөвшөөрөхийг хүсэж таны төхөөрөмжийн хяналтыг гартаа авахаар оролдож магадгүй."</string>
+</xliff:g>Залилагч танаас аппын хүртээмжийн эрхийг зөвшөөрөхийг хүсэж таны төхөөрөмжийн хяналтыг гартаа авахаар оролдож магадгүй."</string>
     <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"Аппад <xliff:g id="PERMISSION_NAME">%1$s</xliff:g>-д хандах эрх олгохоос татгалзсан"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"Апп нь таны хувийн болон санхүүгийн мэдээллийг эрсдэлд оруулж болох эмзэг зөвшөөрөлд хандах эрх хүссэн.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Энэ хязгаарлагдмал зөвшөөрөлгүйгээр уг апп зохих ёсоор ажиллахгүй байх боломжтой. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Хандах эрхийг хэрхэн зөвшөөрөх талаар мэдэж авах&lt;/a&gt;"</string>

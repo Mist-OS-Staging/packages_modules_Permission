@@ -346,7 +346,7 @@
     <string name="app_perms_7d_access_all_files" msgid="8246193786397635824">"Senest anvendt <xliff:g id="TIME_DATE_0">%1$s</xliff:g> kl. <xliff:g id="TIME_DATE_1">%2$s</xliff:g> • Alle filer"</string>
     <string name="app_perms_content_provider_24h_all_files" msgid="573104317727770850">"Brugt inden for de seneste 24 timer • Alle filer"</string>
     <string name="app_perms_content_provider_7d_all_files" msgid="7962416229708835558">"Brugt inden for de seneste 7 dage • Alle filer"</string>
-    <string name="no_permissions_allowed" msgid="6081976856354669209">"Der ikke givet nogen tilladelser"</string>
+    <string name="no_permissions_allowed" msgid="6081976856354669209">"Der er ikke givet nogen tilladelser"</string>
     <string name="no_permissions_denied" msgid="8159923922804043282">"Ingen tilladelser er blevet afvist"</string>
     <string name="no_apps_allowed" msgid="7718822655254468631">"Ingen apps har denne tilladelse"</string>
     <string name="no_apps_allowed_full" msgid="8011716991498934104">"Ingen apps er tilladt for alle filer"</string>

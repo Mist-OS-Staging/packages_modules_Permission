@@ -385,7 +385,7 @@
     <string name="role_emergency_request_title" msgid="8469579020654348567">"Bạn muốn đặt <xliff:g id="APP_NAME">%1$s</xliff:g> làm ứng dụng khẩn cấp mặc định?"</string>
     <string name="role_emergency_request_description" msgid="131645948770262850">"Không cần quyền"</string>
     <string name="role_emergency_search_keywords" msgid="1920007722599213358">"ICE, Trong trường hợp khẩn cấp"</string>
-    <string name="role_home_label" msgid="3871847846649769412">"Ứng dụng mặc định trên màn hình chính"</string>
+    <string name="role_home_label" msgid="3871847846649769412">"Trình chạy mặc định"</string>
     <string name="role_home_short_label" msgid="8544733747952272337">"Ứng dụng trên màn hình chính"</string>
     <string name="role_home_description" msgid="7997371519626556675">"Các ứng dụng, thường gọi là trình chạy, thay thế Màn hình chính trên thiết bị Android và giúp bạn truy cập vào các nội dung cũng như tính năng của thiết bị"</string>
     <string name="role_home_request_title" msgid="738136983453341081">"Bạn muốn đặt <xliff:g id="APP_NAME">%1$s</xliff:g> làm ứng dụng mặc định trên màn hình chính?"</string>
