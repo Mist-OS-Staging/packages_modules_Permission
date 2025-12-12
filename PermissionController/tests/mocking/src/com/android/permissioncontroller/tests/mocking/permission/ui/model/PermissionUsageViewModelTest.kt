@@ -21,6 +21,8 @@ import android.content.Context
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
+import android.os.UserHandle
+import android.os.UserManager
 import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.CheckFlagsRule
 import android.platform.test.flag.junit.DeviceFlagsValueProvider
@@ -77,6 +79,8 @@ class PermissionUsageViewModelTest {
     @Mock private lateinit var application: PermissionControllerApplication
     @Mock private lateinit var context: Context
     @Mock private lateinit var packageManager: PackageManager
+    @Mock private lateinit var userManager: UserManager
+    @Mock private lateinit var userHandle: UserHandle
     private var mockitoSession: MockitoSession? = null
 
     private lateinit var permissionRepository: PermissionRepository
@@ -104,6 +108,8 @@ class PermissionUsageViewModelTest {
         whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE))
             .thenReturn(false)
         whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)).thenReturn(false)
+        whenever(context.getSystemService(UserManager::class.java)).thenReturn(userManager)
+        whenever(userManager.userProfiles).thenReturn(listOf(userHandle))
         PermissionMapping.addHealthPermissionsToPlatform(setOf("health1"))
 
         val permissionFlags =

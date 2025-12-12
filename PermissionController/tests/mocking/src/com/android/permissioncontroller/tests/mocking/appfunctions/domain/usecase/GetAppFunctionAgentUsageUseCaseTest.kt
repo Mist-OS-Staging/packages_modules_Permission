@@ -18,6 +18,8 @@ package com.android.permissioncontroller.tests.mocking.appfunctions.domain.useca
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
+import android.os.UserHandle
+import android.os.UserManager
 import android.platform.test.annotations.RequiresFlagsDisabled
 import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.CheckFlagsRule
@@ -48,6 +50,8 @@ class GetAppFunctionAgentUsageUseCaseTest {
     @get:Rule val checkFlagsRule: CheckFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
     @Mock private lateinit var mockContext: Context
     @Mock private lateinit var packageManager: PackageManager
+    @Mock private lateinit var userManager: UserManager
+    @Mock private lateinit var userHandle: UserHandle
 
     private lateinit var useCase: GetAppFunctionAgentUsageUseCase
 
@@ -59,6 +63,8 @@ class GetAppFunctionAgentUsageUseCaseTest {
         whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE))
             .thenReturn(false)
         whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)).thenReturn(false)
+        whenever(mockContext.getSystemService(UserManager::class.java)).thenReturn(userManager)
+        whenever(userManager.userProfiles).thenReturn(listOf(userHandle))
     }
 
     @Test
