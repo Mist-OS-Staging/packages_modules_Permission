@@ -32,7 +32,6 @@ import android.app.admin.DevicePolicyManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.content.pm.PackageManager.FLAG_PERMISSION_POLICY_FIXED
 import android.content.pm.PackageManager.FLAG_PERMISSION_USER_FIXED
 import android.content.pm.PackageManager.FLAG_PERMISSION_USER_SET
 import android.health.connect.HealthConnectManager.ACTION_REQUEST_HEALTH_PERMISSIONS
@@ -121,7 +120,6 @@ import com.android.permissioncontroller.permission.utils.PermissionMapping
 import com.android.permissioncontroller.permission.utils.PermissionMapping.getPartialStorageGrantPermissionsForGroup
 import com.android.permissioncontroller.permission.utils.SafetyNetLogger
 import com.android.permissioncontroller.permission.utils.Utils
-import com.android.permissioncontroller.permission.utils.v31.AdminRestrictedPermissionsUtils
 import com.android.permissioncontroller.permission.utils.v34.SafetyLabelUtils
 import com.android.permissioncontroller.permission.utils.v35.MultiDeviceUtils.isPermissionDeviceAware
 
@@ -175,8 +173,7 @@ class GrantPermissionsViewModel(
         } else {
             ArrayMap()
         }
-    private val dpm = app.getSystemService(DevicePolicyManager::class.java)!!
-    private val permissionPolicy = dpm.getPermissionPolicy(null)
+
     private val groupStates = mutableMapOf<String, GroupState>()
 
     private var autoGrantNotifier: AutoGrantPermissionsNotifier? = null
@@ -644,49 +641,18 @@ class GrantPermissionsViewModel(
     }
 
     private fun getStateFromPolicy(perm: String, group: LightAppPermGroup): Int {
-        val isBackground = perm in group.backgroundPermNames
+        val permissionPolicy = KotlinUtils.applyPermissionPolicy(app, perm, group)
         var state = STATE_UNKNOWN
         when (permissionPolicy) {
             DevicePolicyManager.PERMISSION_POLICY_AUTO_GRANT -> {
-                if (
-                    AdminRestrictedPermissionsUtils.mayAdminGrantPermission(
-                        app,
-                        perm,
-                        user.identifier,
-                    )
-                ) {
-                    if (isBackground) {
-                        grantBackgroundRuntimePermissions(app, group, listOf(perm))
-                    } else {
-                        grantForegroundRuntimePermissions(app, group, listOf(perm))
-                    }
-                    KotlinUtils.setGroupFlags(
-                        app,
-                        group,
-                        FLAG_PERMISSION_POLICY_FIXED to true,
-                        FLAG_PERMISSION_USER_SET to false,
-                        FLAG_PERMISSION_USER_FIXED to false,
-                        filterPermissions = listOf(perm),
-                    )
-                    state = STATE_GRANTED
-                    getAutoGrantNotifier()?.onPermissionAutoGranted(perm)
-                    reportRequestResult(
-                        perm,
-                        PERMISSION_GRANT_REQUEST_RESULT_REPORTED__RESULT__AUTO_GRANTED,
-                    )
-                }
+                state = STATE_GRANTED
+                getAutoGrantNotifier()?.onPermissionAutoGranted(perm)
+                reportRequestResult(
+                    perm,
+                    PERMISSION_GRANT_REQUEST_RESULT_REPORTED__RESULT__AUTO_GRANTED,
+                )
             }
             DevicePolicyManager.PERMISSION_POLICY_AUTO_DENY -> {
-                if (group.permissions[perm]?.isPolicyFixed == false) {
-                    KotlinUtils.setGroupFlags(
-                        app,
-                        group,
-                        FLAG_PERMISSION_POLICY_FIXED to true,
-                        FLAG_PERMISSION_USER_SET to false,
-                        FLAG_PERMISSION_USER_FIXED to false,
-                        filterPermissions = listOf(perm),
-                    )
-                }
                 state = STATE_DENIED
                 reportRequestResult(
                     perm,
@@ -1437,7 +1403,7 @@ class GrantPermissionsViewModel(
 
     /** Use the autoGrantNotifier to notify of auto-granted permissions. */
     fun autoGrantNotify() {
-        autoGrantNotifier?.notifyOfAutoGrantPermissions(true)
+        getAutoGrantNotifier()?.notifyOfAutoGrantPermissions(true)
     }
 
     private fun isStateUnknown(state: Int?): Boolean {
