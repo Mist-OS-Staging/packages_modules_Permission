@@ -126,6 +126,10 @@
             value="CtsAppThatRequestPermissionWithNoPurposeOldTargetSdk36.apk->/data/local/tmp/cts-permission/CtsAppThatRequestPermissionWithNoPurposeOldTargetSdk36.apk" />
         <option name="push"
             value="CtsAppThatRequestPermissionWithNoPurposeUsingMinMaxAttrs37.apk->/data/local/tmp/cts-permission/CtsAppThatRequestPermissionWithNoPurposeUsingMinMaxAttrs37.apk" />
+        <option name="push"
+            value="CtsAppThatRequestsInternetAndNearbyWifiDevicesPermissions36.apk->/data/local/tmp/cts-permission/CtsAppThatRequestsInternetAndNearbyWifiDevicesPermissions36.apk" />
+        <option name="push"
+            value="CtsAppThatRequestsAccessLocalNetworkAndNearbyWifiDevicesPermissions37.apk->/data/local/tmp/cts-permission/CtsAppThatRequestsAccessLocalNetworkAndNearbyWifiDevicesPermissions37.apk" />
     </target_preparer>
 
     <!-- Remove additional apps if installed -->
