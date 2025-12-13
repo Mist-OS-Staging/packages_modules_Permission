@@ -35,6 +35,12 @@ import com.android.permissioncontroller.permission.ui.viewmodel.v31.PermissionUs
 import com.android.permissioncontroller.permission.ui.viewmodel.v31.PermissionUsageViewModelFactory
 import com.android.permissioncontroller.permission.ui.viewmodel.v31.PermissionUsagesUiState
 
+import android.os.Process
+import androidx.preference.PreferenceCategory
+import androidx.annotation.ChecksSdkIntAtLeast;
+import com.android.permissioncontroller.permission.utils.KotlinUtils
+import com.android.permissioncontroller.permission.utils.StringUtils
+
 @RequiresApi(Build.VERSION_CODES.S)
 class AutoPermissionUsageFragment : AutoSettingsFrameFragment() {
 
@@ -153,21 +159,43 @@ class AutoPermissionUsageFragment : AutoSettingsFrameFragment() {
             }
         )
 
+        val permissionsCategory = PreferenceCategory(requireContext())
+        permissionsCategory.title = getString(R.string.permission_usage_app_permissions_title)
+        preferenceScreen.addPreference(permissionsCategory)
+
         val shouldCollapse = !isExpanded && sortedEntries.size > COLLAPSED_ITEM_COUNT
-        if (shouldCollapse && Flags.automotivePrivacyDashboardAgentActivityEnabled()) {
+        if (agentActivityUiEnabled() && shouldCollapse) {
             for (i in 0 until COLLAPSED_ITEM_COUNT) {
-                addPermissionPreference(sortedEntries[i])
+                addPermissionPreference(sortedEntries[i], permissionsCategory)
             }
-            addExpandPreference()
+            addExpandPreference(permissionsCategory)
         } else {
             for (entry in sortedEntries) {
-                addPermissionPreference(entry)
+                addPermissionPreference(entry, permissionsCategory)
             }
         }
+
+        if (agentActivityUiEnabled() && successData.agentAccessCount.isNotEmpty()) {
+            val agentsCategory = PreferenceCategory(requireContext())
+            agentsCategory.title = getString(R.string.permission_usage_agent_activity_title)
+            preferenceScreen.addPreference(agentsCategory)
+
+            val sortedAgents = successData.agentAccessCount.entries.sortedBy {
+                mViewModel.getAppFunctionAgentLabel(requireContext(), it.key)
+            }
+
+            for (entry in sortedAgents) {
+                addAgentPreference(entry, agentsCategory)
+            }
+        }
+
         setLoading(false)
     }
 
-    private fun addPermissionPreference(entry: Map.Entry<String, Int>) {
+    private fun addPermissionPreference(
+        entry: Map.Entry<String, Int>,
+        category: PreferenceCategory
+    ) {
         val permissionUsagePreference = CarUiPreference(requireContext())
         PermissionUsageControlPreferenceUtils.initPreference(
             permissionUsagePreference,
@@ -178,10 +206,10 @@ class AutoPermissionUsageFragment : AutoSettingsFrameFragment() {
             sessionId,
             false,
         )
-        getPreferenceScreen().addPreference(permissionUsagePreference)
+        category.addPreference(permissionUsagePreference)
     }
 
-    private fun addExpandPreference() {
+    private fun addExpandPreference(category: PreferenceCategory) {
         val expandPreference = CarUiPreference(requireContext())
         expandPreference.title = getString(R.string.perm_usage_adv_info_title)
         expandPreference.setIcon(R.drawable.ic_expand_more)
@@ -190,6 +218,27 @@ class AutoPermissionUsageFragment : AutoSettingsFrameFragment() {
             mViewModel.permissionUsagesUiLiveData.value?.let { updateAllUI(it) }
             true
         }
-        getPreferenceScreen().addPreference(expandPreference)
+        category.addPreference(expandPreference)
+    }
+
+    @RequiresApi(Build.VERSION_CODES.BAKLAVA)
+    private fun addAgentPreference(
+        entry: Map.Entry<String, Int>,
+        category: PreferenceCategory
+    ) {
+        val agentUsagePreference = CarUiPreference(requireContext())
+        agentUsagePreference.icon = KotlinUtils.getBadgedPackageIcon(
+            requireActivity().application, entry.key, Process.myUserHandle())
+        agentUsagePreference.title = mViewModel.getAppFunctionAgentLabel(requireContext(), entry.key)
+        agentUsagePreference.summary = StringUtils.getIcuPluralsString(
+            requireContext(), R.string.agent_usage_preference_label, entry.value)
+        category.addPreference(agentUsagePreference)
+    }
+
+    @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.BAKLAVA)
+    private fun agentActivityUiEnabled() : Boolean {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.BAKLAVA &&
+                Flags.automotivePrivacyDashboardAgentActivityEnabled() &&
+                android.app.appfunctions.flags.Flags.enableAppInteractionApi();
     }
 }
