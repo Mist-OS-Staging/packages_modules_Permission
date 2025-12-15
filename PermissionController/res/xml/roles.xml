@@ -1797,6 +1797,14 @@
                 featureFlag="android.permission.flags.Flags.skinTempOxygenSaturationHealthServicesPregrantEnabled" />
             <permission name="android.permission.health.READ_SKIN_TEMPERATURE"
                 featureFlag="android.permission.flags.Flags.skinTempOxygenSaturationHealthServicesPregrantEnabled" />
+            <permission name="android.permission.health.READ_BLOOD_PRESSURE"
+                featureFlag="android.permission.flags.Flags.granularHealthPermissionsPhaseTwoEnabled" />
+            <permission name="android.permission.health.READ_HEART_RATE_VARIABILITY"
+                featureFlag="android.permission.flags.Flags.granularHealthPermissionsPhaseTwoEnabled" />
+            <permission name="android.permission.health.READ_RESPIRATORY_RATE"
+                featureFlag="android.permission.flags.Flags.granularHealthPermissionsPhaseTwoEnabled" />
+            <permission name="android.permission.health.READ_VO2_MAX"
+                featureFlag="android.permission.flags.Flags.granularHealthPermissionsPhaseTwoEnabled" />
             <permission name="android.permission.health.READ_HEALTH_DATA_IN_BACKGROUND" minSdkVersion="36"/>
         </permissions>
     </role>
