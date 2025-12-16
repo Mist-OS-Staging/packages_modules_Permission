@@ -16,18 +16,11 @@
 
 package com.android.permissioncontroller.appfunctions.data.repository
 
-import android.app.AppInteractionContract
 import android.app.Application
 import android.app.appfunctions.AppFunctionManager
 import android.app.appfunctions.AppFunctionManager.ACCESS_REQUEST_STATE_UNREQUESTABLE
 import android.app.appfunctions.AppFunctionManager.OnAppFunctionAccessChangedListener
-import android.content.ContentResolver
-import android.content.Context
-import android.database.Cursor
-import android.net.Uri
-import android.os.UserHandle
 import android.permission.flags.Flags
-import com.android.permissioncontroller.appfunctions.domain.model.v37.AccessHistory
 import java.util.concurrent.Executor
 import kotlin.concurrent.Volatile
 import kotlinx.coroutines.CoroutineDispatcher
@@ -93,14 +86,6 @@ interface AppFunctionRepository {
      * @param listener The listener to remove
      */
     fun removeAccessChangedListener(listener: OnAppFunctionAccessChangedListener)
-
-    /**
-     * Returns the access history Uri from the App Function table for the user in the context. See
-     * [AppInteractionContract#getInteractionHistoryUriAsUser] for more details.
-     */
-    fun getInteractionHistoryUriAsUser(userHandle: UserHandle): Uri
-
-    suspend fun getAccessHistory(context: Context, userHandle: UserHandle): List<AccessHistory>
 
     companion object {
         const val DEVICE_SETTINGS_TARGET_PACKAGE_NAME = "android"
@@ -174,48 +159,5 @@ class AppFunctionRepositoryImpl(
 
     override fun removeAccessChangedListener(listener: OnAppFunctionAccessChangedListener) {
         appFunctionManager?.removeAccessChangedListener(listener)
-    }
-
-    override fun getInteractionHistoryUriAsUser(userHandle: UserHandle): Uri =
-        AppInteractionContract.getInteractionHistoryUriAsUser(userHandle)
-
-    override suspend fun getAccessHistory(
-        context: Context,
-        userHandle: UserHandle,
-    ): List<AccessHistory> {
-        val uri = getInteractionHistoryUriAsUser(userHandle)
-        return queryAccessHistory(context.contentResolver, uri)
-    }
-
-    private fun queryAccessHistory(
-        contentResolver: ContentResolver,
-        uri: Uri,
-    ): List<AccessHistory> {
-        val cursor = contentResolver.query(uri, null, null, null) ?: return emptyList()
-        val accessHistories = buildList {
-            while (cursor.moveToNext()) {
-                add(createAccessHistory(cursor))
-            }
-        }
-        cursor.close()
-        return accessHistories
-    }
-
-    companion object {
-        fun createAccessHistory(cursor: Cursor): AccessHistory =
-            AccessHistory(
-                agentPackageName =
-                    cursor.requireStringOrThrow(AppInteractionContract.COLUMN_AGENT_PACKAGE_NAME),
-                targetPackageName =
-                    cursor.requireStringOrThrow(AppInteractionContract.COLUMN_TARGET_PACKAGE_NAME),
-                interactionType =
-                    cursor.getIntOrThrow(AppInteractionContract.COLUMN_INTERACTION_TYPE),
-                customInteractionType =
-                    cursor.getStringOrThrow(AppInteractionContract.COLUMN_CUSTOM_INTERACTION_TYPE),
-                interactionUri =
-                    cursor.getStringOrThrow(AppInteractionContract.COLUMN_INTERACTION_URI),
-                accessTime = cursor.requireLongOrThrow(AppInteractionContract.COLUMN_ACCESS_TIME),
-                duration = cursor.requireLongOrThrow(AppInteractionContract.COLUMN_DURATION),
-            )
     }
 }

@@ -31,14 +31,14 @@ import androidx.lifecycle.createSavedStateHandle
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.CreationExtras
 import com.android.permissioncontroller.DeviceUtils
-import com.android.permissioncontroller.appfunctions.data.repository.AppFunctionRepository
-import com.android.permissioncontroller.appfunctions.domain.model.v31.AccessCount
 import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCaseImpl
 import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAppFunctionAgentUsageUseCase
 import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAppFunctionPackageInfoUseCase
 import com.android.permissioncontroller.appfunctions.domain.usecase.v31.NoOpAppFunctionAgentUsageUseCase
 import com.android.permissioncontroller.appfunctions.domain.usecase.v31.NoOpAppFunctionPackageInfoUseCase
 import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAppFunctionAgentUsageUseCaseImpl
+import com.android.permissioncontroller.appinteraction.data.repository.AppInteractionRepository
+import com.android.permissioncontroller.appinteraction.domain.model.v31.AccessCount
 import com.android.permissioncontroller.common.model.Stateful
 import com.android.permissioncontroller.permission.data.repository.v31.PermissionRepository
 import com.android.permissioncontroller.permission.domain.model.v31.PermissionGroupUsageModel
@@ -254,9 +254,9 @@ class PermissionUsageViewModelFactory(private val app: Application) : ViewModelP
         val permissionRepository = PermissionRepository.getInstance(app)
         val permissionUsageUseCase = GetPermissionGroupUsageUseCase.create(app)
         val appFunctionAgentUsageUseCase =
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.BAKLAVA) {
-                val appFunctionRepository = AppFunctionRepository.getInstance(app)
-                GetAppFunctionAgentUsageUseCaseImpl(appFunctionRepository)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.CINNAMON_BUN) {
+                val appInteractionRepository = AppInteractionRepository.getInstance()
+                GetAppFunctionAgentUsageUseCaseImpl(appInteractionRepository)
             } else {
                 NoOpAppFunctionAgentUsageUseCase()
             }

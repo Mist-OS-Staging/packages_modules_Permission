@@ -18,9 +18,9 @@ package com.android.permissioncontroller.appfunctions.domain.usecase.v37
 import android.content.Context
 import android.os.UserManager
 import com.android.permissioncontroller.appfunctions.AppFunctionsUtil
-import com.android.permissioncontroller.appfunctions.data.repository.AppFunctionRepository
-import com.android.permissioncontroller.appfunctions.domain.model.v31.AccessCount
 import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAppFunctionAgentUsageUseCase
+import com.android.permissioncontroller.appinteraction.data.repository.AppInteractionRepository
+import com.android.permissioncontroller.appinteraction.domain.model.v31.AccessCount
 import java.time.Instant
 import java.util.concurrent.TimeUnit
 import kotlin.math.max
@@ -33,7 +33,7 @@ import kotlin.math.max
  * @param appFunctionRepository The repository to use to get the app function agents.
  */
 class GetAppFunctionAgentUsageUseCaseImpl(
-    private val appFunctionRepository: AppFunctionRepository
+    private val appInteractionRepository: AppInteractionRepository
 ) : GetAppFunctionAgentUsageUseCase {
     override suspend operator fun invoke(context: Context): Map<String, AccessCount> {
         if (!AppFunctionsUtil.isPrivacyDashboardAgentActivityEnabled(context)) {
@@ -42,7 +42,7 @@ class GetAppFunctionAgentUsageUseCaseImpl(
 
         val profiles = context.getSystemService(UserManager::class.java).userProfiles
         val accessHistories =
-            profiles.flatMap { appFunctionRepository.getAccessHistory(context, it) }
+            profiles.flatMap { appInteractionRepository.getAccessHistory(context, it) }
         val now = System.currentTimeMillis()
         val timeStamp24Hours = max(now - TimeUnit.DAYS.toMillis(1), Instant.EPOCH.toEpochMilli())
         val timeStamp7Days = max(now - TimeUnit.DAYS.toMillis(7), Instant.EPOCH.toEpochMilli())
