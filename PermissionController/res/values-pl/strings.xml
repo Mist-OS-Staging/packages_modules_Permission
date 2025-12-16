@@ -679,7 +679,7 @@
     <string name="safety_label_changes_notification_desc" msgid="7808764283266234675">"Niektóre aplikacje zmieniły sposób udostępniania Twoich danych o lokalizacji"</string>
     <string name="safety_label_changes_gear_description" msgid="2655887555599138509">"Ustawienia"</string>
     <string name="wear_app_perms_24h_access" msgid="8668121661337328895">"Ostatni dostęp <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
-    <string name="wear_app_perms_24h_access_yest" msgid="7069312481704735679">"Ostatni dostęp wczoraj, <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="wear_app_perms_24h_access_yest" msgid="7069312481704735679">"Ostatni dostęp wczoraj o <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="wear_app_perms_7d_access" msgid="4608069019194676432">"Ostatni dostęp <xliff:g id="TIME_DATE_0">%1$s</xliff:g>, <xliff:g id="TIME_DATE_1">%2$s</xliff:g>"</string>
     <string name="test_otp_msg" msgid="7559110574222727550">"Twoje hasło jednorazowe to 132435"</string>
     <string name="allow_restricted_settings" msgid="8073000189478396881">"Zezwól na ustawienia z ograniczonym dostępem"</string>
