@@ -25,7 +25,7 @@ import android.content.ContentResolver
 import android.content.Context
 import android.database.Cursor
 import android.net.Uri
-import android.os.Process
+import android.os.UserHandle
 import android.permission.flags.Flags
 import com.android.permissioncontroller.appfunctions.domain.model.v37.AccessHistory
 import java.util.concurrent.Executor
@@ -96,11 +96,11 @@ interface AppFunctionRepository {
 
     /**
      * Returns the access history Uri from the App Function table for the user in the context. See
-     * [AppFunctionManager#getAccessHistoryContentUri] for more details.
+     * [AppInteractionContract#getInteractionHistoryUriAsUser] for more details.
      */
-    fun getAccessHistoryContentUri(): Uri
+    fun getInteractionHistoryUriAsUser(userHandle: UserHandle): Uri
 
-    suspend fun getAccessHistory(context: Context): List<AccessHistory>
+    suspend fun getAccessHistory(context: Context, userHandle: UserHandle): List<AccessHistory>
 
     companion object {
         const val DEVICE_SETTINGS_TARGET_PACKAGE_NAME = "android"
@@ -176,11 +176,14 @@ class AppFunctionRepositoryImpl(
         appFunctionManager?.removeAccessChangedListener(listener)
     }
 
-    override fun getAccessHistoryContentUri(): Uri =
-        AppInteractionContract.getInteractionHistoryUriAsUser(Process.myUserHandle())
+    override fun getInteractionHistoryUriAsUser(userHandle: UserHandle): Uri =
+        AppInteractionContract.getInteractionHistoryUriAsUser(userHandle)
 
-    override suspend fun getAccessHistory(context: Context): List<AccessHistory> {
-        val uri = getAccessHistoryContentUri()
+    override suspend fun getAccessHistory(
+        context: Context,
+        userHandle: UserHandle,
+    ): List<AccessHistory> {
+        val uri = getInteractionHistoryUriAsUser(userHandle)
         return queryAccessHistory(context.contentResolver, uri)
     }
 

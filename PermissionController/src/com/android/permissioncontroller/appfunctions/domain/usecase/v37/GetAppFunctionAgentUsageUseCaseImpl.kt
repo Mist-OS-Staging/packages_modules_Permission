@@ -16,6 +16,7 @@
 package com.android.permissioncontroller.appfunctions.domain.usecase.v37
 
 import android.content.Context
+import android.os.UserManager
 import com.android.permissioncontroller.appfunctions.AppFunctionsUtil
 import com.android.permissioncontroller.appfunctions.data.repository.AppFunctionRepository
 import com.android.permissioncontroller.appfunctions.domain.model.v31.AccessCount
@@ -39,7 +40,9 @@ class GetAppFunctionAgentUsageUseCaseImpl(
             return emptyMap()
         }
 
-        val accessHistories = appFunctionRepository.getAccessHistory(context)
+        val profiles = context.getSystemService(UserManager::class.java).userProfiles
+        val accessHistories =
+            profiles.flatMap { appFunctionRepository.getAccessHistory(context, it) }
         val now = System.currentTimeMillis()
         val timeStamp24Hours = max(now - TimeUnit.DAYS.toMillis(1), Instant.EPOCH.toEpochMilli())
         val timeStamp7Days = max(now - TimeUnit.DAYS.toMillis(7), Instant.EPOCH.toEpochMilli())
