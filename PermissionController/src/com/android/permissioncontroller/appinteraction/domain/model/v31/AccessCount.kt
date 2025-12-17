@@ -13,18 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.permissioncontroller.appfunctions.domain.usecase.v31
 
-import android.content.Context
-import com.android.permissioncontroller.appinteraction.domain.model.v31.AccessCount
+package com.android.permissioncontroller.appinteraction.domain.model.v31
 
 /**
- * A no-op implementation of [GetAppFunctionAgentUsageUseCase].
+ * Model for an app function agent or target package.
  *
- * This implementation always returns an empty map, indicating no usage.
+ * @param accessCount24Hours The count of target apps that an agent has accessed in past 24 hours
+ * @param accessCount7Days The count of target apps that an agent has accessed in past 7 days
  */
-class NoOpAppFunctionAgentUsageUseCase : GetAppFunctionAgentUsageUseCase {
-    override suspend operator fun invoke(context: Context): Map<String, AccessCount> {
-        return emptyMap()
-    }
-}
+data class AccessCount(val accessCount24Hours: Int, val accessCount7Days: Int)

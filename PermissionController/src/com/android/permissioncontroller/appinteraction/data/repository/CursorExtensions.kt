@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.permissioncontroller.appfunctions.data.repository
+package com.android.permissioncontroller.appinteraction.data.repository
 
 import android.database.Cursor
 import androidx.core.database.getIntOrNull
