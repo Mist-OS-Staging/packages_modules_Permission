@@ -208,7 +208,7 @@
     <string name="app_permission_info_button" msgid="8973692370208562556">"Informations"</string>
     <string name="app_permission_settings_button" msgid="4582916817451973752">"Paramètres"</string>
     <string name="assistant_mic_label" msgid="1011432357152323896">"Afficher l\'utilisation du micro par l\'Assistant"</string>
-    <string name="unused_apps_category_title" msgid="2988455616845243901">"Paramètres des applis inutilisées"</string>
+    <string name="unused_apps_category_title" msgid="2988455616845243901">"Paramètres de l\'appli si inutilisée"</string>
     <string name="auto_revoke_label" msgid="5068393642936571656">"Supprimer les autorisations si l\'application n\'est pas utilisée"</string>
     <string name="unused_apps_label" msgid="2595428768404901064">"Supprimer autorisations et libérer espace"</string>
     <string name="unused_apps_label_v2" msgid="7058776770056517980">"Suspendre activité appli si inutilisée"</string>
@@ -254,7 +254,7 @@
     <string name="app_permission_most_recent_summary" msgid="4292074449384040590">"Dernier accès : <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="app_permission_most_recent_denied_summary" msgid="7659497197737708112">"Accès actuellement refusé/Dernier accès : <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="app_permission_never_accessed_summary" msgid="401346181461975090">"Aucun accès enregistré"</string>
-    <string name="app_permission_never_accessed_denied_summary" msgid="6596000497490905146">"Accès refusé/aucune tentative d\'accès"</string>
+    <string name="app_permission_never_accessed_denied_summary" msgid="6596000497490905146">"Accès refusé/Aucune tentative d\'accès"</string>
     <string name="allowed_header" msgid="7769277978004790414">"Autorisé"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Toujours autorisé"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Autorisé seulement pendant l\'utilisation"</string>

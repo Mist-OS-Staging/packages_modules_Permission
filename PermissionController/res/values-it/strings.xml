@@ -208,7 +208,7 @@
     <string name="app_permission_info_button" msgid="8973692370208562556">"Informazioni"</string>
     <string name="app_permission_settings_button" msgid="4582916817451973752">"Impostazioni"</string>
     <string name="assistant_mic_label" msgid="1011432357152323896">"Mostra utilizzo microfono dell\'assistente"</string>
-    <string name="unused_apps_category_title" msgid="2988455616845243901">"Impostazioni app inutilizzate"</string>
+    <string name="unused_apps_category_title" msgid="2988455616845243901">"Impostazioni app inutilizzata"</string>
     <string name="auto_revoke_label" msgid="5068393642936571656">"Rimuovi autorizzazioni se non in uso"</string>
     <string name="unused_apps_label" msgid="2595428768404901064">"Rimuovi autorizzazioni e libera spazio"</string>
     <string name="unused_apps_label_v2" msgid="7058776770056517980">"Sospendi attività app se inutilizzata"</string>
