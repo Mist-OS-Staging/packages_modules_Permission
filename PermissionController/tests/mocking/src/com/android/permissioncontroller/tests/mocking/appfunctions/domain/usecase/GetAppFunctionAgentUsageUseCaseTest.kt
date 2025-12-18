@@ -18,6 +18,8 @@ package com.android.permissioncontroller.tests.mocking.appfunctions.domain.useca
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
+import android.os.UserHandle
+import android.os.UserManager
 import android.platform.test.annotations.RequiresFlagsDisabled
 import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.CheckFlagsRule
@@ -25,12 +27,12 @@ import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
-import com.android.permissioncontroller.appfunctions.domain.model.v31.AccessCount
-import com.android.permissioncontroller.appfunctions.domain.model.v37.AccessHistory
 import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAppFunctionAgentUsageUseCase
 import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAppFunctionAgentUsageUseCaseImpl
+import com.android.permissioncontroller.appinteraction.domain.model.v31.AccessCount
+import com.android.permissioncontroller.appinteraction.domain.model.v37.AccessHistory
 import com.android.permissioncontroller.flags.Flags
-import com.android.permissioncontroller.tests.mocking.appfunctions.data.repository.FakeAppFunctionRepository
+import com.android.permissioncontroller.tests.mocking.appinteraction.data.repository.FakeAppInteractionRepository
 import com.google.common.truth.Truth.assertThat
 import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.test.runTest
@@ -50,6 +52,8 @@ class GetAppFunctionAgentUsageUseCaseTest {
     @get:Rule val checkFlagsRule: CheckFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
     @Mock private lateinit var mockContext: Context
     @Mock private lateinit var packageManager: PackageManager
+    @Mock private lateinit var userManager: UserManager
+    @Mock private lateinit var userHandle: UserHandle
 
     private lateinit var useCase: GetAppFunctionAgentUsageUseCase
 
@@ -59,6 +63,8 @@ class GetAppFunctionAgentUsageUseCaseTest {
         whenever(mockContext.packageManager).thenReturn(packageManager)
         whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK)).thenReturn(false)
         whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)).thenReturn(false)
+        whenever(mockContext.getSystemService(UserManager::class.java)).thenReturn(userManager)
+        whenever(userManager.userProfiles).thenReturn(listOf(userHandle))
     }
 
     @Test
@@ -93,7 +99,7 @@ class GetAppFunctionAgentUsageUseCaseTest {
                     accessTime = now - TimeUnit.DAYS.toMillis(8),
                 ),
             )
-        val repository = FakeAppFunctionRepository(accessHistory = accessHistory)
+        val repository = FakeAppInteractionRepository(accessHistory)
         useCase = GetAppFunctionAgentUsageUseCaseImpl(repository)
 
         val result = useCase(mockContext)
@@ -128,7 +134,7 @@ class GetAppFunctionAgentUsageUseCaseTest {
                     accessTime = now - TimeUnit.HOURS.toMillis(3),
                 ),
             )
-        val repository = FakeAppFunctionRepository(accessHistory = accessHistory)
+        val repository = FakeAppInteractionRepository(accessHistory)
         useCase = GetAppFunctionAgentUsageUseCaseImpl(repository)
 
         val result = useCase(mockContext)
@@ -151,7 +157,7 @@ class GetAppFunctionAgentUsageUseCaseTest {
                     accessTime = now - TimeUnit.HOURS.toMillis(1),
                 )
             )
-        val repository = FakeAppFunctionRepository(accessHistory = accessHistory)
+        val repository = FakeAppInteractionRepository(accessHistory)
         useCase = GetAppFunctionAgentUsageUseCaseImpl(repository)
 
         val result = useCase(mockContext)
@@ -162,16 +168,7 @@ class GetAppFunctionAgentUsageUseCaseTest {
         agentPackageName: String,
         targetPackageName: String,
         accessTime: Long,
-    ) =
-        AccessHistory(
-            agentPackageName,
-            targetPackageName,
-            null,
-            null,
-            null,
-            accessTime,
-            ACCESS_DURATION,
-        )
+    ) = AccessHistory(agentPackageName, targetPackageName, null, null, null, accessTime)
 
     private fun isAutomotive() : Boolean {
         val testContext : Context = ApplicationProvider.getApplicationContext()
@@ -184,6 +181,5 @@ class GetAppFunctionAgentUsageUseCaseTest {
         const val AGENT_NAME_3 = "agent3"
         const val TARGET_NAME_1 = "target1"
         const val TARGET_NAME_2 = "target2"
-        const val ACCESS_DURATION = 1000L
     }
 }

@@ -35,6 +35,7 @@ import android.app.AppOpsManager.MODE_IGNORED
 import android.app.AppOpsManager.OPSTR_AUTO_REVOKE_PERMISSIONS_IF_UNUSED
 import android.app.AppOpsManager.permissionToOp
 import android.app.Application
+import android.app.admin.DevicePolicyManager
 import android.content.Context
 import android.content.Intent
 import android.content.Intent.ACTION_MAIN
@@ -44,6 +45,7 @@ import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.content.pm.PackageManager.FLAG_PERMISSION_AUTO_REVOKED
 import android.content.pm.PackageManager.FLAG_PERMISSION_ONE_TIME
+import android.content.pm.PackageManager.FLAG_PERMISSION_POLICY_FIXED
 import android.content.pm.PackageManager.FLAG_PERMISSION_REVIEW_REQUIRED
 import android.content.pm.PackageManager.FLAG_PERMISSION_REVOKED_COMPAT
 import android.content.pm.PackageManager.FLAG_PERMISSION_USER_FIXED
@@ -92,6 +94,7 @@ import com.android.permissioncontroller.permission.model.livedatatypes.LightPerm
 import com.android.permissioncontroller.permission.model.livedatatypes.PermState
 import com.android.permissioncontroller.permission.service.LocationAccessCheck
 import com.android.permissioncontroller.permission.ui.handheld.SettingsWithLargeHeader
+import com.android.permissioncontroller.permission.utils.v31.AdminRestrictedPermissionsUtils
 import com.android.safetycenter.resources.SafetyCenterResourcesApk
 import java.time.Duration
 import java.util.concurrent.atomic.AtomicReference
@@ -1734,6 +1737,68 @@ object KotlinUtils {
             color = context.getColor(android.R.color.system_notification_accent_color)
         }
         return NotificationResources(appLabel, smallIcon, color)
+    }
+
+    /**
+     * Applies the current device policy to the permission. This may result in auto-granting or
+     * auto-denying the permission.
+     *
+     * @return The policy that was applied.
+     */
+    fun applyPermissionPolicy(
+        app: Application,
+        permission: String,
+        lightAppPermGroup: LightAppPermGroup,
+    ): Int {
+        val dpm = app.getSystemService(DevicePolicyManager::class.java)!!
+        val permissionPolicy = dpm.getPermissionPolicy(null)
+        when (permissionPolicy) {
+            DevicePolicyManager.PERMISSION_POLICY_AUTO_GRANT -> {
+                if (
+                    AdminRestrictedPermissionsUtils.mayAdminGrantPermission(
+                        app,
+                        permission,
+                        lightAppPermGroup.userHandle.identifier,
+                    )
+                ) {
+                    if (permission in lightAppPermGroup.backgroundPermNames) {
+                        grantBackgroundRuntimePermissions(
+                            app,
+                            lightAppPermGroup,
+                            listOf(permission),
+                        )
+                    } else {
+                        grantForegroundRuntimePermissions(
+                            app,
+                            lightAppPermGroup,
+                            listOf(permission),
+                        )
+                    }
+                    setGroupFlags(
+                        app,
+                        lightAppPermGroup,
+                        FLAG_PERMISSION_POLICY_FIXED to true,
+                        FLAG_PERMISSION_USER_SET to false,
+                        FLAG_PERMISSION_USER_FIXED to false,
+                        filterPermissions = listOf(permission),
+                    )
+                }
+            }
+
+            DevicePolicyManager.PERMISSION_POLICY_AUTO_DENY -> {
+                if (lightAppPermGroup.permissions[permission]?.isPolicyFixed == false) {
+                    setGroupFlags(
+                        app,
+                        lightAppPermGroup,
+                        FLAG_PERMISSION_POLICY_FIXED to true,
+                        FLAG_PERMISSION_USER_SET to false,
+                        FLAG_PERMISSION_USER_FIXED to false,
+                        filterPermissions = listOf(permission),
+                    )
+                }
+            }
+        }
+        return permissionPolicy
     }
 }
 

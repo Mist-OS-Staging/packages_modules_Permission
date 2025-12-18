@@ -21,6 +21,8 @@ import android.content.Context
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
+import android.os.UserHandle
+import android.os.UserManager
 import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.CheckFlagsRule
 import android.platform.test.flag.junit.DeviceFlagsValueProvider
@@ -30,11 +32,11 @@ import com.android.dx.mockito.inline.extended.ExtendedMockito
 import com.android.modules.utils.build.SdkLevel
 import com.android.permissioncontroller.DeviceUtils
 import com.android.permissioncontroller.PermissionControllerApplication
-import com.android.permissioncontroller.appfunctions.domain.model.v37.AccessHistory
 import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCaseImpl
 import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAppFunctionAgentUsageUseCase
 import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAppFunctionPackageInfoUseCase
 import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAppFunctionAgentUsageUseCaseImpl
+import com.android.permissioncontroller.appinteraction.domain.model.v37.AccessHistory
 import com.android.permissioncontroller.appops.data.model.v31.PackageAppOpUsageModel
 import com.android.permissioncontroller.appops.data.model.v31.PackageAppOpUsageModel.AppOpUsageModel
 import com.android.permissioncontroller.flags.Flags
@@ -44,7 +46,7 @@ import com.android.permissioncontroller.permission.ui.viewmodel.v31.PermissionUs
 import com.android.permissioncontroller.permission.ui.viewmodel.v31.PermissionUsagesUiState
 import com.android.permissioncontroller.permission.utils.PermissionMapping
 import com.android.permissioncontroller.pm.data.model.v31.PackageInfoModel
-import com.android.permissioncontroller.tests.mocking.appfunctions.data.repository.FakeAppFunctionRepository
+import com.android.permissioncontroller.tests.mocking.appinteraction.data.repository.FakeAppInteractionRepository
 import com.android.permissioncontroller.tests.mocking.appops.data.repository.FakeAppOpRepository
 import com.android.permissioncontroller.tests.mocking.coroutines.collectLastValue
 import com.android.permissioncontroller.tests.mocking.permission.data.repository.FakePermissionRepository
@@ -77,6 +79,8 @@ class PermissionUsageViewModelTest {
     @Mock private lateinit var application: PermissionControllerApplication
     @Mock private lateinit var context: Context
     @Mock private lateinit var packageManager: PackageManager
+    @Mock private lateinit var userManager: UserManager
+    @Mock private lateinit var userHandle: UserHandle
     private var mockitoSession: MockitoSession? = null
 
     private lateinit var permissionRepository: PermissionRepository
@@ -102,6 +106,8 @@ class PermissionUsageViewModelTest {
         whenever(context.packageManager).thenReturn(packageManager)
         whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK)).thenReturn(false)
         whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)).thenReturn(false)
+        whenever(context.getSystemService(UserManager::class.java)).thenReturn(userManager)
+        whenever(userManager.userProfiles).thenReturn(listOf(userHandle))
         PermissionMapping.addHealthPermissionsToPlatform(setOf("health1"))
 
         val permissionFlags =
@@ -381,16 +387,7 @@ class PermissionUsageViewModelTest {
         agentPackageName: String,
         targetPackageName: String,
         accessTime: Long,
-    ) =
-        AccessHistory(
-            agentPackageName,
-            targetPackageName,
-            null,
-            null,
-            null,
-            accessTime,
-            ACCESS_DURATION,
-        )
+    ) = AccessHistory(agentPackageName, targetPackageName, null, null, null, accessTime)
 
     private fun getPermissionGroupUsageUseCase(
         packageAppOpsUsages: List<PackageAppOpUsageModel> = emptyList()
@@ -411,8 +408,8 @@ class PermissionUsageViewModelTest {
     private fun getAppFunctionAgentUsageUseCase(
         accessHistory: List<AccessHistory> = emptyList()
     ): GetAppFunctionAgentUsageUseCase {
-        val appFunctionRepository = FakeAppFunctionRepository(accessHistory = accessHistory)
-        return GetAppFunctionAgentUsageUseCaseImpl(appFunctionRepository)
+        val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
+        return GetAppFunctionAgentUsageUseCaseImpl(appInteractionRepository)
     }
 
     private fun getAppFunctionPackageInfoUseCase(): GetAppFunctionPackageInfoUseCase {

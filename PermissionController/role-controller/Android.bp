@@ -37,6 +37,7 @@ java_library {
         "android.companion.flags-aconfig-java-export",
         "android.companion.virtualdevice.flags-aconfig-java-export",
         "android.content.pm.flags-aconfig-java-export",
+        "android.media.audio-aconfig-exported-java",
         "android.permission.flags-aconfig-java-export",
         "android.os.flags-aconfig-java-export",
         "android.security.flags-aconfig-java-export",

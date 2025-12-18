@@ -161,6 +161,8 @@
                 minSdkVersion="35" />
             <permission name="android.permission.SHOW_POWER_MENU"
                 featureFlag="android.app.Flags.statusbarApiShowPowerMenu" />
+            <permission name="android.permission.MANAGE_ASSISTANT_AUDIO"
+                featureFlag="android.media.audio.Flags.manageAssistantAudioPermission" />
         </permissions>
         <app-op-permissions>
             <app-op-permission name="android.permission.SYSTEM_ALERT_WINDOW" />

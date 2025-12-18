@@ -289,7 +289,7 @@ public class PermissionUsageFragment extends SettingsWithLargeHeader {
                                         permissionGroupWithUsageCount.getKey(), DEFAULT_ORDER))
                 .thenComparing((Map.Entry<String, Integer> permissionGroupWithUsageCount) ->
                         mViewModel.getPermissionGroupLabel(
-                                context, permissionGroupWithUsageCount.getKey())));
+                                permissionGroupWithUsageCount.getKey())));
         if (AppFunctionsUtil.isPrivacyDashboardAgentActivityEnabled(context)) {
             appFunctionAgentAccessCountEntries.sort(Comparator.comparing(
                     (Map.Entry<String, Integer> entry) ->
