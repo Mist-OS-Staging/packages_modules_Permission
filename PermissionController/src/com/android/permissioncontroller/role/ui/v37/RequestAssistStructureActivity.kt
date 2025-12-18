@@ -16,13 +16,15 @@
 
 package com.android.permissioncontroller.role.ui.v37
 
-import android.app.role.RoleManager
+import android.app.voiceinteraction.VoiceInteractionManager
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.os.Process
 import android.permission.flags.Flags
 import android.util.Log
 import androidx.fragment.app.FragmentActivity
+import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
 
 class RequestAssistStructureActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,13 +42,28 @@ class RequestAssistStructureActivity : FragmentActivity() {
         }
 
         val packageName = callingPackage
-        if (packageName.isNullOrEmpty() || !isDefaultAssistant(packageName, this)) {
+        if (packageName.isNullOrEmpty()) {
             Log.e(LOG_TAG, "Unknown/Invalid role holder package: $packageName.")
             setResultAndFinish(RESULT_CANCELED)
             return
         }
 
-        // TODO: We should finish() the activity if the access is already granted.
+        when (getReadScreenContextRequestState(packageName, this)) {
+            VoiceInteractionManager.READ_SCREEN_CONTEXT_REQUEST_STATE_GRANTED -> {
+                Log.w(LOG_TAG, "READ_SCREEN_CONTEXT already granted")
+                setResultAndFinish(RESULT_OK)
+                return
+            }
+            VoiceInteractionManager.READ_SCREEN_CONTEXT_REQUEST_STATE_REQUESTABLE -> {
+                // Read screen context is requestable. No action needed within the 'when' block.
+                // Execution will continue after this 'when' statement to initiate the request.
+            }
+            else -> {
+                Log.w(LOG_TAG, "Read screen context not requestable for package: $packageName.")
+                setResultAndFinish(RESULT_CANCELED)
+                return
+            }
+        }
 
         val fragment = RequestAssistStructureFragment.Companion.newInstance(packageName)
         supportFragmentManager.beginTransaction().add(fragment, null).commit()
@@ -65,10 +82,13 @@ class RequestAssistStructureActivity : FragmentActivity() {
             !packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)
     }
 
-    private fun isDefaultAssistant(packageName: String, context: Context): Boolean {
-        val roleManager = context.getSystemService(RoleManager::class.java)
-        val currentPackageNames = roleManager.getRoleHolders(RoleManager.ROLE_ASSISTANT)
-        return packageName in currentPackageNames
+    private fun getReadScreenContextRequestState(packageName: String, context: Context): Int {
+        val uid =
+            PackageRepository.createInstance(context)
+                .getPackageUid(packageName, Process.myUserHandle())
+        val voiceInteractionManager =
+            application.getSystemService(VoiceInteractionManager::class.java)
+        return voiceInteractionManager.getReadScreenContextRequestState(uid)
     }
 
     companion object {

@@ -28,17 +28,9 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.DialogFragment
-import androidx.lifecycle.Lifecycle.State
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
 import com.android.permissioncontroller.R
-import com.android.permissioncontroller.common.model.Stateful
 import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.flowOn
-import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.launch
 
 class RequestAssistStructureFragment : DialogFragment() {
     private lateinit var packageName: String
@@ -65,73 +57,28 @@ class RequestAssistStructureFragment : DialogFragment() {
 
         viewModel =
             ViewModelProvider(this, factory).get(RequestAssistStructureViewModel::class.java)
-
-        val packageRepository = PackageRepository.createInstance(requireContext())
-
-        lifecycleScope.launch {
-            lifecycle.repeatOnLifecycle(State.STARTED) {
-                viewModel.uiStateFlow
-                    .map { uiState ->
-                        when (uiState) {
-                            is Stateful.Failure -> Stateful.Failure(throwable = uiState.throwable)
-                            is Stateful.Loading -> Stateful.Loading()
-                            is Stateful.Success -> {
-                                val icon =
-                                    packageRepository.getBadgedPackageIcon(
-                                        packageName,
-                                        Process.myUserHandle(),
-                                    )
-                                val label =
-                                    packageRepository.getPackageLabel(
-                                        packageName,
-                                        Process.myUserHandle(),
-                                    )
-                                Stateful.Success(
-                                    RequestAssistStructureRichUiState(icon, label, uiState.value)
-                                )
-                            }
-                        }
-                    }
-                    .flowOn(Dispatchers.Default)
-                    .collect(::onUiStateChanged)
-            }
-        }
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val activity = requireActivity()
         val view =
-            LayoutInflater.from(activity)
-                .inflate(R.layout.request_assist_structure_dialog, null)
-                .apply {
-                    iconImage = requireViewById<ImageView>(R.id.icon)
-                    titleText = requireViewById<TextView>(R.id.title)
-                    positiveButton = requireViewById<Button>(R.id.allow_button)
-                    negativeButton = requireViewById<Button>(R.id.dont_allow_button)
-                }
+            LayoutInflater.from(activity).inflate(R.layout.request_assist_structure_dialog, null)
+        iconImage = view.requireViewById(R.id.icon)
+        titleText = view.requireViewById(R.id.title)
+        positiveButton = view.requireViewById(R.id.allow_button)
+        negativeButton = view.requireViewById(R.id.dont_allow_button)
+
+        val packageRepository = PackageRepository.createInstance(requireContext())
+        val icon = packageRepository.getBadgedPackageIcon(packageName, Process.myUserHandle())
+        val label = packageRepository.getPackageLabel(packageName, Process.myUserHandle())
+        val title = getString(R.string.request_assist_structure_dialog_title, label)
+
+        iconImage.setImageDrawable(icon)
+        titleText.text = title
+
         positiveButton.apply { setOnClickListener { onAssistStructureGrant() } }
         negativeButton.apply { setOnClickListener { dialog!!.cancel() } }
         return Dialog(activity).apply { setContentView(view) }
-    }
-
-    private fun onUiStateChanged(uiState: Stateful<RequestAssistStructureRichUiState>) {
-        if (uiState is Stateful.Loading || uiState is Stateful.Failure) {
-            // TODO: We should show a loading indicator in the dialog when in loading state
-            return
-        }
-
-        val uiData = uiState.value!!
-
-        if (uiData.requestAssistState == RequestAssistState.ALLOWED) {
-            setResultAndFinish(Activity.RESULT_OK)
-        } else if (uiData.requestAssistState == RequestAssistState.UNREQUESTABLE) {
-            setResultAndFinish(Activity.RESULT_CANCELED)
-        }
-
-        val title = getString(R.string.request_assist_structure_dialog_title, uiData.label)
-
-        iconImage.setImageDrawable(uiData.icon)
-        titleText.text = title
     }
 
     fun onAssistStructureGrant() {
@@ -152,11 +99,7 @@ class RequestAssistStructureFragment : DialogFragment() {
     }
 
     /** The data class for UI state of RequestAssistStructure dialog. */
-    data class RequestAssistStructureRichUiState(
-        val icon: Drawable?,
-        val label: String,
-        val requestAssistState: RequestAssistState,
-    )
+    data class RequestAssistStructureRichUiState(val icon: Drawable?, val label: String)
 
     companion object {
         fun newInstance(packageName: String): RequestAssistStructureFragment =

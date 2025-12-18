@@ -18,6 +18,7 @@ package com.android.permissioncontroller.tests.mocking.role.ui.viewmodel
 import android.app.AppOpsManager
 import android.app.AppOpsManager.MODE_ALLOWED
 import android.app.AppOpsManager.MODE_IGNORED
+import android.app.voiceinteraction.VoiceInteractionManager
 import android.os.Build
 import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.DeviceFlagsValueProvider
@@ -25,11 +26,8 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
 import com.android.dx.mockito.inline.extended.ExtendedMockito
 import com.android.permissioncontroller.PermissionControllerApplication
-import com.android.permissioncontroller.common.model.Stateful
-import com.android.permissioncontroller.role.ui.v37.RequestAssistState
 import com.android.permissioncontroller.role.ui.v37.RequestAssistStructureViewModel
 import com.android.permissioncontroller.tests.mocking.appops.data.repository.FakeAppOpRepository
-import com.android.permissioncontroller.tests.mocking.coroutines.collectLastValue
 import com.android.permissioncontroller.tests.mocking.pm.data.repository.FakePackageRepository
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.emptyFlow
@@ -58,6 +56,7 @@ class RequestAssistStructureViewModelTest {
     @get:Rule val checkFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
 
     @Mock private lateinit var application: PermissionControllerApplication
+    @Mock private lateinit var voiceInteractionManager: VoiceInteractionManager
 
     private val appOpsRepository = FakeAppOpRepository(emptyFlow())
 
@@ -78,33 +77,6 @@ class RequestAssistStructureViewModelTest {
     @After
     fun finish() {
         mockitoSession?.finishMocking()
-    }
-
-    @Test
-    fun requestAssistState_requestable() = runTest {
-        appOpsRepository.setUidMode(
-            AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
-            PACKAGE_UID,
-            MODE_IGNORED,
-        )
-
-        val viewModel = getViewModel()
-
-        assertThat(getRequestAssistState(viewModel).value!!)
-            .isEqualTo(RequestAssistState.REQUESTABLE)
-    }
-
-    @Test
-    fun requestAssistState_allowed() = runTest {
-        appOpsRepository.setUidMode(
-            AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
-            PACKAGE_UID,
-            MODE_ALLOWED,
-        )
-
-        val viewModel = getViewModel()
-
-        assertThat(getRequestAssistState(viewModel).value!!).isEqualTo(RequestAssistState.ALLOWED)
     }
 
     @Test
@@ -154,19 +126,12 @@ class RequestAssistStructureViewModelTest {
     private fun TestScope.getViewModel(): RequestAssistStructureViewModel {
         return RequestAssistStructureViewModel(
             application,
-            PACKAGE_NAME,
             PACKAGE_UID,
             appOpsRepository,
+            voiceInteractionManager,
             backgroundScope,
             StandardTestDispatcher(testScheduler),
         )
-    }
-
-    private fun TestScope.getRequestAssistState(
-        viewModel: RequestAssistStructureViewModel
-    ): Stateful<RequestAssistState> {
-        val result by collectLastValue(viewModel.uiStateFlow)
-        return result!!
     }
 
     companion object {
