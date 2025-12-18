@@ -9835,6 +9835,15 @@
         android:protectionLevel="signature|privileged"
         android:featureFlag="com.android.npumanager.npumanager_enabled" />
 
+    <!-- @SystemApi Allows an application to attribute work (such as NPU usage) to other apps.
+         <p>Protection level: signature|privileged
+         @FlaggedApi(com.android.npumanager.Flags.FLAG_NPUMANAGER_ENABLED)
+         @hide -->
+    <permission
+        android:name="android.permission.ATTRIBUTE_WORK_TO_OTHER_APPS"
+        android:protectionLevel="signature|privileged"
+        android:featureFlag="com.android.npumanager.npumanager_enabled" />
+
     <!-- @hide @SystemApi Allows an app to write device level data to Health Connect.
              <p>Protection level: signature|privileged
          @FlaggedApi(android.permission.flags.Flags.FLAG_HEALTH_CONNECT_PROVIDE_DEVICE_DATA_PERMISSION_ENABLED)
