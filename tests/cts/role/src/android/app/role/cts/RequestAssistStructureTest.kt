@@ -171,7 +171,7 @@ class RequestAssistStructureTest {
     private fun getAppOpMode(): Int =
         SystemUtil.runWithShellPermissionIdentity<Int> {
             appOpsManager.checkOpNoThrow(
-                AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
+                AppOpsManager.OPSTR_READ_SCREEN_CONTEXT,
                 assistantRoleHolderPackageUid,
                 APP_PACKAGE_NAME,
             )
@@ -180,7 +180,7 @@ class RequestAssistStructureTest {
     private fun setAppOpMode(mode: Int) =
         SystemUtil.runWithShellPermissionIdentity {
             appOpsManager.setUidMode(
-                AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
+                AppOpsManager.OPSTR_READ_SCREEN_CONTEXT,
                 assistantRoleHolderPackageUid,
                 mode,
             )

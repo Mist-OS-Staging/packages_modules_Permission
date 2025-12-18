@@ -39,11 +39,11 @@ public class RoleApplicationItem {
     /**
      * Whether access to screen and app context as is enabled. Only relevant for
      * {@link android.app.role.RoleManager#ROLE_ASSISTANT}. Value should map to
-     * {@link android.app.AppOpsManager#OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE}. {@code true} when
+     * {@link android.app.AppOpsManager#OPSTR_READ_SCREEN_CONTEXT}. {@code true} when
      * {@link android.app.AppOpsManager#MODE_ALLOWED} or
      * {@link android.app.AppOpsManager#MODE_DEFAULT}, else {@code false}
      */
-    private final boolean mAssistStructureEnabled;
+    private final boolean mReadScreenContextEnabled;
 
     public RoleApplicationItem(@NonNull ApplicationInfo applicationInfo,
             boolean isHolderApplication) {
@@ -51,10 +51,10 @@ public class RoleApplicationItem {
     }
 
     public RoleApplicationItem(@NonNull ApplicationInfo applicationInfo,
-            boolean isHolderApplication, boolean isAssistStructureEnabled) {
+            boolean isHolderApplication, boolean isReadScreenContextEnabled) {
         mApplicationInfo = applicationInfo;
         mIsHolderApplication = isHolderApplication;
-        mAssistStructureEnabled = isAssistStructureEnabled;
+        mReadScreenContextEnabled = isReadScreenContextEnabled;
     }
 
     @NonNull
@@ -69,11 +69,11 @@ public class RoleApplicationItem {
     /**
      * Whether access to screen and app context as is enabled. Only relevant for
      * {@link android.app.role.RoleManager#ROLE_ASSISTANT}. Value should map to
-     * {@link android.app.AppOpsManager#OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE}. {@code true} when
+     * {@link android.app.AppOpsManager#OPSTR_READ_SCREEN_CONTEXT}. {@code true} when
      * {@link android.app.AppOpsManager#MODE_ALLOWED} or
      * {@link android.app.AppOpsManager#MODE_DEFAULT}, else {@code false}
      */
-    public boolean isAssistStructureEnabled() {
-        return mAssistStructureEnabled;
+    public boolean isReadScreenContextEnabled() {
+        return mReadScreenContextEnabled;
     }
 }

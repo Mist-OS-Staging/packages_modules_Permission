@@ -86,8 +86,8 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
             + ".preference.DESCRIPTION";
     private static final String PREFERENCE_KEY_OTHER_NFC_SERVICES =
             DefaultAppChildFragment.class.getName() + ".preference.OTHER_NFC_SERVICES";
-    private static final String PREFERENCE_KEY_ASSIST_STRUCTURE_SETTING =
-            DefaultAppChildFragment.class.getName() + ".preference.ASSIST_STRUCTURE_SETTING";
+    private static final String PREFERENCE_KEY_READ_SCREEN_CONTEXT_SETTING =
+            DefaultAppChildFragment.class.getName() + ".preference.READ_SCREEN_CONTEXT_SETTING";
     private static final String PREFERENCE_EXTRA_PACKAGE_NAME =
             DefaultAppChildFragment.class.getName() + ".extra.PACKAGE_NAME";
     private static final String PREFERENCE_EXTRA_UID = DefaultAppChildFragment.class.getName()
@@ -475,11 +475,11 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
         }
         preferenceScreen.addPreference(preferenceCategory);
 
-        addAssistStructureSettingPreference(preferenceCategory, holderApplicationItem,
+        addReadScreenContextSettingPreference(preferenceCategory, holderApplicationItem,
                 oldPreferences, context);
     }
 
-    private void addAssistStructureSettingPreference(@NonNull PreferenceGroup preferenceGroup,
+    private void addReadScreenContextSettingPreference(@NonNull PreferenceGroup preferenceGroup,
             @Nullable RoleApplicationItem holderApplicationItem,
             @NonNull ArrayMap<String, Preference> oldPreferences, @NonNull Context context) {
         if (!(SdkLevel.isAtLeastB()
@@ -490,16 +490,16 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
 
         SwitchPreferenceCompat preference =
                 (SwitchPreferenceCompat) oldPreferences
-                        .get(PREFERENCE_KEY_ASSIST_STRUCTURE_SETTING);
+                        .get(PREFERENCE_KEY_READ_SCREEN_CONTEXT_SETTING);
         if (preference == null) {
             preference = new SwitchPreferenceCompat(context);
-            preference.setKey(PREFERENCE_KEY_ASSIST_STRUCTURE_SETTING);
+            preference.setKey(PREFERENCE_KEY_READ_SCREEN_CONTEXT_SETTING);
             preference.setTitle(context.getString(
                     R.string.assist_structure_setting_title));
             preference.setPersistent(false);
             preference.setOnPreferenceClickListener(preference2 -> {
                 SwitchPreferenceCompat switchPreference = (SwitchPreferenceCompat) preference2;
-                mViewModel.setAssistStructureSettingEnabled(holderApplicationItem,
+                mViewModel.setReadScreenContextSettingEnabled(holderApplicationItem,
                         switchPreference.isChecked());
                 return true;
             });
@@ -513,7 +513,7 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
         } else {
             String appLabel = Utils.getFullAppLabel(holderApplicationItem.getApplicationInfo(),
                     context);
-            preference.setChecked(holderApplicationItem.isAssistStructureEnabled());
+            preference.setChecked(holderApplicationItem.isReadScreenContextEnabled());
             preference.setEnabled(true);
             preference.setSummary(context.getString(
                     R.string.assist_structure_setting_description, appLabel));

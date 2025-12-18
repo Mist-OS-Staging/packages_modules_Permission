@@ -525,7 +525,7 @@
             android:launchMode="singleTop"
             android:enabled="@bool/is_at_least_v37">
             <intent-filter android:priority="1">
-                <action android:name="android.app.voiceinteraction.action.REQUEST_ASSIST_STRUCTURE" />
+                <action android:name="android.app.voiceinteraction.action.REQUEST_READ_SCREEN_CONTEXT" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

@@ -27,7 +27,7 @@ class RequestAssistStructureActivity : Activity() {
 
         if (savedInstanceState == null) {
             val voiceInteractionManager = getSystemService(VoiceInteractionManager::class.java)
-            val intent = voiceInteractionManager!!.createRequestAssistStructureIntent()
+            val intent = voiceInteractionManager!!.createRequestReadScreenContextIntent()
             startActivityForResult(intent, REQUEST_CODE_REQUEST_ASSIST_STRUCTURE)
         }
     }

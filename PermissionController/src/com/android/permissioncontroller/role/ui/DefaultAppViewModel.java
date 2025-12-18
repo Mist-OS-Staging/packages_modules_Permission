@@ -145,12 +145,12 @@ public class DefaultAppViewModel extends AndroidViewModel {
         mManageRoleHolderStateLiveData.clearRoleHoldersAsUser(mRole.getName(), 0, user, context);
     }
 
-    /** Sets assist structure enabled for specified application */
-    public void setAssistStructureSettingEnabled(RoleApplicationItem holderApplicationItem,
+    /** Sets read screen context enabled for specified application */
+    public void setReadScreenContextSettingEnabled(RoleApplicationItem holderApplicationItem,
             boolean enabled) {
         // TODO: Clear previous record of denials
         int appOpMode = enabled ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_IGNORED;
-        mAppOpsManager.setUidMode(AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
+        mAppOpsManager.setUidMode(AppOpsManager.OPSTR_READ_SCREEN_CONTEXT,
                 holderApplicationItem.getApplicationInfo().uid, appOpMode);
     }
 

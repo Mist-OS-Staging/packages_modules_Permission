@@ -76,12 +76,12 @@ class RequestAssistStructureFragment : DialogFragment() {
         iconImage.setImageDrawable(icon)
         titleText.text = title
 
-        positiveButton.apply { setOnClickListener { onAssistStructureGrant() } }
+        positiveButton.apply { setOnClickListener { onGrant() } }
         negativeButton.apply { setOnClickListener { dialog!!.cancel() } }
         return Dialog(activity).apply { setContentView(view) }
     }
 
-    fun onAssistStructureGrant() {
+    fun onGrant() {
         viewModel.setAllowed()
         setResultAndFinish(Activity.RESULT_OK)
     }
