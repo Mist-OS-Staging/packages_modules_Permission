@@ -412,7 +412,7 @@ public final class SafetySourceIssue implements Parcelable {
      * issue when no custom notification has been set. See {@link #getNotificationBehavior()} for
      * details
      *
-     * @see Builder#setCustomNotification(android.safetycenter.SafetySourceIssue.Notification
+     * @see Builder#setCustomNotification(android.safetycenter.SafetySourceIssue.Notification)
      * @see #getNotificationBehavior()
      */
     @Nullable
