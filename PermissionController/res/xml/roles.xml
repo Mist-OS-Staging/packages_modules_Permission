@@ -102,7 +102,7 @@
         <permission name="android.permission.ADD_ALWAYS_UNLOCKED_DISPLAY" minSdkVersion="33" />
         <permission
             name="android.permission.SUBSCRIBE_TO_KEYGUARD_LOCKED_STATE"
-            featureFlag="android.companion.virtualdevice.flags.Flags.activityControlApi" />
+            minSdkVersion="36" />
     </permission-set>
 
     <role
