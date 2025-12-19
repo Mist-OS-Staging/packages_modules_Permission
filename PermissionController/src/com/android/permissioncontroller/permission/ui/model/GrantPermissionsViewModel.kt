@@ -1403,7 +1403,7 @@ class GrantPermissionsViewModel(
 
     /** Use the autoGrantNotifier to notify of auto-granted permissions. */
     fun autoGrantNotify() {
-        getAutoGrantNotifier()?.notifyOfAutoGrantPermissions(true)
+        autoGrantNotifier?.notifyOfAutoGrantPermissions(true)
     }
 
     private fun isStateUnknown(state: Int?): Boolean {
