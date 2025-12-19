@@ -1267,14 +1267,29 @@
         <permissions>
             <permission-set name="notifications" />
             <permission-set name="virtual_device" />
+            <permission-set
+                name="storage"
+                featureFlag="android.companion.Flags.expandAppStreamingRolePermissions"
+                minSdkVersion="36" />
             <!-- For capturing audio from the app on the device. -->
             <permission name="android.permission.RECORD_AUDIO" />
             <permission
                 name="android.permission.ADD_MIRROR_DISPLAY"
                 featureFlag="android.companion.virtualdevice.flags.Flags.vdmMirrorDisplayPermission" />
+            <permission
+                name="android.permission.RECEIVE_SENSITIVE_NOTIFICATIONS"
+                featureFlag="android.companion.Flags.expandAppStreamingRolePermissions"
+                minSdkVersion="36" />
             <!--TODO(b/201605314) For calling Telecom framework API for audio streaming-->
             <!--<permission name="android.permission.PROVIDE_CALL_ENDPOINTS" />-->
        </permissions>
+       <app-ops>
+            <app-op
+                name="android:receive_sensitive_notifications"
+                featureFlag="android.companion.Flags.expandAppStreamingRolePermissions"
+                minSdkVersion="36"
+                mode="allowed" />
+        </app-ops>
     </role>
 
     <!---
