@@ -287,6 +287,20 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="com.android.permissioncontroller.permission.ui.v37.RequestLocationButtonPermissionsActivity"
+                  android:launchMode="singleTop"
+                  android:excludeFromRecents="true"
+                  android:exported="true"
+                  android:theme="@style/GrantPermissions.FilterTouches"
+                  android:inheritShowWhenLocked="true"
+                  android:enabled="@bool/is_at_least_v37"
+                  android:permission="android.permission.REQUEST_LOCATION_BUTTON_PERMISSIONS">
+            <intent-filter android:priority="1">
+                <action android:name="android.app.permissionui.action.REQUEST_LOCATION_BUTTON_PERMISSIONS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <activity android:name="com.android.permissioncontroller.permission.ui.PermissionDialogStreamingBlockedActivity"
             android:theme="@style/PermissionDialog.FilterTouches"
             android:excludeFromRecents="true"

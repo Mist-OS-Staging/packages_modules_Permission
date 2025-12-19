@@ -205,4 +205,65 @@
 
     <!-- END LOCATION PERMISSION GRANT DIALOG -->
 
+    <!-- START GRANT LOCATION BUTTON PERMISSION DIALOG -->
+    <style name="RequestLocationButtonPermissionsDialogScrollView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingHorizontal">@dimen/settingslib_expressive_space_small4</item>
+        <item name="android:paddingTop">@dimen/settingslib_expressive_space_small4</item>
+        <item name="android:paddingBottom">@dimen/settingslib_expressive_space_small4</item>
+        <item name="android:background">@color/settingslib_materialColorSurfaceContainerHigh</item>
+    </style>
+
+    <style name="RequestLocationButtonPermissionsDialogContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="RequestLocationButtonPermissionsDialogIcon">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:tint">?android:attr/colorAccent</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="RequestLocationButtonPermissionsDialogTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.SettingsLib.HeadlineSmall</item>
+    </style>
+
+    <style name="RequestLocationButtonPermissionsDialogIllustration">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="RequestLocationButtonPermissionsDialogAllowButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">28dp</item>
+        <item name="android:minHeight">@dimen/settingslib_expressive_space_medium3</item>
+        <item name="android:background">@drawable/settingslib_expressive_button_background_filled</item>
+        <item name="android:textAppearance">@style/TextAppearance.SettingsLib.LabelLarge</item>
+        <item name="android:textColor">@color/settingslib_materialColorOnPrimary</item>
+    </style>
+
+    <style name="RequestLocationButtonPermissionsDialogDontAllowButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/settingslib_expressive_space_small1</item>
+        <item name="android:layout_marginBottom">@dimen/settingslib_expressive_space_extrasmall4</item>
+        <item name="android:minHeight">@dimen/settingslib_expressive_space_medium3</item>
+        <item name="android:background">@drawable/settingslib_expressive_button_background_filled</item>
+        <item name="android:textAppearance">@style/TextAppearance.SettingsLib.LabelLarge</item>
+        <item name="android:textColor">@color/settingslib_materialColorOnPrimary</item>
+    </style>
+    <!-- END GRANT LOCATION BUTTON PERMISSION DIALOG -->
 </resources>
