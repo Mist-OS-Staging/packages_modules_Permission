@@ -138,11 +138,13 @@ class DefaultAssistantActivityTest {
         // Click to allow
         findAssistStructureToggle().click()
         uiDevice.waitForIdle()
+        assertAssistToggleState(isEnabled = true, isChecked = true)
         assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_ALLOWED)
 
         // Click to deny
         findAssistStructureToggle().click()
         uiDevice.waitForIdle()
+        assertAssistToggleState(isEnabled = true, isChecked = false)
         assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_IGNORED)
     }
 
