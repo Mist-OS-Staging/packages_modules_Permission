@@ -212,9 +212,12 @@ class DefaultAssistantActivityTest {
             .click()
 
         // Dismiss the confirmation dialog if it appears
-        val okButton = UiAutomatorUtils2.waitFindObjectOrNull(By.text("OK"))
-        if (okButton != null) {
-            okButton.click()
+        val positiveButton =
+            UiAutomatorUtils2.waitFindObjectOrNull(
+                By.text("Change").clazz("android.widget.Button")
+            ) ?: UiAutomatorUtils2.waitFindObjectOrNull(By.text("OK"))
+        if (positiveButton != null) {
+            positiveButton.click()
             uiDevice.waitForIdle()
         }
 
