@@ -746,4 +746,7 @@
     <string name="assist_structure_setting_title" msgid="3448963992289353882">"ეკრანისა და აპის კონტექსტის გამოყენება"</string>
     <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"დაუშვით ნაგულისხმევი ასისტენტის აპის წვდომა ეკრანსა და ხილვადი აპის მიერ გაზიარებულ მონაცემებზე"</string>
     <string name="assist_structure_setting_description" msgid="2865330212261060313">"დაუშვით <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>-ის წვდომა ეკრანსა და ხილვადი აპის მიერ გაზიარებულ მონაცემებზე"</string>
+    <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"დაშვება"</string>
+    <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"არ დაიშვას"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"გსურთ, &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; აპს ჰქონდეს წვდომა ზუსტ მდებარეობაზე მდებარეობის ღილაკის გამოყენებით?"</string>
 </resources>

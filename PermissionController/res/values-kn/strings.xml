@@ -746,4 +746,7 @@
     <string name="assist_structure_setting_title" msgid="3448963992289353882">"ಸ್ಕ್ರೀನ್ ಮತ್ತು ಆ್ಯಪ್ ಕಂಟೆಕ್ಸ್ಟ್ ಅನ್ನು ಬಳಸಿ"</string>
     <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"ಗೋಚರಿಸುವ ಆ್ಯಪ್‌ನ ಸ್ಕ್ರೀನ್ ಮತ್ತು ಹಂಚಿಕೊಂಡ ಡೇಟಾವನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು ಡೀಫಾಲ್ಟ್ ಅಸಿಸ್ಟೆಂಟ್ ಆ್ಯಪ್‌ಗೆ ಅನುಮತಿಸಿ"</string>
     <string name="assist_structure_setting_description" msgid="2865330212261060313">"ಗೋಚರಿಸುವ ಆ್ಯಪ್‌ನ ಸ್ಕ್ರೀನ್ ಮತ್ತು ಹಂಚಿಕೊಂಡ ಡೇಟಾವನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> ಗೆ ಅನುಮತಿಸಿ"</string>
+    <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"ಅನುಮತಿಸಿ"</string>
+    <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"ಅನುಮತಿಸಬೇಡಿ"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"ಸ್ಥಳದ ಬಟನ್ ಬಳಸಿಕೊಂಡು ನಿಖರವಾದ ಸ್ಥಳವನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ಗೆ ಅನುಮತಿಸಬೇಕೆ?"</string>
 </resources>
