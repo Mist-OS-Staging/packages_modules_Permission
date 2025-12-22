@@ -26,6 +26,10 @@ rule android.content.pm.*FeatureFlags* com.android.permission.jarjar.@0
 rule android.content.pm.FeatureFlags* com.android.permission.jarjar.@0
 rule android.content.pm.FeatureFlags com.android.permission.jarjar.@0
 rule android.content.pm.Flags com.android.permission.jarjar.@0
+rule android.hardware.biometrics.*FeatureFlags* com.android.permission.jarjar.@0
+rule android.hardware.biometrics.FeatureFlags* com.android.permission.jarjar.@0
+rule android.hardware.biometrics.FeatureFlags com.android.permission.jarjar.@0
+rule android.hardware.biometrics.Flags com.android.permission.jarjar.@0
 rule android.os.*FeatureFlags* com.android.permission.jarjar.@0
 rule android.os.FeatureFlags* com.android.permission.jarjar.@0
 rule android.os.FeatureFlags com.android.permission.jarjar.@0

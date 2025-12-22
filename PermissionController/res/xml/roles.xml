@@ -750,6 +750,8 @@
                 minSdkVersion="36" />
             <permission name="android.permission.SHOW_POWER_MENU"
                 featureFlag="android.app.Flags.statusbarApiShowPowerMenu" />
+            <permission name="android.permission.ACCESS_BIOMETRIC_SENSOR_STRENGTHS"
+                featureFlag="android.hardware.biometrics.Flags.getBiometricSensorStrengths" />
         </permissions>
         <!-- App ops needed to allow background access to audio APIs for CTS -->
         <app-ops>
@@ -1582,6 +1584,8 @@
                         featureFlag="android.permission.flags.Flags.devicePolicyManagementRoleSplitCreateManagedProfileEnabled" />
             <permission name="android.permission.REMOVE_ACCOUNTS"
                         featureFlag="android.permission.flags.Flags.devicePolicyManagementRoleSplitCreateManagedProfileEnabled" />
+            <permission name="android.permission.ACCESS_BIOMETRIC_SENSOR_STRENGTHS"
+                featureFlag="android.hardware.biometrics.Flags.getBiometricSensorStrengths" />
         </permissions>
     </role>
 
@@ -1940,7 +1944,12 @@
         requestTitle="@string/role_wallet_request_title"
         showNone="true"
         shortLabel="@string/role_wallet_short_label"
-        uiBehavior="v35.WalletRoleUiBehavior"/>
+        uiBehavior="v35.WalletRoleUiBehavior" >
+        <permissions>
+            <permission name="android.permission.ACCESS_BIOMETRIC_SENSOR_STRENGTHS"
+                featureFlag="android.hardware.biometrics.Flags.getBiometricSensorStrengths" />
+        </permissions>
+    </role>
 
     <role
         name="android.app.role.SYSTEM_DEPENDENCY_INSTALLER"
