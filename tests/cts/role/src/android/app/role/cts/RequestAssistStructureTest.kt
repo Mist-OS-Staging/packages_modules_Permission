@@ -18,6 +18,7 @@ package android.app.role.cts
 import android.app.Activity
 import android.app.AppOpsManager
 import android.app.role.RoleManager
+import android.app.voiceinteraction.VoiceInteractionManager
 import android.content.ComponentName
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -36,6 +37,8 @@ import androidx.test.uiautomator.By
 import androidx.test.uiautomator.Until
 import com.android.compatibility.common.util.DisableAnimationRule
 import com.android.compatibility.common.util.FreezeRotationRule
+import com.android.compatibility.common.util.SettingsStateKeeperRule
+import com.android.compatibility.common.util.SettingsStateManager
 import com.android.compatibility.common.util.SystemUtil
 import com.android.compatibility.common.util.UiAutomatorUtils2
 import com.google.common.truth.Truth
@@ -57,9 +60,17 @@ class RequestAssistStructureTest {
     @get:Rule val disableAnimationRule = DisableAnimationRule()
     @get:Rule val freezeRotationRule = FreezeRotationRule()
     @get:Rule val activityRule = ActivityTestRule(WaitForResultActivity::class.java)
+    @get:Rule
+    val readScreenContextDeniedCountManagersKeeper =
+        SettingsStateKeeperRule(context, READ_SCREEN_CONTEXT_REQUEST_DENIED_COUNT)
+
+    private val readScreenContextDeniedCountManager =
+        SettingsStateManager(context, READ_SCREEN_CONTEXT_REQUEST_DENIED_COUNT)
 
     private val appOpsManager = context.getSystemService(AppOpsManager::class.java)!!
     private val roleManager = context.getSystemService(RoleManager::class.java)!!
+
+    private lateinit var voiceInteractionManager: VoiceInteractionManager
 
     private var assistantRoleHolderPackageUid: Int = Process.INVALID_UID
 
@@ -75,6 +86,9 @@ class RequestAssistStructureTest {
         saveRoleHolder()
         installPackage(APP_APK_PATH)
         assistantRoleHolderPackageUid = context.packageManager.getPackageUid(APP_PACKAGE_NAME, 0)
+        voiceInteractionManager = context.getSystemService(VoiceInteractionManager::class.java)!!
+
+        setReadScreenContextRequestDeniedCount(0)
     }
 
     @After
@@ -90,7 +104,7 @@ class RequestAssistStructureTest {
     fun startRequestAssistStructureActivity_finishIfNotRoleHolder() {
         setAppOpMode(AppOpsManager.MODE_IGNORED)
         requestAssistStructure()
-        val result: Pair<Int?, Intent?> = waitForResult()
+        val result = waitForResult()
         Truth.assertThat(result.first).isEqualTo(Activity.RESULT_CANCELED)
         Truth.assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_IGNORED)
     }
@@ -101,9 +115,21 @@ class RequestAssistStructureTest {
         setAppOpMode(AppOpsManager.MODE_ALLOWED)
 
         requestAssistStructure()
-        val result: Pair<Int?, Intent?> = waitForResult()
+        val result = waitForResult()
         Truth.assertThat(result.first).isEqualTo(Activity.RESULT_OK)
         Truth.assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_ALLOWED)
+    }
+
+    @Test
+    fun startRequestAssistStructureActivity_finishIfUnrequestable() {
+        addRoleHolder(RoleManager.ROLE_ASSISTANT, APP_PACKAGE_NAME)
+        setAppOpMode(AppOpsManager.MODE_IGNORED)
+        setReadScreenContextRequestDeniedCount(100)
+
+        requestAssistStructure()
+        val result = waitForResult()
+        Truth.assertThat(result.first).isEqualTo(Activity.RESULT_CANCELED)
+        Truth.assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_IGNORED)
     }
 
     @Test
@@ -127,16 +153,19 @@ class RequestAssistStructureTest {
         requestAssistStructure()
         respondToRequestAndWaitForResult(true)
         Truth.assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_ALLOWED)
+        Truth.assertThat(getReadScreenContextRequestDeniedCount()).isEqualTo(0)
     }
 
     @Test
     fun startRequestAssistStructureActivity_dontAllow() {
         addRoleHolder(RoleManager.ROLE_ASSISTANT, APP_PACKAGE_NAME)
         setAppOpMode(AppOpsManager.MODE_IGNORED)
+        val expectedDenialCount = getReadScreenContextRequestDeniedCount() + 1
 
         requestAssistStructure()
         respondToRequestAndWaitForResult(false)
         Truth.assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_IGNORED)
+        Truth.assertThat(getReadScreenContextRequestDeniedCount()).isEqualTo(expectedDenialCount)
     }
 
     private fun getAppOpMode(): Int =
@@ -156,6 +185,12 @@ class RequestAssistStructureTest {
                 mode,
             )
         }
+
+    private fun getReadScreenContextRequestDeniedCount(): Int =
+        readScreenContextDeniedCountManager.get()?.toIntOrNull() ?: 0
+
+    private fun setReadScreenContextRequestDeniedCount(count: Int) =
+        readScreenContextDeniedCountManager.set(count.toString())
 
     private fun saveRoleHolder() {
         val roleHolders = RoleManagerUtil.getRoleHolders(roleManager, RoleManager.ROLE_ASSISTANT)
@@ -274,6 +309,9 @@ class RequestAssistStructureTest {
                 " visible app"
         private val ALLOW_BUTTON_SELECTOR = By.text("Allow")
         private val DONT_ALLOW_BUTTON_SELECTOR = By.text("Don\u2019t allow")
+
+        private val READ_SCREEN_CONTEXT_REQUEST_DENIED_COUNT =
+            "read_screen_context_request_denied_count"
 
         @JvmStatic private val instrumentation = InstrumentationRegistry.getInstrumentation()
         @JvmStatic private val context = instrumentation.targetContext

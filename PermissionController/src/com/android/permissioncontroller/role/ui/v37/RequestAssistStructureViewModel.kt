@@ -19,84 +19,50 @@ package com.android.permissioncontroller.role.ui.v37
 import android.app.AppOpsManager
 import android.app.AppOpsManager.MODE_ALLOWED
 import android.app.Application
+import android.app.voiceinteraction.VoiceInteractionManager
 import android.os.Build
 import android.os.Process
 import androidx.annotation.RequiresApi
-import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.CreationExtras
 import com.android.permissioncontroller.appops.data.repository.v31.AppOpRepository
-import com.android.permissioncontroller.common.model.Stateful
 import com.android.permissioncontroller.permission.data.repository.v31.PermissionRepository
 import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 /** Viewmodel to support assist structure request screen */
 class RequestAssistStructureViewModel(
     application: Application,
-    private val packageName: String,
     private val packageUid: Int,
     private val appOpRepository: AppOpRepository,
+    private val voiceInteractionManager: VoiceInteractionManager,
     scope: CoroutineScope? = null,
     val dispatcher: CoroutineDispatcher = Dispatchers.Default,
 ) : AndroidViewModel(application) {
     private val coroutineScope = scope ?: viewModelScope
 
-    @VisibleForTesting
-    private val _uiStateFlow = MutableStateFlow<Stateful<RequestAssistState>>(Stateful.Loading())
-    val uiStateFlow: StateFlow<Stateful<RequestAssistState>> = _uiStateFlow
-
-    init {
-        coroutineScope.launch(dispatcher) {
-            try {
-                // TODO: finish if already enabled or request denied multiple times
-                val assistStructureEnabled =
-                    appOpRepository.checkOpNoThrow(
-                        AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
-                        packageUid,
-                        packageName,
-                    )
-                val state =
-                    if (assistStructureEnabled == MODE_ALLOWED) {
-                        RequestAssistState.ALLOWED
-                    } else {
-                        RequestAssistState.REQUESTABLE
-                    }
-                _uiStateFlow.value = Stateful.Success(state)
-            } catch (e: Exception) {
-                _uiStateFlow.value = Stateful.Failure(throwable = e)
-            }
-        }
-    }
-
     fun setAllowed() {
-        // TODO: Clear previous record of denials
         coroutineScope.launch(dispatcher) {
             appOpRepository.setUidMode(
                 AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
                 packageUid,
                 MODE_ALLOWED,
             )
+            voiceInteractionManager.clearReadScreenContextRequestDeniedCount()
         }
     }
 
     fun markRequestDenied() {
-        // TODO: mark request denied
+        coroutineScope.launch(dispatcher) {
+            voiceInteractionManager.incrementReadScreenContextRequestDeniedCount()
+        }
     }
-}
-
-enum class RequestAssistState {
-    ALLOWED,
-    REQUESTABLE,
-    UNREQUESTABLE,
 }
 
 @RequiresApi(Build.VERSION_CODES.CINNAMON_BUN)
@@ -109,11 +75,13 @@ class RequestAssistStructureViewModelFactory(
         val permissionRepository = PermissionRepository.getInstance(application)
         val appOpsRepository = AppOpRepository.getInstance(application, permissionRepository)
         val packageRepository = PackageRepository.getInstance(application)
+        val voiceInteractionManager =
+            application.getSystemService(VoiceInteractionManager::class.java)
         return RequestAssistStructureViewModel(
             application,
-            packageName,
             packageRepository.getPackageUid(packageName, Process.myUserHandle()),
             appOpsRepository,
+            voiceInteractionManager,
         )
             as T
     }
