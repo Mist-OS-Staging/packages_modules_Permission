@@ -374,6 +374,10 @@
             <app-op name="android:run_any_in_background" mode="allowed" />
             <app-op name="android:read_device_identifiers" mode="allowed" />
             <app-op name="android:receive_sensitive_notifications" mode="allowed" minSdkVersion="35"/>
+            <app-op name="android:write_restricted_messages" mode="allowed"
+                    featureFlag="com.android.internal.telephony.flags.Flags.secureAccessToRestrictedRcsMessages"/>
+            <app-op name="android:read_restricted_messages" mode="allowed"
+                    featureFlag="com.android.internal.telephony.flags.Flags.secureAccessToRestrictedRcsMessages"/>
         </app-ops>
         <preferred-activities>
             <preferred-activity>

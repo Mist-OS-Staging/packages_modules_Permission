@@ -42,6 +42,7 @@ java_library {
         "android.os.flags-aconfig-java-export",
         "android.security.flags-aconfig-java-export",
         "android.view.contentprotection.flags-aconfig-java-export",
+        "com.android.internal.telephony.flags.telephony-flags-aconfig-java-export",
         "com.android.window.flags.window-aconfig-java-export",
         "device_policy_aconfig_flags_java_export",
         "surfaceflinger_exported_flags_lib",
