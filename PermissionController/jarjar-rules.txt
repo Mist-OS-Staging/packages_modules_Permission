@@ -66,4 +66,8 @@ rule android.media.audio.*FeatureFlags* com.android.permissioncontroller.jarjar.
 rule android.media.audio.FeatureFlags* com.android.permissioncontroller.jarjar.@0
 rule android.media.audio.FeatureFlags com.android.permissioncontroller.jarjar.@0
 rule android.media.audio.Flags com.android.permissioncontroller.jarjar.@0
+rule com.android.internal.telephony.flags.*FeatureFlags* com.android.permissioncontroller.jarjar.@0
+rule com.android.internal.telephony.flags.FeatureFlags* com.android.permissioncontroller.jarjar.@0
+rule com.android.internal.telephony.flags.FeatureFlags com.android.permissioncontroller.jarjar.@0
+rule com.android.internal.telephony.flags.Flags com.android.permissioncontroller.jarjar.@0
 # LINT.ThenChange(PermissionController/role-controller/java/com/android/role/controller/model/RoleParser.java:applyJarjarTransform)
