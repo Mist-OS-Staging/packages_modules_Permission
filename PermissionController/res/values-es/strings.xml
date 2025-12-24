@@ -746,4 +746,10 @@
     <string name="assist_structure_setting_title" msgid="3448963992289353882">"Usar contexto de pantalla y de aplicación"</string>
     <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Permite que la aplicación de asistente predeterminada acceda al contenido y datos de la aplicación visible"</string>
     <string name="assist_structure_setting_description" msgid="2865330212261060313">"Permite que <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> acceda a la pantalla y los datos compartidos por la aplicación visible"</string>
+    <!-- no translation found for request_location_button_permissions_dialog_button_allow (3422800468376317863) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_button_dont_allow (3273946372861701473) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_title (5211661841432642995) -->
+    <skip />
 </resources>

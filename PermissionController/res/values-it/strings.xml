@@ -746,4 +746,10 @@
     <string name="assist_structure_setting_title" msgid="3448963992289353882">"Usa il contesto di app e schermo"</string>
     <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Consenti all\'app di assistenza di accedere allo schermo e ai dati condivisi dall\'app visibile"</string>
     <string name="assist_structure_setting_description" msgid="2865330212261060313">"Consenti a <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> di accedere allo schermo e ai dati condivisi dall\'app visibile"</string>
+    <!-- no translation found for request_location_button_permissions_dialog_button_allow (3422800468376317863) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_button_dont_allow (3273946372861701473) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_title (5211661841432642995) -->
+    <skip />
 </resources>

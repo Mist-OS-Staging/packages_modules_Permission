@@ -114,7 +114,7 @@
     <string name="permission_access_only_foreground" msgid="7801170728159326195">"Қолданбаны пайдаланғанда ғана рұқсат ету"</string>
     <string name="permission_access_never" msgid="4647014230217936900">"Рұқсат бермеу"</string>
     <string name="loading" msgid="4789365003890741082">"Жүктелуде…"</string>
-    <string name="all_permissions" msgid="6911125611996872522">"Барлық рұқсаттар"</string>
+    <string name="all_permissions" msgid="6911125611996872522">"Барлық рұқсат"</string>
     <string name="other_permissions" msgid="2901186127193849594">"Басқа қолданба мүмкіндіктері"</string>
     <string name="permission_request_title" msgid="8790310151025020126">"Рұқсат сұрау"</string>
     <string name="permission_review_title_template_install" msgid="1284337937156289081">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; қолданбасы қайда кіре алатынын таңдаңыз"</string>
@@ -746,4 +746,10 @@
     <string name="assist_structure_setting_title" msgid="3448963992289353882">"Экран мен қолданба контексін пайдалану"</string>
     <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Әдепкі көмекші қолданбаға көрінетін қолданба бөлісетін экран мен деректерді пайдалануға рұқсат беру"</string>
     <string name="assist_structure_setting_description" msgid="2865330212261060313">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> қолданбасына көрінетін қолданба бөлісетін экран мен деректерді пайдалануға рұқсат беру"</string>
+    <!-- no translation found for request_location_button_permissions_dialog_button_allow (3422800468376317863) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_button_dont_allow (3273946372861701473) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_title (5211661841432642995) -->
+    <skip />
 </resources>

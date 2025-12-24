@@ -746,4 +746,7 @@
     <string name="assist_structure_setting_title" msgid="3448963992289353882">"സ്ക്രീനും ആപ്പ് കോൺടെക്സ്റ്റും ഉപയോഗിക്കുക"</string>
     <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"ദൃശ്യമായ ആപ്പിന്റെ സ്ക്രീനും പങ്കിട്ട ഡാറ്റയും ആക്സസ് ചെയ്യാൻ ഡിഫോൾട്ട് അസിസ്റ്റന്റ് ആപ്പിനെ അനുവദിക്കുക"</string>
     <string name="assist_structure_setting_description" msgid="2865330212261060313">"ദൃശ്യമായ ആപ്പിന്റെ സ്ക്രീനും പങ്കിട്ട ഡാറ്റയും ആക്സസ് ചെയ്യാൻ <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> എന്നതിനെ അനുവദിക്കുക"</string>
+    <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"അനുവദിക്കുക"</string>
+    <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"അനുവദിക്കരുത്"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"ലൊക്കേഷൻ ബട്ടൺ ഉപയോഗിച്ച് കൃത്യമായ ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യാൻ, &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; എന്നതിനെ അനുവദിക്കണോ?"</string>
 </resources>

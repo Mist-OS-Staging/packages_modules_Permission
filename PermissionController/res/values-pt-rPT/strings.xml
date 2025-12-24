@@ -746,4 +746,7 @@
     <string name="assist_structure_setting_title" msgid="3448963992289353882">"Use o contexto do ecrã e da app"</string>
     <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Permita que a app do assistente predefinido aceda ao ecrã e aos dados partilhados pela app visível"</string>
     <string name="assist_structure_setting_description" msgid="2865330212261060313">"Permita que <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> aceda ao ecrã e aos dados partilhados pela app visível"</string>
+    <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Permitir"</string>
+    <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Não permitir"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Permitir que a app &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; aceda à localização exata através de um botão de localização?"</string>
 </resources>
