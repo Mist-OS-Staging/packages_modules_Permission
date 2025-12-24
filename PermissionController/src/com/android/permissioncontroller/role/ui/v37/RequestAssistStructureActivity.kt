@@ -30,7 +30,7 @@ class RequestAssistStructureActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (!isAssistStructureUiEnabled(this)) {
+        if (!isReadScreenContextUiEnabled(this)) {
             Log.w(
                 LOG_TAG,
                 "Assist Structure privacy improvements aren't enabled: Either the platform is" +
@@ -74,7 +74,7 @@ class RequestAssistStructureActivity : FragmentActivity() {
         finish()
     }
 
-    private fun isAssistStructureUiEnabled(context: Context): Boolean {
+    private fun isReadScreenContextUiEnabled(context: Context): Boolean {
         val packageManager = context.packageManager
         return Flags.assistSettingsPrivacyImprovementsEnabled() &&
             !packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK) &&

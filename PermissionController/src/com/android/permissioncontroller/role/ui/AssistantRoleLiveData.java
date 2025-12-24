@@ -28,8 +28,8 @@ import com.android.role.controller.model.Role;
 import java.util.Objects;
 
 /**
- * A {@link RoleLiveData} that fills in the {@link RoleApplicationItem} isAssistStructureEnabled
- * value using {@link AppOpsManager#OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE} mode.
+ * A {@link RoleLiveData} that fills in the {@link RoleApplicationItem} isReadScreenContextEnabled
+ * value using {@link AppOpsManager#OPSTR_READ_SCREEN_CONTEXT} mode.
  */
 public class AssistantRoleLiveData extends RoleLiveData
         implements AppOpsManager.OnOpChangedListener {
@@ -46,7 +46,7 @@ public class AssistantRoleLiveData extends RoleLiveData
     @Override
     protected void onActive() {
         super.onActive();
-        mAppOpsManager.startWatchingMode(AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
+        mAppOpsManager.startWatchingMode(AppOpsManager.OPSTR_READ_SCREEN_CONTEXT,
                 null, this);
     }
 
@@ -61,17 +61,17 @@ public class AssistantRoleLiveData extends RoleLiveData
     protected RoleApplicationItem createRoleApplicationItem(
             @NonNull ApplicationInfo applicationInfo, boolean isHolderApplication) {
         int appOpMode = mAppOpsManager.checkOpNoThrow(
-                AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE, applicationInfo.uid,
+                AppOpsManager.OPSTR_READ_SCREEN_CONTEXT, applicationInfo.uid,
                 applicationInfo.packageName);
-        boolean isAssistStructureEnabled = appOpMode == AppOpsManager.MODE_ALLOWED
+        boolean isReadScreenContextEnabled = appOpMode == AppOpsManager.MODE_ALLOWED
                 || appOpMode == AppOpsManager.MODE_DEFAULT;
         return new RoleApplicationItem(applicationInfo, isHolderApplication,
-                isAssistStructureEnabled);
+                isReadScreenContextEnabled);
     }
 
     @Override
     public void onOpChanged(String op, String packageName) {
-        if (Objects.equals(AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE, op)) {
+        if (Objects.equals(AppOpsManager.OPSTR_READ_SCREEN_CONTEXT, op)) {
             loadValue();
         }
     }

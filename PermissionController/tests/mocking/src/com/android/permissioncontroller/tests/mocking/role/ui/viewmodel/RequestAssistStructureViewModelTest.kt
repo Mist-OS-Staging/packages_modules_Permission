@@ -82,7 +82,7 @@ class RequestAssistStructureViewModelTest {
     @Test
     fun setAllowed() = runTest {
         appOpsRepository.setUidMode(
-            AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
+            AppOpsManager.OPSTR_READ_SCREEN_CONTEXT,
             PACKAGE_UID,
             MODE_IGNORED,
         )
@@ -93,7 +93,7 @@ class RequestAssistStructureViewModelTest {
 
         assertThat(
                 appOpsRepository.checkOpNoThrow(
-                    AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
+                    AppOpsManager.OPSTR_READ_SCREEN_CONTEXT,
                     PACKAGE_UID,
                     PACKAGE_NAME,
                 )
@@ -104,7 +104,7 @@ class RequestAssistStructureViewModelTest {
     @Test
     fun markRequestDenied() = runTest {
         appOpsRepository.setUidMode(
-            AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
+            AppOpsManager.OPSTR_READ_SCREEN_CONTEXT,
             PACKAGE_UID,
             MODE_IGNORED,
         )
@@ -115,7 +115,7 @@ class RequestAssistStructureViewModelTest {
 
         assertThat(
                 appOpsRepository.checkOpNoThrow(
-                    AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
+                    AppOpsManager.OPSTR_READ_SCREEN_CONTEXT,
                     PACKAGE_UID,
                     PACKAGE_NAME,
                 )

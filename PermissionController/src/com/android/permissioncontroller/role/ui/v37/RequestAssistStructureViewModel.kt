@@ -36,7 +36,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-/** Viewmodel to support assist structure request screen */
+/** Viewmodel to support read screen context request screen */
 class RequestAssistStructureViewModel(
     application: Application,
     private val packageUid: Int,
@@ -50,7 +50,7 @@ class RequestAssistStructureViewModel(
     fun setAllowed() {
         coroutineScope.launch(dispatcher) {
             appOpRepository.setUidMode(
-                AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
+                AppOpsManager.OPSTR_READ_SCREEN_CONTEXT,
                 packageUid,
                 MODE_ALLOWED,
             )

@@ -213,9 +213,8 @@ class DefaultAssistantActivityTest {
 
         // Dismiss the confirmation dialog if it appears
         val positiveButton =
-            UiAutomatorUtils2.waitFindObjectOrNull(
-                By.text("Change").clazz("android.widget.Button")
-            ) ?: UiAutomatorUtils2.waitFindObjectOrNull(By.text("OK"))
+            UiAutomatorUtils2.waitFindObjectOrNull(By.text("Change").clazz("android.widget.Button"))
+                ?: UiAutomatorUtils2.waitFindObjectOrNull(By.text("OK"))
         if (positiveButton != null) {
             positiveButton.click()
             uiDevice.waitForIdle()
@@ -250,7 +249,7 @@ class DefaultAssistantActivityTest {
     private fun getAppOpMode(): Int =
         SystemUtil.runWithShellPermissionIdentity<Int> {
             appOpsManager.checkOpNoThrow(
-                AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
+                AppOpsManager.OPSTR_READ_SCREEN_CONTEXT,
                 assistantRoleHolderPackageUid,
                 APP_PACKAGE_NAME,
             )
@@ -259,7 +258,7 @@ class DefaultAssistantActivityTest {
     private fun setAppOpMode(mode: Int) {
         SystemUtil.runWithShellPermissionIdentity {
             appOpsManager.setUidMode(
-                AppOpsManager.OPSTR_VOICE_INTERACTION_ASSIST_STRUCTURE,
+                AppOpsManager.OPSTR_READ_SCREEN_CONTEXT,
                 assistantRoleHolderPackageUid,
                 mode,
             )
