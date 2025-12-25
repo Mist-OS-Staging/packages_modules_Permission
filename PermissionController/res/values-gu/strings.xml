@@ -746,4 +746,7 @@
     <string name="assist_structure_setting_title" msgid="3448963992289353882">"સ્ક્રીન અને ઍપના સંદર્ભનો ઉપયોગ કરો"</string>
     <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"ડિફૉલ્ટ આસિસ્ટન્ટ ઍપને સ્ક્રીન અને દેખાઈ રહેલી ઍપ દ્વારા શેર કરાયેલો ડેટા ઍક્સેસ કરવાની મંજૂરી આપો"</string>
     <string name="assist_structure_setting_description" msgid="2865330212261060313">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>ને સ્ક્રીન અને દેખાઈ રહેલી ઍપ દ્વારા શેર કરાયેલો ડેટા ઍક્સેસ કરવાની મંજૂરી આપો"</string>
+    <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"મંજૂરી આપો"</string>
+    <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"મંજૂરી આપશો નહીં"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"લોકેશન બટનનો ઉપયોગ કરીને &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ને સચોટ લોકેશન ઍક્સેસ કરવાની મંજૂરી આપીએ?"</string>
 </resources>
