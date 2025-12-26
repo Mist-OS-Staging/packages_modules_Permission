@@ -746,10 +746,7 @@
     <string name="assist_structure_setting_title" msgid="3448963992289353882">"Používanie kontextu obrazovky a aplikácie"</string>
     <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Povoľte predvolenej asistenčnej aplikácii prístup k obrazovke a údajom zdieľaným viditeľnou aplikáciou"</string>
     <string name="assist_structure_setting_description" msgid="2865330212261060313">"Povoľte aplikácii <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> prístup k obrazovke a údajom zdieľaným viditeľnou aplikáciou"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_button_allow (3422800468376317863) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_button_dont_allow (3273946372861701473) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_title (5211661841432642995) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Povoliť"</string>
+    <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Nepovoliť"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Chcete povoliť aplikácii &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; prístup k presnej polohe pomocou tlačidla polohy?"</string>
 </resources>

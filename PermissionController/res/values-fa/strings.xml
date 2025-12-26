@@ -746,10 +746,7 @@
     <string name="assist_structure_setting_title" msgid="3448963992289353882">"استفاده کردن از بافت صفحه و برنامه"</string>
     <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"به برنامه دستیار پیش‌فرض اجازه داده می‌شود به صفحه‌نمایش و داده‌های هم‌رسانی‌شده توسط برنامه نمایان دسترسی داشته باشد"</string>
     <string name="assist_structure_setting_description" msgid="2865330212261060313">"به <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> اجازه داده می‌شود به صفحه‌نمایش و داده‌های هم‌رسانی‌شده توسط برنامه نمایان دسترسی داشته باشد"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_button_allow (3422800468376317863) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_button_dont_allow (3273946372861701473) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_title (5211661841432642995) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"اجازه دادن"</string>
+    <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"اجازه ندادن"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"به «<xliff:g id="APP_NAME">%1$s</xliff:g>» اجازه می‌دهید بااستفاده از دکمه مکان به مکان دقیق دسترسی پیدا کند؟"</string>
 </resources>

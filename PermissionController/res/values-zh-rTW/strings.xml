@@ -746,10 +746,7 @@
     <string name="assist_structure_setting_title" msgid="3448963992289353882">"使用畫面和應用程式情境"</string>
     <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"允許預設助理應用程式存取可見應用程式分享的畫面和資料"</string>
     <string name="assist_structure_setting_description" msgid="2865330212261060313">"允許「<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>」存取可見應用程式分享的畫面和資料"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_button_allow (3422800468376317863) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_button_dont_allow (3273946372861701473) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_title (5211661841432642995) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"允許"</string>
+    <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"不允許"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"要允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」使用位置資訊按鈕存取精確位置資訊嗎？"</string>
 </resources>
