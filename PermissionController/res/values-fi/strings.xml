@@ -746,10 +746,7 @@
     <string name="assist_structure_setting_title" msgid="3448963992289353882">"Käytä näytön ja sovelluksen kontekstia"</string>
     <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Salli oletusavustajasovellukselle pääsy näyttöön ja näkyvän sovelluksen jakamaan dataan"</string>
     <string name="assist_structure_setting_description" msgid="2865330212261060313">"Salli sovellukselle (<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>) pääsy näytön sisältöön ja näkyvän sovelluksen jakamaan dataan"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_button_allow (3422800468376317863) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_button_dont_allow (3273946372861701473) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_title (5211661841432642995) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Salli"</string>
+    <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Älä salli"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Saako &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; pääsyn tarkkaan sijaintiin sijaintipainikkeen avulla?"</string>
 </resources>

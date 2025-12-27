@@ -746,10 +746,7 @@
     <string name="assist_structure_setting_title" msgid="3448963992289353882">"ସ୍କ୍ରିନ ଏବଂ ଆପ ପ୍ରସଙ୍ଗ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"ସ୍କ୍ରିନ ଏବଂ ଭିଜିବିଲ ଆପ ଦ୍ୱାରା ସେୟାର କରାଯାଇଥିବା ଡାଟାକୁ ଆକ୍ସେସ କରିବା ପାଇଁ ଡିଫଲ୍ଟ ଆସିଷ୍ଟାଣ୍ଟ ଆପକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="assist_structure_setting_description" msgid="2865330212261060313">"ସ୍କ୍ରିନ ଏବଂ ଭିଜିବିଲ ଆପ ଦ୍ୱାରା ସେୟାର କରାଯାଇଥିବା ଡାଟାକୁ ଆକ୍ସେସ କରିବା ପାଇଁ <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>କୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_button_allow (3422800468376317863) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_button_dont_allow (3273946372861701473) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_title (5211661841432642995) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"ଅନୁମତି ଦିଅନ୍ତୁ"</string>
+    <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"ଅନୁମତି ଦିଅନ୍ତୁ ନାହିଁ"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"ଏକ ଲୋକେସନ ବଟନ ବ୍ୟବହାର କରି ସଠିକ ଲୋକେସନକୁ ଆକ୍ସେସ କରିବା ପାଇଁ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;କୁ ଅନୁମତି ଦେବେ?"</string>
 </resources>

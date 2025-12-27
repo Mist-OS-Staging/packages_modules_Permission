@@ -746,10 +746,7 @@
     <string name="assist_structure_setting_title" msgid="3448963992289353882">"Экран мен қолданба контексін пайдалану"</string>
     <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Әдепкі көмекші қолданбаға көрінетін қолданба бөлісетін экран мен деректерді пайдалануға рұқсат беру"</string>
     <string name="assist_structure_setting_description" msgid="2865330212261060313">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> қолданбасына көрінетін қолданба бөлісетін экран мен деректерді пайдалануға рұқсат беру"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_button_allow (3422800468376317863) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_button_dont_allow (3273946372861701473) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_title (5211661841432642995) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Рұқсат беру"</string>
+    <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Рұқсат бермеу"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; қолданбасына \"Локация\" түймесі арқылы нақты локацияны пайдалануға рұқсат беру керек пе?"</string>
 </resources>
