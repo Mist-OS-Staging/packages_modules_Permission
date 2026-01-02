@@ -41,6 +41,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
+import org.mockito.Mockito.mock
 import org.mockito.Mockito.`when` as whenever
 import org.mockito.MockitoAnnotations
 import org.mockito.MockitoSession
@@ -56,7 +57,6 @@ class RequestAssistStructureViewModelTest {
     @get:Rule val checkFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
 
     @Mock private lateinit var application: PermissionControllerApplication
-    @Mock private lateinit var voiceInteractionManager: VoiceInteractionManager
 
     private val appOpsRepository = FakeAppOpRepository(emptyFlow())
 
@@ -128,7 +128,7 @@ class RequestAssistStructureViewModelTest {
             application,
             PACKAGE_UID,
             appOpsRepository,
-            voiceInteractionManager,
+            mock(VoiceInteractionManager::class.java),
             backgroundScope,
             StandardTestDispatcher(testScheduler),
         )

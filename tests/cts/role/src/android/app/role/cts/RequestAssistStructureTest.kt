@@ -18,7 +18,6 @@ package android.app.role.cts
 import android.app.Activity
 import android.app.AppOpsManager
 import android.app.role.RoleManager
-import android.app.voiceinteraction.VoiceInteractionManager
 import android.content.ComponentName
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -70,8 +69,6 @@ class RequestAssistStructureTest {
     private val appOpsManager = context.getSystemService(AppOpsManager::class.java)!!
     private val roleManager = context.getSystemService(RoleManager::class.java)!!
 
-    private lateinit var voiceInteractionManager: VoiceInteractionManager
-
     private var assistantRoleHolderPackageUid: Int = Process.INVALID_UID
 
     private var roleHolder: String? = null
@@ -86,7 +83,6 @@ class RequestAssistStructureTest {
         saveRoleHolder()
         installPackage(APP_APK_PATH)
         assistantRoleHolderPackageUid = context.packageManager.getPackageUid(APP_PACKAGE_NAME, 0)
-        voiceInteractionManager = context.getSystemService(VoiceInteractionManager::class.java)!!
 
         setReadScreenContextRequestDeniedCount(0)
     }
