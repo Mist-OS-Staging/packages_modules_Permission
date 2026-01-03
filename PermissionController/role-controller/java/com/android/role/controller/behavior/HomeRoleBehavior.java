@@ -32,6 +32,7 @@ import androidx.annotation.RequiresApi;
 import com.android.modules.utils.build.SdkLevel;
 import com.android.role.controller.model.AppOpPermissions;
 import com.android.role.controller.model.Permissions;
+import com.android.role.controller.model.RequiredActivity;
 import com.android.role.controller.model.Role;
 import com.android.role.controller.model.RoleBehavior;
 import com.android.role.controller.model.VisibilityMixin;
@@ -82,7 +83,8 @@ public class HomeRoleBehavior implements RoleBehavior {
             @NonNull Context context) {
         Context userContext = UserUtils.getUserContext(context, user);
         PackageManager userPackageManager = userContext.getPackageManager();
-        Intent intent = role.getRequiredComponents().get(0).getIntentFilterData().createIntent();
+        RequiredActivity requiredActivity = (RequiredActivity) role.getRequirements().get(0);
+        Intent intent = requiredActivity.getIntentFilterData().createIntent();
         List<ResolveInfo> resolveInfos = userPackageManager.queryIntentActivities(intent,
                 PackageManager.MATCH_DEFAULT_ONLY | PackageManager.MATCH_DIRECT_BOOT_AWARE
                 | PackageManager.MATCH_DIRECT_BOOT_UNAWARE);
