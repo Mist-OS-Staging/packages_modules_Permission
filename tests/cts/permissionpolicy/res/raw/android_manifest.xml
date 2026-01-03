@@ -9817,6 +9817,14 @@
         android:protectionLevel="signature|role"
         android:featureFlag="android.view.contentprotection.flags.set_content_protection_allowlist_enabled" />
 
+    <!-- Allows an application to control sim auto pin management.
+            <p>Protection level: signature
+    @hide -->
+    <permission
+            android:name="android.permission.CONTROL_SIM_AUTO_PIN_MANAGEMENT"
+            android:protectionLevel="signature"
+            android:featureFlag="android.security.auto_sim_pin_management" />
+
     <!-- Allows an application to access npu model manager api.
          <p>Protection level: signature|privileged
          @FlaggedApi(com.android.npumanager.Flags.FLAG_NPUMANAGER_ENABLED)
