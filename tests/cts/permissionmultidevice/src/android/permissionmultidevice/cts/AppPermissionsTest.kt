@@ -28,6 +28,7 @@ import android.os.Build
 import android.permission.PermissionManager
 import android.permission.cts.TestUtils
 import android.permission.flags.Flags
+import android.platform.test.annotations.LargeTest
 import android.platform.test.annotations.RequiresFlagsEnabled
 import android.virtualdevice.cts.common.VirtualDeviceRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -53,6 +54,7 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA, codeName = "Baklava")
+@LargeTest
 class AppPermissionsTest {
     private val instrumentation: Instrumentation = InstrumentationRegistry.getInstrumentation()
     private val defaultDeviceContext = instrumentation.targetContext
@@ -74,8 +76,6 @@ class AppPermissionsTest {
 
     private val permissionManager =
         defaultDeviceContext.getSystemService(PermissionManager::class.java)!!
-
-    private val TAG = AppPermissionsTest::class.java.simpleName
 
     @Before
     fun setup() {
@@ -361,26 +361,42 @@ class AppPermissionsTest {
             )
         val outOfScopeTitles = setOf("Unused app settings", "Manage app if unused")
 
-        val titleSelector = UiSelector().resourceId(TITLE)
-        var currentGrantText = ""
+        val recyclerView = UiAutomatorUtils2.waitFindObject(By.res(RECYCLER_VIEW))
+        val titleSelector = By.res(TITLE)
 
-        val scrollable = getScrollableRecyclerView()
+        // Set gesture margin to avoid triggering system gestures
+        recyclerView.setGestureMargin(recyclerView.visibleBounds.width() / 10)
 
-        // Scrolling to end inorder to have the scrollable object loaded with all child element data
-        // ready to be read. If the scroll happens in the middle of the reading process, it has been
-        // observed that child items will be skipped during the reading (could be a bug). Hence this
-        // solution is to scroll to the bottom in the beginning and be more efficient as well.
-        scrollable.scrollToEnd(1)
+        // Scroll to top
+        while (recyclerView.scroll(androidx.test.uiautomator.Direction.UP, 1.0f)) {
+            UiAutomatorUtils2.getUiDevice().waitForIdle()
+        }
 
-        for (i in 0..scrollable.childCount) {
-            val child = scrollable.getChild(UiSelector().index(i))
-            val titleText = child.getChild(titleSelector).text
-            if (outOfScopeTitles.contains(titleText)) {
+        val allTitles = LinkedHashSet<String>()
+        var canScrollDown = true
+
+        while (true) {
+            val visibleTitles = recyclerView.findObjects(titleSelector)
+            for (titleObj in visibleTitles) {
+                allTitles.add(titleObj.text)
+            }
+
+            if (!canScrollDown) {
                 break
             }
-            if (grantInfoMap.contains(titleText)) {
+
+            canScrollDown = recyclerView.scroll(androidx.test.uiautomator.Direction.DOWN, 0.5f)
+            UiAutomatorUtils2.getUiDevice().waitForIdle()
+        }
+
+        var currentGrantText = ""
+        for (titleText in allTitles) {
+            if (outOfScopeTitles.contains(titleText)) {
+                continue
+            }
+            if (grantInfoMap.containsKey(titleText)) {
                 currentGrantText = titleText
-            } else if (!titleText.startsWith("No permissions")) {
+            } else if (currentGrantText.isNotEmpty() && !titleText.startsWith("No permissions")) {
                 grantInfoMap[currentGrantText]!!.add(titleText)
             }
         }
