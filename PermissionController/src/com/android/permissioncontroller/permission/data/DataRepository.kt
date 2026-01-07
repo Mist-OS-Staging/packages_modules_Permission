@@ -218,6 +218,14 @@ operator fun <K1, K2, V : DataRepository.InactiveTimekeeper> DataRepository<Pair
     return get(k1 to k2)
 }
 
+/** A getter on DataRepositoryForDevice to retrieve a LiveData for a device. */
+operator fun <K, V : DataRepository.InactiveTimekeeper> DataRepositoryForDevice<K, V>.get(
+    k: K,
+    deviceId: Int,
+): V {
+    return getWithDeviceId(k, deviceId)
+}
+
 /** A convenience to retrieve data from a repository with a composite key */
 operator fun <K1, K2, K3, V : DataRepository.InactiveTimekeeper> DataRepository<
     Triple<K1, K2, K3>,
