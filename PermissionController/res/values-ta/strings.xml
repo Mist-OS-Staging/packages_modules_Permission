@@ -130,7 +130,7 @@
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"ஏஜெண்ட் செயல்பாடு"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"சமீபத்தில் அனுமதிகளைப் பயன்படுத்திய ஆப்ஸைக் காட்டும்"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> உபயோகம்"</string>
-    <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"பிற அனுமதிகளைப் பார்த்தல்"</string>
+    <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"பிற அனுமதிகளைக் காட்டு"</string>
     <string name="perm_usage_adv_info_summary_2_items" msgid="3702175198750127822">"<xliff:g id="PERMGROUP_0">%1$s</xliff:g>, <xliff:g id="PERMGROUP_1">%2$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_summary_more_items" msgid="949055326299562218">"<xliff:g id="PERMGROUP_0">%1$s</xliff:g>, <xliff:g id="PERMGROUP_1">%2$s</xliff:g>, மேலும் <xliff:g id="NUM">%3$s</xliff:g>"</string>
     <string name="permission_group_usage_subtitle_24h" msgid="5120155996322114181">"கடந்த 24 மணிநேரத்தில் <xliff:g id="PERMGROUP">%1$s</xliff:g> ஐ ஆப்ஸ் பயன்படுத்தியதற்கான காலப்பதிவு"</string>

@@ -65,7 +65,9 @@ public class RoleParser {
     private static final String TAG_PERMISSION_SET = "permission-set";
     private static final String TAG_PERMISSION = "permission";
     private static final String TAG_ROLE = "role";
-    private static final String TAG_REQUIREMENTS = "requirements";
+    // We cannot actually rename the tag in APK resources because the APK may need to work on an
+    // older platform with an older APEX.
+    private static final String TAG_REQUIREMENTS = "required-components";
     private static final String TAG_USES_PERMISSION = "uses-permission";
     private static final String TAG_ACTIVITY = "activity";
     private static final String TAG_PROVIDER = "provider";

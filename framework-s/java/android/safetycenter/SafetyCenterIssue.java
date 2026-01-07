@@ -225,6 +225,9 @@ public final class SafetyCenterIssue implements Parcelable {
      *
      * <p>This is displayed in the UI and helps to attribute issue cards to a particular source.
      *
+     * <p>Note: On SDKs where Safety Center UI is fully migrated to the Settings app, the UI won't
+     * rely on this data anymore.
+     *
      * @throws UnsupportedOperationException if accessed from a version lower than {@link
      *     UPSIDE_DOWN_CAKE}
      */
@@ -563,6 +566,9 @@ public final class SafetyCenterIssue implements Parcelable {
          * Sets or clears the optional attribution title for this issue.
          *
          * <p>This is displayed in the UI and helps to attribute issue cards to a particular source.
+         *
+         * <p>Note: On SDKs where Safety Center UI is fully migrated to the Settings app, the UI
+         * won't rely on this data anymore.
          *
          * @throws UnsupportedOperationException if accessed from a version lower than {@link
          *     UPSIDE_DOWN_CAKE}
