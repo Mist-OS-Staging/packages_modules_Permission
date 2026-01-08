@@ -17,7 +17,6 @@
 
 package com.android.permissioncontroller.permission.ui.model.v31
 
-import android.Manifest
 import android.Manifest.permission_group.CAMERA
 import android.Manifest.permission_group.LOCATION
 import android.Manifest.permission_group.MICROPHONE
@@ -155,16 +154,6 @@ class ReviewOngoingUsageViewModel(state: SavedStateHandle, extraDurationMills: L
 
                 value = filteredUsages
             }
-
-            // TODO ntmyren: Replace this with better check if this moves beyond teamfood
-            private fun isAppPredictor(usage: OpAccess): Boolean {
-                return Utils.getUserContext(app, usage.user)
-                    .packageManager
-                    .checkPermission(
-                        Manifest.permission.MANAGE_APP_PREDICTIONS,
-                        usage.packageName,
-                    ) == PackageManager.PERMISSION_GRANTED
-            }
         }
 
     /**
@@ -219,7 +208,6 @@ class ReviewOngoingUsageViewModel(state: SavedStateHandle, extraDurationMills: L
                     val userContext =
                         Utils.getUserContext(PermissionControllerApplication.get(), user)
 
-                    // TODO ntmyren: Observe changes, possibly split into separate LiveDatas
                     val voiceInputs = mutableMapOf<String, CharSequence>()
                     userContext
                         .getSystemService(InputMethodManager::class.java)!!

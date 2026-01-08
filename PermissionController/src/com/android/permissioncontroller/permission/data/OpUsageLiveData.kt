@@ -23,7 +23,6 @@ import android.app.Application
 import android.os.Parcel
 import android.os.Parcelable
 import android.os.UserHandle
-import android.util.Log
 import com.android.permissioncontroller.PermissionControllerApplication
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.Job
@@ -110,24 +109,6 @@ class OpUsageLiveData(
                                 accessTime,
                                 proxyAccess,
                             )
-                        )
-
-                        // TODO ntmyren: remove logs once b/160724034 is fixed
-                        Log.i(
-                            "OpUsageLiveData",
-                            "adding ${opEntry.opStr} for " +
-                                "${packageOp.packageName}/$attributionTag, access time of " +
-                                "$lastAccessTime, isRunning: ${attributedOpEntry.isRunning} " +
-                                "current time $now, duration $lastAccessDuration, proxy: " +
-                                "${proxy?.packageName}",
-                        )
-                    } else {
-                        Log.i(
-                            "OpUsageLiveData",
-                            "NOT adding ${opEntry.opStr} for " +
-                                "${packageOp.packageName}/$attributionTag, access time of " +
-                                "$lastAccessTime, isRunning: ${attributedOpEntry.isRunning} " +
-                                "current time $now, duration $lastAccessDuration",
                         )
                     }
                 }

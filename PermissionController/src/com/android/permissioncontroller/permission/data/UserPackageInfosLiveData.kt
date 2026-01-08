@@ -48,7 +48,6 @@ private constructor(private val app: Application, private val user: UserHandle) 
         updateAsync()
     }
 
-    // TODO ntmyren: replace with correctly updating
     override fun onPermissionChange() {
         permChangeStale = true
         for (packageInfo in value ?: emptyList()) {
