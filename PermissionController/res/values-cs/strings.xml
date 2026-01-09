@@ -642,7 +642,7 @@
     <string name="mic_toggle_description" msgid="9163104307990677157">"Týká se aplikací a služeb. Pokud je toto nastavení vypnuté a zavoláte na číslo tísňového volání, data z mikrofonu se mohou stále sdílet."</string>
     <string name="location_settings_subtitle" msgid="2328360561197430695">"Seznam aplikací a služeb, které mají přístup k poloze"</string>
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"Zobrazovat použití schránky"</string>
-    <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"Zobrazovat zprávu, když aplikace použijí text, obrázky nebo jiný obsah, který jste zkopírovali"</string>
+    <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"Když aplikace použijí text, obrázky nebo jiný obsah, který jste zkopírovali, zobrazí se zpráva"</string>
     <string name="show_password_title" msgid="2877269286984684659">"Zobrazovat hesla"</string>
     <string name="show_password_summary" msgid="1110166488865981610">"Při psaní se budou krátce zobrazovat zadané znaky"</string>
     <string name="permission_rationale_message_location" msgid="2153841534298068414">"Tato aplikace uvedla, že může sdílet údaje o poloze se třetími stranami"</string>

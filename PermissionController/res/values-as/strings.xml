@@ -644,7 +644,7 @@
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"ক্লিপব’ৰ্ডৰ এক্সেছ দেখুৱাওক"</string>
     <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"এপে আপুনি প্ৰতিলিপি কৰা পাঠ, প্ৰতিচ্ছবি অথবা অন্য সমল এক্সেছ কৰিলে এটা বাৰ্তা দেখুৱাওক"</string>
     <string name="show_password_title" msgid="2877269286984684659">"পাছৱৰ্ডবোৰ দেখুৱাওক"</string>
-    <string name="show_password_summary" msgid="1110166488865981610">"আপুনি টাইপ কৰাৰ লগে লগে বৰ্ণসমূহ খন্তেকৰ বাবে দেখুৱাওক"</string>
+    <string name="show_password_summary" msgid="1110166488865981610">"আপুনি টাইপ কৰাৰ লগে লগে বৰ্ণসংখ্যাসমূহ খন্তেকৰ বাবে দেখুৱাওক"</string>
     <string name="permission_rationale_message_location" msgid="2153841534298068414">"এই এপ্‌টোৱে তৃতীয় পক্ষৰ সৈতে অৱস্থানৰ ডেটা শ্বেয়াৰ কৰিব পাৰে বুলি জনাইছে"</string>
     <string name="permission_rationale_location_title" msgid="2404797182678793506">"ডেটা শ্বেয়াৰ কৰা আৰু অৱস্থান"</string>
     <string name="permission_rationale_data_sharing_source_title" msgid="6874604543125814316">"ডেটা শ্বেয়াৰ কৰাৰ তথ্যখিনি ক’ৰ পৰা আহে"</string>
