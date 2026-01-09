@@ -495,6 +495,7 @@
         </activity>
 
         <activity android:name="com.android.permissioncontroller.role.ui.v37.AssistantSettingsActivity"
+            android:enabled="@bool/is_at_least_v37"
             android:excludeFromRecents="true"
             android:exported="true"
             android:featureFlag="android.permission.flags.assist_settings_privacy_improvements_enabled"
