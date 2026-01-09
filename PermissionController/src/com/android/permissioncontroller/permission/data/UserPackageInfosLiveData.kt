@@ -57,7 +57,6 @@ private constructor(
         updateAsync()
     }
 
-    // TODO ntmyren: replace with correctly updating
     override fun onPermissionChange() {
         permChangeStale = true
         for (packageInfo in value ?: emptyList()) {
