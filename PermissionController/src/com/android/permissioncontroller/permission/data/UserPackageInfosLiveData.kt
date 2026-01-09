@@ -30,9 +30,6 @@ import com.android.permissioncontroller.permission.model.livedatatypes.LightPack
 import com.android.permissioncontroller.permission.utils.ContextCompat
 import com.android.permissioncontroller.permission.utils.v35.MultiDeviceUtils
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.async
-import kotlinx.coroutines.awaitAll
-import kotlinx.coroutines.coroutineScope
 
 /**
  * A LiveData which tracks all of the packageinfos installed for a given user.
@@ -104,51 +101,46 @@ private constructor(
                 )
             }
 
-        val lightPackageInfos = coroutineScope {
-            packageInfos
-                .map { packageInfo ->
-                    async {
-                        val mergedPackageInfo =
-                            if (packageInfo.sharedUserId != null) {
-                                val otherPackages =
-                                    packageInfos.filter {
-                                        it.sharedUserId == packageInfo.sharedUserId
-                                    }
-                                LightPackageInfoLiveData.mergePermissionsInSharedUid(
-                                    packageInfo,
-                                    otherPackages,
-                                )
-                            } else {
-                                packageInfo
-                            }
+        val sharedUidMap =
+            packageInfos.filter { it.sharedUserId != null }.groupBy { it.sharedUserId }
 
-                        // PackageInfo#requestedPermissionsFlags is not device aware. Hence for
-                        // device aware permissions if the deviceId is not the primary device we
-                        // need to separately check permission for that device and update
-                        // requestedPermissionsFlags.
-                        if (SdkLevel.isAtLeastV() && deviceId != ContextCompat.DEVICE_ID_DEFAULT) {
-                            val requestedPermissionsFlagsForDevice =
-                                MultiDeviceUtils.getPermissionsFlagsForDevice(
-                                    app,
-                                    mergedPackageInfo.requestedPermissions?.toList() ?: emptyList(),
-                                    mergedPackageInfo.requestedPermissionsFlags?.toList()
-                                        ?: emptyList(),
-                                    mergedPackageInfo.applicationInfo!!.uid,
-                                    deviceId,
-                                )
+        val lightPackageInfos =
+            packageInfos.map { packageInfo ->
+                val mergedPackageInfo =
+                    if (packageInfo.sharedUserId != null) {
+                        val otherPackages = sharedUidMap[packageInfo.sharedUserId] ?: emptyList()
 
-                            LightPackageInfo(
-                                mergedPackageInfo,
-                                deviceId,
-                                requestedPermissionsFlagsForDevice,
-                            )
-                        } else {
-                            LightPackageInfo(mergedPackageInfo)
-                        }
+                        LightPackageInfoLiveData.mergePermissionsInSharedUid(
+                            packageInfo,
+                            otherPackages,
+                        )
+                    } else {
+                        packageInfo
                     }
+
+                // PackageInfo#requestedPermissionsFlags is not device aware. Hence for
+                // device aware permissions if the deviceId is not the primary device we
+                // need to separately check permission for that device and update
+                // requestedPermissionsFlags.
+                if (SdkLevel.isAtLeastV() && deviceId != ContextCompat.DEVICE_ID_DEFAULT) {
+                    val requestedPermissionsFlagsForDevice =
+                        MultiDeviceUtils.getPermissionsFlagsForDevice(
+                            app,
+                            mergedPackageInfo.requestedPermissions?.toList() ?: emptyList(),
+                            mergedPackageInfo.requestedPermissionsFlags?.toList() ?: emptyList(),
+                            mergedPackageInfo.applicationInfo!!.uid,
+                            deviceId,
+                        )
+
+                    LightPackageInfo(
+                        mergedPackageInfo,
+                        deviceId,
+                        requestedPermissionsFlagsForDevice,
+                    )
+                } else {
+                    LightPackageInfo(mergedPackageInfo)
                 }
-                .awaitAll()
-        }
+            }
 
         postValue(lightPackageInfos)
     }
