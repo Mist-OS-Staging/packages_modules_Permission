@@ -60,7 +60,6 @@ abstract class SmartAsyncMediatorLiveData<T>(
         GlobalScope.launch(IPC) {
             currentJob = coroutineContext[Job]
             loadDataAndPostValue(currentJob!!)
-            // TODO ntmyren: generalize this command to the IPC dispatcher
             Binder.flushPendingCommands()
             jobRunning = false
             if (jobQueued) {
