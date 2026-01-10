@@ -1088,7 +1088,7 @@ public final class RoleManager {
 
     /**
      * Set the role holder of {@link #ROLE_BROWSER} requiring
-     * {@link Manifest.permission.SET_PREFERRED_APPLICATIONS} instead of
+     * {@link Manifest.permission#SET_PREFERRED_APPLICATIONS} instead of
      * {@link Manifest.permission#MANAGE_ROLE_HOLDERS}, as in
      * {@link android.content.pm.PackageManager#setDefaultBrowserPackageNameAsUser(String, int)}
      *
