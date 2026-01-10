@@ -644,7 +644,7 @@
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"نمایش دسترسی به بریده‌دان"</string>
     <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"وقتی برنامه‌ها به نوشتار، تصویر، یا محتوای دیگری که کپی کرده‌اید دسترسی پیدا می‌کنند، پیامی نشان داده می‌شود"</string>
     <string name="show_password_title" msgid="2877269286984684659">"نمایش گذرواژه‌ها"</string>
-    <string name="show_password_summary" msgid="1110166488865981610">"همان‌طور که تایپ می‌کنید، نویسه‌ها را برای مدت کوتاهی نشان می‌دهد"</string>
+    <string name="show_password_summary" msgid="1110166488865981610">"همان‌طور که تایپ می‌کنید، نویسه‌ها را برای مدت کوتاهی نشان داده می‌شوند"</string>
     <string name="permission_rationale_message_location" msgid="2153841534298068414">"این برنامه اعلام کرده است که ممکن است داده‌های مکان را با اشخاص ثالث هم‌رسانی کند"</string>
     <string name="permission_rationale_location_title" msgid="2404797182678793506">"هم‌رسانی داده‌ها و مکان"</string>
     <string name="permission_rationale_data_sharing_source_title" msgid="6874604543125814316">"اطلاعات هم‌رسانی داده از کجا می‌آید"</string>

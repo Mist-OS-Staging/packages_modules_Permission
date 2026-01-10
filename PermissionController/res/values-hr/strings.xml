@@ -667,7 +667,7 @@
     <string name="app_location_permission_rationale_title" msgid="925420340572401350">"Podaci o lokaciji mogu se dijeliti"</string>
     <string name="app_location_permission_rationale_subtitle" msgid="6986985722752868692">"Aplikacija je navela da vaše podatke o lokaciji može dijeliti s trećim stranama"</string>
     <string name="data_sharing_updates_title" msgid="7996933386875213859">"Ažuriranja o dijeljenju podataka za lokaciju"</string>
-    <string name="data_sharing_updates_summary" msgid="764113985772233889">"Pregledajte aplikacije koje su promijenile način na koji mogu dijeliti vaše podatke o lokaciji"</string>
+    <string name="data_sharing_updates_summary" msgid="764113985772233889">"Pregledajte aplikacije koje su promijenile način na koji mogu dijeliti podatke o vašoj lokaciji"</string>
     <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"Ove su aplikacije promijenile način na koji mogu dijeliti vaše podatke o lokaciji. Ranije ih možda nisu dijelile ili ih sada mogu dijeliti u svrhe oglašavanja ili marketinga."</string>
     <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Razvojni programeri tih aplikacija su trgovini aplikacija poslali podatke o praksama dijeljenja podataka. S vremenom ih mogu ažurirati.\n\nPrakse dijeljenja podataka mogu se razlikovati ovisno o verziji aplikacije, upotrebi, regiji i dobi."</string>
     <string name="learn_about_data_sharing" msgid="4200480587079488045">"Saznajte više o dijeljenju podataka"</string>
