@@ -17,6 +17,7 @@
 package com.android.role.controller.behavior;
 
 import android.app.ActivityManager;
+import android.app.AppOpsManager;
 import android.app.role.RoleManager;
 import android.content.Context;
 import android.content.Intent;
@@ -67,6 +68,33 @@ public class AssistantRoleBehavior implements RoleBehavior {
                 // user selected "None" in Settings and we need to keep that.
                 role.onNoneHolderSelectedAsUser(user, context);
             }
+        }
+    }
+
+    @Override
+    public void revokeAsUser(@NonNull Role role, @NonNull String packageName,
+            @NonNull UserHandle user, @NonNull Context context) {
+        if (android.permission.flags.Flags.assistSettingsPrivacyImprovementsEnabled()) {
+            resetReadScreenContextIfModeDefault(packageName, user, context);
+        }
+    }
+
+    private static void resetReadScreenContextIfModeDefault(@NonNull String packageName,
+            @NonNull UserHandle user, @NonNull Context context) {
+        Context userContext = UserUtils.getUserContext(context, user);
+        PackageManager userPackageManager = userContext.getPackageManager();
+        int uid;
+        try {
+            uid = userPackageManager.getPackageUid(packageName, 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            return;
+        }
+        AppOpsManager appOpsManager = userContext.getSystemService(AppOpsManager.class);
+        int appOpMode = appOpsManager.checkOpNoThrow(AppOpsManager.OPSTR_READ_SCREEN_CONTEXT, uid,
+                packageName);
+        if (appOpMode == AppOpsManager.MODE_DEFAULT) {
+            appOpsManager.setUidMode(AppOpsManager.OPSTR_READ_SCREEN_CONTEXT, uid,
+                    AppOpsManager.MODE_IGNORED);
         }
     }
 
