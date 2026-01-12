@@ -81,6 +81,7 @@ android_test {
         ":CtsAppWithSharedUidNoPerms",
         ":CtsAppWithSharedUidWithPerms",
         ":CtsLocationButtonApp",
+        ":CtsAppThatRequestsInternet36",
     ],
     test_suites: [
         "cts",

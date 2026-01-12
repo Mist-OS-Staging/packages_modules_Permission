@@ -48,6 +48,7 @@ import android.content.pm.PackageManager.FLAG_PERMISSION_ONE_TIME
 import android.content.pm.PackageManager.FLAG_PERMISSION_POLICY_FIXED
 import android.content.pm.PackageManager.FLAG_PERMISSION_REVIEW_REQUIRED
 import android.content.pm.PackageManager.FLAG_PERMISSION_REVOKED_COMPAT
+import android.content.pm.PackageManager.FLAG_PERMISSION_REVOKE_WHEN_REQUESTED
 import android.content.pm.PackageManager.FLAG_PERMISSION_USER_FIXED
 import android.content.pm.PackageManager.FLAG_PERMISSION_USER_SET
 import android.content.pm.PackageManager.MATCH_DIRECT_BOOT_AWARE
@@ -120,9 +121,9 @@ object KotlinUtils {
             FLAG_PERMISSION_USER_FIXED or
             FLAG_PERMISSION_ONE_TIME or
             FLAG_PERMISSION_REVOKED_COMPAT or
-            FLAG_PERMISSION_ONE_TIME or
             FLAG_PERMISSION_REVIEW_REQUIRED or
-            FLAG_PERMISSION_AUTO_REVOKED
+            FLAG_PERMISSION_AUTO_REVOKED or
+            FLAG_PERMISSION_REVOKE_WHEN_REQUESTED
 
     private const val KILL_REASON_APP_OP_CHANGE = "Permission related app op changed"
     private const val SAFETY_PROTECTION_RESOURCES_ENABLED = "safety_protection_enabled"

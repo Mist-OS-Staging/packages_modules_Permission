@@ -232,6 +232,7 @@ class AppPermissionGrantStateScreen(
             PermGrantState.PERMS_ALLOWED_FOREGROUND_ONLY -> "Allowed while using the app"
             PermGrantState.PERMS_ALLOWED_ALWAYS -> "Always Allowed"
             PermGrantState.PERMS_ASK -> "Ask every time"
+            PermGrantState.PERMS_ALLOWED_FOR_COMPATIBILITY -> "Allowed to keep app working"
         }
     }
 

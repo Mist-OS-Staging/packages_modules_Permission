@@ -37,5 +37,6 @@ data class AppPermGroupUiInfo(
         PERMS_ALLOWED_FOREGROUND_ONLY(2),
         PERMS_ALLOWED_ALWAYS(3),
         PERMS_ASK(4),
+        PERMS_ALLOWED_FOR_COMPATIBILITY(5),
     }
 }

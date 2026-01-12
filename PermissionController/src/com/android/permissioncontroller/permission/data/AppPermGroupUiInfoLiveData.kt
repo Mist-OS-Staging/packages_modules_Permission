@@ -26,6 +26,8 @@ import android.content.pm.PackageManager
 import android.content.pm.PermissionInfo
 import android.os.Build
 import android.os.UserHandle
+import android.permission.flags.Flags
+import com.android.permissioncontroller.DeviceUtils
 import com.android.permissioncontroller.PermissionControllerApplication
 import com.android.permissioncontroller.permission.model.livedatatypes.AppPermGroupUiInfo
 import com.android.permissioncontroller.permission.model.livedatatypes.AppPermGroupUiInfo.PermGrantState
@@ -145,10 +147,43 @@ private constructor(
 
         val isUserSet = isUserSet(permissionState)
 
-        val permGrantState =
+        var permGrantState =
             getGrantedIncludingBackground(permissionState, allPermInfos, packageInfo)
 
+        if (
+            isAllowedForCompatibilityCategoryInNearbyDevicesGroup(groupInfo.name, permissionState)
+        ) {
+            permGrantState = PermGrantState.PERMS_ALLOWED_FOR_COMPATIBILITY
+        }
+
         return AppPermGroupUiInfo(shouldShow, permGrantState, isSystemApp, isUserSet)
+    }
+
+    private fun isAllowedForCompatibilityCategoryInNearbyDevicesGroup(
+        groupName: String,
+        permissionState: Map<String, PermState>,
+    ): Boolean {
+        if (
+            !Flags.accessLocalNetworkPermissionEnabled() ||
+                groupName != Manifest.permission_group.NEARBY_DEVICES
+        ) {
+            return false
+        }
+
+        // TODO(b/479613003): Support Auto form factor
+        // TODO(b/479895707): Support Wear form factor
+        // TODO(b/479896440): Support TV form factor
+        if (!DeviceUtils.isHandheld()) {
+            return false
+        }
+
+        val flags = permissionState[Manifest.permission.ACCESS_LOCAL_NETWORK]?.permFlags ?: 0
+        val isImplicitGrant = (flags and PackageManager.FLAG_PERMISSION_REVOKE_WHEN_REQUESTED) != 0
+        if (!isImplicitGrant) return false
+
+        return permissionState.none { (permission, state) ->
+            permission != Manifest.permission.ACCESS_LOCAL_NETWORK && state.granted
+        }
     }
 
     /**

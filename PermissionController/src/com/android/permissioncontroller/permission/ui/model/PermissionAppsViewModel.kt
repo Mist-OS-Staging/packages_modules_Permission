@@ -211,6 +211,12 @@ class PermissionAppsViewModel(
             categoryMap[Category.ALLOWED_FOREGROUND] = mutableListOf()
             categoryMap[Category.ASK] = mutableListOf()
             categoryMap[Category.DENIED] = mutableListOf()
+            // TODO(b/479613003): Support Auto form factor
+            // TODO(b/479895707): Support Wear form factor
+            // TODO(b/479896440): Support TV form factor
+            if (DeviceUtils.isHandheld()) {
+                categoryMap[Category.ALLOWED_FOR_COMPATIBILITY] = mutableListOf()
+            }
 
             val packageMap =
                 packagesUiInfoLiveData.value
@@ -251,6 +257,8 @@ class PermissionAppsViewModel(
                         PermGrantState.PERMS_ALLOWED_ALWAYS -> Category.ALLOWED
                         PermGrantState.PERMS_DENIED -> Category.DENIED
                         PermGrantState.PERMS_ASK -> Category.ASK
+                        PermGrantState.PERMS_ALLOWED_FOR_COMPATIBILITY ->
+                            Category.ALLOWED_FOR_COMPATIBILITY
                     }
 
                 if (

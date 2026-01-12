@@ -834,6 +834,9 @@
     <!-- Header for permissions/apps that are granted only when in the foreground [CHAR LIMIT=40] -->
     <string name="allowed_foreground_header">Allowed only while in use</string>
 
+    <!-- Header for granted apps, granted inorder to keep app working [CHAR LIMIT=40] -->
+    <string name="allowed_for_compatibility_header">Allowed to keep app working</string>
+
     <!-- Subtitle for scoped storage permissions, showing apps that have access to media files only [CHAR LIMIT=45] -->
     <string name="allowed_storage_scoped">Allowed access to media only</string>
 
@@ -851,6 +854,9 @@
 
     <!-- Text of hyperlink shown in storage_footer [CHAR LIMIT=60] -->
     <string name="storage_footer_hyperlink_text">See more apps that can access all files</string>
+
+    <!-- Info text shown as a footer in "NearBy Devices" permission group [CHAR LIMIT=None] -->
+    <string name="allowed_for_compatibility_nearby_devices_footer">&lt;b>Allowed to keep app working&lt;/b>&lt;br>&lt;br>For an app to keep working, it may be allowed to access your local network and connect with devices on this network only.&lt;br>&lt;br>The app can\u2019t connect to devices using Bluetooth and other technologies unless you allow it to find and connect to all nearby devices.</string>
 
     <!-- Time in days -->
     <string name="days">{count, plural,
