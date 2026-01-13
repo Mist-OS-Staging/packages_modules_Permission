@@ -17,6 +17,7 @@
 package com.android.permissioncontroller.role.ui.behavior;
 
 import android.content.Context;
+import android.os.UserHandle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,7 +32,7 @@ public class EmergencyRoleUiBehavior implements RoleUiBehavior {
     @Nullable
     @Override
     public ConfirmationDialogInfo getConfirmationDialogInfo(@NonNull Role role,
-            @NonNull String packageName, @NonNull Context context) {
+            @NonNull String packageName, @NonNull UserHandle user, @NonNull Context context) {
         return EncryptionUnawareConfirmationMixin.getConfirmationDialogInfo(role, packageName,
                 context);
     }

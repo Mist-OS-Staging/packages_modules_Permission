@@ -51,7 +51,7 @@ public class DialerRoleUiBehavior implements RoleUiBehavior {
     @Nullable
     @Override
     public ConfirmationDialogInfo getConfirmationDialogInfo(@NonNull Role role,
-            @NonNull String packageName, @NonNull Context context) {
+            @NonNull String packageName, @NonNull UserHandle user, @NonNull Context context) {
         return EncryptionUnawareConfirmationMixin.getConfirmationDialogInfo(role, packageName,
                 context);
     }

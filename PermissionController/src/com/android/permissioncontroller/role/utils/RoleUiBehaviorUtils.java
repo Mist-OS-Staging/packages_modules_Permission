@@ -163,11 +163,11 @@ public final class RoleUiBehaviorUtils {
      */
     @Nullable
     public static ConfirmationDialogInfo getConfirmationDialogInfo(@NonNull Role role,
-            @NonNull String packageName, @NonNull Context context) {
+            @NonNull String packageName, @NonNull UserHandle user, @NonNull Context context) {
         RoleUiBehavior uiBehavior = getUiBehavior(role);
         if (uiBehavior == null) {
             return null;
         }
-        return uiBehavior.getConfirmationDialogInfo(role, packageName, context);
+        return uiBehavior.getConfirmationDialogInfo(role, packageName, user, context);
     }
 }

@@ -420,7 +420,7 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
             int uid = preference.getExtras().getInt(PREFERENCE_EXTRA_UID);
             ConfirmationDialogInfo confirmationDialogInfo =
                     RoleUiBehaviorUtils.getConfirmationDialogInfo(mRole, packageName,
-                            requireContext());
+                            UserHandle.getUserHandleForUid(uid), requireContext());
             if (confirmationDialogInfo != null) {
                 DefaultAppConfirmationDialogFragment.show(mRoleName, packageName, uid,
                         confirmationDialogInfo, this);

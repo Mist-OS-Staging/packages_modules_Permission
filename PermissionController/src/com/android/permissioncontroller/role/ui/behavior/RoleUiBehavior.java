@@ -141,13 +141,14 @@ public interface RoleUiBehavior {
      *
      * @param role the role to get confirmation dialog info for
      * @param packageName the package name of the application to get confirmation dialog info for
+     * @param user the user of the application to get confirmation dialog info for
      * @param context the {@code Context} to retrieve system services
      *
      * @return the confirmation dialog info, or {@code null} if no confirmation is needed
      */
     @Nullable
     default ConfirmationDialogInfo getConfirmationDialogInfo(@NonNull Role role,
-            @NonNull String packageName, @NonNull Context context) {
+            @NonNull String packageName, @NonNull UserHandle user, @NonNull Context context) {
         return null;
     }
 }

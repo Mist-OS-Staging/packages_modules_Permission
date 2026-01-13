@@ -108,11 +108,17 @@ public class HomeRoleUiBehavior implements RoleUiBehavior {
     @Nullable
     @Override
     public ConfirmationDialogInfo getConfirmationDialogInfo(@NonNull Role role,
-            @NonNull String packageName, @NonNull Context context) {
+            @NonNull String packageName, @NonNull UserHandle user, @NonNull Context context) {
         if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.BAKLAVA
                         && Flags.newDefaultAppConfirmationDialogEnabled())
                 || context.getResources().getBoolean(R.bool.config_showHomeConfirmationDialog)) {
-            return new ConfirmationDialogInfo(context.getString(R.string.home_confirmation_title),
+            ApplicationInfo applicationInfo =
+                    PackageUtils.getApplicationInfoAsUser(packageName, user, context);
+            String appLabel = applicationInfo != null ? Utils.getFullAppLabel(applicationInfo,
+                    context) : packageName;
+            String escapedAppLabel = Html.escapeHtml(appLabel);
+            return new ConfirmationDialogInfo(true,
+                Html.fromHtml(context.getString(R.string.home_confirmation_title, escapedAppLabel)),
                 Html.fromHtml(context.getString(R.string.home_confirmation_message)),
                 context.getString(R.string.default_app_confirmation_positive_button),
                 context.getString(R.string.default_app_confirmation_negative_button), true);
