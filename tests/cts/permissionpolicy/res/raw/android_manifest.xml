@@ -7875,6 +7875,14 @@
         android:protectionLevel="signature|privileged"
         android:featureFlag="android.app.hide_status_bar_notification"/>
 
+    <!-- @hide @SystemApi Allows an application to mark notifications as originating from
+    another device and provide metadata for displaying the notification to the user.
+    <p>Not for use by third-party applications.
+    @FlaggedApi(android.app.Flags.FLAG_BRIDGED_NOTIFICATIONS)-->
+    <permission android:name="android.permission.POST_BRIDGED_NOTIFICATIONS"
+        android:protectionLevel="signature|privileged"
+        android:featureFlag="android.app.bridged_notifications"/>
+
     <!-- Allows applications to set the initial lockscreen state.
          <p>Not for use by third-party applications. @hide -->
     <permission android:name="android.permission.SET_INITIAL_LOCK"
