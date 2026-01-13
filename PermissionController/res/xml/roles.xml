@@ -2037,6 +2037,9 @@
             <permission
                 name="android.permission.READ_FRAME_BUFFER"
                 featureFlag="com.android.graphics.surfaceflinger.flags.Flags.readbackScreenshot" />
+            <permission
+                name="android.permission.ACCESS_ATTENTION_LISTENER"
+                featureFlag="com.android.input.flags.Flags.enableAttentionServiceApis" />
         </permissions>
     </role>
 

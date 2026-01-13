@@ -568,10 +568,14 @@ public class RequestRoleFragment extends DialogFragment {
 
         public void replace(@NonNull List<RoleApplicationItem> applicationItems) {
             mApplicationItems.clear();
-            if (mRole.shouldShowNone()) {
+            if (mRole.shouldShowNone() && !isAssistSettingsPrivacyImprovementsEnabled()) {
                 mApplicationItems.add(0, null);
             }
             mApplicationItems.addAll(applicationItems);
+            if (mRole.shouldShowNone() && isAssistSettingsPrivacyImprovementsEnabled()) {
+                mApplicationItems.add(null);
+            }
+
             mHolderUserPackage = getHolderUserPackage(applicationItems);
 
             if (mUserChecked && mCheckedUserPackage != null) {
@@ -704,7 +708,8 @@ public class RequestRoleFragment extends DialogFragment {
                 applicationInfo = null;
                 restricted = false;
                 checked = mCheckedUserPackage == null;
-                icon = AppCompatResources.getDrawable(context, R.drawable.ic_remove_circle);
+                icon = isAssistSettingsPrivacyImprovementsEnabled() ? null :
+                        AppCompatResources.getDrawable(context, R.drawable.ic_remove_circle);
                 title = context.getString(R.string.default_app_none);
                 subtitle = mHolderUserPackage == null ? context.getString(
                         R.string.request_role_current_default) : null;
@@ -741,6 +746,10 @@ public class RequestRoleFragment extends DialogFragment {
             }
 
             return view;
+        }
+
+        private static boolean isAssistSettingsPrivacyImprovementsEnabled() {
+            return android.permission.flags.Flags.assistSettingsPrivacyImprovementsEnabled();
         }
 
         private static class ViewHolder implements RequestRoleItemView {
