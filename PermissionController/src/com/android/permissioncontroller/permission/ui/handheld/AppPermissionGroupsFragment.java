@@ -370,7 +370,7 @@ public final class AppPermissionGroupsFragment extends SettingsWithLargeHeader i
 
                 PermissionControlPreference preference = new PermissionControlPreference(context,
                         mPackageName, groupName, mUser, AppPermissionGroupsFragment.class.getName(),
-                        sessionId, grantCategory.getCategoryName(), true);
+                        sessionId, grantCategory.getCategoryName());
 
                 CharSequence permissionGroupName = KotlinUtils.INSTANCE.getPermGroupLabel(context,
                         groupName);

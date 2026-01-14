@@ -7875,6 +7875,14 @@
         android:protectionLevel="signature|privileged"
         android:featureFlag="android.app.hide_status_bar_notification"/>
 
+    <!-- @hide @SystemApi Allows an application to mark notifications as originating from
+    another device and provide metadata for displaying the notification to the user.
+    <p>Not for use by third-party applications.
+    @FlaggedApi(android.app.Flags.FLAG_BRIDGED_NOTIFICATIONS)-->
+    <permission android:name="android.permission.POST_BRIDGED_NOTIFICATIONS"
+        android:protectionLevel="signature|privileged"
+        android:featureFlag="android.app.bridged_notifications"/>
+
     <!-- Allows applications to set the initial lockscreen state.
          <p>Not for use by third-party applications. @hide -->
     <permission android:name="android.permission.SET_INITIAL_LOCK"
@@ -9001,6 +9009,13 @@
          ASSISTANT role.  -->
     <permission android:name="android.permission.READ_ASSISTANT_APP_SEARCH_DATA"
         android:protectionLevel="internal|role" />
+
+    <!-- @SystemApi Allows an application to query AppFunction metadata stored within platform.
+         @hide
+         @FlaggedApi(android.app.appfunctions.flags.Flags.FLAG_ENABLE_APP_FUNCTION_PERMISSION_V2) -->
+    <permission android:name="android.permission.READ_APP_FUNCTION_METADATA"
+        android:protectionLevel="internal|role"
+        android:featureFlag="android.app.appfunctions.flags.enable_app_function_permission_v2" />
 
     <!-- Allows an application to query over global data in AppSearch that's visible to the
          HOME role.  -->

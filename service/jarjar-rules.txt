@@ -56,7 +56,10 @@ rule com.android.input.flags.*FeatureFlags* com.android.permission.jarjar.@0
 rule com.android.input.flags.FeatureFlags* com.android.permission.jarjar.@0
 rule com.android.input.flags.FeatureFlags com.android.permission.jarjar.@0
 rule com.android.input.flags.Flags com.android.permission.jarjar.@0
-rule com.android.internal.** com.android.permission.jarjar.@0
+# com.android.internal.** cannot be jarjared altogether because of its
+# flagging lib.
+rule com.android.internal.infra.** com.android.permission.jarjar.@0
+rule com.android.internal.util.** com.android.permission.jarjar.@0
 rule com.android.modules.** com.android.permission.jarjar.@0
 rule com.android.permission.flags.*FeatureFlags* com.android.permission.jarjar.@0
 rule com.android.permission.flags.FeatureFlags* com.android.permission.jarjar.@0
@@ -88,6 +91,8 @@ rule android.media.audio.*FeatureFlags* com.android.permission.jarjar.@0
 rule android.media.audio.FeatureFlags* com.android.permission.jarjar.@0
 rule android.media.audio.FeatureFlags com.android.permission.jarjar.@0
 rule android.media.audio.Flags com.android.permission.jarjar.@0
+# com.android.internal.** cannot be jarjared altogether because of its
+# flagging lib.
 rule com.android.internal.telephony.flags.*FeatureFlags* com.android.permission.jarjar.@0
 rule com.android.internal.telephony.flags.FeatureFlags* com.android.permission.jarjar.@0
 rule com.android.internal.telephony.flags.FeatureFlags com.android.permission.jarjar.@0
