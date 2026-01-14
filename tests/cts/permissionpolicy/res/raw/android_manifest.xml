@@ -9934,6 +9934,15 @@
         android:protectionLevel="signature|privileged"
         android:featureFlag="android.app.enable_motion_cues" />
 
+    <!-- Permission needed to ensure that only the system process can bind with the
+	 {@link android.service.messaging.AlternativeMessageTransportService}.
+	 @FlaggedApi(com.android.internal.telephony.flags.Flags.FLAG_MESSAGE_PROMOTION)
+    -->
+    <permission
+        android:name="android.permission.BIND_ALTERNATIVE_MESSAGE_TRANSPORT_SERVICE"
+        android:protectionLevel="signature"
+        android:featureFlag="com.android.internal.telephony.flags.message_promotion" />
+
     <!-- Attribution for Geofencing service. -->
     <attribution android:tag="GeofencingService" android:label="@string/geofencing_service"/>
     <!-- Attribution for Country Detector. -->
