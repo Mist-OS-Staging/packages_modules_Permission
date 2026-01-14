@@ -8424,7 +8424,7 @@
          @FlaggedApi(android.server.Flags.FLAG_ENABLE_THEME_SERVICE)
          @hide  <p>Not for use by third-party applications.</p> -->
     <permission android:name="android.permission.UPDATE_THEME_SETTINGS"
-        android:protectionLevel="signature"
+        android:protectionLevel="signature|privileged"
         android:featureFlag="android.server.enable_theme_service"/>
 
     <!-- Allows an instant app to create foreground services.
@@ -9905,7 +9905,7 @@
     </permission>
 
     <!-- Allows an application to register listeners with user attention service.
-         This permission is associated with the android.app.role.SYSTEM_VENDOR_INTELLIGENCE 
+         This permission is associated with the android.app.role.SYSTEM_VENDOR_INTELLIGENCE
          role.
         <p>Protection level: signature|role|privileged
           @FlaggedApi(com.android.input.flags.Flags.FLAG_ENABLE_ATTENTION_SERVICE_APIS)
