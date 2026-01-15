@@ -30,13 +30,13 @@ import android.permission.cts.TestUtils
 import android.permission.flags.Flags
 import android.platform.test.annotations.LargeTest
 import android.platform.test.annotations.RequiresFlagsEnabled
+import android.platform.test.rule.ScreenRecordRule
+import android.util.Log
 import android.virtualdevice.cts.common.VirtualDeviceRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.By
-import androidx.test.uiautomator.UiScrollable
-import androidx.test.uiautomator.UiSelector
 import androidx.test.uiautomator.Until
 import com.android.compatibility.common.util.DisableAnimationRule
 import com.android.compatibility.common.util.SystemUtil.eventually
@@ -55,6 +55,7 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA, codeName = "Baklava")
 @LargeTest
+@ScreenRecordRule.ScreenRecord
 class AppPermissionsTest {
     private val instrumentation: Instrumentation = InstrumentationRegistry.getInstrumentation()
     private val defaultDeviceContext = instrumentation.targetContext
@@ -69,6 +70,8 @@ class AppPermissionsTest {
         )
 
     @get:Rule val disableAnimationRule = DisableAnimationRule()
+
+    @get:Rule val screenRecordRule = ScreenRecordRule(false, false)
 
     private lateinit var persistentDeviceId: String
     private lateinit var externalDeviceCameraText: String
@@ -364,30 +367,25 @@ class AppPermissionsTest {
         val recyclerView = UiAutomatorUtils2.waitFindObject(By.res(RECYCLER_VIEW))
         val titleSelector = By.res(TITLE)
 
-        // Set gesture margin to avoid triggering system gestures
-        recyclerView.setGestureMargin(recyclerView.visibleBounds.width() / 10)
-
-        // Scroll to top
-        while (recyclerView.scroll(androidx.test.uiautomator.Direction.UP, 1.0f)) {
-            UiAutomatorUtils2.getUiDevice().waitForIdle()
-        }
+        UiAutomatorUtils2.getUiDevice().waitForIdle()
 
         val allTitles = LinkedHashSet<String>()
-        var canScrollDown = true
+        val startTime = System.currentTimeMillis()
 
-        while (true) {
+        loop@ while (System.currentTimeMillis() - startTime < GRANT_INFO_SCROLL_TIMEOUT_MILLIS) {
             val visibleTitles = recyclerView.findObjects(titleSelector)
             for (titleObj in visibleTitles) {
+                if (outOfScopeTitles.contains(titleObj.text)) {
+                    break@loop
+                }
                 allTitles.add(titleObj.text)
             }
 
-            if (!canScrollDown) {
-                break
-            }
-
-            canScrollDown = recyclerView.scroll(androidx.test.uiautomator.Direction.DOWN, 0.5f)
+            recyclerView.scroll(androidx.test.uiautomator.Direction.DOWN, 0.1f)
             UiAutomatorUtils2.getUiDevice().waitForIdle()
         }
+
+        Log.i(TAG, "time took to scroll recycler=${System.currentTimeMillis() - startTime}ms")
 
         var currentGrantText = ""
         for (titleText in allTitles) {
@@ -442,12 +440,6 @@ class AppPermissionsTest {
             )
     }
 
-    private fun getScrollableRecyclerView(): UiScrollable {
-        // Wait for object to load
-        UiAutomatorUtils2.waitFindObject(By.res(RECYCLER_VIEW))
-        return UiScrollable(UiSelector().resourceId(RECYCLER_VIEW))
-    }
-
     private fun clickPermissionItem(permissionItemName: String) =
         UiAutomatorUtils2.waitFindObject(By.text(permissionItemName)).click()
 
@@ -491,5 +483,7 @@ class AppPermissionsTest {
         private const val TITLE = "android:id/title"
         private const val RECYCLER_VIEW = "com.android.permissioncontroller:id/recycler_view"
         private const val NEW_WINDOW_TIMEOUT_MILLIS: Long = 20_000
+        private val TAG = AppPermissionsTest::class.java.simpleName
+        private const val GRANT_INFO_SCROLL_TIMEOUT_MILLIS = 40_000
     }
 }
