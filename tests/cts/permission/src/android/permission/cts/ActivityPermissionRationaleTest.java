@@ -33,6 +33,8 @@ import android.os.RemoteCallback;
 import android.permission.flags.Flags;
 import android.platform.test.annotations.AppModeFull;
 import android.platform.test.annotations.RequiresFlagsEnabled;
+import android.platform.test.flag.junit.CheckFlagsRule;
+import android.platform.test.flag.junit.DeviceFlagsValueProvider;
 
 import androidx.test.filters.SdkSuppress;
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner;
@@ -41,6 +43,7 @@ import androidx.test.platform.app.InstrumentationRegistry;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -62,6 +65,9 @@ public class ActivityPermissionRationaleTest {
     private static Context sContext = InstrumentationRegistry.getInstrumentation().getContext();
     private static UiAutomation sUiAuto =
             InstrumentationRegistry.getInstrumentation().getUiAutomation();
+    @Rule
+    public final CheckFlagsRule mCheckFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule();
+
 
     @BeforeClass
     public static void setUp() {
