@@ -171,6 +171,31 @@ class DefaultAssistantActivityTest {
         assertAssistToggleState(isEnabled = true, isChecked = true)
     }
 
+    @Test
+    fun assistStructureToggle_whenNoneSelected_resetsAppOpToIgnored() {
+        addRoleHolder(RoleManager.ROLE_ASSISTANT, APP_PACKAGE_NAME)
+        setAppOpMode(AppOpsManager.MODE_DEFAULT)
+
+        launchDefaultAssistantActivity()
+
+        // Verify mode_default is assistToggleState enabled
+        assertAssistToggleState(isEnabled = true, isChecked = true)
+
+        selectNoneAsRoleHolder()
+
+        assertAssistToggleState(isEnabled = false, isChecked = false)
+
+        // Ensure app op mode is now ignored
+        assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_IGNORED)
+
+        selectAppAsRoleHolder()
+
+        assertAssistToggleState(isEnabled = true, isChecked = false)
+
+        // Double check/ensure that app op is still ignored
+        assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_IGNORED)
+    }
+
     private fun launchDefaultAssistantActivity(useVoiceInputSettingsAction: Boolean = false) {
         SystemUtil.runWithShellPermissionIdentity {
             val intent =
