@@ -33,6 +33,7 @@ public class ConfirmationDialogInfo implements Parcelable {
             new Creator<ConfirmationDialogInfo>() {
                 @Override
                 public ConfirmationDialogInfo createFromParcel(@NonNull Parcel source) {
+                    boolean showIcon = source.readBoolean();
                     CharSequence title = TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(source);
                     CharSequence message = TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(source);
                     CharSequence positiveButtonText =
@@ -40,7 +41,7 @@ public class ConfirmationDialogInfo implements Parcelable {
                     CharSequence negativeButtonText =
                             TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(source);
                     boolean isChangeConfirmation = source.readBoolean();
-                    return new ConfirmationDialogInfo(title, message, positiveButtonText,
+                    return new ConfirmationDialogInfo(showIcon, title, message, positiveButtonText,
                             negativeButtonText, isChangeConfirmation);
                 }
 
@@ -49,6 +50,11 @@ public class ConfirmationDialogInfo implements Parcelable {
                     return new ConfirmationDialogInfo[size];
                 }
             };
+
+    /**
+     * Whether the confirmation dialog should show the icon of the application.
+     */
+    private boolean mShowIcon;
 
     /**
      * The title of the confirmation dialog, or {@code null} if none.
@@ -83,6 +89,29 @@ public class ConfirmationDialogInfo implements Parcelable {
     /**
      * Create a new instance of this confirmation dialog info.
      *
+     * @param showIcon whether the confirmation dialog should show the icon of the application
+     * @param title the title of the confirmation dialog, or {@code null} if none
+     * @param message the message of the confirmation dialog
+     * @param positiveButtonText the positive button text of the confirmation dialog
+     * @param negativeButtonText the negative button text of the confirmation dialog
+     * @param isChangeConfirmation whether the confirmation is for changing a default app
+     *
+     * @return a new instance of this confirmation dialog info
+     */
+    public ConfirmationDialogInfo(boolean showIcon, @Nullable CharSequence title,
+            @NonNull CharSequence message, @NonNull CharSequence positiveButtonText,
+            @NonNull CharSequence negativeButtonText, boolean isChangeConfirmation) {
+        mShowIcon = showIcon;
+        mTitle = title;
+        mMessage = message;
+        mPositiveButtonText = positiveButtonText;
+        mNegativeButtonText = negativeButtonText;
+        mChangeConfirmation = isChangeConfirmation;
+    }
+
+    /**
+     * Create a new instance of this confirmation dialog info.
+     *
      * @param title the title of the confirmation dialog, or {@code null} if none
      * @param message the message of the confirmation dialog
      * @param positiveButtonText the positive button text of the confirmation dialog
@@ -93,11 +122,12 @@ public class ConfirmationDialogInfo implements Parcelable {
     public ConfirmationDialogInfo(@Nullable CharSequence title, @NonNull CharSequence message,
             @NonNull CharSequence positiveButtonText,
             @NonNull CharSequence negativeButtonText, boolean isChangeConfirmation) {
-        mTitle = title;
-        mMessage = message;
-        mPositiveButtonText = positiveButtonText;
-        mNegativeButtonText = negativeButtonText;
-        mChangeConfirmation = isChangeConfirmation;
+        this(false, title, message, positiveButtonText, negativeButtonText, isChangeConfirmation);
+    }
+
+    /** Returns {@code true} if confirmation dialog should show icon */
+    public boolean shouldShowIcon() {
+        return mShowIcon;
     }
 
     @Nullable
@@ -131,6 +161,7 @@ public class ConfirmationDialogInfo implements Parcelable {
 
     @Override
     public void writeToParcel(@NonNull Parcel dest, int flags) {
+        dest.writeBoolean(mShowIcon);
         TextUtils.writeToParcel(mTitle, dest, 0);
         TextUtils.writeToParcel(mMessage, dest, 0);
         TextUtils.writeToParcel(mPositiveButtonText, dest, 0);

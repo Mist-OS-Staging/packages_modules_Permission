@@ -196,6 +196,34 @@ class DefaultAssistantActivityTest {
         assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_IGNORED)
     }
 
+    @Test
+    fun testConfirmationMessage_appOpAllowed() {
+        setAppOpMode(AppOpsManager.MODE_ALLOWED)
+
+        launchDefaultAssistantActivity()
+
+        selectAppAsRoleHolder(false)
+
+        UiAutomatorUtils2.waitFindObject(
+            By.text(DEFAULT_ASSISTANT_CHANGE_AND_RESTORE_ACCESS_CONFIRMATION_MESSAGE)
+        )
+
+        pressBack()
+    }
+
+    @Test
+    fun testConfirmationMessage_appOpIgnored() {
+        setAppOpMode(AppOpsManager.MODE_IGNORED)
+
+        launchDefaultAssistantActivity()
+
+        selectAppAsRoleHolder(false)
+
+        UiAutomatorUtils2.waitFindObject(By.text(DEFAULT_ASSISTANT_CHANGE_CONFIRMATION_MESSAGE))
+
+        pressBack()
+    }
+
     private fun launchDefaultAssistantActivity(useVoiceInputSettingsAction: Boolean = false) {
         SystemUtil.runWithShellPermissionIdentity {
             val intent =
@@ -228,7 +256,7 @@ class DefaultAssistantActivityTest {
         )
     }
 
-    private fun selectAppAsRoleHolder() {
+    private fun selectAppAsRoleHolder(dismissConfirmationDialog: Boolean = true) {
         UiAutomatorUtils2.waitFindObject(
                 By.clickable(true)
                     .hasDescendant(By.checkable(true))
@@ -236,20 +264,23 @@ class DefaultAssistantActivityTest {
             )
             .click()
 
-        // Dismiss the confirmation dialog if it appears
-        val positiveButton =
-            UiAutomatorUtils2.waitFindObjectOrNull(By.text("Change").clazz("android.widget.Button"))
-                ?: UiAutomatorUtils2.waitFindObjectOrNull(By.text("OK"))
-        if (positiveButton != null) {
-            positiveButton.click()
-            uiDevice.waitForIdle()
-        }
+        if (dismissConfirmationDialog) {
+            // Dismiss the confirmation dialog
+            val positiveButton =
+                UiAutomatorUtils2.waitFindObjectOrNull(
+                    By.text("Change").clazz("android.widget.Button")
+                ) ?: UiAutomatorUtils2.waitFindObjectOrNull(By.text("OK"))
+            if (positiveButton != null) {
+                positiveButton.click()
+                uiDevice.waitForIdle()
+            }
 
-        UiAutomatorUtils2.waitFindObject(
-            By.clickable(true)
-                .hasDescendant(By.checkable(true).checked(true))
-                .hasDescendant(By.text(APP_LABEL))
-        )
+            UiAutomatorUtils2.waitFindObject(
+                By.clickable(true)
+                    .hasDescendant(By.checkable(true).checked(true))
+                    .hasDescendant(By.text(APP_LABEL))
+            )
+        }
     }
 
     private fun findAssistStructureToggle(): UiObject2 =
@@ -353,6 +384,14 @@ class DefaultAssistantActivityTest {
         private const val NONE_LABEL = "None"
         private const val ASSIST_STRUCTURE_SWITCH_LABEL = "Use screen and app context"
         private const val DEFAULT_ASSISTANT_APP_LABEL = "Default digital assistant app"
+        private const val DEFAULT_ASSISTANT_CHANGE_AND_RESTORE_ACCESS_CONFIRMATION_MESSAGE =
+            "This assistant will be able to access info like your messages, and data that apps " +
+                "have chosen to share with your assistant.\n\nAlso, because you\u2019ve turned " +
+                "on screen and app data for $APP_LABEL before, it will be " +
+                "allowed to access content from the app open on your screen."
+        private const val DEFAULT_ASSISTANT_CHANGE_CONFIRMATION_MESSAGE =
+            "This assistant will be able to access info like your messages, and data that apps " +
+                "have chosen to share with your assistant."
         private val PERMISSION_CONTROLLER_PACKAGE_NAME =
             InstrumentationRegistry.getInstrumentation()
                 .targetContext

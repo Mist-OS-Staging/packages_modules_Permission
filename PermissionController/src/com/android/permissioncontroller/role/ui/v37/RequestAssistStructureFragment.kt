@@ -23,6 +23,7 @@ import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.os.Process
+import android.text.Html
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.ImageView
@@ -71,7 +72,12 @@ class RequestAssistStructureFragment : DialogFragment() {
         val packageRepository = PackageRepository.createInstance(requireContext())
         val icon = packageRepository.getBadgedPackageIcon(packageName, Process.myUserHandle())
         val label = packageRepository.getPackageLabel(packageName, Process.myUserHandle())
-        val title = getString(R.string.request_assist_structure_dialog_title, label)
+        val escapedAppLabel = Html.escapeHtml(label)
+        val title =
+            Html.fromHtml(
+                getString(R.string.request_assist_structure_dialog_title, escapedAppLabel),
+                0,
+            )
 
         iconImage.setImageDrawable(icon)
         titleText.text = title

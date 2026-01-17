@@ -83,14 +83,11 @@ class WearDefaultAppHelper(
                                     RoleUiBehaviorUtils.getConfirmationDialogInfo(
                                         role,
                                         packageName,
+                                        user,
                                         context,
                                     )
                                 if (confirmationDialogInfo != null) {
-                                    showConfirmDialog(
-                                        packageName,
-                                        user,
-                                        confirmationDialogInfo,
-                                    )
+                                    showConfirmDialog(packageName, user, confirmationDialogInfo)
                                 } else {
                                     setDefaultApp(packageName, user)
                                 }
@@ -117,7 +114,7 @@ class WearDefaultAppHelper(
     private fun showConfirmDialog(
         packageName: String,
         userHandle: UserHandle,
-        info: ConfirmationDialogInfo
+        info: ConfirmationDialogInfo,
     ) {
         confirmDialogViewModel.confirmDialogArgs =
             ConfirmDialogArgs(

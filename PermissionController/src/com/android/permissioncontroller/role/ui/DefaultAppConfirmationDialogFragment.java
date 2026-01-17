@@ -26,7 +26,14 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -36,14 +43,17 @@ import androidx.fragment.app.Fragment;
 
 import com.android.permissioncontroller.PermissionControllerStatsLog;
 import com.android.permissioncontroller.R;
+import com.android.permissioncontroller.permission.utils.Utils;
 import com.android.permissioncontroller.role.ui.behavior.ConfirmationDialogInfo;
+import com.android.permissioncontroller.role.utils.PackageUtils;
 import com.android.settingslib.widget.SettingsThemeHelper;
 
 /**
  * {@link DialogFragment} for confirmation before setting a default app.
  */
 public class DefaultAppConfirmationDialogFragment extends DialogFragment {
-
+    private static final String LOG_TAG =
+            DefaultAppConfirmationDialogFragment.class.getSimpleName();
     private static final String EXTRA_INFO =
             DefaultAppConfirmationDialogFragment.class.getName() + ".extra.INFO";
 
@@ -116,14 +126,34 @@ public class DefaultAppConfirmationDialogFragment extends DialogFragment {
             setStyle(DialogFragment.STYLE_NORMAL,
                     R.style.Theme_DeviceDefault_AlertDialog_DefaultAppConfirmation_Expressive);
         }
-        return new AlertDialog.Builder(context, getTheme())
-                .setTitle(mInfo.getTitle())
+        AlertDialog.Builder builder = new AlertDialog.Builder(context, getTheme())
                 .setMessage(mInfo.getMessage())
                 .setPositiveButton(mInfo.getPositiveButtonText(),
                         (dialog, which) -> onPositiveButtonClicked())
                 .setNegativeButton(mInfo.getNegativeButtonText(),
-                        (dialog, which) -> onNegativeButtonClicked())
-                .create();
+                        (dialog, which) -> onNegativeButtonClicked());
+        if (mInfo.shouldShowIcon()) {
+            ApplicationInfo applicationInfo = PackageUtils.getApplicationInfoAsUser(mPackageName,
+                    UserHandle.getUserHandleForUid(mUid), context);
+            LayoutInflater inflater = LayoutInflater.from(builder.getContext());
+            View titleLayout = inflater.inflate(R.layout.default_app_confirmation_dialog_title,
+                    null);
+            ImageView iconView = titleLayout.requireViewById(R.id.icon);
+            if (applicationInfo != null) {
+                iconView.setImageDrawable(Utils.getBadgedIcon(context, applicationInfo));
+            } else {
+                Log.w(LOG_TAG,
+                        "Cannot get ApplicationInfo for application, package name: " + mPackageName
+                                + ", user id: " + UserHandle.getUserHandleForUid(
+                                mUid).getIdentifier());
+            }
+            TextView titleView = titleLayout.requireViewById(R.id.title);
+            titleView.setText(mInfo.getTitle());
+            builder.setCustomTitle(titleLayout);
+        } else {
+            builder.setTitle(mInfo.getTitle());
+        }
+        return builder.create();
     }
 
     private void onPositiveButtonClicked() {

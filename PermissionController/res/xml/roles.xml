@@ -1430,6 +1430,8 @@
                 featureFlag="android.app.admin.flags.Flags.setApplicationRestrictionsCoexistence"/>
             <permission name="android.permission.MANAGE_DEVICE_POLICY_PROFILES"
                 featureFlag="android.app.admin.flags.Flags.setApplicationRestrictionsCoexistence"/>
+            <permission name="android.permission.MANAGE_SUPERVISION"
+                featureFlag="android.app.supervision.flags.Flags.enableSupervisionManagerPolicyApis" />
         </permissions>
     </role>
 
@@ -1459,6 +1461,8 @@
             <permission name="android.permission.MANAGE_DEVICE_POLICY_SCREEN_CONTENT" />
             <permission name="android.permission.MANAGE_DEVICE_POLICY_SYSTEM_DIALOGS" />
             <permission name="android.permission.SUSPEND_APPS" />
+            <permission name="android.permission.MANAGE_SUPERVISION"
+                featureFlag="android.app.supervision.flags.Flags.enableSupervisionManagerPolicyApis" />
         </permissions>
     </role>
 
