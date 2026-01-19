@@ -456,12 +456,17 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"ምንም ልዩ መተግበሪያ መዳረሻ"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"መተግበሪያዎች የሉም"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"የሥራ መገለጫን አይደግፍም"</string>
-    <string name="home_confirmation_title" msgid="5244574290223747640">"ነባሪ የHome መተግበሪያ ይለወጥ?"</string>
+    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
+    <skip />
     <string name="home_confirmation_message" msgid="248811491851505593">"ይህ መነሻ ማያ ገጽዎን ይተካዋል እና በመሣሪያዎ ላይ ባሉ ባህሪያት መዳረሻ ላይ ተጽዕኖ ሊያሳድር ይችላል።&lt;br&gt;&lt;br&gt;ይህን ምርጫ በማንኛውም ጊዜ &lt;b&gt;ነባሪ የHome መተግበሪያ&lt;/b&gt; ቅንብሮች ውስጥ መለወጥ ይችላሉ።"</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"ማስታወሻ፦ የእርስዎን መሣሪያ ዳግም ካስጀምሩ እና ማያ ገፅ መቆለፊያው እንዲቀናበር ካደረጉ፣ ይህ መተግበሪያ የእርስዎን መሣሪያ ዳግም እስከሚከፍቱ ድረስ መጀመር አይችልም።"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"ረዳቱ በእርስዎ ስርዓት ላይ በአገልግሎት ላይ ስለሚውሉ መተግበሪያዎች መረጃን ማንበብ ይችላል፣ ይህም በእርስዎ ማያ ገፅ ላይ የሚታይ ወይም በመተግበሪያዎች ውስጥ የሚደረስበት መረጃን ይጨምራል።"</string>
-    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"ነባሪ የዲጂታል ረዳት መተግበሪያ ይለወጥ?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"ይህ ረዳት በእርስዎ ሥርዓት ላይ ጥቅም ላይ ስለሚውሉ መተግበሪያዎች መረጃን ማንበብ ይችላል።"</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"ሳንካ ማረሚያ ውሂብን አጋራ"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"ዝርዝር የሳንካ ማረሚያ መረጃ ይጋራ?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> የሳንካ ማረሚያ መረጃን መስቀል ይፈልጋል።"</string>
@@ -739,7 +744,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"ይህ ወኪል መረጃ ለማግኘት እና ለእርስዎ እርምጃዎችን ለመውሰድ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> መድረስ ይችላሉ"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"ፍቀድ"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"አትፍቀድ"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> የማያ ገጽ እና የመተግበሪያ ዓውድ እንዲደርስ ይፈቀድ?"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
+    <skip />
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"ነባሪው የረዳት መተግበሪያ የማያ ገጹን ይዘቶች እና በሚታየው መተግበሪያ የተጋራውን ውሂብ እንዲደርስ ይፍቀዱ"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"ፍቀድ"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"አትፍቀድ"</string>

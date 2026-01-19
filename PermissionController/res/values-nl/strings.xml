@@ -456,12 +456,17 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"Geen speciale app-toegang"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"Geen apps"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"Ondersteunt geen werkprofielen"</string>
-    <string name="home_confirmation_title" msgid="5244574290223747640">"Standaard startscherm-app wijzigen?"</string>
+    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
+    <skip />
     <string name="home_confirmation_message" msgid="248811491851505593">"Hiermee wordt je startscherm vervangen en kan de toegang tot functies op je apparaat worden beïnvloed.&lt;br&gt;&lt;br&gt;Je kunt deze selectie op elk moment wijzigen in de instellingen voor &lt;b&gt;Standaard startscherm-app&lt;/b&gt;."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Opmerking: Als je het apparaat opnieuw opstart en een schermvergrendeling hebt ingesteld, kan deze app pas worden gestart nadat je het apparaat hebt ontgrendeld."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"De assistentie-app kan informatie over de gebruikte apps in je systeem lezen, waaronder informatie die zichtbaar is op je scherm of toegankelijk is in de apps."</string>
-    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"Standaard digitale-assistent-app wijzigen?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"Deze assistent kan informatie lezen over apps die in je systeem worden gebruikt."</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Foutopsporings­informatie delen"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Gedetailleerde foutopsporingsinformatie delen?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil foutopsporingsinformatie uploaden."</string>
@@ -739,7 +744,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"De agent krijgt toegang tot <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> om informatie op te halen en acties voor je uit te voeren"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Toestaan"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Niet toestaan"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> toegang geven tot scherm- en app-context?"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
+    <skip />
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Sta toe dat de standaard assistent-app toegang krijgt tot de scherminhoud en gegevens die worden gedeeld door de zichtbare app"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Toestaan"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Niet toestaan"</string>

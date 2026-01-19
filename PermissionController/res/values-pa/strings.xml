@@ -456,12 +456,17 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"ਕੋਈ ਵਿਸ਼ੇਸ਼ ਐਪ ਪਹੁੰਚ ਨਹੀਂ"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"ਕੋਈ ਐਪਾਂ ਨਹੀਂ"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"ਕਾਰਜ ਪ੍ਰੋਫਾਈਲ ਦੀ ਸੁਵਿਧਾ ਨਹੀਂ ਹੈ"</string>
-    <string name="home_confirmation_title" msgid="5244574290223747640">"ਕੀ ਪੂਰਵ-ਨਿਰਧਾਰਿਤ ਹੋਮ ਐਪ ਨੂੰ ਬਦਲਣਾ ਹੈ?"</string>
+    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
+    <skip />
     <string name="home_confirmation_message" msgid="248811491851505593">"ਇਸ ਨਾਲ ਤੁਹਾਡੀ ਹੋਮ ਸਕ੍ਰੀਨ ਬਦਲ ਜਾਵੇਗੀ ਅਤੇ ਤੁਹਾਡੇ ਡੀਵਾਈਸ \'ਤੇ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਤੱਕ ਪਹੁੰਚ ਪ੍ਰਭਾਵਿਤ ਹੋ ਸਕਦੀ ਹੈ।&lt;br&gt;&lt;br&gt;ਤੁਸੀਂ ਕਿਸੇ ਵੀ ਵੇਲੇ &lt;b&gt;ਪੂਰਵ-ਨਿਰਧਾਰਿਤ ਹੋਮ ਐਪ&lt;/b&gt; ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਜਾ ਕੇ ਇਸ ਚੋਣ ਨੂੰ ਬਦਲ ਸਕਦੇ ਹੋ।"</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"ਨੋਟ-ਕਥਨ: ਜੇਕਰ ਤੁਸੀਂ ਆਪਣੇ ਡੀਵਾਈਸ ਨੂੰ ਮੁੜ-ਸ਼ੁਰੂ ਕਰਦੇ ਹੋ ਅਤੇ ਸਕ੍ਰੀਨ ਲਾਕ ਸੈੱਟ ਕੀਤਾ ਹੋਇਆ ਹੈ, ਤਾਂ ਇਹ ਐਪਾ ਤੁਹਾਡੇ ਵੱਲੋਂ ਆਪਣੇ ਡੀਵਾਈਸ ਨੂੰ ਅਣਲਾਕ ਕੀਤੇ ਨਾ ਹੋਣ ਤੱਕ ਸ਼ੁਰੂ ਨਹੀਂ ਹੋਵੇਗੀ।"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"ਸਹਾਇਕ ਐਪ ਤੁਹਾਡੀ ਸਕ੍ਰੀਨ \'ਤੇ ਦਿਸਣਯੋਗ ਜਾਂ ਐਪਾਂ ਵਿੱਚ ਪਹੁੰਚਯੋਗ ਜਾਣਕਾਰੀ ਸਮੇਤ ਤੁਹਾਡੇ ਸਿਸਟਮ \'ਤੇ ਵਰਤੋਂ ਵਿੱਚ ਐਪਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਪੜ੍ਹ ਸਕੇਗੀ।"</string>
-    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"ਕੀ ਪੂਰਵ-ਨਿਰਧਾਰਿਤ ਡਿਜੀਟਲ ਸਹਾਇਕ ਐਪ ਨੂੰ ਬਦਲਣਾ ਹੈ?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"ਇਹ ਸਹਾਇਕ ਤੁਹਾਡੇ ਸਿਸਟਮ \'ਤੇ ਵਰਤੋਂ ਵਿੱਚ ਐਪਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਪੜ੍ਹ ਸਕੇਗੀ।"</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"ਡੀਬੱਗਿੰਗ ਡਾਟਾ ਸਾਂਝਾ ਕਰੋ"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"ਕੀ ਵੇਰਵੇ ਸਮੇਤ ਡੀਬੱਗਿੰਗ ਡਾਟਾ ਸਾਂਝਾ ਕਰਨਾ ਹੈ?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ਡੀਬੱਗਿੰਗ ਜਾਣਕਾਰੀ ਨੂੰ ਅੱਪਲੋਡ ਕਰਨਾ ਚਾਹੁੰਦੀ ਹੈ।"</string>
@@ -739,7 +744,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"ਇਹ ਏਜੰਟ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ਤੱਕ ਪਹੁੰਚ ਕਰ ਸਕੇਗਾ, ਤਾਂ ਜੋ ਇਹ ਤੁਹਾਨੂੰ ਜਾਣਕਾਰੀ ਦੇ ਸਕੇ ਅਤੇ ਤੁਹਾਡੇ ਲਈ ਕਾਰਵਾਈਆਂ ਕਰ ਸਕੇ"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"ਆਗਿਆ ਦਿਓ"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"ਆਗਿਆ ਨਾ ਦਿਓ"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"ਕੀ <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> ਨੂੰ ਸਕ੍ਰੀਨ ਅਤੇ ਐਪ ਸੰਦਰਭ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੀ ਆਗਿਆ ਦੇਣੀ ਹੈ?"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
+    <skip />
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"ਪੂਰਵ-ਨਿਰਧਾਰਿਤ ਸਹਾਇਕ ਐਪ ਨੂੰ ਸਕ੍ਰੀਨ ਸਮੱਗਰੀ ਅਤੇ ਦਿਖਣਯੋਗ ਐਪ ਵੱਲੋਂ ਸਾਂਝੇ ਕੀਤੇ ਡਾਟੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦਿਓ"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"ਆਗਿਆ ਦਿਓ"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"ਆਗਿਆ ਨਾ ਦਿਓ"</string>

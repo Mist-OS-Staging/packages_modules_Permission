@@ -456,12 +456,17 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"没有特殊应用权限"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"没有应用"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"不支持工作资料"</string>
-    <string name="home_confirmation_title" msgid="5244574290223747640">"更改默认主屏幕应用？"</string>
+    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
+    <skip />
     <string name="home_confirmation_message" msgid="248811491851505593">"这将替换主屏幕，并可能会影响您对设备上某些功能的访问。&lt;br&gt;&lt;br&gt;您可以随时在 &lt;b&gt;默认主屏幕应用&lt;/b&gt;设置中更改此选择。"</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"注意：如果您重启设备并设置了屏幕锁定，则必须将设备解锁才能运行此应用。"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"这个小助手将能够读取与您系统中正在使用的应用相关的信息，包括屏幕上显示的信息或应用中可使用的信息。"</string>
-    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"更改默认数字助理应用？"</string>
-    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"此助理将能够读取与系统中正在使用的应用相关的信息。"</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"分享调试数据"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"是否分享详细调试数据？"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g>请求上传调试信息。"</string>
@@ -739,7 +744,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"此智能体将能够访问“<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>”，帮助您获取信息和执行操作"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"允许"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"不允许"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"要允许“<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>”访问屏幕和应用中的内容吗？"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
+    <skip />
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"允许默认助理应用访问可见应用共享的屏幕内容和数据"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"允许"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"不允许"</string>

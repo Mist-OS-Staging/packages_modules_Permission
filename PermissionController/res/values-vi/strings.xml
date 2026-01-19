@@ -456,12 +456,17 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"Không có quyền truy cập đặc biệt"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"Không có ứng dụng"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"Không hỗ trợ hồ sơ công việc"</string>
-    <string name="home_confirmation_title" msgid="5244574290223747640">"Thay đổi trình chạy mặc định?"</string>
+    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
+    <skip />
     <string name="home_confirmation_message" msgid="248811491851505593">"Thao tác này sẽ thay thế trình chạy mặc định và có thể ảnh hưởng đến quyền sử dụng các tính năng trên thiết bị của bạn.&lt;br&gt;&lt;br&gt;Bạn có thể thay đổi lựa chọn này bất cứ lúc nào trong phần cài đặt &lt;b&gt;Trình chạy mặc định&lt;/b&gt;."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Lưu ý: Nếu bạn khởi động lại thiết bị và đặt khóa màn hình, thì ứng dụng này sẽ không thể khởi động cho đến khi bạn mở khóa thiết bị."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Trợ lý sẽ có thể đọc thông tin về ứng dụng mà bạn đang dùng trên hệ thống, bao gồm cả thông tin hiển thị trên màn hình hoặc thông tin có thể truy cập trong ứng dụng."</string>
-    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"Thay đổi ứng dụng trợ lý kỹ thuật số mặc định?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"Trợ lý này sẽ có thể đọc thông tin về các ứng dụng đang được dùng trên hệ thống của bạn."</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Chia sẻ dữ liệu gỡ lỗi"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Bạn muốn chia sẻ dữ liệu gỡ lỗi chi tiết?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> muốn tải thông tin gỡ lỗi lên."</string>
@@ -739,7 +744,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Tác nhân này sẽ có thể truy cập vào <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> để lấy thông tin và thực hiện thao tác cho bạn"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Cho phép"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Không cho phép"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"Cho phép <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> xem ngữ cảnh trên màn hình và ngữ cảnh của ứng dụng?"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
+    <skip />
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Cho phép ứng dụng trợ lý mặc định truy cập vào nội dung trên màn hình và dữ liệu do ứng dụng hiển thị chia sẻ"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Cho phép"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Không cho phép"</string>

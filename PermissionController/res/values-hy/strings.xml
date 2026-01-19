@@ -456,12 +456,17 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"Հատուկ հասանելիություն չկա"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"Հավելվածներ չկան"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"Աշխատանքային պրոֆիլներ չի աջակցում"</string>
-    <string name="home_confirmation_title" msgid="5244574290223747640">"Փոխե՞լ կանխադրված հիմնական հավելվածը"</string>
+    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
+    <skip />
     <string name="home_confirmation_message" msgid="248811491851505593">"Սա կփոխարինի ձեր հիմնական էկրանը և կարող է ազդել ձեր սարքի գործառույթների հասանելիության վրա։&lt;br&gt;&lt;br&gt;Այս ընտրությունը ցանկացած պահի կարող եք փոխել &lt;b&gt;Հիմնական էկրանի կանխադրված հավելված&lt;/b&gt; կարգավորումներում։"</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Ուշադրություն. եթե դուք վերագործարկեք ձեր սարքը, որում սահմանված է էկրանի կողպում, այս հավելվածը չի աշխատի, մինչև չապակողպեք սարքը։"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Օգնականը կկարողանա կարդալ համակարգում օգտագործվող հավելվածների մասին տվյալները, այդ թվում՝ էկրանին ցուցադրվող կամ հավելվածներից ստացվող տեղեկությունները:"</string>
-    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"Փոխե՞լ կանխադրված թվային օգնական հավելվածը"</string>
-    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"Այս օգնականը կկարողանա կարդալ համակարգում օգտագործվող հավելվածների մասին տվյալները։"</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Վրիպազերծման տվյալների ուղարկում"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Ուղարկե՞լ վրիպազերծման մանրամասն տվյալները"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g>-ն ուզում է վերբեռնել վրիպազերծման տվյալները:"</string>
@@ -739,7 +744,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Այս գործակալին հասանելի կդառնա <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> հավելվածը՝ տեղեկություններ ստանալու և ձեր փոխարեն գործողություններ ձեռնարկելու համար"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Թույլատրել"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Չթույլատրել"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> հավելվածին թույլատրե՞լ օգտագործել էկրանի և հավելվածի համատեքստը"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
+    <skip />
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Կանխադրված օգնական հավելվածին թույլատրել օգտագործել էկրանի բովանդակությունը և տվյալները, որոնք փոխանցվում են տեսանելի հավելվածի կողմից"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Թույլատրել"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Չթույլատրել"</string>

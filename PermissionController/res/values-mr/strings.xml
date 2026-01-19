@@ -456,12 +456,17 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"कोणताही विशेष अ‍ॅप अ‍ॅक्सेस नाही"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"कोणतीही अ‍ॅप्स नाहीत"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"कार्य प्रोफाइलला सपोर्ट नाही"</string>
-    <string name="home_confirmation_title" msgid="5244574290223747640">"डीफॉल्ट होम अ‍ॅप बदलायचे आहे का?"</string>
+    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
+    <skip />
     <string name="home_confirmation_message" msgid="248811491851505593">"यामुळे तुमची होम स्क्रीन बदलली जाईल आणि तुमच्या डिव्हाइसवरील वैशिष्ट्यांच्या अ‍ॅक्सेसवर परिणाम होऊ शकतो.&lt;br&gt;&lt;br&gt;तुम्ही &lt;b&gt;डीफॉल्ट होम अ‍ॅप&lt;/b&gt; सेटिंग्जमध्ये ही निवड कधीही बदलू शकता."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"टीप: तुम्ही तुमचे डिव्हाइस रीस्टार्ट केल्यास आणि स्क्रीन लॉक सेट केले असल्यास, तुम्ही तुमचे डिव्हाइस अनलॉक करेपर्यंत हे अ‍ॅप सुरू होऊ शकत नाही."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"तुमच्या स्क्रीनवर दिसणाऱ्या माहितीच्या किंवा अ‍ॅप्समध्ये अ‍ॅक्सेस करता येणाऱ्या माहितीच्या समावेशासह असिस्टंट तुमच्या सिस्टममध्ये वापरल्या जाणाऱ्या अ‍ॅप्सबद्दलची माहिती वाचू शकेल."</string>
-    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"डीफॉल्ट डिजिटल असिस्टंट अ‍ॅप बदलायचे आहे का?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"हा असिस्टंट तुमच्या सिस्टीमवर वापरल्या जाणाऱ्या अ‍ॅप्सबद्दलची माहिती वाचू शकेल."</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"डीबगिंग डेटा शेअर करा"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"तपशीलवार डीबगिंग डेटा शेअर करायचा?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ला डीबगिंग माहिती अपलोड करायला आवडेल."</string>
@@ -739,7 +744,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"हा एजंट तुमच्यासाठी माहिती मिळवण्याकरिता आणि कृती करण्यासाठी <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> अ‍ॅक्सेस करू शकेल"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"अनुमती द्या"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"अनुमती देऊ नका"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> ला स्क्रीन आणि ॲप संदर्भ ॲक्सेस करण्याची अनुमती द्यायची आहे का?"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
+    <skip />
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"डीफॉल्ट असिस्टंट ॲपला स्क्रीनवरील आशय आणि दृश्यमान ॲपद्वारे शेअर केलेला डेटा ॲक्सेस करण्याची अनुमती द्या"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"अनुमती द्या"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"अनुमती देऊ नका"</string>
