@@ -151,6 +151,14 @@ class CameraMicIndicatorsPermissionTest : StsExtraBusinessLogicTestCase {
         )!!
     }
 
+    private val expandedPrivacyIndicatorsEnabled = callWithShellPermissionIdentity {
+        DeviceConfig.getBoolean(
+            DeviceConfig.NAMESPACE_SYSTEMUI,
+            "com.android.systemui.expanded_privacy_indicators_on_large_screen",
+            false,
+        )
+    }
+
     private fun uninstall() {
         val output = runShellCommand("pm uninstall $APP_PKG").trim()
         assertEquals("Success", output)
@@ -366,6 +374,10 @@ class CameraMicIndicatorsPermissionTest : StsExtraBusinessLogicTestCase {
         if (useCamera) {
             assumeTrue(packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_ANY))
         }
+
+        // The Privacy Indicator on Desktop looks differently.
+        // TODO(477033488): Update the test to support the Desktop Privacy Indicator.
+        assumeFalse("Desktop AV controls popup feature enabled", expandedPrivacyIndicatorsEnabled)
         var chainAttribution: AttributionSource? = null
         openApp(useMic, useCamera, useHotword, finishEarly)
         try {
