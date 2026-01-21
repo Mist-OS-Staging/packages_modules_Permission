@@ -373,7 +373,7 @@
     <string name="role_dialer_request_title" msgid="5959618560705912058">"要將「<xliff:g id="APP_NAME">%1$s</xliff:g>」設為預設的電話應用程式嗎？"</string>
     <string name="role_dialer_request_description" msgid="6288839625724909320">"這個應用程式將可存取你的相機、聯絡人、麥克風、電話及簡訊"</string>
     <string name="role_dialer_search_keywords" msgid="3324448983559188087">"撥號程式"</string>
-    <string name="role_sms_label" msgid="8456999857547686640">"預設簡訊應用程式"</string>
+    <string name="role_sms_label" msgid="8456999857547686640">"預設訊息應用程式"</string>
     <string name="role_sms_short_label" msgid="4371444488034692243">"簡訊應用程式"</string>
     <string name="role_sms_description" msgid="3424020199148153513">"這類應用程式可讓你透過自己的電話號碼收發簡訊、相片、影片和其他內容"</string>
     <string name="role_sms_request_title" msgid="7953552109601185602">"要將「<xliff:g id="APP_NAME">%1$s</xliff:g>」設為預設的簡訊應用程式嗎？"</string>
@@ -456,12 +456,17 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"沒有特殊應用程式存取權"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"沒有可用的應用程式"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"不支援工作資料夾"</string>
-    <string name="home_confirmation_title" msgid="5244574290223747640">"要變更預設主畫面應用程式嗎？"</string>
+    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
+    <skip />
     <string name="home_confirmation_message" msgid="248811491851505593">"這會取代你的主畫面，可能影響裝置功能的存取權。&lt;br&gt;&lt;br&gt;你隨時可以在「預設主畫面應用程式」&lt;b&gt;&lt;/b&gt;設定中變更所選項目。"</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"注意：如果你重新啟動裝置並設定了螢幕鎖定，你必須先將裝置解鎖，才能執行這個應用程式。"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"小幫手將可讀取系統中目前正在使用的應用程式相關資訊，包括畫面上顯示的資訊和應用程式裡可存取的資訊。"</string>
-    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"要變更預設數位助理應用程式嗎？"</string>
-    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"這個助理將可讀取系統中目前使用中的應用程式相關資訊。"</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"分享偵錯資料"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"要分享詳細的偵錯資料嗎？"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"「<xliff:g id="APP_NAME">%1$s</xliff:g>」要求上傳偵錯資訊。"</string>
@@ -739,7 +744,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"這個代理將可存取「<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>」取得資訊，並代表你執行操作"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"允許"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"不允許"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"要允許「<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>」存取畫面和應用程式內容嗎？"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
+    <skip />
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"允許預設助理應用程式存取可見應用程式分享的畫面內容和資料"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"允許"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"不允許"</string>

@@ -456,12 +456,17 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"অ্যাপের বিশেষ অ্যাক্সেস নেই"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"কোনও অ্যাপ নেই"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"অফিস প্রোফাইলে কাজ করে না"</string>
-    <string name="home_confirmation_title" msgid="5244574290223747640">"ডিফল্ট হোম অ্যাপ পরিবর্তন করবেন?"</string>
+    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
+    <skip />
     <string name="home_confirmation_message" msgid="248811491851505593">"আপনার হোম স্ক্রিনের পরিবর্তে এটি ব্যবহার করা হবে এবং ডিভাইসের ফিচার অ্যাক্সেস করার ক্ষেত্রে প্রভাব পড়তে পারে।&lt;br&gt;&lt;br&gt;আপনি &lt;b&gt;ডিফল্ট হোম অ্যাপ&lt;/b&gt; সেটিংসে গিয়ে যেকোনও সময় বেছে নেওয়া এই অ্যাপ পরিবর্তন করতে পারবেন।"</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"দ্রষ্টব্য: আপনি যদি নিজের ডিভাইস রিস্টার্ট করেন এবং স্ক্রিন লক সেট করা থাকে, তাহলে আপনার ডিভাইস আনলক না করা পর্যন্ত আপনি এই অ্যাপটি চালু করতে পারবেন না।"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"অ্যাসিস্ট্যান্ট আপনার স্ক্রিনে দেখা যাচ্ছে বা অ্যাপের মধ্যে থাকা অ্যাক্সেসযোগ্য তথ্য সহ, আপনার সিস্টেমে ব্যবহার হওয়া অ্যাপ সম্পর্কিত তথ্য পড়তে পারবে।"</string>
-    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"ডিফল্ট ডিজিটাল অ্যাসিস্ট্যান্ট অ্যাপ পরিবর্তন করবেন?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"এই অ্যাসিস্ট্যান্ট আপনার সিস্টেমে ব্যবহার করা অ্যাপ সম্পর্কিত তথ্য পড়তে পারবে।"</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"ডিবাগিং ডেটা শেয়ার করুন"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"ডিবাগিংয়ের বিস্তারিত ডেটা শেয়ার করতে চান?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ডিবাগিংয়ের তথ্য আপলোড করতে চায়।"</string>
@@ -739,7 +744,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"এই এজেন্ট আপনার হয়ে তথ্য পেতে ও অ্যাকশন নিতে <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> অ্যাক্সেস করতে পারবে"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"অনুমতি দিন"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"অনুমতি দেবেন না"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> অ্যাপকে স্ক্রিন ও অ্যাপ কনটেক্সট অ্যাক্সেস করার অনুমতি দেবেন?"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
+    <skip />
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"ডিফল্ট অ্যাসিস্ট্যান্ট অ্যাপকে স্ক্রিনের কন্টেন্ট ও দৃশ্যমান অ্যাপের শেয়ার করা ডেটা অ্যাক্সেস করার অনুমতি দিন"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"অনুমতি দিন"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"অনুমতি দেবেন না"</string>

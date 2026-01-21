@@ -456,12 +456,17 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"Nincs különleges hozzáférés"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"Nincs alkalmazás"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"Az alkalmazás nem támogatja a munkaprofilt"</string>
-    <string name="home_confirmation_title" msgid="5244574290223747640">"Módosítja az alapértelmezett kezdőalkalmazást?"</string>
+    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
+    <skip />
     <string name="home_confirmation_message" msgid="248811491851505593">"Ez a kezdőképernyő helyére lép, és befolyásolhatja az eszköz funkcióihoz való hozzáférést.&lt;br&gt;&lt;br&gt;Ezt a beállítást bármikor módosíthatja az &lt;b&gt;Alapértelmezett kezdőalkalmazás&lt;/b&gt; beállításai között."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Megjegyzés: Ha újraindítja az eszközt, és képernyőzárat állított be, ez az alkalmazás csak a telefon feloldását követően indul el."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"A segéd hozzáfér majd a rendszer éppen használatban lévő alkalmazásainak információihoz, beleértve a képernyőn megjelenő vagy az alkalmazásokban hozzáférhető információkat is."</string>
-    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"Módosítja az alapértelmezett digitálisasszisztens-alkalmazást?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"Ez a segéd hozzáfér majd a rendszer éppen használatban lévő alkalmazásainak információihoz."</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Hibakeresési adatok megosztása"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Megosztja a részletes hibakeresési adatokat?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"A(z) <xliff:g id="APP_NAME">%1$s</xliff:g> hibakeresési adatokat szeretne feltölteni."</string>
@@ -739,7 +744,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Ez az ügynök hozzáférhet majd a(z) <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> apphoz, hogy információt kérhessen le, és műveleteket hajthasson végre az Ön nevében."</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Engedélyezés"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Tiltás"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"Engedélyezi a(z) <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> számára a képernyő- és alkalmazáskontextushoz való hozzáférést?"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
+    <skip />
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Az alapértelmezett segédalkalmazás hozzáférhet a képernyő tartalmához és a látható app által megosztott adatokhoz"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Engedélyezés"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Tiltás"</string>

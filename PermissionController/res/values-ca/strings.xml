@@ -456,12 +456,17 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"Sense accés especial d\'apps"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"No hi ha cap aplicació"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"No admet perfils professionals"</string>
-    <string name="home_confirmation_title" msgid="5244574290223747640">"Vols canviar l\'aplicació d\'inici predeterminada?"</string>
+    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
+    <skip />
     <string name="home_confirmation_message" msgid="248811491851505593">"Substituirà la pantalla d\'inici i pot afectar l\'accés a les funcions del dispositiu.&lt;br&gt;&lt;br&gt;Pots canviar aquesta selecció en qualsevol moment a la configuració de l\'&lt;b&gt;aplicació d\'inici predeterminada&lt;/b&gt;."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Nota: si reinicies el dispositiu i has definit un bloqueig de pantalla, l\'aplicació no s\'iniciarà fins que no desbloquegis el dispositiu."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"L\'assistent podrà llegir informació sobre les aplicacions en ús del sistema, com ara la informació visible a la pantalla o a què es pot accedir des de les aplicacions."</string>
-    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"Vols canviar l\'aplicació d\'assistent digital predeterminada?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"Aquest assistent podrà llegir informació sobre les aplicacions en ús al teu sistema."</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Comparteix les dades de depuració"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Vols compartir els detalls de la depuració?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> vol penjar informació de depuració."</string>
@@ -739,7 +744,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Aquest agent podrà accedir a <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> per obtenir informació i dur a terme accions per tu"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Permet"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"No permetis"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"Vols permetre que <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> accedeixi al context de la pantalla i de l\'app?"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
+    <skip />
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Permet que l\'aplicació d\'assistència predeterminada accedeixi al contingut de la pantalla i a les dades compartides per l\'aplicació visible"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Permet"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"No permetis"</string>

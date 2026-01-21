@@ -456,12 +456,17 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"Ingen spesiell apptilgang"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"Ingen apper"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"Støtter ikke jobbprofiler"</string>
-    <string name="home_confirmation_title" msgid="5244574290223747640">"Vil du bytte standardapp for startskjerm?"</string>
+    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
+    <skip />
     <string name="home_confirmation_message" msgid="248811491851505593">"Hvis du gjør dette, endres startskjermen, og tilgangen til funksjoner på enheten kan bli påvirket.&lt;br&gt;&lt;br&gt;Du kan endre dette valget når som helst i innstillingene for &lt;b&gt;standardapp for startskjermen&lt;/b&gt;."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Merk: Hvis du starter enheten din på nytt og har en skjermlås angitt, kan ikke denne appen starte før du låser opp enheten."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Assistenten kan lese informasjon om appene du bruker i systemet ditt, inkludert informasjon som er synlig på skjermen eller tilgjengelig i appene."</string>
-    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"Vil du bytte standardapp for digital assistent?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"Denne assistenten kan lese informasjon om appene du bruker i systemet ditt."</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Del feilsøkingsdata"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Vil du dele detaljerte feilsøkingsdata?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> vil laste opp feilsøkingsinformasjon."</string>
@@ -739,7 +744,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Denne agenten kan bruke <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> for å lese info og gjøre ting for deg"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Tillat"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Ikke tillat"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"Vil du gi <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> tilgang til skjerm- og appkontekst?"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
+    <skip />
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Gi standardassistentappen tilgang til skjerminnholdet og dataene som deles av den synlige appen"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Tillat"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Ikke tillat"</string>

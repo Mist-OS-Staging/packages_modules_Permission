@@ -42,7 +42,7 @@
     <string name="grant_dialog_button_deny_anyway" msgid="7225905870668915151">"무시하고 허용 안함"</string>
     <string name="grant_dialog_button_dismiss" msgid="1930399742250226393">"닫기"</string>
     <string name="current_permission_template" msgid="7452035392573329375">"<xliff:g id="CURRENT_PERMISSION_INDEX">%1$s</xliff:g>/<xliff:g id="PERMISSION_COUNT">%2$s</xliff:g>"</string>
-    <string name="permission_warning_template" msgid="2247087781222679458">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;에서 <xliff:g id="ACTION">%2$s</xliff:g>하도록 허용하시겠습니까?"</string>
+    <string name="permission_warning_template" msgid="2247087781222679458">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;에서 <xliff:g id="ACTION">%2$s</xliff:g> 허용하시겠습니까?"</string>
     <string name="permission_add_background_warning_template" msgid="1812914855915092273">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;에서 <xliff:g id="ACTION">%2$s</xliff:g>하도록 항상 허용하시겠습니까?"</string>
     <string name="allow_permission_foreground_only" msgid="116465816039675404">"앱 사용 중에만"</string>
     <string name="allow_permission_always" msgid="5194342531206054051">"항상"</string>
@@ -456,12 +456,17 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"특수 앱 액세스 권한 없음"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"앱 없음"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"직장 프로필을 지원하지 않음"</string>
-    <string name="home_confirmation_title" msgid="5244574290223747640">"기본 홈 앱을 변경하시겠습니까?"</string>
+    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
+    <skip />
     <string name="home_confirmation_message" msgid="248811491851505593">"이렇게 하면 홈 화면이 대체되고, 기기의 기능에 대한 액세스 권한이 영향을 받을 수 있습니다.&lt;br&gt;&lt;br&gt;언제든지 &lt;b&gt;기본 홈 앱&lt;/b&gt; 설정에서 이 선택 사항을 변경할 수 있습니다."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"참고: 화면 잠금이 설정되어 있다면 기기를 다시 시작한 후 이 앱을 시작하려면 기기를 잠금 해제해야 합니다."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"어시스턴트가 시스템에서 사용 중인 앱에 관한 정보를 읽을 수 있게 됩니다. 여기에는 화면에 표시된 정보 또는 앱 내에서 액세스할 수 있는 정보가 포함됩니다."</string>
-    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"기본 디지털 어시스턴트 앱을 변경하시겠습니까?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"이 어시스턴트가 시스템에서 사용 중인 앱에 관한 정보를 읽을 수 있게 됩니다."</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"디버깅 데이터 공유"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"상세한 디버깅 데이터를 공유하시겠습니까?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g>에서 디버깅 정보를 업로드하려고 합니다."</string>
@@ -739,7 +744,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"이 에이전트가 <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>에 액세스하여 정보를 확인하고 작업을 실행할 수 있게 됩니다."</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"허용"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"허용 안 함"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>에서 화면 및 앱 컨텍스트에 액세스하도록 허용하시겠습니까?"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
+    <skip />
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"기본 어시스턴트 앱이 표시되는 앱에서 공유한 화면 콘텐츠와 데이터에 액세스하도록 허용합니다."</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"허용"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"허용 안함"</string>
