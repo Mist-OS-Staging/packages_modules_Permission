@@ -752,7 +752,9 @@
                 featureFlag="android.app.Flags.statusbarApiShowPowerMenu" />
             <permission name="android.permission.ACCESS_BIOMETRIC_SENSOR_STRENGTHS"
                 featureFlag="android.hardware.biometrics.Flags.getBiometricSensorStrengths" />
-            <permission name="android.permission.READ_APP_FUNCTION_METADATA"
+            <permission name="android.permission.DISCOVER_APP_FUNCTIONS"
+                featureFlag="android.app.appfunctions.flags.Flags.enableAppFunctionPermissionV2" />
+            <permission name="android.permission.EXECUTE_APP_FUNCTIONS_SYSTEM"
                 featureFlag="android.app.appfunctions.flags.Flags.enableAppFunctionPermissionV2" />
         </permissions>
         <!-- App ops needed to allow background access to audio APIs for CTS -->
