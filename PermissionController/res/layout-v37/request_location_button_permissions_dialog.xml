@@ -29,13 +29,12 @@
             android:id="@+id/title"
             style="@style/RequestLocationButtonPermissionsDialogTitle" />
 
-       <!-- TODO Replace with precise location animation from existing dialog -->
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/illustration"
-            android:contentDescription="@string/precise_image_description"
-            style="@style/RequestLocationButtonPermissionsDialogIllustration"
-            app:lottie_rawRes="@raw/location_button_dialog_animation"
-            app:lottie_loop="true" />
+        <RadioButton
+            android:id="@+id/precise_location_illustration"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="@string/precise_image_description"
+            style="@style/RequestLocationButtonPermissionsDialogIllustration" />
 
         <com.android.permissioncontroller.permission.ui.widget.SecureButton
             android:id="@+id/allow"
