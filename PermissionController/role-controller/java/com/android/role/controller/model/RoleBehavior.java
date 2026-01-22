@@ -100,7 +100,7 @@ public interface RoleBehavior {
     /**
      * @see Role#grantAsUser(String, boolean, boolean, UserHandle, Context)
      */
-    default void grantAsUser(@NonNull Role role, @NonNull String packageName,
+    default void grantAsUser(@NonNull Role role, @NonNull String packageName, boolean overrideUser,
             @NonNull UserHandle user, @NonNull Context context) {}
 
     /**

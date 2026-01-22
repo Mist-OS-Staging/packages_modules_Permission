@@ -20,7 +20,6 @@ import android.app.Activity
 import android.app.Dialog
 import android.content.DialogInterface
 import android.content.Intent
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.os.Process
 import android.text.Html
@@ -83,7 +82,12 @@ class RequestAssistStructureFragment : DialogFragment() {
         titleText.text = title
 
         positiveButton.apply { setOnClickListener { onGrant() } }
-        negativeButton.apply { setOnClickListener { dialog!!.cancel() } }
+        negativeButton.apply {
+            setOnClickListener {
+                viewModel.markRequestDenied()
+                dialog!!.cancel()
+            }
+        }
         return Dialog(activity).apply { setContentView(view) }
     }
 
@@ -94,7 +98,6 @@ class RequestAssistStructureFragment : DialogFragment() {
 
     override fun onCancel(dialog: DialogInterface) {
         super.onCancel(dialog)
-        viewModel.markRequestDenied()
         setResultAndFinish(Activity.RESULT_CANCELED)
     }
 
@@ -103,9 +106,6 @@ class RequestAssistStructureFragment : DialogFragment() {
         activity.setResult(resultCode)
         activity.finish()
     }
-
-    /** The data class for UI state of RequestAssistStructure dialog. */
-    data class RequestAssistStructureRichUiState(val icon: Drawable?, val label: String)
 
     companion object {
         fun newInstance(packageName: String): RequestAssistStructureFragment =

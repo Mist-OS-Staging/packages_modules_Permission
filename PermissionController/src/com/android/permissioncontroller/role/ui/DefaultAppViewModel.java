@@ -19,6 +19,7 @@ package com.android.permissioncontroller.role.ui;
 import android.app.AppOpsManager;
 import android.app.Application;
 import android.app.role.RoleManager;
+import android.app.voiceinteraction.VoiceInteractionManager;
 import android.content.Context;
 import android.os.UserHandle;
 import android.util.Log;
@@ -61,12 +62,14 @@ public class DefaultAppViewModel extends AndroidViewModel {
             new ManageRoleHolderStateLiveData();
 
     private final AppOpsManager mAppOpsManager;
+    private final VoiceInteractionManager mVoiceInteractionManager;
 
     public DefaultAppViewModel(@NonNull Role role, @NonNull UserHandle user,
             @NonNull Application application) {
         super(application);
 
         mAppOpsManager = application.getSystemService(AppOpsManager.class);
+        mVoiceInteractionManager = application.getSystemService(VoiceInteractionManager.class);
 
         mRole = role;
         // If EXCLUSIVITY_PROFILE_GROUP this user should be profile parent
@@ -148,10 +151,12 @@ public class DefaultAppViewModel extends AndroidViewModel {
     /** Sets read screen context enabled for specified application */
     public void setReadScreenContextSettingEnabled(RoleApplicationItem holderApplicationItem,
             boolean enabled) {
-        // TODO: Clear previous record of denials
         int appOpMode = enabled ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_IGNORED;
         mAppOpsManager.setUidMode(AppOpsManager.OPSTR_READ_SCREEN_CONTEXT,
                 holderApplicationItem.getApplicationInfo().uid, appOpMode);
+        if (enabled) {
+            mVoiceInteractionManager.clearReadScreenContextRequestDeniedCount();
+        }
     }
 
     @NonNull
