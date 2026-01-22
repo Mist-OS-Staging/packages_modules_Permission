@@ -456,12 +456,17 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"دسترسی ویژه برنامه وجود ندارد"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"برنامه‌ای موجود نیست"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"از نمایه کاری پشتیبانی نمی‌کند"</string>
-    <string name="home_confirmation_title" msgid="5244574290223747640">"برنامه صفحه اصلی پیش‌فرض را تغییر می‌دهید؟"</string>
+    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
+    <skip />
     <string name="home_confirmation_message" msgid="248811491851505593">"‏با این کار، صفحه اصلی جایگزین خواهد شد و ممکن است بر دسترسی به ویژگی‌های دستگاهتان تأثیر بگذارد.&lt;br&gt;&lt;br&gt;همیشه می‌توانید این انتخاب را در تنظیمات &lt;b&gt;برنامه صفحه اصلی پیش‌فرض&lt;/b&gt; تغییر دهید."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"توجه: اگر دستگاهتان را بازراه‌اندازی کنید و قفل صفحه تنظیم کرده باشید، تا قفل تلفن را باز نکنید، این برنامه نمی‌تواند شروع به کار کند."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"دستیار می‌تواند اطلاعات مربوط به برنامه‌های درحال استفاده در سیستم شما را بخواند، ازجمله اطلاعاتی که در صفحه‌نمایش شما قابل‌مشاهده است یا در برنامه‌ها قابل‌دسترسی است."</string>
-    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"برنامه دستیار دیجیتال پیش‌فرض را تغییر می‌دهید؟"</string>
-    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"این دستیار می‌تواند اطلاعات مربوط به برنامه‌های درحال استفاده در سیستم شما را بخواند."</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"هم‌رسانی داده‌های اشکال‌زدایی"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"جزئیات داده‌های اشکال‌زدایی هم‌رسانی شود؟"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> می‌خواهد اطلاعات اشکال‌زدایی را بارگذاری کند."</string>
@@ -739,7 +744,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"این نماینده برای دریافت معلومات و انجام اعمال برای شما قادر به دسترسی به <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>خواهد بود"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"اجازه دادن"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"اجازه ندادن"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"به <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> اجازه می‌دهید به بافت برنامه و صفحه‌نمایش دسترسی داشته باشد؟"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
+    <skip />
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"به برنامه دستیار پیش‌فرض اجازه داده می‌شود به محتوای صفحه‌نمایش و داده‌های هم‌رسانی‌شده توسط برنامه نمایان دسترسی داشته باشد"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"اجازه دادن"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"اجازه ندادن"</string>

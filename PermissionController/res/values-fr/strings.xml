@@ -456,12 +456,17 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"Pas d\'accès spécial des applis"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"Aucune application"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"Non compatible avec le profil professionnel"</string>
-    <string name="home_confirmation_title" msgid="5244574290223747640">"Modifier l\'appli d\'accueil par défaut ?"</string>
+    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
+    <skip />
     <string name="home_confirmation_message" msgid="248811491851505593">"Cela remplacera votre écran d\'accueil et peut affecter l\'accès aux fonctionnalités de votre appareil.&lt;br&gt;&lt;br&gt;Vous pouvez modifier cette sélection à tout moment dans les paramètres de l\'&lt;b&gt;appli d\'accueil par défaut&lt;/b&gt;."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Remarque : Si vous redémarrez votre appareil et que le verrouillage de l\'écran est activé, vous ne pouvez pas lancer cette application tant que vous n\'avez pas déverrouillé votre appareil."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"L\'assistant pourra accéder aux informations relatives aux applications en cours d\'utilisation sur votre système, y compris aux informations visibles à l\'écran ou accessibles dans les applications."</string>
-    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"Modifier l\'assistant numérique par défaut ?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"Cet assistant pourra lire des informations sur les applis en cours d\'utilisation sur votre système."</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Partager les données de débogage"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Partager les données de débogage détaillées ?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"L\'application <xliff:g id="APP_NAME">%1$s</xliff:g> souhaite transférer des informations de débogage."</string>
@@ -739,7 +744,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Cet agent pourra accéder à <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> pour obtenir des informations et effectuer des actions pour vous"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Autoriser"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Ne pas autoriser"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"Autoriser <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> à accéder à l\'écran et au contexte de l\'appli ?"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
+    <skip />
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Autoriser l\'appli d\'assistance par défaut à accéder au contenu de l\'écran et aux données partagées par l\'appli visible"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Autoriser"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Ne pas autoriser"</string>

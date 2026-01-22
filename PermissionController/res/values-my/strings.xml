@@ -456,12 +456,17 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"အထူးအက်ပ်များ သုံးခွင့်မရှိပါ"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"အက်ပ် မရှိပါ"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"အလုပ်ပရိုဖိုင်ကို မပံ့ပိုးပါ"</string>
-    <string name="home_confirmation_title" msgid="5244574290223747640">"မူရင်းပင်မအက်ပ် ပြောင်းမလား"</string>
+    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
+    <skip />
     <string name="home_confirmation_message" msgid="248811491851505593">"၎င်းသည် သင့်ပင်မစာမျက်နှာကို အစားထိုးမည်ဖြစ်ပြီး သင့်စက်ရှိ ဝန်ဆောင်မှုများ သုံးခွင့်ပေါ် သက်ရောက်နိုင်သည်။&lt;br&gt;&lt;br&gt;ဤရွေးချယ်မှုကို &lt;b&gt;မူရင်းပင်မအက်ပ်&lt;/b&gt; ဆက်တင်များတွင် အချိန်မရွေး ပြောင်းနိုင်သည်။"</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"မှတ်ချက်- သင်၏စက်ပစ္စည်းကို ပြန်လည်စတင်ပြီး မျက်နှာပြင်လော့ခ်ချထားလျှင် ၎င်းကို လော့ခ်မဖွင့်မချင်း ဤအက်ပ်ကို အသုံးပြု၍မရပါ။"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"ဤ assistant သည် သင်၏ မျက်နှာပြင်ပေါ်တွင် မြင်ရသည့် သို့မဟုတ် အက်ပ်များအတွင်း ရယူအသုံးပြုနိုင်သည့် အချက်အလက်များအပါအဝင် သင်၏ စနစ်ထဲတွင် အသုံးပြုနေသည့် အက်ပ်များနှင့် ပတ်သက်သည့် အချက်အလက်များကို ဖတ်ရှုနိုင်မည်ဖြစ်သည်။"</string>
-    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"မူရင်း ဒစ်ဂျစ်တယ်အထောက်အကူ အက်ပ်ကို ပြောင်းမလား"</string>
-    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"ဤအထောက်အကူသည် သင့်စနစ်တွင် သုံးနေသော အက်ပ်များအကြောင်း အချက်အလက်ကို ဖတ်နိုင်မည်။"</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"အမှားရှာပြင်သည့် ဒေတာ မျှဝေခြင်း"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"အမှားရှာပြင်သည့် ဒေတာ အသေးစိတ်ကို မျှဝေလိုသလား။"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> က အမှားရှာပြင်သည့် အချက်အလက်ကို အပ်လုဒ်လုပ်လိုသည်။"</string>
@@ -739,7 +744,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"ဤအေးဂျင့်သည် အချက်အလက်ရယူရန်နှင့် သင့်အတွက် လုပ်ဆောင်ရန် <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ကို သုံးနိုင်မည်"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"ခွင့်ပြုရန်"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"ခွင့်မပြုပါနှင့်"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> အား စခရင်နှင့် အက်ပ်အကြောင်းအရာ သုံးခွင့်ပြုမလား"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
+    <skip />
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"မူရင်းအထောက်အကူအက်ပ်အား စခရင်အကြောင်းအရာနှင့် မြင်နိုင်သောအက်ပ်က မျှဝေထားသောဒေတာကို သုံးခွင့်ပြုရန်"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"ခွင့်ပြုရန်"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"ခွင့်မပြုပါ"</string>

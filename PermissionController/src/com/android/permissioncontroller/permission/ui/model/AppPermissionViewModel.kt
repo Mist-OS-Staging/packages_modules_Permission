@@ -32,6 +32,7 @@ import android.app.AppOpsManager.MODE_ERRORED
 import android.app.AppOpsManager.OPSTR_MANAGE_EXTERNAL_STORAGE
 import android.app.Application
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.hardware.SensorPrivacyManager
 import android.hardware.SensorPrivacyManager.OnSensorPrivacyChangedListener
 import android.hardware.SensorPrivacyManager.OnSensorPrivacyChangedListener.SensorPrivacyChangedParams
@@ -415,7 +416,7 @@ class AppPermissionViewModel(
 
             private fun onMediaPermGroupUpdate(
                 mediaPermGroupName: String,
-                permGroup: LightAppPermGroup?
+                permGroup: LightAppPermGroup?,
             ) {
                 if (permGroup == null) {
                     mediaStorageSupergroupPermGroups.remove(mediaPermGroupName)
@@ -922,17 +923,19 @@ class AppPermissionViewModel(
         }
 
         if (changeRequest == ChangeRequest.GRANT_FINE_LOCATION) {
-            if (!group.isOneTime) {
-                val newGroup = KotlinUtils.grantForegroundRuntimePermissions(app, group)
+            var newGroup = group
+            if (!newGroup.isOneTime) {
+                newGroup = KotlinUtils.grantForegroundRuntimePermissions(app, group)
                 logPermissionChanges(group, newGroup, buttonClicked)
             }
-            KotlinUtils.setFlagsWhenLocationAccuracyChanged(app, group, true)
+            KotlinUtils.setFlagsWhenLocationAccuracyChanged(app, newGroup, true)
             return
         }
 
         if (changeRequest == ChangeRequest.REVOKE_FINE_LOCATION) {
-            if (!group.isOneTime) {
-                val newGroup =
+            var newGroup = group
+            if (!newGroup.isOneTime) {
+                newGroup =
                     KotlinUtils.revokeForegroundRuntimePermissions(
                         app,
                         group,
@@ -940,7 +943,7 @@ class AppPermissionViewModel(
                     )
                 logPermissionChanges(group, newGroup, buttonClicked)
             }
-            KotlinUtils.setFlagsWhenLocationAccuracyChanged(app, group, false)
+            KotlinUtils.setFlagsWhenLocationAccuracyChanged(app, newGroup, false)
             return
         }
 
@@ -1114,7 +1117,16 @@ class AppPermissionViewModel(
                             newGroup,
                             filterPermissions = listOf(ACCESS_COARSE_LOCATION),
                         )
+                        //  Due to filterPermissions parameter in above grant call, one time flag
+                        //  for other permissions in location group aren't cleared,
+                        //  do it explicitly for all permissions in the group.
+                        KotlinUtils.setGroupFlags(
+                            app,
+                            newGroup,
+                            PackageManager.FLAG_PERMISSION_ONE_TIME to false,
+                        )
                     } else {
+                        // This clears one time flag for all permissions in the group.
                         KotlinUtils.grantForegroundRuntimePermissions(app, newGroup)
                     }
 

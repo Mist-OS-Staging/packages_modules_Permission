@@ -261,7 +261,7 @@
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Zezwolono na dostęp tylko do multimediów"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Zezwolono na zarządzanie wszystkimi plikami"</string>
     <string name="ask_header" msgid="2633816846459944376">"Zawsze pytaj"</string>
-    <string name="denied_header" msgid="903209608358177654">"Nie ma dostępu"</string>
+    <string name="denied_header" msgid="903209608358177654">"Nie mają dostępu"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> na tym urządzeniu: <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Zobacz więcej aplikacji z dostępem do wszystkich plików"</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 dzień}few{# dni}many{# dni}other{# dnia}}"</string>
@@ -456,12 +456,17 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"Brak aplikacji ze specjalnym dostępem"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"Brak aplikacji"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"Nie obsługuje profilu służbowego"</string>
-    <string name="home_confirmation_title" msgid="5244574290223747640">"Zmienić domyślny ekran główny?"</string>
+    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
+    <skip />
     <string name="home_confirmation_message" msgid="248811491851505593">"Zastąpi to ekran główny i może wpłynąć na dostęp do funkcji na urządzeniu.&lt;br&gt;&lt;br&gt;W każdej chwili możesz zmienić ten wybór w ustawieniach w sekcji &lt;b&gt;Domyślny ekran główny&lt;/b&gt;."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Uwaga: Po ponownym uruchomieniu urządzenia z ustawioną blokadą ekranu ta aplikacja będzie mogła uruchomić się dopiero wtedy, gdy odblokujesz urządzenie."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Asystent będzie mógł odczytywać informacje o aplikacjach używanych w systemie. Obejmuje to też informacje widoczne na ekranie i dostępne w aplikacjach."</string>
-    <string name="assistant_confirmation_title_v37" msgid="1700973760643407047">"Zmienić domyślną aplikację asystenta cyfrowego?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="7518084182823372974">"Ten asystent będzie mógł odczytywać informacje o aplikacjach używanych w systemie."</string>
+    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Udostępnianie danych debugowania"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Udostępnić szczegółowe dane debugowania?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> chce przesłać informacje debugowania."</string>
@@ -739,7 +744,8 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Umożliwi to agentowi dostęp do informacji i wykonywanie działań w aplikacji <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Zezwalaj"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Nie zezwalaj"</string>
-    <string name="request_assist_structure_dialog_title" msgid="1108220895681014081">"Zezwolić aplikacji <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> na dostęp do kontekstu ekranu i aplikacji?"</string>
+    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
+    <skip />
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Zezwól domyślnej aplikacji asystującej na dostęp do zawartości ekranu i danych udostępnianych przez widoczną aplikację"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Zezwól"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Nie zezwalaj"</string>
