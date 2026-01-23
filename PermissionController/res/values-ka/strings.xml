@@ -456,17 +456,13 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"აპების სპეციალური წვდომა არაა"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"აპები არ არის"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"არ აქვს სამსახურის პროფილის მხარდაჭერა"</string>
-    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
-    <skip />
+    <string name="home_confirmation_title" msgid="8070603501839126093">"გსურთ ნაგულისხმევი მთავარი ეკრანის აპის შეცვლა &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;-ით?"</string>
     <string name="home_confirmation_message" msgid="248811491851505593">"ეს ჩაანაცვლებს თქვენს მთავარ ეკრანს და შეიძლება გავლენა იქონიოს თქვენი მოწყობილობის ფუნქციებზე წვდომაზე.&lt;br&gt;&lt;br&gt;ამ არჩევანის შეცვლა ნებისმიერ დროს შეგიძლიათ &lt;b&gt;ნაგულისხმევი მთავარი ეკრანის აპის&lt;/b&gt; პარამეტრებიდან."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"შენიშვნა: თუ ეკრანის დაბლოკვის მეთოდს იყენებთ, მოწყობილობის გადატვირთვის შემდეგ ეს აპი ვერ გაეშვება, სანამ მოწყობილობას არ განბლოკავთ"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"ასისტენტი შეძლებს თქვენს სისტემაში გამოყენებული აპების ინფორმაციის წაკითხვას (მათ შორის, ინფორმაციის, რომელიც ნაჩვენებია თქვენს ეკრანზე ან ხელმისაწვდომია აპებში)."</string>
-    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
-    <skip />
+    <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"გსურთ თქვენი ციფრული ასისტენტის აპის შეცვლა &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;-ით?"</string>
+    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"ეს ასისტენტი შეძლებს წვდომას ისეთ ინფორმაციაზე, როგორიცაა თქვენი შეტყობინებები და მონაცემები, რომლებიც აპებმა აირჩია თქვენს ასისტენტთან გასაზიარებლად."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"ეს ასისტენტი შეძლებს წვდომას ისეთ ინფორმაციაზე, როგორიცაა თქვენი შეტყობინებები და მონაცემები, რომლებიც აპებმა აირჩია თქვენს ასისტენტთან გასაზიარებლად.&lt;br&gt;&lt;br&gt;ასევე, რადგან თქვენ ადრე ჩართეთ ეკრანისა და აპის მონაცემები <xliff:g id="APP_NAME">%1$s</xliff:g>-ისთვის, მას ექნება წვდომა თქვენს ეკრანზე გახსნილი აპის კონტენტზე."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"გამართვის მონაცემების გაზიარება"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"გსურთ გამართვის დეტალური მონაცემების გაზიარება?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ითხოვს გამართვის ინფორმაციის ატვირთვას."</string>
@@ -744,8 +740,7 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"აგენტს შეეძლება <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>-ზე წვდომა ინფორმაციის მისაღებად და თქვენი სახელით მოქმედებების შესასრულებლად"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"დაშვება"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"არ დაიშვას"</string>
-    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
-    <skip />
+    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"გსურთ, &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; აპს ჰქონდეს წვდომა ეკრანზე და აპის კონტექსტზე?"</string>
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"დაუშვით ნაგულისხმევი ასისტენტის აპის წვდომა ეკრანის კონტენტსა და ხილული აპის მიერ გაზიარებულ მონაცემებზე"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"დაშვება"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"უარყოფა"</string>

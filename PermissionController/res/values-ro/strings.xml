@@ -456,17 +456,13 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"Niciun acces special pentru aplicații"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"Nicio aplicație"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"Nu acceptă profilul de serviciu"</string>
-    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
-    <skip />
+    <string name="home_confirmation_title" msgid="8070603501839126093">"Schimbi aplicația prestabilită pentru gestionarea locuinței cu &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="home_confirmation_message" msgid="248811491851505593">"Acțiunea va înlocui ecranul de pornire și poate afecta accesul la funcțiile de pe dispozitiv.&lt;br&gt;&lt;br&gt;Poți modifica oricând opțiunea în setările &lt;b&gt;Aplicației ecran de pornire prestabilite&lt;/b&gt;."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Notă: dacă repornești telefonul și ai activată blocarea ecranului, această aplicație nu poate porni până nu deblochezi telefonul."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Aplicația asistent va putea să citească informații despre aplicațiile în uz de pe sistem, inclusiv informațiile vizibile pe ecran sau accesibile în aplicații."</string>
-    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
-    <skip />
+    <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Schimbi aplicația folosită ca asistent digital cu &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
+    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Acest asistent va putea să acceseze informații precum mesajele și datele pe care aplicațiile au ales să le trimită asistentului."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Acest asistent va putea să acceseze informații precum mesajele tale și datele pe care aplicațiile au ales să le trimită asistentului.&lt;br&gt;&lt;br&gt;În plus, deoarece ai activat anterior datele despre ecran și aplicații pentru <xliff:g id="APP_NAME">%1$s</xliff:g>, această aplicație va avea permisiunea să acceseze conținutul din aplicația deschisă pe ecran."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Trimite datele despre remedierea erorilor"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Trimiți datele detaliate despre remedierea erorilor?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> dorește să încarce informațiile despre remedierea erorilor."</string>
@@ -744,8 +740,7 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Acest agent va putea să acceseze <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> pentru a obține informații și a acționa pentru tine"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Permite"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Nu permite"</string>
-    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
-    <skip />
+    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Permiți ca &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; să acceseze contextul ecranului și al aplicației?"</string>
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Permite-i aplicației asistent prestabilite să acceseze conținutul ecranului și datele trimise de aplicația vizibilă"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Permite"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Nu permite"</string>

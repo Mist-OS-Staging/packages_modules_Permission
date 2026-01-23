@@ -456,17 +456,13 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"Sen acceso especial das apps"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"Non hai ningunha aplicación"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"Non é compatible co perfil de traballo"</string>
-    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
-    <skip />
+    <string name="home_confirmation_title" msgid="8070603501839126093">"Queres cambiar a aplicación de inicio predeterminada a &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="home_confirmation_message" msgid="248811491851505593">"Esta acción substituirá a pantalla de inicio e pode afectar o acceso ás funcións do dispositivo.&lt;br&gt;&lt;br&gt;Podes cambiar esta selección en calquera momento na configuración da &lt;b&gt;aplicación de inicio predeterminada&lt;/b&gt;."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Nota: Se reinicias o dispositivo e definiches un bloqueo de pantalla, esta aplicación non se poderá iniciar ata que desbloquees o dispositivo."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"O asistente poderá ler información sobre as aplicacións en uso no teu sistema, incluídos os datos visibles na pantalla ou aos que se pode acceder desde as aplicacións."</string>
-    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
-    <skip />
+    <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Queres cambiar a aplicación de asistencia dixital a &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
+    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Este asistente poderá acceder a información como as túas mensaxes e os datos que as aplicacións decidisen compartir co teu asistente."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Este asistente poderá acceder a información como as túas mensaxes e os datos que as aplicacións decidan compartir con el.&lt;br&gt;&lt;br&gt;Ademais, como xa activaches os datos de aplicacións e pantalla para <xliff:g id="APP_NAME">%1$s</xliff:g>, poderá acceder ao contido da aplicación que estea aberta na pantalla."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Compartir datos de depuración"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Queres compartir datos detallados da depuración?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"A aplicación <xliff:g id="APP_NAME">%1$s</xliff:g> quere cargar información de depuración."</string>
@@ -744,8 +740,7 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Este axente poderá acceder a <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> para obter información e realizar accións por ti"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Permitir"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Non permitir"</string>
-    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
-    <skip />
+    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Queres permitir que &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; acceda á pantalla e ao contexto das aplicacións?"</string>
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Deixa que a app predet. de asistencia acceda á pantalla e aos datos compartidos pola app visible"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Permitir"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Non permitir"</string>
