@@ -169,6 +169,8 @@
         </app-op-permissions>
         <app-ops>
             <app-op name="android:receive_sensitive_notifications" mode="allowed" minSdkVersion="35"/>
+            <app-op name="android:read_restricted_messages" mode="allowed"
+                featureFlag="com.android.internal.telephony.flags.Flags.secureAccessToRestrictedRcsMessages"/>
         </app-ops>
     </role>
 
@@ -282,6 +284,8 @@
             <app-op name="android:run_in_background" maxTargetSdkVersion="25" mode="allowed" />
             <app-op name="android:run_any_in_background" mode="allowed" />
             <app-op name="android:receive_sensitive_notifications" mode="allowed" minSdkVersion="35"/>
+            <app-op name="android:read_restricted_messages" mode="allowed"
+                featureFlag="com.android.internal.telephony.flags.Flags.secureAccessToRestrictedRcsMessages"/>
         </app-ops>
         <preferred-activities>
             <preferred-activity>
@@ -609,6 +613,8 @@
         </app-op-permissions>
         <app-ops>
             <app-op name="android:receive_sensitive_notifications" mode="allowed" minSdkVersion="35"/>
+            <app-op name="android:read_restricted_messages" mode="allowed"
+                featureFlag="com.android.internal.telephony.flags.Flags.secureAccessToRestrictedRcsMessages"/>
         </app-ops>
     </role>
 
@@ -646,6 +652,8 @@
         </permissions>
         <app-ops>
             <app-op name="android:receive_sensitive_notifications" mode="allowed" minSdkVersion="35"/>
+            <app-op name="android:read_restricted_messages" mode="allowed"
+                featureFlag="com.android.internal.telephony.flags.Flags.secureAccessToRestrictedRcsMessages"/>
         </app-ops>
     </role>
 
@@ -752,13 +760,17 @@
                 featureFlag="android.app.Flags.statusbarApiShowPowerMenu" />
             <permission name="android.permission.ACCESS_BIOMETRIC_SENSOR_STRENGTHS"
                 featureFlag="android.hardware.biometrics.Flags.getBiometricSensorStrengths" />
-            <permission name="android.permission.READ_APP_FUNCTION_METADATA"
+            <permission name="android.permission.DISCOVER_APP_FUNCTIONS"
+                featureFlag="android.app.appfunctions.flags.Flags.enableAppFunctionPermissionV2" />
+            <permission name="android.permission.EXECUTE_APP_FUNCTIONS_SYSTEM"
                 featureFlag="android.app.appfunctions.flags.Flags.enableAppFunctionPermissionV2" />
         </permissions>
         <!-- App ops needed to allow background access to audio APIs for CTS -->
         <app-ops>
             <app-op name="android:control_audio" mode="allowed" minSdkVersion="36"/>
             <app-op name="android:control_audio_partial" mode="allowed" minSdkVersion="36"/>
+            <app-op name="android:read_restricted_messages" mode="allowed"
+                featureFlag="com.android.internal.telephony.flags.Flags.secureAccessToRestrictedRcsMessages"/>
         </app-ops>
     </role>
 
@@ -932,6 +944,8 @@
             <permission name="android.permission.READ_GLOBAL_APP_SEARCH_DATA" />
             <permission name="android.permission.READ_BLOCKED_NUMBERS"
                 featureFlag="android.permission.flags.Flags.grantReadBlockedNumbersToSystemUiIntelligence" />
+            <permission name="android.permission.DISCOVER_APP_FUNCTIONS"
+                featureFlag="android.app.appfunctions.flags.Flags.enableAppFunctionPermissionV2" />
         </permissions>
         <app-ops>
             <app-op name="android:receive_sensitive_notifications" mode="allowed" minSdkVersion="35"/>
@@ -1236,6 +1250,8 @@
             <!-- If this role holder has a NotificationListenerService, let that service receive
                  notifications with sensitive content unredacted-->
             <permission name="android.permission.RECEIVE_SENSITIVE_NOTIFICATIONS" minSdkVersion="35"/>
+            <permission name="android.permission.EXECUTE_APP_FUNCTIONS_SYSTEM"
+                featureFlag="android.app.appfunctions.flags.Flags.enableAppFunctionPermissionV2" />
         </permissions>
         <app-ops>
             <app-op name="android:receive_sensitive_notifications" mode="allowed" minSdkVersion="35"/>
@@ -1297,6 +1313,8 @@
                 featureFlag="android.companion.Flags.expandAppStreamingRolePermissions"
                 minSdkVersion="36"
                 mode="allowed" />
+            <app-op name="android:read_restricted_messages" mode="allowed"
+                featureFlag="com.android.internal.telephony.flags.Flags.secureAccessToRestrictedRcsMessages"/>
         </app-ops>
     </role>
 
@@ -1322,6 +1340,8 @@
        </permissions>
         <app-ops>
             <app-op name="android:receive_sensitive_notifications" mode="allowed" minSdkVersion="35"/>
+            <app-op name="android:read_restricted_messages" mode="allowed"
+                featureFlag="com.android.internal.telephony.flags.Flags.secureAccessToRestrictedRcsMessages"/>
         </app-ops>
     </role>
 
@@ -1349,6 +1369,8 @@
        </app-op-permissions>
         <app-ops>
             <app-op name="android:receive_sensitive_notifications" mode="allowed" minSdkVersion="35"/>
+            <app-op name="android:read_restricted_messages" mode="allowed"
+                featureFlag="com.android.internal.telephony.flags.Flags.secureAccessToRestrictedRcsMessages"/>
         </app-ops>
     </role>
 
@@ -1761,6 +1783,10 @@
             <permission name="android.permission.DEVICE_POWER" />
             <permission name="android.permission.NET_TUNNELING" />
         </permissions>
+        <app-ops>
+            <app-op name="android:read_restricted_messages" mode="allowed"
+                featureFlag="com.android.internal.telephony.flags.Flags.secureAccessToRestrictedRcsMessages"/>
+        </app-ops>
     </role>
 
     <!--
@@ -2046,6 +2072,8 @@
             <permission
                 name="android.permission.ACCESS_ATTENTION_LISTENER"
                 featureFlag="com.android.input.flags.Flags.enableAttentionServiceApis" />
+            <permission name="android.permission.DISCOVER_APP_FUNCTIONS"
+                featureFlag="android.app.appfunctions.flags.Flags.enableAppFunctionPermissionV2" />
         </permissions>
     </role>
 
