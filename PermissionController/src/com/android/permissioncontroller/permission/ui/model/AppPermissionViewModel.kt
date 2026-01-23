@@ -933,16 +933,13 @@ class AppPermissionViewModel(
         }
 
         if (changeRequest == ChangeRequest.REVOKE_FINE_LOCATION) {
-            var newGroup = group
-            if (!newGroup.isOneTime) {
-                newGroup =
-                    KotlinUtils.revokeForegroundRuntimePermissions(
-                        app,
-                        group,
-                        filterPermissions = listOf(ACCESS_FINE_LOCATION),
-                    )
-                logPermissionChanges(group, newGroup, buttonClicked)
-            }
+            val newGroup =
+                KotlinUtils.revokeForegroundRuntimePermissions(
+                    app,
+                    group,
+                    filterPermissions = listOf(ACCESS_FINE_LOCATION),
+                )
+            logPermissionChanges(group, newGroup, buttonClicked)
             KotlinUtils.setFlagsWhenLocationAccuracyChanged(app, newGroup, false)
             return
         }
