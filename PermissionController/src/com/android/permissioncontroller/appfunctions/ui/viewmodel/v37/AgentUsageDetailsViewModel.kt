@@ -1,0 +1,131 @@
+/*
+ * Copyright (C) 2025 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.android.permissioncontroller.appfunctions.ui.viewmodel.v37
+
+import android.app.Application
+import androidx.annotation.VisibleForTesting
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.viewModelScope
+import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAppFunctionAgentUsageDetailsUseCase
+import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAppFunctionAgentUsageDetailsUseCase.Companion.KEY_PAST_24_HOURS
+import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAppFunctionAgentUsageDetailsUseCase.Companion.KEY_PAST_7_DAYS
+import com.android.permissioncontroller.appinteraction.domain.model.v37.AccessHistory
+import com.android.permissioncontroller.common.model.Stateful
+import kotlin.String
+import kotlin.collections.Map
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.launch
+
+/** The ViewModel for the agents timeline page. */
+class AgentUsageDetailsViewModel(
+    app: Application,
+    private val agentPackageName: String,
+    private val getAppFunctionAgentUsageDetailsUseCase: GetAppFunctionAgentUsageDetailsUseCase,
+    state: SavedStateHandle = SavedStateHandle(emptyMap()),
+    scope: CoroutineScope? = null,
+    private val defaultDispatcher: CoroutineDispatcher = Dispatchers.Default,
+) : AndroidViewModel(app) {
+    private val coroutineScope = scope ?: viewModelScope
+
+    private val show7DaysFlow = MutableStateFlow(state[KEY_SHOULD_SHOW_7_DAYS] ?: false)
+
+    private val agentUsageDetailsStateFlow =
+        MutableStateFlow<Stateful<Map<String, List<AccessHistory>>>>(Stateful.Loading())
+
+    init {
+        coroutineScope.launch(defaultDispatcher) {
+            try {
+                val agentUsageDetailsUseCase =
+                    getAppFunctionAgentUsageDetailsUseCase(app.applicationContext, agentPackageName)
+                agentUsageDetailsStateFlow.value = Stateful.Success(agentUsageDetailsUseCase)
+            } catch (e: Exception) {
+                agentUsageDetailsStateFlow.value = Stateful.Failure(throwable = e)
+            }
+        }
+    }
+
+    @VisibleForTesting
+    val agentUsageDetailsUiDataFlow: Flow<AgentUsageDetailsUiState> by lazy {
+        combine(agentUsageDetailsStateFlow, show7DaysFlow) { agentUsageDetailsState, show7Days ->
+                buildAgentUsageDetailsUiState(agentUsageDetailsState, show7Days)
+            }
+            .flowOn(defaultDispatcher)
+    }
+
+    private fun buildAgentUsageDetailsUiState(
+        agentUsageDetailsState: Stateful<Map<String, List<AccessHistory>>>,
+        show7Days: Boolean,
+    ): AgentUsageDetailsUiState {
+        when (agentUsageDetailsState) {
+            is Stateful.Loading -> return AgentUsageDetailsUiState.Loading
+            is Stateful.Failure ->
+                return AgentUsageDetailsUiState.Failure(agentUsageDetailsState.throwable)
+            is Stateful.Success -> {
+                val show7DaysKey =
+                    if (show7Days) {
+                        KEY_PAST_7_DAYS
+                    } else {
+                        KEY_PAST_24_HOURS
+                    }
+                val agentUsageDetails = agentUsageDetailsState.value[show7DaysKey]
+                val agentAccessUiInfos =
+                    agentUsageDetails?.map { agentUsageDetail ->
+                        AgentAccessUiInfo(
+                            agentUsageDetail.targetPackageName,
+                            agentUsageDetail.accessTime,
+                            agentUsageDetail.interactionUri,
+                        )
+                    } ?: emptyList()
+                return AgentUsageDetailsUiState.Success(
+                    agentPackageName,
+                    agentAccessUiInfos,
+                    show7Days,
+                )
+            }
+        }
+    }
+
+    companion object {
+        private const val KEY_SHOULD_SHOW_7_DAYS = "show7Days"
+    }
+}
+
+/** Data class for the agent access entries on the agent timeline dashboard */
+data class AgentAccessUiInfo(
+    val targetPackageName: String,
+    val lastAccessTime: Long,
+    val interactionUri: String?,
+)
+
+sealed class AgentUsageDetailsUiState {
+    data object Loading : AgentUsageDetailsUiState()
+
+    data class Failure(val throwable: Throwable) : AgentUsageDetailsUiState()
+
+    data class Success(
+        val agentPackageName: String,
+        val agentAccessUiInfos: List<AgentAccessUiInfo>,
+        val show7Days: Boolean,
+    ) : AgentUsageDetailsUiState()
+}
