@@ -6921,6 +6921,12 @@
     <permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"
         android:protectionLevel="signature|privileged|role" />
 
+    <!-- @hide Allows an application to hide/uninstall/suspend/disable system required apps.
+        <p>Not for use by third-party applications. -->
+    <permission android:name="android.permission.ALLOW_CONTROL_SYSTEM_REQUIRED_PACKAGES"
+        android:protectionLevel="signature"
+        android:featureFlag="android.content.pm.protect_system_required_packages"/>
+
     <!-- @SystemApi @TestApi iAllows an application to grant specific permissions.
          @hide -->
     <permission android:name="android.permission.GRANT_RUNTIME_PERMISSIONS"
