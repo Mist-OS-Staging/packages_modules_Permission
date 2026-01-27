@@ -42,6 +42,7 @@ android_library {
 
     visibility: [
         "//packages/apps/Car/Settings",
+        "//packages/apps/Settings",
         "//packages/modules/Permission/PermissionController"
     ],
 }
