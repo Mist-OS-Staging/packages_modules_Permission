@@ -456,17 +456,13 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"কোনো বিশেষ এপ্ এক্সেছ নাই"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"কোনো এপ্‌ নাই"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"কৰ্মস্থানৰ প্ৰ’ফাইল সমৰ্থন নকৰে"</string>
-    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
-    <skip />
+    <string name="home_confirmation_title" msgid="8070603501839126093">"আপোনাৰ ডিফ’ল্ট হ’ম এপ্‌ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;লৈ সলনি কৰিবনে?"</string>
     <string name="home_confirmation_message" msgid="248811491851505593">"এইটোৱে আপোনাৰ গৃহ স্ক্ৰীনখন সলনি কৰিব আৰু আপোনাৰ ডিভাইচত সুবিধাসমূহৰ এক্সেছত প্ৰভাৱ পেলাব পাৰে।&lt;br&gt;&lt;br&gt;আপুনি যিকোনো সময়তে &lt;b&gt;ডিফ’ল্ট গৃহ এপ্‌&lt;/b&gt;ৰ ছেটিঙত এই বাছনিটো সলনি কৰিব পাৰে।"</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"টোকা: যদি আপুনি আপোনাৰ ডিভাইচটো ৰিষ্টাৰ্ট কৰে আৰু আপোনাৰ এটা স্ক্ৰীন লক ছেট কৰি থোৱা আছে, তেন্তে এই এপ্‌টো আপুনি নিজৰ ডিভাইচটো আনলক নকৰালৈকে আৰম্ভ হ’ব নোৱাৰে।"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"আপোনাৰ স্ক্ৰীনত দেখা পোৱা বা এপ্‌সমূহত এক্সেছ কৰিব পৰা তথ্যসমূহকে ধৰি, এই সহায়কটোৱে আপোনাৰ ছিষ্টেমত ব্যৱহৃত হৈ থকা এপ্‌সমূহৰ বিষয়ে তথ্য পঢ়িব পাৰিব।"</string>
-    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
-    <skip />
+    <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"আপোনাৰ ডিজিটেল সহায়ক এপ্‌ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;লৈ সলনি কৰিবনে?"</string>
+    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"এই সহায়কটোৱে আপোনাৰ বাৰ্তা আৰু এপ্‌সমূহে আপোনাৰ সহায়কৰ সৈতে শ্বেয়াৰ কৰিবলৈ বাছনি কৰা ডেটাৰ দৰে তথ্য এক্সেছ কৰিব পাৰিব।"</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"এই সহায়কটোৱে আপোনাৰ বাৰ্তা আৰু এপ্‌সমূহে আপোনাৰ সহায়কৰ সৈতে শ্বেয়াৰ কৰিবলৈ বাছনি কৰা ডেটাৰ দৰে তথ্য এক্সেছ কৰিব পাৰিব।&lt;br&gt;&lt;br&gt;লগতে, আপুনি আগতে <xliff:g id="APP_NAME">%1$s</xliff:g>ৰ বাবে স্ক্ৰীন আৰু এপ্‌ ডেটা অন কৰাৰ বাবে, ইয়াক আপোনাৰ স্ক্ৰীনত খোলা এপ্‌টোৰ পৰা সমল এক্সেছ কৰিবলৈ অনুমতি দিয়া হ’ব।"</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"ডিবাগ ডেটা শ্বেয়াৰ কৰক"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"ডিবাগৰ সবিশেষ ডেটা শ্বেয়াৰ কৰিবনে?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g>এ ডিবাগ তথ্য আপল’ড কৰিব বিচাৰিছে।"</string>
@@ -744,8 +740,7 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"এই এজেণ্টগৰাকীয়ে তথ্য পাবলৈ আৰু আপোনাৰ বাবে কাৰ্য কৰিবলৈ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> এক্সেছ কৰিব পাৰিব"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"অনুমতি দিয়ক"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"অনুমতি নিদিব"</string>
-    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
-    <skip />
+    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"&lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt;ক স্ক্ৰীন আৰু এপৰ প্ৰসংগ এক্সেছ কৰিবলৈ দিবনে?"</string>
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"ডিফ’ল্ট সহায়ক এপ্‌টোক স্ক্ৰীনৰ সমল আৰু দৃশ্যমান এপ্‌টোৱে শ্বেয়াৰ কৰা ডেটা এক্সেছ কৰিবলৈ অনুমতি দিয়ক"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"অনুমতি দিয়ক"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"অনুমতি নিদিব"</string>

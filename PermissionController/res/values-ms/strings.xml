@@ -456,17 +456,13 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"Tiada akses apl khas"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"Tiada apl"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"Tidak menyokong profil kerja"</string>
-    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
-    <skip />
+    <string name="home_confirmation_title" msgid="8070603501839126093">"Tukar apl laman utama lalai anda kepada &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="home_confirmation_message" msgid="248811491851505593">"Tindakan ini akan menggantikan skrin utama anda dan mungkin menjejaskan akses kepada ciri pada peranti anda.&lt;br&gt;&lt;br&gt;Anda boleh menukar pilihan ini pada bila-bila masa dalam tetapan &lt;b&gt;Apl skrin utama lalai&lt;/b&gt;."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Nota: Jika anda memulakan semula peranti dan telah menetapkan kunci skrin, apl ini tidak boleh dimulakan sehingga anda membuka kunci peranti anda."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Pembantu akan dapat membaca maklumat tentang apl yang sedang digunakan pada sistem anda, termasuk maklumat yang kelihatan pada skrin atau yang dapat diakses dalam apl."</string>
-    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
-    <skip />
+    <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Tukar apl pembantu digital anda kepada &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
+    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Pembantu ini akan dapat mengakses maklumat seperti mesej anda dan data yang telah dipilih oleh apl untuk dikongsi dengan pembantu anda."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Pembantu ini akan dapat mengakses maklumat seperti mesej anda dan data yang dipilih oleh apl untuk dikongsi dengan pembantu anda.&lt;br&gt;&lt;br&gt;Selain itu, oleh sebab anda telah menghidupkan data skrin dan apl untuk <xliff:g id="APP_NAME">%1$s</xliff:g> sebelum ini, pembantu ini akan dibenarkan untuk mengakses kandungan daripada apl yang dibuka pada skrin anda."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Kongsi Data Penyahpepijatan"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Kongsi data penyahpepijatan secara terperinci?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> mahu memuat naik maklumat penyahpepijatan."</string>
@@ -744,8 +740,7 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Ejen ini akan dapat mengakses <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> untuk mendapatkan maklumat dan mengambil tindakan untuk anda"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Benarkan"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Jangan benarkan"</string>
-    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
-    <skip />
+    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Benarkan &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; mengakses konteks skrin dan apl?"</string>
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Benarkan akses apl"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Benarkan"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Jangan benarkan"</string>

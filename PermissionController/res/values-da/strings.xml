@@ -73,7 +73,7 @@
     <string name="denied_permission_decision" msgid="5308961501779563781">"Du har nægtet <xliff:g id="APP_NAME">%1$s</xliff:g> adgang til <xliff:g id="PERMISSION_NAME">%2$s</xliff:g>"</string>
     <string name="days_ago" msgid="6650359081551335629">"{count,plural, =0{I dag}=1{1 dag siden}one{# dag siden}other{# dage siden}}"</string>
     <string name="app_disable_dlg_positive" msgid="7418444149981904940">"Deaktiver appen"</string>
-    <string name="app_disable_dlg_text" msgid="3126943217146120240">"Hvis du deaktiverer denne app, kan det medføre, at Android-apps og andre apps ikke fungerer korrekt. Vær opmærksom på, at du ikke kan slette denne app, da den er forudinstalleret på din enhed. Hvis du slår appen fra, deaktiveres og skjules den på din enhed."</string>
+    <string name="app_disable_dlg_text" msgid="3126943217146120240">"Hvis du deaktiverer denne app, kan det medføre, at Android og andre apps ikke fungerer korrekt. Vær opmærksom på, at du ikke kan slette denne app, da den er forudinstalleret på din enhed. Hvis du slår appen fra, deaktiveres og skjules den på din enhed."</string>
     <string name="app_permission_manager" msgid="3903811137630909550">"Tilladelses­administrator"</string>
     <string name="never_ask_again" msgid="4728762438198560329">"Spørg ikke igen"</string>
     <string name="no_permissions" msgid="3881676756371148563">"Ingen tilladelser"</string>
@@ -456,17 +456,13 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"Ingen særlig appadgang"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"Ingen apps"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"Arbejdsprofilen understøttes ikke"</string>
-    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
-    <skip />
+    <string name="home_confirmation_title" msgid="8070603501839126093">"Vil du ændre din standardstartapp til &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="home_confirmation_message" msgid="248811491851505593">"Dette erstatter din startskærm og kan påvirke adgangen til funktioner på din enhed.&lt;br&gt;&lt;br&gt;Du kan til enhver tid ændre dette valg i indstillingerne for &lt;b&gt;Standardstartapp&lt;/b&gt;."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Bemærk! Hvis du genstarter din enhed og har indstillet en skærmlås, kan denne app ikke starte, før du låser enheden op."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Assistenten kan læse oplysninger om, hvilke apps der bruges i dit system, bl.a. oplysninger, der er synlige på din skærm eller tilgængelige i dine apps."</string>
-    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
-    <skip />
+    <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Vil du ændre din app for digital assistent til &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
+    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Denne assistent kan tilgå oplysninger såsom dine beskeder samt data, som apps har valgt at dele med din assistent."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Denne assistent kan tilgå oplysninger som f.eks. dine beskeder og data, som apps har valgt at dele med din assistent.&lt;br&gt;&lt;br&gt;Da du tidligere har aktiveret skærm- og appdata for <xliff:g id="APP_NAME">%1$s</xliff:g>, har den også tilladelse til at tilgå indhold fra den app, der er åben på din skærm."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Del fejlretningsdata"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Vil du dele detaljerede fejlretningsdata?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> vil gerne uploade fejretningsoplysninger."</string>
@@ -744,8 +740,7 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Denne agent vil kunne tilgå <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> for at hente oplysninger og foretage handlinger for dig"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Tillad"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Tillad ikke"</string>
-    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
-    <skip />
+    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Vil du give &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; adgang til skærm- og appkontekst?"</string>
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Giv standardassistenteappen adgang til skærmens indhold og data, der deles af den synlige app"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Tillad"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Tillad ikke"</string>
