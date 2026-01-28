@@ -504,12 +504,6 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
             preference.setTitle(context.getString(
                     R.string.assist_structure_setting_title));
             preference.setPersistent(false);
-            preference.setOnPreferenceClickListener(preference2 -> {
-                SwitchPreferenceCompat switchPreference = (SwitchPreferenceCompat) preference2;
-                mViewModel.setReadScreenContextSettingEnabled(holderApplicationItem,
-                        switchPreference.isChecked());
-                return true;
-            });
         }
 
         if (holderApplicationItem == null) {
@@ -524,6 +518,12 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
             preference.setEnabled(true);
             preference.setSummary(context.getString(
                     R.string.assist_structure_setting_description, appLabel));
+            preference.setOnPreferenceClickListener(preference2 -> {
+                SwitchPreferenceCompat switchPreference = (SwitchPreferenceCompat) preference2;
+                mViewModel.setReadScreenContextSettingEnabled(holderApplicationItem,
+                        switchPreference.isChecked());
+                return true;
+            });
         }
 
         preferenceGroup.addPreference(preference);

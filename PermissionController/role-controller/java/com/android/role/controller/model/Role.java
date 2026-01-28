@@ -964,7 +964,7 @@ public class Role {
         }
 
         if (mBehavior != null) {
-            mBehavior.grantAsUser(this, packageName, user, context);
+            mBehavior.grantAsUser(this, packageName, overrideUser, user, context);
         }
 
         if (!dontKillApp && permissionOrAppOpChanged
