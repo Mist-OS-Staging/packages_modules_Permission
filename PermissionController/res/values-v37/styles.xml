@@ -96,9 +96,9 @@
 
     <!-- END REQUEST APP FUNCTION DIALOG -->
 
-    <!-- START REQUEST ASSIST STRUCTURE DIALOG -->
+    <!-- START REQUEST READ SCREEN CONTEXT DIALOG -->
 
-    <style name="RequestAssistStructureDialogScrollView">
+    <style name="RequestReadScreenContextDialogScrollView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingHorizontal">@dimen/settingslib_expressive_space_small4</item>
@@ -107,14 +107,14 @@
         <item name="android:background">@color/settingslib_materialColorSurfaceContainerHigh</item>
     </style>
 
-    <style name="RequestAssistStructureDialogContent">
+    <style name="RequestReadScreenContextDialogContent">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">vertical</item>
         <item name="android:gravity">center_horizontal</item>
     </style>
 
-    <style name="RequestAssistStructureDialogAssistantIcon">
+    <style name="RequestReadScreenContextDialogAssistantIcon">
         <item name="android:layout_width">40dp</item>
         <item name="android:layout_height">40dp</item>
         <item name="android:layout_marginBottom">@dimen/settingslib_expressive_space_small1</item>
@@ -122,7 +122,7 @@
         <item name="android:scaleType">fitCenter</item>
     </style>
 
-    <style name="RequestAssistStructureDialogTitle">
+    <style name="RequestReadScreenContextDialogTitle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">@dimen/settingslib_expressive_space_small1</item>
@@ -130,7 +130,7 @@
         <item name="android:textAppearance">@style/TextAppearance.SettingsLib.HeadlineSmall</item>
     </style>
 
-    <style name="RequestAssistStructureDialogDescription">
+    <style name="RequestReadScreenContextDialogDescription">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">@dimen/settingslib_expressive_space_small4</item>
@@ -139,7 +139,7 @@
         <item name="android:textSize">14sp</item>
     </style>
 
-    <style name="RequestAssistStructureDialogAllowButton">
+    <style name="RequestReadScreenContextDialogAllowButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/settingslib_expressive_space_extrasmall2</item>
@@ -150,7 +150,7 @@
         <item name="android:textColor">@color/settingslib_materialColorOnPrimary</item>
     </style>
 
-    <style name="RequestAssistStructureDialogDontAllowButton">
+    <style name="RequestReadScreenContextDialogDontAllowButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/settingslib_expressive_space_extrasmall6</item>
@@ -161,7 +161,7 @@
         <item name="android:textColor">@color/settingslib_materialColorOnPrimary</item>
     </style>
 
-    <!-- END REQUEST ASSIST STRUCTURE DIALOG -->
+    <!-- END REQUEST READ SCREEN CONTEXT DIALOG -->
 
     <!-- START LOCATION PERMISSION GRANT DIALOG -->
 

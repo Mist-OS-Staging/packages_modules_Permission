@@ -37,7 +37,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 /** Viewmodel to support read screen context request screen */
-class RequestAssistStructureViewModel(
+class RequestReadScreenContextViewModel(
     application: Application,
     private val packageUid: Int,
     private val appOpRepository: AppOpRepository,
@@ -66,7 +66,7 @@ class RequestAssistStructureViewModel(
 }
 
 @RequiresApi(Build.VERSION_CODES.CINNAMON_BUN)
-class RequestAssistStructureViewModelFactory(
+class RequestReadScreenContextViewModelFactory(
     private val application: Application,
     private val packageName: String,
 ) : ViewModelProvider.Factory {
@@ -77,7 +77,7 @@ class RequestAssistStructureViewModelFactory(
         val packageRepository = PackageRepository.getInstance(application)
         val voiceInteractionManager =
             application.getSystemService(VoiceInteractionManager::class.java)
-        return RequestAssistStructureViewModel(
+        return RequestReadScreenContextViewModel(
             application,
             packageRepository.getPackageUid(packageName, Process.myUserHandle()),
             appOpsRepository,

@@ -32,10 +32,10 @@ import androidx.lifecycle.ViewModelProvider
 import com.android.permissioncontroller.R
 import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
 
-class RequestAssistStructureFragment : DialogFragment() {
+class RequestReadScreenContextFragment : DialogFragment() {
     private lateinit var packageName: String
 
-    private lateinit var viewModel: RequestAssistStructureViewModel
+    private lateinit var viewModel: RequestReadScreenContextViewModel
 
     private lateinit var iconImage: ImageView
     private lateinit var titleText: TextView
@@ -53,16 +53,19 @@ class RequestAssistStructureFragment : DialogFragment() {
         super.onStart()
 
         val factory =
-            RequestAssistStructureViewModelFactory(requireActivity().getApplication(), packageName)
+            RequestReadScreenContextViewModelFactory(
+                requireActivity().getApplication(),
+                packageName,
+            )
 
         viewModel =
-            ViewModelProvider(this, factory).get(RequestAssistStructureViewModel::class.java)
+            ViewModelProvider(this, factory).get(RequestReadScreenContextViewModel::class.java)
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val activity = requireActivity()
         val view =
-            LayoutInflater.from(activity).inflate(R.layout.request_assist_structure_dialog, null)
+            LayoutInflater.from(activity).inflate(R.layout.request_read_screen_context_dialog, null)
         iconImage = view.requireViewById(R.id.icon)
         titleText = view.requireViewById(R.id.title)
         positiveButton = view.requireViewById(R.id.allow_button)
@@ -74,7 +77,7 @@ class RequestAssistStructureFragment : DialogFragment() {
         val escapedAppLabel = Html.escapeHtml(label)
         val title =
             Html.fromHtml(
-                getString(R.string.request_assist_structure_dialog_title, escapedAppLabel),
+                getString(R.string.request_read_screen_context_dialog_title, escapedAppLabel),
                 0,
             )
 
@@ -108,8 +111,8 @@ class RequestAssistStructureFragment : DialogFragment() {
     }
 
     companion object {
-        fun newInstance(packageName: String): RequestAssistStructureFragment =
-            RequestAssistStructureFragment().apply {
+        fun newInstance(packageName: String): RequestReadScreenContextFragment =
+            RequestReadScreenContextFragment().apply {
                 arguments = Bundle().apply { putString(Intent.EXTRA_PACKAGE_NAME, packageName) }
             }
     }

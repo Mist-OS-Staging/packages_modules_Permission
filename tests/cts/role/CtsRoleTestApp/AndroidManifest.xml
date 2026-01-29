@@ -130,7 +130,7 @@
 
         <!-- Assist Structure -->
         <activity
-            android:name=".RequestAssistStructureActivity"
+            android:name=".RequestReadScreenContextActivity"
             android:exported="true" />
     </application>
 </manifest>

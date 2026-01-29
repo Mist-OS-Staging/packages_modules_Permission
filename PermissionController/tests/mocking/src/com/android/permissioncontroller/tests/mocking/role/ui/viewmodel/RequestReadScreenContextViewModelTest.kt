@@ -26,7 +26,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
 import com.android.dx.mockito.inline.extended.ExtendedMockito
 import com.android.permissioncontroller.PermissionControllerApplication
-import com.android.permissioncontroller.role.ui.v37.RequestAssistStructureViewModel
+import com.android.permissioncontroller.role.ui.v37.RequestReadScreenContextViewModel
 import com.android.permissioncontroller.tests.mocking.appops.data.repository.FakeAppOpRepository
 import com.android.permissioncontroller.tests.mocking.pm.data.repository.FakePackageRepository
 import com.google.common.truth.Truth.assertThat
@@ -47,13 +47,13 @@ import org.mockito.MockitoAnnotations
 import org.mockito.MockitoSession
 import org.mockito.quality.Strictness
 
-/** Unit tests for [RequestAssistStructureViewModel] */
+/** Unit tests for [RequestReadScreenContextViewModel] */
 @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
 @RequiresFlagsEnabled(
-    RequestAssistStructureViewModelTest.FLAG_ASSIST_SETTINGS_PRIVACY_IMPROVEMENTS_ENABLED
+    RequestReadScreenContextViewModelTest.FLAG_ASSIST_SETTINGS_PRIVACY_IMPROVEMENTS_ENABLED
 )
 @RunWith(AndroidJUnit4::class)
-class RequestAssistStructureViewModelTest {
+class RequestReadScreenContextViewModelTest {
     @get:Rule val checkFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
 
     @Mock private lateinit var application: PermissionControllerApplication
@@ -123,8 +123,8 @@ class RequestAssistStructureViewModelTest {
             .isEqualTo(MODE_IGNORED)
     }
 
-    private fun TestScope.getViewModel(): RequestAssistStructureViewModel {
-        return RequestAssistStructureViewModel(
+    private fun TestScope.getViewModel(): RequestReadScreenContextViewModel {
+        return RequestReadScreenContextViewModel(
             application,
             PACKAGE_UID,
             appOpsRepository,

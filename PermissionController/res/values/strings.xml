@@ -1402,14 +1402,14 @@
     <!-- Dialog message warning about security implications of setting an assistant, displayed when the user selects an assistant. The assistant app here is a generic concept and can be any assistant app. [CHAR LIMIT=NONE] -->
     <string name="assistant_confirmation_message">The assistant will be able to read information about apps in use on your system, including information visible on your screen or accessible within the apps.</string>
 
-    <!-- Dialog title for warning about implications of changing the default digital assistant app, displayed when the user selects a digital assistant app as default. The digital assistant app here is a generic concept and can be any digital assistant app. [CHAR LIMIT=NONE] [SCREENSHOT=screen/b3xt3PCa97ibkLy] -->
-    <string name="assistant_confirmation_title_v37">Change your digital assistant app to &lt;b><xliff:g id="app_name" example="Gmail">%1$s</xliff:g>&lt;/b>?</string>
+    <!-- Dialog title for warning about implications of changing the default digital assistant app, displayed when the user selects a digital assistant app as default. The digital assistant app here is a generic concept and can be any digital assistant app. [CHAR LIMIT=NONE] [SCREENSHOT=screen/7CRorpTKNtyw9ZB] -->
+    <string name="assistant_confirmation_title_v37">Change your digital assistant app to &lt;b><xliff:g id="app_name" example="Example assistant app">%1$s</xliff:g>&lt;/b>?</string>
 
-    <!-- Dialog message for warning about implications of changing the default digital assistant app, displayed when the user selects an assistant as default. The digital assistant app here is a generic concept and can be any digital assistant app. [CHAR LIMIT=NONE] [SCREENSHOT=screen/b3xt3PCa97ibkLy] -->
-    <string name="assistant_confirmation_message_v37">This assistant will be able to access info like your messages, and data that apps have chosen to share with your assistant.</string>
+    <!-- Dialog message for warning about implications of changing the default digital assistant app, displayed when the user selects an assistant as default. The digital assistant app here is a generic concept and can be any digital assistant app. [CHAR LIMIT=NONE] [SCREENSHOT=screen/7CRorpTKNtyw9ZB] -->
+    <string name="assistant_confirmation_message_v37">This assistant will be able to access info, like your messages, and data that apps have chosen to share with your assistant.</string>
 
-    <!-- Dialog message for warning about implications of changing the default digital assistant app, displayed when the user selects an assistant as default. The digital assistant app here is a generic concept and can be any digital assistant app. [CHAR LIMIT=NONE] [SCREENSHOT=screen/AmtHocFuGRZKWYd] -->
-    <string name="assistant_confirmation_message_access_restored_v37">This assistant will be able to access info like your messages, and data that apps have chosen to share with your assistant.&lt;br>&lt;br>Also, because you\u2019ve turned on screen and app data for <xliff:g id="app_name" example="Gmail">%1$s</xliff:g> before, it will be allowed to access content from the app open on your screen.</string>
+    <!-- Dialog message for warning about implications of changing the default digital assistant app, displayed when the user selects an assistant as default. The digital assistant app here is a generic concept and can be any digital assistant app. [CHAR LIMIT=NONE] [SCREENSHOT=screen/5pfu9ApiRVzMjtA] -->
+    <string name="assistant_confirmation_message_access_restored_v37">This assistant will be able to access info, like your messages, and data that apps have chosen to share with your assistant.&lt;br>&lt;br>Also, because you\u2019ve turned on screen and app data for <xliff:g id="app_name" example="Example assistant app">%1$s</xliff:g> before, it will be allowed to access content from the app open on your screen.</string>
 
     <!-- Name for the notification channel for incident / bug report confirmation. Appears in
     Settings.
@@ -2187,29 +2187,29 @@
 
     <!-- END REQUEST APP FUNCTION DIALOG -->
 
-    <!-- START REQUEST ASSIST STRUCTURE DIALOG -->
+    <!-- START REQUEST READ SCREEN CONTEXT DIALOG -->
 
-    <!-- Label for the title of request assist structure dialog [CHAR LIMIT=100]-->
-    <string name="request_assist_structure_dialog_title">Allow &lt;b><xliff:g id="assistant_app_name" example="Example Assistant App">%1$s</xliff:g>&lt;/b> to access screen and app context?</string>
-    <!-- Label for the description of request assist structure dialog [CHAR LIMIT=150]-->
-    <string name="request_assist_structure_dialog_description">Allow the default assistant app to access the screen contents and data shared by the visible app</string>
-    <!-- Label for the allow button for request assist structure dialog. [CHAR LIMIT=15]  -->
-    <string name="request_assist_structure_dialog_button_allow">Allow</string>
-    <!-- Label for the deny button for request assist structure dialog. [CHAR LIMIT=15]  -->
-    <string name="request_assist_structure_dialog_button_dont_allow">Don\u2019t allow</string>
+    <!-- Label for the title of request read screen context dialog [CHAR LIMIT=100]-->
+    <string name="request_read_screen_context_dialog_title">Allow &lt;b><xliff:g id="assistant_app_name" example="Example Assistant App">%1$s</xliff:g>&lt;/b> to use screen and app data?</string>
+    <!-- Label for the description of request read screen context dialog [CHAR LIMIT=150]-->
+    <string name="request_read_screen_context_dialog_description">This assistant will be able to access info and content from the app open on your screen</string>
+    <!-- Label for the allow button for request read screen context dialog. [CHAR LIMIT=15]  -->
+    <string name="request_read_screen_context_dialog_button_allow">Allow</string>
+    <!-- Label for the deny button for request read screen context dialog. [CHAR LIMIT=15]  -->
+    <string name="request_read_screen_context_dialog_button_dont_allow">Don\u2019t allow</string>
 
-    <!-- END REQUEST ASSIST STRUCTURE DIALOG -->
+    <!-- END REQUEST READ SCREEN CONTEXT DIALOG -->
 
-    <!-- START ASSIST STRUCTURE SETTINGS  -->
+    <!-- START READ SCREEN CONTEXT SETTINGS  -->
 
-    <!-- Label for the title of request assist structure dialog [CHAR LIMIT=60]-->
-    <string name="assist_structure_setting_title">Use screen and app context</string>
-    <!-- Label for the description of request assist structure dialog [CHAR LIMIT=150]-->
-    <string name="assist_structure_setting_default_description">Allow the default assistant app to access the screen and data shared by the visible app</string>
-    <!-- Label for the description of request assist structure dialog [CHAR LIMIT=150]-->
-    <string name="assist_structure_setting_description">Allow <xliff:g id="assistant_app_name" example="Example Assistant App">%1$s</xliff:g> to access the screen and data shared by the visible app</string>
+    <!-- Label for the title of request read screen context dialog [CHAR LIMIT=60]-->
+    <string name="read_screen_context_setting_title">Use screen and app data</string>
+    <!-- Label for the description of request read screen context dialog [CHAR LIMIT=150]-->
+    <string name="read_screen_context_setting_default_description">Allow assistant to access info and content from the app open on your screen</string>
+    <!-- Label for the description of request read screen context dialog [CHAR LIMIT=150]-->
+    <string name="read_screen_context_setting_description">Allow <xliff:g id="assistant_app_name" example="Example Assistant App">%1$s</xliff:g> to access info and content from the app open on your screen</string>
 
-    <!-- END ASSIST STRUCTURE SETTINGS  -->
+    <!-- END READ SCREEN CONTEXT SETTINGS  -->
 
     <!-- START LOCATION BUTTON GRANT DIALOG -->
 
