@@ -456,17 +456,13 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"Hamna kufikia programu maalum"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"Hakuna programu"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"Haitumii wasifu wa kazini"</string>
-    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
-    <skip />
+    <string name="home_confirmation_title" msgid="8070603501839126093">"Ungependa kubadilisha programu yako chaguomsingi ya skrini ya mwanzo iwe &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="home_confirmation_message" msgid="248811491851505593">"Hatua hii itachukua nafasi ya skrini yako ya kwanza na huenda ikaathiri ufikiaji wa vipengele kwenye kifaa chako.&lt;br&gt;&lt;br&gt;Unaweza kubadilisha uteuzi huu wakati wowote katika mipangilio ya &lt;b&gt;Programu chaguomsingi ya skrini ya kwanza&lt;/b&gt;."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Kumbuka: Kama utazima kisha uwashe kifaa chako na uwe umeweka njia ya kufunga skrini, programu hii haitafanya kazi hadi ufungue kifaa chako."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Kisaidizi kitaweza kusoma maelezo kuhusu programu unazotumia katika mfumo wako, ikiwa ni pamoja na maelezo yanayoonekana kwenye skrini yako au yanayoweza kufikiwa ndani ya programu."</string>
-    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
-    <skip />
+    <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Ungependa kubadilisha programu yako ya kiratibu dijitali iwe &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
+    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Kisaidizi hiki kitaweza kufikia maelezo kama vile ujumbe na data yako ambayo programu zimechagua kuruhusu kisaidizi chako kifikie."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Kiratibu hiki kitaweza kufikia maelezo kama vile ujumbe na data yako ambayo programu zimechagua kuruhusu kiratibu chako kifikie.&lt;br&gt;&lt;br&gt;Pia, kwa sababu uliwasha data ya skrini na programu kwenye <xliff:g id="APP_NAME">%1$s</xliff:g> hapo awali, itaruhusiwa kufikia maudhui kutoka kwenye programu iliyofunguliwa kwenye skrini yako."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Shiriki Data ya Utatuzi"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Ungependa kushiriki data ya kina ya utatuzi?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> inataka kupakia maelezo ya utatuzi."</string>
@@ -744,8 +740,7 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Kisaidizi hiki kitaweza kufikia <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ili kupata taarifa na kuchukua hatua kwa niaba yako"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Ruhusu"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Usiruhusu"</string>
-    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
-    <skip />
+    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Ungependa kuruhusu &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; ifikie maudhui yaliyo kwenye skrini na programu?"</string>
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Ruhusu programu chaguomsingi ya kiratibu ifikie maudhui yaliyo kwenye skrini na data inayotumwa na programu inayoonekana"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Ruhusu"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Usiruhusu"</string>

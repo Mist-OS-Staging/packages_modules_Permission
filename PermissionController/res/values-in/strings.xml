@@ -456,17 +456,13 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"Tidak ada akses apl khusus"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"Tidak ada aplikasi"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"Tidak mendukung profil kerja"</string>
-    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
-    <skip />
+    <string name="home_confirmation_title" msgid="8070603501839126093">"Ubah aplikasi layar utama default Anda menjadi &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="home_confirmation_message" msgid="248811491851505593">"Tindakan ini akan mengganti layar utama dan dapat memengaruhi akses ke fitur di perangkat Anda.&lt;br&gt;&lt;br&gt;Anda dapat mengubah pilihan ini kapan saja di setelan &lt;b&gt;Aplikasi layar utama default&lt;/b&gt;."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Catatan: Jika Anda memulai ulang perangkat dan menyetel kunci layar, aplikasi ini tidak dapat dimulai hingga Anda membuka kunci perangkat Anda."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Asisten dapat membaca informasi tentang aplikasi yang sedang digunakan di sistem, termasuk informasi yang terlihat di layar atau dapat diakses dalam aplikasi."</string>
-    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
-    <skip />
+    <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Ubah aplikasi asisten digital Anda menjadi &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
+    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Asisten ini akan dapat mengakses info seperti pesan Anda, dan data yang dipilih aplikasi untuk dibagikan kepada asisten Anda."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Asisten ini akan dapat mengakses info seperti pesan Anda, dan data yang telah dipilih aplikasi untuk dibagikan kepada asisten Anda.&lt;br&gt;&lt;br&gt;Selain itu, karena Anda telah mengaktifkan data layar dan aplikasi untuk <xliff:g id="APP_NAME">%1$s</xliff:g> sebelumnya, asisten akan diizinkan mengakses konten dari aplikasi yang terbuka di layar Anda."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Bagikan Data Proses Debug"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Bagikan data proses debug yang mendetail?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ingin mengupload informasi proses debug."</string>
@@ -744,8 +740,7 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Agen ini akan dapat mengakses <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> untuk mendapatkan info dan mengambil tindakan untuk Anda"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Izinkan"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Jangan izinkan"</string>
-    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
-    <skip />
+    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Izinkan &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; mengakses konteks layar dan aplikasi?"</string>
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Izinkan aplikasi asisten default mengakses konten layar dan data yang dibagikan oleh aplikasi yang terlihat"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Izinkan"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Jangan izinkan"</string>

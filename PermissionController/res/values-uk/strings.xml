@@ -242,7 +242,7 @@
     <string name="permission_description_summary_call_log" msgid="7321437186317577624">"Додатки з цим дозволом можуть переглядати й редагувати ваш журнал викликів"</string>
     <string name="permission_description_summary_camera" msgid="108004375101882069">"Додатки з цим дозволом можуть робити знімки й записувати відео"</string>
     <string name="permission_description_summary_contacts" msgid="2337798886460408996">"Додатки з цим дозволом мають доступ до ваших контактів"</string>
-    <string name="permission_description_summary_location" msgid="2817531799933480694">"Додатки з цим дозволом мають доступ до геоданих цього пристрою"</string>
+    <string name="permission_description_summary_location" msgid="2817531799933480694">"Додатки із цим дозволом мають доступ до геоданих цього пристрою"</string>
     <string name="permission_description_summary_nearby_devices" msgid="8269183818275073741">"Додатки з цим дозволом можуть знаходити пристрої поблизу, підключатися до них і визначати їх відносне розташування."</string>
     <string name="permission_description_summary_microphone" msgid="630834800308329907">"Додатки з цим дозволом можуть записувати аудіо"</string>
     <string name="permission_description_summary_phone" msgid="4515277217435233619">"Додатки з цим дозволом можуть здійснювати виклики й керувати ними"</string>
@@ -456,17 +456,13 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"Немає спеціального доступу"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"Немає додатків"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"Не підтримує робочий профіль"</string>
-    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
-    <skip />
+    <string name="home_confirmation_title" msgid="8070603501839126093">"Змінити додаток головного екрана за умовчанням на &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="home_confirmation_message" msgid="248811491851505593">"Це призведе до заміни головного екрана й може вплинути на доступ до функцій пристрою.&lt;br&gt;&lt;br&gt;Цей вибір можна будь-коли змінити в налаштуваннях &lt;b&gt;додатка головного екрана за умовчанням&lt;/b&gt;."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Примітка. Якщо після перезавантаження ввімкнеться екран блокування, цей додаток не запуститься, доки ви не розблокуєте пристрій."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Асистент матиме доступ до інформації про додатки у вашій системі, зокрема до даних на екрані та в додатках."</string>
-    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
-    <skip />
+    <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Змінити додаток цифрового помічника на &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
+    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Помічник матиме доступ до ваших даних, як-от повідомлень та інформації, яку додатки погодилися йому надати."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Помічник матиме доступ до ваших даних, як-от повідомлень та інформації, яку додатки погодилися йому надати.&lt;br&gt;&lt;br&gt;Крім того, оскільки ви вже ввімкнули доступ до даних екрана й додатків для <xliff:g id="APP_NAME">%1$s</xliff:g>, помічник отримуватиме контент із додатка, відкритого на екрані."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Поділитися даними про налагодження"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Поділитися детальними даними про налагодження?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"Додаток <xliff:g id="APP_NAME">%1$s</xliff:g> хоче завантажити інформацію про налагодження."</string>
@@ -744,8 +740,7 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Цей агент зможе отримувати інформацію і виконувати потрібні вам дії в додатку <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Дозволити"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Не дозволяти"</string>
-    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
-    <skip />
+    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Дозволити додатку &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; доступ до екрана й контенту додатка?"</string>
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Надати помічнику за умовчанням доступ до вмісту екрана й даних, якими ділиться видимий додаток"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Дозволити"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Не дозволяти"</string>

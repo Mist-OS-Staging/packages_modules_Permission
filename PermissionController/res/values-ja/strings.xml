@@ -456,17 +456,13 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"特別なアプリアクセスなし"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"アプリなし"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"仕事用プロファイルをサポートしていません"</string>
-    <!-- no translation found for home_confirmation_title (8070603501839126093) -->
-    <skip />
+    <string name="home_confirmation_title" msgid="8070603501839126093">"デフォルトのホームアプリを &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; に変更しますか？"</string>
     <string name="home_confirmation_message" msgid="248811491851505593">"この設定により、ホーム画面が変更され、デバイスの機能へのアクセスに影響する可能性があります。&lt;br&gt;&lt;br&gt;この設定は、[&lt;b&gt;デフォルトのホームアプリ&lt;/b&gt;] の設定でいつでも変更できます。"</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"注: デバイスを再起動したときに画面ロックが設定されている場合は、デバイスのロックを解除するまでこのアプリを起動できません。"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"アシスタントはシステムで使用中のアプリに関する情報（画面に表示される情報、アプリ内でアクセス可能な情報など）を読み取れるようになります。"</string>
-    <!-- no translation found for assistant_confirmation_title_v37 (4998437583005547092) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_v37 (8382584766965128138) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (4584661761693618510) -->
-    <skip />
+    <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"デジタル アシスタント アプリを &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; に変更しますか？"</string>
+    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"このアシスタントは、メッセージなどの情報と、アプリがアシスタントと共有することを選択したデータにアクセスできるようになります。"</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"このアシスタントは、メッセージなどの情報と、アプリがアシスタントと共有することを選択したデータにアクセスできるようになります。&lt;br&gt;&lt;br&gt;また、以前に <xliff:g id="APP_NAME">%1$s</xliff:g> の画面とアプリのデータを ON にしたため、画面で開いているアプリのコンテンツにもアクセスできるようになります。"</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"デバッグデータの共有"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"詳細なデバッグデータを共有しますか？"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> がデバッグ情報のアップロードをリクエストしています。"</string>
@@ -744,8 +740,7 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"このエージェントは <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> にアクセスして、情報の取得と各種の操作が可能になります"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"許可"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"許可しない"</string>
-    <!-- no translation found for request_assist_structure_dialog_title (5131391210011661043) -->
-    <skip />
+    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"画面とアプリのコンテキストへのアクセスを &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; に許可しますか？"</string>
     <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"画面内容や表示中のアプリが共有するデータへのアクセスをデフォルトのアシスタント アプリに許可します"</string>
     <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"許可"</string>
     <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"許可しない"</string>
