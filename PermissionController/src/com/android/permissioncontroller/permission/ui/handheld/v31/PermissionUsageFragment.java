@@ -27,6 +27,7 @@ import static com.android.permissioncontroller.PermissionControllerStatsLog.writ
 import android.Manifest;
 import android.app.ActionBar;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Process;
@@ -45,6 +46,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.permissioncontroller.R;
 import com.android.permissioncontroller.appfunctions.AppFunctionsUtil;
+import com.android.permissioncontroller.appfunctions.ui.v37.AgentUsageDetailsActivity;
+import com.android.permissioncontroller.permission.ui.ManagePermissionsActivity;
 import com.android.permissioncontroller.permission.ui.handheld.SettingsWithLargeHeader;
 import com.android.permissioncontroller.permission.ui.viewmodel.v31.PermissionUsageViewModel;
 import com.android.permissioncontroller.permission.ui.viewmodel.v31.PermissionUsageViewModelFactory;
@@ -379,18 +382,19 @@ public class PermissionUsageFragment extends SettingsWithLargeHeader {
             for (int i = 0; i < appFunctionAgentAccessCountEntries.size(); i++) {
                 Map.Entry<String, Integer> agentUsageEntry =
                         appFunctionAgentAccessCountEntries.get(i);
+                String agentPackageName = agentUsageEntry.getKey();
                 Preference agentUsagePreference = new Preference(context);
                 agentUsagePreference.setIcon(
                         KotlinUtils.INSTANCE.getBadgedPackageIcon(
                                 getActivity().getApplication(),
-                                agentUsageEntry.getKey(),
+                                agentPackageName,
                                 Process.myUserHandle()
                         )
                 );
                 agentUsagePreference.setTitle(
                         KotlinUtils.INSTANCE.getPackageLabel(
                                 getActivity().getApplication(),
-                                agentUsageEntry.getKey(),
+                                agentPackageName,
                                 Process.myUserHandle()
                         )
                 );
@@ -399,6 +403,14 @@ public class PermissionUsageFragment extends SettingsWithLargeHeader {
                         R.string.agent_usage_preference_label,
                         agentUsageEntry.getValue()
                 ));
+                agentUsagePreference.setOnPreferenceClickListener(preference -> {
+                    Intent intent = new Intent(context, AgentUsageDetailsActivity.class);
+                    intent.putExtra(Intent.EXTRA_PACKAGE_NAME, agentPackageName);
+                    intent.putExtra(ManagePermissionsActivity.EXTRA_SHOW_7_DAYS, show7Days);
+                    intent.putExtra(ManagePermissionsActivity.EXTRA_SHOW_SYSTEM, showSystem);
+                    context.startActivity(intent);
+                    return true;
+                });
                 agentsCategory.addPreference(agentUsagePreference);
             }
         }

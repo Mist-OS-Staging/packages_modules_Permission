@@ -397,6 +397,11 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="com.android.permissioncontroller.appfunctions.ui.v37.AgentUsageDetailsActivity"
+            android:theme="@style/Theme.PermissionController.Settings.FilterTouches"
+            android:exported="false"
+            android:enabled="@bool/is_at_least_v37" />
+
         <activity android:name="com.android.permissioncontroller.permission.ui.legacy.AppPermissionActivity"
                   android:configChanges="orientation|keyboardHidden|screenSize"
                   android:exported="false"
