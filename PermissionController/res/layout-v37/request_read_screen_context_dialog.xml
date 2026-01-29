@@ -17,27 +17,27 @@
 
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/RequestAssistStructureDialogScrollView">
+    style="@style/RequestReadScreenContextDialogScrollView">
     <LinearLayout
-        style="@style/RequestAssistStructureDialogContent">
+        style="@style/RequestReadScreenContextDialogContent">
         <ImageView
             android:id="@+id/icon"
-            style="@style/RequestAssistStructureDialogAssistantIcon" />
+            style="@style/RequestReadScreenContextDialogAssistantIcon" />
         <TextView
             android:id="@+id/title"
-            android:text="@string/request_assist_structure_dialog_title"
-            style="@style/RequestAssistStructureDialogTitle" />
+            android:text="@string/request_read_screen_context_dialog_title"
+            style="@style/RequestReadScreenContextDialogTitle" />
         <TextView
             android:id="@+id/description"
-            android:text="@string/request_assist_structure_dialog_description"
-            style="@style/RequestAssistStructureDialogDescription" />
+            android:text="@string/request_read_screen_context_dialog_description"
+            style="@style/RequestReadScreenContextDialogDescription" />
         <Button
             android:id="@+id/allow_button"
-            android:text="@string/request_assist_structure_dialog_button_allow"
-            style="@style/RequestAssistStructureDialogAllowButton" />
+            android:text="@string/request_read_screen_context_dialog_button_allow"
+            style="@style/RequestReadScreenContextDialogAllowButton" />
         <Button
             android:id="@+id/dont_allow_button"
-            android:text="@string/request_assist_structure_dialog_button_dont_allow"
-            style="@style/RequestAssistStructureDialogDontAllowButton" />
+            android:text="@string/request_read_screen_context_dialog_button_dont_allow"
+            style="@style/RequestReadScreenContextDialogDontAllowButton" />
     </LinearLayout>
 </ScrollView>

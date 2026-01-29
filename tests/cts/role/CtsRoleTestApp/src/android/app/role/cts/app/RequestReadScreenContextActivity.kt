@@ -20,20 +20,20 @@ import android.app.voiceinteraction.VoiceInteractionManager
 import android.content.Intent
 import android.os.Bundle
 
-/** An activity that requests assist structure. */
-class RequestAssistStructureActivity : Activity() {
+/** An activity that requests read screen context. */
+class RequestReadScreenContextActivity : Activity() {
     protected override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         if (savedInstanceState == null) {
             val voiceInteractionManager = getSystemService(VoiceInteractionManager::class.java)
             val intent = voiceInteractionManager!!.createRequestReadScreenContextIntent()
-            startActivityForResult(intent, REQUEST_CODE_REQUEST_ASSIST_STRUCTURE)
+            startActivityForResult(intent, REQUEST_CODE_REQUEST_READ_SCREEN_CONTEXT)
         }
     }
 
     protected override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (requestCode == REQUEST_CODE_REQUEST_ASSIST_STRUCTURE) {
+        if (requestCode == REQUEST_CODE_REQUEST_READ_SCREEN_CONTEXT) {
             setResult(resultCode, data)
             finish()
         } else {
@@ -42,6 +42,6 @@ class RequestAssistStructureActivity : Activity() {
     }
 
     companion object {
-        private const val REQUEST_CODE_REQUEST_ASSIST_STRUCTURE = 1
+        private const val REQUEST_CODE_REQUEST_READ_SCREEN_CONTEXT = 1
     }
 }

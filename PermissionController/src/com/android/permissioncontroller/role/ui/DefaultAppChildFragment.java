@@ -502,7 +502,7 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
             preference = new SwitchPreferenceCompat(context);
             preference.setKey(PREFERENCE_KEY_READ_SCREEN_CONTEXT_SETTING);
             preference.setTitle(context.getString(
-                    R.string.assist_structure_setting_title));
+                    R.string.read_screen_context_setting_title));
             preference.setPersistent(false);
         }
 
@@ -510,14 +510,14 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
             preference.setChecked(false);
             preference.setEnabled(false);
             preference.setSummary(context.getString(
-                    R.string.assist_structure_setting_default_description));
+                    R.string.read_screen_context_setting_default_description));
         } else {
             String appLabel = Utils.getFullAppLabel(holderApplicationItem.getApplicationInfo(),
                     context);
             preference.setChecked(holderApplicationItem.isReadScreenContextEnabled());
             preference.setEnabled(true);
             preference.setSummary(context.getString(
-                    R.string.assist_structure_setting_description, appLabel));
+                    R.string.read_screen_context_setting_description, appLabel));
             preference.setOnPreferenceClickListener(preference2 -> {
                 SwitchPreferenceCompat switchPreference = (SwitchPreferenceCompat) preference2;
                 mViewModel.setReadScreenContextSettingEnabled(holderApplicationItem,
