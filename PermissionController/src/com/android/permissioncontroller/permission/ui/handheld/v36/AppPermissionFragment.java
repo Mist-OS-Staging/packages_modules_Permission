@@ -405,6 +405,12 @@ public class AppPermissionFragment extends SettingsWithLargeHeader
                 setResult(GRANTED_FOREGROUND_ONLY);
             }
         });
+
+        if (mViewModel.isOnlyForLocationButton()) {
+            mAskOneTimeButton.setTitle(R.string.app_permission_button_ask_or_when_i_share);
+            mAskButton.setTitle(R.string.app_permission_button_ask_or_when_i_share);
+        }
+
         mAskOneTimeButton.setOnClickListener((v) -> {
             // mAskOneTimeButton only shows if checked hence should do nothing
             markSingleButtonAsChecked(ButtonType.ASK_ONCE);

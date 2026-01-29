@@ -19,6 +19,7 @@ package com.android.permissioncontroller.permission.ui.model.grantPermissions
 import android.Manifest.permission.ACCESS_COARSE_LOCATION
 import android.Manifest.permission.ACCESS_FINE_LOCATION
 import android.os.Build
+import android.util.Log
 import com.android.permissioncontroller.permission.model.livedatatypes.LightAppPermGroup
 import com.android.permissioncontroller.permission.ui.model.DenyButton
 import com.android.permissioncontroller.permission.ui.model.Prompt
@@ -41,7 +42,10 @@ object LocationGrantBehavior : GrantBehavior() {
         return if (!supportsLocationAccuracy(group) || requestsBackground) {
             backgroundPrompt
         } else if (requestedPerms.contains(ACCESS_FINE_LOCATION)) {
-            if (coarseGranted) {
+            if (group.isOnlyForLocationButton) {
+                Log.w(LOG_TAG, "Precise permission can only be granted by location button.")
+                Prompt.NO_UI_REJECT_THIS_GROUP
+            } else if (coarseGranted) {
                 Prompt.LOCATION_FINE_UPGRADE
             } else if (isFineLocationHighlighted(group)) {
                 Prompt.LOCATION_TWO_BUTTON_FINE_HIGHLIGHT
