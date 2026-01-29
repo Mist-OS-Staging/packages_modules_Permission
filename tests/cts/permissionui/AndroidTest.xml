@@ -77,6 +77,7 @@
         <option name="push" value="CtsAppThatMakesTwoPermRequests.apk->/data/local/tmp/cts-permissionui/CtsAppThatMakesTwoPermRequests.apk" />
         <option name="push" value="CtsAppWithSharedUidNoPerms.apk->/data/local/tmp/cts-permissionui/CtsAppWithSharedUidNoPerms.apk" />
         <option name="push" value="CtsAppWithSharedUidWithPerms.apk->/data/local/tmp/cts-permissionui/CtsAppWithSharedUidWithPerms.apk" />
+        <option name="push" value="CtsLocationButtonApp.apk->/data/local/tmp/cts-permissionui/CtsLocationButtonApp.apk" />
     </target_preparer>
 
     <target_preparer class="com.android.tradefed.targetprep.RunCommandTargetPreparer">
