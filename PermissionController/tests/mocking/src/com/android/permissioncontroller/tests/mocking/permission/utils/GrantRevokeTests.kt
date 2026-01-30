@@ -33,6 +33,8 @@ import android.content.pm.PackageManager.FLAG_PERMISSION_REVIEW_REQUIRED
 import android.content.pm.PackageManager.FLAG_PERMISSION_REVOKED_COMPAT
 import android.content.pm.PackageManager.FLAG_PERMISSION_REVOKE_WHEN_REQUESTED
 import android.content.pm.PackageManager.FLAG_PERMISSION_SYSTEM_FIXED
+import android.content.pm.PackageManager.FLAG_PERMISSION_TRUSTED_UI_CONSENTED
+import android.content.pm.PackageManager.FLAG_PERMISSION_TRUSTED_UI_SHOWN
 import android.content.pm.PackageManager.FLAG_PERMISSION_USER_FIXED
 import android.content.pm.PackageManager.FLAG_PERMISSION_USER_SET
 import android.content.pm.PackageManager.PERMISSION_DENIED
@@ -76,7 +78,9 @@ private const val PERMISSION_CONTROLLER_CHANGED_FLAG_MASK =
         FLAG_PERMISSION_REVOKED_COMPAT or
         FLAG_PERMISSION_REVIEW_REQUIRED or
         FLAG_PERMISSION_AUTO_REVOKED or
-        FLAG_PERMISSION_REVOKE_WHEN_REQUESTED
+        FLAG_PERMISSION_REVOKE_WHEN_REQUESTED or
+        FLAG_PERMISSION_TRUSTED_UI_SHOWN or
+        FLAG_PERMISSION_TRUSTED_UI_CONSENTED
 
 /**
  * A suite of unit tests to test the granting and revoking of permissions. Note- does not currently

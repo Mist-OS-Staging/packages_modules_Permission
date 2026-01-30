@@ -407,8 +407,8 @@ public class AppPermissionFragment extends SettingsWithLargeHeader
         });
 
         if (mViewModel.isOnlyForLocationButton()) {
-            mAskOneTimeButton.setTitle(R.string.app_permission_button_ask_or_when_i_share);
-            mAskButton.setTitle(R.string.app_permission_button_ask_or_when_i_share);
+            mAskOneTimeButton.setTitle(R.string.app_permission_button_ask_or_when_you_share);
+            mAskButton.setTitle(R.string.app_permission_button_ask_or_when_you_share);
         }
 
         mAskOneTimeButton.setOnClickListener((v) -> {

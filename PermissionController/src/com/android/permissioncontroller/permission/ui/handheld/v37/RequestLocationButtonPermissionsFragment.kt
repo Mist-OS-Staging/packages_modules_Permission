@@ -70,24 +70,20 @@ class RequestLocationButtonPermissionsFragment : DialogFragment() {
                 .apply {
                     // Location (pin) icon
                     val iconView = requireViewById<ImageView>(R.id.icon)
-                    viewModel.getLocationPinIconLiveData().observe(activity) { icon ->
-                        iconView.setImageDrawable(icon)
-                    }
+                    iconView.setImageDrawable(viewModel.locationPinIcon)
 
                     // Title message
                     val messageView = requireViewById<TextView>(R.id.title)
-                    viewModel.getAppLabelLiveData().observe(activity) { appLabel ->
-                        val escapedAppLabel = Html.escapeHtml(appLabel)
-                        val label =
-                            Html.fromHtml(
-                                resources.getString(
-                                    R.string.request_location_button_permissions_dialog_title,
-                                    escapedAppLabel,
-                                ),
-                                Html.FROM_HTML_MODE_COMPACT,
-                            )
-                        messageView.text = label
-                    }
+                    val escapedAppLabel = Html.escapeHtml(viewModel.appLabel)
+                    val label =
+                        Html.fromHtml(
+                            resources.getString(
+                                R.string.request_location_button_permissions_dialog_title,
+                                escapedAppLabel,
+                            ),
+                            Html.FROM_HTML_MODE_COMPACT,
+                        )
+                    messageView.text = label
 
                     val lottieDrawable = getLottieDrawableForFineLocation()
                     val fineRadioButton =

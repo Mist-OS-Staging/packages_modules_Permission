@@ -93,8 +93,6 @@ import com.android.permissioncontroller.permission.utils.v34.SafetyLabelUtils
 import com.android.permissioncontroller.permission.utils.v35.MultiDeviceUtils
 import com.android.settingslib.RestrictedLockUtils
 import java.util.Random
-import kotlin.collections.component1
-import kotlin.collections.component2
 
 /**
  * ViewModel for the AppPermissionFragment. Determines button state and detail text strings, logs
@@ -664,6 +662,7 @@ class AppPermissionViewModel(
                 if (shouldShowLocationAccuracy == true && !deniedState.isChecked) {
                     locationAccuracyState.isShown = true
                 }
+                // TODO : b/484979422 - Disable precise location toggle for location button?
                 if (group.foreground.isSystemFixed || group.foreground.isPolicyFixed) {
                     locationAccuracyState.isEnabled = false
                 }
@@ -926,7 +925,7 @@ class AppPermissionViewModel(
 
         if (changeRequest == ChangeRequest.GRANT_FINE_LOCATION) {
             var newGroup = group
-            // TODO check the toggle behavior, when app is using a location button.
+            // TODO : b/484979422 - should user be able to grant precise permission via toggle?
             if (!newGroup.isOneTime) {
                 newGroup = KotlinUtils.grantForegroundRuntimePermissions(app, group)
                 logPermissionChanges(group, newGroup, buttonClicked)
@@ -941,6 +940,7 @@ class AppPermissionViewModel(
                     app,
                     group,
                     filterPermissions = listOf(ACCESS_FINE_LOCATION),
+                    oneTime = group.permissions[ACCESS_FINE_LOCATION]!!.isOneTime,
                 )
             logPermissionChanges(group, newGroup, buttonClicked)
             KotlinUtils.setFlagsWhenLocationAccuracyChanged(app, newGroup, false)
@@ -1110,16 +1110,17 @@ class AppPermissionViewModel(
             }
 
             if (shouldGrantForeground) {
+                // TODO: b/484979422 - Should precise permission be granted when user selects
+                //  "while in use" or "all the time" option? Remove one-time flag of temporary
+                // grant with caution, as it can make the grant a permanent one.
                 newGroup =
-                    if (
-                        shouldShowLocationAccuracy == true && !isFineLocationChecked(newGroup) ||
-                            newGroup.isOnlyForLocationButton
-                    ) {
-                        KotlinUtils.grantForegroundRuntimePermissions(
-                            app,
-                            newGroup,
-                            filterPermissions = listOf(ACCESS_COARSE_LOCATION),
-                        )
+                    if (shouldShowLocationAccuracy == true && !isFineLocationChecked(newGroup)) {
+                        newGroup =
+                            KotlinUtils.grantForegroundRuntimePermissions(
+                                app,
+                                newGroup,
+                                filterPermissions = listOf(ACCESS_COARSE_LOCATION),
+                            )
                         //  Due to filterPermissions parameter in above grant call, one time flag
                         //  for other permissions in location group aren't cleared,
                         //  do it explicitly for all permissions in the group.
