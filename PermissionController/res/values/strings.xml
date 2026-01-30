@@ -1408,8 +1408,8 @@
     <!-- Dialog message for warning about implications of changing the default digital assistant app, displayed when the user selects an assistant as default. The digital assistant app here is a generic concept and can be any digital assistant app. [CHAR LIMIT=NONE] [SCREENSHOT=screen/7CRorpTKNtyw9ZB] -->
     <string name="assistant_confirmation_message_v37">This assistant will be able to access info, like your messages, and data that apps have chosen to share with your assistant.</string>
 
-    <!-- Dialog message for warning about implications of changing the default digital assistant app, displayed when the user selects an assistant as default. The digital assistant app here is a generic concept and can be any digital assistant app. [CHAR LIMIT=NONE] [SCREENSHOT=screen/9NK2i96Lvz3WXZb] -->
-    <string name="assistant_confirmation_message_access_restored_v37">This assistant will be able to access info, like your messages, and data that apps have chosen to share with your assistant.&lt;br>&lt;br>Since you\u2019ve turned on screen and app data for <xliff:g id="app_name" example="Example assistant app">%1$s</xliff:g> before, it will also be allowed to access content from the app open on your screen.</string>
+    <!-- Dialog message for warning about implications of changing the default digital assistant app, displayed when the user selects an assistant as default. The digital assistant app here is a generic concept and can be any digital assistant app. [CHAR LIMIT=NONE] [SCREENSHOT=screen/5pfu9ApiRVzMjtA] -->
+    <string name="assistant_confirmation_message_access_restored_v37">This assistant will be able to access info, like your messages, and data that apps have chosen to share with your assistant.&lt;br>&lt;br>Also, because you\u2019ve turned on screen and app data for <xliff:g id="app_name" example="Example assistant app">%1$s</xliff:g> before, it will be allowed to access content from the app open on your screen.</string>
 
     <!-- Name for the notification channel for incident / bug report confirmation. Appears in
     Settings.
