@@ -460,8 +460,8 @@ class DefaultAssistantActivityTest {
         private const val DEFAULT_ASSISTANT_APP_LABEL = "Default digital assistant app"
         private const val DEFAULT_ASSISTANT_CHANGE_AND_RESTORE_ACCESS_CONFIRMATION_MESSAGE =
             "This assistant will be able to access info, like your messages, and data that apps " +
-                "have chosen to share with your assistant.\n\nAlso, because you\u2019ve turned " +
-                "on screen and app data for $APP_LABEL before, it will be " +
+                "have chosen to share with your assistant.\n\nSince you\u2019ve turned " +
+                "on screen and app data for $APP_LABEL before, it will also be " +
                 "allowed to access content from the app open on your screen."
         private const val DEFAULT_ASSISTANT_CHANGE_CONFIRMATION_MESSAGE =
             "This assistant will be able to access info, like your messages, and data that apps " +
