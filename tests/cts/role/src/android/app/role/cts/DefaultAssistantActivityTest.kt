@@ -33,9 +33,12 @@ import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiObject2
 import com.android.compatibility.common.util.DisableAnimationRule
 import com.android.compatibility.common.util.FreezeRotationRule
+import com.android.compatibility.common.util.SettingsStateKeeperRule
+import com.android.compatibility.common.util.SettingsStateManager
 import com.android.compatibility.common.util.SystemUtil
 import com.android.compatibility.common.util.UiAutomatorUtils2
 import com.google.common.truth.Truth.assertThat
+import kotlin.text.toIntOrNull
 import org.junit.After
 import org.junit.Assume
 import org.junit.Before
@@ -51,8 +54,13 @@ class DefaultAssistantActivityTest {
     @get:Rule val checkFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
     @get:Rule val disableAnimationRule = DisableAnimationRule()
     @get:Rule val freezeRotationRule = FreezeRotationRule()
+    @get:Rule
+    val readScreenContextDeniedCountManagersKeeper =
+        SettingsStateKeeperRule(context, READ_SCREEN_CONTEXT_REQUEST_DENIED_COUNT)
 
-    private val context = InstrumentationRegistry.getInstrumentation().targetContext
+    private val readScreenContextDeniedCountManager =
+        SettingsStateManager(context, READ_SCREEN_CONTEXT_REQUEST_DENIED_COUNT)
+
     private val uiDevice = UiAutomatorUtils2.getUiDevice()
     private val appOpsManager = context.getSystemService(AppOpsManager::class.java)!!
     private val roleManager = context.getSystemService(RoleManager::class.java)!!
@@ -69,9 +77,11 @@ class DefaultAssistantActivityTest {
         Assume.assumeTrue(RoleManagerUtil.isCddCompliantScreenSize())
         saveRoleHolder()
         installPackage(APP_APK_PATH)
+        installPackage(CLONE_APP_APK_PATH)
         assistantRoleHolderPackageUid = context.packageManager.getPackageUid(APP_PACKAGE_NAME, 0)
         wakeUpScreen()
         closeNotificationShade()
+        setReadScreenContextRequestDeniedCount(0)
     }
 
     @After
@@ -79,6 +89,7 @@ class DefaultAssistantActivityTest {
         // Close activity, if a test failed it might be left open
         pressBack()
         uninstallPackage(APP_PACKAGE_NAME)
+        uninstallPackage(CLONE_APP_PACKAGE_NAME)
         restoreRoleHolder()
     }
 
@@ -149,6 +160,29 @@ class DefaultAssistantActivityTest {
     }
 
     @Test
+    fun assistStructureToggle_whenChangeRoleHolderThenClicked_changesAppOp() {
+        addRoleHolder(RoleManager.ROLE_ASSISTANT, CLONE_APP_PACKAGE_NAME)
+        setAppOpMode(AppOpsManager.MODE_IGNORED)
+
+        launchDefaultAssistantActivity()
+
+        selectAppAsRoleHolder()
+        assertAssistToggleState(isEnabled = true, isChecked = false)
+
+        // Click to allow
+        findAssistStructureToggle().click()
+        uiDevice.waitForIdle()
+        assertAssistToggleState(isEnabled = true, isChecked = true)
+        assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_ALLOWED)
+
+        // Click to deny
+        findAssistStructureToggle().click()
+        uiDevice.waitForIdle()
+        assertAssistToggleState(isEnabled = true, isChecked = false)
+        assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_IGNORED)
+    }
+
+    @Test
     fun assistStructureToggle_whenAppOpUpdate_toggleChanges() {
         addRoleHolder(RoleManager.ROLE_ASSISTANT, APP_PACKAGE_NAME)
 
@@ -194,6 +228,35 @@ class DefaultAssistantActivityTest {
 
         // Double check/ensure that app op is still ignored
         assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_IGNORED)
+    }
+
+    @Test
+    fun assistStructureToggle_whenClicked_resetsDeniedCount() {
+        addRoleHolder(RoleManager.ROLE_ASSISTANT, APP_PACKAGE_NAME)
+        setAppOpMode(AppOpsManager.MODE_IGNORED)
+        setReadScreenContextRequestDeniedCount(10)
+
+        launchDefaultAssistantActivity()
+
+        // Click to toggle
+        findAssistStructureToggle().click()
+        uiDevice.waitForIdle()
+
+        assertThat(getReadScreenContextRequestDeniedCount()).isEqualTo(0)
+    }
+
+    @Test
+    fun assistStructureToggle_whenRoleHolderChanged_resetsDeniedCount() {
+        addRoleHolder(RoleManager.ROLE_ASSISTANT, CLONE_APP_PACKAGE_NAME)
+        setAppOpMode(AppOpsManager.MODE_IGNORED)
+        setReadScreenContextRequestDeniedCount(10)
+
+        launchDefaultAssistantActivity()
+
+        selectAppAsRoleHolder()
+        uiDevice.waitForIdle()
+
+        assertThat(getReadScreenContextRequestDeniedCount()).isEqualTo(0)
     }
 
     @Test
@@ -321,6 +384,12 @@ class DefaultAssistantActivityTest {
         }
     }
 
+    private fun getReadScreenContextRequestDeniedCount(): Int =
+        readScreenContextDeniedCountManager.get()?.toIntOrNull() ?: 0
+
+    private fun setReadScreenContextRequestDeniedCount(count: Int) =
+        readScreenContextDeniedCountManager.set(count.toString())
+
     private fun saveRoleHolder() {
         val roleHolders = RoleManagerUtil.getRoleHolders(roleManager, RoleManager.ROLE_ASSISTANT)
         originalRoleHolder = roleHolders.firstOrNull()
@@ -343,6 +412,12 @@ class DefaultAssistantActivityTest {
             RoleManager.ROLE_ASSISTANT,
             APP_PACKAGE_NAME,
         )
+        RoleManagerUtil.removeRoleHolder(
+            roleManager,
+            context,
+            RoleManager.ROLE_ASSISTANT,
+            CLONE_APP_PACKAGE_NAME,
+        )
         originalRoleHolder?.let {
             RoleManagerUtil.addRoleHolder(roleManager, context, RoleManager.ROLE_ASSISTANT, it)
         }
@@ -350,10 +425,6 @@ class DefaultAssistantActivityTest {
 
     private fun addRoleHolder(roleName: String, packageName: String) {
         RoleManagerUtil.addRoleHolder(roleManager, context, roleName, packageName)
-    }
-
-    private fun removeRoleHolder(roleName: String, packageName: String) {
-        RoleManagerUtil.removeRoleHolder(roleManager, context, roleName, packageName)
     }
 
     private fun installPackage(apkPath: String, user: UserHandle = Process.myUserHandle()) =
@@ -381,6 +452,9 @@ class DefaultAssistantActivityTest {
         private const val APP_APK_PATH = "/data/local/tmp/cts-role/CtsRoleTestApp.apk"
         private const val APP_PACKAGE_NAME = "android.app.role.cts.app"
         private const val APP_LABEL = "CtsRoleTestApp"
+        private const val CLONE_APP_APK_PATH = "/data/local/tmp/cts-role/CtsRoleTestAppClone.apk"
+        private const val CLONE_APP_PACKAGE_NAME = "android.app.role.cts.appClone"
+        private const val CLONE_APP_LABEL = "CtsRoleTestAppClone"
         private const val NONE_LABEL = "None"
         private const val ASSIST_STRUCTURE_SWITCH_LABEL = "Use screen and app context"
         private const val DEFAULT_ASSISTANT_APP_LABEL = "Default digital assistant app"
@@ -397,5 +471,10 @@ class DefaultAssistantActivityTest {
                 .targetContext
                 .packageManager
                 .permissionControllerPackageName
+        private val READ_SCREEN_CONTEXT_REQUEST_DENIED_COUNT =
+            "read_screen_context_request_denied_count"
+
+        @JvmStatic private val instrumentation = InstrumentationRegistry.getInstrumentation()
+        @JvmStatic private val context = instrumentation.targetContext
     }
 }
