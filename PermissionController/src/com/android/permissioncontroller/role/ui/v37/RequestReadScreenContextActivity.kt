@@ -26,14 +26,14 @@ import android.util.Log
 import androidx.fragment.app.FragmentActivity
 import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
 
-class RequestAssistStructureActivity : FragmentActivity() {
+class RequestReadScreenContextActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         if (!isReadScreenContextUiEnabled(this)) {
             Log.w(
                 LOG_TAG,
-                "Assist Structure privacy improvements aren't enabled: Either the platform is" +
+                "Assistant settings privacy improvements aren't enabled: Either the platform is" +
                     " not supported or the UI flag " +
                     "FLAG_ASSIST_SETTINGS_PRIVACY_IMPROVEMENTS_ENABLED isn't enabled.",
             )
@@ -65,7 +65,7 @@ class RequestAssistStructureActivity : FragmentActivity() {
             }
         }
 
-        val fragment = RequestAssistStructureFragment.Companion.newInstance(packageName)
+        val fragment = RequestReadScreenContextFragment.Companion.newInstance(packageName)
         supportFragmentManager.beginTransaction().add(fragment, null).commit()
     }
 
@@ -92,6 +92,6 @@ class RequestAssistStructureActivity : FragmentActivity() {
     }
 
     companion object {
-        private val LOG_TAG = RequestAssistStructureActivity::class.java.simpleName
+        private val LOG_TAG = RequestReadScreenContextActivity::class.java.simpleName
     }
 }

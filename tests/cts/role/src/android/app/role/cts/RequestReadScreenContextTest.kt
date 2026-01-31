@@ -49,12 +49,12 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
-/** Tests {@link RequestAssistStructureActivity} */
+/** Tests {@link RequestReadScreenContextActivity} */
 // TODO: update to correct version once available
 @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
 @RunWith(AndroidJUnit4::class)
 @RequiresFlagsEnabled(FLAG_ASSIST_SETTINGS_PRIVACY_IMPROVEMENTS_ENABLED)
-class RequestAssistStructureTest {
+class RequestReadScreenContextTest {
     @get:Rule val checkFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
     @get:Rule val disableAnimationRule = DisableAnimationRule()
     @get:Rule val freezeRotationRule = FreezeRotationRule()
@@ -97,43 +97,43 @@ class RequestAssistStructureTest {
     }
 
     @Test
-    fun startRequestAssistStructureActivity_finishIfNotRoleHolder() {
+    fun startRequestReadScreenContextActivity_finishIfNotRoleHolder() {
         setAppOpMode(AppOpsManager.MODE_IGNORED)
-        requestAssistStructure()
+        requestReadScreenContext()
         val result = waitForResult()
         Truth.assertThat(result.first).isEqualTo(Activity.RESULT_CANCELED)
         Truth.assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_IGNORED)
     }
 
     @Test
-    fun startRequestAssistStructureActivity_finishIfAlreadyAllowed() {
+    fun startRequestReadScreenContextActivity_finishIfAlreadyAllowed() {
         addRoleHolder(RoleManager.ROLE_ASSISTANT, APP_PACKAGE_NAME)
         setAppOpMode(AppOpsManager.MODE_ALLOWED)
 
-        requestAssistStructure()
+        requestReadScreenContext()
         val result = waitForResult()
         Truth.assertThat(result.first).isEqualTo(Activity.RESULT_OK)
         Truth.assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_ALLOWED)
     }
 
     @Test
-    fun startRequestAssistStructureActivity_finishIfUnrequestable() {
+    fun startRequestReadScreenContextActivity_finishIfUnrequestable() {
         addRoleHolder(RoleManager.ROLE_ASSISTANT, APP_PACKAGE_NAME)
         setAppOpMode(AppOpsManager.MODE_IGNORED)
         setReadScreenContextRequestDeniedCount(100)
 
-        requestAssistStructure()
+        requestReadScreenContext()
         val result = waitForResult()
         Truth.assertThat(result.first).isEqualTo(Activity.RESULT_CANCELED)
         Truth.assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_IGNORED)
     }
 
     @Test
-    fun startRequestAssistStructureActivity_verifyCopy() {
+    fun startRequestReadScreenContextActivity_verifyCopy() {
         addRoleHolder(RoleManager.ROLE_ASSISTANT, APP_PACKAGE_NAME)
         setAppOpMode(AppOpsManager.MODE_IGNORED)
 
-        requestAssistStructure()
+        requestReadScreenContext()
         UiAutomatorUtils2.waitFindObject(By.text(TITLE))
         UiAutomatorUtils2.waitFindObject(By.text(DESCRIPTION))
 
@@ -142,23 +142,23 @@ class RequestAssistStructureTest {
     }
 
     @Test
-    fun startRequestAssistStructureActivity_allow() {
+    fun startRequestReadScreenContextActivity_allow() {
         addRoleHolder(RoleManager.ROLE_ASSISTANT, APP_PACKAGE_NAME)
         setAppOpMode(AppOpsManager.MODE_IGNORED)
 
-        requestAssistStructure()
+        requestReadScreenContext()
         respondToRequestAndWaitForResult(true)
         Truth.assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_ALLOWED)
         Truth.assertThat(getReadScreenContextRequestDeniedCount()).isEqualTo(0)
     }
 
     @Test
-    fun startRequestAssistStructureActivity_dontAllow() {
+    fun startRequestReadScreenContextActivity_dontAllow() {
         addRoleHolder(RoleManager.ROLE_ASSISTANT, APP_PACKAGE_NAME)
         setAppOpMode(AppOpsManager.MODE_IGNORED)
         val expectedDenialCount = getReadScreenContextRequestDeniedCount() + 1
 
-        requestAssistStructure()
+        requestReadScreenContext()
         respondToRequestAndWaitForResult(false)
         Truth.assertThat(getAppOpMode()).isEqualTo(AppOpsManager.MODE_IGNORED)
         Truth.assertThat(getReadScreenContextRequestDeniedCount()).isEqualTo(expectedDenialCount)
@@ -257,11 +257,11 @@ class RequestAssistStructureTest {
         UiAutomatorUtils2.getUiDevice().waitForIdle()
     }
 
-    private fun requestAssistStructure() {
+    private fun requestReadScreenContext() {
         val intent =
             Intent()
                 .setComponent(
-                    ComponentName(APP_PACKAGE_NAME, APP_REQUEST_ASSIST_STRUCTURE_ACTIVITY_NAME)
+                    ComponentName(APP_PACKAGE_NAME, APP_REQUEST_READ_SCREEN_CONTEXT_ACTIVITY_NAME)
                 )
         activityRule.getActivity().startActivityToWaitForResult(intent)
         waitForFocus()
@@ -295,14 +295,14 @@ class RequestAssistStructureTest {
 
         private const val APP_APK_PATH = "/data/local/tmp/cts-role/CtsRoleTestApp.apk"
         private const val APP_PACKAGE_NAME = "android.app.role.cts.app"
-        private const val APP_REQUEST_ASSIST_STRUCTURE_ACTIVITY_NAME =
-            "$APP_PACKAGE_NAME.RequestAssistStructureActivity"
+        private const val APP_REQUEST_READ_SCREEN_CONTEXT_ACTIVITY_NAME =
+            "$APP_PACKAGE_NAME.RequestReadScreenContextActivity"
 
         private const val APP_LABEL = "CtsRoleTestApp"
-        private const val TITLE = "Allow $APP_LABEL to access screen and app context?"
+        private const val TITLE = "Allow $APP_LABEL to use screen and app data?"
         private const val DESCRIPTION =
-            "Allow the default assistant app to access the screen contents and data shared by the" +
-                " visible app"
+            "This assistant will be able to access info and content from the app open on your " +
+                "screen"
         private val ALLOW_BUTTON_SELECTOR = By.text("Allow")
         private val DONT_ALLOW_BUTTON_SELECTOR = By.text("Don\u2019t allow")
 

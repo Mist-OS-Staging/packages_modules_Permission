@@ -524,8 +524,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.android.permissioncontroller.role.ui.v37.RequestAssistStructureActivity"
-            android:theme="@style/Theme.RequestAssistStructureActivity.FilterTouches"
+        <activity android:name="com.android.permissioncontroller.role.ui.v37.RequestReadScreenContextActivity"
+            android:theme="@style/Theme.RequestReadScreenContextActivity.FilterTouches"
             android:excludeFromRecents="true"
             android:exported="true"
             android:launchMode="singleTop"
