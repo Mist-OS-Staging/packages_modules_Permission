@@ -120,11 +120,15 @@
                 <RadioButton
                     android:id="@+id/permission_location_accuracy_coarse_only"
                     android:text="@string/permgrouprequest_coarselocation_imagetext"
+                    android:clickable="false"
+                    android:focusable="false"
                     style="@style/PermissionLocationAccuracySingleRadio" />
 
                 <RadioButton
                     android:id="@+id/permission_location_accuracy_fine_only"
                     android:text="@string/permgrouprequest_finelocation_imagetext"
+                    android:clickable="false"
+                    android:focusable="false"
                     style="@style/PermissionLocationAccuracySingleRadio" />
             </FrameLayout>
 
