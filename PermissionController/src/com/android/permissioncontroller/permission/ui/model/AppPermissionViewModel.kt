@@ -687,6 +687,8 @@ class AppPermissionViewModel(
             }
         }
 
+    fun isOnlyForLocationButton(): Boolean = lightAppPermGroup?.isOnlyForLocationButton == true
+
     @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.VANILLA_ICE_CREAM, codename = "VanillaIceCream")
     fun handleDisabledAllowButton(fragment: Fragment) {
         if (
@@ -924,6 +926,7 @@ class AppPermissionViewModel(
 
         if (changeRequest == ChangeRequest.GRANT_FINE_LOCATION) {
             var newGroup = group
+            // TODO check the toggle behavior, when app is using a location button.
             if (!newGroup.isOneTime) {
                 newGroup = KotlinUtils.grantForegroundRuntimePermissions(app, group)
                 logPermissionChanges(group, newGroup, buttonClicked)
@@ -933,16 +936,13 @@ class AppPermissionViewModel(
         }
 
         if (changeRequest == ChangeRequest.REVOKE_FINE_LOCATION) {
-            var newGroup = group
-            if (!newGroup.isOneTime) {
-                newGroup =
-                    KotlinUtils.revokeForegroundRuntimePermissions(
-                        app,
-                        group,
-                        filterPermissions = listOf(ACCESS_FINE_LOCATION),
-                    )
-                logPermissionChanges(group, newGroup, buttonClicked)
-            }
+            val newGroup =
+                KotlinUtils.revokeForegroundRuntimePermissions(
+                    app,
+                    group,
+                    filterPermissions = listOf(ACCESS_FINE_LOCATION),
+                )
+            logPermissionChanges(group, newGroup, buttonClicked)
             KotlinUtils.setFlagsWhenLocationAccuracyChanged(app, newGroup, false)
             return
         }
@@ -1111,7 +1111,10 @@ class AppPermissionViewModel(
 
             if (shouldGrantForeground) {
                 newGroup =
-                    if (shouldShowLocationAccuracy == true && !isFineLocationChecked(newGroup)) {
+                    if (
+                        shouldShowLocationAccuracy == true && !isFineLocationChecked(newGroup) ||
+                            newGroup.isOnlyForLocationButton
+                    ) {
                         KotlinUtils.grantForegroundRuntimePermissions(
                             app,
                             newGroup,

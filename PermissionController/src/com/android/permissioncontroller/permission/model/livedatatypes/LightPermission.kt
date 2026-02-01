@@ -19,6 +19,7 @@ package com.android.permissioncontroller.permission.model.livedatatypes
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.content.pm.PermissionInfo
+import android.permission.flags.Flags
 import com.android.permissioncontroller.permission.utils.PermissionMapping.isRuntimePlatformPermission
 import com.android.permissioncontroller.permission.utils.SoftRestrictedPermissionPolicy
 import com.android.permissioncontroller.permission.utils.Utils
@@ -86,6 +87,24 @@ data class LightPermission(
         }
         implicit
     }
+
+    /** Whether precise location permission can only be granted by location button */
+    val isOnlyForLocationButton: Boolean by lazy {
+        if (
+            name != android.Manifest.permission.ACCESS_FINE_LOCATION ||
+                !Flags.locationButtonEnabled()
+        ) {
+            return@lazy false
+        }
+        val index = pkgInfo.requestedPermissions.indexOf(name)
+        if (index >= 0) {
+            val flags = pkgInfo.requestedPermissionsFlags.getOrNull(index) ?: 0
+            (flags and PackageInfo.REQUESTED_PERMISSION_ONLY_FOR_LOCATION_BUTTON) != 0
+        } else {
+            false
+        }
+    }
+
     /** Whether this permission is a runtime only permission */
     val isRuntimeOnly =
         permInfo.protectionFlags and PermissionInfo.PROTECTION_FLAG_RUNTIME_ONLY != 0

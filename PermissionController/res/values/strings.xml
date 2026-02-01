@@ -635,6 +635,9 @@
     <!-- Title for the settings radio button to require an app to ask for a permission next time they need it. [CHAR LIMIT=60] -->
     <string name="app_permission_button_ask">Ask every time</string>
 
+    <!-- Title for the settings radio button to require an app to ask for a permission next time they need it. [CHAR LIMIT=60] -->
+    <string name="app_permission_button_ask_or_when_i_share">Ask every time or allow when you share</string>
+
     <!-- Title for the settings radio button to deny with prejudice a permission grant. [CHAR LIMIT=60] -->
     <string name="app_permission_button_deny">Don\u2019t allow</string>
 
