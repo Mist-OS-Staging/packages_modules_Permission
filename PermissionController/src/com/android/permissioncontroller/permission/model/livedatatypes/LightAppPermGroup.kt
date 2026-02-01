@@ -138,6 +138,9 @@ data class LightAppPermGroup(
             (permGroupName == Manifest.permission_group.LOCATION &&
                 permissions[ACCESS_COARSE_LOCATION]?.isOneTime == true)
 
+    /** Whether precise location permission can only be granted by location button */
+    val isOnlyForLocationButton = permissions.values.any { it.isOnlyForLocationButton }
+
     /** Whether any permissions in this group are granted by default (pregrant) */
     val isGrantedByDefault = foreground.isGrantedByDefault || background.isGrantedByDefault
 
