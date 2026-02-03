@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"私隱資訊主頁"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"應用程式權限"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"代理應用程式活動"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"「<xliff:g id="APP_NAME">%1$s</xliff:g>」活動"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"過去 24 小時內"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"今天"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"昨天"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"上次存取時間：<xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"查看"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"查看最近曾使用權限的應用程式"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>使用情況"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"查看其他權限"</string>
@@ -194,12 +200,14 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"僅在使用此應用程式時允許"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"一律全部允許"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"每次都詢問"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"不允許"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"允許有限存取"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"精確位置"</string>
     <string name="approximate_image_description" msgid="938803699637069884">"概略位置"</string>
     <string name="app_permission_location_accuracy" msgid="7166912915040018669">"使用精確位置"</string>
-    <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"關閉精確位置後，應用程式可存取你的概略位置"</string>
+    <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"精確位置關閉時，應用程式會存取你的概略位置"</string>
     <string name="app_permission_title" msgid="2090897901051370711">"<xliff:g id="PERM">%1$s</xliff:g>權限"</string>
     <string name="app_permission_header" msgid="2951363137032603806">"這個應用程式的<xliff:g id="PERM">%1$s</xliff:g>存取權"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"此應用程式在<xliff:g id="DEVICE_NAME">%2$s</xliff:g>上的<xliff:g id="PERM">%1$s</xliff:g>存取權"</string>
@@ -461,8 +469,10 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"請注意：如果你重新啟動裝置並設定了螢幕鎖定，就必須先將裝置解鎖，才可執行這個應用程式。"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"這個小幫手將能讀取系統目前使用的應用程式資料，包括螢幕顯示的資料或可在應用程式中存取的資料。"</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"要將數碼助理應用程式變更為「<xliff:g id="APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;嗎？"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"此數碼助理將可存取你的訊息等資料，以及應用程式選擇與數碼助理分享的資料。"</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"此數碼助理將可存取你的訊息等資料，以及應用程式選擇與數碼助理分享的資料。&lt;br&gt;&lt;br/&gt;此外，由於你之前已為「<xliff:g id="APP_NAME">%1$s</xliff:g>」開啟螢幕畫面和應用程式資料，因此數碼助理將可存取螢幕畫面上開啟的應用程式內容。"</string>
+    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"分享偵錯資料"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"要分享詳細的偵錯資料嗎？"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"「<xliff:g id="APP_NAME">%1$s</xliff:g>」要求上載偵錯資料。"</string>
@@ -740,13 +750,20 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"此代理應用程式可存取「<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>」以取得資訊並代表你採取行動"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"允許"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"不允許"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"要允許「<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;存取畫面和應用程式內容嗎？"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"允許預設數碼助理應用程式存取可見應用程式分享的畫面內容和資料"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"允許"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"不允許"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"使用畫面和應用程式內容"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"允許預設數碼助理應用程式存取可見應用程式分享的畫面內容和資料"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"允許「<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>」存取可見應用程式分享的畫面內容和資料"</string>
+    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
+    <skip />
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"允許"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"不允許"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"要允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;使用位置按鈕存取精確位置嗎？"</string>

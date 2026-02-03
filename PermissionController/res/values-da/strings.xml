@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Privatlivspanel"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Apptilladelser"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Agentaktivitet"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g>-aktivitet"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Inden for de seneste 24 timer"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"I dag"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"I går"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Seneste adgang: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Se"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Se, hvilke apps der har brugt tilladelser for nylig"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Brug af <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Se andre tilladelser"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Tillad kun, mens appen er i brug"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Tillad altid alle"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Spørg hver gang"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Tillad ikke"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Tillad begrænset adgang"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Præcis lokation"</string>
@@ -461,8 +469,9 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Bemærk! Hvis du genstarter din enhed og har indstillet en skærmlås, kan denne app ikke starte, før du låser enheden op."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Assistenten kan læse oplysninger om, hvilke apps der bruges i dit system, bl.a. oplysninger, der er synlige på din skærm eller tilgængelige i dine apps."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Vil du ændre din app for digital assistent til &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Denne assistent kan tilgå oplysninger såsom dine beskeder samt data, som apps har valgt at dele med din assistent."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Denne assistent kan tilgå oplysninger som f.eks. dine beskeder og data, som apps har valgt at dele med din assistent.&lt;br&gt;&lt;br&gt;Da du tidligere har aktiveret skærm- og appdata for <xliff:g id="APP_NAME">%1$s</xliff:g>, har den også tilladelse til at tilgå indhold fra den app, der er åben på din skærm."</string>
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Denne assistent kan tilgå oplysninger såsom dine beskeder samt data, som apps har valgt at dele med din assistent."</string>
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Del fejlretningsdata"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Vil du dele detaljerede fejlretningsdata?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> vil gerne uploade fejretningsoplysninger."</string>
@@ -740,13 +749,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Denne agent vil kunne tilgå <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> for at hente oplysninger og foretage handlinger for dig"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Tillad"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Tillad ikke"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Vil du give &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; adgang til skærm- og appkontekst?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Giv standardassistenteappen adgang til skærmens indhold og data, der deles af den synlige app"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Tillad"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Tillad ikke"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"Brug skærm- og appkontekst"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Giv appen, der er valgt som standardassistent, adgang til skærmen og data, der deles af den synlige app"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"Giv <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> adgang til skærmen og data, der deles af den synlige app"</string>
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"Vil du give &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; tilladelse til at bruge skærm- og appdata?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"Denne assistent kan tilgå oplysninger og indhold fra den app, der er åben på din skærm"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Tillad"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Tillad ikke"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Brug skærm- og appdata"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Giv assistenten adgang til oplysninger og indhold fra den app, der er åben på din skærm"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Giv <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> adgang til oplysninger og indhold fra den app, der er åben på din skærm"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Tillad"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Tillad ikke"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Vil du give &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; adgang til præcis lokation ved hjælp af en lokationsknap?"</string>

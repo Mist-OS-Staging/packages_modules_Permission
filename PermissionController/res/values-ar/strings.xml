@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"لوحة بيانات الخصوصية"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"أذونات التطبيقات"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"نشاط الوكيل"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"نشاط \"<xliff:g id="APP_NAME">%1$s</xliff:g>\""</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"في آخر 24 ساعة"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"اليوم"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"أمس"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"تاريخ آخر وصول: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"عرض"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"الاطّلاع على التطبيقات التي استخدمت أذونات مؤخرًا"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"استخدام <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"عرض الأذونات الأخرى"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"السماح عند استخدام التطبيق فقط"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"السماح بالكل دومًا"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"السؤال في كل مرة"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"عدم السماح"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"السماح بالوصول المحدود"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"الموقع الجغرافي الدقيق"</string>
@@ -461,8 +469,10 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"ملاحظة: في حال إعادة تشغيل جهازك وضبط قفل شاشة، لا يمكن بدء هذا التطبيق إلى أن تفتح جهازك."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"سيتمكّن المساعِد من قراءة المعلومات عن التطبيقات قيد الاستخدام على نظامك، بما في ذلك المعلومات المرئية على شاشتك أو التي يمكن الوصول إليها داخل التطبيقات."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"‏تغيير تطبيق المساعد الرقمي إلى &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;؟"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"سيتمكّن هذا المساعد من الوصول إلى معلومات، مثل الرسائل والبيانات التي اختارت التطبيقات مشاركتها مع المساعد."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"‏سيتمكّن هذا المساعد من الوصول إلى معلومات مثل رسائلك والبيانات التي اختارت التطبيقات مشاركتها مع مساعدك.&lt;br&gt;&lt;br&gt;بما أنّه سبق لك أن فعّلت أيضًا إمكانية وصول \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" إلى بيانات الشاشة والتطبيقات، سيتم السماح له بالوصول إلى محتوى التطبيق المفتوح على شاشتك."</string>
+    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"مشاركة بيانات تصحيح الأخطاء"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"هل تريد مشاركة بيانات تصحيح الأخطاء التفصيلية؟"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"يريد تطبيق <xliff:g id="APP_NAME">%1$s</xliff:g> تحميل معلومات تصحيح الأخطاء."</string>
@@ -637,7 +647,7 @@
     <string name="safety_center_background_location_access_revoked" msgid="6972274943343442213">"تم تغيير إذن الوصول."</string>
     <string name="safety_center_view_recent_location_access" msgid="3524391299490678243">"عرض أحدث بيانات استخدام للموقع الجغرافي"</string>
     <string name="privacy_controls_title" msgid="7605929972256835199">"عناصر التحكّم في الخصوصية"</string>
-    <string name="camera_toggle_title" msgid="1251201397431837666">"الوصول إلى الكاميرا"</string>
+    <string name="camera_toggle_title" msgid="1251201397431837666">"الوصول للكاميرا"</string>
     <string name="mic_toggle_title" msgid="2649991093496110162">"الوصول إلى الميكروفون"</string>
     <string name="perm_toggle_description" msgid="7801326363741451379">"للتطبيقات والخدمات"</string>
     <string name="mic_toggle_description" msgid="9163104307990677157">"للتطبيقات والخدمات. إذا كان هذا الخيار غير مفعّل، قد تتم مشاركة بيانات الميكروفون عند الاتصال برقم طوارئ"</string>
@@ -740,13 +750,20 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"سيتمكّن هذا الوكيل من الوصول إلى \"<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>\" للحصول على المعلومات وتنفيذ الإجراءات نيابةً عنك"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"السماح"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"عدم السماح"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"‏السماح بوصول &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; إلى محتوى الشاشة والتطبيقات؟"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"السماح لتطبيق المساعد التلقائي بالوصول إلى محتوى الشاشة والبيانات التي يشاركها التطبيق المرئي"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"السماح"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"عدم السماح"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"استخدام سياق الشاشة والتطبيق"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"السماح لتطبيق المساعد التلقائي بالوصول إلى الشاشة والبيانات التي يشاركها التطبيق المرئي"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"السماح لـ \"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>\" بالوصول إلى الشاشة والبيانات التي يشاركها التطبيق المرئي"</string>
+    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
+    <skip />
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"السماح"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"عدم السماح"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"‏السماح لـ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; بالوصول إلى الموقع الجغرافي الدقيق باستخدام زر الموقع الجغرافي؟"</string>

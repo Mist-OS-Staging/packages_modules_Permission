@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Privacy dashboard"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Mga pahintulot sa app"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Aktibidad ng ahente"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Aktibidad ng <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Sa nakalipas na 24 na oras"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Ngayon"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Kahapon"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Huling na-access: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Tingnan"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Tingnan kung aling app ang gumamit kamakailan ng pahintulot"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Paggamit ng <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Tingnan ang ibang pahintulot"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Payagan lang habang ginagamit ang app"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Palaging pahintulutan lahat"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Magtanong palagi"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Huwag payagan"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Payagan ang limitadong access"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Eksaktong lokasyon"</string>
@@ -461,8 +469,9 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Tandaan: Kung ire-restart mo ang iyong device at may nakatakdang lock ng screen, hindi makakapagsimula ang app na ito hanggang sa i-unlock mo ang iyong device."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Mababasa ng assistant ang impormasyon tungkol sa mga app na ginagamit sa iyong system, kasama ang impormasyong makikita sa screen mo o maa-access sa mga app."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Gawing &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ang iyong app ng digital na assistant?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Maa-access ng assistant na ito ang impormasyon tulad ng iyong mga mensahe, at data na pinili ng mga app na i-share sa assistant mo."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Maa-access ng assistant na ito ang impormasyong gaya ng iyong mga mensahe, at data na piniling i-share ng mga app sa assistant mo.&lt;br&gt;&lt;br&gt;Bukod pa rito, dahil na-on mo na dati ang data ng screen at app para sa <xliff:g id="APP_NAME">%1$s</xliff:g>, papayagan itong i-access ang content mula sa app na nakabukas sa iyong screen."</string>
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Maa-access ng assistant na ito ang impormasyon tulad ng iyong mga mensahe, at data na pinili ng mga app na i-share sa assistant mo."</string>
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Ibahagi ang Data sa Pag-debug"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Ibahagi ang nakadetalyeng data sa pag-debug?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"Gustong mag-upload ng <xliff:g id="APP_NAME">%1$s</xliff:g> ng impormasyon sa pag-debug."</string>
@@ -740,13 +749,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Maa-access ng ahenteng ito ang <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> para kumuha ng impormasyon at kumilos para sa iyo"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Payagan"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Huwag payagan"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Payagan ang &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; na i-access ang konteksto ng screen at app?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Payagan ang default na assistant app na i-access ang mga content ng screen at data na ibinahagi ng nakikitang app"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Payagan"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Huwag payagan"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"Gamitin ang konteksto ng screen at app"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Payagan ang default na assistant app na i-access ang screen at data na ibinahagi ng nakikitang app"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"Payagan ang <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> na i-access ang screen at data na ibinahagi ng nakikitang app"</string>
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"Payagan ang &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; na gamitin ang data ng screen at app?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"Maa-access ng assistant na ito ang impormasyon at content mula sa app na nakabukas sa iyong screen"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Payagan"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Huwag payagan"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Gamitin ang data ng screen at app"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Payagan ang assistant na i-access ang impormasyon at content mula sa app na nakabukas sa iyong screen"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Payagan ang <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> na i-access ang impormasyon at content mula sa app na nakabukas sa iyong screen"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Payagan"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Huwag payagan"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Payagan ang &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; na i-access ang eksaktong lokasyon gamit ang isang button ng lokasyon?"</string>

@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"தனியுரிமை டாஷ்போர்டு"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"ஆப்ஸ் அனுமதிகள்"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"ஏஜெண்ட் செயல்பாடு"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> செயல்பாடு"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"கடந்த 24 மணிநேரத்தில்"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"இன்று"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"நேற்று"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"கடைசியாக அணுகியது: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"காட்டு"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"சமீபத்தில் அனுமதிகளைப் பயன்படுத்திய ஆப்ஸைக் காட்டும்"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> உபயோகம்"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"பிற அனுமதிகளைக் காட்டு"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"ஆப்ஸை உபயோகிக்கும்போது மட்டும் அனுமதி"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"எப்போதும் அனைத்தையும் அனுமதி"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"ஒவ்வொரு முறையும் கேள்"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"அனுமதிக்க வேண்டாம்"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"வரம்பிற்குட்பட்ட அணுகலை அனுமதித்தல்"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"துல்லியமான இருப்பிடம்"</string>
@@ -461,8 +469,10 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"கவனத்திற்கு: திரைப் பூட்டு அமைக்கப்பட்டிருக்கும் நிலையில் உங்கள் மொபைலை மீண்டும் தொடங்கினால் அன்லாக் செய்யப்படும்வரை இந்த ஆப்ஸ் இயங்காது."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"திரையில் தெரியும் தகவல் அல்லது ஆப்ஸிற்குள் அணுகக்கூடிய தகவல் உட்பட உங்கள் சிஸ்டத்தில் செயல்பாட்டிலுள்ள ஆப்ஸ் பற்றிய தகவல்களை அசிஸ்டண்ட்டால் படிக்க இயலும்."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ஆப்ஸை உங்கள் டிஜிட்டல் அசிஸ்டண்ட் ஆப்ஸாக மாற்றவா?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"உங்கள் மெசேஜ்கள் போன்ற தகவல்களையும் உங்கள் அசிஸ்டண்ட்டுடன் பகிர ஆப்ஸ் தேர்வுசெய்துள்ள தரவையும் இந்த அசிஸ்டண்ட்டால் அணுக முடியும்."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"உங்கள் மெசேஜ்கள் போன்ற தகவல்களையும் உங்கள் அசிஸ்டண்ட்டுடன் பகிர ஆப்ஸ் தேர்வுசெய்துள்ள தரவையும் இந்த அசிஸ்டண்ட்டால் அணுக முடியும்.&lt;br&gt;&lt;br&gt;அத்துடன், இதற்கு முன்பு <xliff:g id="APP_NAME">%1$s</xliff:g> ஆப்ஸுக்கு நீங்கள் திரை மற்றும் ஆப்ஸ் தரவை ஆன் செய்துள்ளதால் உங்கள் திரையில் திறந்துள்ள ஆப்ஸில் இருக்கும் உள்ளடக்கத்தை அணுக அது அனுமதிக்கப்படும்."</string>
+    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"பிழைதிருத்தத் தரவைப் பகிர்தல்"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"விரிவான பிழைதிருத்தத் தகவலைப் பகிரவா?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"பிழைதிருத்தத் தகவலை <xliff:g id="APP_NAME">%1$s</xliff:g> பதிவேற்ற விரும்புகிறது."</string>
@@ -740,13 +750,20 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"உங்களுக்காகத் தகவல்களைப் பெற்று நடவடிக்கைகள் எடுக்க இந்த ஏஜெண்ட்டால் <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ஆப்ஸை அணுக முடியும்"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"அனுமதி"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"அனுமதிக்காதே"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"திரை மற்றும் ஆப்ஸ் சூழலை அணுக &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; ஆப்ஸை அனுமதிக்கவா?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"திரையில் உள்ள உள்ளடக்கத்தையும் தெரியும் நிலையில் உள்ள ஆப்ஸ் பகிரும் தரவையும் அணுக, இயல்பு அசிஸ்டண்ட் ஆப்ஸை அனுமதிக்கும்"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"அனுமதி"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"அனுமதிக்காதே"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"திரை, ஆப்ஸ் சூழலைப் பயன்படுத்துதல்"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"திரையையும் திறந்திருக்கும் ஆப்ஸ் பகிரும் தரவையும் அணுக, இயல்பு அசிஸ்டண்ட் ஆப்ஸை அனுமதிக்கும்"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"திரையையும் திறந்திருக்கும் ஆப்ஸ் பகிரும் தரவையும் அணுக, <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> ஆப்ஸை அனுமதிக்கும்"</string>
+    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
+    <skip />
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"அனுமதி"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"அனுமதிக்காதே"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"இருப்பிட பட்டனைப் பயன்படுத்தி துல்லியமான இருப்பிடத்தை அணுக &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ஆப்ஸை அனுமதிக்கவா?"</string>
