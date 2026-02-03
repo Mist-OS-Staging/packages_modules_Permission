@@ -18,12 +18,13 @@ package com.android.permissioncontroller.appfunctions.domain.usecase.v31
 import android.content.Context
 import com.android.permissioncontroller.appinteraction.domain.model.v31.AccessCount
 
-/** A use case for getting the usage of app function agents. */
-interface GetAppFunctionAgentUsageUseCase {
-    /**
-     * Retrieves the usages for app function agents.
-     *
-     * @param context The [Context] of the application.
-     */
-    suspend operator fun invoke(context: Context): Map<String, AccessCount>
+/**
+ * A no-op implementation of [GetAgentUsageUseCase].
+ *
+ * This implementation always returns an empty map, indicating no usage.
+ */
+class NoOpAgentUsageUseCase : GetAgentUsageUseCase {
+    override suspend operator fun invoke(context: Context): Map<String, AccessCount> {
+        return emptyMap()
+    }
 }
