@@ -206,6 +206,7 @@ android_app {
     certificate: "platform",
     use_resource_processor: true,
     rename_resources_package: false,
+    preinstall_allowlist: ":preinstalled-packages-com.android.permissioncontroller.xml",
     privapp_allowlist: ":privapp_allowlist_com.android.permissioncontroller.xml",
     flags_packages: [
         "android.permission.flags-aconfig",

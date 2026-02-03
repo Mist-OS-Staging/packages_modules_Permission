@@ -19,6 +19,7 @@ package com.android.permissioncontroller.pm.data.repository.v31
 import android.app.Application
 import android.content.Context
 import android.content.pm.PackageManager
+import android.content.pm.PackageManager.PackageInfoFlags
 import android.content.res.Resources
 import android.graphics.drawable.Drawable
 import android.os.UserHandle
@@ -154,9 +155,18 @@ class PackageRepositoryImpl(
         withContext(dispatcher) {
             try {
                 val packageInfo =
-                    Utils.getUserContext(context, user)
-                        .packageManager
-                        .getPackageInfo(packageName, PackageManager.GET_ATTRIBUTIONS)
+                    if (SdkLevel.isAtLeastU()) {
+                        Utils.getUserContext(context, user)
+                            .packageManager
+                            .getPackageInfo(
+                                packageName,
+                                PackageInfoFlags.of(PackageManager.GET_ATTRIBUTIONS_LONG),
+                            )
+                    } else {
+                        Utils.getUserContext(context, user)
+                            .packageManager
+                            .getPackageInfo(packageName, PackageManager.GET_ATTRIBUTIONS)
+                    }
                 val attributionUserVisible =
                     packageInfo.applicationInfo?.areAttributionsUserVisible() ?: false
                 if (attributionUserVisible && SdkLevel.isAtLeastS()) {
