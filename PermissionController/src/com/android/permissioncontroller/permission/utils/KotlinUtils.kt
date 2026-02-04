@@ -1606,37 +1606,40 @@ object KotlinUtils {
         app: Application,
         group: LightAppPermGroup,
         isFineSelected: Boolean,
-    ) {
+    ): LightAppPermGroup {
+        var newGroup = group
         if (isFineSelected) {
-            setGroupFlags(
-                app,
-                group,
-                PackageManager.FLAG_PERMISSION_SELECTED_LOCATION_ACCURACY to true,
-                filterPermissions = listOf(ACCESS_FINE_LOCATION),
-            )
-            val fineIsOneTime =
-                group.permissions[Manifest.permission.ACCESS_FINE_LOCATION]?.isOneTime ?: false
-            setGroupFlags(
-                app,
-                group,
-                PackageManager.FLAG_PERMISSION_SELECTED_LOCATION_ACCURACY to false,
-                PackageManager.FLAG_PERMISSION_ONE_TIME to fineIsOneTime,
-                filterPermissions = listOf(Manifest.permission.ACCESS_COARSE_LOCATION),
-            )
+            newGroup =
+                setGroupFlags(
+                    app,
+                    newGroup,
+                    PackageManager.FLAG_PERMISSION_SELECTED_LOCATION_ACCURACY to true,
+                    filterPermissions = listOf(ACCESS_FINE_LOCATION),
+                )
+            newGroup =
+                setGroupFlags(
+                    app,
+                    newGroup,
+                    PackageManager.FLAG_PERMISSION_SELECTED_LOCATION_ACCURACY to false,
+                    filterPermissions = listOf(Manifest.permission.ACCESS_COARSE_LOCATION),
+                )
         } else {
-            setGroupFlags(
-                app,
-                group,
-                PackageManager.FLAG_PERMISSION_SELECTED_LOCATION_ACCURACY to false,
-                filterPermissions = listOf(ACCESS_FINE_LOCATION),
-            )
-            setGroupFlags(
-                app,
-                group,
-                PackageManager.FLAG_PERMISSION_SELECTED_LOCATION_ACCURACY to true,
-                filterPermissions = listOf(Manifest.permission.ACCESS_COARSE_LOCATION),
-            )
+            newGroup =
+                setGroupFlags(
+                    app,
+                    newGroup,
+                    PackageManager.FLAG_PERMISSION_SELECTED_LOCATION_ACCURACY to false,
+                    filterPermissions = listOf(ACCESS_FINE_LOCATION),
+                )
+            newGroup =
+                setGroupFlags(
+                    app,
+                    newGroup,
+                    PackageManager.FLAG_PERMISSION_SELECTED_LOCATION_ACCURACY to true,
+                    filterPermissions = listOf(Manifest.permission.ACCESS_COARSE_LOCATION),
+                )
         }
+        return newGroup
     }
 
     /**
