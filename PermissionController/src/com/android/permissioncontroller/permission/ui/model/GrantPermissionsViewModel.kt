@@ -872,19 +872,32 @@ class GrantPermissionsViewModel(
                     }
                 } else {
                     affectedPermissions = affectedForegroundPermissions
-                    val newGroup =
+                    var newGroup =
                         grantForegroundRuntimePermissions(
                             app,
                             groupState.group,
                             affectedPermissions,
                             isOneTime,
                         )
-                    if (!isOneTime || newGroup.isOneTime) {
-                        KotlinUtils.setFlagsWhenLocationAccuracyChanged(
-                            app,
-                            newGroup,
-                            affectedForegroundPermissions.contains(ACCESS_FINE_LOCATION),
-                        )
+                    if (newGroup.permGroupName == LOCATION) {
+                        val isPreciseGranted =
+                            affectedForegroundPermissions.contains(ACCESS_FINE_LOCATION)
+                        newGroup =
+                            KotlinUtils.setFlagsWhenLocationAccuracyChanged(
+                                app,
+                                newGroup,
+                                isPreciseGranted,
+                            )
+                        // Upgrade flow for location permission, user has selected
+                        // "Change to precise location", and coarse was granted as one-time.
+                        if (isPreciseGranted && !isOneTime && newGroup.isOneTime) {
+                            KotlinUtils.setGroupFlags(
+                                app,
+                                newGroup,
+                                PackageManager.FLAG_PERMISSION_ONE_TIME to false,
+                                filterPermissions = listOf(ACCESS_COARSE_LOCATION),
+                            )
+                        }
                     }
                 }
             }
