@@ -13,27 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-@file:Suppress("DEPRECATION")
 
 package com.android.permissioncontroller.permission.data
 
 import android.app.Application
 import android.content.Context
-import android.content.pm.PackageInfo
-import android.content.pm.PackageManager
-import android.content.pm.PackageManager.PackageInfoFlags
-import android.os.Parcel
 import android.os.UserHandle
-import android.os.UserManager
-import android.util.Log
 import androidx.annotation.MainThread
 import androidx.lifecycle.Observer
 import com.android.modules.utils.build.SdkLevel
 import com.android.permissioncontroller.PermissionControllerApplication
 import com.android.permissioncontroller.permission.model.livedatatypes.LightPackageInfo
-import com.android.permissioncontroller.permission.utils.ContextCompat
-import com.android.permissioncontroller.permission.utils.Utils
 import com.android.permissioncontroller.permission.utils.v35.MultiDeviceUtils
+import com.android.permissioncontroller.permission.utils.v37.LightPackageInfoUtils
 import kotlinx.coroutines.Job
 
 /**
@@ -103,74 +95,13 @@ private constructor(
         if (job.isCancelled) {
             return
         }
-        postValue(
-            try {
-                val packageManager = Utils.getUserContext(app, user).packageManager
-                var pI = getPackageInfo(packageManager, packageName)
 
-                if (pI.sharedUserId != null && pI.applicationInfo != null) {
-                    val sharedPackageNames =
-                        packageManager.getPackagesForUid(pI.applicationInfo!!.uid)
-                    val sharedPackages =
-                        sharedPackageNames?.mapNotNull { otherPackageName ->
-                            try {
-                                val otherPi = getPackageInfo(packageManager, otherPackageName)
-                                otherPi
-                            } catch (_: PackageManager.NameNotFoundException) {
-                                null
-                            }
-                        }
-                    pI = mergePermissionsInSharedUid(pI, sharedPackages)
-                }
-
-                // PackageInfo#requestedPermissionsFlags is not device aware. Hence for device aware
-                // permissions if the deviceId is not the primary device we need to separately check
-                // permission for that device and update requestedPermissionsFlags.
-                if (SdkLevel.isAtLeastV() && deviceId != ContextCompat.DEVICE_ID_DEFAULT) {
-                    val requestedPermissionsFlagsForDevice =
-                        MultiDeviceUtils.getPermissionsFlagsForDevice(
-                            app,
-                            pI.requestedPermissions?.toList() ?: emptyList(),
-                            pI.requestedPermissionsFlags?.toList() ?: emptyList(),
-                            pI.applicationInfo!!.uid,
-                            deviceId,
-                        )
-
-                    LightPackageInfo(pI, deviceId, requestedPermissionsFlagsForDevice)
-                } else {
-                    LightPackageInfo(pI)
-                }
-            } catch (e: Exception) {
-                if (e is PackageManager.NameNotFoundException) {
-                    Log.w(LOG_TAG, "Package \"$packageName\" not found for user $user")
-                } else {
-                    val profiles = app.getSystemService(UserManager::class.java)!!.userProfiles
-                    Log.e(
-                        LOG_TAG,
-                        "Failed to create context for user $user. " +
-                            "User exists : ${user in profiles }",
-                        e,
-                    )
-                }
-                invalidateSingle(Triple(packageName, user, deviceId))
-                null
-            }
-        )
-    }
-
-    private fun getPackageInfo(pm: PackageManager, pkgName: String): PackageInfo {
-        if (SdkLevel.isAtLeastU()) {
-            val flags =
-                PackageInfoFlags.of(
-                    PackageManager.GET_ATTRIBUTIONS_LONG or PackageManager.GET_PERMISSIONS.toLong()
-                )
-            return pm.getPackageInfo(pkgName, flags)
+        val packageInfo =
+            LightPackageInfoUtils.getLightPackageInfo(app, packageName, deviceId, user)
+        if (packageInfo == null) {
+            invalidateSingle(Triple(packageName, user, deviceId))
         }
-        var flags = PackageManager.GET_PERMISSIONS
-        if (SdkLevel.isAtLeastS()) {
-            flags = flags or PackageManager.GET_ATTRIBUTIONS
-        }
-        return pm.getPackageInfo(pkgName, flags)
+        postValue(packageInfo)
     }
 
     /** Callback from the PermissionListener. Either deletes or generates package data. */
@@ -267,79 +198,6 @@ private constructor(
                 key.second,
                 deviceId,
             )
-        }
-
-        @JvmStatic
-        fun mergePermissionsInSharedUid(
-            base: PackageInfo,
-            flags: Int,
-            packageManager: PackageManager,
-        ): PackageInfo {
-            if (base.sharedUserId != null && base.applicationInfo != null) {
-                val sharedPackageNames =
-                    packageManager.getPackagesForUid(base.applicationInfo!!.uid)
-                val sharedPackages =
-                    sharedPackageNames?.mapNotNull { otherPackageName ->
-                        try {
-                            val otherPi = packageManager.getPackageInfo(otherPackageName, flags)
-                            otherPi
-                        } catch (_: PackageManager.NameNotFoundException) {
-                            null
-                        }
-                    }
-                return mergePermissionsInSharedUid(base, sharedPackages)
-            }
-            return base
-        }
-
-        fun mergePermissionsInSharedUid(
-            base: PackageInfo,
-            otherPackages: List<PackageInfo>?,
-        ): PackageInfo {
-            if (
-                otherPackages == null || base.applicationInfo == null || base.sharedUserId == null
-            ) {
-                return base
-            }
-
-            val allPackages =
-                if (base in otherPackages) otherPackages
-                else otherPackages.toMutableList().apply { add(base) }
-            val permissionStates = mutableMapOf<String, Int>()
-            allPackages.forEach { packageInfo ->
-                if (
-                    packageInfo.applicationInfo?.uid != base.applicationInfo?.uid ||
-                        packageInfo.requestedPermissions == null
-                ) {
-                    return@forEach
-                }
-                packageInfo.requestedPermissions!!.forEachIndexed { index, permission ->
-                    val existingFlags = permissionStates.getOrDefault(permission, 0)
-                    permissionStates[permission] =
-                        existingFlags or packageInfo.requestedPermissionsFlags!![index]
-                }
-            }
-            val requestedPermissions = permissionStates.keys.toTypedArray()
-            val requestedPermissionsFlags = IntArray(requestedPermissions.size)
-            requestedPermissions.forEachIndexed { index, permission ->
-                requestedPermissionsFlags[index] = permissionStates[permission]!!
-            }
-            val packageCopy = copyPackageInfo(base)
-            packageCopy.requestedPermissions = requestedPermissions
-            packageCopy.requestedPermissionsFlags = requestedPermissionsFlags
-            return packageCopy
-        }
-
-        fun copyPackageInfo(original: PackageInfo): PackageInfo {
-            val parcel = Parcel.obtain()
-            try {
-                original.writeToParcel(parcel, 0)
-                parcel.setDataPosition(0)
-                val copy = PackageInfo.CREATOR.createFromParcel(parcel)
-                return copy
-            } finally {
-                parcel.recycle()
-            }
         }
     }
 }
