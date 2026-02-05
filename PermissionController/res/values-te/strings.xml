@@ -23,7 +23,7 @@
     <string name="back" msgid="6249950659061523680">"వెనుకకు"</string>
     <string name="dialog_close" msgid="6840699812532384661">"మూసివేయండి"</string>
     <string name="available" msgid="6007778121920339498">"అందుబాటులో ఉంది"</string>
-    <string name="blocked" msgid="9195547604866033708">"బ్లాక్ చేయబడినది"</string>
+    <string name="blocked" msgid="9195547604866033708">"బ్లాక్ అయింది"</string>
     <string name="on" msgid="280241003226755921">"ఆన్‌లో ఉంది"</string>
     <string name="off" msgid="1438489226422866263">"ఆఫ్"</string>
     <string name="uninstall_or_disable" msgid="4496612999740858933">"అన్‌ఇన్‌స్టాల్ చేయి, లేదా డిజేబుల్ చేయి"</string>
@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"గోప్యతా డ్యాష్‌బోర్డ్"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"యాప్ అనుమతులు"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"ఏజెంట్ యాక్టివిటీ"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> యాక్టివిటీ"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"గత 24 గంటల్లో"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"ఈరోజు"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"నిన్న"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"చివరిసారి <xliff:g id="TIME_DATE">%1$s</xliff:g>‌కు యాక్సెస్ చేశారు"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"చూడండి"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ఇటీవల ఏ యాప్‌లు అనుమతులను ఉపయోగించాయో చూడండి"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> వినియోగం"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"ఇతర అనుమతులను చూడండి"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"యాప్‌ను ఉపయోగిస్తున్నప్పుడు మాత్రమే అనుమతించండి"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"అన్నింటినీ ఎల్లవేళలా అనుమతించండి"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"ప్రతిసారి అడగాలి"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"అనుమతించవద్దు"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"పరిమిత యాక్సెస్‌ను అనుమతించండి"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"ఖచ్చితమైన లొకేషన్"</string>
@@ -461,8 +469,10 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"చిన్న గమనిక: మీరు భద్రత కోసం స్క్రీన్ లాక్‌ని సెటప్‌ చేసి పెట్టుకున్నారు పైగా మీ పరికరాన్ని పునఃప్రారంభించినట్టున్నారు కనుక స్క్రీన్ లాక్ అయ్యిపోయింది. మీరు పాస్‌వర్డ్‌ని నమోదు చేసేవరకూ ఈ యాప్ ప్రారంభం కాదు."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"మీ స్క్రీన్‌పై కనిపించే లేదా యాప్‌లలో యాక్సెస్ చేసే సమాచారంతో పాటు మీ సిస్టమ్‌లో వినియోగంలో ఉన్న యాప్‌ల గురించిన సమాచారాన్ని Assistant చదవగలుగుతుంది."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"మీ డిజిటల్ అసిస్టెంట్ యాప్‌ను &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌కు మార్చాలా?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"ఈ అసిస్టెంట్, మీ మెసేజ్‌లు, మీ అసిస్టెంట్‌తో షేర్ చేయడానికి యాప్‌లు ఎంచుకున్న డేటా వంటి సమాచారాన్ని యాక్సెస్ చేయగలదు."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"ఈ అసిస్టెంట్, మీ మెసేజ్‌లు, మీ అసిస్టెంట్‌తో షేర్ చేయడానికి యాప్‌లు ఎంచుకున్న డేటా వంటి సమాచారాన్ని యాక్సెస్ చేయగలదు.&lt;br&gt;&lt;br&gt;అలాగే, మీరు గతంలో <xliff:g id="APP_NAME">%1$s</xliff:g> కోసం స్క్రీన్, యాప్ డేటాను ఆన్ చేసినందున, మీ స్క్రీన్‌పై తెరిచిన యాప్ నుండి కంటెంట్‌ను యాక్సెస్ చేయడానికి దీనికి అనుమతి ఉంటుంది."</string>
+    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"డీబగ్గింగ్ డేటాను షేర్ చేయండి"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"వివరణాత్మక డీబగ్గింగ్ డేటాను షేర్ చేయాలా?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g>డీబగ్గింగ్ సమాచారాన్ని అప్‌లో డ్ చేయదలుచుకుంటున్నారు."</string>
@@ -471,7 +481,7 @@
     <string name="incident_report_dialog_text" msgid="1819244417678973362">"<xliff:g id="APP_NAME_0">%1$s</xliff:g>, <xliff:g id="DATE">%2$s</xliff:g>న <xliff:g id="TIME">%3$s</xliff:g>కు ఈ డివైజ్‌లో తీసిన డీబగ్ రిపోర్ట్‌ను అప్‌లోడ్ చేయమని రిక్వెస్ట్ చేస్తోంది. బగ్ రిపోర్ట్‌లలో మీ డివైజ్ లేదా లాగిన్ చేసిన యాప్‌లలోని వ్యక్తిగత సమాచారం ఉంటుంది, ఉదాహరణకు యూజర్ నేమ్‌లు, లొకేషన్ డేటా, డివైజ్ ఐడెంటిఫయర్‌లు, ఇంకా నెట్‌వర్క్ సమాచారం వంటివి. మీకు ఈ సమాచారం విషయంలో నమ్మకమైన వ్యక్తులకు, యాప్‌లకు మాత్రమే బగ్ రిపోర్ట్ వివరాలను షేర్ చేయండి.\n\nబగ్ రిపోర్ట్‌ను అప్‌లోడ్ చేయడానికి <xliff:g id="APP_NAME_1">%4$s</xliff:g>‌ను అనుమతించాలా?"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"<xliff:g id="APP_NAME">%1$s</xliff:g> కోసం బగ్ రిపోర్ట్‌ ప్రాసెస్ చేయడంలో ఎర్రర్ ఉంది. కాబట్టి వివరణాత్మక డీబగ్గింగ్ డేటాను షేర్ చేయడాన్ని నిరాకరించారు. అంతరాయానికి చింతిస్తున్నాము."</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"అనుమతించండి"</string>
-    <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"తిరస్కరించు"</string>
+    <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"తిరస్కరించండి"</string>
     <string name="adjust_user_sensitive_title" msgid="4196724451314280527">"అడ్వాన్స్‌డ్ సెట్టింగ్స్"</string>
     <string name="menu_adjust_user_sensitive" msgid="6497923610654425780">"అడ్వాన్స్‌డ్ సెట్టింగ్స్"</string>
     <string name="adjust_user_sensitive_globally_title" msgid="8649190949066029174">"సిస్టమ్ యాప్ వినియోగాన్ని చూపు"</string>
@@ -740,13 +750,20 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"ఈ ఏజెంట్ సమాచారాన్ని పొందడానికి, మీ కోసం చర్యలు తీసుకోవడానికి, <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>‌ను యాక్సెస్ చేయగలరు."</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"అనుమతించండి"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"అనుమతించవద్దు"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"స్క్రీన్‌ను, యాప్ కాంటెక్ట్స్‌ను యాక్సెస్ చేసేందుకు &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌ను అనుమతించాలా?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"స్క్రీన్ కంటెంట్‌లను, అలాగే మీరు ప్రస్తుతం యాక్టివ్‌గా ఉన్న యాప్ డేటాను యాక్సెస్ చేసేందుకు ఆటోమేటిక్ అసిస్టెంట్ యాప్‌ను అనుమతించండి"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"అనుమతించండి"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"అనుమతించవద్దు"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"స్క్రీన్, యాప్ కాంటెక్స్ట్‌ను ఉపయోగించండి"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"స్క్రీన్‌ను, అలాగే ప్రస్తుతం యాక్టివ్‌గా ఉన్న యాప్ డేటాను యాక్సెస్ చేసేందుకు ఆటోమేటిక్ అసిస్టెంట్ యాప్‌ను అనుమతించండి"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"స్క్రీన్‌ను, అలాగే ప్రస్తుతం యాక్టివ్‌గా ఉన్న యాప్ షేర్ చేసిన డేటాను యాక్సెస్ చేసేందుకు <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>‌ను అనుమతించండి"</string>
+    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
+    <skip />
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"అనుమతించండి"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"అనుమతించవద్దు"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"లొకేషన్ బటన్‌ను ఉపయోగించి ఖచ్చితమైన లొకేషన్‌ను యాక్సెస్ చేయడానికి &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ను అనుమతించాలా?"</string>

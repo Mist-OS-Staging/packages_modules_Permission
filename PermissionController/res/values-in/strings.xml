@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Dasbor privasi"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Izin aplikasi"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Aktivitas agen"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Aktivitas <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Dalam 24 jam terakhir"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Hari ini"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Kemarin"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Akses terakhir: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Lihat"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Lihat aplikasi yang baru saja menggunakan izin"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Penggunaan <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Lihat izin lain"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Izinkan saat aplikasi digunakan"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Selalu izinkan semua"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Selalu tanya"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Jangan izinkan"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Izinkan akses terbatas"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Lokasi presisi"</string>
@@ -461,8 +469,10 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Catatan: Jika Anda memulai ulang perangkat dan menyetel kunci layar, aplikasi ini tidak dapat dimulai hingga Anda membuka kunci perangkat Anda."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Asisten dapat membaca informasi tentang aplikasi yang sedang digunakan di sistem, termasuk informasi yang terlihat di layar atau dapat diakses dalam aplikasi."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Ubah aplikasi asisten digital Anda menjadi &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Asisten ini akan dapat mengakses info seperti pesan Anda, dan data yang dipilih aplikasi untuk dibagikan kepada asisten Anda."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Asisten ini akan dapat mengakses info seperti pesan Anda, dan data yang telah dipilih aplikasi untuk dibagikan kepada asisten Anda.&lt;br&gt;&lt;br&gt;Selain itu, karena Anda telah mengaktifkan data layar dan aplikasi untuk <xliff:g id="APP_NAME">%1$s</xliff:g> sebelumnya, asisten akan diizinkan mengakses konten dari aplikasi yang terbuka di layar Anda."</string>
+    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Bagikan Data Proses Debug"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Bagikan data proses debug yang mendetail?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ingin mengupload informasi proses debug."</string>
@@ -740,13 +750,20 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Agen ini akan dapat mengakses <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> untuk mendapatkan info dan mengambil tindakan untuk Anda"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Izinkan"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Jangan izinkan"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Izinkan &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; mengakses konteks layar dan aplikasi?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Izinkan aplikasi asisten default mengakses konten layar dan data yang dibagikan oleh aplikasi yang terlihat"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Izinkan"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Jangan izinkan"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"Gunakan konteks layar dan aplikasi"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Izinkan aplikasi asisten default mengakses layar dan data yang dibagikan oleh aplikasi yang terlihat"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"Izinkan <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> mengakses layar dan data yang dibagikan oleh aplikasi yang terlihat"</string>
+    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
+    <skip />
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Izinkan"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Jangan izinkan"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Izinkan &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; mengakses lokasi presisi menggunakan tombol lokasi?"</string>

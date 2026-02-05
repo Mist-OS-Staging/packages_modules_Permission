@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Privatumo inform. suvestinė"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Programos leidimai"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Tarpininko veikla"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"„<xliff:g id="APP_NAME">%1$s</xliff:g>“ veikla"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Per pastarąsias dvidešimt keturias valandas"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Šiandien"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Vakar"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Paskutinį kartą pasiekta: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Peržiūrėti"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Peržiūrėkite, kurios programos neseniai naudojo leidimus"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Leidimų grupės „<xliff:g id="PERMGROUP">%1$s</xliff:g>“ naudojimas"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Žr. kitus leidimus"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Leisti tik naudojant programą"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Visada leisti viską"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Klausti kaskart"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Neleisti"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Suteikti ribotą prieigą"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Tiksli vietovė"</string>
@@ -461,8 +469,9 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Pastaba. Jei esate nustatę ekrano užraktą ir iš naujo paleisite įrenginį, nebus galima atidaryti programos, kol neatrakinsite įrenginio."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Padėjėjas galės skaityti informaciją apie sistemoje naudojamas programas, įskaitant ekrane matomą ar programose pasiekiamą informaciją."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Pakeisti skaitmeninio asistento programą į &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Šis pagelbiklis galės pasiekti tokią informaciją kaip jūsų pranešimai ir duomenys, kuriuos programos pasirinko bendrinti su jūsų pagelbikliu."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Šis pagelbiklis galės pasiekti tokią informaciją kaip jūsų pranešimai ir duomenys, kuriuos programos pasirinko bendrinti su jūsų pagelbikliu.&lt;br&gt;&lt;br&gt;Be to, kadangi anksčiau įjungėte „<xliff:g id="APP_NAME">%1$s</xliff:g>“ ekrano ir programų duomenis, jam bus leista pasiekti turinį iš ekrane atidarytos programos."</string>
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Šis pagelbiklis galės pasiekti tokią informaciją kaip jūsų pranešimai ir duomenys, kuriuos programos pasirinko bendrinti su jūsų pagelbikliu."</string>
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Derinimo duomenų bendrinimas"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Bendrinti išsamius derinimo duomenis?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"Programa „<xliff:g id="APP_NAME">%1$s</xliff:g>“ norėtų įkelti derinimo informaciją."</string>
@@ -740,13 +749,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Šis tarpininkas galės pasiekti „<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>“, kad gautų informacijos ir imtųsi veiksmų jūsų vardu"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Leisti"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Neleisti"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Leisti programai &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; pasiekti ekrano ir programos kontekstą?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Leisti numatytajai pagelbiklio programai pasiekti ekrano turinį ir duomenis, kuriuos bendrina matoma programa"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Leisti"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Neleisti"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"Naudoti ekrano ir programos kontekstą"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Leisti numatytajai pagelbiklio programai pasiekti ekrano turinį ir duomenis, kuriuos bendrina matoma programa"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"Leisti „<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>“ pasiekti ekrano vaizdą ir duomenis, kuriuos bendrina matoma programa"</string>
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"Leisti programai &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; naudoti ekrano ir programos duomenis?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"Šis pagelbiklis galės pasiekti informaciją ir turinį iš ekrane atidarytos programos"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Leisti"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Neleisti"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Ekrano ir programos duomenų naudojimas"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Leisti pagelbikliui pasiekti informaciją ir turinį iš ekrane atidarytos programos"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Leisti „<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>“ pasiekti informaciją ir turinį iš ekrane atidarytos programos"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Leisti"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Neleisti"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Leisti &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; pasiekti tikslią vietovę naudojant vietovės mygtuką?"</string>

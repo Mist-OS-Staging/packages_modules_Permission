@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"מרכז בקרת הפרטיות"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"הרשאות שניתנות לאפליקציה"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"פעילות של הסוכן"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"פעילות באפליקציה <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"ב-24 השעות האחרונות"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"היום"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"אתמול"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"גישה אחרונה: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"הצגה"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"הצגת האפליקציות שהשתמשו לאחרונה בהרשאות"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"שימוש ב<xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"הצגת הרשאות נוספות"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"רק כשהאפליקציה בשימוש"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"אישור של הכול תמיד"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"צריך לשאול אותי בכל פעם"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"אין אישור"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"הרשאה לגישה מוגבלת"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"מיקום מדויק"</string>
@@ -228,7 +236,7 @@
     <string name="auto_revoked_app_summary_one" msgid="7093213590301252970">"ההרשאה <xliff:g id="PERMISSION_NAME">%s</xliff:g> הוסרה"</string>
     <string name="auto_revoked_app_summary_two" msgid="1910545340763709389">"הוסרו ההרשאות <xliff:g id="PERMISSION_NAME_0">%1$s</xliff:g> וכן <xliff:g id="PERMISSION_NAME_1">%2$s</xliff:g>"</string>
     <string name="auto_revoked_app_summary_many" msgid="5930976230827378798">"<xliff:g id="PERMISSION_NAME">%1$s</xliff:g> ו-<xliff:g id="NUMBER">%2$s</xliff:g> הרשאות נוספות הוסרו"</string>
-    <string name="unused_apps_page_title" msgid="6986983535677572559">"אפליקציות שמזמן לא השתמשת בהן"</string>
+    <string name="unused_apps_page_title" msgid="6986983535677572559">"אפליקציות שלא השתמשת בהן"</string>
     <string name="unused_apps_page_summary" msgid="1867593913217272155">"אם האפליקציה לא נמצאת בשימוש במשך מספר חודשים:\n\n• ההרשאות יבוטלו כדי להגן על הנתונים שלך\n• ההתראות יושבתו כדי לחסוך בצריכת הסוללה\n• הקבצים הזמניים יוסרו כדי לפנות מקום אחסון\n\nכדי לאשר שוב את מתן ההרשאות והפעלת ההתראות, צריך לפתוח את האפליקציה."</string>
     <string name="unused_apps_page_tv_summary" msgid="2624911608663778308">"אם האפליקציה לא בשימוש במשך חודש:\n\n• ההרשאות יבוטלו כדי להגן על הנתונים שלך\n• הקבצים הזמניים יוסרו כדי לפנות נפח אחסון\n\nכדי להעניק הרשאות שוב, צריך לפתוח את האפליקציה."</string>
     <string name="last_opened_category_title" msgid="8796557894614236128">"{count,plural, =1{נפתחו לאחרונה לפני יותר מחודש (#)}one{נפתחו לאחרונה לפני יותר מ-# חודשים}two{נפתחו לאחרונה לפני יותר מחודשיים (#)}other{נפתחו לאחרונה לפני יותר מ-# חודשים}}"</string>
@@ -461,8 +469,9 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"הערה: אם ביצעת הפעלה מחדש למכשיר ונעילת המסך מוגדרת, ניתן יהיה להפעיל את האפליקציה הזו רק לאחר ביטול נעילת המכשיר."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"האסיסטנט יוכל לקרוא מידע על אפליקציות שבהן נעשה שימוש במערכת שלך, כולל מידע המופיע במסך או שניתן לגשת אליו באפליקציות."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"‏לשנות את אפליקציית העוזר האישי ל-&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"העוזר האישי יוכל לגשת למידע כמו ההודעות שלך ולנתונים שאפליקציות בחרו לשתף עם איתו."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"‏העוזר האישי יוכל לגשת למידע כמו ההודעות שלך ולנתונים שהאפליקציות משתפות איתו.&lt;br&gt;&lt;br&gt;בנוסף, מכיוון שהפעלת בעבר את הגישה לנתוני המסך והאפליקציה ב-<xliff:g id="APP_NAME">%1$s</xliff:g>, תהיה לעוזר האישי הרשאה לגשת לתוכן באפליקציה שפתוחה במסך."</string>
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"העוזר האישי יוכל לגשת למידע כמו ההודעות שלך, ולנתונים שהאפליקציות שלך משתפות איתו."</string>
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"שיתוף נתונים של ניפוי באגים"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"לשתף נתונים מפורטים של ניפוי באגים?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"האפליקציה <xliff:g id="APP_NAME">%1$s</xliff:g> מבקשת להעלות נתונים של ניפוי באגים."</string>
@@ -740,13 +749,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"הסוכן הזה יוכל להיכנס אל <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> כדי לקבל מידע ולבצע פעולות בשבילך"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"אישור"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"אין אישור"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"‏לתת לאפליקציה &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; הרשאת גישה להקשר במסך ובאפליקציה?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"אפליקציית העזרה שמוגדרת כברירת מחדל תוכל לגשת לתוכן המסך ולנתונים שהאפליקציה המוצגת משתפת"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"אישור"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"אין אישור"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"שימוש בהקשר למה שמופיע במסך ובאפליקציה"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"אפליקציית העזרה שהגדרת כברירת מחדל תוכל לגשת למסך ולנתונים שהאפליקציה המוצגת משתפת"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"אפליקציית <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> תוכל לגשת למסך ולנתונים שהאפליקציה המוצגת משתפת"</string>
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"‏לתת לאפליקציה &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; הרשאה להשתמש בנתוני המסך והאפליקציה?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"העוזר האישי יוכל לגשת למידע ולתוכן מהאפליקציה שפתוחה במסך"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"אישור"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"אין אישור"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"שימוש בנתונים מהמסך ומהאפליקציה"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"מתן הרשאה לעוזר האישי לגשת למידע ולתוכן מהאפליקציה שפתוחה במסך"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"מתן הרשאה לאפליקציה <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> לגשת למידע ולתוכן מהאפליקציה שפתוחה במסך"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"אישור"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"אין אישור"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"‏לתת לאפליקציה &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; הרשאת גישה למיקום המדויק באמצעות כפתור המיקום?"</string>

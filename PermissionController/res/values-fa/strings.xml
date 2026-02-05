@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"داشبورد حریم خصوصی"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"اجازه‌های برنامه"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"‏فعالیت Agent"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"فعالیت <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"در ۲۴ ساعت گذشته"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"امروز"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"دیروز"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"آخرین دسترسی: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"مشاهده"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"مشاهده برنامه‌هایی که اخیراً از اجازه‌ها استفاده کرده‌اند"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"استفاده از <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"دیدن اجازه‌های دیگر"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"مجاز فقط هنگام استفاده از برنامه"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"همه همیشه اجازه داشتن"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"هربار پرسیده شود"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"اجازه ندادن"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"مجاز کردن دسترسی محدود"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"مکان دقیق"</string>
@@ -461,8 +469,10 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"توجه: اگر دستگاهتان را بازراه‌اندازی کنید و قفل صفحه تنظیم کرده باشید، تا قفل تلفن را باز نکنید، این برنامه نمی‌تواند شروع به کار کند."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"دستیار می‌تواند اطلاعات مربوط به برنامه‌های درحال استفاده در سیستم شما را بخواند، ازجمله اطلاعاتی که در صفحه‌نمایش شما قابل‌مشاهده است یا در برنامه‌ها قابل‌دسترسی است."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"‏برنامه دستیار دیجیتال به &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; تغییر کند؟"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"این دستیار می‌تواند به اطلاعاتی مثل پیام‌هایتان و داده‌هایی که برنامه‌ها انتخاب کرده‌اند با دستیارتان هم‌رسانی شود دسترسی داشته باشد."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"‏این دستیار می‌تواند به اطلاعاتی مثل پیام‌های شما و داده‌هایی که برنامه‌ها انتخاب کرده‌اند با دستیار شما هم‌رسانی کنند دسترسی داشته باشد.&lt;br&gt;&lt;br&gt;همچنین، چون قبلاً داده‌های برنامه و صفحه‌نمایش را برای <xliff:g id="APP_NAME">%1$s</xliff:g> روشن کرده‌اید، این دستیار اجازه خواهد داشت به محتوای برنامه باز در صفحه‌نمایش شما دسترسی داشته باشد."</string>
+    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"هم‌رسانی داده‌های اشکال‌زدایی"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"جزئیات داده‌های اشکال‌زدایی هم‌رسانی شود؟"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> می‌خواهد اطلاعات اشکال‌زدایی را بارگذاری کند."</string>
@@ -740,13 +750,20 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"این نماینده برای دریافت معلومات و انجام اعمال برای شما قادر به دسترسی به <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>خواهد بود"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"اجازه دادن"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"اجازه ندادن"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"به «<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>» اجازه می‌دهید به بافت برنامه و صفحه‌نمایش دسترسی داشته باشد؟"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"به برنامه دستیار پیش‌فرض اجازه داده می‌شود به محتوای صفحه‌نمایش و داده‌های هم‌رسانی‌شده توسط برنامه نمایان دسترسی داشته باشد"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"اجازه دادن"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"اجازه ندادن"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"استفاده کردن از بافت صفحه و برنامه"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"به برنامه دستیار پیش‌فرض اجازه داده می‌شود به صفحه‌نمایش و داده‌های هم‌رسانی‌شده توسط برنامه نمایان دسترسی داشته باشد"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"به <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> اجازه داده می‌شود به صفحه‌نمایش و داده‌های هم‌رسانی‌شده توسط برنامه نمایان دسترسی داشته باشد"</string>
+    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
+    <skip />
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"اجازه دادن"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"اجازه ندادن"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"به «<xliff:g id="APP_NAME">%1$s</xliff:g>» اجازه می‌دهید بااستفاده از دکمه مکان به مکان دقیق دسترسی پیدا کند؟"</string>

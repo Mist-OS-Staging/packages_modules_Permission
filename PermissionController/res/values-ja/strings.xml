@@ -73,7 +73,7 @@
     <string name="denied_permission_decision" msgid="5308961501779563781">"<xliff:g id="APP_NAME">%1$s</xliff:g> による<xliff:g id="PERMISSION_NAME">%2$s</xliff:g>へのアクセスを拒否しました"</string>
     <string name="days_ago" msgid="6650359081551335629">"{count,plural, =0{今日}=1{1 日前}other{# 日前}}"</string>
     <string name="app_disable_dlg_positive" msgid="7418444149981904940">"アプリを無効にする"</string>
-    <string name="app_disable_dlg_text" msgid="3126943217146120240">"このアプリを無効にすると、Android などの他のアプリが正しく動作しなくなるおそれがあります。このアプリはデバイスにプリインストールされているため、削除できません。無効にするには、このアプリをオフにし、デバイスにアプリが表示されないようにします。"</string>
+    <string name="app_disable_dlg_text" msgid="3126943217146120240">"このアプリを無効にすると、Android などの他のアプリが正しく動作しなくなるおそれがあります。このアプリはデバイスにプリインストールされているため、削除できません。無効にすることで、このアプリが OFF になり、デバイスで非表示になります。"</string>
     <string name="app_permission_manager" msgid="3903811137630909550">"権限マネージャー"</string>
     <string name="never_ask_again" msgid="4728762438198560329">"今後表示しない"</string>
     <string name="no_permissions" msgid="3881676756371148563">"権限がありません"</string>
@@ -87,7 +87,7 @@
     <string name="app_permissions_group_summary" msgid="8788419008958284002">"<xliff:g id="COUNT_0">%1$d</xliff:g>/<xliff:g id="COUNT_1">%2$d</xliff:g> 個のアプリを許可"</string>
     <string name="app_permissions_group_summary2" msgid="4329922444840521150">"<xliff:g id="COUNT_0">%1$d</xliff:g>/<xliff:g id="COUNT_1">%2$d</xliff:g> 件のアプリを許可"</string>
     <string name="menu_show_system" msgid="4254021607027872504">"システムアプリを表示"</string>
-    <string name="menu_hide_system" msgid="3855390843744028465">"システムアプリを非表示"</string>
+    <string name="menu_hide_system" msgid="3855390843744028465">"システムアプリを非⁠表⁠示"</string>
     <string name="menu_show_7_days_data" msgid="8979611198508523706">"過去 7 日間を表示"</string>
     <string name="menu_show_24_hours_data" msgid="8228054833323380780">"過去 24 時間を表示"</string>
     <string name="manage_permission" msgid="2895385393037061964">"権限の管理"</string>
@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"プライバシー ダッシュボード"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"アプリの権限"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"エージェントのアクティビティ"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> のアクティビティ"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"直近 24 時間以内"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"今日"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"昨日"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"最終アクセス <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"表示"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"権限を最近使用したアプリを表示します"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>の使用状況"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"他の権限を表示"</string>
@@ -194,11 +200,13 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"アプリの使用中のみ許可"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"常にすべて許可"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"毎回確認する"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"許可しない"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"制限付きでアクセスを許可する"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"正確な現在地"</string>
     <string name="approximate_image_description" msgid="938803699637069884">"おおよその現在地"</string>
-    <string name="app_permission_location_accuracy" msgid="7166912915040018669">"正確な位置情報を使用"</string>
+    <string name="app_permission_location_accuracy" msgid="7166912915040018669">"正確な位置情報を使⁠用"</string>
     <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"正確な位置情報が OFF の場合、アプリはおおよその位置情報にアクセスできます"</string>
     <string name="app_permission_title" msgid="2090897901051370711">"<xliff:g id="PERM">%1$s</xliff:g>の権限"</string>
     <string name="app_permission_header" msgid="2951363137032603806">"このアプリによる<xliff:g id="PERM">%1$s</xliff:g>へのアクセス"</string>
@@ -436,7 +444,7 @@
     <string name="default_app_search_keyword" msgid="8330125736889689743">"デフォルトのアプリ"</string>
     <string name="permgroup_list_microphone_and_camera" msgid="962768198001487969">"マイクとカメラ"</string>
     <string name="settings_button" msgid="4414988414732479636">"設定"</string>
-    <string name="default_apps" msgid="5119201969348748639">"デフォルトのアプリ"</string>
+    <string name="default_apps" msgid="5119201969348748639">"デフォルトのア⁠プ⁠リ"</string>
     <string name="no_default_apps" msgid="2593466527182950231">"デフォルトのアプリはありません"</string>
     <string name="default_apps_more" msgid="4078194675848858093">"その他のデフォルト"</string>
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"リンクを開く"</string>
@@ -461,8 +469,9 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"注: デバイスを再起動したときに画面ロックが設定されている場合は、デバイスのロックを解除するまでこのアプリを起動できません。"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"アシスタントはシステムで使用中のアプリに関する情報（画面に表示される情報、アプリ内でアクセス可能な情報など）を読み取れるようになります。"</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"デジタル アシスタント アプリを &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; に変更しますか？"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"このアシスタントは、メッセージなどの情報と、アプリがアシスタントと共有することを選択したデータにアクセスできるようになります。"</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"このアシスタントは、メッセージなどの情報と、アプリがアシスタントと共有することを選択したデータにアクセスできるようになります。&lt;br&gt;&lt;br&gt;また、以前に <xliff:g id="APP_NAME">%1$s</xliff:g> の画面とアプリのデータを ON にしたため、画面で開いているアプリのコンテンツにもアクセスできるようになります。"</string>
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"このアシスタントは、メッセージなどの情報と、アプリがアシスタントと共有することを選択したデータにアクセスできるようになります。"</string>
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"デバッグデータの共有"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"詳細なデバッグデータを共有しますか？"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> がデバッグ情報のアップロードをリクエストしています。"</string>
@@ -570,7 +579,7 @@
     <string name="blocked_camera_title" msgid="1128510551791284384">"デバイスのカメラがブロックされています"</string>
     <string name="blocked_microphone_title" msgid="1631517143648232585">"デバイスのマイクがブロックされています"</string>
     <string name="blocked_location_title" msgid="2005608279812892383">"デバイスの位置情報が OFF です"</string>
-    <string name="blocked_sensor_summary" msgid="4443707628305027375">"アプリとサービスによるアクセス"</string>
+    <string name="blocked_sensor_summary" msgid="4443707628305027375">"対象: アプリとサービス"</string>
     <string name="blocked_mic_summary" msgid="8960466941528458347">"緊急通報番号に発信したときは、マイクのデータが引き続き共有されることがあります。"</string>
     <string name="blocked_sensor_button_label" msgid="6742092634984289658">"変更"</string>
     <string name="automotive_blocked_camera_title" msgid="6142362431548829416">"カメラへのアクセスは OFF です"</string>
@@ -639,7 +648,7 @@
     <string name="privacy_controls_title" msgid="7605929972256835199">"プライバシー管理"</string>
     <string name="camera_toggle_title" msgid="1251201397431837666">"カメラへのアクセス"</string>
     <string name="mic_toggle_title" msgid="2649991093496110162">"マイクへのアクセス"</string>
-    <string name="perm_toggle_description" msgid="7801326363741451379">"アプリとサービスによるアクセス"</string>
+    <string name="perm_toggle_description" msgid="7801326363741451379">"対象: アプリとサービス"</string>
     <string name="mic_toggle_description" msgid="9163104307990677157">"アプリとサービスによるアクセス。この設定が OFF の場合でも、緊急通報番号に発信したときは、マイクのデータが共有されることがあります。"</string>
     <string name="location_settings_subtitle" msgid="2328360561197430695">"位置情報にアクセスできるアプリとサービスを確認"</string>
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"クリップボードへのアクセスを通知"</string>
@@ -740,13 +749,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"このエージェントは <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> にアクセスして、情報の取得と各種の操作が可能になります"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"許可"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"許可しない"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"画面とアプリのコンテキストへのアクセスを &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; に許可しますか？"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"画面内容や表示中のアプリが共有するデータへのアクセスをデフォルトのアシスタント アプリに許可します"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"許可"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"許可しない"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"画面とアプリのコンテキストを使用する"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"表示中のアプリが共有する画面とデータへのアクセスをデフォルトのアシスタント アプリに許可します"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"表示中のアプリが共有する画面とデータへのアクセスを<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>に許可します"</string>
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"画面とアプリのデータの使用を &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; に許可しますか？"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"このアシスタントは、画面で開いているアプリの情報やコンテンツにアクセスできるようになります"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"許可する"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"許可しない"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"画面とアプリのデータの使用"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"画面で開いているアプリの情報やコンテンツへのアクセスをアシスタントに許可します"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"画面で開いているアプリの情報やコンテンツへのアクセスを <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> に許可します"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"許可"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"許可しない"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"位置情報ボタンを使用して正確な位置情報にアクセスすることを &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; に許可しますか？"</string>

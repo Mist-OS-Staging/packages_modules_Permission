@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Купуялык тактасы"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Колдонмонун уруксаттары"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Агенттин аракеттери"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Аракеттер (<xliff:g id="APP_NAME">%1$s</xliff:g>)"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Акыркы 24 саатта"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Бүгүн"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Кечээ"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Акыркы жолу качан колдонулду: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Көрүү"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Уруксаттарды жакында кайсы колдонмолор колдонгонун көрө аласыз"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> уруксатынын колдонулушу"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Башка уруксаттарды көрүү"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Колдонмо колдонулуп жатканда гана уруксат берилет"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Ар дайым баарына уруксат берүү"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Ар дайым суралсын"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Жок"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Чектелген мүмкүнчүлүк берүү"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Так жайгашкан жери"</string>
@@ -461,8 +469,10 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Эскертүү: Эгер түзмөгүңүздү өчүрүп күйгүзгөндө экранды бөгөттөө жөндөлгөн болсо, түзмөктү бөгөттөн чыгармайынча бул колдонмо ачылбайт."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Жардамчы системаңызда иштеп жаткан программалар тууралуу маалыматты, ошондой эле экраныңызда көрүнүп турган же колдонмолордогу маалыматты окуй алат."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Санариптик жардамчы колдонмоңуз &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; колдонмосуна өзгөртүлсүнбү?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Жаңы жардамчы билдирүүлөрүңүзгө жана башка маалыматыңызга, ошондой эле башка колдонмолор тарабынан бөлүшүлгөн дайындарга кире алат."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Жаңы жардамчы билдирүүлөрүңүзгө жана башка маалыматыңызга, ошондой эле башка колдонмолор тарабынан бөлүшүлгөн дайындарга кире алат.&lt;br&gt;&lt;br&gt;<xliff:g id="APP_NAME">%1$s</xliff:g> колдонмосу үчүн экран жана колдонмодогу нерселер мурда күйгүзүлгөндүктөн, ал экраныңызда ачык турган колдонмодогу нерселерди көрө алат."</string>
+    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Мүчүлүштүктөр тууралуу кабарлоо"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Мүчүлүштүктөрдү аныктоо дайындары бөлүшүлсүнбү?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> мүчүлүштүктөрдү оңдоо маалыматын жүктөп бергиси келет."</string>
@@ -740,13 +750,20 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Маалыматты алып жана сиздин атыңыздан аракеттерди аткаруу үчүн бул агент <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> иштете алат"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Ооба"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Тыюу салуу"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"&lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; колдонмосуна экрандагы жана колдонмодогу нерселерди колдонууга уруксат бересизби?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Демейки көмөкчү колдонмого экрандагы контентти жана экранда иштеп жаткан колдонмо бөлүшкөн маалыматты колдонууга уруксат берүү"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Уруксат берүү"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Тыюу салуу"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"Экрандагы жана колдонмодогу нерселерди колдонуу"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Демейки көмөкчү колдонмого экрандагы контентти жана экранда иштеп жаткан колдонмо бөлүшкөн маалыматты колдонууга уруксат берүү"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> колдонмосуна экрандагы контентти жана экранда иштеп жаткан колдонмо бөлүшкөн маалыматты колдонууга уруксат берүү"</string>
+    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
+    <skip />
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Уруксат берүү"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Тыюу салуу"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Жайгашкан жер баскычы аркылуу &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; колдонмосуна так жайгашкан жерди аныктоого уруксат бересизби?"</string>

@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Gizlilik kontrol paneli"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Uygulama izinleri"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Temsilci etkinliği"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> etkinliği"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Son 24 saat içinde"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Bugün"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Dün"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Son erişim: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Görüntüle"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"İzinleri son kullanan uygulamaları görüntüleyin"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> kullanımı"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Diğer izinleri göster"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Yalnızca uygulama kullanılırken izin ver"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Tümüne her zaman izin ver"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Her zaman sor"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"İzin verme"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Sınırlı erişime izin ver"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Tam konum"</string>
@@ -461,8 +469,10 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Not: Cihazınızı yeniden başlatırsanız ve ekran kilidi kullanıyorsanız, cihazınızın kilidini açmadan bu uygulama başlayamaz."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Asistan, ekranınızda görünür olan veya uygulamaların içinden erişilebilen bilgiler dahil olmak üzere sisteminizde kullanılan uygulamalar hakkındaki bilgileri okuyabilecektir."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Dijital asistan uygulamanız &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; olarak değiştirilsin mi?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Bu asistan, mesajlarınız ve uygulamaların asistanınızla paylaşmayı seçtiği veriler gibi bilgilere erişebilir."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Bu asistan, mesajlarınız ve uygulamaların asistanınızla paylaşmayı seçtiği veriler gibi bilgilere erişebilir.&lt;br&gt;&lt;br&gt;Ayrıca, daha önce <xliff:g id="APP_NAME">%1$s</xliff:g> için ekran ve uygulama verilerini etkinleştirdiğinizden, ekranınızda açık olan uygulamanın içeriğine erişmesine izin verilir."</string>
+    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Hata Ayıklama Verilerini Paylaş"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Ayrıntılı hata ayıklama verileri paylaşılsın mı?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g>, hata ayıklama bilgilerini yüklemek istiyor."</string>
@@ -740,13 +750,20 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Bu temsilci, bilgi alıp adınıza işlem yapmak için <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> uygulamasına erişebilecek"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"İzin ver"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"İzin verme"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"&lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; uygulamasının ekran ve uygulama içeriklerine erişmesine izin verilsin mi?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Varsayılan asistan uygulamasının, ekran içeriklerine ve görünür uygulamanın paylaştığı verilere erişmesine izin verin"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"İzin ver"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"İzin verme"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"Ekran ve uygulama bağlamını kullan"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Varsayılan asistan uygulamasının, ekrana ve görünür uygulamanın paylaştığı verilere erişmesine izin verin"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> uygulamasının, ekrana ve görünür uygulamanın paylaştığı verilere erişmesine izin ver"</string>
+    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
+    <skip />
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"İzin ver"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"İzin verme"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; uygulamasının, konum düğmesini kullanarak tam konuma erişmesine izin verilsin mi?"</string>

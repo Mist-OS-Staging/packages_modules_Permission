@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Privacy dashboard"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"App permissions"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Agent activity"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> activity"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"In the past 24 hours"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Today"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Yesterday"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Last access <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"View"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"View which apps recently used permissions"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> usage"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"See other permissions"</string>
@@ -194,6 +200,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Allow only while using the app"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Always allow all"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Ask every time"</string>
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Ask every time or allow when you share"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Don\'t allow"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Allow limited access"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Precise location"</string>
@@ -461,8 +468,8 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Note: If you restart your device and have a screen lock set, this app can’t start until you unlock your device."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"The assistant will be able to read information about apps that are in use on your system, including information visible on your screen or accessible within the apps."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Change your digital assistant app to &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"This assistant will be able to access info like your messages and data that apps have chosen to share with your assistant."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"This assistant will be able to access info like your messages and data that apps have chosen to share with your assistant.&lt;br&gt;&lt;br&gt;Also, because you’ve turned on screen and app data for <xliff:g id="APP_NAME">%1$s</xliff:g> before, it will be allowed to access content from the app open on your screen."</string>
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"This assistant will be able to access info like your messages and data that apps have chosen to share with your assistant."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"This assistant will be able to access info, like your messages, and data that apps have chosen to share with your assistant.&lt;br&gt;&lt;br&gt;Since you’ve turned on screen and app data for <xliff:g id="APP_NAME">%1$s</xliff:g> before, it will also be allowed to access content from the app open on your screen."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Share Debugging Data"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Share detailed debugging data?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> would like to upload debugging information."</string>
@@ -740,13 +747,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"This agent will be able to access <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> to get info and take actions for you"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Allow"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Don\'t allow"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Allow &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; to access screen and app context?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Allow the default assistant app to access the screen contents and data shared by the visible app"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Allow"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Don\'t allow"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"Use screen and app context"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Allow the default assistant app to access the screen and data shared by the visible app"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"Allow <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> to access the screen and data shared by the visible app"</string>
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"Allow &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; to use screen and app data?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"This assistant will be able to access info and content from the app open on your screen"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Allow"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Don\'t allow"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Use screen and app data"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Allow assistant to access info and content from the app open on your screen"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Allow <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> to access info and content from the app open on your screen"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Allow"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Don\'t allow"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Allow &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; to access precise location using a location button?"</string>

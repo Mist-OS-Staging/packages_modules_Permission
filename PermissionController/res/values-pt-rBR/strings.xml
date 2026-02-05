@@ -128,6 +128,18 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Painel de privacidade"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Permissões do app"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Atividade do agente"</string>
+    <!-- no translation found for agent_activity_timeline_title (5946267721775302726) -->
+    <skip />
+    <!-- no translation found for agent_activity_timeline_category_title_24h (6534067957142090358) -->
+    <skip />
+    <!-- no translation found for agent_activity_timeline_category_title_today (557030782460256459) -->
+    <skip />
+    <!-- no translation found for agent_activity_timeline_category_title_yesterday (8330670564653939302) -->
+    <skip />
+    <!-- no translation found for agent_activity_timeline_activity_summary (8865161887228114724) -->
+    <skip />
+    <!-- no translation found for agent_activity_timeline_preference_widget (8771365108648764365) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Ver quais apps usaram as permissões recentemente"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Uso de <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Ver outras permissões"</string>
@@ -194,6 +206,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Permitir durante o uso do app"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Sempre permitir tudo"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Perguntar sempre"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Não permitir"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Permitir acesso limitado"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Local exato"</string>
@@ -461,8 +475,10 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Observação: se você reiniciar o dispositivo e tiver um bloqueio de tela definido, não será possível iniciar este app até que você desbloqueie o dispositivo."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"O assistente lerá informações sobre apps em uso no seu sistema, incluindo informações visíveis na tela ou as que podem ser acessadas nos apps."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Mudar seu app de assistente digital para &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Esse assistente poderá acessar informações como suas mensagens e dados que os apps compartilharem com ele."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Esse assistente poderá acessar informações como suas mensagens e dados que os apps compartilharem com ele.&lt;br&gt;&lt;br&gt;Além disso, você já ativou a tela e os dados de apps para <xliff:g id="APP_NAME">%1$s</xliff:g>, então ele poderá acessar conteúdo do app aberto na tela."</string>
+    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Compartilhar dados de depuração"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Compartilhar dados detalhados de depuração?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"Solicitação do <xliff:g id="APP_NAME">%1$s</xliff:g> para upload de informações de depuração."</string>
@@ -740,13 +756,20 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Esse agente poderá acessar o app <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> para receber informações e realizar ações para você"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Permitir"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Não permitir"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Permitir que &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; acesse a tela e o conteúdo do app?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Permitir que o app assistivo padrão acesse o conteúdo da tela e os dados compartilhados pelo app visível"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Permitir"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Não permitir"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"Usar contexto da tela e do app"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Permitir que o app assistivo padrão acesse a tela e os dados compartilhados pelo app visível"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"Permitir que o app <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> acesse a tela e os dados compartilhados pelo app visível"</string>
+    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
+    <skip />
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Permitir"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Não permitir"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Permitir que &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; acesse o local exato usando um botão de localização?"</string>

@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"પ્રાઇવસી ડૅશબોર્ડ"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"ઍપ પરવાનગીઓ"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"એજન્ટ ઍક્ટિવિટી"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g>ની ઍક્ટિવિટી"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"છેલ્લા 24 કલાકમાં"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"આજે"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"ગઈકાલે"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"છેલ્લે ઍક્સેસ કર્યાનો સમય: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"જુઓ"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"કઈ ઍપ દ્વારા તાજેતરમાં પરવાનગીઓનો ઉપયોગ થયો તે જુઓ"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>નો ઉપયોગ"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"અન્ય પરવાનગીઓ જુઓ"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"ઍપનો ઉપયોગ કરતી વખતે જ મંજૂરી આપો"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"હંમેશાં માટે બધાને મંજૂરી આપો"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"દર વખતે પૂછો"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"મંજૂરી આપશો નહીં"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"મર્યાદિત ઍક્સેસની મંજૂરી આપો"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"ચોક્કસ સ્થાન"</string>
@@ -461,8 +469,9 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"નોંધ: જો તમે તમારું ડિવાઇસ ફરીથી શરૂ કરો અને કોઈ સ્ક્રીન લૉક સેટ કરેલું હોય, તો જ્યાં સુધી તમે તમારું ડિવાઇસ અનલૉક નહીં કરો ત્યાં સુધી આ ઍપ શરૂ થઈ શકશે નહીં."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"આસિસ્ટંટ તમારી સ્ક્રીન પર જોઈ શકાતી અથવા ઍપમાંથી ઍક્સેસ કરી શકાય તેવી માહિતી સહિતની તમારી સિસ્ટમમાં ઉપયોગમાં લેવાતી ઍપ વિશેની માહિતી વાંચી શકશે."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"તમારી ડિજિટલ આસિસ્ટન્ટ ઍપને &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; પર બદલીએ?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"આ આસિસ્ટન્ટ તમારા મેસેજ અને ઍપ દ્વારા તમારા આસિસ્ટન્ટ સાથે શેર કરવા માટે પસંદ કરવામાં આવેલા ડેટા જેવી માહિતીને ઍક્સેસ કરી શકશે."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"આ આસિસ્ટન્ટ તમારા મેસેજ અને ઍપ દ્વારા તમારા આસિસ્ટન્ટ સાથે શેર કરવા માટે પસંદ કરવામાં આવેલા ડેટા જેવી માહિતીને ઍક્સેસ કરી શકશે.&lt;br&gt;&lt;br&gt;ઉપરાંત, તમે અગાઉ <xliff:g id="APP_NAME">%1$s</xliff:g> માટે સ્ક્રીન અને ઍપનો ડેટા ચાલુ કર્યો હોવાથી, તેને તમારી સ્ક્રીન પર ખુલ્લી ઍપમાંથી કન્ટેન્ટ ઍક્સેસ કરવાની મંજૂરી આપવામાં આવશે."</string>
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"આ આસિસ્ટન્ટ તમારા મેસેજ અને ઍપ દ્વારા તમારા આસિસ્ટન્ટ સાથે શેર કરવા માટે પસંદ કરવામાં આવેલા ડેટા જેવી માહિતીને ઍક્સેસ કરી શકશે."</string>
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"ડિબગીંગ ડેટા શેર કરો"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"વિગતવાર ડિબગીંગ ડેટા શેર કરીએ?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g>, ડિબગીંગ માહિતી અપલોડ કરવા માગે છે"</string>
@@ -740,13 +749,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"માહિતી મેળવવા અને તમારા માટે પગલાં લેવા માટે આ એજન્ટ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ઍક્સેસ કરી શકશે"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"મંજૂરી આપો"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"મંજૂરી આપશો નહીં"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"&lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt;ને સ્ક્રીન અને ઍપના સંદર્ભને ઍક્સેસ કરવાની મંજૂરી આપીએ?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"ડિફૉલ્ટ આસિસ્ટંટ ઍપને સ્ક્રીનનું કન્ટેન્ટ અને દેખાઈ રહેલી ઍપ દ્વારા શેર કરાયેલો ડેટા ઍક્સેસ કરવાની મંજૂરી આપો"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"મંજૂરી આપો"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"મંજૂરી નકારો"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"સ્ક્રીન અને ઍપના સંદર્ભનો ઉપયોગ કરો"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"ડિફૉલ્ટ આસિસ્ટન્ટ ઍપને સ્ક્રીન અને દેખાઈ રહેલી ઍપ દ્વારા શેર કરાયેલો ડેટા ઍક્સેસ કરવાની મંજૂરી આપો"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>ને સ્ક્રીન અને દેખાઈ રહેલી ઍપ દ્વારા શેર કરાયેલો ડેટા ઍક્સેસ કરવાની મંજૂરી આપો"</string>
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"&lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt;ને સ્ક્રીન અને ઍપ ડેટાનો ઉપયોગ કરવાની મંજૂરી આપીએ?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"આ આસિસ્ટન્ટ તમારી સ્ક્રીન પર ખુલ્લી ઍપમાંથી માહિતી અને કન્ટેન્ટ ઍક્સેસ કરી શકશે"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"મંજૂરી આપો"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"મંજૂરી આપશો નહીં"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"સ્ક્રીન અને ઍપના ડેટાનો ઉપયોગ કરો"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"આસિસ્ટન્ટને તમારી સ્ક્રીન પર ખુલ્લી ઍપમાંથી માહિતી અને કન્ટેન્ટ ઍક્સેસ કરવાની મંજૂરી આપો"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>ને તમારી સ્ક્રીન પર ખુલ્લી ઍપમાંથી માહિતી અને કન્ટેન્ટ ઍક્સેસ કરવાની મંજૂરી આપો"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"મંજૂરી આપો"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"મંજૂરી આપશો નહીં"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"લોકેશન બટનનો ઉપયોગ કરીને &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ને સચોટ લોકેશન ઍક્સેસ કરવાની મંજૂરી આપીએ?"</string>

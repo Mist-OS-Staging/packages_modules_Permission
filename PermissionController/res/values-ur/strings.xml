@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"پرائیویسی ڈیش بورڈ"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"ایپ کی اجازتیں"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"ایجنٹ کی سرگرمی"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"‫<xliff:g id="APP_NAME">%1$s</xliff:g> سرگرمی"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"گزشتہ 24 گھنٹوں میں"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"آج"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"گزشتہ کل"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"آخری رسائی <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"دیکھیں"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"دیکھیں کہ حال ہی میں کون سی ایپ نے اجازتوں کا استعمال کیا ہے"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> کا استعمال"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"دیگر اجازتیں دیکھیں"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"صرف ایپ استعمال کرتے وقت اجازت دیں"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"ہمیشہ سبھی کو اجازت دیں"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"ہر بار پوچھیں"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"اجازت نہ دیں"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"محدود رسائی کی اجازت دیں"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"قطعی مقام"</string>
@@ -461,8 +469,9 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"نوٹ: اگر آپ اپنے آلہ کو دوبارہ شروع کرتے ہیں اور آپ کے پاس اسکرین لاک کا سیٹ ہے تو یہ ایپ تب تک شروع نہیں ہو سکتی جب تک آپ اپنا آلہ غیر مقفل نہ کر لیں۔"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"اسسٹنٹ آپ کے سسٹم پر زیر استعمال ایپس کے بارے میں معلومات، بشمول آپ کی اسکرین پر نظر آنے والی یا ایپس کے اندر قابل رسائی معلومات پڑھ سکے گی۔"</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"‏آپ کی ڈیجیٹل اسسٹنٹ ایپ کو ‎&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‎ میں تبدیل کریں؟"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"یہ اسسٹنٹ آپ کے پیغامات اور ایپس کے آپ کی اسسٹنٹ کے ساتھ اشتراک کرنے کے لیے منتخب کردہ ڈیٹا جیسی معلومات تک رسائی حاصل کر سکے گی۔"</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"‏یہ اسسٹنٹ آپ کے پیغامات اور ایپس کے آپ کی اسسٹنٹ کے ساتھ اشتراک کرنے کے لیے منتخب کردہ ڈیٹا جیسی معلومات تک رسائی حاصل کر سکے گی۔‎&lt;br&gt;&lt;br&gt;‎اس کے علاوہ، چونکہ آپ نے پہلے <xliff:g id="APP_NAME">%1$s</xliff:g> کے لیے اسکرین اور ایپ کے ڈیٹا کو آن کیا ہے، اس لیے اسے آپ کی اسکرین پر موجود ایپ اوپن کے مواد تک رسائی کی اجازت ہوگی۔"</string>
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"یہ اسسٹنٹ آپ کے پیغامات اور ایپس کے آپ کی اسسٹنٹ کے ساتھ اشتراک کرنے کے لیے منتخب کردہ ڈیٹا جیسی معلومات تک رسائی حاصل کر سکے گی۔"</string>
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"ڈیبگنگ ڈیٹا کا اشتراک کریں"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"ڈیبگنگ کے تفصیلی ڈیٹا کا اشتراک کریں؟"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ڈیبگنگ کی معلومات اپ لوڈ کرنا چاہتی ہے۔"</string>
@@ -740,13 +749,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"یہ ایجنٹ معلومات حاصل کرنے اور آپ کے لیے کارروائیاں کرنے کے لیے <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> تک رسائی حاصل کر سکے گا"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"اجازت دیں"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"اجازت نہ دیں"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"‏‎&lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt;‫‎ کو اسکرین اور ایپ کے سیاق و سباق تک رسائی حاصل کرنے کی اجازت دیں؟"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"ڈیفالٹ معاون ایپ کو اسکرین کے مواد اور مرئی ایپ کے ذریعے اشتراک کردہ ڈیٹا تک رسائی حاصل کرنے کی اجازت دیں"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"اجازت دیں"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"اجازت نہ دیں"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"اسکرین اور ایپ کا سیاق و سباق استعمال کریں"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"ڈیفالٹ معاون ایپ کو اسکرین اور مرئی ایپ کے ذریعے اشتراک کردہ ڈیٹا تک رسائی حاصل کرنے کی اجازت دیں"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"‫<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> کو اسکرین اور مرئی ایپ کے ذریعے اشتراک کردہ ڈیٹا تک رسائی حاصل کرنے کی اجازت دیں"</string>
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"‏‫‎&lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; کو اسکرین اور ایپ کا ڈیٹا استعمال کرنے کی اجازت دیں؟"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"یہ اسسٹنٹ آپ کی اسکرین پر ایپ اوپن سے معلومات اور مواد تک رسائی حاصل کر سکے گی"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"اجازت دیں"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"اجازت نہ دیں"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"اسکرین اور ایپ کا ڈیٹا استعمال کریں"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"اسسٹنٹ کو اپنی اسکرین پر ایپ اوپن سے معلومات اور مواد تک رسائی کی اجازت دیں"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"‫<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> کو اپنی اسکرین پر ایپ اوپن سے معلومات اور مواد تک رسائی کی اجازت دیں"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"اجازت دیں"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"اجازت نہ دیں"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"‏&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; کو مقام کے بٹن کا استعمال کرتے ہوئے قطعی مقام تک رسائی کی اجازت دیں؟"</string>
