@@ -730,7 +730,7 @@ object KotlinUtils {
         // Create a new context with the given deviceId so that permission updates will be bound
         // to the device
         val context = ContextCompat.createDeviceContext(app.applicationContext, deviceId)
-        val newPerms = mutableMapOf<String, LightPermission>()
+        val newPerms = group.permissions.toMutableMap()
         for ((permName, perm) in group.permissions) {
             if (permName !in filterPermissions) {
                 continue
