@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Kontrolna tabla za privatnost"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Dozvole za aplikacije"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Aktivnosti agenta"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Aktivnost aplikacije <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"U poslednja 24 sata"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Danas"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Juče"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Poslednji pristup: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Prikaži"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Pregledajte koje su aplikacije nedavno koristile dozvole"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Korišćenje dozvole <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Pogledajte druge dozvole"</string>
@@ -194,6 +200,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Dozv. samo dok se apl. koristi"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Uvek dozvoli sve"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Pitaj svaki put"</string>
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Pitaj svaki put ili dozvoli kada deliš"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Ne dozvoli"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Dozvoli ograničen pristup"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Precizna lokacija"</string>
@@ -461,8 +468,8 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Napomena: Ako restartujete uređaj i podesili ste otključavanje ekrana, ova aplikacija ne može da se pokrene dok ne otključate uređaj."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Pomoćnik će moći da čita informacije o aplikacijama koje se koriste u sistemu, uključujući informacije vidljive na ekranu ili kojima može da se pristupa u okviru aplikacija."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Želite da promenite aplikaciju digitalnog pomoćnika u &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Ovaj pomoćnik će moći da pristupa informacijama poput poruka i podataka koje su aplikacije odabrale da dele sa pomoćnikom."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Ovaj pomoćnik će moći da pristupa informacijama kao što su poruke i podaci koje su aplikacije odabrale da dele sa pomoćnikom.&lt;br&gt;&lt;br&gt;Pored toga, pošto ste ranije uključili podatke o ekranu i aplikacijama za aplikaciju <xliff:g id="APP_NAME">%1$s</xliff:g>, on će moći da pristupa sadržaju iz aplikacije koja je otvorena na ekranu."</string>
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Ovaj pomoćnik će moći da pristupa informacijama poput poruka i podataka koje su aplikacije odabrale da dele sa pomoćnikom."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"Ovaj pomoćnik će moći da pristupa informacijama kao što su poruke i podaci koje su aplikacije odabrale da dele sa pomoćnikom.&lt;br&gt;&lt;br&gt;Pošto ste ranije uključili podatke o ekranu i aplikacijama za aplikaciju <xliff:g id="APP_NAME">%1$s</xliff:g>, on će moći i da pristupa sadržaju iz aplikacije koja je otvorena na ekranu."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Deljenje podataka o otklanjanju grešaka"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Delite detaljne podatke za otklanjanje grešaka?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> želi da otpremi informacije za otklanjanje grešaka."</string>
@@ -740,13 +747,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Ovaj agent će moći da pristupa aplikaciji <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> da bi dobijao informacije i reagovao umesto vas"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Dozvoli"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Ne dozvoli"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Dozvoljavate da aplikacija &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; pristupa kontekstu ekrana i aplikacije?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Dozvoljava podrazumevanom pomoćniku da pristupa sadržaju ekrana i podacima koje deli aplikacija"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Dozvoli"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Ne dozvoli"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"Koristite kontekst ekrana i aplikacije"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Dozvoljava podrazumevanom pomoćniku da pristupa ekranu i podacima koje deli aplikacija"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"Dozvolite da <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> pristupa ekranu i podacima koje deli aplikacija"</string>
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"Da li dozvoljavate da &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; koristi podatke ekrana i aplikacija?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"Ovaj pomoćnik će moći da pristupa informacijama i sadržaju iz aplikacije koja je otvorena na ekranu"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Dozvoli"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Ne dozvoli"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Koristi podatke ekrana i aplikacija"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Dozvolite pomoćniku da pristupa informacijama i sadržaju iz aplikacije koja je otvorena na ekranu"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Dozvolite da <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> pristupa informacijama i sadržaju iz aplikacije koja je otvorena na ekranu"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Dozvoli"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Ne dozvoli"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Želite li da omogućite da &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; pristupa preciznoj lokaciji pomoću dugmeta za lokaciju?"</string>

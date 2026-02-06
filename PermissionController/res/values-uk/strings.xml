@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Панель керування дозволами"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Дозволи для додатків"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Дії агента"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Дії (<xliff:g id="APP_NAME">%1$s</xliff:g>)"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Останні 24 години"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Сьогодні"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Учора"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Останній доступ: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Переглянути"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Показувати додатки, які нещодавно використовували дозволи"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>: використання"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Переглянути інші дозволи"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Дозволяти, лише коли додаток використовується"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Завжди дозволяти всі"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Запитувати щоразу"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Не дозволяти"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Дозволити обмежений доступ"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Точне місцезнаходження"</string>
@@ -461,8 +469,9 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Примітка. Якщо після перезавантаження ввімкнеться екран блокування, цей додаток не запуститься, доки ви не розблокуєте пристрій."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Асистент матиме доступ до інформації про додатки у вашій системі, зокрема до даних на екрані та в додатках."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Змінити додаток цифрового помічника на &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Помічник матиме доступ до ваших даних, як-от повідомлень та інформації, яку додатки погодилися йому надати."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Помічник матиме доступ до ваших даних, як-от повідомлень та інформації, яку додатки погодилися йому надати.&lt;br&gt;&lt;br&gt;Крім того, оскільки ви вже ввімкнули доступ до даних екрана й додатків для <xliff:g id="APP_NAME">%1$s</xliff:g>, помічник отримуватиме контент із додатка, відкритого на екрані."</string>
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Помічник матиме доступ до ваших даних, як-от повідомлень і інформації, яку додатки дозволили йому надавати."</string>
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Поділитися даними про налагодження"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Поділитися детальними даними про налагодження?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"Додаток <xliff:g id="APP_NAME">%1$s</xliff:g> хоче завантажити інформацію про налагодження."</string>
@@ -740,13 +749,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Цей агент зможе отримувати інформацію і виконувати потрібні вам дії в додатку <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Дозволити"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Не дозволяти"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Дозволити додатку &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; доступ до екрана й контенту додатка?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Надати помічнику за умовчанням доступ до вмісту екрана й даних, якими ділиться видимий додаток"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Дозволити"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Не дозволяти"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"Використовувати контекст екрана й додатка"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Дозволити помічнику за умовчанням доступ до екрана й даних, якими ділиться видимий додаток"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"Дозволити додатку <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> доступ до екрана й даних, якими ділиться видимий додаток"</string>
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"Дозволити додатку &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; використовувати дані екрана й додатків?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"Цей помічник матиме доступ до інформації і контенту з додатка, відкритого на екрані"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Дозволити"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Не дозволяти"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Використовувати дані екрана й додатків"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Дозволити помічнику отримувати інформацію і контент із додатка, відкритого на екрані"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Дозволити додатку <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> отримувати інформацію і контент із додатка, відкритого на екрані"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Дозволити"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Не дозволяти"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Дозволити додатку &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; доступ до точного місцезнаходження за допомогою кнопки місцезнаходження?"</string>

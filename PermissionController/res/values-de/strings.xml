@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Privatsphäre-Dashboard"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"App-Berechtigungen"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Aktivitäten von Gemini Agent"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g>-Aktivität"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"In den letzten 24 Stunden"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Heute"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Gestern"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Letzter Zugriff: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Ansehen"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Ansehen, welche Apps zuletzt Berechtigungen genutzt haben"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>-Nutzung"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Andere Berechtigungen ansehen"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Zugriff nur während der Nutzung der App zulassen"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Immer vollen Zugriff erlauben"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Jedes Mal fragen"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Nicht zulassen"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Eingeschränkten Zugriff zulassen"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Auf genauen Standort zugreifen"</string>
@@ -461,8 +469,10 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Hinweis: Wenn du dein Gerät neu startest und eine Displaysperre aktiviert ist, wird diese App erst gestartet, wenn du dein Gerät entsperrst."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Der Assistent kann Informationen zu Apps abrufen, die du auf deinem System verwendest, einschließlich Informationen, die auf deinem Bildschirm angezeigt werden oder die in Apps zugänglich sind."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"App für digitalen Assistenten zu &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ändern?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Dieser Assistent erhält Zugriff auf Informationen wie deine Nachrichten und auf Daten, die von Apps mit deinem Assistenten geteilt werden."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Dieser Assistent erhält Zugriff auf Informationen wie deine Nachrichten und auf Daten, die von Apps mit deinem Assistenten geteilt werden.&lt;br&gt;&lt;br&gt;Da du Bildschirm- und App-Daten für <xliff:g id="APP_NAME">%1$s</xliff:g> bereits aktiviert hast, kann der Assistent auch auf Inhalte der App zugreifen, die auf deinem Bildschirm geöffnet ist."</string>
+    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Daten zur Fehlerbehebung teilen"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Detaillierte Daten zur Fehlerbehebung teilen?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> möchte Informationen zur Fehlerbehebung hochladen."</string>
@@ -740,13 +750,20 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Dieser KI-Agent kann auf <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> zugreifen, um für dich Informationen abzurufen und Aktionen auszuführen"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Zulassen"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Nicht zulassen"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Darf &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; auf den Bildschirm- und App-Kontext zugreifen?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Der Standard-Assistent-App erlauben, auf den Bildschirminhalt und die von der angezeigten App freigegebenen Daten zuzugreifen"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Erlauben"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Nicht erlauben"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"Bildschirm- und App-Kontext verwenden"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Der Standard-Assistent-App erlauben, auf den Bildschirm und die von der angezeigten App freigegebenen Daten zuzugreifen"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> erlauben, auf den Bildschirm und die von der angezeigten App freigegebenen Daten zuzugreifen"</string>
+    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
+    <skip />
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Erlauben"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Nicht erlauben"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; erlauben, über einen Button für den Standort auf den genauen Standort zuzugreifen?"</string>

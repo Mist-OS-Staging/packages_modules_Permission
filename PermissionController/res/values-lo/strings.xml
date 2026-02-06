@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"ແຜງໜ້າປັດຄວາມເປັນສ່ວນຕົວ"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"ການອະນຸຍາດແອັບ"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"ການເຄື່ອນໄຫວຂອງຕົວແທນ"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"ການເຄື່ອນໄຫວ <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"ໃນໄລຍະ 24 ຊົ່ວໂມງທີ່ຜ່ານມາ"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"ມື້ນີ້"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"ມື້ວານ"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"ເຂົ້າເຖິງຫຼ້າສຸດ <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"ເບິ່ງ"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ເບິ່ງວ່າແອັບໃດໃຊ້ການອະນຸຍາດຫຼ້າສຸດ"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"ການນໍາໃຊ້ <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"ເບິ່ງການອະນຸຍາດອື່ນໆ"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"ອະນຸຍາດໃນເວລາທີ່ກຳລັງໃຊ້ແອັບເທົ່ານັ້ນ"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"ອະນຸຍາດທັງໝົດຕະຫຼອດ"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"ຖາມທຸກເທື່ອ"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"ບໍ່ອະນຸຍາດ"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"ອະນຸຍາດສິດເຂົ້າເຖິງແບບຈຳກັດ"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"ສະຖານທີ່ແບບລະອຽດ"</string>
@@ -461,8 +469,10 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"ໝາຍເຫດ: ຫາກທ່ານຣີສະຕາດອຸປະກອນຂອງທ່ານ ແລະ ຕັ້ງການລັອກໜ້າຈໍໄວ້, ແອັບນີ້ຈະບໍ່ສາມາດໃຊ້ໄດ້ຈົນກວ່າທ່ານຈະປົດລັອກອຸປະກອນຂອງທ່ານ."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"ຜູ້ຊ່ວຍຈະສາມາດອ່ານຂໍ້ມູນກ່ຽວກັບແອັບທີ່ໃຊ້ໃນລະບົບຂອງທ່ານ ຮວມທັງຂໍ້ມູນທີ່ເບິ່ງເຫັນໄດ້ໃນໜ້າຈໍຂອງທ່ານ ຫຼື ເຂົ້າເຖິງໄດ້ພາຍໃນແອັບນັ້ນ."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"ປ່ຽນແອັບຜູ້ຊ່ວຍດິຈິຕອນຂອງທ່ານເປັນ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ບໍ?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"ຜູ້ຊ່ວຍນີ້ຈະສາມາດເຂົ້າເຖິງຂໍ້ມູນຕ່າງໆ ເຊັ່ນ: ຂໍ້ຄວາມຂອງທ່ານ ແລະ ຂໍ້ມູນທີ່ແອັບເລືອກທີ່ຈະແບ່ງປັນກັບຜູ້ຊ່ວຍຂອງທ່ານໄດ້."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"ຜູ້ຊ່ວຍນີ້ຈະສາມາດເຂົ້າເຖິງຂໍ້ມູນຕ່າງໆ ເຊັ່ນ: ຂໍ້ຄວາມຂອງທ່ານ ແລະ ຂໍ້ມູນທີ່ແອັບເລືອກທີ່ຈະແບ່ງປັນກັບຜູ້ຊ່ວຍຂອງທ່ານໄດ້.&lt;br&gt;&lt;br&gt;ນອກຈາກນີ້, ເນື່ອງຈາກທ່ານເຄີຍເປີດໃຊ້ຂໍ້ມູນໜ້າຈໍ ແລະ ຂໍ້ມູນແອັບສຳລັບ <xliff:g id="APP_NAME">%1$s</xliff:g> ມາກ່ອນ, ຜູ້ຊ່ວຍນີ້ຈຶ່ງໄດ້ຮັບອະນຸຍາດໃຫ້ເຂົ້າເຖິງເນື້ອຫາຈາກແອັບທີ່ເປີດຢູ່ໜ້າຈໍຂອງທ່ານໄດ້."</string>
+    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"ແບ່ງປັນຂໍ້ມູນການດີບັກ"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"ແບ່ງປັນຂໍ້ມູນການດີບັກແບບລະອຽດບໍ?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ຕ້ອງການອັບໂຫລດຂໍ້ມູນການດີບັກ."</string>
@@ -740,13 +750,20 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"ຕົວແທນນີ້ຈະສາມາດເຂົ້າເຖິງ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ເພື່ອເບິ່ງຂໍ້ມູນ ແລະ ດຳເນີນການໃຫ້ທ່ານໄດ້"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"ອະນຸຍາດ"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"ບໍ່ອະນຸຍາດ"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"ອະນຸຍາດໃຫ້ &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; ເຂົ້າເຖິງບໍລິບົດໜ້າຈໍ ແລະ ແອັບບໍ?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"ອະນຸຍາດໃຫ້ແອັບຜູ້ຊ່ວຍເລີ່ມຕົ້ນເຂົ້າເຖິງເນື້ອຫາຢູ່ໜ້າຈໍ ແລະ ຂໍ້ມູນທີ່ແບ່ງປັນໂດຍແອັບທີ່ເບິ່ງເຫັນໄດ້"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"ອະນຸຍາດ"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"ບໍ່ອະນຸຍາດ"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"ໃຊ້ບໍລິບົດຢູ່ໜ້າຈໍ ແລະ ແອັບ"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"ອະນຸຍາດໃຫ້ແອັບຜູ້ຊ່ວຍເລີ່ມຕົ້ນເຂົ້າເຖິງໜ້າຈໍ ແລະ ຂໍ້ມູນທີ່ແບ່ງປັນໂດຍແອັບທີ່ເບິ່ງເຫັນໄດ້"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"ອະນຸຍາດໃຫ້ <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> ເຂົ້າເຖິງໜ້າຈໍ ແລະ ຂໍ້ມູນທີ່ແບ່ງປັນໂດຍແອັບທີ່ເບິ່ງເຫັນໄດ້"</string>
+    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
+    <skip />
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"ອະນຸຍາດ"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"ບໍ່ອະນຸຍາດ"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"ອະນຸຍາດໃຫ້ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ເຂົ້າເຖິງສະຖານທີ່ແບບລະອຽດໂດຍໃຊ້ປຸ່ມສະຖານທີ່ບໍ?"</string>

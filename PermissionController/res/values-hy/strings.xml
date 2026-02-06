@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Հասանելիության կառավարման վահանակ"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Հավելվածների թույլտվություններ"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Agent-ի պատմությունը"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Գործողություններ (<xliff:g id="APP_NAME">%1$s</xliff:g>)"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Վերջին 24 ժամվա ընթացքում"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Այսօր"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Երեկ"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Վերջին մուտքը՝ <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Դիտել"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Տեսեք՝ որ հավելվածներն են վերջերս թույլտվություն օգտագործել"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"«<xliff:g id="PERMGROUP">%1$s</xliff:g>» թույլտվության օգտագործում"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Տեսնել այլ թույլտվություններ"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Թույլատրել միայն հավելվածի օգտագործման ժամանակ"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Միշտ թույլատրել բոլորը"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Ամեն անգամ հարցնել"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Չթույլատրել"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Տրամադրել սահմանափակ հասանելիություն"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Ճշգրիտ տեղադրություն"</string>
@@ -461,8 +469,10 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Ուշադրություն. եթե դուք վերագործարկեք ձեր սարքը, որում սահմանված է էկրանի կողպում, այս հավելվածը չի աշխատի, մինչև չապակողպեք սարքը։"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Օգնականը կկարողանա կարդալ համակարգում օգտագործվող հավելվածների մասին տվյալները, այդ թվում՝ էկրանին ցուցադրվող կամ հավելվածներից ստացվող տեղեկությունները:"</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Փոխարինե՞լ ձեր թվային օգնականի հավելվածը &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; հավելվածով"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Այս օգնականին հասանելի կլինեն այնպիսի տեղեկություններ, ինչպիսիք են ձեր հաղորդագրությունները և այն տվյալները, որոնցով հավելվածները որոշել են կիսվել ձեր օգնականի հետ։"</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Այս օգնականին հասանելի կլինեն այնպիսի տեղեկություններ, ինչպիսիք են ձեր հաղորդագրությունները և այն տվյալները, որոնցով հավելվածները որոշել են կիսվել ձեր օգնականի հետ։&lt;br&gt;&lt;br&gt;Բացի այդ՝ քանի որ դուք նախկինում միացրել եք էկրանի և հավելվածների տվյալների օգտագործումը <xliff:g id="APP_NAME">%1$s</xliff:g>-ի համար, այն նաև կտեսնի ձեր էկրանին բացված հավելվածի բովանդակությունը։"</string>
+    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Վրիպազերծման տվյալների ուղարկում"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Ուղարկե՞լ վրիպազերծման մանրամասն տվյալները"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g>-ն ուզում է վերբեռնել վրիպազերծման տվյալները:"</string>
@@ -740,13 +750,20 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Այս գործակալին հասանելի կդառնա <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> հավելվածը՝ տեղեկություններ ստանալու և ձեր փոխարեն գործողություններ ձեռնարկելու համար"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Թույլատրել"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Չթույլատրել"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Թույլատրե՞լ &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; հավելվածին օգտագործել էկրանի և հավելվածների համատեքստը"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Կանխադրված օգնական հավելվածին թույլատրել օգտագործել էկրանի բովանդակությունը և տվյալները, որոնք փոխանցվում են տեսանելի հավելվածի կողմից"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Թույլատրել"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Չթույլատրել"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"Օգտագործել էկրանի և հավելվածի համատեքստը"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Թույլատրել կանխադրված օգնական հավելվածին օգտագործել էկրանը և տվյալները, որոնք փոխանցվում են տեսանելի հավելվածի կողմից"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"Թույլատրել <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> հավելվածին օգտագործել էկրանը և տվյալները, որոնք փոխանցվում են տեսանելի հավելվածի կողմից"</string>
+    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
+    <skip />
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Թույլատրել"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Չթույլատրել"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Ճշգրիտ տեղադրությունը հասանելի դարձնե՞լ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; հավելվածին տեղադրության կոճակի միջոցով"</string>

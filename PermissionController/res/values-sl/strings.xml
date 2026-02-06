@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Nadzorna plošča za zasebnost"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Dovoljenja za aplikacije"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Dejavnost zastopnika"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Dejavnost agenta <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"V zadnjih 24 urah"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Danes"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Včeraj"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Zadnji dostop: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Ogled"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Prikaz aplikacij, ki so pred kratkim uporabile dovoljenja."</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Uporaba dovoljenja »<xliff:g id="PERMGROUP">%1$s</xliff:g>«"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Ogled drugih dovoljenj"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Dovoli samo med uporabo aplikacije"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Vedno dovoli vse"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Vedno vprašaj"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Ne dovoli"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Dovoli omejen dostop"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Natančna lokacija"</string>
@@ -461,8 +469,9 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Opomba: Po vnovičnem zagonu naprave z nastavljenim zaklepanjem zaslona se ta aplikacija ne more zagnati, dokler ne odklenete naprave."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Pomočnik bo lahko bral podatke o aplikacijah, ki se uporabljajo v vašem sistemu, vključno s podatki, ki so vidni na zaslonu ali do katerih je mogoče dostopati v aplikacijah."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Želite za digitalnega pomočnika uporabljati aplikacijo &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Ta pomočnik bo lahko dostopal do podatkov, kot so vaša sporočila, in podatkov, ki jih aplikacije delijo s pomočnikom."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Ta pomočnik bo lahko dostopal do podatkov, kot so vaša sporočila, in podatkov, ki jih aplikacije delijo s pomočnikom.&lt;br/&gt;&lt;br/&gt;Ker ste v preteklosti že vklopili podatke zaslona in aplikacij za aplikacijo <xliff:g id="APP_NAME">%1$s</xliff:g>, bo pomočnik lahko dostopal do vsebine aplikacije, ki je odprta na zaslonu."</string>
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Ta pomočnik bo lahko dostopal do podatkov, kot so vaša sporočila, in podatkov, ki jih aplikacije delijo s pomočnikom."</string>
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Pošiljanje podatkov za odpravljanje napak"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Želite poslati podrobne podatke za odprav. napak?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"Aplikacija <xliff:g id="APP_NAME">%1$s</xliff:g> želi naložiti podatke za odpravljanje napak."</string>
@@ -740,13 +749,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Ta agent bo lahko dostopal do aplikacije <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>, da bo pridobival informacije in izvajal dejanja za vas"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Dovoli"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Ne dovoli"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Želite aplikaciji &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; dovoliti dostop do konteksta zaslona in aplikacij?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Privzeti aplikaciji pomočnika dovolite dostop do vsebine zaslona in podatkov, ki jih deli vidna aplikacija."</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Dovoli"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Ne dovoli"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"Uporaba konteksta vsebine na zaslonu in v aplikaciji"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Privzeti aplikaciji pomočnika dovolite dostop do vsebine na zaslonu in podatkov, ki jih deli vidna aplikacija"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"Aplikaciji <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> dovolite dostop do vsebine na zaslonu in podatkov, ki jih deli vidna aplikacija"</string>
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"Želite aplikaciji &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; dovoliti uporabo podatkov o zaslonu in podatkov aplikacije?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"Ta pomočnik bo lahko dostopal do podatkov in vsebine iz aplikacije, ki je odprta na zaslonu"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Dovoli"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Ne dovoli"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Uporaba podatkov na zaslonu in podatkov aplikacije"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Pomočniku dovolite dostop do podatkov in vsebine iz aplikacije, ki je odprta na zaslonu"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Aplikaciji <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> dovolite dostop do informacij in vsebine iz aplikacije, ki je odprta na zaslonu"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Dovoli"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Ne dovoli"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Želite aplikaciji &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; dovoliti dostop do natančne lokacije z gumbom za lokacijo?"</string>

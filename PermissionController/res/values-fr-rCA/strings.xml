@@ -63,7 +63,7 @@
     <string name="app_permissions" msgid="3369917736607944781">"Autorisations des applis"</string>
     <string name="unused_apps" msgid="2058057455175955094">"Applis non utilisées"</string>
     <string name="edit_photos_description" msgid="5540108003480078892">"Modifiez une sélection de photos pour cette appli"</string>
-    <string name="no_unused_apps" msgid="12809387670415295">"Aucune appli inutilisée"</string>
+    <string name="no_unused_apps" msgid="12809387670415295">"Aucune appli non utilisée"</string>
     <string name="zero_unused_apps" msgid="9024448554157499748">"Aucune appli inutilisée"</string>
     <string name="review_permission_decisions" msgid="309559429150613632">"Décisions d\'autorisation récentes"</string>
     <string name="review_permission_decisions_view_all" msgid="90391040431566130">"Afficher toutes les décisions d\'autorisation récentes"</string>
@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Tableau de bord de confidentialité"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Autorisations de l\'appli"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Activité de l\'agent"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Activité : <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Au cours des dernières 24 heures"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Aujourd\'hui"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Hier"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Dernier accès : <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Afficher"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Voir les applis qui ont récemment utilisé des autorisations"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Utilisation de votre <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Voir plus d\'autorisations"</string>
@@ -194,13 +200,15 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Autoriser uniquement lorsque l\'appli est utilisée"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Toujours tout autoriser"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Toujours demander"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Ne pas autoriser"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Autoriser un accès limité"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Position exacte"</string>
     <string name="approximate_image_description" msgid="938803699637069884">"Position approximative"</string>
     <string name="app_permission_location_accuracy" msgid="7166912915040018669">"Utiliser la position exacte"</string>
     <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"Si la position exacte est désactivée, les applis ont accès à votre position approximative"</string>
-    <string name="app_permission_title" msgid="2090897901051370711">"Autorisation : <xliff:g id="PERM">%1$s</xliff:g>"</string>
+    <string name="app_permission_title" msgid="2090897901051370711">"Autorisation – <xliff:g id="PERM">%1$s</xliff:g>"</string>
     <string name="app_permission_header" msgid="2951363137032603806">"Accès pour cette appli : <xliff:g id="PERM">%1$s</xliff:g>"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"Accès <xliff:g id="PERM">%1$s</xliff:g> pour cette appli sur <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"Afficher toutes les autorisations pour <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -461,8 +469,10 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Remarque : Si vous redémarrez votre appareil et que vous avez défini un verrouillage de l\'écran, cette appli ne pourra pas démarrer tant que vous n\'avez pas déverrouillé votre appareil"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"L\'assistant pourra accéder aux données des applis en cours d\'utilisation sur votre système, y compris les données visibles à l\'écran ou accessibles au sein des applis."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Changer votre appli d\'assistant numérique pour &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Cet assistant pourra accéder à des informations telles que vos messages et les données que les applis ont partagées avec votre assistant."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Cet assistant pourra accéder à des informations telles que vos messages et les données que les applis ont partagées avec votre assistant.&lt;br&gt;&lt;br&gt;De plus, comme vous avez déjà activé les données relatives à l\'écran et aux applis pour l\'appli <xliff:g id="APP_NAME">%1$s</xliff:g>, l\'assistant sera autorisé à accéder au contenu de l\'appli ouverte sur votre écran."</string>
+    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
+    <skip />
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Partager les données de débogage"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Partager des données de débogage détaillées?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> souhaite téléverser des données de débogage."</string>
@@ -740,13 +750,20 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Cet agent pourra acc. à <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> pour obtenir des infos et exécuter des actions"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Autoriser"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Interdire"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Autoriser &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; à accéder au contexte de l\'écran et de l\'appli?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Autoriser l\'appli d\'assistance par défaut à accéder au contenu de l\'écran et aux données partagées par l\'appli visible"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Autoriser"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Ne pas autoriser"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"Utiliser le contexte de l\'écran et de l\'appli"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Autoriser l\'appli de l\'assistant par défaut à accéder au contenu de l\'écran et aux données partagées par l\'appli visible"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"Autoriser <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> à accéder à l\'écran et aux données partagées par l\'appli visible"</string>
+    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
+    <skip />
+    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
+    <skip />
+    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
+    <skip />
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Autoriser"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Ne pas autoriser"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Autoriser &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; à accéder à une position exacte à l\'aide d\'un bouton de localisation?"</string>

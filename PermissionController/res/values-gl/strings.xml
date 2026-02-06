@@ -24,8 +24,8 @@
     <string name="dialog_close" msgid="6840699812532384661">"Pechar"</string>
     <string name="available" msgid="6007778121920339498">"Dispoñible"</string>
     <string name="blocked" msgid="9195547604866033708">"Bloqueado"</string>
-    <string name="on" msgid="280241003226755921">"Activado"</string>
-    <string name="off" msgid="1438489226422866263">"Desactivado"</string>
+    <string name="on" msgid="280241003226755921">"Activada"</string>
+    <string name="off" msgid="1438489226422866263">"Desactivada"</string>
     <string name="uninstall_or_disable" msgid="4496612999740858933">"Desinstalar ou desactivar"</string>
     <string name="app_not_found_dlg_title" msgid="6029482906093859756">"Non se encontrou a aplicación"</string>
     <string name="grant_dialog_button_deny" msgid="88262611492697192">"Non permitir"</string>
@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Panel de privacidade"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Permisos de aplicacións"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Actividade do axente"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Actividade en <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Nas últimas 24 horas"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Hoxe"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Onte"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Último acceso: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Ver"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Mira as aplicacións que utilizaron permisos recentemente"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Uso do permiso (<xliff:g id="PERMGROUP">%1$s</xliff:g>)"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Ver outros permisos"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Permitir só mentres se use a aplicación"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Permitir todo sempre"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Preguntar sempre"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Non permitir"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Permitir acceso limitado"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Localización precisa"</string>
@@ -461,8 +469,9 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Nota: Se reinicias o dispositivo e definiches un bloqueo de pantalla, esta aplicación non se poderá iniciar ata que desbloquees o dispositivo."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"O asistente poderá ler información sobre as aplicacións en uso no teu sistema, incluídos os datos visibles na pantalla ou aos que se pode acceder desde as aplicacións."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Queres cambiar a aplicación de asistencia dixital a &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Este asistente poderá acceder a información como as túas mensaxes e os datos que as aplicacións decidisen compartir co teu asistente."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Este asistente poderá acceder a información como as túas mensaxes e os datos que as aplicacións decidan compartir con el.&lt;br&gt;&lt;br&gt;Ademais, como xa activaches os datos de aplicacións e pantalla para <xliff:g id="APP_NAME">%1$s</xliff:g>, poderá acceder ao contido da aplicación que estea aberta na pantalla."</string>
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Este asistente poderá acceder a información como as túas mensaxes e os datos que as aplicacións decidisen compartir co teu asistente."</string>
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Compartir datos de depuración"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Queres compartir datos detallados da depuración?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"A aplicación <xliff:g id="APP_NAME">%1$s</xliff:g> quere cargar información de depuración."</string>
@@ -740,13 +749,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Este axente poderá acceder a <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> para obter información e realizar accións por ti"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Permitir"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Non permitir"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"Queres permitir que &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; acceda á pantalla e ao contexto das aplicacións?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Deixa que a app predet. de asistencia acceda á pantalla e aos datos compartidos pola app visible"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Permitir"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Non permitir"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"Usar o contexto da aplicación e da pantalla"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Deixa que a aplicación predeterminada de asistencia acceda á pantalla e aos datos compartidos pola aplicación visible"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"Deixa que <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> acceda á pantalla e aos datos compartidos pola aplicación visible"</string>
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"Queres permitir que &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; use os datos da pantalla e das aplicacións?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"Este asistente poderá acceder á información e ao contido da aplicación que estea aberta na pantalla"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Permitir"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Non permitir"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Usar os datos da pantalla e das aplicacións"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Permite que o asistente acceda á información e ao contido da aplicación que estea aberta na pantalla"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Permite que <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> acceda á información e ao contido da aplicación que estea aberta na pantalla"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Permitir"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Non permitir"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Queres permitir que &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; acceda á localización precisa mediante un botón de localización?"</string>

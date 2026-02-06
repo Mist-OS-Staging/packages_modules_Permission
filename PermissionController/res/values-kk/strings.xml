@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Құпиялық тақтасы"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Қолданба рұқсаттары"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Агенттің әрекеті"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> әрекеті"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Соңғы 24 сағатта"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Бүгін"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Кеше"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Соңғы рет пайдаланған уақыты: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Көру"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Қандай қолданбалар рұқсаттарды пайдаланғанын көріңіз."</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> рұқсатының пайдаланылуы"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Басқа рұқсаттарды көру"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Қолданбаны пайдаланғанда ғана рұқсат беру"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Барлығына әрқашан рұқсат ету"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Әрдайым сұрау"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Рұқсат бермеу"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Шектеулі рұқсат беру"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Нақты орын"</string>
@@ -461,8 +469,9 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Ескертпе: Құрылғыңызды қайта қоссаңыз және экран құлыпталса, құрылғының құлпы ашылмайынша, қолданба іске қосылмайды."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Көмекші қолданба жүйеде пайдаланылып жатқан қолданбалар туралы ақпаратты, соның ішінде экранға шығатын немесе қолданбалардағы деректерді оқи алады."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Цифрлық көмекші қолданбасын &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; етіп өзгерту керек пе?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"Бұл көмекші хабарларыңыз сияқты ақпаратты және қолданбалар көмекшіңізбен бөлісуді таңдаған деректерді пайдалана алады."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"Бұл көмекші хабарларыңыз сияқты ақпаратты және қолданбалар көмекшіңізбен бөлісуді таңдаған деректерді пайдалана алады.&lt;br&gt;&lt;br&gt;Сондай-ақ <xliff:g id="APP_NAME">%1$s</xliff:g> үшін экран мен қолданба деректерін қосып қойғандықтан, ол экраныңызда ашық тұрған қолданбадағы контентті пайдалана алады."</string>
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Бұл көмекші хабарларыңыз сияқты ақпаратты және қолданбалар көмекшіңізбен бөлісуді таңдаған деректерді пайдалана алады."</string>
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Түзету туралы деректерді бөлісу"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Түзету туралы толығырақ деректер бөлісілсін бе?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> қолданбасы түзету туралы ақпаратты жүктеп салғысы келеді."</string>
@@ -740,13 +749,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Бұл агент ақпарат алу және сізге қажетті әрекеттерді орындау үшін <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> пайдалана алады"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Рұқсат беру"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Рұқсат бермеу"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"&lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; қолданбасына экран мен қолданба контексін пайдалануға рұқсат беру керек пе?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"Әдепкі көмекші қолданбаға көрінетін қолданба бөлісетін экран контенті мен деректі пайдалануға рұқсат беру"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"Рұқсат беру"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"Рұқсат бермеу"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"Экран мен қолданба контексін пайдалану"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"Әдепкі көмекші қолданбаға көрінетін қолданба бөлісетін экран мен деректерді пайдалануға рұқсат беру"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> қолданбасына көрінетін қолданба бөлісетін экран мен деректерді пайдалануға рұқсат беру"</string>
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"&lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; қолданбасына экран мен қолданба деректерін пайдалануға рұқсат беру керек пе?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"Бұл көмекші экраныңызда ашық тұрған қолданбадағы ақпарат пен контентті пайдалана алады"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Рұқсат беру"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Рұқсат бермеу"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Экран мен қолданба деректерін пайдалану"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Көмекшіге экраныңызда ашық тұрған қолданбадағы ақпарат пен контентті пайдалануға рұқсат беру"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> қолданбасына экраныңызда ашық тұрған қолданбадағы ақпарат пен контентті пайдалануға рұқсат беру"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Рұқсат беру"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Рұқсат бермеу"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; қолданбасына \"Локация\" түймесі арқылы нақты локацияны пайдалануға рұқсат беру керек пе?"</string>

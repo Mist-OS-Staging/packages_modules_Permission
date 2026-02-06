@@ -128,6 +128,12 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"ଗୋପନୀୟତା ଡେସବୋର୍ଡ"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"ଆପ ଅନୁମତି"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"ଏଜେଣ୍ଟ କାର୍ଯ୍ୟକଳାପ"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> କାର୍ଯ୍ୟକଳାପ"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"ଗତ 24 ଘଣ୍ଟାରେ"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"ଆଜି"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"ଗତକାଲି"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"ଗତଥର <xliff:g id="TIME_DATE">%1$s</xliff:g>ରେ ଆକ୍ସେସ କରାଯାଇଛି"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"ଭ୍ୟୁ କରନ୍ତୁ"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"କେଉଁ ଆପଗୁଡ଼ିକ ଏବେ ଅନୁମତିଗୁଡ଼ିକ ବ୍ୟବହାର କରିଛି ତାହା ଦେଖନ୍ତୁ"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> ବ୍ୟବହାର"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"ଅନ୍ୟ ଅନୁମତିଗୁଡ଼ିକୁ ଦେଖନ୍ତୁ"</string>
@@ -194,6 +200,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"ଆପ ବ୍ୟବହାର ବେଳେ କେବଳ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"ସର୍ବଦା ସବୁକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"ପ୍ରତ୍ୟେକ ଥର ପଚାରନ୍ତୁ"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"ଅନୁମତି ଦିଅନ୍ତୁ ନାହିଁ"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"ସୀମିତ ଆକ୍ସେସକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"ସଠିକ୍ ଲୋକେସନ୍"</string>
@@ -461,8 +469,9 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"ଟିପ୍ପଣୀ: ଯଦି ଆପଣ ଆପଣଙ୍କ ଡିଭାଇସ୍ ରିଷ୍ଟାର୍ଟ କରିବେ ଏବଂ ଏକ ସ୍କ୍ରିନ୍ ଲକ୍ ସେଟ୍ ହେବ, ଆପଣଙ୍କ ଡିଭାଇସ୍ ଅନ୍‌ଲକ୍ ନହେବା ପର୍ଯ୍ୟନ୍ତ ଏହି ଆପ୍ ଆରମ୍ଭ ହୋଇପାରିବ ନାହିଁ।"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"ଏହି ସହାୟକ, ସ୍କ୍ରିନ୍‌ରେ ଦେଖାଦେଉଥିବା କିମ୍ୱା ଆପ୍‌ଗୁଡ଼ିକ ମଧ୍ୟରେ ଆକ୍ସେସ୍ ହୋଇପାରିବା ଭଳି ସୂଚନା ସମେତ ଆପଣଙ୍କ ସିଷ୍ଟମ୍‌ରେ ଥିବା ଆପ୍‌ଗୁଡ଼ିକ ବିଷୟରେ ସୂଚନା ପଢ଼ିପାରିବ।"</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"ଆପଣଙ୍କ ଡିଜିଟାଲ ଆସିଷ୍ଟାଣ୍ଟ ଆପକୁ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ରେ ପରିବର୍ତ୍ତନ କରିବେ?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="8382584766965128138">"ଏହି ଆସିଷ୍ଟାଣ୍ଟ ଆପଣଙ୍କ ମେସେଜ ଏବଂ ଆପଣଙ୍କ ଆସିଷ୍ଟାଣ୍ଟଙ୍କ ସହ ସେୟାର କରିବାକୁ ଆପ୍ସ ବାଛିଥିବା ଡାଟା ପରି ସୂଚନାକୁ ଆକ୍ସେସ କରିବାକୁ ସକ୍ଷମ ହେବ।"</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="4584661761693618510">"ଏହି ଆସିଷ୍ଟାଣ୍ଟ ଆପଣଙ୍କ ମେସେଜ ଏବଂ ଆପଣଙ୍କ ଆସିଷ୍ଟାଣ୍ଟ ସହ ସେୟାର କରିବାକୁ ଆପ୍ସ ବାଛିଥିବା ଡାଟା ପରି ସୂଚନାକୁ ଆକ୍ସେସ କରିବାକୁ ସକ୍ଷମ ହେବ।&lt;br&gt;&lt;br&gt;ଆହୁରି ମଧ୍ୟ, ଆପଣ ପୂର୍ବରୁ <xliff:g id="APP_NAME">%1$s</xliff:g> ପାଇଁ ସ୍କ୍ରିନ ଏବଂ ଆପ ଡାଟା ଚାଲୁ କରିଥିବା ଯୋଗୁଁ, ଆପଣଙ୍କ ସ୍କ୍ରିନରେ ଖୋଲା ଥିବା ଆପରୁ ବିଷୟବସ୍ତୁକୁ ଆକ୍ସେସ କରିବା ପାଇଁ ଏହାକୁ ଅନୁମତି ଦିଆଯିବ।"</string>
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"ଏହି ଆସିଷ୍ଟାଣ୍ଟ ଆପଣଙ୍କ ମେସେଜ ଏବଂ ଆପଣଙ୍କ ଆସିଷ୍ଟାଣ୍ଟଙ୍କ ସହ ସେୟାର କରିବାକୁ ଆପ୍ସ ବାଛିଥିବା ଡାଟା ପରି ସୂଚନାକୁ ଆକ୍ସେସ କରିବାକୁ ସକ୍ଷମ ହେବ।"</string>
+    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
+    <skip />
     <string name="incident_report_channel_name" msgid="3144954065936288440">"ଡିବଗିଂ ଡାଟା ସେୟାର୍ କରନ୍ତୁ"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"ବିସ୍ତୃତ ଡିବଗିଂ ଡାଟା ସେୟାର୍ କରିବେ?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ଡିବଗିଂ ସୂଚନା ଅପ୍‌ଲୋଡ୍ କରିବାକୁ ଚାହାନ୍ତି।"</string>
@@ -570,7 +579,7 @@
     <string name="blocked_camera_title" msgid="1128510551791284384">"ଡିଭାଇସର କ୍ୟାମେରାକୁ ବ୍ଲକ କରାଯାଇଛି"</string>
     <string name="blocked_microphone_title" msgid="1631517143648232585">"ଡିଭାଇସର ମାଇକ୍ରୋଫୋନକୁ ବ୍ଲକ କରାଯାଇଛି"</string>
     <string name="blocked_location_title" msgid="2005608279812892383">"ଡିଭାଇସର ଲୋକେସନ ବନ୍ଦ ଅଛି"</string>
-    <string name="blocked_sensor_summary" msgid="4443707628305027375">"ଆପ ଓ ସେବାଗୁଡ଼ିକ ପାଇଁ"</string>
+    <string name="blocked_sensor_summary" msgid="4443707628305027375">"ଆପ୍ସ ଓ ସର୍ଭିସେସ ପାଇଁ"</string>
     <string name="blocked_mic_summary" msgid="8960466941528458347">"ଆପଣ ଏକ ଜରୁରୀକାଳୀନ ନମ୍ବରକୁ କଲ କରିବା ସମୟରେ ମାଇକ୍ରୋଫୋନ ଡାଟା ଏବେ ବି ସେୟାର କରାଯାଇପାରେ।"</string>
     <string name="blocked_sensor_button_label" msgid="6742092634984289658">"ପରିବର୍ତ୍ତନ କରନ୍ତୁ"</string>
     <string name="automotive_blocked_camera_title" msgid="6142362431548829416">"କେମେରା ଆକ୍ସେସ ବନ୍ଦ ଅଛି"</string>
@@ -740,13 +749,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"ଏହି ଏଜେଣ୍ଟ ଆପଣଙ୍କ ପାଇଁ ସୂଚନା ପାଇବା ଓ ପଦକ୍ଷେପ ନେବାକୁ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>କୁ ଆକ୍ସେସ କରିପାରିବେ"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"ଅନୁମତି ଦିଅନାହିଁ"</string>
-    <string name="request_assist_structure_dialog_title" msgid="5131391210011661043">"ସ୍କ୍ରିନ ଏବଂ ଆପ ପ୍ରସଙ୍ଗକୁ ଆକ୍ସେସ କରିବା ପାଇଁ &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt;କୁ ଅନୁମତି ଦେବେ?"</string>
-    <string name="request_assist_structure_dialog_description" msgid="6651318204248848550">"ସ୍କ୍ରିନ ବିଷୟବସ୍ତୁ ଏବଂ ଭିଜିବିଲ ଆପ ଦ୍ୱାରା ସେୟାର କରାଯାଇଥିବା ଡାଟାକୁ ଆକ୍ସେସ କରିବା ପାଇଁ ଡିଫଲ୍ଟ ସହାୟକ ଆପକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
-    <string name="request_assist_structure_dialog_button_allow" msgid="3054444233802281800">"ଅନୁମତି ଦିଅନ୍ତୁ"</string>
-    <string name="request_assist_structure_dialog_button_dont_allow" msgid="6260296016278652911">"ଅନୁମତି ଦିଅ ନାହିଁ"</string>
-    <string name="assist_structure_setting_title" msgid="3448963992289353882">"ସ୍କ୍ରିନ ଏବଂ ଆପ ପ୍ରସଙ୍ଗ ବ୍ୟବହାର କରନ୍ତୁ"</string>
-    <string name="assist_structure_setting_default_description" msgid="5286942439766192730">"ସ୍କ୍ରିନ ଏବଂ ଭିଜିବିଲ ଆପ ଦ୍ୱାରା ସେୟାର କରାଯାଇଥିବା ଡାଟାକୁ ଆକ୍ସେସ କରିବା ପାଇଁ ଡିଫଲ୍ଟ ଆସିଷ୍ଟାଣ୍ଟ ଆପକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
-    <string name="assist_structure_setting_description" msgid="2865330212261060313">"ସ୍କ୍ରିନ ଏବଂ ଭିଜିବିଲ ଆପ ଦ୍ୱାରା ସେୟାର କରାଯାଇଥିବା ଡାଟାକୁ ଆକ୍ସେସ କରିବା ପାଇଁ <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>କୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"ସ୍କ୍ରିନ ଏବଂ ଆପ ଡାଟାକୁ ବ୍ୟବହାର କରିବା ପାଇଁ &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt;କୁ ଅନୁମତି ଦେବେ?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"ଏହି ଆସିଷ୍ଟାଣ୍ଟ ଆପଣଙ୍କ ସ୍କ୍ରିନରେ ଖୋଲା ଥିବା ଆପରୁ ସୂଚନା ଏବଂ ବିଷୟବସ୍ତୁକୁ ଆକ୍ସେସ କରିବାକୁ ସକ୍ଷମ ହେବ"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"ଅନୁମତି ଦିଅନ୍ତୁ"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"ଅନୁମତି ଦିଅ ନାହିଁ"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"ସ୍କ୍ରିନ ଏବଂ ଆପ ଡାଟା ବ୍ୟବହାର କରନ୍ତୁ"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"ଆପଣଙ୍କ ସ୍କ୍ରିନରେ ଖୋଲା ଥିବା ଆପରୁ ସୂଚନା ଏବଂ ବିଷୟବସ୍ତୁକୁ ଆକ୍ସେସ କରିବା ପାଇଁ ଆସିଷ୍ଟାଣ୍ଟକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"ଆପଣଙ୍କ ସ୍କ୍ରିନରେ ଖୋଲା ଥିବା ଆପରୁ ସୂଚନା ଏବଂ ବିଷୟବସ୍ତୁକୁ ଆକ୍ସେସ କରିବା ପାଇଁ <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>କୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"ଅନୁମତି ଦିଅନ୍ତୁ ନାହିଁ"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"ଏକ ଲୋକେସନ ବଟନ ବ୍ୟବହାର କରି ସଠିକ ଲୋକେସନକୁ ଆକ୍ସେସ କରିବା ପାଇଁ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;କୁ ଅନୁମତି ଦେବେ?"</string>
