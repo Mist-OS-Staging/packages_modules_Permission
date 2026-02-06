@@ -16,7 +16,9 @@
 
 package com.android.permissioncontroller.role.ui;
 
+import static com.android.permissioncontroller.PermissionControllerStatsLog.DEFAULT_ASSISTANT_SETTINGS_READ_SCREEN_CONTEXT_TOGGLE_ACTION_REPORTED;
 import static com.android.permissioncontroller.PermissionControllerStatsLog.ROLE_SETTINGS_FRAGMENT_ACTION_REPORTED;
+import static com.android.permissioncontroller.PermissionControllerStatsLog.DEFAULT_APP_SETTINGS_VIEWED;
 
 import android.app.Activity;
 import android.app.role.RoleManager;
@@ -92,6 +94,8 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
             DefaultAppChildFragment.class.getName() + ".extra.PACKAGE_NAME";
     private static final String PREFERENCE_EXTRA_UID = DefaultAppChildFragment.class.getName()
             + ".extra.UID";
+    private static final String KEY_VIEW_LOGGED = DefaultAppChildFragment.class.getName()
+            + ".VIEW_LOGGED";
 
     @NonNull
     private String mRoleName;
@@ -103,6 +107,8 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
 
     @NonNull
     private DefaultAppViewModel mViewModel;
+
+    private boolean mViewLogged = false;
 
     /**
      * Create a new instance of this fragment.
@@ -130,6 +136,10 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
         Bundle arguments = getArguments();
         mRoleName = arguments.getString(Intent.EXTRA_ROLE_NAME);
         mUser = arguments.getParcelable(Intent.EXTRA_USER);
+
+        if (savedInstanceState != null) {
+            mViewLogged = savedInstanceState.getBoolean(KEY_VIEW_LOGGED, false);
+        }
     }
 
     @Override
@@ -149,6 +159,23 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
         mViewModel.getLiveData().observe(this, applicationItems -> onApplicationListChanged());
         mViewModel.getManageRoleHolderStateLiveData().observe(this,
                 this::onManageRoleHolderStateChanged);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        if (!mViewLogged) {
+            PermissionControllerStatsLog.write(DEFAULT_APP_SETTINGS_VIEWED, mRoleName);
+            mViewLogged = true;
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putBoolean(KEY_VIEW_LOGGED, mViewLogged);
     }
 
     private void onApplicationListChanged() {
@@ -520,8 +547,16 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
                     R.string.read_screen_context_setting_description, appLabel));
             preference.setOnPreferenceClickListener(preference2 -> {
                 SwitchPreferenceCompat switchPreference = (SwitchPreferenceCompat) preference2;
+                boolean isChecked = switchPreference.isChecked();
                 mViewModel.setReadScreenContextSettingEnabled(holderApplicationItem,
-                        switchPreference.isChecked());
+                        isChecked);
+
+                int uid = holderApplicationItem.getApplicationInfo().uid;
+                String packageName = holderApplicationItem.getApplicationInfo().packageName;
+                PermissionControllerStatsLog.write(
+                        DEFAULT_ASSISTANT_SETTINGS_READ_SCREEN_CONTEXT_TOGGLE_ACTION_REPORTED,
+                        uid, packageName, isChecked);
+
                 return true;
             });
         }
