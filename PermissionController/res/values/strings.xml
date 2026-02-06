@@ -398,6 +398,9 @@
     <!-- Text for the agent activity timeline preference widget [CHAR LIMIT=30] -->
     <string name="agent_activity_timeline_preference_widget">View</string>
 
+    <!-- The title for the device assistance apps [CHAR LIMIT=30] -->
+    <string name="device_assistance_title">Device Assistance</string>
+
     <!-- Summary for permission usage preference row [CHAR LIMIT=60] -->
     <string name="auto_permission_usage_summary">View which apps recently used permissions</string>
 

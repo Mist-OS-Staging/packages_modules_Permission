@@ -19,6 +19,7 @@ package com.android.permissioncontroller.appfunctions.domain.usecase.v37
 import android.content.Context
 import android.os.UserManager
 import com.android.permissioncontroller.appfunctions.AppFunctionsUtil
+import com.android.permissioncontroller.appfunctions.domain.model.v37.AgentAccessInfo
 import com.android.permissioncontroller.appinteraction.data.repository.AppInteractionRepository
 import com.android.permissioncontroller.appinteraction.domain.model.v37.AccessHistory
 import java.time.Instant
@@ -31,13 +32,11 @@ import kotlin.math.max
  *
  * @param appInteractionRepository The repository to use to get the agent usages
  */
-class GetAppFunctionAgentUsageDetailsUseCase(
-    private val appInteractionRepository: AppInteractionRepository
-) {
+class GetAgentUsageDetailsUseCase(private val appInteractionRepository: AppInteractionRepository) {
     suspend operator fun invoke(
         context: Context,
         agentPackageName: String,
-    ): Map<String, List<AccessHistory>> {
+    ): Map<String, List<AgentAccessInfo>> {
         if (!AppFunctionsUtil.isPrivacyDashboardAgentActivityEnabled(context)) {
             return emptyMap()
         }
@@ -45,6 +44,8 @@ class GetAppFunctionAgentUsageDetailsUseCase(
         val profiles = context.getSystemService(UserManager::class.java).userProfiles
         val accessHistories =
             profiles.flatMap { appInteractionRepository.getAccessHistory(context, it) }
+        val deviceAssistancePackageNames =
+            appInteractionRepository.getDeviceAssistancePackageNames(context).toSet()
         val now = System.currentTimeMillis()
         val timeStamp24Hours = max(now - TimeUnit.DAYS.toMillis(1), Instant.EPOCH.toEpochMilli())
         val timeStamp7Days = max(now - TimeUnit.DAYS.toMillis(7), Instant.EPOCH.toEpochMilli())
@@ -53,24 +54,46 @@ class GetAppFunctionAgentUsageDetailsUseCase(
             .sortedBy { it.accessTime }
             .fold(
                 mapOf(
-                    KEY_PAST_24_HOURS to mutableMapOf<String, AccessHistory>(),
-                    KEY_PAST_7_DAYS to mutableMapOf<String, AccessHistory>(),
+                    KEY_PAST_24_HOURS to mutableMapOf<String, AgentAccessInfo>(),
+                    KEY_PAST_7_DAYS to mutableMapOf<String, AgentAccessInfo>(),
                 )
             ) { map, accessHistory ->
-                val targetPackageName = accessHistory.targetPackageName
+                val isDeviceAssistance =
+                    accessHistory.targetPackageName in deviceAssistancePackageNames
+                val agentAccessKey =
+                    if (isDeviceAssistance) {
+                        DEVICE_ASSISTANCE_TARGET_PACKAGE_NAME
+                    } else {
+                        accessHistory.targetPackageName
+                    }
                 if (accessHistory.accessTime > timeStamp24Hours) {
-                    map[KEY_PAST_24_HOURS]!![targetPackageName] = accessHistory
+                    map[KEY_PAST_24_HOURS]!![agentAccessKey] =
+                        createAgentAccessInfo(accessHistory, isDeviceAssistance)
                 }
                 if (accessHistory.accessTime > timeStamp7Days) {
-                    map[KEY_PAST_7_DAYS]!![targetPackageName] = accessHistory
+                    map[KEY_PAST_7_DAYS]!![agentAccessKey] =
+                        createAgentAccessInfo(accessHistory, isDeviceAssistance)
                 }
                 map
             }
             .mapValues { it.value.values.toList() }
     }
 
+    private fun createAgentAccessInfo(
+        accessHistory: AccessHistory,
+        isDeviceAssistance: Boolean,
+    ): AgentAccessInfo =
+        AgentAccessInfo(
+            accessHistory.agentPackageName,
+            accessHistory.targetPackageName,
+            accessHistory.accessTime,
+            accessHistory.interactionUri,
+            isDeviceAssistance,
+        )
+
     companion object {
         const val KEY_PAST_24_HOURS = "PAST_24_HOURS"
         const val KEY_PAST_7_DAYS = "PAST_7_DAYS"
+        private const val DEVICE_ASSISTANCE_TARGET_PACKAGE_NAME = "DEVICE_ASSISTANCE"
     }
 }
