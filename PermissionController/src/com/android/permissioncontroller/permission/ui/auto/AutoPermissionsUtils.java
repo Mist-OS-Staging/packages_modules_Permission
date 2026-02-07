@@ -28,8 +28,8 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.preference.Preference;
 
-import com.android.permissioncontroller.permission.data.LightPackageInfoLiveData;
 import com.android.permissioncontroller.permission.utils.Utils;
+import com.android.permissioncontroller.permission.utils.v37.LightPackageInfoUtils;
 
 /** Common utilities shared between permissions settings. */
 public final class AutoPermissionsUtils {
@@ -46,7 +46,7 @@ public final class AutoPermissionsUtils {
                     .getPackageManager();
             int flags = PackageManager.GET_PERMISSIONS;
 
-            return LightPackageInfoLiveData.mergePermissionsInSharedUid(
+            return LightPackageInfoUtils.mergePermissionsInSharedUid(
                     pm.getPackageInfo(packageName, flags), flags, pm);
         } catch (PackageManager.NameNotFoundException e) {
             Log.i(LOG_TAG, "No package:" + activity.getCallingPackage(), e);

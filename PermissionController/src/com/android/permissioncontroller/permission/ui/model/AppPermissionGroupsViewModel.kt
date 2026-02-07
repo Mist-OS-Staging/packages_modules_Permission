@@ -215,6 +215,12 @@ class AppPermissionGroupsViewModel(
                 groupGrantStates[Category.ALLOWED] = mutableListOf()
                 groupGrantStates[Category.ASK] = mutableListOf()
                 groupGrantStates[Category.DENIED] = mutableListOf()
+                // TODO(b/479613003): Support Auto form factor
+                // TODO(b/479895707): Support Wear form factor
+                // TODO(b/479896440): Support TV form factor
+                if (DeviceUtils.isHandheld()) {
+                    groupGrantStates[Category.ALLOWED_FOR_COMPATIBILITY] = mutableListOf()
+                }
 
                 val fullStorageState =
                     fullStoragePermsLiveData.value?.find { pkg ->
@@ -265,6 +271,11 @@ class AppPermissionGroupsViewModel(
                                 groupGrantStates[Category.ALLOWED]!!.add(
                                     GroupUiInfo(groupName, isSystem, PermSubtitle.FOREGROUND_ONLY)
                                 )
+                            PermGrantState.PERMS_ALLOWED_FOR_COMPATIBILITY -> {
+                                groupGrantStates[Category.ALLOWED_FOR_COMPATIBILITY]!!.add(
+                                    GroupUiInfo(groupName, isSystem, PermSubtitle.NONE)
+                                )
+                            }
                             PermGrantState.PERMS_DENIED ->
                                 groupGrantStates[Category.DENIED]!!.add(
                                     GroupUiInfo(groupName, isSystem)
@@ -311,6 +322,16 @@ class AppPermissionGroupsViewModel(
                                     persistentDeviceId,
                                 )
                             )
+                        PermGrantState.PERMS_ALLOWED_FOR_COMPATIBILITY -> {
+                            groupGrantStates[Category.ALLOWED_FOR_COMPATIBILITY]!!.add(
+                                GroupUiInfo(
+                                    groupName,
+                                    isSystem,
+                                    PermSubtitle.NONE,
+                                    persistentDeviceId,
+                                )
+                            )
+                        }
                         PermGrantState.PERMS_DENIED ->
                             groupGrantStates[Category.DENIED]!!.add(
                                 GroupUiInfo(

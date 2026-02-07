@@ -28,9 +28,10 @@ import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
 import androidx.test.platform.app.InstrumentationRegistry
-import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAppFunctionAgentUsageDetailsUseCase
-import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAppFunctionAgentUsageDetailsUseCase.Companion.KEY_PAST_24_HOURS
-import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAppFunctionAgentUsageDetailsUseCase.Companion.KEY_PAST_7_DAYS
+import com.android.permissioncontroller.appfunctions.domain.model.v37.AgentAccessInfo
+import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAgentUsageDetailsUseCase
+import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAgentUsageDetailsUseCase.Companion.KEY_PAST_24_HOURS
+import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAgentUsageDetailsUseCase.Companion.KEY_PAST_7_DAYS
 import com.android.permissioncontroller.appinteraction.domain.model.v37.AccessHistory
 import com.android.permissioncontroller.flags.Flags
 import com.android.permissioncontroller.tests.mocking.appinteraction.data.repository.FakeAppInteractionRepository
@@ -46,17 +47,17 @@ import org.mockito.Mock
 import org.mockito.Mockito.`when` as whenever
 import org.mockito.MockitoAnnotations
 
-/** Unit tests for [GetAppFunctionAgentUsageDetailsUseCase]. */
+/** Unit tests for [GetAgentUsageDetailsUseCase]. */
 @RunWith(AndroidJUnit4::class)
 @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
-class GetAppFunctionAgentUsageDetailsUseCaseTest {
+class GetAgentUsageDetailsUseCaseTest {
     @get:Rule val checkFlagsRule: CheckFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
     @Mock private lateinit var mockContext: Context
     @Mock private lateinit var packageManager: PackageManager
     @Mock private lateinit var userManager: UserManager
     @Mock private lateinit var userHandle: UserHandle
 
-    private lateinit var useCase: GetAppFunctionAgentUsageDetailsUseCase
+    private lateinit var useCase: GetAgentUsageDetailsUseCase
     private val instrumentation = InstrumentationRegistry.getInstrumentation()!!
     private val instrumentationContext = instrumentation.targetContext!!
 
@@ -110,7 +111,7 @@ class GetAppFunctionAgentUsageDetailsUseCaseTest {
                 ),
             )
         val repository = FakeAppInteractionRepository(accessHistory)
-        useCase = GetAppFunctionAgentUsageDetailsUseCase(repository)
+        useCase = GetAgentUsageDetailsUseCase(repository)
 
         val result = useCase(mockContext, AGENT_NAME_1)
         assertWithMessage("Agent 1 should have 2 accesses in the past 24 hours")
@@ -137,16 +138,14 @@ class GetAppFunctionAgentUsageDetailsUseCaseTest {
     fun getAgentUsages_showsOnlyLastAccess() = runTest {
         assumeFalse(isAutomotive() || isTv() || isWatch())
         val now = System.currentTimeMillis()
-        val lastAccess =
-            createAccessHistory(
-                agentPackageName = AGENT_NAME_1,
-                targetPackageName = TARGET_NAME_1,
-                interactionUri = INTERACTION_URI_1,
-                accessTime = now - TimeUnit.HOURS.toMillis(1),
-            )
         val accessHistory =
             listOf(
-                lastAccess,
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_1,
+                    interactionUri = INTERACTION_URI_1,
+                    accessTime = now - TimeUnit.HOURS.toMillis(1),
+                ),
                 createAccessHistory(
                     agentPackageName = AGENT_NAME_1,
                     targetPackageName = TARGET_NAME_1,
@@ -155,7 +154,7 @@ class GetAppFunctionAgentUsageDetailsUseCaseTest {
                 ),
             )
         val repository = FakeAppInteractionRepository(accessHistory)
-        useCase = GetAppFunctionAgentUsageDetailsUseCase(repository)
+        useCase = GetAgentUsageDetailsUseCase(repository)
 
         val result = useCase(mockContext, AGENT_NAME_1)
         assertWithMessage("There should only be 1 access history in the past 24 hours")
@@ -163,7 +162,67 @@ class GetAppFunctionAgentUsageDetailsUseCaseTest {
             .isEqualTo(1)
         assertWithMessage("Only the last access should be returned")
             .that(result[KEY_PAST_24_HOURS]!!)
-            .containsExactly(lastAccess)
+            .containsExactly(
+                AgentAccessInfo(
+                    AGENT_NAME_1,
+                    TARGET_NAME_1,
+                    now - TimeUnit.HOURS.toMillis(1),
+                    INTERACTION_URI_1,
+                    false,
+                )
+            )
+    }
+
+    @Test
+    @RequiresFlagsEnabled(
+        Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED,
+        FLAG_ENABLE_APP_INTERACTION_API,
+    )
+    fun getAgentUsages_deviceAssistanceAccessesAreGrouped() = runTest {
+        assumeFalse(isAutomotive() || isTv() || isWatch())
+        val now = System.currentTimeMillis()
+        val accessHistory =
+            listOf(
+                // Agent 1: 1 normal app function access, 2 device assistance accesses in last 24
+                // hours
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_1,
+                    interactionUri = INTERACTION_URI_1,
+                    accessTime = now - TimeUnit.HOURS.toMillis(1),
+                ),
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_2,
+                    interactionUri = INTERACTION_URI_2,
+                    accessTime = now - TimeUnit.HOURS.toMillis(2),
+                ),
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_3,
+                    interactionUri = INTERACTION_URI_3,
+                    accessTime = now - TimeUnit.HOURS.toMillis(3),
+                ),
+            )
+        val deviceAssistancePackageNames = listOf(TARGET_NAME_2, TARGET_NAME_3)
+        val repository = FakeAppInteractionRepository(accessHistory, deviceAssistancePackageNames)
+        useCase = GetAgentUsageDetailsUseCase(repository)
+
+        val result = useCase(mockContext, AGENT_NAME_1)
+        assertWithMessage("Agent 1 should have 2 accesses in the past 24 hours")
+            .that(result[KEY_PAST_24_HOURS]!!.size)
+            .isEqualTo(2)
+        assertWithMessage("Agent 1 should have 2 accesses in the past 7 days")
+            .that(result[KEY_PAST_7_DAYS]!!.size)
+            .isEqualTo(2)
+        result[KEY_PAST_7_DAYS]!!.forEach { accessHistory ->
+            assertWithMessage(
+                    "target3 is a device assistance target app and should be grouped with the other" +
+                        " device assistance target app target2, but instead found: $accessHistory"
+                )
+                .that(accessHistory.targetPackageName)
+                .isNotEqualTo(TARGET_NAME_3)
+        }
     }
 
     @Test
@@ -181,7 +240,7 @@ class GetAppFunctionAgentUsageDetailsUseCaseTest {
                 )
             )
         val repository = FakeAppInteractionRepository(accessHistory)
-        useCase = GetAppFunctionAgentUsageDetailsUseCase(repository)
+        useCase = GetAgentUsageDetailsUseCase(repository)
 
         val result = useCase(mockContext, AGENT_NAME_1)
         assertWithMessage("Result should be empty when the feature flag is off")

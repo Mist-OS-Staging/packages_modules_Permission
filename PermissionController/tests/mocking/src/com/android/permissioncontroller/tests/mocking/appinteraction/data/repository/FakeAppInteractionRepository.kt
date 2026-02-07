@@ -22,9 +22,14 @@ import android.os.UserHandle
 import com.android.permissioncontroller.appinteraction.data.repository.AppInteractionRepository
 import com.android.permissioncontroller.appinteraction.domain.model.v37.AccessHistory
 
-class FakeAppInteractionRepository(private val accessHistory: List<AccessHistory> = emptyList()) :
-    AppInteractionRepository {
+class FakeAppInteractionRepository(
+    private val accessHistory: List<AccessHistory> = emptyList(),
+    private val deviceAssistancePackageNames: List<String> = emptyList(),
+) : AppInteractionRepository {
     override fun getInteractionHistoryUriAsUser(userHandle: UserHandle): Uri = Uri.EMPTY
+
+    override fun getDeviceAssistancePackageNames(context: Context): List<String> =
+        deviceAssistancePackageNames
 
     override suspend fun getAccessHistory(
         context: Context,

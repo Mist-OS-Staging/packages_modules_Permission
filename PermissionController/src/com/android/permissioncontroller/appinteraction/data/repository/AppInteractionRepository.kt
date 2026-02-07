@@ -32,6 +32,9 @@ interface AppInteractionRepository {
      */
     fun getInteractionHistoryUriAsUser(userHandle: UserHandle): Uri
 
+    /** Returns a list of package names of device assistance apps. */
+    fun getDeviceAssistancePackageNames(context: Context): List<String>
+
     suspend fun getAccessHistory(context: Context, userHandle: UserHandle): List<AccessHistory>
 
     companion object {
@@ -47,6 +50,9 @@ interface AppInteractionRepository {
 class AppInteractionRepositoryImpl : AppInteractionRepository {
     override fun getInteractionHistoryUriAsUser(userHandle: UserHandle): Uri =
         AppInteractionContract.getInteractionHistoryUriAsUser(userHandle)
+
+    override fun getDeviceAssistancePackageNames(context: Context): List<String> =
+        AppInteractionContract.getDeviceAssistancePackageNames(context)
 
     override suspend fun getAccessHistory(
         context: Context,
@@ -70,12 +76,14 @@ class AppInteractionRepositoryImpl : AppInteractionRepository {
     }
 
     companion object {
-        fun createAccessHistory(cursor: Cursor): AccessHistory =
-            AccessHistory(
+        fun createAccessHistory(cursor: Cursor): AccessHistory {
+            val targetPackageName =
+                cursor.requireStringOrThrow(AppInteractionContract.COLUMN_TARGET_PACKAGE_NAME)
+
+            return AccessHistory(
                 agentPackageName =
                     cursor.requireStringOrThrow(AppInteractionContract.COLUMN_AGENT_PACKAGE_NAME),
-                targetPackageName =
-                    cursor.requireStringOrThrow(AppInteractionContract.COLUMN_TARGET_PACKAGE_NAME),
+                targetPackageName = targetPackageName,
                 interactionType =
                     cursor.getIntOrThrow(AppInteractionContract.COLUMN_INTERACTION_TYPE),
                 customInteractionType =
@@ -84,5 +92,6 @@ class AppInteractionRepositoryImpl : AppInteractionRepository {
                     cursor.getStringOrThrow(AppInteractionContract.COLUMN_INTERACTION_URI),
                 accessTime = cursor.requireLongOrThrow(AppInteractionContract.COLUMN_ACCESS_TIME),
             )
+        }
     }
 }

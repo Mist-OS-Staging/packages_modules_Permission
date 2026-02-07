@@ -26,9 +26,9 @@ import android.os.UserHandle
 import android.provider.Settings
 import android.util.Log
 import com.android.modules.utils.build.SdkLevel
-import com.android.permissioncontroller.permission.data.LightPackageInfoLiveData
 import com.android.permissioncontroller.permission.utils.KotlinUtils
 import com.android.permissioncontroller.permission.utils.Utils
+import com.android.permissioncontroller.permission.utils.v37.LightPackageInfoUtils
 import com.android.permissioncontroller.pm.data.model.v31.PackageAttributionModel
 import com.android.permissioncontroller.pm.data.model.v31.PackageInfoModel
 import kotlin.concurrent.Volatile
@@ -134,7 +134,7 @@ class PackageRepositoryImpl(
             try {
                 val pm = Utils.getUserContext(context, user).packageManager
                 val packageInfo =
-                    LightPackageInfoLiveData.mergePermissionsInSharedUid(
+                    LightPackageInfoUtils.mergePermissionsInSharedUid(
                         pm.getPackageInfo(packageName, flags),
                         flags,
                         pm,

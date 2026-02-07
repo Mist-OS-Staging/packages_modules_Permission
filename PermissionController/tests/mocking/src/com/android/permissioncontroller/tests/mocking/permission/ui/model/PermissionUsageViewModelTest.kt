@@ -33,9 +33,9 @@ import com.android.modules.utils.build.SdkLevel
 import com.android.permissioncontroller.DeviceUtils
 import com.android.permissioncontroller.PermissionControllerApplication
 import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCaseImpl
-import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAppFunctionAgentUsageUseCase
+import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAgentUsageUseCase
 import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAppFunctionPackageInfoUseCase
-import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAppFunctionAgentUsageUseCaseImpl
+import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAgentUsageUseCaseImpl
 import com.android.permissioncontroller.appinteraction.domain.model.v37.AccessHistory
 import com.android.permissioncontroller.appops.data.model.v31.PackageAppOpUsageModel
 import com.android.permissioncontroller.appops.data.model.v31.PackageAppOpUsageModel.AppOpUsageModel
@@ -273,8 +273,10 @@ class PermissionUsageViewModelTest {
     )
     fun verifyAgentUsagesAreShownForPast24Hours() = runTest {
         assumeFalse(isTv() || isWatch())
-        assumeTrue("Skipping: Feature not supported on Auto when flag is disabled",
-            !isAutomotive() || Flags.automotivePrivacyDashboardAgentActivityEnabled())
+        assumeTrue(
+            "Skipping: Feature not supported on Auto when flag is disabled",
+            !isAutomotive() || Flags.automotivePrivacyDashboardAgentActivityEnabled(),
+        )
         val now = System.currentTimeMillis()
         val accessHistory =
             listOf(
@@ -321,8 +323,10 @@ class PermissionUsageViewModelTest {
     )
     fun verifyAgentUsagesAreShownForPast7Days() = runTest {
         assumeFalse(isTv() || isWatch())
-        assumeTrue("Skipping: Feature not supported on Auto when flag is disabled",
-            !isAutomotive() || Flags.automotivePrivacyDashboardAgentActivityEnabled())
+        assumeTrue(
+            "Skipping: Feature not supported on Auto when flag is disabled",
+            !isAutomotive() || Flags.automotivePrivacyDashboardAgentActivityEnabled(),
+        )
         val now = System.currentTimeMillis()
         val accessHistory =
             listOf(
@@ -358,8 +362,7 @@ class PermissionUsageViewModelTest {
 
     private fun TestScope.getViewModel(
         permissionUsageUseCase: GetPermissionGroupUsageUseCase = getPermissionGroupUsageUseCase(),
-        appFunctionAgentUsageUseCase: GetAppFunctionAgentUsageUseCase =
-            getAppFunctionAgentUsageUseCase(),
+        appFunctionAgentUsageUseCase: GetAgentUsageUseCase = getAppFunctionAgentUsageUseCase(),
         appFunctionPackageInfoUseCase: GetAppFunctionPackageInfoUseCase =
             getAppFunctionPackageInfoUseCase(),
         savedStateHandle: SavedStateHandle = SavedStateHandle(emptyMap()),
@@ -407,9 +410,9 @@ class PermissionUsageViewModelTest {
 
     private fun getAppFunctionAgentUsageUseCase(
         accessHistory: List<AccessHistory> = emptyList()
-    ): GetAppFunctionAgentUsageUseCase {
+    ): GetAgentUsageUseCase {
         val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
-        return GetAppFunctionAgentUsageUseCaseImpl(appInteractionRepository)
+        return GetAgentUsageUseCaseImpl(appInteractionRepository)
     }
 
     private fun getAppFunctionPackageInfoUseCase(): GetAppFunctionPackageInfoUseCase {

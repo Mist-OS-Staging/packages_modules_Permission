@@ -111,7 +111,6 @@ public class RequestRoleFragment extends DialogFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setCancelable(false);
 
         Bundle arguments = getArguments();
         mPackageName = arguments.getString(Intent.EXTRA_PACKAGE_NAME);
@@ -194,6 +193,7 @@ public class RequestRoleFragment extends DialogFragment {
                 // The default behavior for a null listener is to dismiss the dialog, not cancel.
                 .setNegativeButton(android.R.string.cancel, (dialog2, which) -> dialog2.cancel())
                 .create();
+        dialog.setCanceledOnTouchOutside(false);
         dialog.getWindow().addSystemFlags(
                 WindowManager.LayoutParams.SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
         dialog.setOnShowListener(dialog2 -> dialog.getButton(Dialog.BUTTON_POSITIVE)

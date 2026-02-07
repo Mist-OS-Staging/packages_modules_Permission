@@ -29,13 +29,14 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
 import androidx.test.platform.app.InstrumentationRegistry
 import com.android.permissioncontroller.PermissionControllerApplication
-import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAppFunctionAgentUsageDetailsUseCase
+import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAgentUsageDetailsUseCase
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.v37.AgentUsageDetailsUiState
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.v37.AgentUsageDetailsViewModel
 import com.android.permissioncontroller.appinteraction.domain.model.v37.AccessHistory
 import com.android.permissioncontroller.flags.Flags
 import com.android.permissioncontroller.tests.mocking.appinteraction.data.repository.FakeAppInteractionRepository
 import com.android.permissioncontroller.tests.mocking.coroutines.collectLastValue
+import com.android.permissioncontroller.tests.mocking.pm.data.repository.FakePackageRepository
 import com.google.common.truth.Truth.assertThat
 import com.google.common.truth.Truth.assertWithMessage
 import java.util.concurrent.TimeUnit
@@ -118,7 +119,7 @@ class AgentUsageDetailsViewModelTest {
         val uiState = getAgentUsageDetailsUiState(viewModel)
         assertThat(uiState.agentPackageName).isEqualTo(AGENT_NAME_1)
         assertWithMessage("There should be 2 accesses in the past 24 hours")
-            .that(uiState.agentAccessUiInfos.size)
+            .that(uiState.agentAccessInfos.size)
             .isEqualTo(2)
     }
 
@@ -134,7 +135,7 @@ class AgentUsageDetailsViewModelTest {
         val uiState = getAgentUsageDetailsUiState(viewModel)
         assertThat(uiState.agentPackageName).isEqualTo(AGENT_NAME_1)
         assertWithMessage("There should be 3 accesses in the past 7 days")
-            .that(uiState.agentAccessUiInfos.size)
+            .that(uiState.agentAccessInfos.size)
             .isEqualTo(3)
     }
 
@@ -157,10 +158,11 @@ class AgentUsageDetailsViewModelTest {
         savedStateHandle: SavedStateHandle = SavedStateHandle(emptyMap()),
     ): AgentUsageDetailsViewModel {
         val getAppFunctionAgentUsageDetailsUseCase =
-            GetAppFunctionAgentUsageDetailsUseCase(FakeAppInteractionRepository(accessHistory))
+            GetAgentUsageDetailsUseCase(FakeAppInteractionRepository(accessHistory))
         return AgentUsageDetailsViewModel(
             application,
             AGENT_NAME_1,
+            FakePackageRepository(settingsPackageName = SETTINGS_APP_PACKAGE_NAME),
             getAppFunctionAgentUsageDetailsUseCase,
             savedStateHandle,
             backgroundScope,
@@ -188,5 +190,6 @@ class AgentUsageDetailsViewModelTest {
         const val INTERACTION_URI_3 = "uri3"
         const val FLAG_ENABLE_APP_INTERACTION_API =
             "com.android.permissioncontroller.jarjar.${android.app.appfunctions.flags.Flags.FLAG_ENABLE_APP_INTERACTION_API}"
+        const val SETTINGS_APP_PACKAGE_NAME = "com.google.android.settings.intelligence"
     }
 }

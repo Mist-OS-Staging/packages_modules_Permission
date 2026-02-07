@@ -35,7 +35,7 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceScreen
 import com.android.permissioncontroller.R
-import com.android.permissioncontroller.appfunctions.ui.viewmodel.v37.AgentAccessUiInfo
+import com.android.permissioncontroller.appfunctions.domain.model.v37.AgentAccessInfo
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.v37.AgentUsageDetailsUiState
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.v37.AgentUsageDetailsViewModel
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.v37.AgentUsageDetailsViewModelFactory
@@ -172,12 +172,14 @@ class AgentUsageDetailsFragment : SettingsWithLargeHeader() {
                 val show7Days = uiState.show7Days
                 if (show7Days) {
                     addAgentActivityPreferencesForPast7Days(
-                        uiState.agentAccessUiInfos,
+                        uiState.settingsPackageName,
+                        uiState.agentAccessInfos,
                         preferenceScreen,
                     )
                 } else {
                     addAgentActivityPreferencesForPast24Hours(
-                        uiState.agentAccessUiInfos,
+                        uiState.settingsPackageName,
+                        uiState.agentAccessInfos,
                         preferenceScreen,
                     )
                 }
@@ -187,7 +189,8 @@ class AgentUsageDetailsFragment : SettingsWithLargeHeader() {
     }
 
     fun addAgentActivityPreferencesForPast24Hours(
-        agentAccessUiInfos: List<AgentAccessUiInfo>,
+        settingsAppPackageName: String,
+        agentAccessInfos: List<AgentAccessInfo>,
         preferenceScreen: PreferenceScreen,
     ) {
         val last24Hours =
@@ -195,17 +198,18 @@ class AgentUsageDetailsFragment : SettingsWithLargeHeader() {
         val category = PreferenceCategory(requireContext())
         category.title = resources.getString(R.string.agent_activity_timeline_category_title_24h)
         preferenceScreen.addPreference(category)
-        for (uiInfo: AgentAccessUiInfo in agentAccessUiInfos) {
+        for (uiInfo: AgentAccessInfo in agentAccessInfos) {
             val accessTime = uiInfo.lastAccessTime
             if (accessTime < last24Hours) {
                 continue
             }
-            category.addPreference(createAgentActivityPreference(uiInfo))
+            category.addPreference(createAgentActivityPreference(uiInfo, settingsAppPackageName))
         }
     }
 
     fun addAgentActivityPreferencesForPast7Days(
-        agentAccessUiInfos: List<AgentAccessUiInfo>,
+        settingsAppPackageName: String,
+        agentAccessInfos: List<AgentAccessInfo>,
         preferenceScreen: PreferenceScreen,
     ) {
         val midnightToday =
@@ -220,7 +224,7 @@ class AgentUsageDetailsFragment : SettingsWithLargeHeader() {
         var previousAccessDate: Long? = null
         var category = PreferenceCategory(requireContext())
 
-        for (uiInfo: AgentAccessUiInfo in agentAccessUiInfos) {
+        for (uiInfo: AgentAccessInfo in agentAccessInfos) {
             val accessTime = uiInfo.lastAccessTime
             val accessDate =
                 ZonedDateTime.ofInstant(Instant.ofEpochMilli(accessTime), ZoneId.systemDefault())
@@ -244,22 +248,35 @@ class AgentUsageDetailsFragment : SettingsWithLargeHeader() {
                 preferenceScreen.addPreference(category)
             }
 
-            category.addPreference(createAgentActivityPreference(uiInfo))
+            category.addPreference(createAgentActivityPreference(uiInfo, settingsAppPackageName))
         }
     }
 
-    fun createAgentActivityPreference(uiInfo: AgentAccessUiInfo): Preference =
+    fun createAgentActivityPreference(
+        uiInfo: AgentAccessInfo,
+        settingsAppPackageName: String,
+    ): Preference =
         Preference(requireContext()).apply {
             title =
-                KotlinUtils.getPackageLabel(
-                    requireActivity().application,
-                    uiInfo.targetPackageName,
-                    Process.myUserHandle(),
-                )
+                if (uiInfo.isDeviceAssistanceAccess) {
+                    resources.getString(R.string.device_assistance_title)
+                } else {
+                    KotlinUtils.getPackageLabel(
+                        requireActivity().application,
+                        uiInfo.targetPackageName,
+                        Process.myUserHandle(),
+                    )
+                }
+            val iconPackageName =
+                if (uiInfo.isDeviceAssistanceAccess) {
+                    settingsAppPackageName
+                } else {
+                    uiInfo.targetPackageName
+                }
             icon =
                 KotlinUtils.getBadgedPackageIcon(
                     requireActivity().application,
-                    uiInfo.targetPackageName,
+                    iconPackageName,
                     // TODO: We should use the work profile userHandle in order to get the
                     // badged icon. The work profile for agents dashboard is not yet
                     // implemented. Hence using Process.myUserHandle() for now.

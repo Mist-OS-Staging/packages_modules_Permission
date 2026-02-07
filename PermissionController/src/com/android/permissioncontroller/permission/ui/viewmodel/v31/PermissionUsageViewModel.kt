@@ -32,11 +32,11 @@ import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.CreationExtras
 import com.android.permissioncontroller.DeviceUtils
 import com.android.permissioncontroller.appfunctions.domain.usecase.GetAppFunctionPackageInfoUseCaseImpl
-import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAppFunctionAgentUsageUseCase
+import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAgentUsageUseCase
 import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAppFunctionPackageInfoUseCase
-import com.android.permissioncontroller.appfunctions.domain.usecase.v31.NoOpAppFunctionAgentUsageUseCase
+import com.android.permissioncontroller.appfunctions.domain.usecase.v31.NoOpAgentUsageUseCase
 import com.android.permissioncontroller.appfunctions.domain.usecase.v31.NoOpAppFunctionPackageInfoUseCase
-import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAppFunctionAgentUsageUseCaseImpl
+import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAgentUsageUseCaseImpl
 import com.android.permissioncontroller.appinteraction.data.repository.AppInteractionRepository
 import com.android.permissioncontroller.appinteraction.domain.model.v31.AccessCount
 import com.android.permissioncontroller.common.model.Stateful
@@ -68,7 +68,7 @@ class PermissionUsageViewModel(
     val app: Application,
     private val permissionRepository: PermissionRepository,
     private val getPermissionUsageUseCase: GetPermissionGroupUsageUseCase,
-    private val getAppFunctionAgentUsageUseCase: GetAppFunctionAgentUsageUseCase,
+    private val getAppFunctionAgentUsageUseCase: GetAgentUsageUseCase,
     private val getAppFunctionPackageInfoUseCase: GetAppFunctionPackageInfoUseCase,
     scope: CoroutineScope? = null,
     private val defaultDispatcher: CoroutineDispatcher = Dispatchers.Default,
@@ -256,9 +256,9 @@ class PermissionUsageViewModelFactory(private val app: Application) : ViewModelP
         val appFunctionAgentUsageUseCase =
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.CINNAMON_BUN) {
                 val appInteractionRepository = AppInteractionRepository.getInstance()
-                GetAppFunctionAgentUsageUseCaseImpl(appInteractionRepository)
+                GetAgentUsageUseCaseImpl(appInteractionRepository)
             } else {
-                NoOpAppFunctionAgentUsageUseCase()
+                NoOpAgentUsageUseCase()
             }
         val appFunctionPackageInfoUseCase =
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.BAKLAVA) {
