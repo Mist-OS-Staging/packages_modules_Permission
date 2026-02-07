@@ -36,6 +36,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.android.modules.utils.build.SdkLevel
 import com.android.permissioncontroller.Constants.EXTRA_SESSION_ID
 import com.android.permissioncontroller.R
+import com.android.permissioncontroller.permission.data.LightPackageInfoLiveData
 import com.android.permissioncontroller.permission.model.AppPermissions
 import com.android.permissioncontroller.permission.model.v31.AppPermissionUsage
 import com.android.permissioncontroller.permission.model.v31.PermissionUsages
@@ -48,7 +49,6 @@ import com.android.permissioncontroller.permission.ui.wear.model.WearAppPermissi
 import com.android.permissioncontroller.permission.ui.wear.model.WearAppPermissionUsagesViewModelFactory
 import com.android.permissioncontroller.permission.ui.wear.model.WearLocationProviderInterceptDialogViewModel
 import com.android.permissioncontroller.permission.ui.wear.model.WearLocationProviderInterceptDialogViewModelFactory
-import com.android.permissioncontroller.permission.utils.v37.LightPackageInfoUtils
 import com.android.permissioncontroller.wear.permission.components.theme.WearPermissionTheme
 import java.time.Instant
 import java.util.concurrent.TimeUnit
@@ -78,10 +78,10 @@ class WearAppPermissionGroupsFragment : Fragment(), PermissionsUsagesChangeCallb
             try {
                 val flags = PackageManager.GET_PERMISSIONS
                 val pI = packageManager.getPackageInfo(packageName, flags)
-                LightPackageInfoUtils.mergePermissionsInSharedUid(
+                LightPackageInfoLiveData.mergePermissionsInSharedUid(
                     pI,
                     flags,
-                    activity.packageManager,
+                    activity.packageManager
                 )
             } catch (e: PackageManager.NameNotFoundException) {
                 Log.i(LOG_TAG, "No package:" + activity.callingPackage, e)
