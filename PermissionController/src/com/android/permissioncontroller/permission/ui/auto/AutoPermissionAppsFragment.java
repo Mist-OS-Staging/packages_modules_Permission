@@ -20,8 +20,10 @@ import static com.android.permissioncontroller.Constants.EXTRA_SESSION_ID;
 import static com.android.permissioncontroller.Constants.INVALID_SESSION_ID;
 import static com.android.permissioncontroller.permission.ui.Category.ALLOWED;
 import static com.android.permissioncontroller.permission.ui.Category.ALLOWED_FOREGROUND;
+import static com.android.permissioncontroller.permission.ui.Category.ALLOWED_FOR_COMPATIBILITY;
 import static com.android.permissioncontroller.permission.ui.Category.ASK;
 import static com.android.permissioncontroller.permission.ui.Category.DENIED;
+import static com.android.permissioncontroller.permission.ui.Category.FOOTER;
 import static com.android.permissioncontroller.permission.ui.Category.STORAGE_FOOTER;
 import static com.android.permissioncontroller.permission.ui.ManagePermissionsActivity.EXTRA_CALLER_NAME;
 
@@ -174,8 +176,13 @@ public class AutoPermissionAppsFragment extends AutoSettingsFrameFragment implem
         // Hide allowed foreground label by default, to avoid briefly showing it before updating
         findPreference(ALLOWED_FOREGROUND.getCategoryName()).setVisible(false);
 
+        // TODO(b/479613003): Update this when this category is enabled to Auto
+        findPreference(ALLOWED_FOR_COMPATIBILITY.getCategoryName()).setVisible(false);
+
         // Hide storage footer category
         findPreference(STORAGE_FOOTER.getCategoryName()).setVisible(false);
+
+        findPreference(FOOTER.getCategoryName()).setVisible(false);
 
         Context context = getPreferenceManager().getContext();
 

@@ -34,6 +34,7 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.os.Process
+import android.permission.flags.Flags
 import android.provider.DeviceConfig
 import android.provider.Settings
 import android.server.wm.WindowManagerStateHelper
@@ -207,6 +208,13 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
         const val PROPERTY_MAX_SAFETY_LABELS_PERSISTED_PER_APP =
             "max_safety_labels_persisted_per_app"
 
+        const val HEADER_ALLOWED_ID = "allowed_header"
+        const val HEADER_ALLOWED_FOR_COMPATIBILITY_ID = "allowed_for_compatibility_header"
+        const val HEADER_DENIED_ID = "denied_header"
+
+        const val ALLOWED_FOR_COMPATIBILITY_NEARBY_DEVICES_FOOTER_ID =
+            "allowed_for_compatibility_nearby_devices_footer"
+
         // The highest SDK for which the system will show a "low SDK" warning when launching the app
         const val MAX_SDK_FOR_SDK_WARNING = 27
         const val MIN_SDK_FOR_RUNTIME_PERMS = 23
@@ -325,7 +333,18 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
                 "@android:string/permgrouplab_readMediaVisual",
             android.Manifest.permission.READ_MEDIA_VIDEO to
                 "@android:string/permgrouplab_readMediaVisual",
-        )
+        ).let { map ->
+            if (isAtLeastC() && Flags.accessLocalNetworkPermissionEnabled()) {
+                map + (android.Manifest.permission.ACCESS_LOCAL_NETWORK to
+                        "@android:string/permgrouplab_nearby_devices")
+            } else {
+                map
+            }
+        }
+
+    fun isAtLeastC() =
+        Build.VERSION.SDK_INT >= Build.VERSION_CODES.CINNAMON_BUN ||
+                Build.VERSION.CODENAME == "CinnamonBun"
 
     @Before
     @After
@@ -1262,15 +1281,33 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
         }
     }
 
+    protected fun startManageAppPermissionsActivity() =
+        startManageAppPermissionsActivity(APP_PACKAGE_NAME)
+
     @Suppress("DEPRECATION")
-    protected fun startManageAppPermissionsActivity() {
+    protected fun startManageAppPermissionsActivity(packageName: String) {
         doAndWaitForWindowTransition {
             runWithShellPermissionIdentity {
                 context.startActivity(
                     Intent(Intent.ACTION_MANAGE_APP_PERMISSIONS).apply {
                         addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                         addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                        putExtra(Intent.EXTRA_PACKAGE_NAME, APP_PACKAGE_NAME)
+                        putExtra(Intent.EXTRA_PACKAGE_NAME, packageName)
+                    }
+                )
+            }
+        }
+    }
+
+    @Suppress("DEPRECATION")
+    protected fun startManagePermissionAppsActivity(groupName: String) {
+        doAndWaitForWindowTransition {
+            runWithShellPermissionIdentity {
+                context.startActivity(
+                    Intent(Intent.ACTION_MANAGE_PERMISSION_APPS).apply {
+                        addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                        putExtra(Intent.EXTRA_PERMISSION_GROUP_NAME, groupName)
                     }
                 )
             }
@@ -1505,7 +1542,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
         pressBack()
     }
 
-    private fun getPermissionLabel(permission: String): String {
+    protected fun getPermissionLabel(permission: String): String {
         val labelResName = permissionToLabelResNameMap[permission]
         assertNotNull("Unknown permission $permission", labelResName)
         val labelRes = platformResources.getIdentifier(labelResName, null, null)
