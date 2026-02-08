@@ -57,6 +57,7 @@ import androidx.annotation.StringRes;
 import com.android.modules.utils.build.SdkLevel;
 import com.android.permissioncontroller.PermissionControllerApplication;
 import com.android.permissioncontroller.R;
+import com.android.permissioncontroller.permission.data.LightPackageInfoLiveData;
 import com.android.permissioncontroller.permission.service.LocationAccessCheck;
 import com.android.permissioncontroller.permission.utils.ArrayUtils;
 import com.android.permissioncontroller.permission.utils.ContextCompat;
@@ -65,7 +66,6 @@ import com.android.permissioncontroller.permission.utils.LocationUtils;
 import com.android.permissioncontroller.permission.utils.PermissionMapping;
 import com.android.permissioncontroller.permission.utils.SoftRestrictedPermissionPolicy;
 import com.android.permissioncontroller.permission.utils.Utils;
-import com.android.permissioncontroller.permission.utils.v37.LightPackageInfoUtils;
 
 import java.text.Collator;
 import java.util.ArrayList;
@@ -229,7 +229,7 @@ public final class AppPermissionGroup implements Comparable<AppPermissionGroup> 
             PackageManager pm = Utils.getUserContext(app, user).getPackageManager();
             int flags = PackageManager.GET_PERMISSIONS;
             PackageInfo packageInfo = pm.getPackageInfo(packageName, flags);
-            PackageInfo mergedPackageInfo = LightPackageInfoUtils.mergePermissionsInSharedUid(
+            PackageInfo mergedPackageInfo = LightPackageInfoLiveData.mergePermissionsInSharedUid(
                     packageInfo, flags, pm);
             PackageItemInfo groupInfo = Utils.getGroupInfo(permissionGroupName, app);
             if (groupInfo == null) {

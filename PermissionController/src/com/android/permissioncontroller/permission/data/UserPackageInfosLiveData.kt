@@ -29,7 +29,6 @@ import com.android.permissioncontroller.PermissionControllerApplication
 import com.android.permissioncontroller.permission.model.livedatatypes.LightPackageInfo
 import com.android.permissioncontroller.permission.utils.ContextCompat
 import com.android.permissioncontroller.permission.utils.v35.MultiDeviceUtils
-import com.android.permissioncontroller.permission.utils.v37.LightPackageInfoUtils
 import kotlinx.coroutines.Job
 
 /**
@@ -110,7 +109,7 @@ private constructor(
                     if (packageInfo.sharedUserId != null) {
                         val otherPackages = sharedUidMap[packageInfo.sharedUserId] ?: emptyList()
 
-                        LightPackageInfoUtils.mergePermissionsInSharedUid(
+                        LightPackageInfoLiveData.mergePermissionsInSharedUid(
                             packageInfo,
                             otherPackages,
                         )

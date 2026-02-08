@@ -29,8 +29,9 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
 import com.android.modules.utils.build.SdkLevel;
+import com.android.permissioncontroller.permission.data.LightAppPermGroupLiveData;
+import com.android.permissioncontroller.permission.data.LightPackageInfoLiveData;
 import com.android.permissioncontroller.permission.model.livedatatypes.LightPackageInfo;
-import com.android.permissioncontroller.permission.utils.v37.LightPackageInfoUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -84,7 +85,7 @@ public class SubattributionUtils {
         try {
             int flags = PackageManager.GET_PERMISSIONS | PackageManager.GET_ATTRIBUTIONS;
             packageInfo = context.getPackageManager().getPackageInfo(appInfo.packageName, flags);
-            packageInfo = LightPackageInfoUtils.mergePermissionsInSharedUid(packageInfo, flags,
+            packageInfo = LightPackageInfoLiveData.mergePermissionsInSharedUid(packageInfo, flags,
                     context.getPackageManager());
         } catch (PackageManager.NameNotFoundException e) {
             return null;
