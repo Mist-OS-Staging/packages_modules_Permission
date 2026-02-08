@@ -134,6 +134,8 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"काल"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"<xliff:g id="TIME_DATE">%1$s</xliff:g> वाजता शेवटचे अ‍ॅक्सेस केले"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"पहा"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"कोणत्या ॲप्सनी अलीकडे परवानग्या वापरल्या ते पहा"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> वापर"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"इतर परवानग्या पहा"</string>
@@ -200,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"फक्त अ‍ॅप वापरत असताना अनुमती द्या"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"सर्वांना नेहमी अनुमती द्या"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"प्रत्येक वेळी विचारा"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"तुम्ही शेअर करता, तेव्हा प्रत्येक वेळी विचारा किंवा अनुमती द्या"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"अनुमती देऊ नका"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"मर्यादित अ‍ॅक्सेसची अनुमती द्या"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"अचूक स्थान"</string>
@@ -266,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"अनुमती असलेली"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"नेहमी अनुमती आहे"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"फक्त वापरत असताना अनुमती आहे"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"फक्त मीडिया ॲक्सेस करण्यासाठी अनुमती दिली आहे"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"सर्व फाइल व्यवस्थापित करण्यास अनुमती दिली आहे"</string>
     <string name="ask_header" msgid="2633816846459944376">"प्रत्येक वेळी विचारा"</string>
     <string name="denied_header" msgid="903209608358177654">"अनुमती नाही"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g> वरील <xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"सर्व फाइलचा ॲक्सेस असलेली आणखी ॲप्स पहा"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{एक दिवस}other{# दिवस}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# तास}other{# तास}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# मिनिट}other{# मिनिटे}}"</string>
@@ -470,8 +475,7 @@
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"तुमच्या स्क्रीनवर दिसणाऱ्या माहितीच्या किंवा अ‍ॅप्समध्ये अ‍ॅक्सेस करता येणाऱ्या माहितीच्या समावेशासह असिस्टंट तुमच्या सिस्टममध्ये वापरल्या जाणाऱ्या अ‍ॅप्सबद्दलची माहिती वाचू शकेल."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"तुमचे डिजिटल असिस्टंट ॲप बदलून &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; करायचे आहे का?"</string>
     <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"या असिस्टंटला तुमचे मेसेज आणि ॲप्सनी तुमच्या असिस्टंटसोबत शेअर करणे निवडलेला डेटा यांसारखी माहिती ॲक्सेस करता येईल."</string>
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"या असिस्टंटला तुमचे मेसेज आणि ॲप्सनी तुमच्या असिस्टंटसोबत शेअर करणे निवडलेला डेटा यांसारखी माहिती ॲक्सेस करता येईल.&lt;br&gt;&lt;br&gt;तुम्ही यापूर्वी <xliff:g id="APP_NAME">%1$s</xliff:g> साठी स्क्रीन आणि ॲप डेटा सुरू केल्यामुळे, त्याला तुमच्या स्क्रीनवर उघड्या असलेल्या ॲपमधील आशय ॲक्सेस करण्याची अनुमती दिली जाईल."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"डीबगिंग डेटा शेअर करा"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"तपशीलवार डीबगिंग डेटा शेअर करायचा?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ला डीबगिंग माहिती अपलोड करायला आवडेल."</string>

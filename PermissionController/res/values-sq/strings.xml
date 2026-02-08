@@ -134,6 +134,8 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Dje"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Qasja e fundit: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Pamja"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Shiko se cilat aplikacione kanë përdorur së fundi leje"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Përdorimi i lejeve: <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Shiko lejet e tjera"</string>
@@ -200,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Lejo vetëm kur përdor aplikacionin"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Lejoji gjithmonë të gjitha"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Pyet çdo herë"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Pyet çdo herë ose lejo kur ndan"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Mos lejo"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Lejo qasjen e kufizuar"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Vendndodhja e saktë"</string>
@@ -266,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"Të lejuara"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Lejohet gjithmonë"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Lejohet vetëm kur është në përdorim"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Lejohet qasja vetëm në media"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Lejohet të menaxhojë të gjithë skedarët"</string>
     <string name="ask_header" msgid="2633816846459944376">"Pyet çdo herë"</string>
     <string name="denied_header" msgid="903209608358177654">"Nuk lejohet"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> në <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Shiko më shumë aplikacione me qasje te të gjithë skedarët"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 ditë}other{# ditë}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# orë}other{# orë}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# minutë}other{# minuta}}"</string>
@@ -470,8 +475,7 @@
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Asistenti do të jetë në gjendje të lexojë informacion rreth aplikacioneve në përdorim në sistemin tënd, duke përfshirë informacionin e dukshëm në ekran ose të qasshëm brenda aplikacioneve."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Të ndryshohet aplikacioni i asistentit dixhital në &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Ky asistent do të mund të ketë qasje tek informacionet, si p.sh. mesazhet e tua, dhe te të dhënat që aplikacionet kanë zgjedhur t\'i ndajnë me asistentin tënd."</string>
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"Ky asistent mund të ketë qasje te informacionet si p.sh. mesazhet e tua dhe te të dhënat që aplikacionet kanë zgjedhur t\'i ndajnë me asistentin tënd.&lt;br&gt;&lt;br&gt;Meqenëse ke aktivizuar të dhënat e ekranit dhe të aplikacioneve për <xliff:g id="APP_NAME">%1$s</xliff:g> më parë, ai do të lejohet të ketë qasje te përmbajtjet nga aplikacioni i hapur në ekranin tënd."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Ndaj të dhënat e korrigjimit"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Të ndahen të dhënat e detajuara të korrigjimit?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> dëshiron të ngarkojë informacionin e korrigjimit."</string>

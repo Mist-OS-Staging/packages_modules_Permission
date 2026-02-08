@@ -134,6 +134,8 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Izolo"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Kugcine ukufinyelelwa mhla ka-<xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Buka"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Buka ukuthi yimaphi ama-app asanda kusebenzisa izimvume"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> ukusetshenziswa"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Bona ezinye izimvume"</string>
@@ -200,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Vumela ngenkathi usebenzisa i-app kuphela"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Njalo vumela konke"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Buza njalo"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Buza njalo noma uvumele uma wabelana"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Ungavumeli"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Vumela ukufinyelela okulinganiselwe"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Indawo eqondile"</string>
@@ -266,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"Kuvumelekile"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Kuvunyelwe ngaso sonke isikhathi"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Kuvunyelwe kuphela ngenkathi kusetshenziswa"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Kuvumelekile ukufinyelela kumidiya kuphela"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Kuvumelekile ukuphatha wonke amafayela"</string>
     <string name="ask_header" msgid="2633816846459944376">"Buza njalo"</string>
     <string name="denied_header" msgid="903209608358177654">"Akuvumelekile"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"I-<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> ku-<xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Bona ama-app engeziwe akwazi ukufinyelela wonke amafayela"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{usuku 1}one{izinsuku #}other{izinsuku #}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{Ihora elingu-#}one{Amahora angu-#}other{Amahora angu-#}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{Umzuzu ongu-#}one{Imizuzu engu-#}other{Imizuzu engu-#}}"</string>
@@ -469,10 +474,8 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Qaphela: Uma uqala kabusha idivayisi yakho futhi usethe ukukhiya kwesikrini, lolu hlelo lokusebenza alukwazi ukuqala uze uvule idivayisi yakho."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Isilekeleli sizokwazi ukufunda ulwazi mayelana nezinhlelo zokusebenza ezisetshenziswayo kusistimu yakho, ezifaka ulwazi olubonakala kusikrini sakho noma ezifinyeleleka ngaphakathi kwezinhlelo zokusebenza."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Shintsha i-app yakho yomsizi wedijithali ibe &lt;b&gt;yi-<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
-    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Lo msizi uzokwazi ukufinyelela imininingwane efana nemilayezo yakho, nedatha ama-app akhethe ukwabelana ngayo nomsizi wakho."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"Lo msizi uzokwazi ukufinyelela emininingwaneni efana nemiyalezo yakho, nedatha ama-app akhethe ukwabelana ngayo nomsizi wakho.&lt;br&gt;&lt;br&gt;Kusukela uvule idatha yesikrini neye-app ye-<xliff:g id="APP_NAME">%1$s</xliff:g> ngaphambili, izovunyelwa ukufinyelela ikhontenti evela ku-app evulwe esikrinini sakho."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Yabelana ngedatha yokususa iphutha"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Yabelana ngedatha enemininingwane yokususa iphutha?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"I-<xliff:g id="APP_NAME">%1$s</xliff:g> ingathanda ukulayisha ulwazi lokususa iphutha."</string>
@@ -750,20 +753,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Lo menzeli uzokwazi ukufinyelela ku-<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ukuze athole ulwazi aphinde akuthathele izinyathelo"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Vumela"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Ungavumeli"</string>
-    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
-    <skip />
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"Vumela &lt;b&gt;i-<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; ukuthi isebenzise idatha yesikrini neye-app?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"Lo msizi uzokwazi ukufinyelela ulwazi nekhontenti evela ku-app evulwe esikrinini sakho"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Vumela"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Ungavumeli"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Sebenzisa idatha yesikrini neye-app"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Vumela umsizi afinyelele ulwazi nekhontenti evela ku-app evulwe esikrinini sakho"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Vumela i-<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> ukuthi ifinyelele ulwazi nekhontenti evela ku-app evulwe esikrinini sakho"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Vumela"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Ungavumeli"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Vumela &lt;b&gt;i-<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ukuthi ifinyelele indaweni ngqo isebenzisa inkinobho yendawo?"</string>

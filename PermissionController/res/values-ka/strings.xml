@@ -128,17 +128,13 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"კონფიდენციალურობის საინფ. დაფა"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"აპის ნებართვები"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"აგენტის აქტივობა"</string>
-    <!-- no translation found for agent_activity_timeline_title (5946267721775302726) -->
-    <skip />
-    <!-- no translation found for agent_activity_timeline_category_title_24h (6534067957142090358) -->
-    <skip />
-    <!-- no translation found for agent_activity_timeline_category_title_today (557030782460256459) -->
-    <skip />
-    <!-- no translation found for agent_activity_timeline_category_title_yesterday (8330670564653939302) -->
-    <skip />
-    <!-- no translation found for agent_activity_timeline_activity_summary (8865161887228114724) -->
-    <skip />
-    <!-- no translation found for agent_activity_timeline_preference_widget (8771365108648764365) -->
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> — აქტივობა"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"ბოლო 24 საათის განმავლობაში"</string>
+    <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"დღეს"</string>
+    <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"გუშინ"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"ბოლო წვდომის დრო: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"ნახვა"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
     <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ნახეთ, რომელმა აპებმა გამოიყენა ახლახან ნებართვები"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>-ის გამოყენება"</string>
@@ -206,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"მხოლოდ აპის გამოყენებისას დაშვება"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"ყოველთვის ყველას დაშვება"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"ყოველთვის მკითხე"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"ყოველ ჯერზე კითხვა ან გაზიარებისას დაშვება"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"არ დაიშვას"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"შეზღუდული წვდომის დაშვება"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"ზუსტი მდებარეობა"</string>
@@ -272,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"დაშვებულია"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"დაშვებულია ყოველთვის"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"დაშვებულია მხოლოდ გამოყენებისას"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"დაშვებულია მხოლოდ მედიაზე წვდომა"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"დაშვებულია ყველა ფაილის მართვა"</string>
     <string name="ask_header" msgid="2633816846459944376">"ყოველთვის მკითხე"</string>
     <string name="denied_header" msgid="903209608358177654">"არ არის დაშვებული"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> (<xliff:g id="DEVICE_NAME">%2$s</xliff:g>)"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"სხვა აპების ნახვა, რომლებსაც ყველა ფაილზე წვდომა შეუძლია"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 დღე}other{# დღე}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# საათი}other{# საათი}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# წუთი}other{# წუთი}}"</string>
@@ -476,8 +475,7 @@
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"ასისტენტი შეძლებს თქვენს სისტემაში გამოყენებული აპების ინფორმაციის წაკითხვას (მათ შორის, ინფორმაციის, რომელიც ნაჩვენებია თქვენს ეკრანზე ან ხელმისაწვდომია აპებში)."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"გსურთ თქვენი ციფრული ასისტენტის აპის შეცვლა &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;-ით?"</string>
     <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"ეს ასისტენტი შეძლებს წვდომას ისეთ ინფორმაციაზე, როგორიცაა თქვენი შეტყობინებები და მონაცემები, რომლებიც აპებმა აირჩია თქვენს ასისტენტთან გასაზიარებლად."</string>
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"ეს ასისტენტი შეძლებს წვდომას ისეთ ინფორმაციაზე, როგორიცაა თქვენი შეტყობინებები და მონაცემები, რომლებიც აპებმა აირჩია თქვენს ასისტენტთან გასაზიარებლად.&lt;br&gt;&lt;br&gt;რადგან თქვენ ადრე ჩართეთ ეკრანისა და აპის მონაცემები <xliff:g id="APP_NAME">%1$s</xliff:g>-ისთვის, მას ექნება წვდომა თქვენს ეკრანზე გახსნილი აპის კონტენტზე."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"გამართვის მონაცემების გაზიარება"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"გსურთ გამართვის დეტალური მონაცემების გაზიარება?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ითხოვს გამართვის ინფორმაციის ატვირთვას."</string>

@@ -134,6 +134,8 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"گزشتہ کل"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"آخری رسائی <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"دیکھیں"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"دیکھیں کہ حال ہی میں کون سی ایپ نے اجازتوں کا استعمال کیا ہے"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> کا استعمال"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"دیگر اجازتیں دیکھیں"</string>
@@ -200,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"صرف ایپ استعمال کرتے وقت اجازت دیں"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"ہمیشہ سبھی کو اجازت دیں"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"ہر بار پوچھیں"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"ہر بار پوچھیں یا اشتراک کرتے وقت اجازت دیں"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"اجازت نہ دیں"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"محدود رسائی کی اجازت دیں"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"قطعی مقام"</string>
@@ -266,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"اجازت یافتہ"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"ہر وقت اجازت یافتہ"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"صرف استعمال کے دوران اجازت ہے"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"صرف میڈیا تک رسائی کی اجازت دیں"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"سبھی فائلز کا نظم کرنے کے ليے اجازت یافتہ"</string>
     <string name="ask_header" msgid="2633816846459944376">"ہر بار پوچھیں"</string>
     <string name="denied_header" msgid="903209608358177654">"اجازت نہیں ہے"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g> پر <xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"مزید ایپس دیکھیں جو تمام فائلز تک رسائی حاصل کر سکتی ہیں"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 دن}other{# دن}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# گھنٹہ}other{# گھنٹے}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# منٹ}other{# منٹ}}"</string>
@@ -470,8 +475,7 @@
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"اسسٹنٹ آپ کے سسٹم پر زیر استعمال ایپس کے بارے میں معلومات، بشمول آپ کی اسکرین پر نظر آنے والی یا ایپس کے اندر قابل رسائی معلومات پڑھ سکے گی۔"</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"‏آپ کی ڈیجیٹل اسسٹنٹ ایپ کو ‎&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‎ میں تبدیل کریں؟"</string>
     <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"یہ اسسٹنٹ آپ کے پیغامات اور ایپس کے آپ کی اسسٹنٹ کے ساتھ اشتراک کرنے کے لیے منتخب کردہ ڈیٹا جیسی معلومات تک رسائی حاصل کر سکے گی۔"</string>
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"‏یہ اسسٹنٹ آپ کی معلومات تک رسائی حاصل کر سکے گی، جیسے کہ آپ کے پیغامات اور وہ ڈیٹا جو ایپس نے آپ کی اسسٹنٹ کے ساتھ اشتراک کرنے کے لیے منتخب کیا ہے۔‎&lt;br&gt;&lt;br&gt;‎چونکہ آپ نے پہلے اس <xliff:g id="APP_NAME">%1$s</xliff:g> کے لیے اسکرین اور ایپ کے ڈیٹا کو آن کر رکھا ہے، اس لیے اسے آپ کی اسکرین پر کھلی ہوئی ایپ کے مواد تک رسائی کی بھی اجازت ہوگی۔"</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"ڈیبگنگ ڈیٹا کا اشتراک کریں"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"ڈیبگنگ کے تفصیلی ڈیٹا کا اشتراک کریں؟"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ڈیبگنگ کی معلومات اپ لوڈ کرنا چاہتی ہے۔"</string>

@@ -134,6 +134,8 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Wczoraj"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Ostatnie użycie: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Wyświetl"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Wyświetl aplikacje, które ostatnio używały uprawnień"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> – korzystanie z uprawnienia"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Zobacz inne uprawnienia"</string>
@@ -200,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Zezwalaj tylko podczas używania aplikacji"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Zawsze zezwalaj na wszystko"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Zawsze pytaj"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Pytaj za każdym razem lub zezwalaj, gdy udostępniasz"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Nie zezwalaj"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Zezwól na ograniczony dostęp"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Dokładna lokalizacja"</string>
@@ -266,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"Ma dostęp"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Ciągły dostęp"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Mają dostęp tylko podczas używania"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Zezwolono na dostęp tylko do multimediów"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Zezwolono na zarządzanie wszystkimi plikami"</string>
     <string name="ask_header" msgid="2633816846459944376">"Zawsze pytaj"</string>
     <string name="denied_header" msgid="903209608358177654">"Nie mają dostępu"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> na tym urządzeniu: <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Zobacz więcej aplikacji z dostępem do wszystkich plików"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 dzień}few{# dni}many{# dni}other{# dnia}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# godzina}few{# godziny}many{# godzin}other{# godziny}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# minuta}few{# minuty}many{# minut}other{# minuty}}"</string>
@@ -469,10 +474,8 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Uwaga: Po ponownym uruchomieniu urządzenia z ustawioną blokadą ekranu ta aplikacja będzie mogła uruchomić się dopiero wtedy, gdy odblokujesz urządzenie."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Asystent będzie mógł odczytywać informacje o aplikacjach używanych w systemie. Obejmuje to też informacje widoczne na ekranie i dostępne w aplikacjach."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Zmienić aplikację asystenta cyfrowego na &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
-    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Ten asystent będzie mieć dostęp do informacji takich jak wiadomości oraz do danych udostępnianych mu przez aplikacje."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"Ten asystent będzie mieć dostęp do informacji takich jak wiadomości oraz do danych udostępnianych mu przez aplikacje.&lt;br&gt;&lt;br&gt;Ponieważ wcześniej włączono dla aplikacji <xliff:g id="APP_NAME">%1$s</xliff:g> ustawienie dostępu do danych z ekranu i aplikacji, będzie ona miała również dostęp do treści z aplikacji otwartej na ekranie."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Udostępnianie danych debugowania"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Udostępnić szczegółowe dane debugowania?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> chce przesłać informacje debugowania."</string>
@@ -750,20 +753,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Umożliwi to agentowi dostęp do informacji i wykonywanie działań w aplikacji <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Zezwalaj"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Nie zezwalaj"</string>
-    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
-    <skip />
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"Zezwolić aplikacji &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; na używanie danych z ekranu i aplikacji?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"Ten asystent będzie mieć dostęp do informacji i treści z aplikacji otwartej na ekranie"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Zezwól"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Nie zezwalaj"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Używaj danych z ekranu i aplikacji"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Zezwól asystentowi na dostęp do informacji i treści z aplikacji otwartej na ekranie"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Zezwól aplikacji <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> na dostęp do informacji i treści z aplikacji otwartej na ekranie"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Zezwól"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Nie zezwalaj"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Zezwolić aplikacji &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; na dostęp do dokładnej lokalizacji po naciśnięciu przycisku lokalizacji?"</string>

@@ -134,6 +134,8 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"昨天"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"上次访问时间：<xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"查看"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"查看最近使用过权限的应用"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>使用情况"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"查看其他权限"</string>
@@ -200,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"仅在使用该应用时允许"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"始终全部允许"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"每次都询问"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"每次都询问或在分享时允许"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"不允许"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"允许有限访问"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"确切位置"</string>
@@ -266,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"已允许"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"始终允许"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"仅在使用时允许"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"仅获准访问媒体文件"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"获准管理所有文件"</string>
     <string name="ask_header" msgid="2633816846459944376">"每次都询问"</string>
     <string name="denied_header" msgid="903209608358177654">"不允许"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g>上的<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"查看更多可以访问所有文件的应用"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 天}other{# 天}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# 小时}other{# 小时}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# 分钟}other{# 分钟}}"</string>
@@ -469,10 +474,8 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"注意：如果您重启设备并设置了屏幕锁定，则必须将设备解锁才能运行此应用。"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"这个小助手将能够读取与您系统中正在使用的应用相关的信息，包括屏幕上显示的信息或应用中可使用的信息。"</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"要将数字助理应用更换为&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;吗？"</string>
-    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"该助理将能够访问您的消息等信息，以及应用选择与助理分享的数据。"</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"此助理将能够访问您的消息等信息，以及应用选择与助理分享的数据。&lt;br&gt;&lt;br&gt;由于您之前已为“<xliff:g id="APP_NAME">%1$s</xliff:g>”开启了屏幕和应用数据的访问权限，因此助理将能够访问屏幕上打开的应用中的内容。"</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"分享调试数据"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"是否分享详细调试数据？"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g>请求上传调试信息。"</string>
@@ -525,11 +528,11 @@
     <string name="permgrouprequest_device_aware_read_media_visual" msgid="3122576538319059333">"要允许&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;在&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;上访问照片和视频吗？"</string>
     <string name="permgrouprequest_more_photos" msgid="128933814654231321">"允许&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;访问此设备上的更多照片和视频？"</string>
     <string name="permgrouprequest_device_aware_more_photos" msgid="1703469013613723053">"要允许&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;在&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;上访问更多照片和视频吗？"</string>
-    <string name="permgrouprequest_microphone" msgid="2825208549114811299">"要允许 &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; 录音吗？"</string>
-    <string name="permgrouprequest_device_aware_microphone" msgid="8821701550505437951">"要允许&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;在&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;上录音吗？"</string>
+    <string name="permgrouprequest_microphone" msgid="2825208549114811299">"要允许“&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;”录音吗？"</string>
+    <string name="permgrouprequest_device_aware_microphone" msgid="8821701550505437951">"要允许“&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;”在“&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;”上录音吗？"</string>
     <string name="permgrouprequestdetail_microphone" msgid="8510456971528228861">"此应用将只能在您使用它时录音"</string>
     <string name="permgroupbackgroundrequest_microphone" msgid="8874462606796368183">"要允许“&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;”录音吗？"</string>
-    <string name="permgroupbackgroundrequest_device_aware_microphone" msgid="3321823187623762958">"要允许&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;在&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;上录音吗？"</string>
+    <string name="permgroupbackgroundrequest_device_aware_microphone" msgid="3321823187623762958">"要允许“&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;”在“&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;”上录音吗？"</string>
     <string name="permgroupbackgroundrequestdetail_microphone" msgid="553702902263681838">"此应用可能想要随时录音，即使在您未使用它的时候。"<annotation id="link">"您可以在“设置”中授权"</annotation>"。"</string>
     <string name="permgroupupgraderequest_microphone" msgid="1362781696161233341">"要更改&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;的麦克风使用权限吗？"</string>
     <string name="permgroupupgraderequest_device_aware_microphone" msgid="8722411173971679806">"要更改&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;在&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;上的麦克风使用权限吗？"</string>
@@ -750,20 +753,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"此智能体将能够访问“<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>”，帮助您获取信息和执行操作"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"允许"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"不允许"</string>
-    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
-    <skip />
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"要允许“&lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt;”使用屏幕和应用数据吗？"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"该助理将能够访问屏幕上打开的应用中的信息和内容"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"允许"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"不允许"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"使用屏幕和应用数据"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"允许助理访问屏幕上打开的应用中的信息和内容"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"允许“<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>”访问屏幕上打开的应用中的信息和内容"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"允许"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"不允许"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"要允许“&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;”使用位置信息按钮获取精确位置吗？"</string>

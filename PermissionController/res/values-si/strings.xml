@@ -134,6 +134,8 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"ඊයේ"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"අවසන් ප්‍රවේශය <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"බලන්න"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"මෑතකදී අවසර භාවිත කළ යෙදුම් බලන්න"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> භාවිතය"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"වෙනත් අවසර බලන්න"</string>
@@ -200,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"යෙදුම භාවිතයේදී පමණක් ඉඩ දෙන්න"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"සැම විටම සියල්ලට ඉඩ දෙන්න"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"සෑම විටම ඉල්ලන්න"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"සෑම විට ම අසන්න හෝ ඔබ බෙදා ගන්නා විට ඉඩ දෙන්න"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"ඉඩ නොදෙන්න"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"සීමිත ප්‍රවේශයට ඉඩ දෙන්න"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"ඉතා නිවැරදි ස්ථානය"</string>
@@ -266,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"ඉඩ දුන්"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"සැම විටම ඉඩ දෙනු ලැබේ"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"භාවිත කෙරෙන විට පමණක් අනුමත කෙරේ"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"මාධ්‍ය වෙත පමණක් ප්‍රවේශය ඉඩ දී ඇත"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"සියලු පාලන කළමනාකරණය කිරීමට ඉඩ දී ඇත"</string>
     <string name="ask_header" msgid="2633816846459944376">"සෑම විටම ඉල්ලන්න"</string>
     <string name="denied_header" msgid="903209608358177654">"ඉඩ නොදේ"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g> මත <xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"සියලු ගොනු වෙත ප්‍රවේශ විය හැකි තව යෙදුම් බලන්න"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{දින 1ක්}one{දින #ක්}other{දින #ක්}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{පැය #ක්}one{පැය #ක්}other{පැය #ක්}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{මිනිත්තු #ක්}one{මිනිත්තු #ක්}other{මිනිත්තු #ක්}}"</string>
@@ -469,10 +474,8 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"සටහන: ඔබ ඔබේ උපාංගය යළි අරඹන්නේ නම් සහ තිර අඟුලක් සකසා තිබේ නම්, ඔබ ඔබේ උපාංගය අඟුලු අරින තෙක් මෙම යෙදුම ආරම්භ විය නොහැක."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"සහකරුට ඔබේ තිරය මත දෘශ්‍යමාන වන හෝ යෙදුම් තුළ ප්‍රවේශ විය හැකි තොරතුරු ඇතුළුව, ඔබේ පද්ධතිය මත භාවිතයේ ඇති යෙදුම් ගැන කියවීමට හැකි වෙයි."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"ඔබේ ඩිජිටල් සහයක යෙදුම &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; වෙත වෙනස් කරන්න ද?"</string>
-    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"මෙම සහයකට ඔබේ පණිවිඩ වැනි තතු සහ යෙදුම් ඔබේ සහයක සමග බෙදා ගැනීමට තෝරාගෙන ඇති දත්ත වෙත ප්‍රවේශ වීමට හැකි වනු ඇත."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"මෙම සහයකට ඔබේ පණිවිඩ වැනි තතු සහ යෙදුම් ඔබේ සහයක සමග බෙදා ගැනීමට තෝරා ඇති දත්ත වෙත ප්‍රවේශ වීමට හැකි වනු ඇත.&lt;br&gt;&lt;br&gt;ඔබ මීට පෙර <xliff:g id="APP_NAME">%1$s</xliff:g> සඳහා තිර සහ යෙදුම් දත්ත ක්‍රියාත්මක කර ඇති බැවින්, ඔබේ තිරය මත විවෘත යෙදුමෙන් අන්තර්ගතයට ප්‍රවේශ වීමට ද එයට ඉඩ දෙනු ඇත."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"නිදොසීම් දත්ත බෙදා ගන්න"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"විස්තරාත්මක නිදොසීම් දත්ත බෙදා ගන්න ද?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> නිදොසීම් තොරතුරු උඩුගත කිරීමට කැමතිය."</string>
@@ -750,20 +753,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"මෙම නියෝජිතයාට තතු ලබා ගැනීමට සහ ඔබ වෙනුවෙන් ක්‍රියාමාර්ග ගැනීමට <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> වෙත ප්‍රවේශ විය හැක"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"ඉඩ දෙන්න"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"ඉඩ නොදෙන්න"</string>
-    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
-    <skip />
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"&lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; හට තිරය සහ යෙදුම් දත්ත භාවිත කිරීමට ඉඩ දෙන්න ද?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"මෙම සහයකට ඔබේ තිරය මත විවෘත යෙදුමෙන් තතු සහ අන්තර්ගතයට ප්‍රවේශ වීමට හැකි වනු ඇත"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"ඉඩ දෙන්න"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"ඉඩ නොදෙන්න"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"තිරය සහ යෙදුම් දත්ත භාවිතා කරන්න"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"ඔබේ තිරය මත විවෘත යෙදුමෙන් තතු සහ අන්තර්ගතයට ප්‍රවේශ වීමට සහායකට ඉඩ දෙන්න"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> හට ඔබේ තිරය මත විවෘත යෙදුමෙන් තතු සහ අන්තර්ගතයට ප්‍රවේශ වීමට ඉඩ දෙන්න"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"ඉඩ දෙන්න"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"ඉඩ නොදෙන්න"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"ස්ථාන බොත්තමක් භාවිත කරමින් &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; හට නිශ්චිත ස්ථානයට ප්‍රවේශ වීමට ඉඩ දෙන්න ද?"</string>

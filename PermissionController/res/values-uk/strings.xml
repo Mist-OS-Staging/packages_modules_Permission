@@ -134,6 +134,8 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Учора"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Останній доступ: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Переглянути"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Показувати додатки, які нещодавно використовували дозволи"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>: використання"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Переглянути інші дозволи"</string>
@@ -200,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Дозволяти, лише коли додаток використовується"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Завжди дозволяти всі"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Запитувати щоразу"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Запитувати щоразу або дозволяти під час надсилання"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Не дозволяти"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Дозволити обмежений доступ"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Точне місцезнаходження"</string>
@@ -266,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"Дозволено"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Завжди дозволено"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Дозволено лише під час використання"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Мають доступ лише до медіафайлів"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Можуть керувати всіма файлами"</string>
     <string name="ask_header" msgid="2633816846459944376">"Запитувати щоразу"</string>
     <string name="denied_header" msgid="903209608358177654">"Заборонено"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> (<xliff:g id="DEVICE_NAME">%2$s</xliff:g>)"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Переглянути інші додатки, які мають доступ до всіх файлів"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 день}one{# день}few{# дні}many{# днів}other{# дня}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# година}one{# година}few{# години}many{# годин}other{# години}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# хвилина}one{# хвилина}few{# хвилини}many{# хвилин}other{# хвилини}}"</string>
@@ -464,14 +469,13 @@
     <string name="no_special_app_access" msgid="6950277571805106247">"Немає спеціального доступу"</string>
     <string name="special_app_access_no_apps" msgid="4102911722787886970">"Немає додатків"</string>
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"Не підтримує робочий профіль"</string>
-    <string name="home_confirmation_title" msgid="8070603501839126093">"Змінити додаток головного екрана за умовчанням на &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
+    <string name="home_confirmation_title" msgid="8070603501839126093">"Змінити додаток за умовчанням для головного екрана на &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="home_confirmation_message" msgid="248811491851505593">"Це призведе до заміни головного екрана й може вплинути на доступ до функцій пристрою.&lt;br&gt;&lt;br&gt;Цей вибір можна будь-коли змінити в налаштуваннях &lt;b&gt;додатка головного екрана за умовчанням&lt;/b&gt;."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Примітка. Якщо після перезавантаження ввімкнеться екран блокування, цей додаток не запуститься, доки ви не розблокуєте пристрій."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Асистент матиме доступ до інформації про додатки у вашій системі, зокрема до даних на екрані та в додатках."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Змінити додаток цифрового помічника на &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Помічник матиме доступ до ваших даних, як-от повідомлень і інформації, яку додатки дозволили йому надавати."</string>
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"Помічник матиме доступ до ваших даних, таких як повідомлення й інформація, якою додатки з ним діляться.&lt;br&gt;&lt;br&gt;Оскільки ви вже ввімкнули доступ до даних екрана й додатків для <xliff:g id="APP_NAME">%1$s</xliff:g>, помічник також отримуватиме контент із додатка, відкритого на екрані."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Поділитися даними про налагодження"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Поділитися детальними даними про налагодження?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"Додаток <xliff:g id="APP_NAME">%1$s</xliff:g> хоче завантажити інформацію про налагодження."</string>
