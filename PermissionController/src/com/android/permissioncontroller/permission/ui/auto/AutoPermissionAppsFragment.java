@@ -27,12 +27,15 @@ import static com.android.permissioncontroller.permission.ui.Category.FOOTER;
 import static com.android.permissioncontroller.permission.ui.Category.STORAGE_FOOTER;
 import static com.android.permissioncontroller.permission.ui.ManagePermissionsActivity.EXTRA_CALLER_NAME;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.text.Html;
+import android.text.TextUtils;
 import android.util.ArrayMap;
 
 import androidx.annotation.Nullable;
@@ -70,6 +73,9 @@ public class AutoPermissionAppsFragment extends AutoSettingsFrameFragment implem
 
     private static final String LOG_TAG = "AutoPermissionAppsFragment";
     private static final String KEY_EMPTY = "_empty";
+    private static final String FOOTER_PREFERENCE_KEY = "footer_preference";
+
+    private static final String FOOTER_TEXT_DELIMITER = "\n\n";
 
     /** Creates a new instance of {@link AutoPermissionAppsFragment} for the given permission. */
     public static AutoPermissionAppsFragment newInstance(String permissionGroupName,
@@ -158,6 +164,31 @@ public class AutoPermissionAppsFragment extends AutoSettingsFrameFragment implem
         setAction(label, v -> mViewModel.updateShowSystem(!showSystemFinal));
     }
 
+    private void updateFooter(List<CharSequence> footerTexts) {
+        PreferenceCategory preferenceCategory = findPreference(FOOTER.getCategoryName());
+        if (footerTexts.isEmpty()) {
+            preferenceCategory.setVisible(false);
+            return;
+        }
+        preferenceCategory.setVisible(true);
+
+        PreferenceCategory footerPreference = findPreference(FOOTER_PREFERENCE_KEY);
+        if (footerPreference == null) {
+            Context context = getPreferenceScreen().getPreferenceManager().getContext();
+            footerPreference = new PreferenceCategory(context);
+            footerPreference.setKey(FOOTER_PREFERENCE_KEY);
+            footerPreference.setIcon(Utils.applyTint(getActivity(), R.drawable.ic_info_outline,
+                    android.R.attr.colorControlNormal));
+            preferenceCategory.addPreference(footerPreference);
+        }
+
+        CharSequence footerText = footerTexts.get(0);
+        for (int i = 1; i < footerTexts.size(); i++) {
+            footerText = TextUtils.concat(footerText, FOOTER_TEXT_DELIMITER, footerTexts.get(i));
+        }
+        footerPreference.setTitle(footerText);
+    }
+
     /**
      * Main differences between this phone implementation and this one are:
      * <ul>
@@ -175,9 +206,6 @@ public class AutoPermissionAppsFragment extends AutoSettingsFrameFragment implem
         }
         // Hide allowed foreground label by default, to avoid briefly showing it before updating
         findPreference(ALLOWED_FOREGROUND.getCategoryName()).setVisible(false);
-
-        // TODO(b/479613003): Update this when this category is enabled to Auto
-        findPreference(ALLOWED_FOR_COMPATIBILITY.getCategoryName()).setVisible(false);
 
         // Hide storage footer category
         findPreference(STORAGE_FOOTER.getCategoryName()).setVisible(false);
@@ -234,6 +262,8 @@ public class AutoPermissionAppsFragment extends AutoSettingsFrameFragment implem
                     category.setVisible(false);
                 } else if (grantCategory.equals(ASK)) {
                     category.setVisible(false);
+                } else if (grantCategory.equals(ALLOWED_FOR_COMPATIBILITY)) {
+                    category.setVisible(false);
                 } else {
                     empty.setTitle(getString(R.string.no_apps_denied));
                 }
@@ -242,6 +272,8 @@ public class AutoPermissionAppsFragment extends AutoSettingsFrameFragment implem
             } else if (grantCategory.equals(ALLOWED_FOREGROUND)) {
                 category.setVisible(true);
             } else if (grantCategory.equals(ASK)) {
+                category.setVisible(true);
+            } else if (grantCategory.equals(ALLOWED_FOR_COMPATIBILITY)) {
                 category.setVisible(true);
             }
 
@@ -293,6 +325,15 @@ public class AutoPermissionAppsFragment extends AutoSettingsFrameFragment implem
             }
             KotlinUtils.INSTANCE.sortPreferenceGroup(category, this::comparePreference, false);
         }
+
+        PreferenceCategory category = findPreference(ALLOWED_FOR_COMPATIBILITY.getCategoryName());
+        boolean isNearbyDevices = Manifest.permission_group.NEARBY_DEVICES.equals(mPermGroupName);
+        List<CharSequence> footerTexts = new ArrayList<>();
+        if (isNearbyDevices && category.isVisible()) {
+            footerTexts.add(Html.fromHtml(getString(
+                    R.string.allowed_for_compatibility_nearby_devices_footer), 0));
+        }
+        updateFooter(footerTexts);
 
         mViewModel.setCreationLogged(true);
 
