@@ -85,20 +85,32 @@ class RequestReadScreenContextFragment : DialogFragment() {
         titleText.text = title
 
         positiveButton.apply { setOnClickListener { onGrant() } }
-        negativeButton.apply {
-            setOnClickListener {
-                viewModel.markRequestDenied()
-                dialog!!.cancel()
-            }
+        negativeButton.apply { setOnClickListener { onDeny() } }
+        return Dialog(activity).apply {
+            setContentView(view)
+            setCanceledOnTouchOutside(false)
         }
-        return Dialog(activity).apply { setContentView(view) }
     }
 
+    // onGrant explicitly calls dismiss on dialog before finishing. onCancel is not called if
+    // dismissed explicitly
     fun onGrant() {
         viewModel.setAllowed()
+        dismiss()
         setResultAndFinish(Activity.RESULT_OK)
     }
 
+    // onDeny explicitly calls dismiss on dialog before finishing. onCancel is not called if
+    // dismissed explicitly.
+    fun onDeny() {
+        viewModel.markRequestDenied()
+        dismiss()
+        setResultAndFinish(Activity.RESULT_CANCELED)
+    }
+
+    // Dialog's onCancel is called before onDismiss when dialog is cancelled via back,
+    // touch outside, etc. But not when dismiss is called explicitly. Dismiss will be called by
+    // dialog internals after this method.
     override fun onCancel(dialog: DialogInterface) {
         super.onCancel(dialog)
         setResultAndFinish(Activity.RESULT_CANCELED)
