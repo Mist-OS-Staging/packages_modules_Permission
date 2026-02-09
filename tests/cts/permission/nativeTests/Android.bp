@@ -40,7 +40,7 @@ cc_test {
         "libgtest_ndk_c++",
         "libbase_ndk",
     ],
-    stl: "libc++_static",
+    stl: "libc++",
     // Tag this module as a cts test artifact
     test_suites: [
         "cts",
