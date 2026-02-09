@@ -109,7 +109,7 @@ class AgentUsageDetailsViewModelTest {
         FLAG_ENABLE_APP_INTERACTION_API,
     )
     fun verifyAgentUsagesDetailsAreShownForPast24Hours() = runTest {
-        assumeFalse(isAutomotive() || isTv() || isWatch())
+        assumeFalse(isTv() || isWatch())
         val viewModel =
             getViewModel(defaultAccessHistory, SavedStateHandle(mapOf("show7Days" to false)))
         val uiState = getAgentUsageDetailsUiState(viewModel)
@@ -125,7 +125,7 @@ class AgentUsageDetailsViewModelTest {
         FLAG_ENABLE_APP_INTERACTION_API,
     )
     fun verifyAgentUsagesDetailsAreShownForPast7Days() = runTest {
-        assumeFalse(isAutomotive() || isTv() || isWatch())
+        assumeFalse(isTv() || isWatch())
         val viewModel =
             getViewModel(defaultAccessHistory, SavedStateHandle(mapOf("show7Days" to true)))
         val uiState = getAgentUsageDetailsUiState(viewModel)

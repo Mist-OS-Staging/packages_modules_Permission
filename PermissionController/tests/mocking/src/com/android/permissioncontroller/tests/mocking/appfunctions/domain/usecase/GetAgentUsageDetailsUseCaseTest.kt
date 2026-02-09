@@ -81,7 +81,7 @@ class GetAgentUsageDetailsUseCaseTest {
         FLAG_ENABLE_APP_INTERACTION_API,
     )
     fun getAgentUsages_success() = runTest {
-        assumeFalse(isAutomotive() || isTv() || isWatch())
+        assumeFalse(isTv() || isWatch())
 
         val accessHistory =
             listOf(
@@ -143,7 +143,7 @@ class GetAgentUsageDetailsUseCaseTest {
         FLAG_ENABLE_APP_INTERACTION_API,
     )
     fun getAgentUsages_showsOnlyLastAccess() = runTest {
-        assumeFalse(isAutomotive() || isTv() || isWatch())
+        assumeFalse(isTv() || isWatch())
 
         val accessHistory =
             listOf(
@@ -192,7 +192,7 @@ class GetAgentUsageDetailsUseCaseTest {
         FLAG_ENABLE_APP_INTERACTION_API,
     )
     fun getAgentUsages_resultIsInDescendingAccessTime() = runTest {
-        assumeFalse(isAutomotive() || isTv() || isWatch())
+        assumeFalse(isTv() || isWatch())
 
         val accessHistory =
             listOf(
@@ -243,7 +243,7 @@ class GetAgentUsageDetailsUseCaseTest {
         FLAG_ENABLE_APP_INTERACTION_API,
     )
     fun getAgentUsages_past7DaysKeepsLastAccessPerDayPerPackage() = runTest {
-        assumeFalse(isAutomotive() || isTv() || isWatch())
+        assumeFalse(isTv() || isWatch())
 
         val twoDaysAgoBase = now.minusDays(2).truncatedTo(ChronoUnit.DAYS)
         val twoDaysAgoOlder = twoDaysAgoBase.plusHours(10).toInstant().toEpochMilli() // 10:00 AM
@@ -305,7 +305,7 @@ class GetAgentUsageDetailsUseCaseTest {
         FLAG_ENABLE_APP_INTERACTION_API,
     )
     fun getAgentUsages_deviceAssistanceAccessesAreGrouped() = runTest {
-        assumeFalse(isAutomotive() || isTv() || isWatch())
+        assumeFalse(isTv() || isWatch())
 
         val accessHistory =
             listOf(
@@ -360,7 +360,7 @@ class GetAgentUsageDetailsUseCaseTest {
     @Test
     @RequiresFlagsDisabled(Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED)
     fun getAgentUsages_flagOff_emptyResult() = runTest {
-        assumeFalse(isAutomotive() || isTv() || isWatch())
+        assumeFalse(isTv() || isWatch())
 
         val accessHistory =
             listOf(
@@ -391,9 +391,6 @@ class GetAgentUsageDetailsUseCaseTest {
 
     private fun isTv(): Boolean =
         instrumentationContext.packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK)
-
-    private fun isAutomotive(): Boolean =
-        instrumentationContext.packageManager.hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE)
 
     private fun isWatch(): Boolean =
         instrumentationContext.packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)
