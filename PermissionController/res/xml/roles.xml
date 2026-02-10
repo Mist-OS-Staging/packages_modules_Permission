@@ -1315,8 +1315,6 @@
                 featureFlag="android.companion.Flags.expandAppStreamingRolePermissions"
                 minSdkVersion="36"
                 mode="allowed" />
-            <app-op name="android:read_restricted_messages" mode="allowed"
-                featureFlag="com.android.internal.telephony.flags.Flags.secureAccessToRestrictedRcsMessages"/>
         </app-ops>
     </role>
 
