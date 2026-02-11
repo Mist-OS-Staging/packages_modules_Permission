@@ -251,6 +251,8 @@ public final class RoleManager {
      *
      * This role enables the ability to view and restrict content for the user.
      *
+     * @see android.app.contentrestriction.ContentRestrictionAppService
+     * @see android.app.contentrestriction.ContentRestrictionManager
      */
     @FlaggedApi(Flags.FLAG_CONTENT_RESTRICTION_ROLE_ENABLED)
     public static final String ROLE_CONTENT_RESTRICTION = "android.app.role.CONTENT_RESTRICTION";
