@@ -45,9 +45,7 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
     private val clientCallback =
         object : LocationButtonClient {
             override fun onPermissionResult(granted: Boolean) {
-                post {
-                    Log.i(TAG, "onPermissionResult granted: $granted")
-                }
+                post { Log.i(TAG, "onPermissionResult granted: $granted") }
             }
 
             override fun onSessionError(t: Throwable) {
