@@ -334,17 +334,13 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
             android.Manifest.permission.READ_MEDIA_VIDEO to
                 "@android:string/permgrouplab_readMediaVisual",
         ).let { map ->
-            if (isAtLeastC() && Flags.accessLocalNetworkPermissionEnabled()) {
+            if (SdkLevel.isAtLeastV() && Flags.accessLocalNetworkPermissionEnabled()) {
                 map + (android.Manifest.permission.ACCESS_LOCAL_NETWORK to
                         "@android:string/permgrouplab_nearby_devices")
             } else {
                 map
             }
         }
-
-    fun isAtLeastC() =
-        Build.VERSION.SDK_INT >= Build.VERSION_CODES.CINNAMON_BUN ||
-                Build.VERSION.CODENAME == "CinnamonBun"
 
     @Before
     @After
