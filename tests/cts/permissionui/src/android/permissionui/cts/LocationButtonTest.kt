@@ -16,8 +16,11 @@
 package android.permissionui.cts
 
 import android.Manifest
+import android.app.permissionui.LocationButtonRequest
+import android.app.permissionui.LocationButtonSession
 import android.content.ComponentName
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Build
 import android.permission.flags.Flags
 import android.platform.test.annotations.RequiresFlagsEnabled
@@ -26,6 +29,7 @@ import androidx.test.filters.SdkSuppress
 import androidx.test.uiautomator.By
 import com.android.compatibility.common.util.SystemUtil.eventually
 import org.junit.After
+import org.junit.Assert.assertEquals
 import org.junit.Assume.assumeFalse
 import org.junit.Before
 import org.junit.Test
@@ -172,6 +176,41 @@ class LocationButtonTest : BaseUsePermissionTest() {
             false,
             packageName = TEST_APP_PACKAGE_NAME,
         )
+    }
+
+    @Test
+    fun testLocationButtonRequestBuilder() {
+        val builder =
+            LocationButtonRequest.Builder(200, 80, context.resources.configuration)
+                .setPaddingLeft(10)
+                .setPaddingTop(20)
+                .setPaddingRight(30)
+                .setPaddingBottom(40)
+                .setBackgroundColor(0xFF112233.toInt())
+                .setStrokeColor(0xFF445566.toInt())
+                .setStrokeWidth(2)
+                .setCornerRadius(5f)
+                .setPressedCornerRadius(10f)
+                .setIconTint(0xFF778899.toInt())
+                .setTextType(LocationButtonSession.TEXT_TYPE_USE_PRECISE_LOCATION)
+                .setTextColor(0xFFAABBCC.toInt())
+
+        val request = builder.build()
+        assertEquals(200, request.width)
+        assertEquals(80, request.height)
+        assertEquals(context.resources.configuration, request.configuration)
+        assertEquals(10, request.paddingLeft)
+        assertEquals(20, request.paddingTop)
+        assertEquals(30, request.paddingRight)
+        assertEquals(40, request.paddingBottom)
+        assertEquals(0xFF112233.toInt(), request.backgroundColor)
+        assertEquals(0xFF445566.toInt(), request.strokeColor)
+        assertEquals(2, request.strokeWidth)
+        assertEquals(5f, request.cornerRadius)
+        assertEquals(10f, request.pressedCornerRadius)
+        assertEquals(0xFF778899.toInt(), request.iconTint)
+        assertEquals(LocationButtonSession.TEXT_TYPE_USE_PRECISE_LOCATION, request.textType)
+        assertEquals(0xFFAABBCC.toInt(), request.textColor)
     }
 
     private fun dpToPx(dp: Int): Int {
