@@ -17,11 +17,35 @@ package android.permissionui.cts.locationbutton
 
 import android.app.Activity
 import android.os.Bundle
+import android.view.ViewGroup
+import android.widget.FrameLayout
 
 class LocationButtonActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // TODO: Implementation for creating LocationButtonSession and
-        // attaching the SurfacePackage to a SurfaceView.
+
+        val width = intent.getIntExtra(EXTRA_WIDTH, ViewGroup.LayoutParams.WRAP_CONTENT)
+        val height = intent.getIntExtra(EXTRA_HEIGHT, ViewGroup.LayoutParams.WRAP_CONTENT)
+
+        val locationButton = LocationButton(this)
+        val buttonParams =
+            FrameLayout.LayoutParams(width, height).apply { gravity = android.view.Gravity.CENTER }
+
+        val container =
+            FrameLayout(this).apply {
+                layoutParams =
+                    ViewGroup.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                    )
+                setBackgroundColor(0xFFFFFFFF.toInt())
+            }
+        container.addView(locationButton, buttonParams)
+        setContentView(container)
+    }
+
+    companion object {
+        const val EXTRA_WIDTH = "width"
+        const val EXTRA_HEIGHT = "height"
     }
 }

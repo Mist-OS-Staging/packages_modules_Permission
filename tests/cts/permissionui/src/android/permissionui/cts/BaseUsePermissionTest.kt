@@ -115,6 +115,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
         const val SHARED_UID_WITH_PERMS_PACKAGE_NAME =
             "android.permissionui.cts.appwithshareduidwithperms"
 
+        const val LOCATION_BUTTON_ALLOW_BUTTON = "com.android.permissioncontroller:id/allow"
         const val ALLOW_ALL_BUTTON =
             "com.android.permissioncontroller:id/permission_allow_all_button"
         const val SELECT_BUTTON =
@@ -291,16 +292,16 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
             "android.permission.READ_CELL_BROADCASTS" to "@android:string/permgrouplab_sms",
             // Storage
             android.Manifest.permission.READ_EXTERNAL_STORAGE to
-                "@android:string/permgrouplab_storage",
+                    "@android:string/permgrouplab_storage",
             android.Manifest.permission.WRITE_EXTERNAL_STORAGE to
-                "@android:string/permgrouplab_storage",
+                    "@android:string/permgrouplab_storage",
             // Location
             android.Manifest.permission.ACCESS_FINE_LOCATION to
-                "@android:string/permgrouplab_location",
+                    "@android:string/permgrouplab_location",
             android.Manifest.permission.ACCESS_COARSE_LOCATION to
-                "@android:string/permgrouplab_location",
+                    "@android:string/permgrouplab_location",
             android.Manifest.permission.ACCESS_BACKGROUND_LOCATION to
-                "@android:string/permgrouplab_location",
+                    "@android:string/permgrouplab_location",
             // Phone
             android.Manifest.permission_group.PHONE to "@android:string/permgrouplab_phone",
             android.Manifest.permission.READ_PHONE_STATE to "@android:string/permgrouplab_phone",
@@ -311,7 +312,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
             android.Manifest.permission.ADD_VOICEMAIL to "@android:string/permgrouplab_phone",
             android.Manifest.permission.USE_SIP to "@android:string/permgrouplab_phone",
             android.Manifest.permission.PROCESS_OUTGOING_CALLS to
-                "@android:string/permgrouplab_phone",
+                    "@android:string/permgrouplab_phone",
             // Microphone
             android.Manifest.permission.RECORD_AUDIO to "@android:string/permgrouplab_microphone",
             // Camera
@@ -319,20 +320,20 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
             // Body sensors
             android.Manifest.permission.BODY_SENSORS to "@android:string/permgrouplab_sensors",
             android.Manifest.permission.BODY_SENSORS_BACKGROUND to
-                "@android:string/permgrouplab_sensors",
+                    "@android:string/permgrouplab_sensors",
             // Bluetooth
             android.Manifest.permission.BLUETOOTH_CONNECT to
-                "@android:string/permgrouplab_nearby_devices",
+                    "@android:string/permgrouplab_nearby_devices",
             android.Manifest.permission.BLUETOOTH_SCAN to
-                "@android:string/permgrouplab_nearby_devices",
+                    "@android:string/permgrouplab_nearby_devices",
             // Aural
             android.Manifest.permission.READ_MEDIA_AUDIO to
-                "@android:string/permgrouplab_readMediaAural",
+                    "@android:string/permgrouplab_readMediaAural",
             // Visual
             android.Manifest.permission.READ_MEDIA_IMAGES to
-                "@android:string/permgrouplab_readMediaVisual",
+                    "@android:string/permgrouplab_readMediaVisual",
             android.Manifest.permission.READ_MEDIA_VIDEO to
-                "@android:string/permgrouplab_readMediaVisual",
+                    "@android:string/permgrouplab_readMediaVisual",
         ).let { map ->
             if (SdkLevel.isAtLeastV() && Flags.accessLocalNetworkPermissionEnabled()) {
                 map + (android.Manifest.permission.ACCESS_LOCAL_NETWORK to
@@ -909,6 +910,10 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
 
     protected fun clickPermissionRequestAllowAllButton(timeoutMillis: Long = 20000) {
         click(By.res(ALLOW_ALL_BUTTON).displayId(displayId), timeoutMillis)
+    }
+
+    protected fun clickPermissionRequestAllowLocationButtonButton(timeoutMillis: Long = 20000) {
+        click(By.res(LOCATION_BUTTON_ALLOW_BUTTON).displayId(displayId), timeoutMillis)
     }
 
     /**
@@ -1621,8 +1626,12 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
     private fun byTextStartsWithCaseInsensitive(prefix: String): BySelector =
         By.text(Pattern.compile("(?i)^${Pattern.quote(prefix)}.*$")).displayId(displayId)
 
-    protected fun assertAppHasPermission(permissionName: String, expectPermission: Boolean) {
-        val checkPermissionResult = packageManager.checkPermission(permissionName, APP_PACKAGE_NAME)
+    protected fun assertAppHasPermission(
+        permissionName: String,
+        expectPermission: Boolean,
+        packageName: String = APP_PACKAGE_NAME,
+    ) {
+        val checkPermissionResult = packageManager.checkPermission(permissionName, packageName)
         assertTrue(
             "Invalid permission check result: $checkPermissionResult",
             checkPermissionResult == PackageManager.PERMISSION_GRANTED ||
