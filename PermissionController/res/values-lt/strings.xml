@@ -134,6 +134,8 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Vakar"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Paskutinį kartą pasiekta: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Peržiūrėti"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Peržiūrėkite, kurios programos neseniai naudojo leidimus"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Leidimų grupės „<xliff:g id="PERMGROUP">%1$s</xliff:g>“ naudojimas"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Žr. kitus leidimus"</string>
@@ -200,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Leisti tik naudojant programą"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Visada leisti viską"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Klausti kaskart"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Klausti kiekvieną kartą arba leisti, kai bendrinate"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Neleisti"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Suteikti ribotą prieigą"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Tiksli vietovė"</string>
@@ -266,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"Leidžiama"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Leidžiama visą laiką"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Leidžiama, tik kol naudojama"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Leidžiama pasiekti tik mediją"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Leidžiama valdyti visus failus"</string>
     <string name="ask_header" msgid="2633816846459944376">"Klausti kaskart"</string>
     <string name="denied_header" msgid="903209608358177654">"Neleidžiama"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> „<xliff:g id="DEVICE_NAME">%2$s</xliff:g>“"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Peržiūrėti daugiau programų, galinčių pasiekti visus failus"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 diena}one{# diena}few{# dienos}many{# dienos}other{# dienų}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# valanda}one{# valanda}few{# valandos}many{# valandos}other{# valandų}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# minutė}one{# minutė}few{# minutės}many{# minutės}other{# minučių}}"</string>
@@ -470,8 +475,7 @@
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Padėjėjas galės skaityti informaciją apie sistemoje naudojamas programas, įskaitant ekrane matomą ar programose pasiekiamą informaciją."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Pakeisti skaitmeninio asistento programą į &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Šis pagelbiklis galės pasiekti tokią informaciją kaip jūsų pranešimai ir duomenys, kuriuos programos pasirinko bendrinti su jūsų pagelbikliu."</string>
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"Šis pagelbiklis galės pasiekti tokią informaciją kaip jūsų pranešimai ir duomenys, kuriuos programos pasirinko bendrinti su jūsų pagelbikliu.&lt;br&gt;&lt;br&gt;Kadangi anksčiau įjungėte „<xliff:g id="APP_NAME">%1$s</xliff:g>“ ekrano ir programų duomenis, jam taip pat bus leista pasiekti turinį iš ekrane atidarytos programos."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Derinimo duomenų bendrinimas"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Bendrinti išsamius derinimo duomenis?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"Programa „<xliff:g id="APP_NAME">%1$s</xliff:g>“ norėtų įkelti derinimo informaciją."</string>

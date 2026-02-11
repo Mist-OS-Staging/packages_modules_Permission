@@ -134,6 +134,8 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Jučer"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Zadnji pristup: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Prikaz"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Prikaz aplikacija koje su nedavno upotrebljavale dopuštenja"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Upotreba dopuštenja: <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Pogledajte ostala dopuštenja"</string>
@@ -200,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Dopusti samo dok se aplikacija koristi"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Uvijek dopusti sve"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Pitaj svaki put"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Pitaj svaki put ili dopusti kad dijelim"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Nemoj dopustiti"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Omogući ograničeni pristup"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Točna lokacija"</string>
@@ -266,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"Dopušteno"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Pristup je dopušten cijelo vrijeme"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Imaju dopuštenje samo tijekom upotrebe"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Dopušten pristup samo medijima"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Dopušteno upravljanje svim datotekama"</string>
     <string name="ask_header" msgid="2633816846459944376">"Pitaj svaki put"</string>
     <string name="denied_header" msgid="903209608358177654">"Nije dopušteno"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>, <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Pogledajte koje još aplikacije imaju pristup svim datotekama"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 dan}one{# dan}few{# dana}other{# dana}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# sat}one{# sat}few{# sata}other{# sati}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# min}one{# min}few{# min}other{# min}}"</string>
@@ -469,10 +474,8 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Napomena: ako ponovo pokrenete uređaj, a na njemu je postavljeno zaključavanje zaslona, ova se aplikacija ne može pokrenuti dok ne otključate uređaj."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Pomoćnik će moći čitati podatke o aplikacijama koje se upotrebljavaju na vašem sustavu, uključujući podatke vidljive na zaslonu ili podatke kojima se može pristupiti u aplikacijama."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Želite li aplikaciju <xliff:g id="APP_NAME">%1$s</xliff:g> postaviti kao aplikaciju digitalnog asistenta?"</string>
-    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Taj će asistent moći pristupati podacima kao što su vaše poruke i podaci koje su aplikacije odlučile podijeliti s vašim asistentom."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"Taj će asistent moći pristupati informacijama kao što su vaše poruke i podaci koje su aplikacije odlučile podijeliti s vašim asistentom.&lt;br&gt;&lt;br/&gt;Budući da ste prethodno uključili podatke o aktivnosti na zaslonu i podatke aplikacije za aplikaciju <xliff:g id="APP_NAME">%1$s</xliff:g>, moći će pristupati sadržaju iz aplikacije koja je otvorena na vašem zaslonu."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Dijeljenje podataka o otklanjanju pogrešaka"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Dijeliti detaljne podatke o otklanjanju pogrešaka?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> želi prenijeti informacije o otklanjanju pogrešaka."</string>
@@ -750,20 +753,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Ovaj će agent moći pristupati aplikaciji <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> da bi dobio podatke i poduzeo radnje umjesto vas"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Dopusti"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Nemoj dopustiti"</string>
-    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
-    <skip />
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"Želite li aplikaciji <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> dopustiti da upotrebljava podatke o aktivnosti na zaslonu i podatke aplikacije?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"Taj će asistent moći pristupati informacijama i sadržaju iz aplikacije koja je otvorena na vašem zaslonu"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Dopusti"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Nemoj dopustiti"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Upotreba podataka o aktivnosti na zaslonu i podataka aplikacije"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Dopustite asistentu da pristupa podacima i sadržaju iz aplikacije koja je otvorena na vašem zaslonu"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Dopustite aplikaciji <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> da pristupa podacima i sadržaju iz aplikacije koja je otvorena na vašem zaslonu"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Dopusti"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Nemoj dopustiti"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Želite li aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> dopustiti da pristupa točnoj lokaciji pomoću gumba za lokaciju?"</string>

@@ -134,6 +134,8 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"ម្សិលមិញ"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"ការចូលប្រើ​ចុងក្រោយម៉ោង <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"មើល"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"មើលកម្មវិធី​ដែលបានប្រើ​ការអនុញ្ញាតនា​ពេលថ្មីៗនេះ"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"ការប្រើប្រាស់​<xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"មើលការអនុញ្ញាត​ផ្សេងទៀត"</string>
@@ -200,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"អនុញ្ញាត​ពេល​កំពុង​ប្រើប្រាស់​កម្មវិធីតែ​ប៉ុណ្ណោះ"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"អនុញ្ញាតទាំងអស់ជានិច្ច"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"សួរគ្រប់ពេល"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"សួរគ្រប់ពេល ឬអនុញ្ញាតនៅពេលអ្នកចែករំលែក"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"មិនអនុញ្ញាត"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"អនុញ្ញាតឱ្យចូលប្រើដោយមានកម្រិត"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"ទីតាំងជាក់លាក់"</string>
@@ -266,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"បាន​អនុញ្ញាត"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"អនុញ្ញាត​គ្រប់ពេល"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"អនុញ្ញាត​ខណៈពេល​ប្រើប្រាស់តែ​ប៉ុណ្ណោះ"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"បានអនុញ្ញាតឱ្យចូលប្រើមេឌៀតែប៉ុណ្ណោះ"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"បានអនុញ្ញាតឱ្យគ្រប់គ្រងឯកសារទាំងអស់"</string>
     <string name="ask_header" msgid="2633816846459944376">"សួរគ្រប់ពេល"</string>
     <string name="denied_header" msgid="903209608358177654">"មិន​បានអនុញ្ញាត​"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> នៅលើ <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"មើលកម្មវិធីច្រើនទៀតដែលអាចចូលប្រើឯកសារទាំងអស់បាន"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 ថ្ងៃ}other{# ថ្ងៃ}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# ម៉ោង}other{# ម៉ោង}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# នាទី}other{# នាទី}}"</string>
@@ -469,10 +474,8 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"ចំណាំ៖ ប្រសិនបើ​អ្នកចាប់ផ្ដើម​ឧបករណ៍​​របស់អ្នក​ឡើងវិញ និងបានកំណត់​ការចាក់សោ​អេក្រង់ កម្មវិធីនេះ​មិនអាច​ចាប់ផ្តើម​បានទេ រហូតទាល់តែ​អ្នកដោះសោ​ឧបករណ៍របស់អ្នក។"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"ជំនួយការនឹងអាចអានព័ត៌មានអំពីកម្មវិធីដែលកំពុងប្រើនៅក្នុងប្រព័ន្ធរបស់អ្នក រួម​ទាំងព័ត៌មានដែលអាចមើលឃើញនៅលើអេក្រង់របស់អ្នក ឬព័ត៌មានដែលអាចចូលប្រើនៅក្នុងកម្មវិធី​ទាំងនោះផងដែរ​។"</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"ប្ដូរកម្មវិធីជំនួយការឌីជីថលរបស់អ្នកទៅ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ឬ?"</string>
-    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"ជំនួយ​ការនេះនឹងអាចចូលប្រើព័ត៌មាន ដូចជាសាររបស់អ្នក និងទិន្នន័យដែលកម្មវិធីបានជ្រើសរើសចែករំលែកជាមួយជំនួយការរបស់អ្នក។"</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"ជំនួយ​ការនេះនឹងអាចចូលប្រើព័ត៌មាន ដូចជាសាររបស់អ្នក និងទិន្នន័យដែលកម្មវិធីបានជ្រើសរើសចែករំលែកជាមួយជំនួយការរបស់អ្នក។&lt;br&gt;&lt;br&gt;ដោយសារអ្នកបានបើកទិន្នន័យកម្មវិធី និងអេក្រង់សម្រាប់ <xliff:g id="APP_NAME">%1$s</xliff:g> ពីមុន វានឹងត្រូវបានអនុញ្ញាតឱ្យចូលប្រើខ្លឹមសារពីកម្មវិធីដែលបើកនៅលើអេក្រង់របស់អ្នក។"</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"ចែករំលែក​ទិន្នន័យ​នៃការ​ជួសជុល"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"ចែករំលែក​ទិន្នន័យ​លម្អិត​នៃការជួសជុល?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ចង់​បង្ហោះ​ព័ត៌មាននៃ​ការជួសជុល។"</string>
@@ -750,20 +753,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"ភ្នាក់ងារនេះនឹងអាចចូលប្រើ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ដើម្បីទទួលបានព័ត៌មាន និងធ្វើសកម្មភាពជំនួសអ្នក"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"អនុញ្ញាត"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"មិនអនុញ្ញាត"</string>
-    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
-    <skip />
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"អនុញ្ញាតឱ្យ &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; ប្រើទិន្នន័យកម្មវិធី និងអេក្រង់ឬ?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"ជំនួយ​ការនេះនឹងអាចចូលប្រើព័ត៌មាន និងខ្លឹមសារពីកម្មវិធីដែលបើកនៅលើអេក្រង់របស់អ្នក"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"អនុញ្ញាត"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"មិនអនុញ្ញាត"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"ប្រើទិន្នន័យកម្មវិធី និងអេក្រង់"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"អនុញ្ញាតឱ្យជំនួយ​ការចូលប្រើព័ត៌មាន និងខ្លឹមសារពីកម្មវិធីដែលបើកនៅលើអេក្រង់របស់អ្នក"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"អនុញ្ញាតឱ្យ <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> ចូលប្រើព័ត៌មាន និងខ្លឹមសារពីកម្មវិធីដែលបើកនៅលើអេក្រង់របស់អ្នក"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"អនុញ្ញាត"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"មិនអនុញ្ញាត"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"អនុញ្ញាតឱ្យ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ចូលប្រើទីតាំងជាក់លាក់ដោយប្រើប៊ូតុងទីតាំងឬ?"</string>

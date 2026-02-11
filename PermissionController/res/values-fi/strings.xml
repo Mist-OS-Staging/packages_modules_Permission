@@ -134,6 +134,8 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Eilinen"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Viimeinen käyttökerta: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Näytä"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Katso, mitkä sovellukset ovat käyttäneet lupia äskettäin"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> käytössä"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Katso muut luvat"</string>
@@ -200,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Salli vain käytön aikana"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Salli aina kaikki"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Kysy aina"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Kysy aina tai salli, kun jaat"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Älä salli"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Salli rajoitettu pääsy"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Tarkka sijainti"</string>
@@ -266,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"Sallittu"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Sallittu aina"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Sallittu vain käytön aikana"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Vain mediaan pääsy sallittu"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Kaikkien tiedostojen ylläpito sallittu"</string>
     <string name="ask_header" msgid="2633816846459944376">"Kysy aina"</string>
     <string name="denied_header" msgid="903209608358177654">"Ei sallittu"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>, <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Muut sovellukset, joilla on pääsy kaikkiin tiedostoihin"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 päivä}other{# päivää}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# tunti}other{# tuntia}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# minuutti}other{# minuuttia}}"</string>
@@ -469,10 +474,8 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Huomaa: Jos käynnistät laitteen uudelleen ja näytön lukitus on käytössä, sovellus voi käynnistyä vasta avattuasi lukituksen."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Avustaja voi lukea tietoja järjestelmäsi käyttämistä sovelluksista, mukaan lukien tietoja, jotka näkyvät näytöllä tai jotka ovat käytettävissä sovelluksissa."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Vaihdetaanko digiavustajasovellukseksi &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
-    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Avustaja saa pääsyn esimerkiksi viesteihin ja dataan, jonka sovellukset ovat päättäneet jakaa avustajalle."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"Avustaja saa pääsyn esimerkiksi viesteihisi ja dataan, jonka sovellukset ovat päättäneet jakaa avustajalle.&lt;br&gt;&lt;br&gt;Koska olet aiemmin laittanut näytön ja sovellusten datan jakamisen päälle, <xliff:g id="APP_NAME">%1$s</xliff:g> saa myös pääsyn näytöllä avoinna olevan sovelluksen sisältöön."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Jaa virheenkorjaustietoja"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Jaetaanko yksityiskohtaisia virheenkorjaustietoja?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> haluaa ladata virheenkorjaustietoja palvelimelle."</string>
@@ -750,20 +753,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Agentti pääsee <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ‑sovellukseen tietojen hakemista ja toimintoja varten"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Salli"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Älä salli"</string>
-    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
-    <skip />
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"Saako &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; käyttää näyttö- ja sovellusdataa?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"Avustaja saa pääsyn näytöllä avoinna olevan sovelluksen tietoihin ja sisältöön"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Salli"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Älä salli"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Käytä näyttö- ja sovellusdataa"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Salli avustajalle pääsy näytöllä avoinna olevan sovelluksen tietoihin ja sisältöön"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Salli, että <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> saa pääsy näytöllä avoinna olevan sovelluksen tietoihin ja sisältöön"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Salli"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Älä salli"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Saako &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; pääsyn tarkkaan sijaintiin sijaintipainikkeen avulla?"</string>

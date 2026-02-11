@@ -134,6 +134,8 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Í gær"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Síðast notað <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Skoða"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Skoða hvaða forrit notuðu heimildir nýlega"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>: notkun"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Sjá aðrar heimildir"</string>
@@ -200,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Leyfa aðeins þegar forritið er í notkun"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Alltaf leyfa allt"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Spyrja alltaf"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Spyrja í hvert skipti eða leyfa þegar þú deilir"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Ekki leyfa"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Leyfa takmarkaðan aðgang"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Nákvæm staðsetning"</string>
@@ -266,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"Leyft"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Alltaf leyft"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Aðeins leyft við notkun"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Leyfði aðeins aðgang að margmiðlunarefni"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Leyfði stjórnun á öllum skrám"</string>
     <string name="ask_header" msgid="2633816846459944376">"Spyrja alltaf"</string>
     <string name="denied_header" msgid="903209608358177654">"Ekki heimilað"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> í <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Sjá fleiri forrit sem geta opnað allar skrár"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 dagur}one{# dagur}other{# dagar}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# klukkustund}one{# klukkustund}other{# klukkustundir}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# mínúta}one{# mínúta}other{# mínútur}}"</string>
@@ -469,10 +474,8 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Athugaðu: Ef þú endurræsir tækið og það er með skjálás er ekki hægt að ræsa þetta forrit fyrr en þú tekur tækið úr lás."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Hjálparinn mun geta séð upplýsingar um forrit í notkun í kerfinu þínu, þar á meðal upplýsingar sem sjást á skjánum eða eru aðgengilegar úr forritum."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Breyta forriti stafræna hjálparans í &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
-    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Þessi hjálpari getur séð upplýsingar á borð við skilaboðin þín og gögn sem forrit hafa valið að deila með hjálparanum."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"Þessi hjálpari hefur aðgang að upplýsingum á borð við skilaboð og gögn sem forrit hafa valið að deila með hjálparanum.&lt;br&gt;&lt;br&gt;Þar sem þú hefur áður kveikt á skjá- og forritagögnum fyrir <xliff:g id="APP_NAME">%1$s</xliff:g> hefur hann einnig aðgang að efni forritsins sem er opið á skjánum."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Deila villuleitargögnum"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Viltu deila ítarlegum villuleitargögnum?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> vill hlaða inn upplýsingum um villuleit."</string>
@@ -750,20 +753,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Þessi fulltrúi fær aðgang að <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> til að sjá upplýsingar og framkvæma aðgerðir fyrir þína hönd"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Leyfa"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Ekki leyfa"</string>
-    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
-    <skip />
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"Leyfa &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; að nota skjá- og forritagögn?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"Þessi hjálpari mun geta séð upplýsingar og efni forritsins sem er opið á skjánum"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Leyfa"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Ekki leyfa"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Nota skjá- og forritsgögn"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Veita hjálpara aðgang að upplýsingum og efni úr forritinu sem er opið á skjánum"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Leyfa <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> að fá aðgang að upplýsingum og efni úr forritinu sem er opið á skjánum"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Leyfa"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Ekki leyfa"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Veita &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; aðgang að nákvæmri staðsetningu með því að nota staðsetningarhnapp?"</string>

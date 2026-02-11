@@ -73,7 +73,7 @@
     <string name="denied_permission_decision" msgid="5308961501779563781">"Hai negato l\'accesso dell\'app <xliff:g id="APP_NAME">%1$s</xliff:g> a: <xliff:g id="PERMISSION_NAME">%2$s</xliff:g>"</string>
     <string name="days_ago" msgid="6650359081551335629">"{count,plural, =0{Oggi}=1{1 giorno fa}many{# di giorni fa}other{# giorni fa}}"</string>
     <string name="app_disable_dlg_positive" msgid="7418444149981904940">"Disattiva app"</string>
-    <string name="app_disable_dlg_text" msgid="3126943217146120240">"Se disattivi questa app, Android e altre app potrebbero non funzionare più come previsto. Tieni presente che non puoi eliminare questa app perché è preinstallata sul tuo dispositivo. Puoi scegliere di disattivare l\'app e nasconderla sul tuo dispositivo."</string>
+    <string name="app_disable_dlg_text" msgid="3126943217146120240">"Se disattivi questa app, Android e altre app potrebbero non funzionare più correttamente. Ricorda che non puoi eliminare l\'app perché è preinstallata sul dispositivo. Se la disattivi, l\'app verrà nascosta sul dispositivo."</string>
     <string name="app_permission_manager" msgid="3903811137630909550">"Gestione autorizzazioni"</string>
     <string name="never_ask_again" msgid="4728762438198560329">"Non chiedermelo più"</string>
     <string name="no_permissions" msgid="3881676756371148563">"Nessuna autorizzazione"</string>
@@ -134,6 +134,8 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Ieri"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Ultimo accesso: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Visualizza"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Vedi quali app hanno usato le autorizzazioni di recente"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Uso di <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Vedi altre autorizzazioni"</string>
@@ -200,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Consenti solo mentre l\'app è in uso"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Consenti sempre tutti"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Chiedi ogni volta"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Chiedi ogni volta o consenti quando condividi"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Non consentire"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Consenti accesso limitato"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Posizione esatta"</string>
@@ -266,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"Autorizzata"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Autorizzazione sempre concessa"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Autorizzazione concessa solo se in uso"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Autorizzate solo per contenuti multimediali"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Autorizzate per gestire tutti i file"</string>
     <string name="ask_header" msgid="2633816846459944376">"Chiedi ogni volta"</string>
     <string name="denied_header" msgid="903209608358177654">"Non autorizzata"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> su <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Visualizza altre app che possono accedere a tutti i file"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 giorno}many{# di giorni}other{# giorni}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# ora}many{# di ore}other{# ore}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# minuto}many{# di minuti}other{# minuti}}"</string>
@@ -469,10 +474,8 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Nota: se riavvii il dispositivo ed è impostato un blocco schermo, sarà possibile avviare l\'app soltanto dopo aver sbloccato il dispositivo."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"L\'assistente potrà leggere informazioni sulle app in uso nel sistema, incluse le informazioni visibili sullo schermo o accessibili all\'interno delle app."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Cambiare l\'app dell\'assistente digitale in &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
-    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"L\'assistente potrà accedere a informazioni come i tuoi messaggi e i dati che le app hanno scelto di condividere con l\'assistente."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"Questo assistente potrà accedere a informazioni come i tuoi messaggi e ai dati che le app hanno scelto di condividere con il tuo assistente.&lt;br&gt;&lt;br&gt;Poiché in precedenza hai attivato i dati di app e schermo per <xliff:g id="APP_NAME">%1$s</xliff:g>, l\'assistente potrà accedere ai contenuti dell\'app aperta sullo schermo."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Condividi dati di debug"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Condividere i dati di debug dettagliati?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"L\'app <xliff:g id="APP_NAME">%1$s</xliff:g> vorrebbe caricare informazioni di debug."</string>
@@ -653,7 +656,7 @@
     <string name="mic_toggle_description" msgid="9163104307990677157">"Per app e servizi. Se questa impostazione viene disattivata, i dati del microfono potrebbero comunque essere condivisi quando chiami un numero di emergenza."</string>
     <string name="location_settings_subtitle" msgid="2328360561197430695">"Visualizza le app e i servizi che hanno accesso alla posizione"</string>
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"Mostra accesso agli appunti"</string>
-    <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"Viene mostrato un messaggio quando le app accedono a testo, immagini o altri contenuti che hai copiato"</string>
+    <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"Mostra un messaggio quando le app accedono a testo, immagini o altri contenuti che hai copiato"</string>
     <string name="show_password_title" msgid="2877269286984684659">"Mostra password"</string>
     <string name="show_password_summary" msgid="1110166488865981610">"Mostra brevemente i caratteri durante la digitazione"</string>
     <string name="permission_rationale_message_location" msgid="2153841534298068414">"Questa app ha dichiarato che potrebbe condividere dati sulla posizione con terze parti"</string>
@@ -750,20 +753,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"L\'agente potrà accedere a <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> per ottenere informazioni ed eseguire azioni per te"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Consenti"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Non consentire"</string>
-    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
-    <skip />
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"Consentire all\'app &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; di utilizzare i dati di app e schermo?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"Questo assistente potrà accedere a informazioni e contenuti dell\'app aperta sullo schermo"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Consenti"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Non consentire"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Usa i dati di app e schermo"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Consenti all\'assistente di accedere a informazioni e contenuti dell\'app aperta sullo schermo"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Consenti all\'app <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> di accedere a informazioni e contenuti dell\'app aperta sullo schermo"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Consenti"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Non consentire"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Consentire a &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; di accedere alla posizione esatta utilizzando un pulsante di posizione?"</string>
