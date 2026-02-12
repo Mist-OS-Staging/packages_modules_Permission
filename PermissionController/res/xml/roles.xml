@@ -439,6 +439,8 @@
         </required-components>
         <permissions>
             <permission-set name="notifications" />
+            <permission name="android.permission.ACCESS_AMBIENT_CONTEXT_EVENT"
+                featureFlag="android.app.Flags.ambientContextEmergencyEvent" />
             <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND" minSdkVersion="31" />
             <permission name="android.permission.OBSERVE_SENSOR_PRIVACY" minSdkVersion="31" />
         </permissions>
@@ -1313,8 +1315,6 @@
                 featureFlag="android.companion.Flags.expandAppStreamingRolePermissions"
                 minSdkVersion="36"
                 mode="allowed" />
-            <app-op name="android:read_restricted_messages" mode="allowed"
-                featureFlag="com.android.internal.telephony.flags.Flags.secureAccessToRestrictedRcsMessages"/>
         </app-ops>
     </role>
 
