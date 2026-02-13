@@ -2914,7 +2914,15 @@
          @hide
     -->
     <permission android:name="android.permission.VIBRATE_ALWAYS_ON"
-        android:protectionLevel="signature" />
+      android:protectionLevel="signature" />
+
+    <!-- Allows registration of a remote player of multisensory feedback.
+      <p>Protection level: signature|privileged
+      @hide
+    -->
+    <permission android:name="android.permission.REMOTE_MULTISENSORY_PLAYBACK"
+      android:protectionLevel="signature|privileged"
+      android:featureFlag="android.os.multisensory.enable_multisensory_feedback" />
 
     <!-- Allows access to system-only haptic feedback constants.
          <p>Protection level: signature
