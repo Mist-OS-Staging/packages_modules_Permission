@@ -427,7 +427,12 @@ abstract class BasePermissionTest {
     }
 
     private fun scrollToText(text: String, maxSearchSwipes: Int = MAX_SWIPES): UiObject2 {
-        var foundObject: UiObject2?
+        // Check if it's already there
+        var foundObject = uiDevice.findObject(By.text(text))
+        if (foundObject != null) {
+            return foundObject
+        }
+
         if (isAutomotiveVisibleBackgroundUser) {
             val scrollableObject = uiDevice.findObject(By.scrollable(true).displayId(displayId))
             foundObject =

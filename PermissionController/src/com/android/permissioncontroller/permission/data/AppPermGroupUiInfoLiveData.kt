@@ -170,10 +170,12 @@ private constructor(
             return false
         }
 
-        // TODO(b/479613003): Support Auto form factor
         // TODO(b/479895707): Support Wear form factor
         // TODO(b/479896440): Support TV form factor
-        if (!DeviceUtils.isHandheld()) {
+        if (
+            DeviceUtils.isWear(app.applicationContext) ||
+                DeviceUtils.isTelevision(app.applicationContext)
+        ) {
             return false
         }
 
