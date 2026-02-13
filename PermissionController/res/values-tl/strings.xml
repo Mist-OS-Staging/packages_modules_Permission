@@ -134,6 +134,8 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Kahapon"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Huling na-access: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Tingnan"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Tingnan kung aling app ang gumamit kamakailan ng pahintulot"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Paggamit ng <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Tingnan ang ibang pahintulot"</string>
@@ -200,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Payagan lang habang ginagamit ang app"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Palaging pahintulutan lahat"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Magtanong palagi"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Magtanong sa bawat pagkakataon o payagan kapag nag-share ka"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Huwag payagan"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Payagan ang limitadong access"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Eksaktong lokasyon"</string>
@@ -266,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"Pinapayagan"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Palaging pinapayagan"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Pinapayagan lang habang ginagamit"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Pinapayagan lang na mag-access ng media"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Pinapayagang pamahalaan ang lahat ng file"</string>
     <string name="ask_header" msgid="2633816846459944376">"Magtanong palagi"</string>
     <string name="denied_header" msgid="903209608358177654">"Hindi pinapayagan"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> noong <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Tumingin pa ng mga app na puwedeng mag-access ng lahat ng file"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 araw}one{# araw}other{# na araw}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# oras}one{# oras}other{# na oras}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# minuto}one{# minuto}other{# na minuto}}"</string>
@@ -470,8 +475,7 @@
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Mababasa ng assistant ang impormasyon tungkol sa mga app na ginagamit sa iyong system, kasama ang impormasyong makikita sa screen mo o maa-access sa mga app."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Gawing &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ang iyong app ng digital na assistant?"</string>
     <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Maa-access ng assistant na ito ang impormasyon tulad ng iyong mga mensahe, at data na pinili ng mga app na i-share sa assistant mo."</string>
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"Maa-access ng assistant na ito ang impormasyong gaya ng iyong mga mensahe, at data na piniling i-share ng mga app sa assistant mo.&lt;br&gt;&lt;br&gt;Dahil na-on mo na dati ang data ng screen at app para sa <xliff:g id="APP_NAME">%1$s</xliff:g>, papayagan itong i-access ang content mula sa app na nakabukas sa iyong screen."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Ibahagi ang Data sa Pag-debug"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Ibahagi ang nakadetalyeng data sa pag-debug?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"Gustong mag-upload ng <xliff:g id="APP_NAME">%1$s</xliff:g> ng impormasyon sa pag-debug."</string>

@@ -134,6 +134,8 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Χθες"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Τελευταία πρόσβαση <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Προβολή"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Δείτε ποιες εφαρμογές χρησιμοποίησαν πρόσφατα άδειες"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Χρήση άδειας \"<xliff:g id="PERMGROUP">%1$s</xliff:g>\""</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Δείτε άλλες άδειες"</string>
@@ -200,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Να επιτρέπεται μόνο κατά τη χρήση της εφαρμογής"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Να επιτρέπονται πάντα όλα"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Ερώτηση κάθε φορά"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Να γίνεται ερώτηση κάθε φορά ή να επιτρέπεται όταν κάνετε κοινοποίηση"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Να μην επιτρέπεται"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Να επιτρέπεται περιορισμένη πρόσβαση"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Ακριβής τοποθεσία"</string>
@@ -266,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"Επιτρέπονται"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Να επιτρέπονται πάντα"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Να επιτρέπονται μόνο κατά τη χρήση"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Επιτρέπεται η πρόσβαση μόνο σε μέσα"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Επιτρέπεται η διαχείριση όλων των αρχείων"</string>
     <string name="ask_header" msgid="2633816846459944376">"Ερώτηση κάθε φορά"</string>
     <string name="denied_header" msgid="903209608358177654">"Δεν επιτρέπονται"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> στη συσκευή <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Δείτε περισσότερες εφαρμογές με πρόσβαση σε όλα τα αρχεία"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 ημέρα}other{# ημέρες}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# ώρα}other{# ώρες}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# λεπτό}other{# λεπτά}}"</string>
@@ -470,8 +475,7 @@
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Ο βοηθός θα μπορεί να διαβάσει πληροφορίες σχετικά με τις εφαρμογές που χρησιμοποιούνται στο σύστημά σας, συμπεριλαμβανομένων πληροφοριών που είναι ορατές στην οθόνη σας ή προσβάσιμες εντός των εφαρμογών."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Αλλαγή εφαρμογής ψηφιακού βοηθού σε &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;;"</string>
     <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Αυτός ο βοηθός θα μπορεί να έχει πρόσβαση σε πληροφορίες όπως τα μηνύματά σας και δεδομένα που οι εφαρμογές έχουν επιλέξει να κοινοποιούν στον βοηθό σας."</string>
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"Αυτός ο βοηθός θα έχει πρόσβαση σε πληροφορίες όπως τα μηνύματά σας και δεδομένα που οι εφαρμογές έχουν επιλέξει να κοινοποιούν στον βοηθό σας.&lt;br&gt;&lt;br&gt;Επειδή έχετε ενεργοποιήσει τα δεδομένα οθόνης και εφαρμογών για την εφαρμογή <xliff:g id="APP_NAME">%1$s</xliff:g> στο παρελθόν, θα επιτρέπεται η πρόσβαση σε περιεχόμενο από την εφαρμογή που είναι ανοικτή στην οθόνη σας."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Κοινοποίηση δεδομένων αποσφαλμάτωσης"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Κοινοποίηση λεπτομερ. δεδομ. αποσφαλμάτωσης;"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"Η εφαρμογή <xliff:g id="APP_NAME">%1$s</xliff:g> θέλει να ανεβάσει πληροφορίες αποσφαλμάτωσης."</string>

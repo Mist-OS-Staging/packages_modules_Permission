@@ -134,6 +134,8 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"ਬੀਤੇ ਕੱਲ੍ਹ"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"ਪਿਛਲੀ ਵਾਰ <xliff:g id="TIME_DATE">%1$s</xliff:g> ਨੂੰ ਪਹੁੰਚ ਕੀਤੀ ਗਈ"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"ਦੇਖੋ"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ਦੇਖੋ ਕਿ ਕਿਹੜੀਆਂ ਐਪਾਂ ਨੇ ਹਾਲ ਹੀ ਵਿੱਚ ਇਜਾਜ਼ਤਾਂ ਵਰਤੀਆਂ ਹਨ"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> ਵਰਤੋਂ"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"ਹੋਰ ਇਜਾਜ਼ਤਾਂ ਦੇਖੋ"</string>
@@ -200,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"ਸਿਰਫ਼ ਐਪ ਵਰਤੇ ਜਾਣ ਵੇਲੇ ਕਰਨ ਦਿਓ"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"ਹਮੇਸ਼ਾਂ ਸਭ ਦੀ ਆਗਿਆ ਦਿਓ"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"ਹਰ ਵਾਰ ਪੁੱਛੋ"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"ਹਰ ਵਾਰ ਪੁੱਛੋ ਜਾਂ ਤੁਹਾਡੇ ਵੱਲੋਂ ਸਾਂਝਾ ਕਰਨ \'ਤੇ ਆਗਿਆ ਦਿਓ"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"ਨਾ ਕਰਨ ਦਿਓ"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"ਸੀਮਤ ਪਹੁੰਚ ਦੀ ਆਗਿਆ ਦਿਓ"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"ਸਹੀ ਟਿਕਾਣਾ"</string>
@@ -266,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"ਮਨਜ਼ੂਰਸ਼ੁਦਾ"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"ਹਰ ਵੇਲੇ ਪਹੁੰਚ ਕਰਨ ਦੀ ਆਗਿਆ ਹੈ"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"ਸਿਰਫ਼ ਐਪ ਵਰਤੋਂ ਵੇਲੇ ਪਹੁੰਚ ਵਾਲੀਆਂ"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"ਸਿਰਫ਼ ਮੀਡੀਆ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦਿੱਤੀ ਗਈ"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"ਸਾਰੀਆਂ ਫ਼ਾਈਲਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰਨ ਦਿੱਤਾ ਗਿਆ"</string>
     <string name="ask_header" msgid="2633816846459944376">"ਹਰ ਵਾਰ ਪੁੱਛੋ"</string>
     <string name="denied_header" msgid="903209608358177654">"ਗੈਰ-ਮਨਜ਼ੂਰਸ਼ੁਦਾ"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g> \'ਤੇ <xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"ਸਾਰੀਆਂ ਫ਼ਾਈਲਾਂ ਤੱਕ ਪਹੁੰਚ ਕਰ ਸਕਣ ਵਾਲੀਆਂ ਹੋਰ ਐਪਾਂ ਦੇਖੋ"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 ਦਿਨ}one{# ਦਿਨ}other{# ਦਿਨ}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# ਘੰਟਾ}one{# ਘੰਟਾ}other{# ਘੰਟੇ}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# ਮਿੰਟ}one{# ਮਿੰਟ}other{# ਮਿੰਟ}}"</string>
@@ -470,8 +475,7 @@
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"ਸਹਾਇਕ ਐਪ ਤੁਹਾਡੀ ਸਕ੍ਰੀਨ \'ਤੇ ਦਿਸਣਯੋਗ ਜਾਂ ਐਪਾਂ ਵਿੱਚ ਪਹੁੰਚਯੋਗ ਜਾਣਕਾਰੀ ਸਮੇਤ ਤੁਹਾਡੇ ਸਿਸਟਮ \'ਤੇ ਵਰਤੋਂ ਵਿੱਚ ਐਪਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਪੜ੍ਹ ਸਕੇਗੀ।"</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"ਕੀ ਆਪਣੀ ਡਿਜੀਟਲ ਅਸਿਸਟੈਂਟ ਐਪ ਨੂੰ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; \'ਤੇ ਬਦਲਣਾ ਹੈ?"</string>
     <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"ਇਹ ਅਸਿਸਟੈਂਟ ਤੁਹਾਡੇ ਸੁਨੇਹਿਆਂ ਅਤੇ ਉਸ ਡਾਟੇ ਵਰਗੀ ਜਾਣਕਾਰੀ ਤੱਕ ਪਹੁੰਚ ਕਰ ਸਕੇਗੀ, ਜਿਸਨੂੰ ਐਪਾਂ ਨੇ ਤੁਹਾਡੀ ਅਸਿਸਟੈਂਟ ਨਾਲ ਸਾਂਝਾ ਕਰਨ ਲਈ ਚੁਣਿਆ ਹੈ।"</string>
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"ਇਹ ਅਸਿਸਟੈਂਟ ਤੁਹਾਡੇ ਸੁਨੇਹਿਆਂ ਅਤੇ ਉਸ ਡਾਟੇ ਵਰਗੀ ਜਾਣਕਾਰੀ ਤੱਕ ਪਹੁੰਚ ਕਰ ਸਕੇਗੀ, ਜਿਸਨੂੰ ਐਪਾਂ ਨੇ ਤੁਹਾਡੀ ਅਸਿਸਟੈਂਟ ਨਾਲ ਸਾਂਝਾ ਕਰਨ ਲਈ ਚੁਣਿਆ ਹੈ।&lt;br&gt;&lt;br&gt;ਕਿਉਂਕਿ ਤੁਸੀਂ ਪਹਿਲਾਂ <xliff:g id="APP_NAME">%1$s</xliff:g> ਲਈ ਸਕ੍ਰੀਨ ਅਤੇ ਐਪ ਡਾਟਾ ਚਾਲੂ ਕੀਤਾ ਹੋਇਆ ਹੈ, ਇਸ ਲਈ ਇਸਨੂੰ ਤੁਹਾਡੀ ਸਕ੍ਰੀਨ \'ਤੇ ਐਪ ਖੁੱਲ੍ਹਣ \'ਤੇ ਸਮੱਗਰੀ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੀ ਵੀ ਆਗਿਆ ਦਿੱਤੀ ਜਾਵੇਗੀ।"</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"ਡੀਬੱਗਿੰਗ ਡਾਟਾ ਸਾਂਝਾ ਕਰੋ"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"ਕੀ ਵੇਰਵੇ ਸਮੇਤ ਡੀਬੱਗਿੰਗ ਡਾਟਾ ਸਾਂਝਾ ਕਰਨਾ ਹੈ?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ਡੀਬੱਗਿੰਗ ਜਾਣਕਾਰੀ ਨੂੰ ਅੱਪਲੋਡ ਕਰਨਾ ਚਾਹੁੰਦੀ ਹੈ।"</string>

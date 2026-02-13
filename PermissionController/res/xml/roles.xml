@@ -2136,6 +2136,9 @@
         </permissions>
     </role>
 
+    <!---
+      ~ A role for the content restriction apps.
+    -->
     <role
         name="android.app.role.CONTENT_RESTRICTION"
         featureFlag="android.permission.flags.Flags.contentRestrictionRoleEnabled"

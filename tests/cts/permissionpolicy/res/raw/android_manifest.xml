@@ -2589,7 +2589,8 @@
         android:permissionGroup="android.permission-group.UNDEFINED"
         android:description="@string/permdesc_bluetooth_scan"
         android:label="@string/permlab_bluetooth_scan"
-        android:protectionLevel="dangerous" />
+        android:protectionLevel="dangerous"
+        android:permissionFlags="allowedInPrivateComputeCore" />
 
     <!-- Required to be able to connect to paired Bluetooth devices.
          <p>Protection level: dangerous -->
@@ -2913,7 +2914,15 @@
          @hide
     -->
     <permission android:name="android.permission.VIBRATE_ALWAYS_ON"
-        android:protectionLevel="signature" />
+      android:protectionLevel="signature" />
+
+    <!-- Allows registration of a remote player of multisensory feedback.
+      <p>Protection level: signature|privileged
+      @hide
+    -->
+    <permission android:name="android.permission.REMOTE_MULTISENSORY_PLAYBACK"
+      android:protectionLevel="signature|privileged"
+      android:featureFlag="android.os.multisensory.enable_multisensory_feedback" />
 
     <!-- Allows access to system-only haptic feedback constants.
          <p>Protection level: signature
@@ -2924,21 +2933,17 @@
 
     <!-- @SystemApi Allows access to perform vendor effects in the vibrator.
          <p>Protection level: signature
-         @FlaggedApi(android.os.vibrator.Flags.FLAG_VENDOR_VIBRATION_EFFECTS)
          @hide
     -->
     <permission android:name="android.permission.VIBRATE_VENDOR_EFFECTS"
-        android:protectionLevel="signature|privileged"
-        android:featureFlag="android.os.vibrator.vendor_vibration_effects" />
+        android:protectionLevel="signature|privileged" />
 
     <!-- @SystemApi Allows access to start a vendor vibration session.
          <p>Protection level: signature
-        @FlaggedApi(android.os.vibrator.Flags.FLAG_VENDOR_VIBRATION_EFFECTS)
         @hide
     -->
     <permission android:name="android.permission.START_VIBRATION_SESSIONS"
-        android:protectionLevel="signature|privileged"
-        android:featureFlag="android.os.vibrator.vendor_vibration_effects" />
+        android:protectionLevel="signature|privileged" />
 
     <!-- @SystemApi Allows access to start a haptic generator session.
          <p>Protection level: signature|privileged|vendor privileged

@@ -134,6 +134,8 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Өчигдөр"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Хамгийн сүүлд <xliff:g id="TIME_DATE">%1$s</xliff:g>-нд хандсан"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Харах"</string>
+    <!-- no translation found for device_assistance_title (1445976710214822208) -->
+    <skip />
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Зөвшөөрлийг саяхан аль аппууд ашигласан болохыг харна уу"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>-н ашиглалт"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Бусад зөвшөөрлийг харах"</string>
@@ -200,8 +202,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Зөвхөн аппыг ашиглаж байх үед зөвшөөрөх"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Бүгдийг үргэлж зөвшөөрөх"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Тухай бүрд асуух"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_i_share (6762528139112412909) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Тухай бүрд асуух эсвэл таныг хуваалцах үед зөвшөөрөх"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Бүү зөвшөөр"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Хязгаарлагдмал хандалтыг зөвшөөрөх"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Нарийвчилсан байршил"</string>
@@ -266,12 +267,16 @@
     <string name="allowed_header" msgid="7769277978004790414">"Зөвшөөрсөн"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Үргэлж зөвшөөрсөн"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Зөвхөн ашиглаж байх үед зөвшөөрөгдсөн"</string>
+    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
+    <skip />
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Зөвхөн медиад хандахыг зөвшөөрсөн"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Бүх файлыг удирдахыг зөвшөөрсөн"</string>
     <string name="ask_header" msgid="2633816846459944376">"Тухай бүрд асуух"</string>
     <string name="denied_header" msgid="903209608358177654">"Зөвшөөрөөгүй"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g> дээрх <xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Бүх файлд хандах боломжтой бусад аппыг харах"</string>
+    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
+    <skip />
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 өдөр}other{# өдөр}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# цаг}other{# цаг}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# минут}other{# минут}}"</string>
@@ -469,10 +474,8 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Санамж: Хэрвээ та төхөөрөмжөө дахин эхлүүлж, дэлгэцийн түгжээ тохируулбал энэ апп таныг төхөөрөмжийнхөө түгжээг тайлах хүртэл эхлэх боломжгүй."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Туслах таны дэлгэцэд харагддаг эсвэл аппуудаас хандах боломжтой мэдээлэл зэрэг таны системд ашигладаг аппуудын талаарх мэдээллийг унших боломжтой болно."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Дижитал туслахын аппаа &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; болгож өөрчлөх үү?"</string>
-    <!-- no translation found for assistant_confirmation_message_v37 (4763150587952308197) -->
-    <skip />
-    <!-- no translation found for assistant_confirmation_message_access_restored_v37 (2731391781319881100) -->
-    <skip />
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Энэ туслах таны мессеж зэрэг мэдээлэл, аппын таны туслахтай хуваалцахаар сонгосон өгөгдөлд хандах боломжтой болно."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"Энэ туслах таны мессеж зэрэг мэдээлэл, аппын таны туслахтай хуваалцахаар сонгосон өгөгдөлд хандах боломжтой байх болно.&lt;br&gt;&lt;br&gt;Та өмнө нь <xliff:g id="APP_NAME">%1$s</xliff:g>-н хувьд дэлгэц, аппын өгөгдлийг асаасан тул тухайн апп таны дэлгэц дээр нээлттэй аппын контентод хандах боломжтой болно."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Алдаа засах өгөгдлийг хуваалцах"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Алдаа засах дэлгэрэнгүй өгөгдлийг хуваалцах уу?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> алдаа засах мэдээллийг байршуулах хүсэлтэй байна."</string>
@@ -750,20 +753,13 @@
     <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Энэ агент таны өмнөөс мэдээлэл авч, үйлдэл хийхийн тулд <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>-д хандах боломжтой болно"</string>
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Зөвшөөрөх"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Бүү зөвшөөр"</string>
-    <!-- no translation found for request_read_screen_context_dialog_title (9048738661085777679) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_description (627006720540705018) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_allow (5664102873265905702) -->
-    <skip />
-    <!-- no translation found for request_read_screen_context_dialog_button_dont_allow (582852715625937711) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_title (5557279099665174872) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_default_description (4349794650902006368) -->
-    <skip />
-    <!-- no translation found for read_screen_context_setting_description (3610476260828196298) -->
-    <skip />
+    <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"&lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt;-д дэлгэц, аппын өгөгдлийг ашиглахыг зөвшөөрөх үү?"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"Энэ туслах таны дэлгэц дээрх нээлттэй аппын мэдээлэл, контентод хандах боломжтой болно"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Зөвшөөрөх"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Бүү зөвшөөр"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Дэлгэц, аппын өгөгдлийг ашиглах"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Туслахад таны дэлгэц дээрх нээлттэй аппын мэдээлэл, контентод хандахыг зөвшөөрөх"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>-д таны дэлгэц дээрх нээлттэй аппын мэдээлэл, контентод хандахыг зөвшөөрөх"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Зөвшөөрөх"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Зөвшөөрөхгүй"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;-д байршлын товч ашиглан нарийвчилсан байршилд хандахыг зөвшөөрөх үү?"</string>
