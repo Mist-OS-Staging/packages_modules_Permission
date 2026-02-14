@@ -54,7 +54,6 @@ class AllowedForCompatibilityCategoryTest : BaseUsePermissionTest() {
 
     @Before
     fun setup() {
-        assumeFalse(isAutomotive)
         assumeFalse(isTv)
         assumeFalse(isWatch)
         installPackage(TEST_APP_APK)
@@ -121,7 +120,15 @@ class AllowedForCompatibilityCategoryTest : BaseUsePermissionTest() {
         verifyDisplayOrder(listOf(allowedCategory, nearbyDevicesGroupText, notAllowedCategory))
     }
 
-    private fun clickAllowButton() = clickPermissionControllerUi(By.res(ALLOW_RADIO_BUTTON))
+    private fun clickAllowButton() {
+        if (isAutomotive) {
+            clickPermissionControllerUi(
+                By.text(getPermissionControllerString("app_permission_button_allow"))
+            )
+        } else {
+            clickPermissionControllerUi(By.res(ALLOW_RADIO_BUTTON))
+        }
+    }
 
     private fun clickDontAllowAnywayButton() =
         clickPermissionControllerUi(

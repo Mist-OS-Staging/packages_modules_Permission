@@ -18,17 +18,24 @@ package com.android.permissioncontroller.role.ui.v37
 
 import android.app.Activity
 import android.app.Dialog
+import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.os.Process
 import android.text.Html
+import android.util.Log
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
+import com.android.permissioncontroller.PermissionControllerStatsLog
+import com.android.permissioncontroller.PermissionControllerStatsLog.REQUEST_READ_SCREEN_CONTEXT_DIALOG_ACTION_REPORTED
+import com.android.permissioncontroller.PermissionControllerStatsLog.REQUEST_READ_SCREEN_CONTEXT_DIALOG_ACTION_REPORTED__RESULT__RESULT_CANCELED
+import com.android.permissioncontroller.PermissionControllerStatsLog.REQUEST_READ_SCREEN_CONTEXT_DIALOG_ACTION_REPORTED__RESULT__RESULT_USER_DENIED
+import com.android.permissioncontroller.PermissionControllerStatsLog.REQUEST_READ_SCREEN_CONTEXT_DIALOG_ACTION_REPORTED__RESULT__RESULT_USER_GRANTED
 import com.android.permissioncontroller.R
 import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
 
@@ -96,6 +103,13 @@ class RequestReadScreenContextFragment : DialogFragment() {
     // dismissed explicitly
     fun onGrant() {
         viewModel.setAllowed()
+        reportRequestResult(
+            requireContext(),
+            packageName,
+            REQUEST_READ_SCREEN_CONTEXT_DIALOG_ACTION_REPORTED__RESULT__RESULT_USER_GRANTED,
+        )
+        // onGrant explicitly calls dismiss on dialog before finishing. onCancel is not called if
+        // dismissed explicitly
         dismiss()
         setResultAndFinish(Activity.RESULT_OK)
     }
@@ -104,6 +118,13 @@ class RequestReadScreenContextFragment : DialogFragment() {
     // dismissed explicitly.
     fun onDeny() {
         viewModel.markRequestDenied()
+        reportRequestResult(
+            requireContext(),
+            packageName,
+            REQUEST_READ_SCREEN_CONTEXT_DIALOG_ACTION_REPORTED__RESULT__RESULT_USER_DENIED,
+        )
+        // onDeny explicitly calls dismiss on dialog before finishing. onCancel is not called if
+        // dismissed explicitly.
         dismiss()
         setResultAndFinish(Activity.RESULT_CANCELED)
     }
@@ -113,6 +134,11 @@ class RequestReadScreenContextFragment : DialogFragment() {
     // dialog internals after this method.
     override fun onCancel(dialog: DialogInterface) {
         super.onCancel(dialog)
+        reportRequestResult(
+            requireContext(),
+            packageName,
+            REQUEST_READ_SCREEN_CONTEXT_DIALOG_ACTION_REPORTED__RESULT__RESULT_CANCELED,
+        )
         setResultAndFinish(Activity.RESULT_CANCELED)
     }
 
@@ -123,9 +149,33 @@ class RequestReadScreenContextFragment : DialogFragment() {
     }
 
     companion object {
+        private const val DEBUG = false
+        private val LOG_TAG = RequestReadScreenContextFragment::class.java.simpleName
+
         fun newInstance(packageName: String): RequestReadScreenContextFragment =
             RequestReadScreenContextFragment().apply {
                 arguments = Bundle().apply { putString(Intent.EXTRA_PACKAGE_NAME, packageName) }
             }
+
+        internal fun reportRequestResult(context: Context, packageName: String?, result: Int) {
+            val uid =
+                packageName?.let {
+                    PackageRepository.createInstance(context)
+                        .getPackageUid(packageName, Process.myUserHandle())
+                } ?: Process.INVALID_UID
+            PermissionControllerStatsLog.write(
+                REQUEST_READ_SCREEN_CONTEXT_DIALOG_ACTION_REPORTED,
+                uid,
+                packageName ?: "",
+                result,
+            )
+            if (DEBUG) {
+                Log.d(
+                    LOG_TAG,
+                    "Read screen context request - uid:$uid, packageName:$packageName, " +
+                        "result:$result",
+                )
+            }
+        }
     }
 }

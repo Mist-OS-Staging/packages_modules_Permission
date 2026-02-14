@@ -24,7 +24,11 @@ import android.os.Process
 import android.permission.flags.Flags
 import android.util.Log
 import androidx.fragment.app.FragmentActivity
+import com.android.permissioncontroller.PermissionControllerStatsLog.REQUEST_READ_SCREEN_CONTEXT_DIALOG_ACTION_REPORTED__RESULT__RESULT_IGNORED
+import com.android.permissioncontroller.PermissionControllerStatsLog.REQUEST_READ_SCREEN_CONTEXT_DIALOG_ACTION_REPORTED__RESULT__RESULT_IGNORED_ALREADY_GRANTED
+import com.android.permissioncontroller.PermissionControllerStatsLog.REQUEST_READ_SCREEN_CONTEXT_DIALOG_ACTION_REPORTED__RESULT__RESULT_IGNORED_UNREQUESTABLE
 import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
+import com.android.permissioncontroller.role.ui.v37.RequestReadScreenContextFragment.Companion.reportRequestResult
 
 class RequestReadScreenContextActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,6 +48,11 @@ class RequestReadScreenContextActivity : FragmentActivity() {
         val packageName = callingPackage
         if (packageName.isNullOrEmpty()) {
             Log.e(LOG_TAG, "Unknown/Invalid role holder package: $packageName.")
+            reportRequestResult(
+                this,
+                packageName,
+                REQUEST_READ_SCREEN_CONTEXT_DIALOG_ACTION_REPORTED__RESULT__RESULT_IGNORED,
+            )
             setResultAndFinish(RESULT_CANCELED)
             return
         }
@@ -51,6 +60,11 @@ class RequestReadScreenContextActivity : FragmentActivity() {
         when (getReadScreenContextRequestState(packageName, this)) {
             VoiceInteractionManager.READ_SCREEN_CONTEXT_REQUEST_STATE_GRANTED -> {
                 Log.w(LOG_TAG, "READ_SCREEN_CONTEXT already granted")
+                reportRequestResult(
+                    this,
+                    packageName,
+                    REQUEST_READ_SCREEN_CONTEXT_DIALOG_ACTION_REPORTED__RESULT__RESULT_IGNORED_ALREADY_GRANTED,
+                )
                 setResultAndFinish(RESULT_OK)
                 return
             }
@@ -60,13 +74,20 @@ class RequestReadScreenContextActivity : FragmentActivity() {
             }
             else -> {
                 Log.w(LOG_TAG, "Read screen context not requestable for package: $packageName.")
+                reportRequestResult(
+                    this,
+                    packageName,
+                    REQUEST_READ_SCREEN_CONTEXT_DIALOG_ACTION_REPORTED__RESULT__RESULT_IGNORED_UNREQUESTABLE,
+                )
                 setResultAndFinish(RESULT_CANCELED)
                 return
             }
         }
 
-        val fragment = RequestReadScreenContextFragment.Companion.newInstance(packageName)
-        supportFragmentManager.beginTransaction().add(fragment, null).commit()
+        if (savedInstanceState == null) {
+            val fragment = RequestReadScreenContextFragment.Companion.newInstance(packageName)
+            supportFragmentManager.beginTransaction().add(fragment, null).commit()
+        }
     }
 
     private fun setResultAndFinish(resultCode: Int) {
