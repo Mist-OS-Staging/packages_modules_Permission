@@ -134,8 +134,7 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"ગઈકાલે"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"છેલ્લે ઍક્સેસ કર્યાનો સમય: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"જુઓ"</string>
-    <!-- no translation found for device_assistance_title (1445976710214822208) -->
-    <skip />
+    <string name="device_assistance_title" msgid="1445976710214822208">"ડિવાઇસ સંબંધિત સહાયતા"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"કઈ ઍપ દ્વારા તાજેતરમાં પરવાનગીઓનો ઉપયોગ થયો તે જુઓ"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>નો ઉપયોગ"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"અન્ય પરવાનગીઓ જુઓ"</string>
@@ -267,16 +266,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"મંજૂરી છે"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"હંમેશાં માટે મંજૂરી આપી છે"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"માત્ર ઉપયોગમાં હોય ત્યારે જ મંજૂરી છે"</string>
-    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
-    <skip />
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"ઍપને કામ કરતી રાખવાની મંજૂરી આપી"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"માત્ર મીડિયા ઍક્સેસ કરવાની મંજૂરી છે"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"બધી ફાઇલો મેનેજ કરવાની મંજૂરી છે"</string>
     <string name="ask_header" msgid="2633816846459944376">"દર વખતે પૂછો"</string>
     <string name="denied_header" msgid="903209608358177654">"મંજૂરી નથી"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g> પર <xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"બધી ફાઇલોને ઍક્સેસ કરી શકે તેવી વધુ ઍપ જુઓ"</string>
-    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
-    <skip />
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;ઍપને કામ કરતી રાખવાની મંજૂરી આપવામાં આવી&lt;/b&gt;&lt;br&gt;&lt;br&gt;ઍપને કામ કરતી રાખવા માટે, તેને તમારા સ્થાનિક નેટવર્કને ઍક્સેસ કરવાની અને માત્ર આ નેટવર્ક પરના ડિવાઇસ સાથે કનેક્ટ કરવાની મંજૂરી આપવામાં આવી શકે છે.&lt;br&gt;&lt;br&gt;જ્યાં સુધી તમે ઍપને નજીકના બધા ડિવાઇસ શોધવાની અને તેની સાથે કનેક્ટ કરવાની મંજૂરી ન આપો, ત્યાં સુધી ઍપ બ્લૂટૂથ અને અન્ય ટેક્નોલોજીનો ઉપયોગ કરીને ડિવાઇસ સાથે કનેક્ટ કરી શકશે નહીં."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 દિવસ}one{# દિવસ}other{# દિવસ}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# કલાક}one{# કલાક}other{# કલાક}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# મિનિટ}one{# મિનિટ}other{# મિનિટ}}"</string>

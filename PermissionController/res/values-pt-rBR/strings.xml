@@ -134,8 +134,7 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Ontem"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Último acesso: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Ver"</string>
-    <!-- no translation found for device_assistance_title (1445976710214822208) -->
-    <skip />
+    <string name="device_assistance_title" msgid="1445976710214822208">"Assistência do dispositivo"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Ver quais apps usaram as permissões recentemente"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Uso de <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Ver outras permissões"</string>
@@ -267,16 +266,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"Com permissão"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Permitidos sempre"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Permitidos durante o uso"</string>
-    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
-    <skip />
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"Permitido para manter o app funcionando"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Com permissão para acessar apenas mídia"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Com permissão para gerenciar todos os arquivos"</string>
     <string name="ask_header" msgid="2633816846459944376">"Perguntar sempre"</string>
     <string name="denied_header" msgid="903209608358177654">"Sem permissão"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> no <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Veja mais apps que têm acesso a todos os arquivos"</string>
-    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
-    <skip />
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Permitido para manter o app funcionando&lt;/b&gt;&lt;br&gt;&lt;br&gt;Para que um app continue funcionando, ele pode ter permissão para acessar sua rede local e se conectar apenas a dispositivos dessa rede.&lt;br&gt;&lt;br&gt;O app não pode se conectar a dispositivos via Bluetooth e outras tecnologias, a menos que você permita que ele encontre e se conecte a todos os dispositivos próximos."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 dia}one{# dia}many{# dias}other{# dias}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# hora}one{# hora}many{# de horas}other{# horas}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# minuto}one{# minuto}many{# de minutos}other{# minutos}}"</string>

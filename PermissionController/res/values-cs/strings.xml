@@ -84,7 +84,7 @@
     <string name="storage_supergroup_warning_allow" msgid="103093462784523190">"Tato aplikace byla vytvořena pro starší verzi platformy Android. Pokud toto oprávnění povolíte, bude povolen přístup k celému úložišti (včetně fotek, videí, hudby, zvuků a dalších souborů)."</string>
     <string name="storage_supergroup_warning_deny" msgid="6420765672683284347">"Tato aplikace byla vytvořena pro starší verzi platformy Android. Pokud toto oprávnění odepřete, bude odepřen přístup k celému úložišti (včetně fotek, videí, hudby, zvuků a dalších souborů)."</string>
     <string name="default_permission_description" msgid="4624464917726285203">"provést neznámou akci"</string>
-    <string name="app_permissions_group_summary" msgid="8788419008958284002">"Povoleno u aplikací: <xliff:g id="COUNT_0">%1$d</xliff:g> z <xliff:g id="COUNT_1">%2$d</xliff:g>"</string>
+    <string name="app_permissions_group_summary" msgid="8788419008958284002">"Povoleno u <xliff:g id="COUNT_0">%1$d</xliff:g> z <xliff:g id="COUNT_1">%2$d</xliff:g> aplikací"</string>
     <string name="app_permissions_group_summary2" msgid="4329922444840521150">"Povolené aplikace: <xliff:g id="COUNT_0">%1$d</xliff:g>/<xliff:g id="COUNT_1">%2$d</xliff:g>"</string>
     <string name="menu_show_system" msgid="4254021607027872504">"Zobrazit systémové aplikace"</string>
     <string name="menu_hide_system" msgid="3855390843744028465">"Skrýt systémové aplikace"</string>
@@ -134,8 +134,7 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Včera"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Poslední přístup: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Zobrazit"</string>
-    <!-- no translation found for device_assistance_title (1445976710214822208) -->
-    <skip />
+    <string name="device_assistance_title" msgid="1445976710214822208">"Asistence pro zařízení"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Zobrazit aplikace, které v poslední době využily oprávnění"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> – používání"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Zobrazit další oprávnění"</string>
@@ -267,16 +266,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"Přístup povolen"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Povoleno pořád"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Povoleno pouze při používání"</string>
-    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
-    <skip />
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"Povoleno, aby aplikace mohla fungovat"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Povolen pouze přístup k médiím"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Povolena správa všech souborů"</string>
     <string name="ask_header" msgid="2633816846459944376">"Pokaždé se zeptat"</string>
     <string name="denied_header" msgid="903209608358177654">"Přístup zakázán"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> na <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Zobrazit další aplikace s přístupem ke všem souborům"</string>
-    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
-    <skip />
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Povoleno, aby aplikace mohla fungovat&lt;/b&gt;&lt;br&gt;&lt;br&gt;Aby aplikace fungovala, může mít povoleno přistupovat k vaší místní síti a připojovat se pouze k zařízením v této síti.&lt;br&gt;&lt;br&gt;Aplikace se nemůže připojovat k zařízením pomocí Bluetooth a dalších technologií, pokud jí nepovolíte vyhledávat a připojovat se ke všem zařízením v okolí."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 den}few{# dny}many{# dne}other{# dní}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# hodinu}few{# hodiny}many{# hodiny}other{# hodin}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# minuta}few{# minuty}many{# minuty}other{# minut}}"</string>
@@ -604,7 +601,7 @@
     <string name="safety_status_preference_title_and_summary_content_description" msgid="3511373256505058464">"Stav ochrany soukromí a zabezpečení. <xliff:g id="OVERALL_SAFETY_STATUS">%1$s</xliff:g>. <xliff:g id="SUMMARY_OF_DEVICE_STATUS">%2$s</xliff:g>"</string>
     <string name="security_settings" msgid="3808106921175271317">"Nastavení zabezpečení"</string>
     <string name="sensor_permissions_qs" msgid="1022267900031317472">"Oprávnění"</string>
-    <string name="safety_privacy_qs_tile_title" msgid="727301867710374052">"Zabezpečení a soukromí"</string>
+    <string name="safety_privacy_qs_tile_title" msgid="727301867710374052">"Zabezpečení a soukromí"</string>
     <string name="safety_privacy_qs_tile_subtitle" msgid="3621544532041936749">"Zkontrolovat stav"</string>
     <string name="privacy_controls_qs" msgid="5780144882040591169">"Nastavení ochrany soukromí"</string>
     <string name="security_settings_button_label_qs" msgid="8280343822465962330">"Další nastavení"</string>

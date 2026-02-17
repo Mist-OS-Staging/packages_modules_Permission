@@ -134,8 +134,7 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Hier"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Dernier accès : <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Afficher"</string>
-    <!-- no translation found for device_assistance_title (1445976710214822208) -->
-    <skip />
+    <string name="device_assistance_title" msgid="1445976710214822208">"Assistance pour les appareils"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Voir les applis qui ont récemment utilisé des autorisations"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Utilisation de votre <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Voir plus d\'autorisations"</string>
@@ -267,16 +266,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"Autorisées"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Toujours autorisées"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Autorisées seulement durant l\'utilisation"</string>
-    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
-    <skip />
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"Autorisé pour maintenir le fonctionnement de l\'appli"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Autor. à accéder aux élém. multim. seulement"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Autorisées à gérer tous les fichiers"</string>
     <string name="ask_header" msgid="2633816846459944376">"Toujours demander"</string>
     <string name="denied_header" msgid="903209608358177654">"Non autorisées"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> sur <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Afficher d\'autres applis pouvant accéder à tous les fichiers"</string>
-    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
-    <skip />
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Autorisé pour maintenir le fonctionnement de l\'appli&lt;/b&gt;&lt;br&gt;&lt;br&gt;Pour qu\'une appli continue de fonctionner, elle peut être autorisée à accéder à votre réseau local et à se connecter uniquement aux appareils de ce réseau.&lt;br&gt;&lt;br&gt;L\'appli ne peut pas se connecter aux appareils à l\'aide du Bluetooth et d\'autres technologies, à moins que vous l\'autorisiez à détecter tous les appareils à proximité et à s\'y connecter."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 jour}one{# jour}many{# de jours}other{# jours}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# heure}one{# heure}many{# d\'heures}other{# heures}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# minute}one{# minute}many{# de minutes}other{# minutes}}"</string>
@@ -584,7 +581,7 @@
     <string name="blocked_microphone_title" msgid="1631517143648232585">"Le microphone de l\'appareil est bloqué"</string>
     <string name="blocked_location_title" msgid="2005608279812892383">"La localisation de l\'appareil est désactivée"</string>
     <string name="blocked_sensor_summary" msgid="4443707628305027375">"Pour les applis et les services"</string>
-    <string name="blocked_mic_summary" msgid="8960466941528458347">"Il est possible que les données du microphone soient partagées lorsque vous appelez un numéro d\'urgence."</string>
+    <string name="blocked_mic_summary" msgid="8960466941528458347">"Il est possible que les données du microphone soient partagées lorsque vous composez un numéro d\'urgence."</string>
     <string name="blocked_sensor_button_label" msgid="6742092634984289658">"Modifier"</string>
     <string name="automotive_blocked_camera_title" msgid="6142362431548829416">"L\'accès à l\'appareil photo est désactivé"</string>
     <string name="automotive_blocked_microphone_title" msgid="3956311098238620220">"L\'accès au microphone est désactivé"</string>
@@ -653,7 +650,7 @@
     <string name="camera_toggle_title" msgid="1251201397431837666">"Accès à l\'appareil photo"</string>
     <string name="mic_toggle_title" msgid="2649991093496110162">"Accès au microphone"</string>
     <string name="perm_toggle_description" msgid="7801326363741451379">"Pour les applis et les services"</string>
-    <string name="mic_toggle_description" msgid="9163104307990677157">"Pour les applis et les services. Si ce paramètre est désactivé, il est possible que les données du microphone soient partagées lorsque vous appelez un numéro d\'urgence."</string>
+    <string name="mic_toggle_description" msgid="9163104307990677157">"Pour les applis et les services. Si ce paramètre est désactivé, il est possible que les données du microphone soient partagées lorsque vous composez un numéro d\'urgence."</string>
     <string name="location_settings_subtitle" msgid="2328360561197430695">"Voyez les applis et les services qui ont accès à votre position"</string>
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"Afficher l\'accès au presse-papiers"</string>
     <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"Un message s\'affiche lorsque les applis accèdent à du texte, à des images ou à d\'autres contenus que vous avez copiés"</string>
