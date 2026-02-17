@@ -134,8 +134,7 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"हिजो"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"पछिल्लो पटक <xliff:g id="TIME_DATE">%1$s</xliff:g> मा एक्सेस गरिएको"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"हेर्नुहोस्"</string>
-    <!-- no translation found for device_assistance_title (1445976710214822208) -->
-    <skip />
+    <string name="device_assistance_title" msgid="1445976710214822208">"डिभाइससम्बन्धी सहायता"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"हालै कुन कुन एपले अनुमति प्रयोग गरेका छन् हेर्नुहोस्"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> को प्रयोग"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"अन्य अनुमति हेर्नुहोस्"</string>
@@ -267,16 +266,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"अनुमति दिइएको"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"सधैँ अनुमति दिइएको"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"प्रयोग भइरहेका बेला मात्र अनुमति दिइने"</string>
-    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
-    <skip />
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"एपलाई चलिरहने अनुमति दिइएको छ"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"मिडिया मात्र प्रयोग गर्ने अनुमति दिइएको"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"सबै फाइल व्यवस्थापन गर्ने अनुमति दिइएको"</string>
     <string name="ask_header" msgid="2633816846459944376">"प्रत्येक पटक सोध्नुहोस्"</string>
     <string name="denied_header" msgid="903209608358177654">"अनुमति नदिइएका"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g> को <xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"सबै फाइल हेर्ने र प्रयोग गर्ने अनुमति भएका थप एपहरू हेर्नुहोस्"</string>
-    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
-    <skip />
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;एपलाई चलिरहने अनुमति दिइएको छ&lt;/b&gt;&lt;br&gt;&lt;br&gt;कुनै एपलाई चलिरहने अनुमति दिन यसलाई तपाईंको लोकल नेटवर्क एक्सेस गर्न र यो नेटवर्कमा भएका डिभाइसहरूसँग मात्र कनेक्ट गर्न दिइएको हुन सक्छ।&lt;br&gt;&lt;br&gt;तपाईंले यो एपलाई नजिकैका सबै डिभाइसहरू भेट्टाउने र कनेक्ट गर्ने अनुमति नदिएसम्म यसले ब्लुटुथ र अन्य प्रविधि प्रयोग गरी डिभाइसहरूसँग कनेक्ट हुन सक्दैन।"</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{१ दिन}other{# दिन}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# घण्टा}other{# घण्टा}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# मिनेट}other{# मिनेट}}"</string>
@@ -315,9 +312,9 @@
     <string name="accessibility_access_reminder_notification_title" msgid="2971317234668807566">"डिभाइस पूर्ण रूपमा चलाउने अनुमति दिइएको एपको समीक्षा गर्नुहोस्"</string>
     <string name="accessibility_access_reminder_notification_content" msgid="7389454158175306720">"<xliff:g id="APP_NAME">%s</xliff:g> ले तपाईंको स्क्रिन हेर्नुका साथै तपाईंको डिभाइसमा कार्यहरू गर्न सक्छ। सर्वसुलभतासम्बन्धी एपहरूलाई अपेक्षाअनुसार कार्य गर्नका निम्ति यस प्रकारको अनुमति दिनु पर्ने हुन्छ।"</string>
     <string name="accessibility_access_warning_card_content" msgid="4370327190293217358">"यो एपले तपाईंको स्क्रिन हेर्नुका साथै तपाईंको डिभाइसमा कार्यहरू गर्न सक्छ। सर्वसुलभतासम्बन्धी एपहरूलाई अपेक्षाअनुसार कार्य गर्नका निम्ति यस प्रकारको अनुमति दिनु पर्ने हुन्छ तर यो एप आधिकारिक एप हो कि होइन जाँच्नुहोस् र तपाईंलाई उक्त एपमाथि विश्वास छ भन्ने कुरा सुनिश्चित गर्नुहोस्।"</string>
-    <string name="accessibility_remove_access_button_label" msgid="44145801526711640">"सर्वसुलभता प्रयोग गर्ने अनुमति हटाउनुहोस्"</string>
+    <string name="accessibility_remove_access_button_label" msgid="44145801526711640">"एक्सेसिबिलिटीको एक्सेस हटाउनुहोस्"</string>
     <string name="accessibility_show_all_apps_button_label" msgid="960067249326392280">"पूर्ण रूपमा अनुमति दिइएका एपहरू हेर्नुहोस्"</string>
-    <string name="accessibility_remove_access_success_label" msgid="4380995302917014670">"सर्वसुलभता प्रयोग गर्ने अनुमति हटाइएको छ"</string>
+    <string name="accessibility_remove_access_success_label" msgid="4380995302917014670">"एक्सेसिबिलिटीको एक्सेस हटाइएको छ"</string>
     <string name="safety_center_notification_app_label" msgid="2457720616141926534">"Android सिस्टम"</string>
     <string name="auto_revoke_after_notification_title" msgid="5417761027669887431">"गोपनीयताको संरक्षण गर्न एपलाई दिइएका अनुमति रद्द गरिए"</string>
     <string name="auto_revoke_after_notification_content_one" msgid="6804038707453662753">"केही महिनादेखि <xliff:g id="APP_NAME">%s</xliff:g> प्रयोग भएको छैन। समीक्षा गर्न ट्याप गर्नुहोस्।"</string>
@@ -706,7 +703,7 @@
 </xliff:g>स्क्याम गर्ने व्यक्तिहरू तपाईंलाई कुनै नयाँ स्रोतबाट अज्ञात एपहरू इन्स्टल गर्न लगाएर तपाईंको डिभाइसमा हानिकारक एपहरू इन्स्टल गर्ने प्रयास गर्न सक्छन्।"</string>
     <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
 
-</xliff:g>स्क्याम गर्ने व्यक्तिहरू तपाईंलाई कुनै एपलाई सर्वसुलभता सेवा प्रयोग गर्ने अनुमति दिन लगाएर तपाईंको डिभाइस नियन्त्रण गर्ने प्रयास गर्न सक्छन्।"</string>
+</xliff:g>स्क्याम गर्ने व्यक्तिहरू तपाईंलाई कुनै एपलाई एक्सेसिबिलिटी सेवा प्रयोग गर्ने अनुमति दिन लगाएर तपाईंको डिभाइस नियन्त्रण गर्ने प्रयास गर्न सक्छन्।"</string>
     <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"एपलाई <xliff:g id="PERMISSION_NAME">%1$s</xliff:g> को एक्सेस दिइएन"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"यो एपले तपाईंको व्यक्तिगत तथा वित्तीय जानकारी जोखिममा पार्न सक्ने खालको संवेदनशील अनुमति मागेको छ।<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>तपाईले उक्त प्रतिबन्धित अनुमति नदिएका खण्डमा यो एपले राम्रोसँग काम नगर्न सक्छ। &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;अनुमति दिने तरिका सिक्नुहोस्&lt;/a&gt;"</string>

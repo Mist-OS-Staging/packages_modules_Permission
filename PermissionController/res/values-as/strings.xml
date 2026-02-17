@@ -134,8 +134,7 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"কালি"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"অন্তিমবাৰ <xliff:g id="TIME_DATE">%1$s</xliff:g>ত এক্সেছ কৰা হৈছিল"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"চাওক"</string>
-    <!-- no translation found for device_assistance_title (1445976710214822208) -->
-    <skip />
+    <string name="device_assistance_title" msgid="1445976710214822208">"ডিভাইচৰ সহায়"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"কোন এপে শেহতীয়াকৈ অনুমতি ব্যৱহাৰ কৰিছে চাওক"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>ৰ ব্যৱহাৰ"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"অন্য অনুমতি চাওক"</string>
@@ -267,16 +266,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"অনুমতি দিয়া হৈছে"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"সকলো সময়তে অনুমতি দিয়া হৈছে"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"কেৱল ব্যৱহাৰ হৈ থকা সময়ত অনুমতি দিয়া হৈছে"</string>
-    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
-    <skip />
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"এপ্‌টোক কাম কৰি থাকিবলৈ অনুমতি দিয়া হৈছে"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"কেৱল মিডিয়ালৈ এক্সেছৰ অনুমতি আছে"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"আটাইবোৰ ফাইল পৰিচালনা কৰিবলৈ অনুমতি আছে"</string>
     <string name="ask_header" msgid="2633816846459944376">"প্ৰতিবাৰতে সোধক"</string>
     <string name="denied_header" msgid="903209608358177654">"অনুমতি নাই"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g>ত <xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"আটাইবোৰ ফাইল এক্সেছ কৰিব পৰা অধিক এপ্‌ চাওক"</string>
-    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
-    <skip />
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;এপ্‌টোক কাম কৰি থাকিবলৈ অনুমতি দিয়া হৈছে&lt;/b&gt;&lt;br&gt;&lt;br&gt;কোনো এপে কাম কৰি থাকিবলৈ, ইয়াক আপোনাৰ স্থানীয় নেটৱৰ্ক এক্সেছ কৰিবলৈ আৰু কেৱল এই নেটৱৰ্কৰ ডিভাইচসমূহৰ সৈতে সংযোগ কৰিবলৈ অনুমতি দিয়া হ’ব পাৰে।&lt;br&gt;&lt;br&gt;আপুনি এপ্‌টোক আটাইবোৰ নিকটৱৰ্তী ডিভাইচ বিচাৰি উলিয়াবলৈ আৰু সেইসমূহৰ সৈতে সংযোগ কৰিবলৈ অনুমতি নিদিয়া পৰ্যন্ত এপ্‌টোৱে ব্লুটুথ আৰু অন্য প্ৰযুক্তি ব্যৱহাৰ কৰি ডিভাইচসমূহৰ সৈতে সংযোগ কৰিব নোৱাৰে।"</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{১ দিন}one{# দিন}other{# দিন}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# ঘণ্টা}one{# ঘণ্টা}other{# ঘণ্টা}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# মিনিট}one{# মিনিট}other{# মিনিট}}"</string>

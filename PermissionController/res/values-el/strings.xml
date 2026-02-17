@@ -134,8 +134,7 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Χθες"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Τελευταία πρόσβαση <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Προβολή"</string>
-    <!-- no translation found for device_assistance_title (1445976710214822208) -->
-    <skip />
+    <string name="device_assistance_title" msgid="1445976710214822208">"Βοήθεια συσκευής"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Δείτε ποιες εφαρμογές χρησιμοποίησαν πρόσφατα άδειες"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Χρήση άδειας \"<xliff:g id="PERMGROUP">%1$s</xliff:g>\""</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Δείτε άλλες άδειες"</string>
@@ -267,16 +266,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"Επιτρέπονται"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Να επιτρέπονται πάντα"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Να επιτρέπονται μόνο κατά τη χρήση"</string>
-    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
-    <skip />
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"Αποδοχή για λειτουργία εφαρμογής"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Επιτρέπεται η πρόσβαση μόνο σε μέσα"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Επιτρέπεται η διαχείριση όλων των αρχείων"</string>
     <string name="ask_header" msgid="2633816846459944376">"Ερώτηση κάθε φορά"</string>
     <string name="denied_header" msgid="903209608358177654">"Δεν επιτρέπονται"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> στη συσκευή <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Δείτε περισσότερες εφαρμογές με πρόσβαση σε όλα τα αρχεία"</string>
-    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
-    <skip />
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Αποδοχή για λειτουργία εφαρμογής&lt;/b&gt;&lt;br&gt;&lt;br&gt;Για να συνεχίσει να λειτουργεί μια εφαρμογή, μπορεί να επιτρέπεται η πρόσβασή της στο τοπικό σας δίκτυο και η σύνδεσή της μόνο με συσκευές σε αυτό.&lt;br&gt;&lt;br&gt;Η εφαρμογή δεν μπορεί να συνδεθεί με συσκευές χρησιμοποιώντας Bluetooth και άλλες τεχνολογίες, εκτός αν της επιτρέψετε να εντοπίζει και να συνδέεται με όλες τις κοντινές συσκευές."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 ημέρα}other{# ημέρες}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# ώρα}other{# ώρες}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# λεπτό}other{# λεπτά}}"</string>
@@ -681,7 +678,7 @@
     <string name="app_location_permission_rationale_title" msgid="925420340572401350">"Τα δεδομένα τοποθεσίας ενδέχεται να κοινοποιούνται"</string>
     <string name="app_location_permission_rationale_subtitle" msgid="6986985722752868692">"Αυτή η εφαρμογή έχει δηλώσει ότι ενδέχεται να κοινοποιήσει τα δεδομένα τοποθεσίας σας σε τρίτα μέρη"</string>
     <string name="data_sharing_updates_title" msgid="7996933386875213859">"Ενημερώσεις στην κοινοποίηση δεδ. για τοποθεσία"</string>
-    <string name="data_sharing_updates_summary" msgid="764113985772233889">"Ελέγξτε εφαρμογές που άλλαξαν τον τρόπο με τον οποίο ενδέχεται να κοινοποιούν τα δεδομένα τοποθεσίας"</string>
+    <string name="data_sharing_updates_summary" msgid="764113985772233889">"Έλεγχος εφαρμογών που άλλαξαν τον τρόπο με τον οποίο ενδέχεται να κοινοποιούν τα δεδομένα τοποθεσίας"</string>
     <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"Αυτές οι εφαρμογές έχουν αλλάξει τον τρόπο με τον οποίο μπορούν να κοινοποιούν τα δεδομένα τοποθεσία σας. Ενδέχεται να μην τα έχουν κοινοποιήσει στο παρελθόν ή να τα κοινοποιούν τώρα για σκοπούς διαφήμισης ή μάρκετινγκ."</string>
     <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Οι προγραμματιστές αυτών των εφαρμογών έχουν καταχωρίσει πληροφορίες σχετικά με τις πρακτικές κοινοποίησης δεδομένων σε ένα app store. Ενδέχεται να τις ενημερώσουν με την πάροδο του χρόνου.\n\nΟι πρακτικές κοινοποίησης δεδομένων ενδέχεται να διαφέρουν ανάλογα με την έκδοση και τη χρήση της εφαρμογής, καθώς και με την περιοχή και την ηλικία σας."</string>
     <string name="learn_about_data_sharing" msgid="4200480587079488045">"Μάθετε σχετικά με την κοινοποίηση δεδομένων"</string>

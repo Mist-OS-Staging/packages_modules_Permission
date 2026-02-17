@@ -134,8 +134,7 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Atzo"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Azken sarbidea: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Ikusi"</string>
-    <!-- no translation found for device_assistance_title (1445976710214822208) -->
-    <skip />
+    <string name="device_assistance_title" msgid="1445976710214822208">"Gailuaren laguntza"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Ikusi zein aplikaziok erabili berri dituzten baimenak"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> erabiltzeko baimenaren erabilera"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Ikusi beste baimen batzuk"</string>
@@ -267,16 +266,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"Baimendutakoak"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Beti baimendutakoak"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Erabili bitartean soilik baimendutakoak"</string>
-    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
-    <skip />
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"Aplikazioak funtzionatzen jarraitzeko"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Multimedia-fitx. soilik erabiltzeko baimena dutenak"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Fitxategi guztiak kudeatzeko baimena dutenak"</string>
     <string name="ask_header" msgid="2633816846459944376">"Galdetu beti"</string>
     <string name="denied_header" msgid="903209608358177654">"Baimendu gabe"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> (<xliff:g id="DEVICE_NAME">%2$s</xliff:g>)"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Ikusi fitxategi guztiak atzi ditzaketen aplikazio gehiago"</string>
-    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
-    <skip />
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Aplikazioak funtzionatzen jarraitzeko&lt;/b&gt;&lt;br&gt;&lt;br&gt;Aplikazio batek funtzionatzen jarraitzeko, baliteke sare lokalera konektatzeko eta sare horretako gailuekin soilik konektatzeko baimena izatea.&lt;br&gt;&lt;br&gt;Aplikazioa ezin da konektatu Bluetooth eta beste teknologia batzuen bidezko gailuetara, salbu eta inguruko gailu guztiak aurkitzeko eta haietara konektatzeko baimena ematen badiozu."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 egun}other{# egun}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# ordu}other{# ordu}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# minutu}other{# minutu}}"</string>
@@ -410,7 +407,7 @@
     <string name="role_call_redirection_request_title" msgid="2816244455003562925">"<xliff:g id="APP_NAME">%1$s</xliff:g> ezarri nahi duzu deiak birbideratzeko aplikazio lehenetsi gisa?"</string>
     <string name="role_call_redirection_request_description" msgid="3118895714178527164">"Ez du behar baimenik"</string>
     <string name="role_call_screening_label" msgid="883935222060878724">"Deitzailearen id. eta spam-aplikazio lehenetsia"</string>
-    <string name="role_call_screening_short_label" msgid="2048465565063130834">"Deitzailearen ID eta spama"</string>
+    <string name="role_call_screening_short_label" msgid="2048465565063130834">"Deitzailearen id. eta spama"</string>
     <string name="role_call_screening_description" msgid="2349431420497468981">"Deiak identifikatzeko, eta spama, dei automatizatuak eta nahi ez dituzun zenbakiak blokeatzeko aukera ematen dizuten aplikazioak"</string>
     <string name="role_call_screening_request_title" msgid="7358309224566977290">"<xliff:g id="APP_NAME">%1$s</xliff:g> ezarri nahi duzu deitzailearen identitate eta spam-aplikazio lehenetsi gisa?"</string>
     <string name="role_call_screening_request_description" msgid="7338511921032446006">"Ez du behar baimenik"</string>

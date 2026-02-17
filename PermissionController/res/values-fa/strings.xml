@@ -134,8 +134,7 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"دیروز"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"آخرین دسترسی: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"مشاهده"</string>
-    <!-- no translation found for device_assistance_title (1445976710214822208) -->
-    <skip />
+    <string name="device_assistance_title" msgid="1445976710214822208">"دستیار دستگاه"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"مشاهده برنامه‌هایی که اخیراً از اجازه‌ها استفاده کرده‌اند"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"استفاده از <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"دیدن اجازه‌های دیگر"</string>
@@ -267,16 +266,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"اجازه داشتن"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"همیشه مجاز بودن"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"مجاز فقط هنگام استفاده"</string>
-    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
-    <skip />
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"مجاز به درحال کار نگه داشتن برنامه"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"مجاز فقط برای دسترسی به رسانه‌ها"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"مجاز برای مدیریت همه فایل‌ها"</string>
     <string name="ask_header" msgid="2633816846459944376">"هربار پرسیده شود"</string>
     <string name="denied_header" msgid="903209608358177654">"اجازه نداشتن"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> در <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"دیدن برنامه‌های دیگری که به همه فایل‌ها دسترسی دارند"</string>
-    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
-    <skip />
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"‏&lt;b&gt;اجازه دارد برنامه را درحال کار نگه دارد&lt;/b&gt;&lt;br&gt;&lt;br&gt;برای اینکه برنامه درحال کار بماند، ممکن است به آن اجازه داده شود به شبکه محلی شما دسترسی داشته باشد و فقط با دستگاه‌های این شبکه متصل شود.&lt;br&gt;&lt;br&gt;برنامه نمی‌تواند بااستفاده از بلوتوث و فناوری‌های دیگر به دستگاه‌ها متصل شود، مگر اینکه به آن اجازه دهید همه دستگاه‌های اطراف را پیدا کند و به آن‌ها متصل شود."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{یک روز}one{# روز}other{# روز}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# ساعت}one{# ساعت}other{# ساعت}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# دقیقه}one{# دقیقه}other{# دقیقه}}"</string>
@@ -484,7 +481,7 @@
     <string name="incident_report_dialog_text" msgid="1819244417678973362">"<xliff:g id="APP_NAME_0">%1$s</xliff:g> درخواست بارگذاری گزارش اشکالی را دارد که در <xliff:g id="DATE">%2$s</xliff:g> ساعت <xliff:g id="TIME">%3$s</xliff:g> در این دستگاه پیش آمده است. گزارش‌های اشکال شامل اطلاعات شخصی درباره دستگاه شما است یا اطلاعاتی که توسط برنامه‌ها گزارش شده است، برای مثال، نام‌های کاربری، داده‌های مکان، شناسه‌های دستگاه و اطلاعات شبکه. گزارش‌های اشکال را فقط با افراد و برنامه‌هایی هم‌رسانی کنید که به آن‌ها در این‌باره اعتماد دارید.\n\nبه <xliff:g id="APP_NAME_1">%4$s</xliff:g> اجازه بارگذاری گزارش اشکال داده شود؟"</string>
     <string name="incident_report_error_dialog_text" msgid="4189647113387092272">"هنگام پردازش گزارش اشکال برای <xliff:g id="APP_NAME">%1$s</xliff:g> خطایی رخ داد. بنابراین هم‌رسانی داده‌های اشکال‌زدایی دقیق رد شد. از وقفه پیش‌آمده پوزش می‌طلبیم."</string>
     <string name="incident_report_dialog_allow_label" msgid="2970242967721155239">"اجازه دادن"</string>
-    <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"مجاز نبودن"</string>
+    <string name="incident_report_dialog_deny_label" msgid="3535314290677579383">"نپذیرفتن"</string>
     <string name="adjust_user_sensitive_title" msgid="4196724451314280527">"تنظیمات پیشرفته"</string>
     <string name="menu_adjust_user_sensitive" msgid="6497923610654425780">"تنظیمات پیشرفته"</string>
     <string name="adjust_user_sensitive_globally_title" msgid="8649190949066029174">"نمایش استفادهٔ برنامه سیستم"</string>
@@ -653,9 +650,9 @@
     <string name="camera_toggle_title" msgid="1251201397431837666">"دسترسی به دوربین"</string>
     <string name="mic_toggle_title" msgid="2649991093496110162">"دسترسی به میکروفون"</string>
     <string name="perm_toggle_description" msgid="7801326363741451379">"برای برنامه‌ها و سرویس‌ها"</string>
-    <string name="mic_toggle_description" msgid="9163104307990677157">"برای برنامه‌ها و سرویس‌ها. اگر این تنظیم خاموش باشد، ممکن است وقتی با شماره تلفنی اضطراری تماس می‌گیرید داده‌های میکروفون همچنان هم‌رسانی شود."</string>
-    <string name="location_settings_subtitle" msgid="2328360561197430695">"دیدن برنامه‌ها و سرویس‌هایی که به مکان دسترسی دارند"</string>
-    <string name="show_clip_access_notification_title" msgid="5168467637351109096">"نمایش دسترسی به بریده‌دان"</string>
+    <string name="mic_toggle_description" msgid="9163104307990677157">"برای برنامه‌ها و سرویس‌ها. اگر این تنظیم خاموش باشد، ممکن است وقتی که با شماره تلفنی اضطراری تماس می‌گیرید داده‌های میکروفون همچنان هم‌رسانی شود."</string>
+    <string name="location_settings_subtitle" msgid="2328360561197430695">"برنامه‌ها و سرویس‌هایی را که به مکان دسترسی دارند ببینید"</string>
+    <string name="show_clip_access_notification_title" msgid="5168467637351109096">"نشان دادن دسترسی به بریده‌دان"</string>
     <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"وقتی برنامه‌ها به نوشتار، تصویر، یا محتوای دیگری که کپی کرده‌اید دسترسی پیدا می‌کنند، پیامی نشان داده می‌شود"</string>
     <string name="show_password_title" msgid="2877269286984684659">"نمایش گذرواژه‌ها"</string>
     <string name="show_password_summary" msgid="1110166488865981610">"همان‌طور که تایپ می‌کنید، نویسه‌ها را برای مدت کوتاهی نشان داده می‌شوند"</string>
