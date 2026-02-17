@@ -2153,4 +2153,25 @@
             </service>
         </required-components>
     </role>
+
+    <!--
+        A role for the management of the device policies.
+
+        The role is used for the management of the device policies. Intended to
+        be used only on managed devices.
+    -->
+    <role
+        name="android.app.role.DEVICE_CONTROLLER"
+        behavior="v38.DeviceControllerRoleBehavior"
+        exclusive="true"
+        exclusivity="user"
+        featureFlag="android.app.admin.flags.Flags.multiUserManagementDeviceProvisioning"
+        visible="false">
+        <permissions>
+            <permission name="android.permission.MANAGE_DEVICE_POLICY_SAFE_BOOT" />
+            <permission name="android.permission.MANAGE_DEVICE_POLICY_DEBUGGING_FEATURES" />
+            <permission name="android.permission.MANAGE_DEVICE_POLICY_CONTENT_PROTECTION" />
+            <permission name="android.permission.MANAGE_DEVICE_POLICY_INPUT_METHODS" />
+        </permissions>
+    </role>
 </roles>
