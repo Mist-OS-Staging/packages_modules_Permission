@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeightIn
 import androidx.compose.foundation.layout.size
@@ -372,7 +373,10 @@ private fun ListScopeWrapper.titleItem(
                     MaterialTheme.typography.titleLarge
                 }
             ListHeader(
-                modifier = modifier.requiredHeightIn(1.dp), // We do not want default min height
+                modifier =
+                    modifier
+                        .fillMaxWidth()
+                        .requiredHeightIn(1.dp), // We do not want default min height
                 contentPadding = contentPaddingValues,
             ) {
                 Text(
