@@ -21,10 +21,13 @@ package com.android.permissioncontroller.permission.service
 import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager.FLAG_PERMISSION_AUTO_REVOKED
+import android.content.pm.PackageManager.FLAG_PERMISSION_TRUSTED_UI_CONSENTED
+import android.content.pm.PackageManager.FLAG_PERMISSION_TRUSTED_UI_SHOWN
 import android.content.pm.PackageManager.FLAG_PERMISSION_USER_SET
 import android.os.UserHandle
 import android.os.UserManager
 import android.permission.PermissionManager
+import android.permission.flags.Flags
 import androidx.annotation.MainThread
 import com.android.permissioncontroller.Constants.INVALID_SESSION_ID
 import com.android.permissioncontroller.DumpableLog
@@ -83,12 +86,6 @@ suspend fun revokeAppPermissions(
             PermissionChangeStorageImpl.getInstance().loadEvents().associateBy { it.packageName }
         // For each autorevoke-eligible app...
         userApps.forEachInParallel(Main) forEachInParallelOuter@{ pkg: LightPackageInfo ->
-            if (pkg.grantedPermissions.isEmpty()) {
-                if (DEBUG_AUTO_REVOKE) {
-                    DumpableLog.i(LOG_TAG, "${pkg.packageName}: no granted permissions")
-                }
-                return@forEachInParallelOuter
-            }
             val packageName = pkg.packageName
             val pkgPermChange = pkgPermChanges[packageName]
             val now = System.currentTimeMillis()
@@ -115,6 +112,37 @@ suspend fun revokeAppPermissions(
 
             if (DEBUG_AUTO_REVOKE) {
                 DumpableLog.i(LOG_TAG, "$packageName: perm groups: ${pkgPermGroups.keys}.")
+            }
+
+            // Revoke location button consent
+            if (
+                Flags.locationButtonEnabled() && Manifest.permission_group.LOCATION in pkgPermGroups
+            ) {
+                val locationGroup =
+                    LightAppPermGroupLiveData[packageName, Manifest.permission_group.LOCATION, user]
+                        .getInitializedValue()
+
+                if (
+                    locationGroup != null &&
+                        (locationGroup.isTrustedUiShown || locationGroup.isTrustedUiConsented)
+                ) {
+                    if (DEBUG_AUTO_REVOKE) {
+                        DumpableLog.i(LOG_TAG, "$packageName: trusted UI consent revoked")
+                    }
+                    KotlinUtils.setGroupFlags(
+                        context.application,
+                        locationGroup,
+                        FLAG_PERMISSION_TRUSTED_UI_SHOWN to false,
+                        FLAG_PERMISSION_TRUSTED_UI_CONSENTED to false,
+                    )
+                }
+            }
+
+            if (pkg.grantedPermissions.isEmpty()) {
+                if (DEBUG_AUTO_REVOKE) {
+                    DumpableLog.i(LOG_TAG, "${pkg.packageName}: no granted permissions")
+                }
+                return@forEachInParallelOuter
             }
 
             // Determine which permGroups are revocable
