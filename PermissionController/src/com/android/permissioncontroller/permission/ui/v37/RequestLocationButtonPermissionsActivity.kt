@@ -27,6 +27,8 @@ import androidx.annotation.RequiresApi
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.lifecycle.ViewModelProvider
+import com.android.permissioncontroller.Constants.EXTRA_SESSION_ID
+import com.android.permissioncontroller.Constants.INVALID_SESSION_ID
 import com.android.permissioncontroller.permission.ui.handheld.v37.RequestLocationButtonPermissionsFragment
 import com.android.permissioncontroller.permission.ui.model.v37.LocationButtonViewModel
 import com.android.permissioncontroller.permission.ui.model.v37.LocationButtonViewModel.LocationButtonRequestState
@@ -46,6 +48,7 @@ class RequestLocationButtonPermissionsActivity : FragmentActivity() {
             return
         }
 
+        val sessionId = intent.getLongExtra(EXTRA_SESSION_ID, INVALID_SESSION_ID)
         val packageName = intent.getStringExtra(Intent.EXTRA_PACKAGE_NAME)
         val remoteCallback =
             intent.getParcelableExtra(Intent.EXTRA_REMOTE_CALLBACK, RemoteCallback::class.java)
@@ -55,7 +58,8 @@ class RequestLocationButtonPermissionsActivity : FragmentActivity() {
             return
         }
 
-        val factory = LocationButtonViewModelFactory(application, packageName, remoteCallback)
+        val factory =
+            LocationButtonViewModelFactory(application, sessionId, packageName, remoteCallback)
         val viewModel = ViewModelProvider(this, factory)[LocationButtonViewModel::class.java]
 
         viewModel.locationButtonRequestStateLiveData.observe(this) { state ->
@@ -77,6 +81,7 @@ class RequestLocationButtonPermissionsActivity : FragmentActivity() {
                     if (savedInstanceState == null) {
                         val fragment =
                             RequestLocationButtonPermissionsFragment.newInstance(
+                                sessionId,
                                 packageName,
                                 remoteCallback,
                             )

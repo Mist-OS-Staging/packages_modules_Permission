@@ -33,6 +33,16 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.android.permissioncontroller.PermissionControllerStatsLog
+import com.android.permissioncontroller.PermissionControllerStatsLog.LOCATION_BUTTON_REQUEST_RESULT_REPORTED
+import com.android.permissioncontroller.PermissionControllerStatsLog.LOCATION_BUTTON_REQUEST_RESULT_REPORTED__PERMISSION__ACCESS_FINE_LOCATION
+import com.android.permissioncontroller.PermissionControllerStatsLog.LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__ALREADY_GRANTED
+import com.android.permissioncontroller.PermissionControllerStatsLog.LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__DENIED
+import com.android.permissioncontroller.PermissionControllerStatsLog.LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__DIRECT_GRANT
+import com.android.permissioncontroller.PermissionControllerStatsLog.LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__NOT_GRANTABLE
+import com.android.permissioncontroller.PermissionControllerStatsLog.LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__POLICY_AUTO_DENIED
+import com.android.permissioncontroller.PermissionControllerStatsLog.LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__POLICY_AUTO_GRANTED
+import com.android.permissioncontroller.PermissionControllerStatsLog.LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__PROMPT_GRANT
 import com.android.permissioncontroller.permission.data.LightAppPermGroupLiveData
 import com.android.permissioncontroller.permission.data.get
 import com.android.permissioncontroller.permission.model.livedatatypes.LightAppPermGroup
@@ -42,6 +52,7 @@ import com.android.permissioncontroller.permission.utils.Utils
 /** View model for granting location permissions when user interacts with a location button. */
 class LocationButtonViewModel(
     val app: Application,
+    private val sessionId: Long,
     private val packageName: String,
     private val remoteCallback: RemoteCallback,
 ) : AndroidViewModel(app) {
@@ -60,9 +71,16 @@ class LocationButtonViewModel(
                 val isGranted = group.permissions[ACCESS_FINE_LOCATION]?.isGranted == true
                 val newState =
                     when {
-                        isGranted -> LocationButtonRequestState.ALREADY_GRANTED
+                        isGranted -> {
+                            logLocationButtonRequestResult(
+                                LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__ALREADY_GRANTED
+                            )
+                            LocationButtonRequestState.ALREADY_GRANTED
+                        }
                         isPermissionNotGrantable(group) -> {
-                            Log.i(LOG_TAG, "Precise permission is not grantable.")
+                            logLocationButtonRequestResult(
+                                LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__NOT_GRANTABLE
+                            )
                             LocationButtonRequestState.NOT_GRANTABLE
                         }
                         else -> {
@@ -70,11 +88,15 @@ class LocationButtonViewModel(
                                 KotlinUtils.applyPermissionPolicy(app, ACCESS_FINE_LOCATION, group)
                             when (policy) {
                                 DevicePolicyManager.PERMISSION_POLICY_AUTO_GRANT -> {
-                                    Log.i(LOG_TAG, "Precise permission is auto granted.")
+                                    logLocationButtonRequestResult(
+                                        LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__POLICY_AUTO_GRANTED
+                                    )
                                     LocationButtonRequestState.AUTO_GRANTED
                                 }
                                 DevicePolicyManager.PERMISSION_POLICY_AUTO_DENY -> {
-                                    Log.i(LOG_TAG, "Precise permission is auto denied.")
+                                    logLocationButtonRequestResult(
+                                        LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__POLICY_AUTO_DENIED
+                                    )
                                     LocationButtonRequestState.AUTO_DENIED
                                 }
                                 else -> {
@@ -105,6 +127,10 @@ class LocationButtonViewModel(
 
     fun onAllow() {
         var appPermGroup = lightAppPermGroupLiveData.value!!
+        val result =
+            if (appPermGroup.isTrustedUiConsented)
+                LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__DIRECT_GRANT
+            else LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__PROMPT_GRANT
         val coarsePermission = appPermGroup.permissions[ACCESS_COARSE_LOCATION]!!
         // Grant coarse permission, if not granted.
         if (!coarsePermission.isGranted) {
@@ -121,12 +147,13 @@ class LocationButtonViewModel(
             group = appPermGroup,
             filterPermissions = listOf(ACCESS_FINE_LOCATION),
             isOneTime = true,
-            isTrustedUI = true,
+            isTrustedUi = true,
         )
 
         val bundle =
             Bundle().apply { putBoolean(LocationButtonClient.EXTRA_PERMISSION_RESULT, true) }
         remoteCallback.sendResult(bundle)
+        logLocationButtonRequestResult(result)
     }
 
     fun onDontAllow() {
@@ -154,6 +181,7 @@ class LocationButtonViewModel(
         val bundle =
             Bundle().apply { putBoolean(LocationButtonClient.EXTRA_PERMISSION_RESULT, false) }
         remoteCallback.sendResult(bundle)
+        logLocationButtonRequestResult(LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__DENIED)
     }
 
     // This code is derived from GrantPermissionsViewModel.isPermissionGrantableAndNotFixed()
@@ -167,6 +195,26 @@ class LocationButtonViewModel(
                 precisePermission.isPolicyFixed
 
         return policyFixed || lightAppPermGroup.foreground.isUserFixed
+    }
+
+    private fun logLocationButtonRequestResult(result: Int) {
+        val lightAppPermGroup = lightAppPermGroupLiveData.value!!
+        Log.i(
+            LOG_TAG,
+            "Location button permission grant result requestId=$sessionId " +
+                "callingUid=${lightAppPermGroup.packageInfo.uid} " +
+                "callingPackage=$packageName " +
+                "permission=$ACCESS_FINE_LOCATION " +
+                "result=$result ",
+        )
+        PermissionControllerStatsLog.write(
+            LOCATION_BUTTON_REQUEST_RESULT_REPORTED,
+            sessionId,
+            lightAppPermGroup.packageInfo.uid,
+            packageName,
+            LOCATION_BUTTON_REQUEST_RESULT_REPORTED__PERMISSION__ACCESS_FINE_LOCATION,
+            result,
+        )
     }
 
     companion object {
@@ -192,11 +240,12 @@ class LocationButtonViewModel(
  */
 class LocationButtonViewModelFactory(
     private val application: Application,
+    private val sessionId: Long,
     private val packageName: String,
     private val remoteCallback: RemoteCallback,
 ) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         @Suppress("UNCHECKED_CAST")
-        return LocationButtonViewModel(application, packageName, remoteCallback) as T
+        return LocationButtonViewModel(application, sessionId, packageName, remoteCallback) as T
     }
 }

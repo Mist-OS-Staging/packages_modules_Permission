@@ -39,6 +39,7 @@ import android.hardware.SensorPrivacyManager.OnSensorPrivacyChangedListener.Sens
 import android.os.Build
 import android.os.Bundle
 import android.os.UserHandle
+import android.permission.flags.Flags
 import android.util.Log
 import androidx.annotation.ChecksSdkIntAtLeast
 import androidx.annotation.RequiresApi
@@ -662,7 +663,6 @@ class AppPermissionViewModel(
                 if (shouldShowLocationAccuracy == true && !deniedState.isChecked) {
                     locationAccuracyState.isShown = true
                 }
-                // TODO : b/484979422 - Disable precise location toggle for location button?
                 if (group.foreground.isSystemFixed || group.foreground.isPolicyFixed) {
                     locationAccuracyState.isEnabled = false
                 }
@@ -686,7 +686,8 @@ class AppPermissionViewModel(
             }
         }
 
-    fun isOnlyForLocationButton(): Boolean = lightAppPermGroup?.isOnlyForLocationButton == true
+    fun shouldShowAskOrWhenYouShareLabel() =
+        lightAppPermGroup?.permGroupName == LOCATION && Flags.locationButtonEnabled()
 
     @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.VANILLA_ICE_CREAM, codename = "VanillaIceCream")
     fun handleDisabledAllowButton(fragment: Fragment) {
@@ -925,7 +926,6 @@ class AppPermissionViewModel(
 
         if (changeRequest == ChangeRequest.GRANT_FINE_LOCATION) {
             var newGroup = group
-            // TODO : b/484979422 - should user be able to grant precise permission via toggle?
             if (!newGroup.isOneTime) {
                 newGroup = KotlinUtils.grantForegroundRuntimePermissions(app, group)
                 logPermissionChanges(group, newGroup, buttonClicked)
@@ -1110,9 +1110,6 @@ class AppPermissionViewModel(
             }
 
             if (shouldGrantForeground) {
-                // TODO: b/484979422 - Should precise permission be granted when user selects
-                //  "while in use" or "all the time" option? Remove one-time flag of temporary
-                // grant with caution, as it can make the grant a permanent one.
                 newGroup =
                     if (shouldShowLocationAccuracy == true && !isFineLocationChecked(newGroup)) {
                         newGroup =

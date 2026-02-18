@@ -777,7 +777,7 @@ object KotlinUtils {
      * @param group The group whose permissions should be granted
      * @param filterPermissions If not specified, all permissions of the group will be granted.
      *   Otherwise only permissions in {@code filterPermissions} will be granted.
-     * @param isTrustedUI Whether the grant is triggered by location button.
+     * @param isTrustedUi Whether the grant is triggered by trusted ui.
      * @return a new LightAppPermGroup, reflecting the new state
      */
     @JvmOverloads
@@ -788,7 +788,7 @@ object KotlinUtils {
         isOneTime: Boolean = false,
         userFixed: Boolean = false,
         withoutAppOps: Boolean = false,
-        isTrustedUI: Boolean = false,
+        isTrustedUi: Boolean = false,
     ): LightAppPermGroup {
         return grantRuntimePermissions(
             app,
@@ -798,7 +798,7 @@ object KotlinUtils {
             userFixed,
             withoutAppOps,
             filterPermissions,
-            isTrustedUI,
+            isTrustedUi,
         )
     }
 
@@ -839,7 +839,7 @@ object KotlinUtils {
         userFixed: Boolean = false,
         withoutAppOps: Boolean = false,
         filterPermissions: Collection<String> = group.permissions.keys,
-        isTrustedUI: Boolean = false,
+        isTrustedUi: Boolean = false,
     ): LightAppPermGroup {
         val deviceId = group.deviceId
         val newPerms = group.permissions.toMutableMap()
@@ -856,7 +856,7 @@ object KotlinUtils {
                         isOneTime,
                         userFixed,
                         withoutAppOps,
-                        isTrustedUI,
+                        isTrustedUi,
                     )
                 newPerms[newPerm.name] = newPerm
                 shouldKillForAnyPermission = shouldKillForAnyPermission || shouldKill
@@ -936,6 +936,7 @@ object KotlinUtils {
      * @param withoutAppOps If these permission have app ops associated, and this value is true,
      *   then do not grant the app op when the permission is granted, and add the REVOKED_COMPAT
      *   flag.
+     * @param isTrustedUi Whether the grant is triggered by trusted ui.
      * @return a LightPermission and boolean pair <permission with updated state (or the original
      *   state, if it wasn't changed), should kill app>
      */
@@ -947,7 +948,7 @@ object KotlinUtils {
         isOneTime: Boolean,
         userFixed: Boolean = false,
         withoutAppOps: Boolean = false,
-        isTrustedUI: Boolean = false,
+        isTrustedUi: Boolean = false,
     ): Pair<LightPermission, Boolean> {
         val pkgInfo = group.packageInfo
         val user = UserHandle.getUserHandleForUid(pkgInfo.uid)
@@ -1038,7 +1039,7 @@ object KotlinUtils {
                 newFlags.clearFlag(FLAG_PERMISSION_ONE_TIME)
             }
 
-        if (isTrustedUI) {
+        if (isTrustedUi) {
             newFlags = newFlags.setFlag(FLAG_PERMISSION_TRUSTED_UI_SHOWN)
             if (oldFlags and FLAG_PERMISSION_TRUSTED_UI_SHOWN != 0) {
                 newFlags = newFlags.setFlag(FLAG_PERMISSION_TRUSTED_UI_CONSENTED)
