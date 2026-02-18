@@ -141,6 +141,10 @@ data class LightPermission(
      */
     val isSelectedLocationAccuracy =
         flags and PackageManager.FLAG_PERMISSION_SELECTED_LOCATION_ACCURACY != 0
+    /** Whether the trusted ui has been shown at least once to the user. */
+    val isTrustedUiShown = flags and PackageManager.FLAG_PERMISSION_TRUSTED_UI_SHOWN != 0
+    /** Whether the trusted ui has been consented by the user. */
+    val isTrustedUiConsented = flags and PackageManager.FLAG_PERMISSION_TRUSTED_UI_CONSENTED != 0
     /** Whether this permission is defined by platform or a system app */
     val isPlatformOrSystem = permInfo.packageName == Utils.OS_PKG || permInfo.isSystem == true
     /**
