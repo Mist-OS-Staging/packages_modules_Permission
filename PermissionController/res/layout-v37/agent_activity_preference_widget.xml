@@ -17,6 +17,7 @@
 
 <Button
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/agent_activity_widget"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
