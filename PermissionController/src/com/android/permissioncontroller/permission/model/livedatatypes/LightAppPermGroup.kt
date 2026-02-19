@@ -169,6 +169,14 @@ data class LightAppPermGroup(
     val isUserSet = foreground.isUserSet || background.isUserSet
 
     /**
+     * Whether the trusted ui has been shown at least once to the user for this permission group.
+     */
+    val isTrustedUiShown = foreground.isTrustedUiShown || background.isTrustedUiShown
+
+    /** Whether the trusted ui has been consented by the user for this permission group. */
+    val isTrustedUiConsented = foreground.isTrustedUiConsented || background.isTrustedUiConsented
+
+    /**
      * A subset of the AppPermissionGroup, representing either the background or foreground
      * permissions of the full group.
      *
@@ -251,5 +259,14 @@ data class LightAppPermGroup(
         val isGrantable =
             (!packageInfo.isInstantApp || hasInstantPerm) &&
                 (packageInfo.targetSdkVersion >= Build.VERSION_CODES.M || hasPreRuntimePerm)
+
+        /**
+         * Whether the trusted ui has been shown at least once to the user for this permission
+         * group.
+         */
+        val isTrustedUiShown = permissions.values.any { it.isTrustedUiShown }
+
+        /** Whether the trusted ui has been consented by the user for this permission group. */
+        val isTrustedUiConsented = permissions.values.any { it.isTrustedUiConsented }
     }
 }

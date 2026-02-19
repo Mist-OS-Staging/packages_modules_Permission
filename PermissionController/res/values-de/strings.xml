@@ -28,7 +28,7 @@
     <string name="off" msgid="1438489226422866263">"Aus"</string>
     <string name="uninstall_or_disable" msgid="4496612999740858933">"Deinstallieren oder deaktivieren"</string>
     <string name="app_not_found_dlg_title" msgid="6029482906093859756">"App nicht gefunden"</string>
-    <string name="grant_dialog_button_deny" msgid="88262611492697192">"Nicht zulassen"</string>
+    <string name="grant_dialog_button_deny" msgid="88262611492697192">"Nicht erlauben"</string>
     <string name="grant_dialog_button_deny_and_dont_ask_again" msgid="1748925431574312595">"Nie zulassen &amp; nicht mehr fragen"</string>
     <string name="grant_dialog_button_no_upgrade" msgid="8344732743633736625">"„Wenn die App verwendet wird“ beibehalten"</string>
     <string name="grant_dialog_button_no_upgrade_one_time" msgid="5125892775684968694">"\"Nur dieses Mal\" aktiviert lassen"</string>
@@ -50,7 +50,7 @@
     <string name="permission_revoked_count" msgid="4785082705441547086">"<xliff:g id="COUNT">%1$d</xliff:g> deaktiviert"</string>
     <string name="permission_revoked_all" msgid="3397649017727222283">"Alle deaktiviert"</string>
     <string name="permission_revoked_none" msgid="9213345075484381180">"Keine deaktiviert"</string>
-    <string name="grant_dialog_button_allow" msgid="5314677880021102550">"Zulassen"</string>
+    <string name="grant_dialog_button_allow" msgid="5314677880021102550">"Erlauben"</string>
     <string name="grant_dialog_button_allow_always" msgid="4485552579273565981">"Immer zulassen"</string>
     <string name="grant_dialog_button_allow_foreground" msgid="501896824973636533">"Bei Nutzung der App"</string>
     <string name="grant_dialog_button_change_to_precise_location" msgid="3273115879467236033">"Zu genauem Standort ändern"</string>
@@ -134,8 +134,7 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Gestern"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Letzter Zugriff: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Ansehen"</string>
-    <!-- no translation found for device_assistance_title (1445976710214822208) -->
-    <skip />
+    <string name="device_assistance_title" msgid="1445976710214822208">"Gerätehilfe"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Ansehen, welche Apps zuletzt Berechtigungen genutzt haben"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>-Nutzung"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Andere Berechtigungen ansehen"</string>
@@ -267,16 +266,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"Zugelassen"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Immer zugelassen"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Nur während der Nutzung zugelassen"</string>
-    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
-    <skip />
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"App darf weiter ausgeführt werden"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Zugriff nur auf Mediendateien zugelassen"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Verwalten aller Dateien zugelassen"</string>
     <string name="ask_header" msgid="2633816846459944376">"Jedes Mal fragen"</string>
     <string name="denied_header" msgid="903209608358177654">"Nicht zugelassen"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> auf dem <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Weitere Apps anzeigen, die auf alle Dateien zugreifen können"</string>
-    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
-    <skip />
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;App darf weiter ausgeführt werden&lt;/b&gt;&lt;br&gt;&lt;br&gt;Damit eine App weiter ausgeführt werden kann, darf sie möglicherweise auf dein lokales Netzwerk zugreifen und sich nur mit Geräten in diesem Netzwerk verbinden.&lt;br&gt;&lt;br&gt;Die App kann sich nicht über Bluetooth und andere Technologien mit Geräten verbinden, es sei denn, du erlaubst ihr, alle Geräte in der Nähe zu finden und sich mit ihnen zu verbinden."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 Tag}other{# Tage}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# Stunde}other{# Stunden}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# Minute}other{# Minuten}}"</string>

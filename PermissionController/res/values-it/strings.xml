@@ -134,8 +134,7 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Ieri"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Ultimo accesso: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Visualizza"</string>
-    <!-- no translation found for device_assistance_title (1445976710214822208) -->
-    <skip />
+    <string name="device_assistance_title" msgid="1445976710214822208">"Assistenza dispositivo"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Vedi quali app hanno usato le autorizzazioni di recente"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Uso di <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Vedi altre autorizzazioni"</string>
@@ -267,16 +266,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"Autorizzata"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Autorizzazione sempre concessa"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Autorizzazione concessa solo se in uso"</string>
-    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
-    <skip />
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"L\'app può continuare a funzionare"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Autorizzate solo per contenuti multimediali"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Autorizzate per gestire tutti i file"</string>
     <string name="ask_header" msgid="2633816846459944376">"Chiedi ogni volta"</string>
     <string name="denied_header" msgid="903209608358177654">"Non autorizzata"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> su <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Visualizza altre app che possono accedere a tutti i file"</string>
-    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
-    <skip />
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Autorizzazione per mantenere l\'app in funzione&lt;/b&gt;&lt;br&gt;&lt;br&gt;Per continuare a funzionare, un\'app potrebbe avere l\'autorizzazione ad accedere alla tua rete locale e connettersi solo ai dispositivi su questa rete.&lt;br&gt;&lt;br&gt;L\'app non può connettersi ai dispositivi tramite Bluetooth e ad altri dispositivi tecnologici a meno che tu non le consenta di trovare e connettersi a tutti i dispositivi nelle vicinanze."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 giorno}many{# di giorni}other{# giorni}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# ora}many{# di ore}other{# ore}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# minuto}many{# di minuti}other{# minuti}}"</string>
@@ -653,7 +650,7 @@
     <string name="camera_toggle_title" msgid="1251201397431837666">"Accesso alla fotocamera"</string>
     <string name="mic_toggle_title" msgid="2649991093496110162">"Accesso al microfono"</string>
     <string name="perm_toggle_description" msgid="7801326363741451379">"Per app e servizi"</string>
-    <string name="mic_toggle_description" msgid="9163104307990677157">"Per app e servizi. Se questa impostazione viene disattivata, i dati del microfono potrebbero comunque essere condivisi quando chiami un numero di emergenza."</string>
+    <string name="mic_toggle_description" msgid="9163104307990677157">"Per app e servizi. Se questa impostazione viene disattivata, i dati del microfono potrebbero comunque essere condivisi quando chiami un numero di emergenza"</string>
     <string name="location_settings_subtitle" msgid="2328360561197430695">"Visualizza le app e i servizi che hanno accesso alla posizione"</string>
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"Mostra accesso agli appunti"</string>
     <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"Mostra un messaggio quando le app accedono a testo, immagini o altri contenuti che hai copiato"</string>

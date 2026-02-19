@@ -24,6 +24,8 @@ import android.content.res.Configuration
 import android.os.Build
 import android.permission.flags.Flags
 import android.platform.test.annotations.RequiresFlagsEnabled
+import android.platform.test.flag.junit.CheckFlagsRule
+import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import android.view.SurfaceView
 import androidx.test.filters.SdkSuppress
 import androidx.test.uiautomator.By
@@ -32,12 +34,16 @@ import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assume.assumeFalse
 import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
 
 /** Tests for the Location Button UI and functionality. */
-@SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
+@SdkSuppress(minSdkVersion = Build.VERSION_CODES.CINNAMON_BUN, codeName = "CinnamonBun")
 @RequiresFlagsEnabled(Flags.FLAG_LOCATION_BUTTON_ENABLED)
 class LocationButtonTest : BaseUsePermissionTest() {
+
+    @get:Rule
+    val checkFlagsRule: CheckFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
 
     @Before
     fun setup() {

@@ -3,7 +3,6 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
- * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
@@ -17,116 +16,171 @@
 package com.android.permissioncontroller.permission.ui.model.v37
 
 import android.Manifest
+import android.Manifest.permission.ACCESS_COARSE_LOCATION
+import android.Manifest.permission.ACCESS_FINE_LOCATION
 import android.app.Application
+import android.app.admin.DevicePolicyManager
 import android.app.permissionui.LocationButtonClient
-import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.os.Process
 import android.os.RemoteCallback
+import android.os.UserHandle
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.viewModelScope
-import com.android.permissioncontroller.permission.model.AppPermissionGroup
+import com.android.permissioncontroller.permission.data.LightAppPermGroupLiveData
+import com.android.permissioncontroller.permission.data.get
+import com.android.permissioncontroller.permission.model.livedatatypes.LightAppPermGroup
 import com.android.permissioncontroller.permission.utils.KotlinUtils
 import com.android.permissioncontroller.permission.utils.Utils
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 /** View model for granting location permissions when user interacts with a location button. */
 class LocationButtonViewModel(
     val app: Application,
     private val packageName: String,
     private val remoteCallback: RemoteCallback,
-    scope: CoroutineScope? = null,
-    val dispatcher: CoroutineDispatcher = Dispatchers.Default,
 ) : AndroidViewModel(app) {
-    private val coroutineScope = scope ?: viewModelScope
-    private val _appLabel = MutableLiveData<String>()
-    private val _locationPinIcon = MutableLiveData<Drawable>()
+    val user: UserHandle = Process.myUserHandle()
+    val lightAppPermGroupLiveData =
+        LightAppPermGroupLiveData[packageName, Manifest.permission_group.LOCATION, user]
 
-    // TODO load icon and app label synchronously, remove livedata objects.
-    fun getAppLabelLiveData(): LiveData<String> {
-        if (!_appLabel.isInitialized) {
-            coroutineScope.launch(dispatcher) {
-                _appLabel.postValue(
-                    KotlinUtils.getPackageLabel(
-                        getApplication(),
-                        packageName,
-                        Process.myUserHandle(),
-                    )
-                )
+    val locationButtonRequestStateLiveData: LiveData<LocationButtonRequestState> =
+        MediatorLiveData<LocationButtonRequestState>().apply {
+            addSource(lightAppPermGroupLiveData) { group ->
+                if (group == null) {
+                    value = LocationButtonRequestState.LOADING
+                    return@addSource
+                }
+
+                val isGranted = group.permissions[ACCESS_FINE_LOCATION]?.isGranted == true
+                val newState =
+                    when {
+                        isGranted -> LocationButtonRequestState.ALREADY_GRANTED
+                        isPermissionNotGrantable(group) -> {
+                            Log.i(LOG_TAG, "Precise permission is not grantable.")
+                            LocationButtonRequestState.NOT_GRANTABLE
+                        }
+                        else -> {
+                            val policy =
+                                KotlinUtils.applyPermissionPolicy(app, ACCESS_FINE_LOCATION, group)
+                            when (policy) {
+                                DevicePolicyManager.PERMISSION_POLICY_AUTO_GRANT -> {
+                                    Log.i(LOG_TAG, "Precise permission is auto granted.")
+                                    LocationButtonRequestState.AUTO_GRANTED
+                                }
+                                DevicePolicyManager.PERMISSION_POLICY_AUTO_DENY -> {
+                                    Log.i(LOG_TAG, "Precise permission is auto denied.")
+                                    LocationButtonRequestState.AUTO_DENIED
+                                }
+                                else -> {
+                                    if (group.isTrustedUiConsented) {
+                                        LocationButtonRequestState.CONSENTED
+                                    } else {
+                                        LocationButtonRequestState.SHOW_UI
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                Log.d(LOG_TAG, "requestStateLiveData is initialized as $newState.")
+                value = newState
+                removeSource(lightAppPermGroupLiveData)
             }
         }
-        return _appLabel
-    }
+
+    val appLabel: CharSequence
+        get() = KotlinUtils.getPackageLabel(getApplication(), packageName, user)
+
+    val locationPinIcon: Drawable
+        get() =
+            Utils.getGroupInfo(Manifest.permission_group.LOCATION, app)!!.loadIcon(
+                app.packageManager
+            )
 
     fun onAllow() {
-        val packageInfo = getPackageInfo() ?: return
-        val group =
-            AppPermissionGroup.create(
-                getApplication(),
-                packageInfo,
-                Manifest.permission.ACCESS_FINE_LOCATION,
-                true,
-            )
-        if (group != null) {
-            // TODO Grant COARSE only when it is not granted already.
-            group.grantRuntimePermissions(
-                true,
-                false,
-                arrayOf(
-                    Manifest.permission.ACCESS_FINE_LOCATION,
-                    Manifest.permission.ACCESS_COARSE_LOCATION,
-                ),
-            )
-            // TODO set GRANTED_BY_LOCATION_BUTTON permission flag.
-            group.setOneTime(true)
-            group.persistChanges(
-                false,
-                null,
-                setOf(
-                    Manifest.permission.ACCESS_FINE_LOCATION,
-                    Manifest.permission.ACCESS_COARSE_LOCATION,
-                ),
-            )
+        var appPermGroup = lightAppPermGroupLiveData.value!!
+        val coarsePermission = appPermGroup.permissions[ACCESS_COARSE_LOCATION]!!
+        // Grant coarse permission, if not granted.
+        if (!coarsePermission.isGranted) {
+            appPermGroup =
+                KotlinUtils.grantForegroundRuntimePermissions(
+                    app,
+                    group = appPermGroup,
+                    filterPermissions = listOf(ACCESS_COARSE_LOCATION),
+                    isOneTime = true,
+                )
         }
+        KotlinUtils.grantForegroundRuntimePermissions(
+            app,
+            group = appPermGroup,
+            filterPermissions = listOf(ACCESS_FINE_LOCATION),
+            isOneTime = true,
+            isTrustedUI = true,
+        )
+
         val bundle =
             Bundle().apply { putBoolean(LocationButtonClient.EXTRA_PERMISSION_RESULT, true) }
         remoteCallback.sendResult(bundle)
     }
 
     fun onDontAllow() {
-        Log.d(LOG_TAG, "Don't allow button clicked.")
+        var appPermGroup = lightAppPermGroupLiveData.value!!
+        val coarsePermission = appPermGroup.permissions[ACCESS_COARSE_LOCATION]!!
+        // If coarse permission isn't granted, clear one-time flag to ensure app permission page
+        // shows "don't allow" button selected.
+        if (!coarsePermission.isGranted && coarsePermission.isOneTime) {
+            appPermGroup =
+                KotlinUtils.setGroupFlags(
+                    app,
+                    appPermGroup,
+                    PackageManager.FLAG_PERMISSION_ONE_TIME to false,
+                    filterPermissions = listOf(ACCESS_COARSE_LOCATION),
+                )
+        }
+        val precisePermission = appPermGroup.permissions[ACCESS_FINE_LOCATION]!!
+        KotlinUtils.revokeForegroundRuntimePermissions(
+            app,
+            appPermGroup,
+            userFixed = precisePermission.isUserSet || precisePermission.isUserFixed,
+            filterPermissions = listOf(ACCESS_FINE_LOCATION),
+        )
+
+        val bundle =
+            Bundle().apply { putBoolean(LocationButtonClient.EXTRA_PERMISSION_RESULT, false) }
+        remoteCallback.sendResult(bundle)
     }
 
-    fun getLocationPinIconLiveData(): LiveData<Drawable> {
-        if (!_locationPinIcon.isInitialized) {
-            coroutineScope.launch(dispatcher) {
-                val groupInfo = Utils.getGroupInfo(Manifest.permission_group.LOCATION, app)!!
-                _locationPinIcon.postValue(groupInfo.loadIcon(app.packageManager))
-            }
+    // This code is derived from GrantPermissionsViewModel.isPermissionGrantableAndNotFixed()
+    private fun isPermissionNotGrantable(lightAppPermGroup: LightAppPermGroup): Boolean {
+        val precisePermission = lightAppPermGroup.permissions[ACCESS_FINE_LOCATION]
+        if (precisePermission == null) {
+            return true
         }
-        return _locationPinIcon
-    }
+        val policyFixed =
+            (lightAppPermGroup.foreground.isPolicyFixed && !lightAppPermGroup.isGranted) ||
+                precisePermission.isPolicyFixed
 
-    private fun getPackageInfo(): PackageInfo? =
-        try {
-            app.packageManager.getPackageInfo(packageName, PackageManager.GET_PERMISSIONS)
-        } catch (e: PackageManager.NameNotFoundException) {
-            Log.e(LOG_TAG, "Package not found", e)
-            null
-        }
+        return policyFixed || lightAppPermGroup.foreground.isUserFixed
+    }
 
     companion object {
         private const val LOG_TAG = "LocationButtonViewModel"
+    }
+
+    enum class LocationButtonRequestState {
+        LOADING,
+        ALREADY_GRANTED,
+        NOT_GRANTABLE,
+        AUTO_GRANTED,
+        AUTO_DENIED,
+        CONSENTED,
+        SHOW_UI,
     }
 }
 

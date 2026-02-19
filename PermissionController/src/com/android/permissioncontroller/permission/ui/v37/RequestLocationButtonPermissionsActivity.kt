@@ -16,6 +16,7 @@
 
 package com.android.permissioncontroller.permission.ui.v37
 
+import android.app.permissionui.LocationButtonClient
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -25,7 +26,11 @@ import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
+import androidx.lifecycle.ViewModelProvider
 import com.android.permissioncontroller.permission.ui.handheld.v37.RequestLocationButtonPermissionsFragment
+import com.android.permissioncontroller.permission.ui.model.v37.LocationButtonViewModel
+import com.android.permissioncontroller.permission.ui.model.v37.LocationButtonViewModel.LocationButtonRequestState
+import com.android.permissioncontroller.permission.ui.model.v37.LocationButtonViewModelFactory
 
 /**
  * This activity opens up location button consent dialog when user first time clicks the location
@@ -36,25 +41,60 @@ class RequestLocationButtonPermissionsActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (!Flags.locationButtonEnabled()) {
+            Log.i(LOG_TAG, "Location button flag is not enabled.")
             finish()
             return
         }
-        // TODO finish early if permission isn't requested or permission is system/policy fixed
+
         val packageName = intent.getStringExtra(Intent.EXTRA_PACKAGE_NAME)
         val remoteCallback =
             intent.getParcelableExtra(Intent.EXTRA_REMOTE_CALLBACK, RemoteCallback::class.java)
-
         if (packageName == null || remoteCallback == null) {
             Log.e(LOG_TAG, "Package name or remote callback isn't provided.")
             finish()
             return
         }
 
-        if (savedInstanceState == null) {
-            val fragment =
-                RequestLocationButtonPermissionsFragment.newInstance(packageName, remoteCallback)
-            supportFragmentManager.commit { add(fragment, GRANT_FRAGMENT_TAG) }
+        val factory = LocationButtonViewModelFactory(application, packageName, remoteCallback)
+        val viewModel = ViewModelProvider(this, factory)[LocationButtonViewModel::class.java]
+
+        viewModel.locationButtonRequestStateLiveData.observe(this) { state ->
+            state ?: return@observe
+            when (state) {
+                LocationButtonRequestState.ALREADY_GRANTED,
+                LocationButtonRequestState.AUTO_GRANTED -> {
+                    sendResultAndFinish(true, remoteCallback)
+                }
+                LocationButtonRequestState.AUTO_DENIED,
+                LocationButtonRequestState.NOT_GRANTABLE -> {
+                    sendResultAndFinish(false, remoteCallback)
+                }
+                LocationButtonRequestState.CONSENTED -> {
+                    viewModel.onAllow()
+                    finish()
+                }
+                LocationButtonRequestState.SHOW_UI -> {
+                    if (savedInstanceState == null) {
+                        val fragment =
+                            RequestLocationButtonPermissionsFragment.newInstance(
+                                packageName,
+                                remoteCallback,
+                            )
+                        supportFragmentManager.commit { add(fragment, GRANT_FRAGMENT_TAG) }
+                    }
+                }
+                LocationButtonRequestState.LOADING -> {
+                    Log.d(LOG_TAG, "Precise location permission dialog loading...")
+                }
+            }
         }
+    }
+
+    private fun sendResultAndFinish(isGranted: Boolean, remoteCallback: RemoteCallback) {
+        val bundle =
+            Bundle().apply { putBoolean(LocationButtonClient.EXTRA_PERMISSION_RESULT, isGranted) }
+        remoteCallback.sendResult(bundle)
+        finish()
     }
 
     companion object {

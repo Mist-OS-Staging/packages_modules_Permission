@@ -55,7 +55,7 @@ class WearDefaultAppListHelper(val context: Context, val user: UserHandle) {
                         } else {
                             val holderApplicationInfo = holderApplicationInfos[0]
                             icon = Utils.getBadgedIcon(context, holderApplicationInfo)
-                            summary = Utils.getAppLabel(holderApplicationInfo, context)
+                            summary = Utils.getFullAppLabel(holderApplicationInfo, context)
                         }
                         RoleUiBehaviorUtils.preparePreferenceAsUser(
                             roleItem.role,

@@ -134,8 +134,7 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"నిన్న"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"చివరిసారి <xliff:g id="TIME_DATE">%1$s</xliff:g>‌కు యాక్సెస్ చేశారు"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"చూడండి"</string>
-    <!-- no translation found for device_assistance_title (1445976710214822208) -->
-    <skip />
+    <string name="device_assistance_title" msgid="1445976710214822208">"డివైజ్ సహాయం"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ఇటీవల ఏ యాప్‌లు అనుమతులను ఉపయోగించాయో చూడండి"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> వినియోగం"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"ఇతర అనుమతులను చూడండి"</string>
@@ -267,16 +266,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"అనుమతించినవి"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"అన్ని సమయాలలో అనుమతించబడతాయి"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"ఉపయోగించేటప్పుడు మాత్రమే అనుమతి ఇవ్వాలి"</string>
-    <!-- no translation found for allowed_for_compatibility_header (9184156612214246427) -->
-    <skip />
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"యాప్ పని చేస్తూనే ఉండటానికి అనుమతి ఉంది"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"మీడియాకు మాత్రమే యాక్సెస్ అనుమతించబడినవి"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"ఫైల్స్ అన్నింటినీ మేనేజ్ చేసేందుకు అనుమతించబడినవి"</string>
     <string name="ask_header" msgid="2633816846459944376">"ప్రతిసారి అడగాలి"</string>
     <string name="denied_header" msgid="903209608358177654">"అనుమతించబడలేదు"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g>‌లో <xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"అన్ని ఫైళ్లను యాక్సెస్ చేయగల మరిన్ని యాప్‌లను చూడండి"</string>
-    <!-- no translation found for allowed_for_compatibility_nearby_devices_footer (75018894064754943) -->
-    <skip />
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;యాప్ పని చేస్తూనే ఉండటానికి అనుమతించబడింది&lt;/b&gt;&lt;br&gt;&lt;br&gt;యాప్ పని చేస్తూ ఉండటానికి, మీ లోకల్ నెట్‌వర్క్‌ను యాక్సెస్ చేయడానికి, ఈ నెట్‌వర్క్‌లోని డివైజ్‌లతో మాత్రమే కనెక్ట్ అవ్వడానికి దాన్ని అనుమతించవచ్చు.&lt;br&gt;&lt;br&gt;మీరు సమీపంలోని అన్ని డివైజ్‌లను కనుగొనడానికి, కనెక్ట్ అవ్వడానికి దాన్ని అనుమతించకపోతే, బ్లూటూత్, ఇతర టెక్నాలజీలను ఉపయోగించి యాప్ డివైజ్‌లకు కనెక్ట్ అవ్వలేదు."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 రోజు}other{# రోజులు}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# గంట}other{# గంటలు}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# నిమిషం}other{# నిమిషాలు}}"</string>
@@ -655,7 +652,7 @@
     <string name="perm_toggle_description" msgid="7801326363741451379">"యాప్‌లు, సర్వీస్‌ల కోసం"</string>
     <string name="mic_toggle_description" msgid="9163104307990677157">"యాప్‌లు, సర్వీస్‌ల కోసం. ఈ సెట్టింగ్ ఆఫ్ చేయబడి ఉన్నట్లయితే, మీరు ఎమర్జెన్సీ నంబర్‌కు కాల్ చేసినప్పుడు మైక్రోఫోన్ డేటా ఇప్పటికీ షేర్ చేయబడవచ్చు."</string>
     <string name="location_settings_subtitle" msgid="2328360561197430695">"లొకేషన్ యాక్సెస్ ఉన్న యాప్‌లను, సర్వీస్‌లను చూడండి"</string>
-    <string name="show_clip_access_notification_title" msgid="5168467637351109096">"క్లిప్‌బోర్డ్ యాక్సెస్‌ను చూపించండి"</string>
+    <string name="show_clip_access_notification_title" msgid="5168467637351109096">"క్లిప్‌బోర్డ్ యాక్సెస్‌ను చూపుతుంది"</string>
     <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"మీరు కాపీ చేసిన టెక్స్ట్‌ను, ఇమేజ్‌లను లేదా ఇతర కంటెంట్‌ను యాప్‌లు యాక్సెస్ చేసినప్పుడు ఒక మెసేజ్‌ను చూపుతుంది"</string>
     <string name="show_password_title" msgid="2877269286984684659">"పాస్‌వర్డ్‌లను చూపిస్తుంది"</string>
     <string name="show_password_summary" msgid="1110166488865981610">"మీరు టైప్ చేస్తున్నప్పుడు అక్షరాలను క్లుప్తంగా చూపిస్తుంది"</string>
