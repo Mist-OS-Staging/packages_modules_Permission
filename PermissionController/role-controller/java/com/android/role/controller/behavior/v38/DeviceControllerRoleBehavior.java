@@ -60,7 +60,7 @@ public class DeviceControllerRoleBehavior implements RoleBehavior {
             return false;
         }
         if (userDevicePolicyManager.checkProvisioningPrecondition(
-                DevicePolicyManager.ACTION_PROVISION_MULTI_USER_DEVICE, packageName)
+                DevicePolicyManager.ACTION_PROVISION_MULTIUSER_MANAGED_DEVICE, packageName)
                 != DevicePolicyManager.STATUS_OK) {
             Log.w(LOG_TAG,
                 "DevicePolicyManager.checkProvisioningPrecondition() returned false for package: "

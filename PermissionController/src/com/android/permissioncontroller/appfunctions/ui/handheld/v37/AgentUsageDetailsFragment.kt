@@ -34,6 +34,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceScreen
+import androidx.preference.PreferenceViewHolder
 import com.android.permissioncontroller.R
 import com.android.permissioncontroller.appfunctions.domain.model.v37.AgentAccessInfo
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.v37.AgentUsageDetailsUiState
@@ -256,48 +257,58 @@ class AgentUsageDetailsFragment : SettingsWithLargeHeader() {
         uiInfo: AgentAccessInfo,
         settingsAppPackageName: String,
     ): Preference =
-        Preference(requireContext()).apply {
-            title =
-                if (uiInfo.isDeviceAssistanceAccess) {
-                    resources.getString(R.string.device_assistance_title)
-                } else {
-                    KotlinUtils.getPackageLabel(
+        object : Preference(requireContext()) {
+                override fun onBindViewHolder(holder: PreferenceViewHolder) {
+                    super.onBindViewHolder(holder)
+
+                    if (uiInfo.interactionUri != null) {
+                        holder.findViewById(R.id.agent_activity_widget)!!.setOnClickListener { _ ->
+                            val intent = Intent(Intent.ACTION_VIEW, uiInfo.interactionUri.toUri())
+                            intent.setPackage(uiInfo.agentPackageName)
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                            startActivity(intent)
+                        }
+                    }
+                }
+            }
+            .apply {
+                title =
+                    if (uiInfo.isDeviceAssistanceAccess) {
+                        resources.getString(R.string.device_assistance_title)
+                    } else {
+                        KotlinUtils.getPackageLabel(
+                            requireActivity().application,
+                            uiInfo.targetPackageName,
+                            Process.myUserHandle(),
+                        )
+                    }
+                val iconPackageName =
+                    if (uiInfo.isDeviceAssistanceAccess) {
+                        settingsAppPackageName
+                    } else {
+                        uiInfo.targetPackageName
+                    }
+                icon =
+                    KotlinUtils.getBadgedPackageIcon(
                         requireActivity().application,
-                        uiInfo.targetPackageName,
+                        iconPackageName,
+                        // TODO: We should use the work profile userHandle in order to get the
+                        // badged icon. The work profile for agents dashboard is not yet
+                        // implemented. Hence using Process.myUserHandle() for now.
                         Process.myUserHandle(),
                     )
+                summary =
+                    resources.getString(
+                        R.string.agent_activity_timeline_activity_summary,
+                        DateFormat.getTimeFormat(requireContext()).format(uiInfo.lastAccessTime),
+                    )
+                if (uiInfo.interactionUri != null) {
+                    widgetLayoutResource = R.layout.agent_activity_preference_widget
                 }
-            val iconPackageName =
-                if (uiInfo.isDeviceAssistanceAccess) {
-                    settingsAppPackageName
-                } else {
-                    uiInfo.targetPackageName
-                }
-            icon =
-                KotlinUtils.getBadgedPackageIcon(
-                    requireActivity().application,
-                    iconPackageName,
-                    // TODO: We should use the work profile userHandle in order to get the
-                    // badged icon. The work profile for agents dashboard is not yet
-                    // implemented. Hence using Process.myUserHandle() for now.
-                    Process.myUserHandle(),
-                )
-            summary =
-                resources.getString(
-                    R.string.agent_activity_timeline_activity_summary,
-                    DateFormat.getTimeFormat(requireContext()).format(uiInfo.lastAccessTime),
-                )
-            widgetLayoutResource = R.layout.agent_activity_preference_widget
-            if (uiInfo.interactionUri != null) {
-                onPreferenceClickListener =
-                    Preference.OnPreferenceClickListener {
-                        val intent = Intent(Intent.ACTION_VIEW, uiInfo.interactionUri.toUri())
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                        startActivity(intent)
-                        true
-                    }
+                // The preference is not clickable. Hence setting this to prevent ripple effect when
+                // clicking on the preference
+                isSelectable = false
             }
-        }
 
     companion object {
         private val LOG_TAG = AgentUsageDetailsFragment::class.java.simpleName
