@@ -44,7 +44,7 @@ object LocationGrantBehavior : GrantBehavior() {
         } else if (requestedPerms.contains(ACCESS_FINE_LOCATION)) {
             if (group.isOnlyForLocationButton) {
                 Log.w(LOG_TAG, "Precise permission can only be granted by location button.")
-                if (requestedPerms.contains(ACCESS_COARSE_LOCATION)) {
+                if (requestedPerms.contains(ACCESS_COARSE_LOCATION) && !coarseGranted) {
                     Prompt.LOCATION_COARSE_ONLY
                 } else {
                     Prompt.NO_UI_REJECT_THIS_GROUP
