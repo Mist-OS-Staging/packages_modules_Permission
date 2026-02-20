@@ -201,7 +201,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"អនុញ្ញាត​ពេល​កំពុង​ប្រើប្រាស់​កម្មវិធីតែ​ប៉ុណ្ណោះ"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"អនុញ្ញាតទាំងអស់ជានិច្ច"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"សួរគ្រប់ពេល"</string>
-    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"សួរគ្រប់ពេល ឬអនុញ្ញាតនៅពេលអ្នកចែករំលែក"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_you_share (5609521340593096465) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"មិនអនុញ្ញាត"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"អនុញ្ញាតឱ្យចូលប្រើដោយមានកម្រិត"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"ទីតាំងជាក់លាក់"</string>

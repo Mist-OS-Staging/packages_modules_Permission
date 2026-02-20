@@ -201,7 +201,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Chỉ cho phép khi dùng ứng dụng"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Luôn cho phép tất cả"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Luôn hỏi"</string>
-    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Luôn hỏi hoặc cho phép khi bạn chia sẻ"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_you_share (5609521340593096465) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Không cho phép"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Cho phép quyền truy cập bị hạn chế"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Vị trí chính xác"</string>
@@ -407,7 +408,7 @@
     <string name="role_call_redirection_request_title" msgid="2816244455003562925">"Bạn muốn đặt <xliff:g id="APP_NAME">%1$s</xliff:g> làm ứng dụng chuyển hướng cuộc gọi mặc định?"</string>
     <string name="role_call_redirection_request_description" msgid="3118895714178527164">"Không cần quyền"</string>
     <string name="role_call_screening_label" msgid="883935222060878724">"Ứng dụng nhận dạng người gọi và chặn cuộc gọi làm phiền mặc định"</string>
-    <string name="role_call_screening_short_label" msgid="2048465565063130834">"Ứng dụng nhận dạng người gọi và chặn cuộc gọi làm phiền"</string>
+    <string name="role_call_screening_short_label" msgid="2048465565063130834">"Ứng dụng nhận dạng người gọi và chặn cuộc gọi rác"</string>
     <string name="role_call_screening_description" msgid="2349431420497468981">"Các ứng dụng cho phép bạn xác định cuộc gọi và chặn cuộc gọi làm phiền, cuộc gọi tự động hoặc số điện thoại không mong muốn"</string>
     <string name="role_call_screening_request_title" msgid="7358309224566977290">"Bạn muốn đặt <xliff:g id="APP_NAME">%1$s</xliff:g> làm ứng dụng nhận dạng người gọi và chặn cuộc gọi làm phiền mặc định?"</string>
     <string name="role_call_screening_request_description" msgid="7338511921032446006">"Không cần quyền"</string>

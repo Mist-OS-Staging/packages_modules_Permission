@@ -201,7 +201,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"यो एप प्रयोग गरिरहेका बेला मात्र अनुमति दिनुहोस्"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"सधैँ सबै अनुमति दिनुहोस्"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"प्रत्येक पटक सोध्नुहोस्"</string>
-    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"प्रत्येक पटक अनुमति माग्नुहोस् वा सेयर गर्दा अनुमति दिनुहोस्"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_you_share (5609521340593096465) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"अनुमति नदिनुहोस्"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"सीमित एक्सेस दिनुहोस्"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"सटीक स्थान"</string>
@@ -370,7 +371,7 @@
     <string name="accessibility_service_dialog_bottom_text_multiple" msgid="7009848932395519852">"यी एपहरूले तपाईंको स्क्रिन, कारबाही र इनपुट हेर्न, कारबाहीहरू सम्पादन गर्न र प्रदर्शन नियन्त्रण गर्न सक्छन्।"</string>
     <string name="role_assistant_label" msgid="4727586018198208128">"डिफल्ट डिजिटल एसिस्टेन्ट एप"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"डिजिटल एसिस्टेन्ट एप"</string>
-    <string name="role_assistant_description" msgid="6622458130459922952">"सहायक एपहरूले तपाईंले हेर्दै गर्नुभएको स्क्रिनबाट प्राप्त जानकारीमा आधारित भई तपाईंलाई मद्दत गर्न सक्छन्। केही एपहरूले तपाईंलाई एकीकृत सहायता दिन दुवै लन्चर र आवाज संलग्न इनपुट सेवाहरूलाई समर्थन गर्छन्।"</string>
+    <string name="role_assistant_description" msgid="6622458130459922952">"तपाईंले हेरिरहनुभएको स्क्रिनको जानकारीको आधारमा एसिस्ट एपहरूले तपाईंलाई मद्दत गर्न सक्छन्। तपाईंलाई एकीकृत सहायता दिने प्रयोजनका लागि केही एपहरूमा लन्चर र भ्वाइस इनपुट दुवै सेवाहरू प्रयोग गर्न मिल्छ।"</string>
     <string name="role_assistant_recommended_title" msgid="2093873159106905257">"<xliff:g id="OEM_NAME">%s</xliff:g> ले सिफारिस गरेको"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"डिफल्ट ब्राउजर एप"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"ब्राउजर"</string>

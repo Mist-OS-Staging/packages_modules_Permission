@@ -201,7 +201,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Дозв. само док се апл. користи"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Увек дозволи све"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Питај сваки пут"</string>
-    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Питај сваки пут или дозволи када делиш"</string>
+    <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Питај сваки пут или дозволи када делиш"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Не дозволи"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Дозволи ограничен приступ"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Прецизна локација"</string>

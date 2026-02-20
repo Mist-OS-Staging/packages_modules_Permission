@@ -201,7 +201,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"యాప్‌ను ఉపయోగిస్తున్నప్పుడు మాత్రమే అనుమతించండి"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"అన్నింటినీ ఎల్లవేళలా అనుమతించండి"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"ప్రతిసారి అడగాలి"</string>
-    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"ప్రతిసారీ అడగండి లేదా మీరు షేర్ చేసినప్పుడు అనుమతించండి"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_you_share (5609521340593096465) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"అనుమతించవద్దు"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"పరిమిత యాక్సెస్‌ను అనుమతించండి"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"ఖచ్చితమైన లొకేషన్"</string>
@@ -457,7 +458,7 @@
     <string name="default_app_system_default" msgid="6218386768175513760">"(సిస్టమ్ ఆటోమేటిక్)"</string>
     <string name="default_app_no_apps" msgid="115720991680586885">"ఏ యాప్ లేదు"</string>
     <string name="default_app_confirmation_positive_button" msgid="7870227561758833590">"మార్చండి"</string>
-    <string name="default_app_confirmation_negative_button" msgid="2564849389728106051">"ఉన్నదాన్ని ఉంచండి"</string>
+    <string name="default_app_confirmation_negative_button" msgid="2564849389728106051">"మార్చవద్దు"</string>
     <string name="default_payment_app_other_nfc_services" msgid="5957633798695758917">"ఇతర NFC సర్వీస్‌లు"</string>
     <string name="car_default_app_selected" msgid="5416420830430644174">"ఎంచుకోబడింది"</string>
     <string name="car_default_app_selected_with_info" msgid="1932204186080593500">"<xliff:g id="ADDITIONAL_INFO">%1$s</xliff:g> - ఎంచుకోబడింది"</string>
@@ -471,8 +472,8 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"చిన్న గమనిక: మీరు భద్రత కోసం స్క్రీన్ లాక్‌ని సెటప్‌ చేసి పెట్టుకున్నారు పైగా మీ పరికరాన్ని పునఃప్రారంభించినట్టున్నారు కనుక స్క్రీన్ లాక్ అయ్యిపోయింది. మీరు పాస్‌వర్డ్‌ని నమోదు చేసేవరకూ ఈ యాప్ ప్రారంభం కాదు."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"మీ స్క్రీన్‌పై కనిపించే లేదా యాప్‌లలో యాక్సెస్ చేసే సమాచారంతో పాటు మీ సిస్టమ్‌లో వినియోగంలో ఉన్న యాప్‌ల గురించిన సమాచారాన్ని Assistant చదవగలుగుతుంది."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"మీ డిజిటల్ అసిస్టెంట్ యాప్‌ను &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌కు మార్చాలా?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"ఈ అసిస్టెంట్, మీ మెసేజ్‌లతో పాటు దానితో షేర్ చేయడానికి యాప్‌లు ఎంచుకున్న డేటా వంటి సమాచారాన్ని యాక్సెస్ చేయగలదు."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"ఈ అసిస్టెంట్, మీ మెసేజ్‌లు, మీ అసిస్టెంట్‌తో షేర్ చేయడానికి యాప్‌లు ఎంచుకున్న డేటా వంటి సమాచారాన్ని యాక్సెస్ చేయగలదు.&lt;br&gt;&lt;br&gt;అలాగే, మీరు ఇంతకు ముందు <xliff:g id="APP_NAME">%1$s</xliff:g> కోసం స్క్రీన్, యాప్ డేటాను ఆన్ చేసినందున, మీ స్క్రీన్‌పై తెరిచిన యాప్ నుండి కంటెంట్‌ను యాక్సెస్ చేయడానికి దీనికి అనుమతి ఉంటుంది."</string>
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"ఈ అసిస్టెంట్, మీ మెసేజ్‌ల వంటి సమాచారాన్ని యాక్సెస్ చేయగలదు. అలాగే యాప్‌లు దానితో షేర్ చేయడానికి ఎంచుకున్న డేటాను కూడా యాక్సెస్ చేయగలదు."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"ఈ అసిస్టెంట్, మీ మెసేజ్‌ల వంటి సమాచారాన్ని యాక్సెస్ చేయగలదు. అలాగే యాప్‌లు దానితో షేర్ చేయడానికి ఎంచుకున్న డేటాను కూడా యాక్సెస్ చేయగలదు.&lt;br&gt;&lt;br&gt;అలాగే, మీరు ఇదివరకు <xliff:g id="APP_NAME">%1$s</xliff:g> కోసం స్క్రీన్ &amp; యాప్ డేటాను ఆన్ చేసినందున, మీ స్క్రీన్‌పై ఓపెన్‌లో ఉన్న యాప్ కంటెంట్‌ను యాక్సెస్ చేయడానికి దీనికి అనుమతి ఉంటుంది."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"డీబగ్గింగ్ డేటాను షేర్ చేయండి"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"వివరణాత్మక డీబగ్గింగ్ డేటాను షేర్ చేయాలా?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g>డీబగ్గింగ్ సమాచారాన్ని అప్‌లో డ్ చేయదలుచుకుంటున్నారు."</string>
