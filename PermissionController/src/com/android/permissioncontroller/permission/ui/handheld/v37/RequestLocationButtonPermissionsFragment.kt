@@ -35,6 +35,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
 import com.airbnb.lottie.LottieCompositionFactory
 import com.airbnb.lottie.LottieDrawable
+import com.android.permissioncontroller.Constants
 import com.android.permissioncontroller.R
 import com.android.permissioncontroller.permission.ui.model.v37.LocationButtonViewModel
 import com.android.permissioncontroller.permission.ui.model.v37.LocationButtonViewModelFactory
@@ -48,6 +49,7 @@ class RequestLocationButtonPermissionsFragment : DialogFragment() {
         super.onCreate(savedInstanceState)
 
         val args = requireArguments()
+        val sessionId = args.getLong(Constants.EXTRA_SESSION_ID)
         val packageName = args.getString(Intent.EXTRA_PACKAGE_NAME)!!
         val remoteCallback =
             args.getParcelable(Intent.EXTRA_REMOTE_CALLBACK, RemoteCallback::class.java)!!
@@ -55,6 +57,7 @@ class RequestLocationButtonPermissionsFragment : DialogFragment() {
         val factory =
             LocationButtonViewModelFactory(
                 requireActivity().application,
+                sessionId,
                 packageName,
                 remoteCallback,
             )
@@ -139,12 +142,14 @@ class RequestLocationButtonPermissionsFragment : DialogFragment() {
 
     companion object {
         fun newInstance(
+            sessionId: Long,
             packageName: String,
             remoteCallback: RemoteCallback,
         ): RequestLocationButtonPermissionsFragment =
             RequestLocationButtonPermissionsFragment().apply {
                 arguments =
                     Bundle().apply {
+                        putLong(Constants.EXTRA_SESSION_ID, sessionId)
                         putString(Intent.EXTRA_PACKAGE_NAME, packageName)
                         putParcelable(Intent.EXTRA_REMOTE_CALLBACK, remoteCallback)
                     }

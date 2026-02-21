@@ -134,7 +134,7 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"ગઈકાલે"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"છેલ્લે ઍક્સેસ કર્યાનો સમય: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"જુઓ"</string>
-    <string name="device_assistance_title" msgid="1445976710214822208">"ડિવાઇસ સંબંધિત સહાયતા"</string>
+    <string name="device_assistance_title" msgid="1445976710214822208">"ડિવાઇસ આસિસ્ટન્સ"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"કઈ ઍપ દ્વારા તાજેતરમાં પરવાનગીઓનો ઉપયોગ થયો તે જુઓ"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>નો ઉપયોગ"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"અન્ય પરવાનગીઓ જુઓ"</string>
@@ -201,7 +201,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"ઍપનો ઉપયોગ કરતી વખતે જ મંજૂરી આપો"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"હંમેશાં માટે બધાને મંજૂરી આપો"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"દર વખતે પૂછો"</string>
-    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"દર વખતે પૂછો અથવા જ્યારે તમે શેર કરો ત્યારે મંજૂરી આપો"</string>
+    <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"દર વખતે પૂછો અથવા જ્યારે તમે શેર કરો ત્યારે મંજૂરી આપો"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"મંજૂરી આપશો નહીં"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"મર્યાદિત ઍક્સેસની મંજૂરી આપો"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"ચોક્કસ સ્થાન"</string>
@@ -369,7 +369,7 @@
     <string name="accessibility_service_dialog_bottom_text_single" msgid="1128666197822205958">"<xliff:g id="SERVICE_NAME">%s</xliff:g> તમારી સ્ક્રીન, ક્રિયાઓ તેમજ ઇનપુટ જોઈ શકે છે, ક્રિયાઓ કરી શકે છે અને ડિસ્પ્લેનું નિયંત્રણ કરી શકે છે."</string>
     <string name="accessibility_service_dialog_bottom_text_multiple" msgid="7009848932395519852">"આ ઍપ તમારી સ્ક્રીન, ક્રિયાઓ તેમજ ઇનપુટ જોઈ શકે છે, ક્રિયાઓ કરી શકે છે અને ડિસ્પ્લેનું નિયંત્રણ કરી શકે છે."</string>
     <string name="role_assistant_label" msgid="4727586018198208128">"ડિફૉલ્ટ ડિજિટલ આસિસ્ટંટ ઍપ"</string>
-    <string name="role_assistant_short_label" msgid="3369003713187703399">"ડિજિટલ આસિસ્ટંટ ઍપ"</string>
+    <string name="role_assistant_short_label" msgid="3369003713187703399">"ડિજિટલ આસિસ્ટન્ટ ઍપ"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"તમે જોઈ રહ્યા હો તે સ્ક્રીન પરની માહિતીના આધારે સહાયક ઍપ તમને સહાય કરી શકે છે. કેટલીક ઍપ તમને એકીકૃત સહાયતા આપવા માટે લૉન્ચર અને વૉઇસ ઇનપુટ સેવાઓ બંનેને સમર્થન આપે છે."</string>
     <string name="role_assistant_recommended_title" msgid="2093873159106905257">"<xliff:g id="OEM_NAME">%s</xliff:g> દ્વારા સુઝાવ આપેલી"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"ડિફૉલ્ટ બ્રાઉઝર ઍપ"</string>
@@ -601,7 +601,7 @@
     <string name="safety_status_preference_title_and_summary_content_description" msgid="3511373256505058464">"સુરક્ષા અને પ્રાઇવસીનું સ્ટેટસ. <xliff:g id="OVERALL_SAFETY_STATUS">%1$s</xliff:g>. <xliff:g id="SUMMARY_OF_DEVICE_STATUS">%2$s</xliff:g>"</string>
     <string name="security_settings" msgid="3808106921175271317">"સુરક્ષા સેટિંગ"</string>
     <string name="sensor_permissions_qs" msgid="1022267900031317472">"પરવાનગીઓ"</string>
-    <string name="safety_privacy_qs_tile_title" msgid="727301867710374052">"સિક્યુરિટી અને પ્રાઇવસી"</string>
+    <string name="safety_privacy_qs_tile_title" msgid="727301867710374052">"સુરક્ષા અને પ્રાઇવસી"</string>
     <string name="safety_privacy_qs_tile_subtitle" msgid="3621544532041936749">"સ્ટેટસ ચેક કરો"</string>
     <string name="privacy_controls_qs" msgid="5780144882040591169">"તમારી પ્રાઇવસીને લગતા નિયંત્રણો"</string>
     <string name="security_settings_button_label_qs" msgid="8280343822465962330">"વધુ સેટિંગ"</string>

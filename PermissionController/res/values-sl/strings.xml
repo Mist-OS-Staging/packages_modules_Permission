@@ -201,7 +201,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Dovoli samo med uporabo aplikacije"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Vedno dovoli vse"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Vedno vprašaj"</string>
-    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Vprašaj vsakič ali dovoli, ko deliš"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_you_share (5609521340593096465) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Ne dovoli"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Dovoli omejen dostop"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Natančna lokacija"</string>

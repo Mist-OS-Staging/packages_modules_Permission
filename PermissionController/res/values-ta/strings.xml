@@ -201,7 +201,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"ஆப்ஸை உபயோகிக்கும்போது மட்டும் அனுமதி"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"எப்போதும் அனைத்தையும் அனுமதி"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"ஒவ்வொரு முறையும் கேள்"</string>
-    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"ஒவ்வொரு முறையும் கேள் அல்லது பகிரும்போது அனுமதி"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_you_share (5609521340593096465) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"அனுமதிக்க வேண்டாம்"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"வரம்பிற்குட்பட்ட அணுகலை அனுமதித்தல்"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"துல்லியமான இருப்பிடம்"</string>

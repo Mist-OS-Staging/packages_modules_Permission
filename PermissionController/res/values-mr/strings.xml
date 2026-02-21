@@ -201,7 +201,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"फक्त अ‍ॅप वापरत असताना अनुमती द्या"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"सर्वांना नेहमी अनुमती द्या"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"प्रत्येक वेळी विचारा"</string>
-    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"तुम्ही शेअर करता, तेव्हा प्रत्येक वेळी विचारा किंवा अनुमती द्या"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_you_share (5609521340593096465) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"अनुमती देऊ नका"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"मर्यादित अ‍ॅक्सेसची अनुमती द्या"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"अचूक स्थान"</string>
@@ -471,8 +472,8 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"टीप: तुम्ही तुमचे डिव्हाइस रीस्टार्ट केल्यास आणि स्क्रीन लॉक सेट केले असल्यास, तुम्ही तुमचे डिव्हाइस अनलॉक करेपर्यंत हे अ‍ॅप सुरू होऊ शकत नाही."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"तुमच्या स्क्रीनवर दिसणाऱ्या माहितीच्या किंवा अ‍ॅप्समध्ये अ‍ॅक्सेस करता येणाऱ्या माहितीच्या समावेशासह असिस्टंट तुमच्या सिस्टममध्ये वापरल्या जाणाऱ्या अ‍ॅप्सबद्दलची माहिती वाचू शकेल."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"तुमचे डिजिटल असिस्टंट ॲप बदलून &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; करायचे आहे का?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"या असिस्टंटला तुमचे मेसेज आणि ॲप्सनी तुमच्या असिस्टंटसोबत शेअर करणे निवडलेला डेटा यांसारखी माहिती ॲक्सेस करता येईल."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"या असिस्टंटला तुमचे मेसेज आणि ॲप्सनी तुमच्या असिस्टंटसोबत शेअर करणे निवडलेला डेटा यांसारखी माहिती ॲक्सेस करता येईल.&lt;br&gt;&lt;br&gt;तुम्ही यापूर्वी <xliff:g id="APP_NAME">%1$s</xliff:g> साठी स्क्रीन आणि ॲप डेटा सुरू केल्यामुळे, त्याला तुमच्या स्क्रीनवर उघड्या असलेल्या ॲपमधील आशय ॲक्सेस करण्याची अनुमती दिली जाईल."</string>
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"या असिस्टंटला तुमचे मेसेज आणि ॲप्सनी तुमच्या असिस्टंटसोबत शेअर करण्यासाठी निवडलेला डेटा यांसारखी माहिती ॲक्सेस करता येईल."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"या असिस्टंटला तुमचे मेसेज आणि ॲप्सनी तुमच्या असिस्टंटसोबत शेअर करण्यासाठी निवडलेला डेटा यांसारखी माहिती ॲक्सेस करता येईल.&lt;br&gt;&lt;br&gt;तुम्ही यापूर्वी <xliff:g id="APP_NAME">%1$s</xliff:g> साठी स्क्रीन आणि ॲप डेटा सुरू केल्यामुळे, त्याला तुमच्या स्क्रीनवर उघड्या असलेल्या ॲपमधील आशय ॲक्सेस करण्याची अनुमती दिली जाईल."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"डीबगिंग डेटा शेअर करा"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"तपशीलवार डीबगिंग डेटा शेअर करायचा?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ला डीबगिंग माहिती अपलोड करायला आवडेल."</string>

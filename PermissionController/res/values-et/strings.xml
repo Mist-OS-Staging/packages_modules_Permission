@@ -201,7 +201,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Luba ainult rakenduse kasutamise ajal"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Luba alati kõik"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Küsi iga kord"</string>
-    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Küsi iga kord või luba jagamisel"</string>
+    <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Jagamisel iga kord küsimine või lubamine"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Ära luba"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Luba piiratud juurdepääs"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Täpne asukoht"</string>
@@ -751,7 +751,7 @@
     <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Luba"</string>
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Ära luba"</string>
     <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"Kas lubada rakendusel &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; kasutada ekraani- ja rakenduseandmeid?"</string>
-    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"See assistent pääseb juurde teie ekraanil avatud rakenduse teabele ja sisule"</string>
+    <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"See assistent pääseb juurde teie ekraanil avatud rakenduse teabele ja sisule."</string>
     <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Luba"</string>
     <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Ära luba"</string>
     <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Ekraani- ja rakenduseandmete kasutamine"</string>

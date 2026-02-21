@@ -201,7 +201,8 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Baimendu aplikazioa erabiltzean soilik"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Eman beti baliabide guztiak erabiltzeko baimena"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Galdetu beti"</string>
-    <string name="app_permission_button_ask_or_when_i_share" msgid="6762528139112412909">"Galdetu beti edo eman baimena partekatzean"</string>
+    <!-- no translation found for app_permission_button_ask_or_when_you_share (5609521340593096465) -->
+    <skip />
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Ez eman baimenik"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Eman sarbide mugatua"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Kokapen zehatza"</string>
@@ -384,7 +385,7 @@
     <string name="role_dialer_request_description" msgid="6288839625724909320">"Zure kamera, kontaktuak, mikrofonoa, telefonoa eta SMSak erabiltzeko baimena emango zaio aplikazioari"</string>
     <string name="role_dialer_search_keywords" msgid="3324448983559188087">"markagailua"</string>
     <string name="role_sms_label" msgid="8456999857547686640">"SMSetarako aplikazio lehenetsia"</string>
-    <string name="role_sms_short_label" msgid="4371444488034692243">"SMSetarako aplikazio"</string>
+    <string name="role_sms_short_label" msgid="4371444488034692243">"SMSetarako aplikazioa"</string>
     <string name="role_sms_description" msgid="3424020199148153513">"Telefono-zenbakiaren bidez testu-mezu laburrak, argazkiak, bideoak eta beste zenbait gauza bidaltzea eta jasotzea ahalbidetzen dizuten aplikazioak"</string>
     <string name="role_sms_request_title" msgid="7953552109601185602">"<xliff:g id="APP_NAME">%1$s</xliff:g> ezarri nahi duzu SMSetarako aplikazio lehenetsi gisa?"</string>
     <string name="role_sms_request_description" msgid="2691004766132144886">"Zure kamera, kontaktuak, fitxategiak eta multimedia-edukia, mikrofonoa, telefonoa eta SMSak erabiltzeko baimena emango zaio aplikazioari"</string>
@@ -752,9 +753,9 @@
     <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Ez eman baimenik"</string>
     <string name="request_read_screen_context_dialog_title" msgid="9048738661085777679">"Pantailako eta aplikazioetako datuak atzitzeko baimena eman nahi diozu &lt;b&gt;<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>&lt;/b&gt; aplikazioari?"</string>
     <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"Laguntzaileak pantailan irekita daukazun aplikazioko informazioa eta edukia atzitu ahalko ditu"</string>
-    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Onartu"</string>
-    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Ez onartu"</string>
-    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Pantailako eta aplikazioetako datuak erabili"</string>
+    <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Eman baimena"</string>
+    <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Ez eman baimenik"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Erabili pantailako eta aplikazioetako datuak"</string>
     <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Eman pantailan irekita daukazun aplikazioko informazioa eta edukia atzitzeko baimena laguntzaileari"</string>
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Eman pantailan irekita daukazun aplikazioko informazioa eta edukia atzitzeko baimena <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> aplikazioari"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Eman baimena"</string>
