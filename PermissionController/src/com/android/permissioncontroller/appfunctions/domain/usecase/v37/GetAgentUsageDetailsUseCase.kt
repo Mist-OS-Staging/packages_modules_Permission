@@ -19,9 +19,9 @@ package com.android.permissioncontroller.appfunctions.domain.usecase.v37
 import android.content.Context
 import android.os.UserManager
 import com.android.permissioncontroller.appfunctions.AppFunctionsUtil
-import com.android.permissioncontroller.appfunctions.domain.model.v37.AgentAccessInfo
 import com.android.permissioncontroller.appinteraction.data.repository.AppInteractionRepository
 import com.android.permissioncontroller.appinteraction.domain.model.v37.AccessHistory
+import com.android.permissioncontroller.appinteraction.domain.model.v37.AgentAccessInfo
 import java.time.Instant
 import java.util.concurrent.TimeUnit
 import kotlin.math.max
