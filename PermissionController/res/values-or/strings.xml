@@ -368,9 +368,9 @@
     <string name="accessibility_service_dialog_title_multiple" msgid="5527879210683548175">"<xliff:g id="NUM_SERVICES">%s</xliff:g>ଟି ଆକ୍ସେସିବିଲିଟୀ ଆପ୍ସର ଆପଣଙ୍କ ଡିଭାଇସ୍‌କୁ ସମ୍ପୂର୍ଣ୍ଣ ଆକ୍ସେସ୍‌ ଅଛି"</string>
     <string name="accessibility_service_dialog_bottom_text_single" msgid="1128666197822205958">"<xliff:g id="SERVICE_NAME">%s</xliff:g> ଆପଣଙ୍କର ସ୍କ୍ରିନ୍‌, କାର୍ଯ୍ୟ ଏବଂ ଇନ୍‌ପୁଟ୍‍ ଦେଖିପାରିବ ଏବଂ କାର୍ଯ୍ୟ ସମ୍ପାଦନ କରିପାରିବ ଏବଂ ଡିସ୍‌ପ୍ଲେ ନିୟନ୍ତ୍ରଣ କରିପାରିବ।"</string>
     <string name="accessibility_service_dialog_bottom_text_multiple" msgid="7009848932395519852">"ଏହି ଆପ୍ସ ଆପଣଙ୍କର ସ୍କ୍ରିନ୍‌, କାର୍ଯ୍ୟକଳାପ ଏବଂ ଇନ୍‌ପୁଟ୍‍ ଦେଖିପାରିବ ଏବଂ କାର୍ଯ୍ୟ ସମ୍ପାଦନ କରିପାରିବ ଏବଂ ଡିସ୍‌ପ୍ଲେ ନିୟନ୍ତ୍ରଣ କରିପାରିବ।"</string>
-    <string name="role_assistant_label" msgid="4727586018198208128">"ଡିଫଲ୍ଟ ଡିଜିଟାଲ ସହାୟକ ଆପ"</string>
+    <string name="role_assistant_label" msgid="4727586018198208128">"ଡିଫଲ୍ଟ ଡିଜିଟାଲ ଆସିଷ୍ଟାଣ୍ଟ ଆପ"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"ଡିଜିଟାଲ୍ Assistant ଆପ୍"</string>
-    <string name="role_assistant_description" msgid="6622458130459922952">"ଆପଣ ଭ୍ୟୁ କରୁଥିବା ସ୍କ୍ରିନ ସୂଚନାକୁ ଆଧାର କରି ସହାୟକ ଆପ ଆପଣଙ୍କୁ ସାହାଯ୍ୟ କରିପାରିବ। କେତେକ ଆପ ଆପଣଙ୍କୁ ସମ୍ପୂର୍ଣ୍ଣ ସହାୟତା ଦେବା ପାଇଁ ଉଭୟ ଲଞ୍ଚର ଓ ଭଏସ ଇନପୁଟ ସେବାକୁ ସମର୍ଥନ କରେ।"</string>
+    <string name="role_assistant_description" msgid="6622458130459922952">"ଆପଣ ଭ୍ୟୁ କରୁଥିବା ସ୍କ୍ରିନ ସୂଚନାକୁ ଆଧାର କରି ଆସିଷ୍ଟ ଆପ ଆପଣଙ୍କୁ ସାହାଯ୍ୟ କରିପାରିବ। କେତେକ ଆପ ଆପଣଙ୍କୁ ସମନ୍ୱିତ ସହାୟତା ଦେବା ପାଇଁ ଉଭୟ ଲଞ୍ଚର ଓ ଭଏସ ଇନପୁଟ ସର୍ଭିସକୁ ସପୋର୍ଟ କରେ।"</string>
     <string name="role_assistant_recommended_title" msgid="2093873159106905257">"<xliff:g id="OEM_NAME">%s</xliff:g>ଦ୍ୱାରା ସୁପାରିଶ କରାଯାଇଛି"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"ଡିଫଲ୍ଟ ବ୍ରାଉଜର୍‌ ଆପ୍‌"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"ବ୍ରାଉଜର୍‌ ଆପ୍‌"</string>
@@ -453,11 +453,11 @@
     <string name="default_apps_for_work" msgid="4970308943596201811">"କାର୍ଯ୍ୟ ପାଇଁ ଡିଫଲ୍ଟ ଅଛି"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"ପ୍ରାଇଭେଟ ସ୍ପେସ ପାଇଁ ଡିଫଲ୍ଟ"</string>
     <string name="default_app_others" msgid="7793029848126079876">"ଅନ୍ୟ"</string>
-    <string name="default_app_none" msgid="9084592086808194457">"କିଛି ଆପ ସେଟ କରାଯାଇନାହିଁ"</string>
+    <string name="default_app_none" msgid="9084592086808194457">"କିଛି ନାହିଁ"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(ସିଷ୍ଟମ୍ ଡିଫଲ୍ଟ)"</string>
     <string name="default_app_no_apps" msgid="115720991680586885">"କୌଣସି ଆପ୍‌ ନାହିଁ"</string>
     <string name="default_app_confirmation_positive_button" msgid="7870227561758833590">"ବଦଳାନ୍ତୁ"</string>
-    <string name="default_app_confirmation_negative_button" msgid="2564849389728106051">"ବର୍ତ୍ତମାନର ଫଟୋକୁ ରଖ"</string>
+    <string name="default_app_confirmation_negative_button" msgid="2564849389728106051">"ରହିବାକୁ ଦିଅନ୍ତୁ"</string>
     <string name="default_payment_app_other_nfc_services" msgid="5957633798695758917">"ଅନ୍ୟ NFC ସେବା"</string>
     <string name="car_default_app_selected" msgid="5416420830430644174">"ଚୟନ କରାଯାଇଛି"</string>
     <string name="car_default_app_selected_with_info" msgid="1932204186080593500">"ଚୟନ କରାଯାଇଛି - <xliff:g id="ADDITIONAL_INFO">%1$s</xliff:g>"</string>
