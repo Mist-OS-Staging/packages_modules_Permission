@@ -27,11 +27,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.createSavedStateHandle
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.CreationExtras
-import com.android.permissioncontroller.appfunctions.domain.model.v37.AgentAccessInfo
 import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAgentUsageDetailsUseCase
 import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAgentUsageDetailsUseCase.Companion.KEY_PAST_24_HOURS
 import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAgentUsageDetailsUseCase.Companion.KEY_PAST_7_DAYS
 import com.android.permissioncontroller.appinteraction.data.repository.AppInteractionRepository
+import com.android.permissioncontroller.appinteraction.domain.model.v37.AgentAccessInfo
 import com.android.permissioncontroller.common.model.Stateful
 import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
 import kotlin.String

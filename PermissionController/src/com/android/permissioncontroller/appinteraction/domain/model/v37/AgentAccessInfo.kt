@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.permissioncontroller.appfunctions.domain.model.v37
+package com.android.permissioncontroller.appinteraction.domain.model.v37
 
 /**
  * Data class for the agent access entries on the agent timeline dashboard
