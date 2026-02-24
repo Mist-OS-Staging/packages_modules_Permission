@@ -23,3 +23,8 @@ filegroup {
     name: "preinstalled-packages-com.android.permissioncontroller.xml",
     srcs: ["preinstalled-packages-com.android.permissioncontroller.xml"],
 }
+
+filegroup {
+    name: "preinstalled-packages-com.android.safetycenter.resources.xml",
+    srcs: ["preinstalled-packages-com.android.safetycenter.resources.xml"],
+}
