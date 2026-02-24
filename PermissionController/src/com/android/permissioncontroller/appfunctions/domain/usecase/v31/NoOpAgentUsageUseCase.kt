@@ -16,7 +16,7 @@
 package com.android.permissioncontroller.appfunctions.domain.usecase.v31
 
 import android.content.Context
-import com.android.permissioncontroller.appinteraction.domain.model.v31.AccessCount
+import com.android.permissioncontroller.appinteraction.domain.model.v31.AgentActivityItem
 
 /**
  * A no-op implementation of [GetAgentUsageUseCase].
@@ -24,7 +24,7 @@ import com.android.permissioncontroller.appinteraction.domain.model.v31.AccessCo
  * This implementation always returns an empty map, indicating no usage.
  */
 class NoOpAgentUsageUseCase : GetAgentUsageUseCase {
-    override suspend operator fun invoke(context: Context): Map<String, AccessCount> {
-        return emptyMap()
+    override suspend operator fun invoke(context: Context): List<AgentActivityItem> {
+        return emptyList()
     }
 }

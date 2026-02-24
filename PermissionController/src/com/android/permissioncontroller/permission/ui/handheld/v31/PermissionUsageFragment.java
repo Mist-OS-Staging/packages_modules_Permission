@@ -30,7 +30,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Process;
+import android.os.UserHandle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -47,6 +47,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.android.permissioncontroller.R;
 import com.android.permissioncontroller.appfunctions.AppFunctionsUtil;
 import com.android.permissioncontroller.appfunctions.ui.v37.AgentUsageDetailsActivity;
+import com.android.permissioncontroller.appinteraction.domain.model.v31.AgentActivityItem;
 import com.android.permissioncontroller.permission.ui.ManagePermissionsActivity;
 import com.android.permissioncontroller.permission.ui.handheld.SettingsWithLargeHeader;
 import com.android.permissioncontroller.permission.ui.viewmodel.v31.PermissionUsageViewModel;
@@ -284,8 +285,7 @@ public class PermissionUsageFragment extends SettingsWithLargeHeader {
                 permissionUsagesUiData.getPermissionGroupUsageCount();
         List<Map.Entry<String, Integer>> permissionGroupWithUsageCountsEntries =
                 new ArrayList(permissionGroupWithUsageCounts.entrySet());
-        List<Map.Entry<String, Integer>> appFunctionAgentAccessCountEntries =
-                new ArrayList(permissionUsagesUiData.getAgentAccessCount().entrySet());
+        List<AgentActivityItem> agentActivityItems = permissionUsagesUiData.getAgentUsages();
         permissionGroupWithUsageCountsEntries.sort(Comparator.comparing(
                         (Map.Entry<String, Integer> permissionGroupWithUsageCount) ->
                                 PERMISSION_GROUP_ORDER.getOrDefault(
@@ -294,10 +294,16 @@ public class PermissionUsageFragment extends SettingsWithLargeHeader {
                         mViewModel.getPermissionGroupLabel(
                                 permissionGroupWithUsageCount.getKey())));
         if (AppFunctionsUtil.isPrivacyDashboardAgentActivityEnabled(context)) {
-            appFunctionAgentAccessCountEntries.sort(Comparator.comparing(
-                    (Map.Entry<String, Integer> entry) ->
-                            mViewModel.getAppFunctionAgentLabel(context, entry.getKey())
-            ));
+            agentActivityItems.sort(
+                    Comparator
+                            .comparing((AgentActivityItem agentActivityItem) ->
+                                            mViewModel.getAppFunctionAgentLabel(
+                                                    context,
+                                                    agentActivityItem.getAgentPackageName())
+                            )
+                            .thenComparingInt(agentActivityItem ->
+                                    agentActivityItem.getUserHandle().getIdentifier()
+                            ));
         }
 
         // Calculate showSystem and show7Days states
@@ -330,7 +336,7 @@ public class PermissionUsageFragment extends SettingsWithLargeHeader {
         addUiContent(
                 context,
                 permissionGroupWithUsageCountsEntries,
-                appFunctionAgentAccessCountEntries,
+                agentActivityItems,
                 permissionsCategory,
                 agentsCategory,
                 showSystem,
@@ -348,7 +354,7 @@ public class PermissionUsageFragment extends SettingsWithLargeHeader {
     private void addUiContent(
             Context context,
             List<Map.Entry<String, Integer>> permissionGroupWithUsageCountEntries,
-            List<Map.Entry<String, Integer>> appFunctionAgentAccessCountEntries,
+            List<AgentActivityItem> agentActivityItems,
             PreferenceCategory permissionsCategory,
             PreferenceCategory agentsCategory,
             boolean showSystem,
@@ -379,34 +385,37 @@ public class PermissionUsageFragment extends SettingsWithLargeHeader {
         permissionsCategory.addPreference(mExpandButton);
 
         if (agentsCategory != null) {
-            for (int i = 0; i < appFunctionAgentAccessCountEntries.size(); i++) {
-                Map.Entry<String, Integer> agentUsageEntry =
-                        appFunctionAgentAccessCountEntries.get(i);
-                String agentPackageName = agentUsageEntry.getKey();
+            for (int i = 0; i < agentActivityItems.size(); i++) {
+                AgentActivityItem agentActivityItem = agentActivityItems.get(i);
+                String agentPackageName = agentActivityItem.getAgentPackageName();
+                int accessCount = show7Days ? agentActivityItem.getAccessCount7Days() :
+                        agentActivityItem.getAccessCount24Hours();
+                UserHandle user = agentActivityItem.getUserHandle();
                 Preference agentUsagePreference = new Preference(context);
-                agentUsagePreference.setEnabled(agentUsageEntry.getValue() != 0);
+                agentUsagePreference.setEnabled(accessCount != 0);
                 agentUsagePreference.setIcon(
                         KotlinUtils.INSTANCE.getBadgedPackageIcon(
                                 getActivity().getApplication(),
                                 agentPackageName,
-                                Process.myUserHandle()
+                                user
                         )
                 );
                 agentUsagePreference.setTitle(
                         KotlinUtils.INSTANCE.getPackageLabel(
                                 getActivity().getApplication(),
                                 agentPackageName,
-                                Process.myUserHandle()
+                                user
                         )
                 );
                 agentUsagePreference.setSummary(StringUtils.getIcuPluralsString(
                         context,
                         R.string.agent_usage_preference_label,
-                        agentUsageEntry.getValue()
+                        accessCount
                 ));
                 agentUsagePreference.setOnPreferenceClickListener(preference -> {
                     Intent intent = new Intent(context, AgentUsageDetailsActivity.class);
                     intent.putExtra(Intent.EXTRA_PACKAGE_NAME, agentPackageName);
+                    intent.putExtra(Intent.EXTRA_USER, user);
                     intent.putExtra(ManagePermissionsActivity.EXTRA_SHOW_7_DAYS, show7Days);
                     intent.putExtra(ManagePermissionsActivity.EXTRA_SHOW_SYSTEM, showSystem);
                     context.startActivity(intent);

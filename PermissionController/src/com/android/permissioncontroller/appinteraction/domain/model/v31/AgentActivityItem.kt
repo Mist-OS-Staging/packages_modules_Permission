@@ -16,10 +16,17 @@
 
 package com.android.permissioncontroller.appinteraction.domain.model.v31
 
+import android.os.UserHandle
+
 /**
  * Model for an app function agent or target package.
  *
  * @param accessCount24Hours The count of target apps that an agent has accessed in past 24 hours
  * @param accessCount7Days The count of target apps that an agent has accessed in past 7 days
  */
-data class AccessCount(val accessCount24Hours: Int, val accessCount7Days: Int)
+data class AgentActivityItem(
+    val agentPackageName: String,
+    val userHandle: UserHandle,
+    val accessCount24Hours: Int,
+    val accessCount7Days: Int,
+)

@@ -100,7 +100,7 @@ object AppFunctionsUtil {
     }
 
     @JvmStatic
-    @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.BAKLAVA)
+    @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.CINNAMON_BUN)
     fun isPrivacyDashboardAgentActivityEnabled(context: Context): Boolean {
         val packageManager = context.packageManager
         return SdkLevel.isAtLeastB() &&

@@ -17,6 +17,7 @@ package com.android.permissioncontroller.appfunctions.ui.v37
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.UserHandle
 import android.util.Log
 import com.android.permissioncontroller.appfunctions.AppFunctionsUtil
 import com.android.permissioncontroller.appfunctions.ui.handheld.v37.AgentUsageDetailsWrapperFragment
@@ -41,11 +42,13 @@ class AgentUsageDetailsActivity : SettingsActivity() {
 
         if (savedInstanceState == null) {
             val agentPackageName = intent.getStringExtra(Intent.EXTRA_PACKAGE_NAME)!!
+            val user = intent.getParcelableExtra(Intent.EXTRA_USER, UserHandle::class.java)!!
             val showSystem = intent.getBooleanExtra(EXTRA_SHOW_SYSTEM, false)
             val show7Days = intent.getBooleanExtra(EXTRA_SHOW_7_DAYS, false)
             val fragment =
                 AgentUsageDetailsWrapperFragment.newInstance(
                     agentPackageName,
+                    user,
                     showSystem,
                     show7Days,
                 )

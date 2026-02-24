@@ -16,18 +16,22 @@
 
 package com.android.permissioncontroller.appinteraction.domain.model.v37
 
+import android.os.UserHandle
+
 /**
  * Data class for the agent access entries on the agent timeline dashboard
  *
  * @param agentPackageName The package name of the agent app
  * @param targetPackageName The package name of the target app
+ * @param user The UserHandle for the agent timeline
  * @param lastAccessTime The timestamp (in milliseconds) when the app interaction was accessed
  * @param interactionUri A URI linking to the original interaction context
  * @param isDeviceAssistanceAccess Whether the target app is a device assistance
  */
-data class AgentAccessInfo(
+data class AgentTimelineItem(
     val agentPackageName: String,
     val targetPackageName: String,
+    val user: UserHandle,
     val lastAccessTime: Long,
     val interactionUri: String?,
     val isDeviceAssistanceAccess: Boolean,

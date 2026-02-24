@@ -31,7 +31,7 @@ import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAgent
 import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAgentUsageDetailsUseCase.Companion.KEY_PAST_24_HOURS
 import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAgentUsageDetailsUseCase.Companion.KEY_PAST_7_DAYS
 import com.android.permissioncontroller.appinteraction.data.repository.AppInteractionRepository
-import com.android.permissioncontroller.appinteraction.domain.model.v37.AgentAccessInfo
+import com.android.permissioncontroller.appinteraction.domain.model.v37.AgentTimelineItem
 import com.android.permissioncontroller.common.model.Stateful
 import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
 import kotlin.String
@@ -49,6 +49,7 @@ import kotlinx.coroutines.launch
 class AgentUsageDetailsViewModel(
     app: Application,
     private val agentPackageName: String,
+    private val user: UserHandle,
     private val packageRepository: PackageRepository,
     private val getAppFunctionAgentUsageDetailsUseCase: GetAgentUsageDetailsUseCase,
     val state: SavedStateHandle = SavedStateHandle(emptyMap()),
@@ -62,13 +63,17 @@ class AgentUsageDetailsViewModel(
     fun getShow7Days(): Boolean = show7DaysFlow.value
 
     private val agentUsageDetailsStateFlow =
-        MutableStateFlow<Stateful<Map<String, List<AgentAccessInfo>>>>(Stateful.Loading())
+        MutableStateFlow<Stateful<Map<String, List<AgentTimelineItem>>>>(Stateful.Loading())
 
     init {
         coroutineScope.launch(defaultDispatcher) {
             try {
                 val agentUsageDetailsUseCase =
-                    getAppFunctionAgentUsageDetailsUseCase(app.applicationContext, agentPackageName)
+                    getAppFunctionAgentUsageDetailsUseCase(
+                        app.applicationContext,
+                        agentPackageName,
+                        user,
+                    )
                 agentUsageDetailsStateFlow.value = Stateful.Success(agentUsageDetailsUseCase)
             } catch (e: Exception) {
                 agentUsageDetailsStateFlow.value = Stateful.Failure(throwable = e)
@@ -85,7 +90,7 @@ class AgentUsageDetailsViewModel(
     }
 
     private fun buildAgentUsageDetailsUiState(
-        agentUsageDetailsState: Stateful<Map<String, List<AgentAccessInfo>>>,
+        agentUsageDetailsState: Stateful<Map<String, List<AgentTimelineItem>>>,
         show7Days: Boolean,
     ): AgentUsageDetailsUiState {
         when (agentUsageDetailsState) {
@@ -100,11 +105,11 @@ class AgentUsageDetailsViewModel(
                         KEY_PAST_24_HOURS
                     }
                 val agentUsageDetails = agentUsageDetailsState.value[show7DaysKey]
-                val agentAccessInfos = agentUsageDetails ?: emptyList()
+                val agentTimelineItems = agentUsageDetails ?: emptyList()
                 return AgentUsageDetailsUiState.Success(
                     agentPackageName,
                     getSettingsPackageName(Process.myUserHandle())!!,
-                    agentAccessInfos,
+                    agentTimelineItems,
                     show7Days,
                 )
             }
@@ -138,7 +143,7 @@ sealed class AgentUsageDetailsUiState {
     data class Success(
         val agentPackageName: String,
         val settingsPackageName: String,
-        val agentAccessInfos: List<AgentAccessInfo>,
+        val agentTimelineItems: List<AgentTimelineItem>,
         val show7Days: Boolean,
     ) : AgentUsageDetailsUiState()
 }
@@ -147,6 +152,7 @@ sealed class AgentUsageDetailsUiState {
 class AgentUsageDetailsViewModelFactory(
     val app: Application,
     private val agentPackageName: String,
+    private val user: UserHandle,
 ) : ViewModelProvider.Factory {
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>, extras: CreationExtras): T {
@@ -156,6 +162,7 @@ class AgentUsageDetailsViewModelFactory(
         return AgentUsageDetailsViewModel(
             app,
             agentPackageName,
+            user,
             packageRepository,
             useCase,
             extras.createSavedStateHandle(),
