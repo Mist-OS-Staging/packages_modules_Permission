@@ -256,7 +256,8 @@ class PermissionUsageViewModelFactory(private val app: Application) : ViewModelP
         val appFunctionAgentUsageUseCase =
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.CINNAMON_BUN) {
                 val appInteractionRepository = AppInteractionRepository.getInstance()
-                GetAgentUsageUseCaseImpl(appInteractionRepository)
+                val packageRepository = PackageRepository.getInstance(app)
+                GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository)
             } else {
                 NoOpAgentUsageUseCase()
             }

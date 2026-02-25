@@ -33,6 +33,7 @@ import com.android.permissioncontroller.appinteraction.domain.model.v31.AccessCo
 import com.android.permissioncontroller.appinteraction.domain.model.v37.AccessHistory
 import com.android.permissioncontroller.flags.Flags
 import com.android.permissioncontroller.tests.mocking.appinteraction.data.repository.FakeAppInteractionRepository
+import com.android.permissioncontroller.tests.mocking.pm.data.repository.FakePackageRepository
 import com.google.common.truth.Truth.assertThat
 import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.test.runTest
@@ -101,8 +102,11 @@ class GetAgentUsageUseCaseTest {
                     accessTime = now - TimeUnit.DAYS.toMillis(8),
                 ),
             )
-        val repository = FakeAppInteractionRepository(accessHistory)
-        useCase = GetAgentUsageUseCaseImpl(repository)
+
+        val agents = listOf(AGENT_NAME_1)
+        val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
+        val packageRepository = FakePackageRepository(agents = agents)
+        useCase = GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository)
 
         val result = useCase(mockContext)
         assertThat(result).hasSize(3)
@@ -138,8 +142,10 @@ class GetAgentUsageUseCaseTest {
                     accessTime = now - TimeUnit.HOURS.toMillis(3),
                 ),
             )
-        val repository = FakeAppInteractionRepository(accessHistory)
-        useCase = GetAgentUsageUseCaseImpl(repository)
+        val agents = listOf(AGENT_NAME_1)
+        val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
+        val packageRepository = FakePackageRepository(agents = agents)
+        useCase = GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository)
 
         val result = useCase(mockContext)
         assertThat(result).hasSize(1)
@@ -174,9 +180,12 @@ class GetAgentUsageUseCaseTest {
                     accessTime = now - TimeUnit.HOURS.toMillis(3),
                 ),
             )
+        val agents = listOf(AGENT_NAME_1)
         val deviceAssistancePackageNames = listOf(TARGET_NAME_2, TARGET_NAME_3)
-        val repository = FakeAppInteractionRepository(accessHistory, deviceAssistancePackageNames)
-        useCase = GetAgentUsageUseCaseImpl(repository)
+        val appInteractionRepository =
+            FakeAppInteractionRepository(accessHistory, deviceAssistancePackageNames)
+        val packageRepository = FakePackageRepository(agents = agents)
+        useCase = GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository)
 
         val result = useCase(mockContext)
         assertThat(result[AGENT_NAME_1]).isEqualTo(AccessCount(2, 2))
@@ -199,8 +208,10 @@ class GetAgentUsageUseCaseTest {
                     accessTime = now - TimeUnit.HOURS.toMillis(1),
                 )
             )
-        val repository = FakeAppInteractionRepository(accessHistory)
-        useCase = GetAgentUsageUseCaseImpl(repository)
+        val agents = listOf(AGENT_NAME_1)
+        val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
+        val packageRepository = FakePackageRepository(agents = agents)
+        useCase = GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository)
 
         val result = useCase(mockContext)
         assertThat(result).hasSize(0)

@@ -82,6 +82,9 @@ interface PackageRepository {
     /** Returns the package name for the Settings app of the given [user], null otherwise. */
     fun getSettingsPackageName(user: UserHandle): String?
 
+    /** Returns a list of packages holding permissions specified */
+    fun getPackagesHoldingPermissions(permissions: List<String>, user: UserHandle): List<String>
+
     companion object {
         @Volatile private var instance: PackageRepository? = null
 
@@ -210,6 +213,16 @@ class PackageRepositoryImpl(
         } catch (e: PackageManager.NameNotFoundException) {
             null
         }
+
+    override fun getPackagesHoldingPermissions(
+        permissions: List<String>,
+        user: UserHandle,
+    ): List<String> {
+        val pm = Utils.getUserContext(context, user).packageManager
+        return pm.getPackagesHoldingPermissions(permissions.toTypedArray(), 0).map {
+            it.packageName
+        }
+    }
 
     companion object {
         private const val LOG_TAG = "PackageRepository"
