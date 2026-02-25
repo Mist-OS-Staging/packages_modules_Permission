@@ -36,10 +36,10 @@ import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceScreen
 import androidx.preference.PreferenceViewHolder
 import com.android.permissioncontroller.R
-import com.android.permissioncontroller.appfunctions.domain.model.v37.AgentAccessInfo
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.v37.AgentUsageDetailsUiState
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.v37.AgentUsageDetailsViewModel
 import com.android.permissioncontroller.appfunctions.ui.viewmodel.v37.AgentUsageDetailsViewModelFactory
+import com.android.permissioncontroller.appinteraction.domain.model.v37.AgentAccessInfo
 import com.android.permissioncontroller.permission.ui.ManagePermissionsActivity.EXTRA_SHOW_7_DAYS
 import com.android.permissioncontroller.permission.ui.handheld.SettingsWithLargeHeader
 import com.android.permissioncontroller.permission.utils.KotlinUtils
