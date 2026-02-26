@@ -55,7 +55,6 @@ class AllowedForCompatibilityCategoryTest : BaseUsePermissionTest() {
     @Before
     fun setup() {
         assumeFalse(isTv)
-        assumeFalse(isWatch)
         installPackage(TEST_APP_APK)
     }
 

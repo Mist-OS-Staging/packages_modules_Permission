@@ -215,12 +215,8 @@ class AppPermissionGroupsViewModel(
                 groupGrantStates[Category.ALLOWED] = mutableListOf()
                 groupGrantStates[Category.ASK] = mutableListOf()
                 groupGrantStates[Category.DENIED] = mutableListOf()
-                // TODO(b/479895707): Support Wear form factor
                 // TODO(b/479896440): Support TV form factor
-                if (
-                    !DeviceUtils.isWear(app.applicationContext) &&
-                        !DeviceUtils.isTelevision(app.applicationContext)
-                ) {
+                if (!DeviceUtils.isTelevision(app.applicationContext)) {
                     groupGrantStates[Category.ALLOWED_FOR_COMPATIBILITY] = mutableListOf()
                 }
 
