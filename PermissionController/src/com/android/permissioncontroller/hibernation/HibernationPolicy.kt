@@ -502,7 +502,7 @@ private suspend fun getAppsToHibernate(context: Context): Map<UserHandle, List<L
             DumpableLog.w(LOG_TAG, "Skipping $user - locked direct boot state")
             continue
         }
-        var userAppsToHibernate = mutableListOf<LightPackageInfo>()
+        val userAppsToHibernate = mutableListOf<LightPackageInfo>()
         userApps.forEachInParallel(Main) { pkg: LightPackageInfo ->
             if (isPackageHibernationExemptBySystem(pkg, user)) {
                 return@forEachInParallel
