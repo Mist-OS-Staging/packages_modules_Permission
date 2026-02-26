@@ -43,7 +43,7 @@ android_test {
         "androidx.test.core",
     ],
     data: [
-        ":CtsLocationButtonApp",
+        ":CtsLocationButtonInteractiveApp",
     ],
     test_suites: [
         "cts-v-host",

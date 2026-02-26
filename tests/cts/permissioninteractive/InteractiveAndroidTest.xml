@@ -14,7 +14,7 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<configuration description="Config for Interactive CTS Permission UI test cases">
+<configuration description="Config for Interactive CTS Permission test cases">
     <option name="test-suite-tag" value="cts-v-host" />
     <option name="config-descriptor:metadata" key="subplan" value="cts-v-host-interactive" />
 
@@ -30,15 +30,7 @@
         <option name="cleanup-apks" value="true" />
         <option name="install-arg" value="-t" />
         <option name="test-file-name" value="CtsPermissionInteractiveTestCases.apk" />
-    </target_preparer>
-
-    <target_preparer class="com.android.tradefed.targetprep.RunCommandTargetPreparer">
-        <option name="run-command" value="mkdir -p /data/local/tmp/cts-permissioninteractive" />
-        <option name="teardown-command" value="rm -rf /data/local/tmp/cts-permissioninteractive"/>
-    </target_preparer>
-
-    <target_preparer class="com.android.compatibility.common.tradefed.targetprep.FilePusher">
-        <option name="push" value="CtsLocationButtonApp.apk->/data/local/tmp/cts-permissioninteractive/CtsLocationButtonApp.apk" />
+        <option name="test-file-name" value="CtsLocationButtonInteractiveApp.apk" />
     </target_preparer>
 
     <target_preparer class="com.android.tradefed.targetprep.RunCommandTargetPreparer">
