@@ -21,6 +21,7 @@ import com.android.permissioncontroller.appfunctions.AppFunctionsUtil
 import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAgentUsageUseCase
 import com.android.permissioncontroller.appinteraction.data.repository.AppInteractionRepository
 import com.android.permissioncontroller.appinteraction.domain.model.v31.AccessCount
+import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
 import java.time.Instant
 import java.util.concurrent.TimeUnit
 import kotlin.math.max
@@ -32,24 +33,33 @@ import kotlin.math.max
  *
  * @param appFunctionRepository The repository to use to get the app function agents.
  */
-class GetAgentUsageUseCaseImpl(private val appInteractionRepository: AppInteractionRepository) :
-    GetAgentUsageUseCase {
+class GetAgentUsageUseCaseImpl(
+    private val appInteractionRepository: AppInteractionRepository,
+    private val packageRepository: PackageRepository,
+) : GetAgentUsageUseCase {
     override suspend operator fun invoke(context: Context): Map<String, AccessCount> {
         if (!AppFunctionsUtil.isPrivacyDashboardAgentActivityEnabled(context)) {
             return emptyMap()
         }
 
         val profiles = context.getSystemService(UserManager::class.java).userProfiles
+        val agents =
+            profiles.flatMap {
+                packageRepository.getPackagesHoldingPermissions(AGENT_PERMISSIONS, it)
+            }
         val accessHistories =
             profiles.flatMap { appInteractionRepository.getAccessHistory(context, it) }
+        val accessCounts = agents.associateWith { AccessCount(0, 0) }.toMutableMap()
         val deviceAssistancePackageNames =
             appInteractionRepository.getDeviceAssistancePackageNames(context).toSet()
+
         val now = System.currentTimeMillis()
         val timeStamp24Hours = max(now - TimeUnit.DAYS.toMillis(1), Instant.EPOCH.toEpochMilli())
         val timeStamp7Days = max(now - TimeUnit.DAYS.toMillis(7), Instant.EPOCH.toEpochMilli())
-        return accessHistories
+
+        accessHistories
             .groupBy { it.agentPackageName }
-            .mapValues { (_, accessHistories) ->
+            .forEach { (agentPackageName, accessHistories) ->
                 val distinctAccessCount24Hours = mutableSetOf<String>()
                 val distinctAccessCount7Days = mutableSetOf<String>()
                 for (accessHistory in accessHistories) {
@@ -67,11 +77,22 @@ class GetAgentUsageUseCaseImpl(private val appInteractionRepository: AppInteract
                         distinctAccessCount7Days.add(targetPackageName)
                     }
                 }
-                AccessCount(distinctAccessCount24Hours.size, distinctAccessCount7Days.size)
+                accessCounts[agentPackageName] =
+                    AccessCount(distinctAccessCount24Hours.size, distinctAccessCount7Days.size)
             }
+
+        return accessCounts
     }
 
     companion object {
         private const val DEVICE_ASSISTANCE_TARGET_PACKAGE_NAME = "DEVICE_ASSISTANCE"
+
+        private val AGENT_PERMISSIONS =
+            listOf(
+                android.Manifest.permission.EXECUTE_APP_FUNCTIONS,
+                // While this permission should be a @SystemApi, it is actually defined as a @hide
+                // permission. Hence, we can only access this permission via raw string.
+                "android.permission.ACCESS_COMPUTER_CONTROL",
+            )
     }
 }

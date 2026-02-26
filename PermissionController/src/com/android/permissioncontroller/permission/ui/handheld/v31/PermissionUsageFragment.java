@@ -384,6 +384,7 @@ public class PermissionUsageFragment extends SettingsWithLargeHeader {
                         appFunctionAgentAccessCountEntries.get(i);
                 String agentPackageName = agentUsageEntry.getKey();
                 Preference agentUsagePreference = new Preference(context);
+                agentUsagePreference.setEnabled(agentUsageEntry.getValue() != 0);
                 agentUsagePreference.setIcon(
                         KotlinUtils.INSTANCE.getBadgedPackageIcon(
                                 getActivity().getApplication(),

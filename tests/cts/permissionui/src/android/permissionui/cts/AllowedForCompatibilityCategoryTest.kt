@@ -61,7 +61,7 @@ class AllowedForCompatibilityCategoryTest : BaseUsePermissionTest() {
 
     @After
     fun teardown() {
-        uninstallPackage(TEST_APP_PACKAGE)
+        uninstallPackage(TEST_APP_PACKAGE, false)
     }
 
     @Test
