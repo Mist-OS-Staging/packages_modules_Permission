@@ -235,8 +235,16 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:layout_marginBottom">18dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
         <item name="android:textAppearance">@style/TextAppearance.SettingsLib.HeadlineSmall</item>
+    </style>
+
+    <style name="RequestLocationButtonPermissionsDialogSubtitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginBottom">28dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.SettingsLib.BodyMedium</item>
     </style>
 
     <style name="RequestLocationButtonPermissionsDialogIllustration">

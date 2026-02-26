@@ -2248,7 +2248,9 @@
     <!-- Label for the deny button for location button permissions request dialog. -->
     <string name="request_location_button_permissions_dialog_button_dont_allow">Don\u2019t allow</string>
     <!-- Label for the title of location button permissions request dialog. -->
-    <string name="request_location_button_permissions_dialog_title">Allow &lt;b><xliff:g id="app_name" example="Gmail">%1$s</xliff:g>&lt;/b> to access precise location using a location button?</string>
+    <string name="request_location_button_permissions_dialog_title">Allow &lt;b><xliff:g id="app_name" example="Gmail">%1$s</xliff:g>&lt;/b> to access precise location when you choose to share it?</string>
+    <!-- Label for the subtitle of location button permissions request dialog. -->
+    <string name="request_location_button_permissions_dialog_subtitle">When you share, this app will have access to precise location until you close the app</string>
 
     <!-- END LOCATION BUTTON GRANT DIALOG -->
 </resources>
