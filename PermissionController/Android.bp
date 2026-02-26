@@ -100,6 +100,7 @@ android_library {
     libs: [
         "android.car-stubs",
         "safety-center-annotations",
+        "wear-sdk.stubs",
     ],
     static_libs: [
         "permissioncontroller-protos",
@@ -221,6 +222,7 @@ android_app {
     },
 
     optimize: {
+        ignore_warnings: false,
         proguard_compatibility: false, // TODO(b/215530220): remove when this is default behavior
         proguard_flags_files: ["proguard.flags"],
     },
