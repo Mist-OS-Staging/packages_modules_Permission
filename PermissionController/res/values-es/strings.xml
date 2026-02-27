@@ -201,8 +201,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Permitir solo mientras se usa la app"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Permitir todo siempre"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Preguntar siempre"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_you_share (5609521340593096465) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Preguntar siempre o permitir al compartir"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"No permitir"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Permitir acceso limitado"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Ubicación precisa"</string>
@@ -385,7 +384,7 @@
     <string name="role_dialer_request_description" msgid="6288839625724909320">"Esta aplicación tendrá acceso a la cámara, a los contactos, al micrófono, al teléfono y a los SMS"</string>
     <string name="role_dialer_search_keywords" msgid="3324448983559188087">"marcador"</string>
     <string name="role_sms_label" msgid="8456999857547686640">"Aplicación SMS predeterminada"</string>
-    <string name="role_sms_short_label" msgid="4371444488034692243">"Aplicación de SMS"</string>
+    <string name="role_sms_short_label" msgid="4371444488034692243">"aplicación de SMS"</string>
     <string name="role_sms_description" msgid="3424020199148153513">"Son las aplicaciones que te permiten utilizar tu número de teléfono para enviar y recibir mensajes de texto cortos, fotos, vídeos y más"</string>
     <string name="role_sms_request_title" msgid="7953552109601185602">"¿Quieres establecer a <xliff:g id="APP_NAME">%1$s</xliff:g> como tu aplicación de SMS predeterminada?"</string>
     <string name="role_sms_request_description" msgid="2691004766132144886">"Esta aplicación tendrá acceso a la cámara, a los contactos, a los archivos y contenido multimedia, al micrófono, al teléfono y a los SMS"</string>

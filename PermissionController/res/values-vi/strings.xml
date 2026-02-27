@@ -201,8 +201,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Chỉ cho phép khi dùng ứng dụng"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Luôn cho phép tất cả"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Luôn hỏi"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_you_share (5609521340593096465) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Luôn hỏi hoặc cho phép khi bạn chia sẻ"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Không cho phép"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Cho phép quyền truy cập bị hạn chế"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Vị trí chính xác"</string>
