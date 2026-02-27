@@ -247,26 +247,26 @@
         <item name="android:textAppearance">@style/TextAppearance.SettingsLib.LabelMedium.Emphasized</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginBottom">28dp</item>
     </style>
 
-    <style name="RequestLocationButtonPermissionsDialogAllowButton">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">28dp</item>
-        <item name="android:minHeight">@dimen/settingslib_expressive_space_medium3</item>
-        <item name="android:background">@drawable/settingslib_expressive_button_background_filled</item>
-        <item name="android:textAppearance">@style/TextAppearance.SettingsLib.LabelLarge</item>
-        <item name="android:textColor">@color/settingslib_materialColorOnPrimary</item>
-    </style>
+    <style name="RequestLocationButtonPermissionsDialogAllowButton"
+        parent="@style/RequestLocationButtonPermissionsDialogButton"/>
 
-    <style name="RequestLocationButtonPermissionsDialogDontAllowButton">
+    <style name="RequestLocationButtonPermissionsDialogDontAllowButton"
+        parent="@style/RequestLocationButtonPermissionsDialogButton"/>
+
+    <style name="RequestLocationButtonPermissionsDialogButton"
+        parent="@android:style/Widget.DeviceDefault.Button.Borderless.Colored">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">@dimen/settingslib_expressive_space_small1</item>
+        <item name="android:layout_height">@dimen/settingslib_expressive_space_medium4</item>
+        <item name="android:layout_marginTop">@dimen/settingslib_expressive_space_none</item>
+        <item name="android:layout_marginStart">@dimen/settingslib_expressive_space_none</item>
+        <item name="android:layout_marginEnd">@dimen/settingslib_expressive_space_none</item>
         <item name="android:layout_marginBottom">@dimen/settingslib_expressive_space_extrasmall4</item>
-        <item name="android:minHeight">@dimen/settingslib_expressive_space_medium3</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
         <item name="android:background">@drawable/settingslib_expressive_button_background_filled</item>
-        <item name="android:textAppearance">@style/TextAppearance.SettingsLib.LabelLarge</item>
         <item name="android:textColor">@color/settingslib_materialColorOnPrimary</item>
     </style>
     <!-- END GRANT LOCATION BUTTON PERMISSION DIALOG -->

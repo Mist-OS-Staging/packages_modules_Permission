@@ -789,4 +789,125 @@
             column="20"/>
     </issue>
 
+    <issue
+        id="NewApi"
+        message="Call requires API level CUR_DEVELOPMENT/10000 (current min is 37): `android.app.AppInteractionContract#getInteractionHistoryUriAsUser`"
+        errorLine1="        AppInteractionContract.getInteractionHistoryUriAsUser(userHandle)"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/modules/Permission/PermissionController/src/com/android/permissioncontroller/appinteraction/data/repository/AppInteractionRepository.kt"
+            line="52"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level CUR_DEVELOPMENT/10000 (current min is 37): `android.app.AppInteractionContract#getDeviceAssistancePackageNames`"
+        errorLine1="        AppInteractionContract.getDeviceAssistancePackageNames(context)"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/modules/Permission/PermissionController/src/com/android/permissioncontroller/appinteraction/data/repository/AppInteractionRepository.kt"
+            line="55"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Class requires API level CUR_DEVELOPMENT/10000 (current min is 30): `android.app.voiceinteraction.VoiceInteractionManager`"
+        errorLine1="        mVoiceInteractionManager = application.getSystemService(VoiceInteractionManager.class);"
+        errorLine2="                                                                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/modules/Permission/PermissionController/src/com/android/permissioncontroller/role/ui/DefaultAppViewModel.java"
+            line="72"
+            column="65"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level CUR_DEVELOPMENT/10000 (current min is 30): `android.app.voiceinteraction.VoiceInteractionManager#clearReadScreenContextRequestDeniedCount`"
+        errorLine1="            mVoiceInteractionManager.clearReadScreenContextRequestDeniedCount();"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/modules/Permission/PermissionController/src/com/android/permissioncontroller/role/ui/DefaultAppViewModel.java"
+            line="158"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level CUR_DEVELOPMENT/10000 (current min is 35): `android.location.LocationManager#getAdasAllowlist`"
+        errorLine1="            return locationManager.getAdasAllowlist().getPackages();"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/modules/Permission/PermissionController/src/com/android/permissioncontroller/permission/utils/LocationUtils.java"
+            line="109"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level CUR_DEVELOPMENT/10000 (current min is 35): `android.os.PackageTagsList#getPackages`"
+        errorLine1="            return locationManager.getAdasAllowlist().getPackages();"
+        errorLine2="                                                      ~~~~~~~~~~~">
+        <location
+            file="packages/modules/Permission/PermissionController/src/com/android/permissioncontroller/permission/utils/LocationUtils.java"
+            line="109"
+            column="55"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Class requires API level CUR_DEVELOPMENT/10000 (current min is 37): `android.app.voiceinteraction.VoiceInteractionManager`"
+        errorLine1="            application.getSystemService(VoiceInteractionManager::class.java)"
+        errorLine2="                                         ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/modules/Permission/PermissionController/src/com/android/permissioncontroller/role/ui/v37/RequestReadScreenContextActivity.kt"
+            line="111"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level CUR_DEVELOPMENT/10000 (current min is 37): `android.app.voiceinteraction.VoiceInteractionManager#getReadScreenContextRequestState`"
+        errorLine1="        return voiceInteractionManager.getReadScreenContextRequestState(uid)"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/modules/Permission/PermissionController/src/com/android/permissioncontroller/role/ui/v37/RequestReadScreenContextActivity.kt"
+            line="112"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level CUR_DEVELOPMENT/10000 (current min is 37): `android.app.voiceinteraction.VoiceInteractionManager#clearReadScreenContextRequestDeniedCount`"
+        errorLine1="            voiceInteractionManager.clearReadScreenContextRequestDeniedCount()"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/modules/Permission/PermissionController/src/com/android/permissioncontroller/role/ui/v37/RequestReadScreenContextViewModel.kt"
+            line="57"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level CUR_DEVELOPMENT/10000 (current min is 37): `android.app.voiceinteraction.VoiceInteractionManager#incrementReadScreenContextRequestDeniedCount`"
+        errorLine1="            voiceInteractionManager.incrementReadScreenContextRequestDeniedCount()"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/modules/Permission/PermissionController/src/com/android/permissioncontroller/role/ui/v37/RequestReadScreenContextViewModel.kt"
+            line="63"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Class requires API level CUR_DEVELOPMENT/10000 (current min is 37): `android.app.voiceinteraction.VoiceInteractionManager`"
+        errorLine1="            application.getSystemService(VoiceInteractionManager::class.java)"
+        errorLine2="                                         ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/modules/Permission/PermissionController/src/com/android/permissioncontroller/role/ui/v37/RequestReadScreenContextViewModel.kt"
+            line="79"
+            column="42"/>
+    </issue>
+
 </issues>

@@ -16,14 +16,13 @@
 
 package android.permissioninteractive.cts
 
-import android.app.Instrumentation
-import android.content.Context
 import android.content.pm.PackageManager
 import android.permission.flags.Flags
 import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.CheckFlagsRule
 import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import androidx.test.platform.app.InstrumentationRegistry
+import com.android.compatibility.common.util.CddTest
 import com.android.interactive.annotations.Interactive
 import org.junit.Assume.assumeFalse
 import org.junit.Before
@@ -45,14 +44,15 @@ class LocationButtonInteractiveTest {
 
     @Interactive
     @Test
+    @CddTest(requirement = "3.8.18/C-0-1")
     fun verifyLocationButtonCustomizations() {
         // TODO: Verify Location Button respects customizations set by clients.
     }
 
     companion object {
-        private val instrumentation: Instrumentation = InstrumentationRegistry.getInstrumentation()
-        private val context: Context = instrumentation.context
-        private val packageManager: PackageManager = context.packageManager
+        private val instrumentation = InstrumentationRegistry.getInstrumentation()
+        private val context = instrumentation.context
+        private val packageManager = context.packageManager
 
         private val isTv = packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK)
         private val isWatch = packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)
