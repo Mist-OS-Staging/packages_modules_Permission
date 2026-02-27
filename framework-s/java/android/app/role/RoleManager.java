@@ -258,6 +258,20 @@ public final class RoleManager {
     public static final String ROLE_CONTENT_RESTRICTION = "android.app.role.CONTENT_RESTRICTION";
 
     /**
+     * The name of the device controller role.
+     *
+     * This role enables the ability to manage the device in multiuser environments.
+     *
+     * @see android.app.admin.DevicePolicyManager
+     * @see android.os.UserManager
+     *
+     * @hide
+     */
+    @FlaggedApi(Flags.FLAG_DEVICE_CONTROLLER_ROLE_API_ENABLED)
+    @SystemApi
+    public static final String ROLE_DEVICE_CONTROLLER = "android.app.role.DEVICE_CONTROLLER";
+
+    /**
      * @hide
      */
     @IntDef(flag = true, value = { MANAGE_HOLDERS_FLAG_DONT_KILL_APP })
