@@ -201,8 +201,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Permitir só mentres se use a aplicación"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Permitir todo sempre"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Preguntar sempre"</string>
-    <!-- no translation found for app_permission_button_ask_or_when_you_share (5609521340593096465) -->
-    <skip />
+    <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Preguntar cada vez ou permitir cando compartas contido"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Non permitir"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Permitir acceso limitado"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Localización precisa"</string>

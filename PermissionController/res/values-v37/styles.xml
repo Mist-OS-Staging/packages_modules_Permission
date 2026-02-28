@@ -223,11 +223,10 @@
     </style>
 
     <style name="RequestLocationButtonPermissionsDialogIcon">
-        <item name="android:layout_width">24dp</item>
-        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
         <item name="android:layout_marginBottom">12dp</item>
-        <item name="android:tint">?android:attr/colorAccent</item>
-        <item name="android:gravity">center_horizontal</item>
+        <item name="android:tint">@android:color/system_accent1_600</item>
         <item name="android:scaleType">fitCenter</item>
     </style>
 
@@ -235,15 +234,23 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:layout_marginBottom">18dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
         <item name="android:textAppearance">@style/TextAppearance.SettingsLib.HeadlineSmall</item>
+    </style>
+
+    <style name="RequestLocationButtonPermissionsDialogSubtitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginBottom">28dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.SettingsLib.BodyMedium</item>
     </style>
 
     <style name="RequestLocationButtonPermissionsDialogIllustration">
         <item name="android:button">@null</item>
         <item name="android:layout_width">150dp</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:textColor">@color/settingslib_materialColorOnSurface</item>
+        <item name="android:textColor">@color/settingslib_materialColorOnPrimaryContainer</item>
         <item name="android:textAppearance">@style/TextAppearance.SettingsLib.LabelMedium.Emphasized</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center_horizontal</item>

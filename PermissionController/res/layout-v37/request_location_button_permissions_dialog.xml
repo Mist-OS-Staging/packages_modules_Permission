@@ -29,11 +29,16 @@
             android:id="@+id/title"
             style="@style/RequestLocationButtonPermissionsDialogTitle" />
 
+        <TextView
+            android:id="@+id/subtitle"
+            android:text="@string/request_location_button_permissions_dialog_subtitle"
+            style="@style/RequestLocationButtonPermissionsDialogSubtitle" />
+
         <RadioButton
             android:id="@+id/precise_location_illustration"
             android:clickable="false"
             android:focusable="false"
-            android:text="@string/precise_image_description"
+            android:text="@string/permgrouprequest_finelocation_imagetext"
             style="@style/RequestLocationButtonPermissionsDialogIllustration" />
 
         <com.android.permissioncontroller.permission.ui.widget.SecureButton
