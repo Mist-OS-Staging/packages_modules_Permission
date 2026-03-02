@@ -211,12 +211,8 @@ class PermissionAppsViewModel(
             categoryMap[Category.ALLOWED_FOREGROUND] = mutableListOf()
             categoryMap[Category.ASK] = mutableListOf()
             categoryMap[Category.DENIED] = mutableListOf()
-            // TODO(b/479895707): Support Wear form factor
             // TODO(b/479896440): Support TV form factor
-            if (
-                !DeviceUtils.isWear(app.applicationContext) &&
-                    !DeviceUtils.isTelevision(app.applicationContext)
-            ) {
+            if (!DeviceUtils.isTelevision(app.applicationContext)) {
                 categoryMap[Category.ALLOWED_FOR_COMPATIBILITY] = mutableListOf()
             }
 

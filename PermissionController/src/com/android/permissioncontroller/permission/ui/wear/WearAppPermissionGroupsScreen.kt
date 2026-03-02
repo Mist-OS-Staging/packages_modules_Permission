@@ -38,39 +38,43 @@ import com.android.permissioncontroller.wear.permission.components.theme.WearPer
 @Composable
 fun WearAppPermissionGroupsScreen(helper: WearAppPermissionGroupsHelper) {
     val materialUIVersion = ResourceHelper.materialUIVersionInSettings
-    val packagePermGroups = helper.viewModel.packagePermGroupsLiveData.observeAsState(null)
-    val autoRevoke = helper.viewModel.autoRevokeLiveData.observeAsState(null)
-    val appPermissionUsages = helper.wearViewModel.appPermissionUsages.observeAsState(emptyList())
-    val showRevokeDialog = helper.revokeDialogViewModel.showDialogLiveData.observeAsState(false)
-    val showLocationProviderDialog =
+
+    val packagePermGroups by helper.viewModel.packagePermGroupsLiveData.observeAsState(null)
+    val autoRevoke by helper.viewModel.autoRevokeLiveData.observeAsState(null)
+    val appPermissionUsages by helper.wearViewModel.appPermissionUsages.observeAsState(emptyList())
+    val showRevokeDialog by helper.revokeDialogViewModel.showDialogLiveData.observeAsState(false)
+    val showLocationProviderDialog by
         helper.locationProviderInterceptDialogViewModel.dialogVisibilityLiveData.observeAsState(
             false
         )
-    val locationProviderDialogArgs =
+    val locationProviderDialogArgs by
         helper.locationProviderInterceptDialogViewModel.locationProviderInterceptDialogArgs
             .observeAsState(null)
 
+    val groupChips =
+        remember(appPermissionUsages) { helper.getPermissionGroupChipParams(appPermissionUsages) }
     var isLoading by remember { mutableStateOf(true) }
 
     Box {
         WearAppPermissionGroupsContent(
-            isLoading,
-            helper.getPermissionGroupChipParams(appPermissionUsages.value),
-            helper.getAutoRevokeChipParam(autoRevoke.value),
+            isLoading = isLoading,
+            permissionGroupChipParams = groupChips,
+            autoRevokeChipParam = helper.getAutoRevokeChipParam(autoRevoke),
+            isCompatibilityFooterRequired = helper.isCompatibilityFooterRequired(groupChips),
         )
         RevokeDialog(
             materialUIVersion = materialUIVersion,
-            showDialog = showRevokeDialog.value,
+            showDialog = showRevokeDialog,
             args = helper.revokeDialogViewModel.revokeDialogArgs,
         )
         LocationProviderDialogScreen(
-            showDialog = showLocationProviderDialog.value,
+            showDialog = showLocationProviderDialog,
             onDismissRequest = { helper.locationProviderInterceptDialogViewModel.dismissDialog() },
-            args = locationProviderDialogArgs.value,
+            args = locationProviderDialogArgs,
         )
     }
 
-    if (isLoading && !packagePermGroups.value.isNullOrEmpty()) {
+    if (isLoading && !packagePermGroups.isNullOrEmpty()) {
         isLoading = false
     }
 }
@@ -80,6 +84,7 @@ internal fun WearAppPermissionGroupsContent(
     isLoading: Boolean,
     permissionGroupChipParams: List<PermissionGroupChipParam>,
     autoRevokeChipParam: AutoRevokeChipParam?,
+    isCompatibilityFooterRequired: Boolean,
 ) {
     ScrollableScreen(title = stringResource(R.string.app_permissions), isLoading = isLoading) {
         if (permissionGroupChipParams.isEmpty()) {
@@ -101,7 +106,7 @@ internal fun WearAppPermissionGroupsContent(
                         WearPermissionButton(
                             label = info.label,
                             labelMaxLines = Integer.MAX_VALUE,
-                            secondaryLabel = info.summary?.let { info.summary },
+                            secondaryLabel = info.summary,
                             secondaryLabelMaxLines = Integer.MAX_VALUE,
                             enabled = info.enabled,
                             onClick = info.onClick,
@@ -121,6 +126,9 @@ internal fun WearAppPermissionGroupsContent(
                         )
                     }
                 }
+            }
+            if (isCompatibilityFooterRequired) {
+                item { CompatibilityFooter() }
             }
         }
     }
