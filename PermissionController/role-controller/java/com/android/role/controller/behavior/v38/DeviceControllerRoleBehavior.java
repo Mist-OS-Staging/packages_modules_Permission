@@ -52,9 +52,14 @@ public class DeviceControllerRoleBehavior implements RoleBehavior {
         DevicePolicyManager userDevicePolicyManager =
             userContext.getSystemService(DevicePolicyManager.class);
         RoleManager userRoleManager = userContext.getSystemService(RoleManager.class);
-        final List<String> roleHolders =
+        final List<String> deviceControllerRoleHolders =
+            userRoleManager.getRoleHolders(RoleManager.ROLE_DEVICE_CONTROLLER);
+        if (deviceControllerRoleHolders.contains(packageName)) {
+            return true;
+        }
+        final List<String> devicePolicyManagementRoleHolders =
             userRoleManager.getRoleHolders(RoleManager.ROLE_DEVICE_POLICY_MANAGEMENT);
-        if (!roleHolders.contains(packageName)) {
+        if (!devicePolicyManagementRoleHolders.contains(packageName)) {
             Log.w(LOG_TAG,
                 "Package " + packageName + " does not hold ROLE_DEVICE_POLICY_MANAGEMENT");
             return false;
