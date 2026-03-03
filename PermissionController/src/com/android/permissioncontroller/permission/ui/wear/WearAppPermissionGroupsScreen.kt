@@ -25,6 +25,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
 import com.android.permissioncontroller.R
+import com.android.permissioncontroller.permission.model.v31.AppPermissionUsage
 import com.android.permissioncontroller.permission.ui.wear.model.RevokeDialogArgs
 import com.android.permissioncontroller.wear.permission.components.ScrollableScreen
 import com.android.permissioncontroller.wear.permission.components.material3.DialogButtonContent
@@ -37,11 +38,12 @@ import com.android.permissioncontroller.wear.permission.components.theme.WearPer
 
 @Composable
 fun WearAppPermissionGroupsScreen(helper: WearAppPermissionGroupsHelper) {
+    val loadingSentinel = remember { emptyList<AppPermissionUsage>() }
     val materialUIVersion = ResourceHelper.materialUIVersionInSettings
-
     val packagePermGroups by helper.viewModel.packagePermGroupsLiveData.observeAsState(null)
     val autoRevoke by helper.viewModel.autoRevokeLiveData.observeAsState(null)
-    val appPermissionUsages by helper.wearViewModel.appPermissionUsages.observeAsState(emptyList())
+    val appPermissionUsages by
+        helper.wearViewModel.appPermissionUsages.observeAsState(loadingSentinel)
     val showRevokeDialog by helper.revokeDialogViewModel.showDialogLiveData.observeAsState(false)
     val showLocationProviderDialog by
         helper.locationProviderInterceptDialogViewModel.dialogVisibilityLiveData.observeAsState(
@@ -74,7 +76,9 @@ fun WearAppPermissionGroupsScreen(helper: WearAppPermissionGroupsHelper) {
         )
     }
 
-    if (isLoading && !packagePermGroups.isNullOrEmpty()) {
+    if (
+        isLoading && !packagePermGroups.isNullOrEmpty() && appPermissionUsages !== loadingSentinel
+    ) {
         isLoading = false
     }
 }
