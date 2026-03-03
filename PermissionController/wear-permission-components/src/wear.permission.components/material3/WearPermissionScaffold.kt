@@ -16,7 +16,6 @@
 package com.android.permissioncontroller.wear.permission.components.material3
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.focusable
 import androidx.compose.foundation.gestures.ScrollableState
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
@@ -28,13 +27,8 @@ import androidx.compose.foundation.layout.requiredHeightIn
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.key
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.focus.FocusRequester
-import androidx.compose.ui.focus.focusRequester
-import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.style.Hyphens
 import androidx.compose.ui.text.style.TextAlign
@@ -68,7 +62,6 @@ import com.android.permissioncontroller.wear.permission.components.theme.Resourc
 import com.android.permissioncontroller.wear.permission.components.theme.WearPermissionMaterialUIVersion
 import com.android.permissioncontroller.wear.permission.components.theme.WearPermissionMaterialUIVersion.MATERIAL2_5
 import com.android.permissioncontroller.wear.permission.components.theme.WearPermissionTheme
-import kotlinx.coroutines.delay
 
 private class TransformingScopeConverter(private val scope: TransformingLazyColumnScope) :
     ListScopeWrapper {
@@ -194,15 +187,10 @@ private fun WearPermissionScaffoldInternal(
 
     val scalingListState = rememberScalingLazyListState()
     val transformingLazyColumnState = rememberTransformingLazyColumnState()
-    val focusRequester = remember { FocusRequester() }
-    val focusManager = LocalFocusManager.current
-    // When the title/subtitle changes go to the top. Ex: A chain of permission requests.
     LaunchedEffect(title, subtitle) {
-        focusManager.clearFocus()
+        // When the title/subtitle changes go to the top. Ex: A chain of permission requests.
         scalingListState.scrollToItem(index = 0)
         transformingLazyColumnState.scrollToItem(index = 0)
-        delay(300) // We need the scrolling to settle down before we request focus
-        focusRequester.requestFocus()
     }
     val listState = if (asScalingList) scalingListState else transformingLazyColumnState
     val scrollInfoProvider =
@@ -222,20 +210,17 @@ private fun WearPermissionScaffoldInternal(
                     if (isLoading) {
                         CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
                     } else {
-                        key(title, subtitle) {
-                            LazyColumnView(
-                                asScalingList = asScalingList,
-                                showTimeText = showTimeText,
-                                listState = listState,
-                                title = title,
-                                subtitle = subtitle,
-                                imageBuilder = imageBuilder,
-                                content = content,
-                                titleTestTag = titleTestTag,
-                                subtitleTestTag = subtitleTestTag,
-                                focusRequester = focusRequester,
-                            )
-                        }
+                        LazyColumnView(
+                            asScalingList = asScalingList,
+                            showTimeText = showTimeText,
+                            listState = listState,
+                            title = title,
+                            subtitle = subtitle,
+                            imageBuilder = imageBuilder,
+                            content = content,
+                            titleTestTag = titleTestTag,
+                            subtitleTestTag = subtitleTestTag,
+                        )
                     }
                 }
             }
@@ -254,7 +239,6 @@ private fun BoxScope.LazyColumnView(
     content: ListScopeWrapper.() -> Unit,
     titleTestTag: String? = null,
     subtitleTestTag: String? = null,
-    focusRequester: FocusRequester,
 ) {
     val paddingDefaults = rememberPaddingDefaults()
     val scrollContentPadding =
@@ -262,13 +246,6 @@ private fun BoxScope.LazyColumnView(
             paddingDefaults.scrollContentPadding
         } else {
             paddingDefaults.scrollContentPaddingForDialogs(imageBuilder == null)
-        }
-    val focusModifier = Modifier.focusRequester(focusRequester).focusable()
-    val subTitleModifier =
-        if (title == null) {
-            focusModifier
-        } else {
-            Modifier
         }
 
     fun BoxScope.scrollingViewContent(scopeWrapper: ListScopeWrapper) {
@@ -279,15 +256,12 @@ private fun BoxScope.LazyColumnView(
                 testTag = titleTestTag,
                 asScalingList = true,
                 contentPaddingValues = paddingDefaults.titlePaddingValues(subtitle == null),
-                modifier = focusModifier,
             )
             subtitleItem(
                 text = subtitle,
                 testTag = subtitleTestTag,
                 modifier =
-                    subTitleModifier
-                        .align(Alignment.Center)
-                        .padding(paddingDefaults.subTitlePaddingValues),
+                    Modifier.align(Alignment.Center).padding(paddingDefaults.subTitlePaddingValues),
             )
             content()
         }
