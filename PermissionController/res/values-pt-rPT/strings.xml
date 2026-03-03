@@ -707,7 +707,7 @@
     <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"O acesso a <xliff:g id="PERMISSION_NAME">%1$s</xliff:g> foi negado à app"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"A app pediu acesso a uma autorização confidencial que pode pôr em risco as suas informações pessoais e financeiras.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>É possível que a app não funcione corretamente sem esta autorização restrita. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Saiba como permitir o acesso&lt;/a&gt;"</string>
-    <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"O acesso à função predefinida <xliff:g id="ROLE_NAME">%1$s</xliff:g> foi negado à app"</string>
+    <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"O acesso a <xliff:g id="ROLE_NAME">%1$s</xliff:g> predefinida foi negado à app"</string>
     <string name="enhanced_confirmation_dialog_desc_role" msgid="6369601947905234551">"A app pediu acesso a autorizações confidenciais que podem pôr em risco as suas informações pessoais e financeiras.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>É possível que a app não funcione corretamente sem estas autorizações restritas. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Saiba como permitir o acesso&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_settings_default" msgid="1858092969721041576">"O acesso foi negado à app"</string>
     <string name="enhanced_confirmation_dialog_desc_settings_default" msgid="6911632348359332981">"O acesso a esta autorização pode pôr em risco as suas informações pessoais e financeiras.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>É possível que a app não funcione corretamente sem esta autorização restrita. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Saiba como permitir o acesso&lt;/a&gt;"</string>
@@ -759,5 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Permitir que a app <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> aceda às informações e ao conteúdo da app aberta no seu ecrã"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Permitir"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Não permitir"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Permitir que a app &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; aceda à localização exata através de um botão de localização?"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Permitir que a app &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; aceda à localização exata quando optar por partilhá-la?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"Quando partilha a localização exata, esta app tem acesso à mesma até fechar a app"</string>
 </resources>

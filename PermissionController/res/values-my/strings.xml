@@ -759,5 +759,8 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> အား သင့်စခရင်တွင် ဖွင့်ထားသော အက်ပ်မှ အချက်အလက်နှင့် အကြောင်းအရာကို ဝင်ရောက်ကြည့်ရှုခွင့်ပြုပါ"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"ခွင့်ပြုရန်"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"ခွင့်မပြုပါ"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"တည်နေရာခလုတ်သုံး၍ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; အား နေရာအတိအကျကို သုံးခွင့်ပြုမလား"</string>
+    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
+    <skip />
 </resources>

@@ -252,7 +252,7 @@
     <string name="permission_description_summary_contacts" msgid="2337798886460408996">"يمكن للتطبيقات التي لديها هذا الإذن الوصول إلى جهات الاتصال الخاصة بك."</string>
     <string name="permission_description_summary_location" msgid="2817531799933480694">"يمكن للتطبيقات التي لديها هذا الإذن الوصول إلى الموقع الجغرافي لهذا الجهاز"</string>
     <string name="permission_description_summary_nearby_devices" msgid="8269183818275073741">"تتمكن التطبيقات التي لديها هذا الإذن من العثور على الأجهزة المجاورة والربط بها وتحديد موقعها النسبي."</string>
-    <string name="permission_description_summary_microphone" msgid="630834800308329907">"يمكن للتطبيقات التي لديها هذا الإذن تسجيل الصوت."</string>
+    <string name="permission_description_summary_microphone" msgid="630834800308329907">"يمكن للتطبيقات التي لديها هذا الإذن تسجيل الصوت"</string>
     <string name="permission_description_summary_phone" msgid="4515277217435233619">"يمكن للتطبيقات التي لديها هذا الإذن إجراء مكالمات هاتفية وإدارتها."</string>
     <string name="permission_description_summary_sensors" msgid="1836045815643119949">"يمكن للتطبيقات التي لديها هذا الإذن أن تصل إلى بيانات جهاز الاستشعار الخاصة بمؤشراتك الحيوية."</string>
     <string name="permission_description_summary_sms" msgid="725999468547768517">"‏يمكن للتطبيقات التي لديها هذا الإذن إرسال رسائل قصيرة SMS وعرضها."</string>
@@ -759,5 +759,8 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"السماح لـ \"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>\" بالوصول إلى المعلومات والمحتوى من التطبيق المفتوح على شاشتك"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"السماح"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"عدم السماح"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"‏السماح لـ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; بالوصول إلى الموقع الجغرافي الدقيق باستخدام زر الموقع الجغرافي؟"</string>
+    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
+    <skip />
 </resources>

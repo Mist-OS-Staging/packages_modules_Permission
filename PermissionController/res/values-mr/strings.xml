@@ -759,5 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> ला तुमच्या स्क्रीनवर उघड्या असलेल्या ॲपमधील माहिती आणि आशय ॲक्सेस करण्याची अनुमती द्या"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"अनुमती द्या"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"अनुमती देऊ नका"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"स्थान बटण वापरून &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ला अचूक स्थान अ‍ॅक्सेस करण्याची अनुमती द्यायची आहे का?"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"तुम्ही अचूक स्थान शेअर करणे निवडता, तेव्हा &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ला ते अ‍ॅक्सेस करण्याची अनुमती द्यायची आहे का?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"तुम्ही शेअर करता, तेव्हा तुम्ही अ‍ॅप बंद करेपर्यंत या अ‍ॅपला अचूक स्थानाचा अ‍ॅक्सेस असेल"</string>
 </resources>

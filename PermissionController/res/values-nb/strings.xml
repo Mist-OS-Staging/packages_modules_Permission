@@ -373,12 +373,12 @@
     <string name="role_assistant_description" msgid="6622458130459922952">"Assistentapper kan hjelpe deg basert på informasjon fra skjermen du bruker. Noen apper støtter tjenester for både appoversikten og taleinndata for å gi deg integrert hjelp."</string>
     <string name="role_assistant_recommended_title" msgid="2093873159106905257">"Anbefalt av <xliff:g id="OEM_NAME">%s</xliff:g>"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"Standard nettleserapp"</string>
-    <string name="role_browser_short_label" msgid="6745009127123292296">"Nettleserapp"</string>
+    <string name="role_browser_short_label" msgid="6745009127123292296">"Nettleser-app"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"Apper som gir deg tilgang til internett og viser linker du trykker på"</string>
     <string name="role_browser_request_title" msgid="2895200507835937192">"Vil du angi <xliff:g id="APP_NAME">%1$s</xliff:g> som standard nettleserapp?"</string>
     <string name="role_browser_request_description" msgid="5888803407905985941">"Ingen tillatelser er nødvendige"</string>
     <string name="role_dialer_label" msgid="1100224146343237968">"Standard telefonapp"</string>
-    <string name="role_dialer_short_label" msgid="7186888549465352489">"Telefonapp"</string>
+    <string name="role_dialer_short_label" msgid="7186888549465352489">"Telefon-app"</string>
     <string name="role_dialer_description" msgid="8768708633696539612">"Apper som lar deg ringe fra og motta anrop på enheten"</string>
     <string name="role_dialer_request_title" msgid="5959618560705912058">"Vil du angi <xliff:g id="APP_NAME">%1$s</xliff:g> som standard telefonapp?"</string>
     <string name="role_dialer_request_description" msgid="6288839625724909320">"Denne appen får tilgang til kamera, kontakter, mikrofon, telefon og SMS"</string>
@@ -396,7 +396,7 @@
     <string name="role_emergency_request_description" msgid="131645948770262850">"Ingen tillatelser er nødvendige"</string>
     <string name="role_emergency_search_keywords" msgid="1920007722599213358">"i nødstilfeller"</string>
     <string name="role_home_label" msgid="3871847846649769412">"Standard startsideapp"</string>
-    <string name="role_home_short_label" msgid="8544733747952272337">"Startsideapp"</string>
+    <string name="role_home_short_label" msgid="8544733747952272337">"Startside-app"</string>
     <string name="role_home_description" msgid="7997371519626556675">"Apper – også kalt appoversikter – som erstatter startskjermene på Android-enheten og gir deg tilgang til innholdet og funksjonene på enheten"</string>
     <string name="role_home_request_title" msgid="738136983453341081">"Vil du angi <xliff:g id="APP_NAME">%1$s</xliff:g> som standard startsideapp?"</string>
     <string name="role_home_request_description" msgid="2658833966716057673">"Ingen tillatelser er nødvendige"</string>
@@ -422,7 +422,7 @@
     <string name="role_notes_description" msgid="8496852798616883551">"Apper du kan bruke til å ta notater på enheten"</string>
     <string name="role_notes_search_keywords" msgid="7710756695666744631">"notater"</string>
     <string name="role_wallet_label" msgid="3719419175656204207">"Standard lommebokapp"</string>
-    <string name="role_wallet_short_label" msgid="6521288403762457452">"Lommebokapp"</string>
+    <string name="role_wallet_short_label" msgid="6521288403762457452">"Lommebok-app"</string>
     <string name="role_wallet_description" msgid="3726535836165949838">"I lommebokapper kan du lagre kreditt- og stamkundekort, bilnøkler og andre ting for å få hjelp med ulike transaksjonstyper."</string>
     <string name="role_wallet_request_title" msgid="4770217108262737093">"Vil du bruke <xliff:g id="APP_NAME">%1$s</xliff:g> som standard lommebokapp?"</string>
     <string name="role_wallet_request_description" msgid="6305487425777483053">"Ingen tillatelser er nødvendige"</string>
@@ -759,5 +759,8 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Gi <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> tilgang til informasjon og innhold fra appen som er åpen på skjermen"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Tillat"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Ikke tillat"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Vil du la &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; bruke en posisjonsknapp for å få tilgang til nøyaktig posisjon?"</string>
+    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
+    <skip />
 </resources>

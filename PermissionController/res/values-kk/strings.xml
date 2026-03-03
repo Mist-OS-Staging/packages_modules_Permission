@@ -204,7 +204,7 @@
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Әр жолы сұрау немесе бөліскен кезде рұқсат беру"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Рұқсат бермеу"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Шектеулі рұқсат беру"</string>
-    <string name="precise_image_description" msgid="6349638632303619872">"Нақты орын"</string>
+    <string name="precise_image_description" msgid="6349638632303619872">"Нақты локация"</string>
     <string name="approximate_image_description" msgid="938803699637069884">"Шамамен алынған орын"</string>
     <string name="app_permission_location_accuracy" msgid="7166912915040018669">"Нақты локацияны пайдалану"</string>
     <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"Нақты локацияңыз өшірулі болған кезде, қолданбалар болжалды локацияңызды пайдалана алады."</string>
@@ -759,5 +759,8 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> қолданбасына экраныңызда ашық тұрған қолданбадағы ақпарат пен контентті пайдалануға рұқсат беру"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Рұқсат беру"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Рұқсат бермеу"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; қолданбасына \"Локация\" түймесі арқылы нақты локацияны пайдалануға рұқсат беру керек пе?"</string>
+    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
+    <skip />
 </resources>

@@ -710,7 +710,7 @@
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"Aplikasi tidak diberi akses untuk menjadi <xliff:g id="ROLE_NAME">%1$s</xliff:g> default"</string>
     <string name="enhanced_confirmation_dialog_desc_role" msgid="6369601947905234551">"Aplikasi meminta akses ke izin sensitif yang dapat membahayakan info pribadi dan keuangan Anda.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Aplikasi mungkin tidak dapat berfungsi dengan baik tanpa izin terbatas ini. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&amp;gtPelajari cara mengizinkan akses&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_settings_default" msgid="1858092969721041576">"Aplikasi tidak diberi akses"</string>
-    <string name="enhanced_confirmation_dialog_desc_settings_default" msgid="6911632348359332981">"Akses ke izin ini dapat membahayakan info pribadi dan keuangan Anda.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Aplikasi mungkin tidak dapat berfungsi dengan baik tanpa izin terbatas ini. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&amp;gtPelajari cara mengizinkan akses&lt;/a&gt;"</string>
+    <string name="enhanced_confirmation_dialog_desc_settings_default" msgid="6911632348359332981">"Akses ke izin ini dapat membahayakan info pribadi dan keuangan Anda.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Aplikasi mungkin tidak dapat berfungsi dengan baik tanpa izin terbatas ini. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Pelajari cara mengizinkan akses&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_learn_more" msgid="5226619861379095709">"Pelajari lebih lanjut"</string>
     <string name="enhanced_confirmation_dialog_ok" msgid="8560373821598619924">"Oke"</string>
     <string name="permission_grant_dialog_streaming_blocked_title" msgid="8905241017017043649">"Permintaan izin diblokir"</string>
@@ -759,5 +759,8 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Izinkan <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> mengakses info dan konten dari aplikasi yang terbuka di layar Anda"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Izinkan"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Jangan izinkan"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Izinkan &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; mengakses lokasi presisi menggunakan tombol lokasi?"</string>
+    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
+    <skip />
 </resources>

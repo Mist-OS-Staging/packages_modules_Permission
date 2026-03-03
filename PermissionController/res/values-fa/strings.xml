@@ -759,5 +759,8 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"اجازه دسترسی <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> به اطلاعات و محتوای برنامه باز در صفحه‌نمایش شما"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"اجازه دادن"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"اجازه ندادن"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"به «<xliff:g id="APP_NAME">%1$s</xliff:g>» اجازه می‌دهید بااستفاده از دکمه مکان به مکان دقیق دسترسی پیدا کند؟"</string>
+    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
+    <skip />
 </resources>

@@ -759,5 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Дозволите да <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> приступа информацијама и садржају из апликације која је отворена на екрану"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Дозволи"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Не дозволи"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Желите ли да омогућите да &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; приступа прецизној локацији помоћу дугмета за локацију?"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Желите ли да омогућите да &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; приступа прецизној локацији када одаберете да је делите?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"Када делите локацију, ова апликација ће имати приступ прецизној локацији док не затворите апликацију"</string>
 </resources>
