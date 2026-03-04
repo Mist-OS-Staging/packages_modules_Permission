@@ -205,12 +205,25 @@ class AgentUsageDetailsFragment : SettingsWithLargeHeader() {
         val category = PreferenceCategory(requireContext())
         category.title = resources.getString(R.string.agent_activity_timeline_category_title_24h)
         preferenceScreen.addPreference(category)
-        for (uiInfo: AgentTimelineItem in agentTimelineItems) {
-            val accessTime = uiInfo.lastAccessTime
-            if (accessTime < last24Hours) {
-                continue
+
+        if (agentTimelineItems.isEmpty()) {
+            category.addPreference(
+                Preference(requireContext()).apply {
+                    title =
+                        resources.getString(R.string.empty_agent_activity_timeline_preference_title)
+                    isSelectable = false
+                }
+            )
+        } else {
+            for (uiInfo: AgentTimelineItem in agentTimelineItems) {
+                val accessTime = uiInfo.lastAccessTime
+                if (accessTime < last24Hours) {
+                    continue
+                }
+                category.addPreference(
+                    createAgentActivityPreference(uiInfo, settingsAppPackageName)
+                )
             }
-            category.addPreference(createAgentActivityPreference(uiInfo, settingsAppPackageName))
         }
     }
 
@@ -231,31 +244,50 @@ class AgentUsageDetailsFragment : SettingsWithLargeHeader() {
         var previousAccessDate: Long? = null
         var category = PreferenceCategory(requireContext())
 
-        for (uiInfo: AgentTimelineItem in agentTimelineItems) {
-            val accessTime = uiInfo.lastAccessTime
-            val accessDate =
-                ZonedDateTime.ofInstant(Instant.ofEpochMilli(accessTime), ZoneId.systemDefault())
-                    .truncatedTo(ChronoUnit.DAYS)
-                    .toEpochSecond() * 1000L
-            if (previousAccessDate == null || accessDate != previousAccessDate) {
-                val categoryTitle =
-                    if (accessTime > midnightToday) {
-                        resources.getString(R.string.agent_activity_timeline_category_title_today)
-                    } else if (accessTime > midnightYesterday) {
-                        resources.getString(
-                            R.string.agent_activity_timeline_category_title_yesterday
+        if (agentTimelineItems.isEmpty()) {
+            preferenceScreen.addPreference(category)
+            category.title = resources.getString(R.string.agent_activity_timeline_category_title_7d)
+            category.addPreference(
+                Preference(requireContext()).apply {
+                    title =
+                        resources.getString(R.string.empty_agent_activity_timeline_preference_title)
+                    isSelectable = false
+                }
+            )
+        } else {
+            for (uiInfo: AgentTimelineItem in agentTimelineItems) {
+                val accessTime = uiInfo.lastAccessTime
+                val accessDate =
+                    ZonedDateTime.ofInstant(
+                            Instant.ofEpochMilli(accessTime),
+                            ZoneId.systemDefault(),
                         )
-                    } else {
-                        DateFormat.getLongDateFormat(requireContext()).format(accessDate)
-                    }
-                previousAccessDate = accessDate
+                        .truncatedTo(ChronoUnit.DAYS)
+                        .toEpochSecond() * 1000L
+                if (previousAccessDate == null || accessDate != previousAccessDate) {
+                    val categoryTitle =
+                        if (accessTime > midnightToday) {
+                            resources.getString(
+                                R.string.agent_activity_timeline_category_title_today
+                            )
+                        } else if (accessTime > midnightYesterday) {
+                            resources.getString(
+                                R.string.agent_activity_timeline_category_title_yesterday
+                            )
+                        } else {
+                            DateFormat.getLongDateFormat(requireContext()).format(accessDate)
+                        }
+                    previousAccessDate = accessDate
 
-                category = PreferenceCategory(requireContext())
-                category.title = categoryTitle
-                preferenceScreen.addPreference(category)
+                    category = PreferenceCategory(requireContext())
+                    category.title = categoryTitle
+                    preferenceScreen.addPreference(category)
+                }
+
+                category.addPreference(
+                    createAgentActivityPreference(uiInfo, settingsAppPackageName)
+                )
             }
-
-            category.addPreference(createAgentActivityPreference(uiInfo, settingsAppPackageName))
         }
     }
 
