@@ -37,6 +37,7 @@ import com.android.permissioncontroller.PermissionControllerStatsLog
 import com.android.permissioncontroller.PermissionControllerStatsLog.LOCATION_BUTTON_REQUEST_RESULT_REPORTED
 import com.android.permissioncontroller.PermissionControllerStatsLog.LOCATION_BUTTON_REQUEST_RESULT_REPORTED__PERMISSION__ACCESS_FINE_LOCATION
 import com.android.permissioncontroller.PermissionControllerStatsLog.LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__ALREADY_GRANTED
+import com.android.permissioncontroller.PermissionControllerStatsLog.LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__CANCELED
 import com.android.permissioncontroller.PermissionControllerStatsLog.LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__DENIED
 import com.android.permissioncontroller.PermissionControllerStatsLog.LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__DIRECT_GRANT
 import com.android.permissioncontroller.PermissionControllerStatsLog.LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__NOT_GRANTABLE
@@ -182,6 +183,10 @@ class LocationButtonViewModel(
             Bundle().apply { putBoolean(LocationButtonClient.EXTRA_PERMISSION_RESULT, false) }
         remoteCallback.sendResult(bundle)
         logLocationButtonRequestResult(LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__DENIED)
+    }
+
+    fun onCancel() {
+        logLocationButtonRequestResult(LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__CANCELED)
     }
 
     // This code is derived from GrantPermissionsViewModel.isPermissionGrantableAndNotFixed()
