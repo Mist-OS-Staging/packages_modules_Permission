@@ -59,6 +59,7 @@ package android.app.role {
     method @Deprecated @RequiresPermission("com.android.permissioncontroller.permission.MANAGE_ROLES_FROM_CONTROLLER") public void setRoleNamesFromController(@NonNull java.util.List<java.lang.String>);
     method @FlaggedApi("com.android.permission.flags.cross_user_role_enabled") @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public void setRoleVisibleForTest(@NonNull String, boolean);
     field public static final int MANAGE_HOLDERS_FLAG_DONT_KILL_APP = 1; // 0x1
+    field @FlaggedApi("android.permission.flags.device_controller_role_api_enabled") public static final String ROLE_DEVICE_CONTROLLER = "android.app.role.DEVICE_CONTROLLER";
     field public static final String ROLE_DEVICE_POLICY_MANAGEMENT = "android.app.role.DEVICE_POLICY_MANAGEMENT";
     field public static final String ROLE_FINANCED_DEVICE_KIOSK = "android.app.role.FINANCED_DEVICE_KIOSK";
     field @FlaggedApi("com.android.permission.flags.cross_user_role_enabled") public static final String ROLE_RESERVED_FOR_TESTING_PROFILE_GROUP_EXCLUSIVITY = "android.app.role.RESERVED_FOR_TESTING_PROFILE_GROUP_EXCLUSIVITY";
