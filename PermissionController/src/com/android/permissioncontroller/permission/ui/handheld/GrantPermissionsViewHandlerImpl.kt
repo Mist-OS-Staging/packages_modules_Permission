@@ -24,6 +24,7 @@ import android.graphics.Typeface
 import android.graphics.drawable.Icon
 import android.graphics.drawable.LayerDrawable
 import android.os.Bundle
+import android.provider.Settings
 import android.text.method.LinkMovementMethod
 import android.transition.ChangeBounds
 import android.transition.TransitionManager
@@ -244,8 +245,22 @@ class GrantPermissionsViewHandlerImpl(
 
         val buttons = arrayOfNulls<Button>(NEXT_BUTTON)
         val numButtons = BUTTON_RES_ID_TO_NUM.size
+        val useFocusIndicator =
+            mActivity.resources.getBoolean(
+                R.bool.config_useFocusIndicatorInPermissionDialogBeforeUserSetupComplete
+            ) &&
+                (Settings.Secure.getInt(
+                    mActivity.getContentResolver(),
+                    Settings.Secure.USER_SETUP_COMPLETE,
+                    0,
+                ) != 1)
         for (i in 0 until numButtons) {
             val button = rootView.findViewById<Button>(BUTTON_RES_ID_TO_NUM.keyAt(i))
+            if (useFocusIndicator) {
+                button?.setForeground(
+                    mActivity.getDrawable(R.drawable.permission_dialog_focus_indicator)
+                )
+            }
             button!!.setOnClickListener(this)
             buttons[BUTTON_RES_ID_TO_NUM.valueAt(i)] = button
         }
