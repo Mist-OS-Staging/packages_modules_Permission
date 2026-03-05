@@ -173,18 +173,18 @@ class AutoPermissionUsageFragment : AutoSettingsFrameFragment() {
             }
         }
 
-        if (agentActivityUiEnabled() && successData.agentAccessCount.isNotEmpty()) {
+        if (agentActivityUiEnabled() && successData.agentUsages.isNotEmpty()) {
             val agentsCategory = PreferenceCategory(requireContext())
             agentsCategory.title = getString(R.string.permission_usage_agent_activity_title)
             preferenceScreen.addPreference(agentsCategory)
 
             val sortedAgents =
-                successData.agentAccessCount.entries.sortedBy {
-                    mViewModel.getAppFunctionAgentLabel(requireContext(), it.key)
+                successData.agentUsages.sortedBy {
+                    mViewModel.getAppFunctionAgentLabel(requireContext(), it.agentPackageName)
                 }
 
             for (entry in sortedAgents) {
-                addAgentPreference(entry, agentsCategory)
+                addAgentPreference(entry.agentPackageName, entry.accessCount24Hours, agentsCategory)
             }
         }
 
@@ -222,21 +222,25 @@ class AutoPermissionUsageFragment : AutoSettingsFrameFragment() {
     }
 
     @RequiresApi(Build.VERSION_CODES.BAKLAVA)
-    private fun addAgentPreference(entry: Map.Entry<String, Int>, category: PreferenceCategory) {
+    private fun addAgentPreference(
+        packageName: String,
+        accessCount: Int,
+        category: PreferenceCategory,
+    ) {
         val agentUsagePreference = CarUiPreference(requireContext())
         agentUsagePreference.icon =
             KotlinUtils.getBadgedPackageIcon(
                 requireActivity().application,
-                entry.key,
+                packageName,
                 Process.myUserHandle(),
             )
         agentUsagePreference.title =
-            mViewModel.getAppFunctionAgentLabel(requireContext(), entry.key)
+            mViewModel.getAppFunctionAgentLabel(requireContext(), packageName)
         agentUsagePreference.summary =
             StringUtils.getIcuPluralsString(
                 requireContext(),
                 R.string.agent_usage_preference_label,
-                entry.value,
+                accessCount,
             )
         category.addPreference(agentUsagePreference)
     }

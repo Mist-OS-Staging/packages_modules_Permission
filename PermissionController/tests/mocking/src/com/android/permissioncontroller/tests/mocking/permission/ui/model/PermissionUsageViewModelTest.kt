@@ -315,9 +315,12 @@ class PermissionUsageViewModelTest {
                 appFunctionPackageInfoUseCase = appFunctionPackageInfoUseCase,
                 savedStateHandle = SavedStateHandle(mapOf("show7Days" to false)),
             )
-        val agentAccessCount = getPermissionUsageUiState(permissionUsageViewModel).agentAccessCount
-        assertThat(agentAccessCount[AGENT_NAME_1]).isEqualTo(2)
-        assertThat(agentAccessCount[AGENT_NAME_2]).isEqualTo(1)
+        val agentUsages = getPermissionUsageUiState(permissionUsageViewModel).agentUsages
+        assertThat(agentUsages).hasSize(2)
+        assertThat(agentUsages[0].agentPackageName).isEqualTo(AGENT_NAME_1)
+        assertThat(agentUsages[0].accessCount24Hours).isEqualTo(2)
+        assertThat(agentUsages[1].agentPackageName).isEqualTo(AGENT_NAME_2)
+        assertThat(agentUsages[1].accessCount24Hours).isEqualTo(1)
     }
 
     @Test
@@ -361,8 +364,9 @@ class PermissionUsageViewModelTest {
                 appFunctionPackageInfoUseCase = appFunctionPackageInfoUseCase,
                 savedStateHandle = SavedStateHandle(mapOf("show7Days" to true)),
             )
-        val agentAccessCount = getPermissionUsageUiState(permissionUsageViewModel).agentAccessCount
-        assertThat(agentAccessCount[AGENT_NAME_1]).isEqualTo(2)
+        val agentUsages = getPermissionUsageUiState(permissionUsageViewModel).agentUsages
+        assertThat(agentUsages).hasSize(1)
+        assertThat(agentUsages[0].accessCount7Days).isEqualTo(2)
     }
 
     @Test
@@ -394,9 +398,9 @@ class PermissionUsageViewModelTest {
                 appFunctionPackageInfoUseCase = appFunctionPackageInfoUseCase,
                 savedStateHandle = SavedStateHandle(mapOf("show7Days" to false)),
             )
-        val agentAccessCount = getPermissionUsageUiState(permissionUsageViewModel).agentAccessCount
+        val agentUsages = getPermissionUsageUiState(permissionUsageViewModel).agentUsages
         // We should be using NoOpAgentUsageUseCase. Hence no agent usages should be returned.
-        assertThat(agentAccessCount).hasSize(0)
+        assertThat(agentUsages).hasSize(0)
     }
 
     private fun TestScope.getViewModel(
@@ -453,7 +457,8 @@ class PermissionUsageViewModelTest {
     ): GetAgentUsageUseCase {
         val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
         val packageRepository = FakePackageRepository(agents = agents)
-        return GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository)
+        val userRepository = FakeUserRepository(listOf(currentUser.identifier))
+        return GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository, userRepository)
     }
 
     private fun getAppFunctionPackageInfoUseCase(): GetAppFunctionPackageInfoUseCase {

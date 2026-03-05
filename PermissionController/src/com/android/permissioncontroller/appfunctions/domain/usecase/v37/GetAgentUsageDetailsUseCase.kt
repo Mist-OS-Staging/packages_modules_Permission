@@ -17,11 +17,11 @@
 package com.android.permissioncontroller.appfunctions.domain.usecase.v37
 
 import android.content.Context
-import android.os.UserManager
+import android.os.UserHandle
 import com.android.permissioncontroller.appfunctions.AppFunctionsUtil
 import com.android.permissioncontroller.appinteraction.data.repository.AppInteractionRepository
 import com.android.permissioncontroller.appinteraction.domain.model.v37.AccessHistory
-import com.android.permissioncontroller.appinteraction.domain.model.v37.AgentAccessInfo
+import com.android.permissioncontroller.appinteraction.domain.model.v37.AgentTimelineItem
 import java.time.Instant
 import java.util.concurrent.TimeUnit
 import kotlin.math.max
@@ -36,14 +36,13 @@ class GetAgentUsageDetailsUseCase(private val appInteractionRepository: AppInter
     suspend operator fun invoke(
         context: Context,
         agentPackageName: String,
-    ): Map<String, List<AgentAccessInfo>> {
+        user: UserHandle,
+    ): Map<String, List<AgentTimelineItem>> {
         if (!AppFunctionsUtil.isPrivacyDashboardAgentActivityEnabled(context)) {
             return emptyMap()
         }
 
-        val profiles = context.getSystemService(UserManager::class.java).userProfiles
-        val accessHistories =
-            profiles.flatMap { appInteractionRepository.getAccessHistory(context, it) }
+        val accessHistories = appInteractionRepository.getAccessHistory(context, user)
         val deviceAssistancePackageNames =
             appInteractionRepository.getDeviceAssistancePackageNames(context).toSet()
         val now = System.currentTimeMillis()
@@ -54,8 +53,8 @@ class GetAgentUsageDetailsUseCase(private val appInteractionRepository: AppInter
             .sortedBy { it.accessTime }
             .fold(
                 mapOf(
-                    KEY_PAST_24_HOURS to mutableMapOf<String, AgentAccessInfo>(),
-                    KEY_PAST_7_DAYS to mutableMapOf<String, AgentAccessInfo>(),
+                    KEY_PAST_24_HOURS to mutableMapOf<String, AgentTimelineItem>(),
+                    KEY_PAST_7_DAYS to mutableMapOf<String, AgentTimelineItem>(),
                 )
             ) { map, accessHistory ->
                 val isDeviceAssistance =
@@ -68,11 +67,11 @@ class GetAgentUsageDetailsUseCase(private val appInteractionRepository: AppInter
                     }
                 if (accessHistory.accessTime > timeStamp24Hours) {
                     map[KEY_PAST_24_HOURS]!![agentAccessKey] =
-                        createAgentAccessInfo(accessHistory, isDeviceAssistance)
+                        createAgentAccessInfo(accessHistory, user, isDeviceAssistance)
                 }
                 if (accessHistory.accessTime > timeStamp7Days) {
                     map[KEY_PAST_7_DAYS]!![agentAccessKey] =
-                        createAgentAccessInfo(accessHistory, isDeviceAssistance)
+                        createAgentAccessInfo(accessHistory, user, isDeviceAssistance)
                 }
                 map
             }
@@ -81,11 +80,13 @@ class GetAgentUsageDetailsUseCase(private val appInteractionRepository: AppInter
 
     private fun createAgentAccessInfo(
         accessHistory: AccessHistory,
+        user: UserHandle,
         isDeviceAssistance: Boolean,
-    ): AgentAccessInfo =
-        AgentAccessInfo(
+    ): AgentTimelineItem =
+        AgentTimelineItem(
             accessHistory.agentPackageName,
             accessHistory.targetPackageName,
+            user,
             accessHistory.accessTime,
             accessHistory.interactionUri,
             isDeviceAssistance,

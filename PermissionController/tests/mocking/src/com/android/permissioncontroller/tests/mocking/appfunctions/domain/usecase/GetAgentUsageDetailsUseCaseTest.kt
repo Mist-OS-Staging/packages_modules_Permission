@@ -20,7 +20,6 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.UserHandle
-import android.os.UserManager
 import android.platform.test.annotations.RequiresFlagsDisabled
 import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.CheckFlagsRule
@@ -32,7 +31,7 @@ import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAgent
 import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAgentUsageDetailsUseCase.Companion.KEY_PAST_24_HOURS
 import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAgentUsageDetailsUseCase.Companion.KEY_PAST_7_DAYS
 import com.android.permissioncontroller.appinteraction.domain.model.v37.AccessHistory
-import com.android.permissioncontroller.appinteraction.domain.model.v37.AgentAccessInfo
+import com.android.permissioncontroller.appinteraction.domain.model.v37.AgentTimelineItem
 import com.android.permissioncontroller.flags.Flags
 import com.android.permissioncontroller.tests.mocking.appinteraction.data.repository.FakeAppInteractionRepository
 import com.google.common.truth.Truth.assertWithMessage
@@ -54,7 +53,6 @@ class GetAgentUsageDetailsUseCaseTest {
     @get:Rule val checkFlagsRule: CheckFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
     @Mock private lateinit var mockContext: Context
     @Mock private lateinit var packageManager: PackageManager
-    @Mock private lateinit var userManager: UserManager
     @Mock private lateinit var userHandle: UserHandle
 
     private lateinit var useCase: GetAgentUsageDetailsUseCase
@@ -69,8 +67,6 @@ class GetAgentUsageDetailsUseCaseTest {
             .thenReturn(false)
         whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK)).thenReturn(false)
         whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)).thenReturn(false)
-        whenever(mockContext.getSystemService(UserManager::class.java)).thenReturn(userManager)
-        whenever(userManager.userProfiles).thenReturn(listOf(userHandle))
     }
 
     @Test
@@ -113,7 +109,7 @@ class GetAgentUsageDetailsUseCaseTest {
         val repository = FakeAppInteractionRepository(accessHistory)
         useCase = GetAgentUsageDetailsUseCase(repository)
 
-        val result = useCase(mockContext, AGENT_NAME_1)
+        val result = useCase(mockContext, AGENT_NAME_1, userHandle)
         assertWithMessage("Agent 1 should have 2 accesses in the past 24 hours")
             .that(result[KEY_PAST_24_HOURS]!!.size)
             .isEqualTo(2)
@@ -156,16 +152,17 @@ class GetAgentUsageDetailsUseCaseTest {
         val repository = FakeAppInteractionRepository(accessHistory)
         useCase = GetAgentUsageDetailsUseCase(repository)
 
-        val result = useCase(mockContext, AGENT_NAME_1)
+        val result = useCase(mockContext, AGENT_NAME_1, userHandle)
         assertWithMessage("There should only be 1 access history in the past 24 hours")
             .that(result[KEY_PAST_24_HOURS]!!.size)
             .isEqualTo(1)
         assertWithMessage("Only the last access should be returned")
             .that(result[KEY_PAST_24_HOURS]!!)
             .containsExactly(
-                AgentAccessInfo(
+                AgentTimelineItem(
                     AGENT_NAME_1,
                     TARGET_NAME_1,
+                    userHandle,
                     now - TimeUnit.HOURS.toMillis(1),
                     INTERACTION_URI_1,
                     false,
@@ -208,7 +205,7 @@ class GetAgentUsageDetailsUseCaseTest {
         val repository = FakeAppInteractionRepository(accessHistory, deviceAssistancePackageNames)
         useCase = GetAgentUsageDetailsUseCase(repository)
 
-        val result = useCase(mockContext, AGENT_NAME_1)
+        val result = useCase(mockContext, AGENT_NAME_1, userHandle)
         assertWithMessage("Agent 1 should have 2 accesses in the past 24 hours")
             .that(result[KEY_PAST_24_HOURS]!!.size)
             .isEqualTo(2)
@@ -242,7 +239,7 @@ class GetAgentUsageDetailsUseCaseTest {
         val repository = FakeAppInteractionRepository(accessHistory)
         useCase = GetAgentUsageDetailsUseCase(repository)
 
-        val result = useCase(mockContext, AGENT_NAME_1)
+        val result = useCase(mockContext, AGENT_NAME_1, userHandle)
         assertWithMessage("Result should be empty when the feature flag is off")
             .that(result)
             .isEmpty()
