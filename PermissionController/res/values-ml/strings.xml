@@ -759,5 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"നിങ്ങളുടെ സ്ക്രീനിൽ തുറന്നിരിക്കുന്ന ആപ്പിൽ നിന്നുള്ള വിവരങ്ങളും ഉള്ളടക്കവും ആക്‌സസ് ചെയ്യാൻ <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> എന്നതിനെ അനുവദിക്കുക"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"അനുവദിക്കുക"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"അനുവദിക്കരുത്"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"ലൊക്കേഷൻ ബട്ടൺ ഉപയോഗിച്ച് കൃത്യമായ ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യാൻ, &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; എന്നതിനെ അനുവദിക്കണോ?"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"നിങ്ങൾ കൃത്യമായ ലൊക്കേഷൻ പങ്കിടാൻ തിരഞ്ഞെടുക്കുമ്പോൾ അത് ആക്‌സസ് ചെയ്യാൻ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; എന്നതിനെ അനുവദിക്കണോ?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"നിങ്ങൾ ലൊക്കേഷൻ പങ്കിടുമ്പോൾ, ആപ്പ് അടയ്ക്കുന്നത് വരെ ഈ ആപ്പിന് കൃത്യമായ ലൊക്കേഷനിലേക്ക് ആക്‌സസ് ഉണ്ടായിരിക്കും"</string>
 </resources>

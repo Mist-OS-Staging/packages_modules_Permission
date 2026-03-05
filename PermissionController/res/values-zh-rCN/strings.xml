@@ -470,7 +470,7 @@
     <string name="home_confirmation_message" msgid="248811491851505593">"这将替换主屏幕，并可能会影响您对设备上某些功能的访问。&lt;br&gt;&lt;br&gt;您可以随时在 &lt;b&gt;默认主屏幕应用&lt;/b&gt;设置中更改此选择。"</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"注意：如果您重启设备并设置了屏幕锁定，则必须将设备解锁才能运行此应用。"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"这个小助手将能够读取与您系统中正在使用的应用相关的信息，包括屏幕上显示的信息或应用中可使用的信息。"</string>
-    <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"要将数字助理应用更换为&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;吗？"</string>
+    <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"要将数字助理应用更换为“&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;”吗？"</string>
     <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"该助理将能够访问您的消息等信息，以及应用选择与助理分享的数据。"</string>
     <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"此助理将能够访问您的消息等信息，以及应用选择与助理分享的数据。&lt;br&gt;&lt;br&gt;由于您之前已为“<xliff:g id="APP_NAME">%1$s</xliff:g>”开启了屏幕和应用数据的访问权限，因此助理将能够访问屏幕上打开的应用中的内容。"</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"分享调试数据"</string>
@@ -605,7 +605,7 @@
     <string name="safety_privacy_qs_tile_subtitle" msgid="3621544532041936749">"查看状态"</string>
     <string name="privacy_controls_qs" msgid="5780144882040591169">"您的隐私控制项"</string>
     <string name="security_settings_button_label_qs" msgid="8280343822465962330">"更多设置"</string>
-    <string name="camera_toggle_label_qs" msgid="3880261453066157285">"摄像头权限"</string>
+    <string name="camera_toggle_label_qs" msgid="3880261453066157285">"相机权限"</string>
     <string name="microphone_toggle_label_qs" msgid="8132912469813396552">"麦克风权限"</string>
     <string name="permissions_removed_qs" msgid="8957319130625294572">"已移除权限"</string>
     <string name="camera_usage_qs" msgid="4394233566086665994">"查看近期相机使用情况"</string>
@@ -647,7 +647,7 @@
     <string name="safety_center_background_location_access_revoked" msgid="6972274943343442213">"访问权限已更改"</string>
     <string name="safety_center_view_recent_location_access" msgid="3524391299490678243">"查看近期位置信息使用情况"</string>
     <string name="privacy_controls_title" msgid="7605929972256835199">"隐私控制"</string>
-    <string name="camera_toggle_title" msgid="1251201397431837666">"摄像头权限"</string>
+    <string name="camera_toggle_title" msgid="1251201397431837666">"相机权限"</string>
     <string name="mic_toggle_title" msgid="2649991093496110162">"麦克风权限"</string>
     <string name="perm_toggle_description" msgid="7801326363741451379">"针对应用和服务"</string>
     <string name="mic_toggle_description" msgid="9163104307990677157">"会影响应用和服务。如果您关闭此设置，那么当您拨打紧急电话号码时，系统可能仍会分享麦克风数据。"</string>
@@ -707,10 +707,10 @@
     <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"系统已拒绝向此应用授予<xliff:g id="PERMISSION_NAME">%1$s</xliff:g>访问权限"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"该应用请求获得敏感权限，授予这项权限可能会导致您的个人信息和财务信息面临风险。<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>如果不授予这项受限权限，该应用可能无法正常运行。&lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;了解如何授予访问权限&lt;/a&gt;"</string>
-    <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"系统已拒绝向此应用授予作为默认<xliff:g id="ROLE_NAME">%1$s</xliff:g>的访问权限"</string>
-    <string name="enhanced_confirmation_dialog_desc_role" msgid="6369601947905234551">"该应用请求获得敏感权限，授予这项权限可能会导致您的个人信息和财务信息面临风险。<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>如果不授予这些受限权限，该应用可能无法正常运行。&lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;了解如何授予访问权限&lt;/a&gt;"</string>
-    <string name="enhanced_confirmation_dialog_title_settings_default" msgid="1858092969721041576">"系统已拒绝向此应用授予访问权限"</string>
-    <string name="enhanced_confirmation_dialog_desc_settings_default" msgid="6911632348359332981">"如果授予此权限，您的个人信息和财务信息可能会面临风险。<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>如果不授予这项受限权限，该应用可能无法正常运行。&lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;了解如何授予访问权限&lt;/a&gt;"</string>
+    <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"系统已拒绝向此应用授予作为默认<xliff:g id="ROLE_NAME">%1$s</xliff:g>的权限"</string>
+    <string name="enhanced_confirmation_dialog_desc_role" msgid="6369601947905234551">"该应用请求获得敏感权限。如果授予这些权限，您的个人信息和财务信息可能会面临风险。<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>如果不授予这些受限权限，该应用可能无法正常运行。&lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;了解如何授予权限&lt;/a&gt;"</string>
+    <string name="enhanced_confirmation_dialog_title_settings_default" msgid="1858092969721041576">"系统已拒绝向此应用授予权限"</string>
+    <string name="enhanced_confirmation_dialog_desc_settings_default" msgid="6911632348359332981">"如果授予此权限，您的个人信息和财务信息可能会面临风险。<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>如果不授予这项受限权限，该应用可能无法正常运行。&lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;了解如何授予权限&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_learn_more" msgid="5226619861379095709">"了解详情"</string>
     <string name="enhanced_confirmation_dialog_ok" msgid="8560373821598619924">"确定"</string>
     <string name="permission_grant_dialog_streaming_blocked_title" msgid="8905241017017043649">"权限请求被阻止"</string>
@@ -759,5 +759,8 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"允许“<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>”访问屏幕上打开的应用中的信息和内容"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"允许"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"不允许"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"要允许“&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;”使用位置信息按钮获取精确位置吗？"</string>
+    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
+    <skip />
 </resources>

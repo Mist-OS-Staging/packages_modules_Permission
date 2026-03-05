@@ -759,5 +759,8 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"画面で開いているアプリの情報やコンテンツへのアクセスを <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> に許可します"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"許可"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"許可しない"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"位置情報ボタンを使用して正確な位置情報にアクセスすることを &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; に許可しますか？"</string>
+    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
+    <skip />
 </resources>

@@ -755,9 +755,12 @@
     <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Permitir"</string>
     <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"No permitir"</string>
     <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Usar datos de pantalla y de aplicación"</string>
-    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Permite que el Asistente acceda a la información y al contenido de la aplicación abierta en tu pantalla"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Permite que el asistente acceda a la información y al contenido de la aplicación abierta en tu pantalla"</string>
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Permite que <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> acceda a la información y al contenido de la aplicación abierta en tu pantalla"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Permitir"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"No permitir"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"¿Permitir que &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; acceda a la ubicación precisa mediante un botón de ubicación?"</string>
+    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
+    <skip />
 </resources>

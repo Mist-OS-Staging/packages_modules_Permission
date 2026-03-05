@@ -759,5 +759,8 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Tillåt att <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> får åtkomst till information och innehåll från appen som är öppen på skärmen"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Tillåt"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Tillåt inte"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Vill du ge &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; åtkomst till din exakta plats med hjälp av en platsknapp?"</string>
+    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
+    <skip />
 </resources>
