@@ -470,7 +470,7 @@
     <string name="home_confirmation_message" msgid="248811491851505593">"這會取代你的主畫面，可能影響裝置功能的存取權。&lt;br&gt;&lt;br&gt;你隨時可以在「預設主畫面應用程式」&lt;b&gt;&lt;/b&gt;設定中變更所選項目。"</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"注意：如果你重新啟動裝置並設定了螢幕鎖定，你必須先將裝置解鎖，才能執行這個應用程式。"</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"小幫手將可讀取系統中目前正在使用的應用程式相關資訊，包括畫面上顯示的資訊和應用程式裡可存取的資訊。"</string>
-    <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"要將數位助理應用程式變更為 &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;嗎？"</string>
+    <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"要將數位助理應用程式變更為「&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;」嗎？"</string>
     <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"這個助理將可存取你的訊息等資訊，以及應用程式選擇與助理分享的資料。"</string>
     <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"這個助理將能夠存取訊息等資訊，還有應用程式選擇分享的資料。&lt;br&gt;&lt;br&gt;此外，由於「<xliff:g id="APP_NAME">%1$s</xliff:g>」的螢幕和應用程式資料權限已啟用，因此將能存取螢幕上開啟的應用程式內容。"</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"分享偵錯資料"</string>
@@ -759,5 +759,8 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"允許「<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>」存取畫面中開啟的應用程式資訊和內容"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"允許"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"不允許"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"要允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」使用位置資訊按鈕存取精確位置資訊嗎？"</string>
+    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
+    <skip />
 </resources>

@@ -759,5 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Разрешите приложению \"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>\" доступ к данным и контенту из приложения, открытого на экране."</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Разрешить"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Запретить"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Разрешить приложению &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; использовать кнопку геоданных, чтобы получать доступ к сведениям о точном местоположении?"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Разрешить приложению &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; доступ к данным о точном местоположении, когда вы ими делитесь?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"Когда вы делитесь данными, это приложение получает доступ к точному местоположению, пока вы его не закроете."</string>
 </resources>

@@ -19,7 +19,6 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.UserHandle
-import android.os.UserManager
 import android.platform.test.annotations.RequiresFlagsDisabled
 import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.CheckFlagsRule
@@ -29,11 +28,12 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
 import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAgentUsageUseCase
 import com.android.permissioncontroller.appfunctions.domain.usecase.v37.GetAgentUsageUseCaseImpl
-import com.android.permissioncontroller.appinteraction.domain.model.v31.AccessCount
+import com.android.permissioncontroller.appinteraction.domain.model.v31.AgentActivityItem
 import com.android.permissioncontroller.appinteraction.domain.model.v37.AccessHistory
 import com.android.permissioncontroller.flags.Flags
 import com.android.permissioncontroller.tests.mocking.appinteraction.data.repository.FakeAppInteractionRepository
 import com.android.permissioncontroller.tests.mocking.pm.data.repository.FakePackageRepository
+import com.android.permissioncontroller.tests.mocking.user.data.repository.FakeUserRepository
 import com.google.common.truth.Truth.assertThat
 import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.test.runTest
@@ -53,8 +53,6 @@ class GetAgentUsageUseCaseTest {
     @get:Rule val checkFlagsRule: CheckFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
     @Mock private lateinit var mockContext: Context
     @Mock private lateinit var packageManager: PackageManager
-    @Mock private lateinit var userManager: UserManager
-    @Mock private lateinit var userHandle: UserHandle
 
     private lateinit var useCase: GetAgentUsageUseCase
 
@@ -64,8 +62,6 @@ class GetAgentUsageUseCaseTest {
         whenever(mockContext.packageManager).thenReturn(packageManager)
         whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK)).thenReturn(false)
         whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)).thenReturn(false)
-        whenever(mockContext.getSystemService(UserManager::class.java)).thenReturn(userManager)
-        whenever(userManager.userProfiles).thenReturn(listOf(userHandle))
     }
 
     @Test
@@ -106,13 +102,17 @@ class GetAgentUsageUseCaseTest {
         val agents = listOf(AGENT_NAME_1)
         val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
         val packageRepository = FakePackageRepository(agents = agents)
-        useCase = GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository)
+        val userRepository = FakeUserRepository(currentUserProfiles = listOf(USER_ID_1))
+        useCase =
+            GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository, userRepository)
 
         val result = useCase(mockContext)
-        assertThat(result).hasSize(3)
-        assertThat(result[AGENT_NAME_1]).isEqualTo(AccessCount(1, 2))
-        assertThat(result[AGENT_NAME_2]).isEqualTo(AccessCount(0, 1))
-        assertThat(result[AGENT_NAME_3]).isEqualTo(AccessCount(0, 0))
+        assertThat(result)
+            .containsExactly(
+                AgentActivityItem(AGENT_NAME_1, USER_1, 1, 2),
+                AgentActivityItem(AGENT_NAME_2, USER_1, 0, 1),
+                AgentActivityItem(AGENT_NAME_3, USER_1, 0, 0),
+            )
     }
 
     @Test
@@ -145,11 +145,12 @@ class GetAgentUsageUseCaseTest {
         val agents = listOf(AGENT_NAME_1)
         val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
         val packageRepository = FakePackageRepository(agents = agents)
-        useCase = GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository)
+        val userRepository = FakeUserRepository(currentUserProfiles = listOf(USER_ID_1))
+        useCase =
+            GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository, userRepository)
 
         val result = useCase(mockContext)
-        assertThat(result).hasSize(1)
-        assertThat(result[AGENT_NAME_1]).isEqualTo(AccessCount(2, 2))
+        assertThat(result).containsExactly(AgentActivityItem(AGENT_NAME_1, USER_1, 2, 2))
     }
 
     @Test
@@ -185,10 +186,12 @@ class GetAgentUsageUseCaseTest {
         val appInteractionRepository =
             FakeAppInteractionRepository(accessHistory, deviceAssistancePackageNames)
         val packageRepository = FakePackageRepository(agents = agents)
-        useCase = GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository)
+        val userRepository = FakeUserRepository(currentUserProfiles = listOf(USER_ID_1))
+        useCase =
+            GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository, userRepository)
 
         val result = useCase(mockContext)
-        assertThat(result[AGENT_NAME_1]).isEqualTo(AccessCount(2, 2))
+        assertThat(result).containsExactly(AgentActivityItem(AGENT_NAME_1, USER_1, 2, 2))
     }
 
     @Test
@@ -211,7 +214,9 @@ class GetAgentUsageUseCaseTest {
         val agents = listOf(AGENT_NAME_1)
         val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
         val packageRepository = FakePackageRepository(agents = agents)
-        useCase = GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository)
+        val userRepository = FakeUserRepository(currentUserProfiles = listOf(USER_ID_1))
+        useCase =
+            GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository, userRepository)
 
         val result = useCase(mockContext)
         assertThat(result).hasSize(0)
@@ -235,5 +240,7 @@ class GetAgentUsageUseCaseTest {
         const val TARGET_NAME_1 = "target1"
         const val TARGET_NAME_2 = "target2"
         const val TARGET_NAME_3 = "target3"
+        const val USER_ID_1 = 1
+        val USER_1 = UserHandle.of(USER_ID_1)
     }
 }

@@ -137,6 +137,7 @@ class RequestLocationButtonPermissionsFragment : DialogFragment() {
 
     override fun onCancel(dialog: DialogInterface) {
         super.onCancel(dialog)
+        viewModel.onCancel()
         requireActivity().finish()
     }
 

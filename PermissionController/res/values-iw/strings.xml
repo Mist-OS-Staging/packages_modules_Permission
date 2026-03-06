@@ -707,10 +707,10 @@
     <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"בקשת הגישה של האפליקציה ל<xliff:g id="PERMISSION_NAME">%1$s</xliff:g> נדחתה"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"‏האפליקציה ביקשה הרשאת גישה למידע רגיש שעלולה לסכן את המידע האישי והפיננסי שלך.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>יכול להיות שהאפליקציה לא תעבוד כמו שצריך ללא ההרשאה המוגבלת הזו. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;מידע נוסף על מתן גישה להרשאות&lt;/a&gt;"</string>
-    <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"בקשת הגישה של האפליקציה לשמש כברירת המחדל של <xliff:g id="ROLE_NAME">%1$s</xliff:g> נדחתה"</string>
-    <string name="enhanced_confirmation_dialog_desc_role" msgid="6369601947905234551">"‏האפליקציה ביקשה הרשאת גישה למידע רגיש שעלולה לסכן את המידע האישי והפיננסי שלך.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>יכול להיות שהאפליקציה לא תעבוד כמו שצריך ללא ההרשאות המוגבלות האלו. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;מידע נוסף על מתן גישה להרשאות&lt;/a&gt;"</string>
-    <string name="enhanced_confirmation_dialog_title_settings_default" msgid="1858092969721041576">"בקשת הגישה של האפליקציה נדחתה"</string>
-    <string name="enhanced_confirmation_dialog_desc_settings_default" msgid="6911632348359332981">"‏מתן גישה להרשאה הזו עלול לסכן את המידע האישי והפיננסי שלך.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>יכול להיות שהאפליקציה לא תעבוד כמו שצריך ללא ההרשאה המוגבלת הזו. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;מידע נוסף על מתן גישה להרשאות&lt;/a&gt;"</string>
+    <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"האפליקציה לא תוגדר כברירת המחדל של <xliff:g id="ROLE_NAME">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_dialog_desc_role" msgid="6369601947905234551">"‏האפליקציה ביקשה הרשאת גישה למידע רגיש שעלולה לסכן את המידע האישי והפיננסי שלך.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>יכול להיות שהאפליקציה לא תעבוד כמו שצריך בלי ההרשאות שהגבלת. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;מידע נוסף על מתן גישה להרשאות&lt;/a&gt;"</string>
+    <string name="enhanced_confirmation_dialog_title_settings_default" msgid="1858092969721041576">"האפליקציה לא תקבל גישה"</string>
+    <string name="enhanced_confirmation_dialog_desc_settings_default" msgid="6911632348359332981">"‏מתן גישה להרשאה הזו עלול לסכן את המידע האישי והפיננסי שלך.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>יכול להיות שהאפליקציה לא תעבוד כמו שצריך בלי ההרשאה שהגבלת. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;מידע נוסף על מתן גישה להרשאות&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_learn_more" msgid="5226619861379095709">"מידע נוסף"</string>
     <string name="enhanced_confirmation_dialog_ok" msgid="8560373821598619924">"הבנתי"</string>
     <string name="permission_grant_dialog_streaming_blocked_title" msgid="8905241017017043649">"בקשת ההרשאה בוטלה"</string>
@@ -759,5 +759,8 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"מתן הרשאה לאפליקציה <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> לגשת למידע ולתוכן מהאפליקציה שפתוחה במסך"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"אישור"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"אין אישור"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"‏לתת לאפליקציה &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; הרשאת גישה למיקום המדויק באמצעות כפתור המיקום?"</string>
+    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
+    <skip />
 </resources>

@@ -470,7 +470,7 @@
     <string name="home_confirmation_message" msgid="248811491851505593">"Dette erstatter din startskærm og kan påvirke adgangen til funktioner på din enhed.&lt;br&gt;&lt;br&gt;Du kan til enhver tid ændre dette valg i indstillingerne for &lt;b&gt;Standardstartapp&lt;/b&gt;."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Bemærk! Hvis du genstarter din enhed og har indstillet en skærmlås, kan denne app ikke starte, før du låser enheden op."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Assistenten kan læse oplysninger om, hvilke apps der bruges i dit system, bl.a. oplysninger, der er synlige på din skærm eller tilgængelige i dine apps."</string>
-    <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Vil du ændre din app for digital assistent til &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
+    <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Vil du ændre appen for din digitale assistent til Google &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Denne assistent kan tilgå oplysninger såsom dine beskeder samt data, som apps har valgt at dele med din assistent."</string>
     <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"Denne assistent kan tilgå oplysninger som f.eks. dine beskeder og data, som apps har valgt at dele med din assistent.&lt;br&gt;&lt;br&gt;Da du tidligere har aktiveret skærm- og appdata for <xliff:g id="APP_NAME">%1$s</xliff:g>, har den også tilladelse til at tilgå indhold fra den app, der er åben på din skærm."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Del fejlretningsdata"</string>
@@ -759,5 +759,8 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Giv <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> adgang til oplysninger og indhold fra den app, der er åben på din skærm"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Tillad"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Tillad ikke"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"Vil du give &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; adgang til præcis lokation ved hjælp af en lokationsknap?"</string>
+    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
+    <skip />
 </resources>

@@ -15,8 +15,9 @@
  */
 package com.android.permissioncontroller.appfunctions.ui.handheld.v37
 
-import android.content.Intent.EXTRA_PACKAGE_NAME
+import android.content.Intent
 import android.os.Bundle
+import android.os.UserHandle
 import androidx.preference.PreferenceFragmentCompat
 import com.android.permissioncontroller.permission.ui.ManagePermissionsActivity.EXTRA_SHOW_7_DAYS
 import com.android.permissioncontroller.permission.ui.ManagePermissionsActivity.EXTRA_SHOW_SYSTEM
@@ -28,13 +29,15 @@ class AgentUsageDetailsWrapperFragment : PermissionsCollapsingToolbarBaseFragmen
     companion object {
         fun newInstance(
             packageName: String,
+            user: UserHandle,
             showSystem: Boolean,
             show7Days: Boolean,
         ): AgentUsageDetailsWrapperFragment =
             AgentUsageDetailsWrapperFragment().apply {
                 arguments =
                     Bundle().apply {
-                        putString(EXTRA_PACKAGE_NAME, packageName)
+                        putString(Intent.EXTRA_PACKAGE_NAME, packageName)
+                        putParcelable(Intent.EXTRA_USER, user)
                         putBoolean(EXTRA_SHOW_SYSTEM, showSystem)
                         putBoolean(EXTRA_SHOW_7_DAYS, show7Days)
                     }

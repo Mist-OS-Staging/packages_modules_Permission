@@ -204,7 +204,7 @@
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"દર વખતે પૂછો અથવા જ્યારે તમે શેર કરો ત્યારે મંજૂરી આપો"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"મંજૂરી આપશો નહીં"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"મર્યાદિત ઍક્સેસની મંજૂરી આપો"</string>
-    <string name="precise_image_description" msgid="6349638632303619872">"ચોક્કસ સ્થાન"</string>
+    <string name="precise_image_description" msgid="6349638632303619872">"સચોટ લોકેશન"</string>
     <string name="approximate_image_description" msgid="938803699637069884">"અંદાજિત સ્થાન"</string>
     <string name="app_permission_location_accuracy" msgid="7166912915040018669">"સચોટ લોકેશનનો ઉપયોગ કરો"</string>
     <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"જ્યારે સચોટ લોકેશન બંધ હોય, ત્યારે ઍપ તમારા અંદાજિત લોકેશનને ઍક્સેસ કરી શકે છે"</string>
@@ -759,5 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>ને તમારી સ્ક્રીન પર ખુલ્લી ઍપમાંથી માહિતી અને કન્ટેન્ટ ઍક્સેસ કરવાની મંજૂરી આપો"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"મંજૂરી આપો"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"મંજૂરી આપશો નહીં"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"લોકેશન બટનનો ઉપયોગ કરીને &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ને સચોટ લોકેશન ઍક્સેસ કરવાની મંજૂરી આપીએ?"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"જ્યારે તમે સચોટ લોકેશન શેર કરવાનું પસંદ કરો, ત્યારે &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ને તેને ઍક્સેસ કરવાની મંજૂરી આપીએ?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"જ્યારે તમે શેર કરો, ત્યારે જ્યાં સુધી તમે ઍપ બંધ ન કરો ત્યાં સુધી આ ઍપને સચોટ લોકેશનનો ઍક્સેસ રહેશે"</string>
 </resources>

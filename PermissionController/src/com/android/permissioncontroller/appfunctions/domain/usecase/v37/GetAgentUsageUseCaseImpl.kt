@@ -16,72 +16,89 @@
 package com.android.permissioncontroller.appfunctions.domain.usecase.v37
 
 import android.content.Context
-import android.os.UserManager
+import android.os.UserHandle
 import com.android.permissioncontroller.appfunctions.AppFunctionsUtil
 import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAgentUsageUseCase
 import com.android.permissioncontroller.appinteraction.data.repository.AppInteractionRepository
-import com.android.permissioncontroller.appinteraction.domain.model.v31.AccessCount
+import com.android.permissioncontroller.appinteraction.domain.model.v31.AgentActivityItem
+import com.android.permissioncontroller.permission.domain.usecase.v31.filterUsersToShowInQuietMode
 import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
+import com.android.permissioncontroller.user.data.repository.v31.UserRepository
 import java.time.Instant
 import java.util.concurrent.TimeUnit
 import kotlin.math.max
 
 /**
- * The use case gets the agent usages and returns a map of agent names to their [AccessCount]'s. The
- * AccessCount contains the number of agent access to their target apps in the past 24 hours and 7
- * days.
+ * The use case gets the agent usages and returns a map of agent names to their
+ * [AgentActivityItem]'s. The AccessCount contains the number of agent access to their target apps
+ * in the past 24 hours and 7 days.
  *
  * @param appFunctionRepository The repository to use to get the app function agents.
  */
 class GetAgentUsageUseCaseImpl(
     private val appInteractionRepository: AppInteractionRepository,
     private val packageRepository: PackageRepository,
+    private val userRepository: UserRepository,
 ) : GetAgentUsageUseCase {
-    override suspend operator fun invoke(context: Context): Map<String, AccessCount> {
+    override suspend operator fun invoke(context: Context): List<AgentActivityItem> {
         if (!AppFunctionsUtil.isPrivacyDashboardAgentActivityEnabled(context)) {
-            return emptyMap()
+            return emptyList()
         }
 
-        val profiles = context.getSystemService(UserManager::class.java).userProfiles
-        val agents =
-            profiles.flatMap {
-                packageRepository.getPackagesHoldingPermissions(AGENT_PERMISSIONS, it)
-            }
-        val accessHistories =
-            profiles.flatMap { appInteractionRepository.getAccessHistory(context, it) }
-        val accessCounts = agents.associateWith { AccessCount(0, 0) }.toMutableMap()
+        val profiles =
+            userRepository
+                .getUserProfilesIncludingCurrentUser()
+                .filterUsersToShowInQuietMode(userRepository)
+                .map { UserHandle.of(it) }
         val deviceAssistancePackageNames =
             appInteractionRepository.getDeviceAssistancePackageNames(context).toSet()
+        val agentUsages = mutableListOf<AgentActivityItem>()
 
-        val now = System.currentTimeMillis()
-        val timeStamp24Hours = max(now - TimeUnit.DAYS.toMillis(1), Instant.EPOCH.toEpochMilli())
-        val timeStamp7Days = max(now - TimeUnit.DAYS.toMillis(7), Instant.EPOCH.toEpochMilli())
+        profiles.forEach { user ->
+            val agents = packageRepository.getPackagesHoldingPermissions(AGENT_PERMISSIONS, user)
+            val accessHistories = appInteractionRepository.getAccessHistory(context, user)
+            val userAgentUsages =
+                agents.associateWith { AgentActivityItem(it, user, 0, 0) }.toMutableMap()
 
-        accessHistories
-            .groupBy { it.agentPackageName }
-            .forEach { (agentPackageName, accessHistories) ->
-                val distinctAccessCount24Hours = mutableSetOf<String>()
-                val distinctAccessCount7Days = mutableSetOf<String>()
-                for (accessHistory in accessHistories) {
-                    val targetPackageName =
-                        if (accessHistory.targetPackageName in deviceAssistancePackageNames) {
-                            DEVICE_ASSISTANCE_TARGET_PACKAGE_NAME
-                        } else {
-                            accessHistory.targetPackageName
+            val now = System.currentTimeMillis()
+            val timeStamp24Hours =
+                max(now - TimeUnit.DAYS.toMillis(1), Instant.EPOCH.toEpochMilli())
+            val timeStamp7Days = max(now - TimeUnit.DAYS.toMillis(7), Instant.EPOCH.toEpochMilli())
+
+            accessHistories
+                .groupBy { it.agentPackageName }
+                .forEach { (agentPackageName, accessHistories) ->
+                    val distinctAccessCount24Hours = mutableSetOf<String>()
+                    val distinctAccessCount7Days = mutableSetOf<String>()
+                    for (accessHistory in accessHistories) {
+                        val targetPackageName =
+                            if (accessHistory.targetPackageName in deviceAssistancePackageNames) {
+                                DEVICE_ASSISTANCE_TARGET_PACKAGE_NAME
+                            } else {
+                                accessHistory.targetPackageName
+                            }
+
+                        if (accessHistory.accessTime > timeStamp24Hours) {
+                            distinctAccessCount24Hours.add(targetPackageName)
                         }
+                        if (accessHistory.accessTime > timeStamp7Days) {
+                            distinctAccessCount7Days.add(targetPackageName)
+                        }
+                    }
 
-                    if (accessHistory.accessTime > timeStamp24Hours) {
-                        distinctAccessCount24Hours.add(targetPackageName)
-                    }
-                    if (accessHistory.accessTime > timeStamp7Days) {
-                        distinctAccessCount7Days.add(targetPackageName)
-                    }
+                    userAgentUsages[agentPackageName] =
+                        AgentActivityItem(
+                            agentPackageName,
+                            user,
+                            distinctAccessCount24Hours.size,
+                            distinctAccessCount7Days.size,
+                        )
                 }
-                accessCounts[agentPackageName] =
-                    AccessCount(distinctAccessCount24Hours.size, distinctAccessCount7Days.size)
-            }
 
-        return accessCounts
+            agentUsages.addAll(userAgentUsages.values)
+        }
+
+        return agentUsages
     }
 
     companion object {

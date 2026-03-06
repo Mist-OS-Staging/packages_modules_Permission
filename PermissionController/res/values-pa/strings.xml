@@ -759,5 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> ਨੂੰ ਤੁਹਾਡੀ ਸਕ੍ਰੀਨ \'ਤੇ ਖੁੱਲ੍ਹੀ ਐਪ ਤੋਂ ਜਾਣਕਾਰੀ ਅਤੇ ਸਮੱਗਰੀ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦਿਓ"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"ਆਗਿਆ ਦਿਓ"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"ਆਗਿਆ ਨਾ ਦਿਓ"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"ਕੀ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ਨੂੰ ਟਿਕਾਣਾ ਬਟਨ ਦੀ ਵਰਤੋਂ ਕਰ ਕੇ ਸਟੀਕ ਟਿਕਾਣੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੀ ਆਗਿਆ ਦੇਣੀ ਹੈ?"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"ਕੀ ਸਾਂਝਾ ਕਰਨ ਦੀ ਚੋਣ ਕਰਨ \'ਤੇ ਤੁਸੀਂ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ਨੂੰ ਸਹੀ ਟਿਕਾਣੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੀ ਆਗਿਆ ਦੇਣੀ ਹੈ?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"ਜਦੋਂ ਤੁਸੀਂ ਸਾਂਝਾ ਕਰਦੇ ਹੋ, ਤਾਂ ਇਸ ਐਪ ਕੋਲ ਤੁਹਾਡੇ ਵੱਲੋਂ ਐਪ ਨੂੰ ਬੰਦ ਕਰਨ ਤੱਕ ਸਟੀਕ ਟਿਕਾਣੇ ਤੱਕ ਪਹੁੰਚ ਹੋਵੇਗੀ"</string>
 </resources>

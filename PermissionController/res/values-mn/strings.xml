@@ -708,7 +708,7 @@
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"Аппад <xliff:g id="PERMISSION_NAME">%1$s</xliff:g>-д хандах эрх олгохоос татгалзсан"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"Апп нь таны хувийн болон санхүүгийн мэдээллийг эрсдэлд оруулж болох эмзэг зөвшөөрөлд хандах эрх хүссэн.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Энэ хязгаарлагдмал зөвшөөрөлгүйгээр уг апп зохих ёсоор ажиллахгүй байх боломжтой. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Хандах эрхийг хэрхэн зөвшөөрөх талаар мэдэж авах&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"Аппад өгөгдмөл <xliff:g id="ROLE_NAME">%1$s</xliff:g> болох эрх олгохоос татгалзсан"</string>
-    <string name="enhanced_confirmation_dialog_desc_role" msgid="6369601947905234551">"Апп нь таны хувийн болон санхүүгийн мэдээллийг эрсдэлд оруулж болох эмзэг зөвшөөрлүүдэд хандах эрх хүссэн.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Эдгээр хязгаарлагдмал зөвшөөрөлгүйгээр уг апп зохих ёсоор ажиллахгүй байх боломжтой. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Хандах эрхийг хэрхэн зөвшөөрөх талаар мэдэж авах&lt;/a&gt;"</string>
+    <string name="enhanced_confirmation_dialog_desc_role" msgid="6369601947905234551">"Апп нь таны хувийн болон санхүүгийн мэдээллийг эрсдэлд оруулж болох эмзэг зөвшөөрлүүдэд хандах эрх хүссэн.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Эдгээр хязгаарлагдмал зөвшөөрөлгүйгээр уг апп зохих ёсоор ажиллахгүй байж магадгүй. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Хандах эрхийг хэрхэн зөвшөөрөх талаар мэдэж авах&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_settings_default" msgid="1858092969721041576">"Аппад хандах эрх олгохоос татгалзсан"</string>
     <string name="enhanced_confirmation_dialog_desc_settings_default" msgid="6911632348359332981">"Энэ зөвшөөрөлд хандах эрх нь таны хувийн болон санхүүгийн мэдээллийг эрсдэлд оруулж болно.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Энэ хязгаарлагдмал зөвшөөрөлгүйгээр уг апп зохих ёсоор ажиллахгүй байх боломжтой. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Хандах эрхийг хэрхэн зөвшөөрөх талаар мэдэж авах&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_learn_more" msgid="5226619861379095709">"Нэмэлт мэдээлэл авах"</string>
@@ -759,5 +759,8 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>-д таны дэлгэц дээрх нээлттэй аппын мэдээлэл, контентод хандахыг зөвшөөрөх"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Зөвшөөрөх"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Зөвшөөрөхгүй"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;-д байршлын товч ашиглан нарийвчилсан байршилд хандахыг зөвшөөрөх үү?"</string>
+    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
+    <skip />
+    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
+    <skip />
 </resources>

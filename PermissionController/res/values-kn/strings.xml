@@ -759,5 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"ನಿಮ್ಮ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ತೆರೆದಿರುವ ಆ್ಯಪ್‌ನಿಂದ ಮಾಹಿತಿ ಮತ್ತು ಕಂಟೆಂಟ್ ಅನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> ಗೆ ಅನುಮತಿ ನೀಡಿ"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"ಅನುಮತಿಸಿ"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"ಅನುಮತಿಸಬೇಡಿ"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="5211661841432642995">"ಸ್ಥಳದ ಬಟನ್ ಬಳಸಿಕೊಂಡು ನಿಖರವಾದ ಸ್ಥಳವನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ಗೆ ಅನುಮತಿಸಬೇಕೆ?"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"ನಿಮ್ಮ ನಿಖರವಾದ ಸ್ಥಳವನ್ನು ಹಂಚಿಕೊಳ್ಳುವ ಆಯ್ಕೆ ನೀವು ಮಾಡಿದಾಗ ಅದನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ಗೆ ಅನುಮತಿ ನೀಡಬೇಕೇ?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"ನೀವು ಹಂಚಿಕೊಂಡಾಗ, ನೀವು ಆ್ಯಪ್ ಅನ್ನು ಮುಚ್ಚುವವರೆಗೆ ಈ ಆ್ಯಪ್ ನಿಖರವಾದ ಸ್ಥಳಕ್ಕೆ ಆ್ಯಕ್ಸೆಸ್ ಅನ್ನು ಹೊಂದಿರುತ್ತದೆ"</string>
 </resources>

@@ -20,7 +20,6 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.UserHandle
-import android.os.UserManager
 import android.platform.test.annotations.RequiresFlagsEnabled
 import android.platform.test.flag.junit.CheckFlagsRule
 import android.platform.test.flag.junit.DeviceFlagsValueProvider
@@ -60,7 +59,6 @@ class AgentUsageDetailsViewModelTest {
     @Mock private lateinit var application: PermissionControllerApplication
     @Mock private lateinit var context: Context
     @Mock private lateinit var packageManager: PackageManager
-    @Mock private lateinit var userManager: UserManager
     @Mock private lateinit var userHandle: UserHandle
 
     private val instrumentation = InstrumentationRegistry.getInstrumentation()!!
@@ -103,8 +101,6 @@ class AgentUsageDetailsViewModelTest {
             .thenReturn(false)
         whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK)).thenReturn(false)
         whenever(packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)).thenReturn(false)
-        whenever(context.getSystemService(UserManager::class.java)).thenReturn(userManager)
-        whenever(userManager.userProfiles).thenReturn(listOf(userHandle))
     }
 
     @Test
@@ -119,7 +115,7 @@ class AgentUsageDetailsViewModelTest {
         val uiState = getAgentUsageDetailsUiState(viewModel)
         assertThat(uiState.agentPackageName).isEqualTo(AGENT_NAME_1)
         assertWithMessage("There should be 2 accesses in the past 24 hours")
-            .that(uiState.agentAccessInfos.size)
+            .that(uiState.agentTimelineItems.size)
             .isEqualTo(2)
     }
 
@@ -135,7 +131,7 @@ class AgentUsageDetailsViewModelTest {
         val uiState = getAgentUsageDetailsUiState(viewModel)
         assertThat(uiState.agentPackageName).isEqualTo(AGENT_NAME_1)
         assertWithMessage("There should be 3 accesses in the past 7 days")
-            .that(uiState.agentAccessInfos.size)
+            .that(uiState.agentTimelineItems.size)
             .isEqualTo(3)
     }
 
@@ -162,6 +158,7 @@ class AgentUsageDetailsViewModelTest {
         return AgentUsageDetailsViewModel(
             application,
             AGENT_NAME_1,
+            userHandle,
             FakePackageRepository(settingsPackageName = SETTINGS_APP_PACKAGE_NAME),
             getAppFunctionAgentUsageDetailsUseCase,
             savedStateHandle,
