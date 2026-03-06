@@ -385,43 +385,59 @@ public class PermissionUsageFragment extends SettingsWithLargeHeader {
         permissionsCategory.addPreference(mExpandButton);
 
         if (agentsCategory != null) {
-            for (int i = 0; i < agentActivityItems.size(); i++) {
-                AgentActivityItem agentActivityItem = agentActivityItems.get(i);
-                String agentPackageName = agentActivityItem.getAgentPackageName();
-                int accessCount = show7Days ? agentActivityItem.getAccessCount7Days() :
-                        agentActivityItem.getAccessCount24Hours();
-                UserHandle user = agentActivityItem.getUserHandle();
-                Preference agentUsagePreference = new Preference(context);
-                agentUsagePreference.setEnabled(accessCount != 0);
-                agentUsagePreference.setIcon(
-                        KotlinUtils.INSTANCE.getBadgedPackageIcon(
-                                getActivity().getApplication(),
-                                agentPackageName,
-                                user
-                        )
-                );
-                agentUsagePreference.setTitle(
-                        KotlinUtils.INSTANCE.getPackageLabel(
-                                getActivity().getApplication(),
-                                agentPackageName,
-                                user
-                        )
-                );
-                agentUsagePreference.setSummary(StringUtils.getIcuPluralsString(
-                        context,
-                        R.string.agent_usage_preference_label,
-                        accessCount
-                ));
-                agentUsagePreference.setOnPreferenceClickListener(preference -> {
-                    Intent intent = new Intent(context, AgentUsageDetailsActivity.class);
-                    intent.putExtra(Intent.EXTRA_PACKAGE_NAME, agentPackageName);
-                    intent.putExtra(Intent.EXTRA_USER, user);
-                    intent.putExtra(ManagePermissionsActivity.EXTRA_SHOW_7_DAYS, show7Days);
-                    intent.putExtra(ManagePermissionsActivity.EXTRA_SHOW_SYSTEM, showSystem);
-                    context.startActivity(intent);
-                    return true;
-                });
-                agentsCategory.addPreference(agentUsagePreference);
+            if (agentActivityItems.isEmpty()) {
+                Preference emptyAgentsPreference = new Preference(context);
+                emptyAgentsPreference.setTitle(R.string.empty_agent_activity_preference_title);
+                emptyAgentsPreference.setSelectable(false);
+                agentsCategory.addPreference(emptyAgentsPreference);
+            } else {
+                for (int i = 0; i < agentActivityItems.size(); i++) {
+                    AgentActivityItem agentActivityItem = agentActivityItems.get(i);
+                    String agentPackageName = agentActivityItem.getAgentPackageName();
+                    int accessCount = show7Days ? agentActivityItem.getAccessCount7Days() :
+                            agentActivityItem.getAccessCount24Hours();
+                    UserHandle user = agentActivityItem.getUserHandle();
+                    Preference agentUsagePreference = new Preference(context);
+                    agentUsagePreference.setIcon(
+                            KotlinUtils.INSTANCE.getBadgedPackageIcon(
+                                    getActivity().getApplication(),
+                                    agentPackageName,
+                                    user
+                            )
+                    );
+                    agentUsagePreference.setTitle(
+                            KotlinUtils.INSTANCE.getPackageLabel(
+                                    getActivity().getApplication(),
+                                    agentPackageName,
+                                    user
+                            )
+                    );
+                    if (accessCount > 0) {
+                        agentUsagePreference.setSummary(StringUtils.getIcuPluralsString(
+                                context,
+                                R.string.agent_usage_preference_label,
+                                accessCount
+                        ));
+                    } else if (show7Days) {
+                        agentUsagePreference.setSummary(
+                                R.string.agent_activity_preference_summary_no_accesses_7d
+                        );
+                    } else {
+                        agentUsagePreference.setSummary(
+                                R.string.agent_activity_preference_summary_no_accesses_24h
+                        );
+                    }
+                    agentUsagePreference.setOnPreferenceClickListener(preference -> {
+                        Intent intent = new Intent(context, AgentUsageDetailsActivity.class);
+                        intent.putExtra(Intent.EXTRA_PACKAGE_NAME, agentPackageName);
+                        intent.putExtra(Intent.EXTRA_USER, user);
+                        intent.putExtra(ManagePermissionsActivity.EXTRA_SHOW_7_DAYS, show7Days);
+                        intent.putExtra(ManagePermissionsActivity.EXTRA_SHOW_SYSTEM, showSystem);
+                        context.startActivity(intent);
+                        return true;
+                    });
+                    agentsCategory.addPreference(agentUsagePreference);
+                }
             }
         }
 

@@ -380,11 +380,23 @@
     <!-- Title for agent activity category in privacy dashboard [CHAR LIMIT=30] -->
     <string name="permission_usage_agent_activity_title">Agent activity</string>
 
+    <!-- Preference title for the agent activity when there's no agents installed on the device [CHAR LIMIT=30] -->
+    <string name="empty_agent_activity_preference_title">No agents installed</string>
+
+    <!-- Preference summary for the agent in agent activity when there's no target accesses in past 24 hours [CHAR LIMIT=30] -->
+    <string name="agent_activity_preference_summary_no_accesses_24h">No accesses in past 24 hours</string>
+
+    <!-- Preference summary for the agent in agent activity when there's no target accesses in past 7 days [CHAR LIMIT=30] -->
+    <string name="agent_activity_preference_summary_no_accesses_7d">No accesses in past 7 days</string>
+
     <!-- Title for agent activity timeline [CHAR LIMIT=30] -->
     <string name="agent_activity_timeline_title"><xliff:g id="app_name" example="Example Agent App">%1$s</xliff:g> activity</string>
 
-    <!-- Category title for the past 24 hour agent activity timeline [CHAR LIMIT=30] -->
+    <!-- Category title for the past 24 hours agent activity timeline [CHAR LIMIT=30] -->
     <string name="agent_activity_timeline_category_title_24h">In the past 24 hours</string>
+
+    <!-- Category title for the past 7 days agent activity timeline [CHAR LIMIT=30] -->
+    <string name="agent_activity_timeline_category_title_7d">In the past 7 days</string>
 
     <!-- Category title for today's agent activity timeline [CHAR LIMIT=30] -->
     <string name="agent_activity_timeline_category_title_today">Today</string>
@@ -397,6 +409,9 @@
 
     <!-- Text for the agent activity timeline preference widget [CHAR LIMIT=30] -->
     <string name="agent_activity_timeline_preference_widget">View</string>
+
+    <!-- Preference title for the agent activity timeline when there's no target accesses [CHAR LIMIT=30] -->
+    <string name="empty_agent_activity_timeline_preference_title">No accesses</string>
 
     <!-- The title for the device assistance apps [CHAR LIMIT=30] -->
     <string name="device_assistance_title">Device Assistance</string>
