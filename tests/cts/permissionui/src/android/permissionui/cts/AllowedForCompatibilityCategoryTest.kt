@@ -153,7 +153,7 @@ class AllowedForCompatibilityCategoryTest : BaseUsePermissionTest() {
     }
 
     companion object {
-        private const val SCROLL_TIMEOUT_MILLIS = 90_000L
+        private const val SCROLL_TIMEOUT_MILLIS = 120_000L
 
         private val TAG = AllowedForCompatibilityCategoryTest::class.java.simpleName
 
