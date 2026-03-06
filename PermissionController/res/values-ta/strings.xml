@@ -759,8 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"உங்கள் திரையில் திறந்துள்ள ஆப்ஸில் இருக்கும் தகவல்களையும் உள்ளடக்கத்தையும் அணுக <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> ஆப்ஸை அனுமதிக்கும்"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"அனுமதி"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"அனுமதிக்காதே"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"துல்லியமான இருப்பிடத்தை நீங்கள் பகிரத் தேர்வுசெய்யும்போது, அதை அணுக &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ஆப்ஸை அனுமதிக்கவா?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"துல்லியமான இருப்பிடத்தைப் பகிரும்போது, அதற்கான அணுகல் இந்த ஆப்ஸை நீங்கள் மூடும்வரை ஆப்ஸுக்குக் கிடைக்கும்"</string>
 </resources>

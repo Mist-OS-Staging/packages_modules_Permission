@@ -759,8 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> को डिवाइस की स्क्रीन पर खुले ऐप्लिकेशन से जानकारी और कॉन्टेंट ऐक्सेस करने की अनुमति दें"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"अनुमति दें"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"अनुमति न दें"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"जगह की सटीक जानकारी शेयर करने पर, क्या आपको &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&amp;gt को यह जानकारी ऐक्सेस करने की अनुमति देनी है?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"जगह की जानकारी शेयर करने पर, इस ऐप्लिकेशन के पास जगह की सटीक जानकारी का ऐक्सेस रहेगा. ऐसा तब तक होगा, जब तक कि ऐप्लिकेशन को बंद नहीं किया जाता"</string>
 </resources>

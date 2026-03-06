@@ -201,7 +201,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Luba ainult rakenduse kasutamise ajal"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Luba alati kõik"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Küsi iga kord"</string>
-    <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Jagamisel iga kord küsimine või lubamine"</string>
+    <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Küsi iga kord või luba jagamisel"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Ära luba"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Luba piiratud juurdepääs"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Täpne asukoht"</string>
@@ -759,8 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Kas lubada rakendusel <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> juurde pääseda teabele ja sisule, mis on teie ekraanil avatud rakenduses?"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Luba"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Ära luba"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Kas lubada rakendusel <xliff:g id="APP_NAME">%1$s</xliff:g> täpsele asukohale juurde pääseda, kui otsustate seda jagada?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"Kui jagate oma asukohta, on sellel rakendusel juurdepääs täpsele asukohale, kuni rakenduse sulgete."</string>
 </resources>
