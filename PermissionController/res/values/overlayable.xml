@@ -501,6 +501,7 @@
             <item type="bool" name="config_useAlternativePermGroupSummary" />
             <item type="bool" name="config_useMaterial3PermissionGrantDialog" />
             <item type="string" name="config_headlineFontFamily" />
+            <item type="bool" name="config_useFocusIndicatorInPermissionDialogBeforeUserSetupComplete"/>
             <!-- END GENERAL CONFIGS -->
 
             <!-- START WARNING BANNER PREFERENCE STYLE -->
