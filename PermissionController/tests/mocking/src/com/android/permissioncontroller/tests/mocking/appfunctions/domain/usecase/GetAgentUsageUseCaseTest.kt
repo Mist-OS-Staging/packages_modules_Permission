@@ -65,7 +65,10 @@ class GetAgentUsageUseCaseTest {
     }
 
     @Test
-    @RequiresFlagsEnabled(Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED)
+    @RequiresFlagsEnabled(
+        Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED,
+        FLAG_ENABLE_APP_INTERACTION_API,
+    )
     fun getAgentUsages_success() = runTest {
         assumeTrue(
             "Skipping: Feature not supported on Auto when flag is disabled",
@@ -116,7 +119,10 @@ class GetAgentUsageUseCaseTest {
     }
 
     @Test
-    @RequiresFlagsEnabled(Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED)
+    @RequiresFlagsEnabled(
+        Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED,
+        FLAG_ENABLE_APP_INTERACTION_API,
+    )
     fun getAgentUsages_resultIsDistinct() = runTest {
         assumeTrue(
             "Skipping: Feature not supported on Auto when flag is disabled",
@@ -154,7 +160,10 @@ class GetAgentUsageUseCaseTest {
     }
 
     @Test
-    @RequiresFlagsEnabled(Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED)
+    @RequiresFlagsEnabled(
+        Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED,
+        FLAG_ENABLE_APP_INTERACTION_API,
+    )
     fun getAgentUsages_deviceAssistanceAccessesAreGrouped() = runTest {
         assumeTrue(
             "Skipping: Feature not supported on Auto when flag is disabled",
@@ -242,5 +251,8 @@ class GetAgentUsageUseCaseTest {
         const val TARGET_NAME_3 = "target3"
         const val USER_ID_1 = 1
         val USER_1 = UserHandle.of(USER_ID_1)
+
+        const val FLAG_ENABLE_APP_INTERACTION_API =
+            "com.android.permissioncontroller.jarjar.${android.app.appfunctions.flags.Flags.FLAG_ENABLE_APP_INTERACTION_API}"
     }
 }
