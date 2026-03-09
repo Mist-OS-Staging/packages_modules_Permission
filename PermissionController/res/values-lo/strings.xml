@@ -759,8 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"ອະນຸຍາດໃຫ້ <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> ເຂົ້າເຖິງຂໍ້ມູນ ແລະ ເນື້ອຫາຈາກແອັບທີ່ເປີດຢູ່ໜ້າຈໍຂອງທ່ານ"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"ອະນຸຍາດ"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"ບໍ່ອະນຸຍາດ"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"ອະນຸຍາດໃຫ້ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; ເຂົ້າເຖິງສະຖານທີ່ແບບລະອຽດເມື່ອທ່ານເລືອກທີ່ຈະແບ່ງປັນບໍ?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"ເມື່ອທ່ານແບ່ງປັນ, ແອັບນີ້ຈະມີສິດເຂົ້າເຖິງສະຖານທີ່ແບບລະອຽດຈົນກວ່າທ່ານຈະປິດແອັບ"</string>
 </resources>

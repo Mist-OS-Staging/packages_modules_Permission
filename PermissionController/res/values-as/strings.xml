@@ -759,8 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>ক আপোনাৰ স্ক্ৰীনত খোলা এপ্‌টোৰ পৰা তথ্য আৰু সমল এক্সেছ কৰিবলৈ অনুমতি দিয়ক"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"অনুমতি দিয়ক"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"অনুমতি নিদিব"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"আপুনি সঠিক অৱস্থান শ্বেয়াৰ কৰিবলৈ বাছনি কৰিলে &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;ক সেইটো এক্সেছ কৰিবলৈ অনুমতি দিব নেকি?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"আপুনি শ্বেয়াৰ কৰিলে, আপুনি এপ্‌টো বন্ধ নকৰালৈকে এই এপ্‌টোৱে সঠিক অৱস্থান এক্সেছ কৰিব পাৰিব"</string>
 </resources>

@@ -201,7 +201,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Permitir só mentres se use a aplicación"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Permitir todo sempre"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Preguntar sempre"</string>
-    <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Preguntar cada vez ou permitir cando compartas contido"</string>
+    <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Preguntar cada vez ou permitir cando se comparta contido"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Non permitir"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Permitir acceso limitado"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Localización precisa"</string>
@@ -759,8 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Permite que <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> acceda á información e ao contido da aplicación que estea aberta na pantalla"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Permitir"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Non permitir"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Queres permitir que &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; acceda á localización precisa cando decidas compartila?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"Cando compartas o lugar no que esteas, esta aplicación terá acceso á localización precisa ata que a peches"</string>
 </resources>

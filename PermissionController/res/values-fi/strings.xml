@@ -545,7 +545,7 @@
     <string name="permgroupupgraderequest_camera" msgid="640758449200241582">"Muutetaanko kameran käyttöoikeutta (&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;)?"</string>
     <string name="permgroupupgraderequest_device_aware_camera" msgid="3290160912843715236">"Muutetaanko kameran pääsyoikeuksia (&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;) laitteella (&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;)?"</string>
     <string name="permgroupupgraderequestdetail_camera" msgid="6642747548010962597">"Sovellus haluaa ottaa kuvia ja videoita aina, myös silloin kun et käytä sitä. "<annotation id="link">"Myönnä lupa asetuksista"</annotation>"."</string>
-    <string name="permgrouprequest_calllog" msgid="2065327180175371397">"Saako &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; puhelulokien käyttöoikeuden?"</string>
+    <string name="permgrouprequest_calllog" msgid="2065327180175371397">"Saako &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; pääsyn puhelulokeihin?"</string>
     <string name="permgrouprequest_device_aware_calllog" msgid="8220927190376843309">"Saako &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; pääsyn puhelulokeihin (&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;)?"</string>
     <string name="permgrouprequest_phone" msgid="1829234136997316752">"Saako &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; soittaa ja hallinnoida puheluita?"</string>
     <string name="permgrouprequest_device_aware_phone" msgid="590399263670349955">"Saako &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; soittaa ja hallinnoida puheluita (&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;)?"</string>
@@ -759,8 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Salli, että <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> saa pääsyn näytöllä avoinna olevan sovelluksen tietoihin ja sisältöön"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Salli"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Älä salli"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Saako &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; pääsyn tarkkaan sijaintiin, kun päätät jakaa sen?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"Jakamisen aikana sovellus saa pääsyn tarkkaan sijaintiin, kunnes suljet sovelluksen"</string>
 </resources>

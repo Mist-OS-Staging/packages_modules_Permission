@@ -759,8 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> 앱이 화면에 열려 있는 앱의 정보 및 콘텐츠에 액세스하도록 허용"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"허용"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"허용 안함"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"위치를 공유하도록 선택할 때 &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; 앱이 정확한 위치에 액세스하도록 허용하시겠습니까?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"공유하면 사용자가 앱을 닫을 때까지 이 앱이 정확한 위치에 액세스할 수 있습니다"</string>
 </resources>
