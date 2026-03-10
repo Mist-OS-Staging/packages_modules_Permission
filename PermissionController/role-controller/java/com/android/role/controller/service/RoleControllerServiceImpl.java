@@ -252,6 +252,10 @@ public class RoleControllerServiceImpl extends RoleControllerService {
             Log.e(LOG_TAG, "Role is unavailable: " + roleName + ", user: " + mUser.getIdentifier());
             return false;
         }
+        if (role.isStatic(mContext)) {
+            Log.e(LOG_TAG, "Role is static: " + roleName + ", user: " + mUser.getIdentifier());
+            return false;
+        }
 
         if (!role.isPackageQualifiedAsUser(packageName, mUser, mContext)) {
             Log.e(LOG_TAG, "Package does not qualify for the role, package: " + packageName
@@ -316,6 +320,10 @@ public class RoleControllerServiceImpl extends RoleControllerService {
             Log.e(LOG_TAG, "Role is unavailable: " + roleName + ", user: " + mUser.getIdentifier());
             return false;
         }
+        if (role.isStatic(mContext)) {
+            Log.e(LOG_TAG, "Role is static: " + roleName + ", user: " + mUser.getIdentifier());
+            return false;
+        }
 
         boolean dontKillApp = hasFlag(flags, RoleManager.MANAGE_HOLDERS_FLAG_DONT_KILL_APP);
         boolean removed = removeRoleHolderInternal(role, packageName, dontKillApp);
@@ -348,6 +356,10 @@ public class RoleControllerServiceImpl extends RoleControllerService {
         }
         if (!role.isAvailableAsUser(mUser, mContext)) {
             Log.e(LOG_TAG, "Role is unavailable: " + roleName + ", user: " + mUser.getIdentifier());
+            return false;
+        }
+        if (role.isStatic(mContext)) {
+            Log.e(LOG_TAG, "Role is static: " + roleName + ", user: " + mUser.getIdentifier());
             return false;
         }
 
