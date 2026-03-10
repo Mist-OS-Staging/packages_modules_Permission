@@ -22,7 +22,6 @@ import android.content.pm.PackageManager;
 import android.os.UserHandle;
 import android.util.ArrayMap;
 
-import com.android.permissioncontroller.permission.data.LightPackageInfoLiveData;
 import com.android.permissioncontroller.permission.utils.Utils;
 
 import java.util.ArrayList;
@@ -111,12 +110,10 @@ public final class AppPermissions {
 
     private void loadPackageInfo() {
         try {
-            PackageManager pm = mContext.createPackageContextAsUser(mPackageInfo.packageName, 0,
+            mPackageInfo = mContext.createPackageContextAsUser(mPackageInfo.packageName, 0,
                     UserHandle.getUserHandleForUid(mPackageInfo.applicationInfo.uid))
-                    .getPackageManager();
-            int flags = PackageManager.GET_PERMISSIONS;
-            PackageInfo pI = pm.getPackageInfo(mPackageInfo.packageName, flags);
-            mPackageInfo = LightPackageInfoLiveData.mergePermissionsInSharedUid(pI, flags, pm);
+                    .getPackageManager().getPackageInfo(mPackageInfo.packageName,
+                            PackageManager.GET_PERMISSIONS);
         } catch (PackageManager.NameNotFoundException e) {
             if (mOnErrorCallback != null) {
                 mOnErrorCallback.run();

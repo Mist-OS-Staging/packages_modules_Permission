@@ -81,13 +81,7 @@ private constructor(
 
         val packageInfo = packageInfoLiveData.value
         val permissionGroup = groupLiveData.value
-        if (
-            packageInfo == null ||
-                permissionGroup == null ||
-                !packageInfo.requestedPermissions.any { it in permissionGroup.permissionInfos }
-        ) {
-            // package is invalid, permission group is invalid, or the package requests no
-            // permissions in the given group
+        if (packageInfo == null || permissionGroup == null) {
             invalidateSingle(KotlinUtils.Quadruple(packageName, permGroupName, user, deviceId))
             postValue(null)
             return

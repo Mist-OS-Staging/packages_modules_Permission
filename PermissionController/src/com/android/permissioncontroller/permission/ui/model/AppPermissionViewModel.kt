@@ -414,19 +414,14 @@ class AppPermissionViewModel(
             }
 
             private fun onMediaPermGroupUpdate(
-                mediaPermGroupName: String,
+                permGroupName: String,
                 permGroup: LightAppPermGroup?,
             ) {
                 if (permGroup == null) {
-                    mediaStorageSupergroupPermGroups.remove(mediaPermGroupName)
-                    if (permGroupName == Manifest.permission_group.STORAGE) {
-                        // Only invalidate this setting if this is the legacy storage group. It is
-                        // valid, for example, for T+ apps to not request any of the legacy
-                        // STORAGE permissions.
-                        value = null
-                    }
+                    mediaStorageSupergroupPermGroups.remove(permGroupName)
+                    value = null
                 } else {
-                    mediaStorageSupergroupPermGroups[mediaPermGroupName] = permGroup
+                    mediaStorageSupergroupPermGroups[permGroupName] = permGroup
                     update()
                 }
             }
