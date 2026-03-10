@@ -55,7 +55,10 @@ class GetAgentUsageUseCaseImpl(
         val agentUsages = mutableListOf<AgentActivityItem>()
 
         profiles.forEach { user ->
-            val agents = packageRepository.getPackagesHoldingPermissions(AGENT_PERMISSIONS, user)
+            val agents =
+                packageRepository.getPackagesHoldingPermissions(AGENT_PERMISSIONS, user).filter {
+                    it !in HIDDEN_WHEN_NO_ACTIVITIES_PACKAGES
+                }
             val accessHistories = appInteractionRepository.getAccessHistory(context, user)
             val userAgentUsages =
                 agents.associateWith { AgentActivityItem(it, user, 0, 0) }.toMutableMap()
@@ -111,5 +114,7 @@ class GetAgentUsageUseCaseImpl(
                 // permission. Hence, we can only access this permission via raw string.
                 "android.permission.ACCESS_COMPUTER_CONTROL",
             )
+
+        private val HIDDEN_WHEN_NO_ACTIVITIES_PACKAGES = listOf("com.android.shell")
     }
 }
