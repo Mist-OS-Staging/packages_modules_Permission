@@ -254,6 +254,16 @@
             <item type="style" name="RequestLocationButtonPermissionsDialogButton" />
             <!-- END GRANT LOCATION BUTTON PERMISSION DIALOG -->
 
+            <!-- START LOCATION PERMISSION GRANT DIALOG -->
+
+            <item type="style" name="PermissionLocationAccuracyContainer" />
+            <item type="style" name="PermissionLocationAccuracyRadioGroupNewLocationDesign" />
+            <item type="style" name="PermissionLocationAccuracyRadioFineNewLocationDesign" />
+            <item type="style" name="PermissionLocationAccuracyRadioNewLocationDesign" />
+            <item type="style" name="PermissionLocationAccuracySingleRadio" />
+
+            <!-- END LOCATION PERMISSION GRANT DIALOG -->
+
             <!-- END PERMISSION GRANT DIALOG -->
 
             <!-- START PERMISSION RATIONALE DIALOG -->
