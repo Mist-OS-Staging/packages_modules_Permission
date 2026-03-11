@@ -201,7 +201,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Թույլատրել միայն հավելվածի օգտագործման ժամանակ"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Միշտ թույլատրել բոլորը"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Ամեն անգամ հարցնել"</string>
-    <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Ամեն անգամ կիսվելիս հարցնել կամ թույլատրել"</string>
+    <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Ամեն անգամ հարցնել կամ թույլատրել կիսվելիս"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"Չթույլատրել"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"Տրամադրել սահմանափակ հասանելիություն"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"Ճշգրիտ տեղադրություն"</string>
@@ -759,8 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Թույլատրեք <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> հավելվածին օգտագործել ձեր էկրանին բացված հավելվածի տեղեկությունները և բովանդակությունը"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Թույլատրել"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Չթույլատրել"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Թույլատրե՞լ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; հավելվածին օգտագործել ճշգրիտ տեղադրությունը, երբ դուք հասանելի դարձնեք այն"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"Եթե կիսվեք, այս հավելվածին հասանելի կլինի ձեր ճշգրիտ տեղադրությունը, մինչև չփակեք հավելվածը"</string>
 </resources>

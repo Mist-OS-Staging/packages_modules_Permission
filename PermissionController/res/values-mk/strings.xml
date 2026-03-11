@@ -134,7 +134,7 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Вчера"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Последен пристап: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Прегледајте"</string>
-    <string name="device_assistance_title" msgid="1445976710214822208">"Помош за уредот"</string>
+    <string name="device_assistance_title" msgid="1445976710214822208">"Помош со уредот"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"да прегледува кои апликации користеле дозволи неодамна"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Користење <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Видете други дозволи"</string>
@@ -759,8 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Дозволете му на помошникот <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> да пристапува до податоците и содржините од апликацијата што е отворена на вашиот екран"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Дозволи"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Не дозволувај"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Да се дозволи &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; да пристапува до прецизната локација кога ќе изберете да ја споделите?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"Кога споделувате, апликацијава ќе има пристап до прецизната локација додека не ја затворите апликацијата"</string>
 </resources>

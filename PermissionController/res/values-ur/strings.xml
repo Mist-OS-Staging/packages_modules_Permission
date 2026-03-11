@@ -759,8 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"‫<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> کو اپنی اسکرین پر ایپ اوپن سے معلومات اور مواد تک رسائی کی اجازت دیں"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"اجازت دیں"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"اجازت نہ دیں"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"‏آپ کے قطعی مقام کا اشتراک کرنے کا انتخاب کرنے پر &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; کو اس تک رسائی کی اجازت دیں؟"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"آپ کے اشتراک کرنے پر، اس ایپ کو اس وقت تک قطعی مقام تک رسائی حاصل ہوگی جب تک آپ ایپ کو بند نہیں کر دیتے"</string>
 </resources>

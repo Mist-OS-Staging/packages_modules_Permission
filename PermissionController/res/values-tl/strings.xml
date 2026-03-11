@@ -759,8 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Payagan ang <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> na i-access ang impormasyon at content mula sa app na nakabukas sa iyong screen"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Payagan"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Huwag payagan"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Payagan ang &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; na i-access ang eksaktong lokasyon kapag pinili mo itong i-share?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"Kapag nag-share ka, magkakaroon ang app na ito ng access sa eksaktong lokasyon hanggang sa isara mo ang app"</string>
 </resources>

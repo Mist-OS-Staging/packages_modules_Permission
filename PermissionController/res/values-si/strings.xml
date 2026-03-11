@@ -759,8 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> හට ඔබේ තිරය මත විවෘත යෙදුමෙන් තතු සහ අන්තර්ගතයට ප්‍රවේශ වීමට ඉඩ දෙන්න"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"ඉඩ දෙන්න"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"ඉඩ නොදෙන්න"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"ඔබ එය බෙදා ගැනීමට තෝරා ගත් විට &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; හට නිශ්චිත ස්ථානයට ප්‍රවේශ වීමට ඉඩ දෙන්න ද?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"ඔබ බෙදා ගන්නා විට, ඔබ යෙදුම වසා දමන තෙක් මෙම යෙදුමට නිශ්චිත ස්ථානයට ප්‍රවේශය ඇත"</string>
 </resources>

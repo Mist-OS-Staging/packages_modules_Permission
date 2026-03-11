@@ -201,7 +201,7 @@
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"僅在使用此應用程式時允許"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"一律全部允許"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"每次都詢問"</string>
-    <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"每次分享時詢問或允許"</string>
+    <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"每次都詢問，或你分享就允許"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"不允許"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"允許有限存取"</string>
     <string name="precise_image_description" msgid="6349638632303619872">"精確位置"</string>
@@ -759,8 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"允許「<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>」存取螢幕上開啟的應用程式資料和內容"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"允許"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"不允許"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"要允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;在你選擇分享時存取精確位置嗎？"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"分享後，此應用程式將可存取精確位置，直至你關閉應用程式為止"</string>
 </resources>

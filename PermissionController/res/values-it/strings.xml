@@ -759,8 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Consenti all\'app <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> di accedere a informazioni e contenuti dell\'app aperta sullo schermo"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Consenti"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Non consentire"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Consentire a &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; di accedere alla tua posizione esatta quando scegli di condividerla?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"Questa app avrà accesso alla tua posizione esatta quando la condividi fino a quando non chiudi l\'app"</string>
 </resources>

@@ -759,8 +759,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> በማያ ገጽዎ ላይ ከተከፈተው መተግበሪያ መረጃ እና ይዘት እንዲደርስ ይፍቀዱ"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"ፍቀድ"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"አትፍቀድ"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"ትክክለኛ አካባቢን ለማጋራት ሲመርጡ &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; እንዲደርሰው ይፈቀድ?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"ሲያጋሩ፣ ይህ መተግበሪያ መተግበሪያውን እስከሚዘጉ ድረስ የትክክለኛ አካባቢ መዳረሻ ይኖረዋል"</string>
 </resources>
