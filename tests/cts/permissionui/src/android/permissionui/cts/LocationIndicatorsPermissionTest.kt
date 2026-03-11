@@ -45,6 +45,7 @@ import com.android.compatibility.common.util.SystemUtil.runWithShellPermissionId
 import com.android.compatibility.common.util.UiAutomatorUtils2
 import com.android.compatibility.common.util.UiAutomatorUtils2.assertWithUiDump
 import com.android.sts.common.util.StsExtraBusinessLogicTestCase
+import com.android.systemui.Flags.expandedPrivacyIndicatorsOnLargeScreen
 import java.util.regex.Pattern
 import org.junit.After
 import org.junit.Assert.assertEquals
@@ -84,6 +85,8 @@ class LocationIndicatorsPermissionTest : StsExtraBusinessLogicTestCase {
     private val isTv = packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK)
     private val isCar = packageManager.hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE)
     private val isWatch = packageManager.hasSystemFeature(PackageManager.FEATURE_WATCH)
+    // This flag is set to true for tablet and desktop devices.
+    private val isLargeScreen = expandedPrivacyIndicatorsOnLargeScreen()
     private val originalLocationLabel =
         packageManager
             .getPermissionGroupInfo(Manifest.permission_group.LOCATION, 0)
@@ -180,7 +183,7 @@ class LocationIndicatorsPermissionTest : StsExtraBusinessLogicTestCase {
     private fun testLocationIndicator(useLocation: Boolean) {
         Log.d(TAG, "testLocationIndicator useLocation=$useLocation")
         // Location indicators are not available or in scope for these form factors.
-        assumeFalse(isWatch || isTv || isCar)
+        assumeFalse(isWatch || isTv || isCar || isLargeScreen)
         openApp(useLocation)
         try {
             eventually {
