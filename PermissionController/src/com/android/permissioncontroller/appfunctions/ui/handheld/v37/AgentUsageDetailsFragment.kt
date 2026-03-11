@@ -42,6 +42,8 @@ import com.android.permissioncontroller.appinteraction.domain.model.v37.AgentTim
 import com.android.permissioncontroller.permission.ui.ManagePermissionsActivity.EXTRA_SHOW_7_DAYS
 import com.android.permissioncontroller.permission.ui.handheld.SettingsWithLargeHeader
 import com.android.permissioncontroller.permission.utils.KotlinUtils
+import com.android.settingslib.widget.FooterPreference
+import com.android.settingslib.widget.TopIntroPreference
 import java.time.Instant
 import java.time.ZoneId
 import java.time.ZonedDateTime
@@ -176,8 +178,8 @@ class AgentUsageDetailsFragment : SettingsWithLargeHeader() {
                 setLoading(false, true)
             }
             is AgentUsageDetailsUiState.Success -> {
-                val show7Days = uiState.show7Days
-                if (show7Days) {
+                addTopIntro(preferenceScreen)
+                if (uiState.show7Days) {
                     addAgentActivityPreferencesForPast7Days(
                         uiState.settingsPackageName,
                         uiState.agentTimelineItems,
@@ -190,6 +192,7 @@ class AgentUsageDetailsFragment : SettingsWithLargeHeader() {
                         preferenceScreen,
                     )
                 }
+                addFooter(preferenceScreen)
                 setLoading(false, true)
             }
         }
@@ -344,6 +347,23 @@ class AgentUsageDetailsFragment : SettingsWithLargeHeader() {
                 // clicking on the preference
                 isSelectable = false
             }
+
+    fun addTopIntro(preferenceScreen: PreferenceScreen) {
+        val topIntroPreference =
+            TopIntroPreference(requireContext()).apply {
+                title = resources.getString(R.string.agent_activity_timeline_top_intro_title)
+            }
+        preferenceScreen.addPreference(topIntroPreference)
+    }
+
+    fun addFooter(preferenceScreen: PreferenceScreen) {
+        val footerPreference =
+            FooterPreference(requireContext()).apply {
+                icon = requireContext().getDrawable(R.drawable.ic_info_outline)
+                title = resources.getString(R.string.agent_activity_timeline_footer_title)
+            }
+        preferenceScreen.addPreference(footerPreference)
+    }
 
     companion object {
         private val LOG_TAG = AgentUsageDetailsFragment::class.java.simpleName
