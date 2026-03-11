@@ -651,6 +651,7 @@
                  notifications with sensitive content unredacted-->
             <permission name="android.permission.RECEIVE_SENSITIVE_NOTIFICATIONS" minSdkVersion="35"/>
             <permission name="android.permission.CAPTURE_SECURE_VIDEO_OUTPUT" minSdkVersion="35" />
+            <permission name="android.permission.GET_INTENT_SENDER_INTENT" minSdkVersion="37" />
         </permissions>
         <app-ops>
             <app-op name="android:receive_sensitive_notifications" mode="allowed" minSdkVersion="35"/>

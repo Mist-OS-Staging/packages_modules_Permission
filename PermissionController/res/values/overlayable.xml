@@ -242,6 +242,18 @@
 
             <!-- END EXPRESSIVE PERMISSION DIALOG -->
 
+            <!-- START GRANT LOCATION BUTTON PERMISSION DIALOG -->
+            <item type="style" name="RequestLocationButtonPermissionsDialogScrollView" />
+            <item type="style" name="RequestLocationButtonPermissionsDialogContent" />
+            <item type="style" name="RequestLocationButtonPermissionsDialogIcon" />
+            <item type="style" name="RequestLocationButtonPermissionsDialogTitle" />
+            <item type="style" name="RequestLocationButtonPermissionsDialogSubtitle" />
+            <item type="style" name="RequestLocationButtonPermissionsDialogIllustration" />
+            <item type="style" name="RequestLocationButtonPermissionsDialogAllowButton" />
+            <item type="style" name="RequestLocationButtonPermissionsDialogDontAllowButton" />
+            <item type="style" name="RequestLocationButtonPermissionsDialogButton" />
+            <!-- END GRANT LOCATION BUTTON PERMISSION DIALOG -->
+
             <!-- END PERMISSION GRANT DIALOG -->
 
             <!-- START PERMISSION RATIONALE DIALOG -->
