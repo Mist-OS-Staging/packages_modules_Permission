@@ -63,6 +63,7 @@ class LocationButtonActivity : Activity() {
                         ViewGroup.LayoutParams.MATCH_PARENT,
                         ViewGroup.LayoutParams.MATCH_PARENT,
                     )
+                fitsSystemWindows = true
             }
         container.addView(locationButton)
         setContentView(container)
