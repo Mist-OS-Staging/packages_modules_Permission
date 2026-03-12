@@ -17,5 +17,5 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="role_assistant_description" msgid="837264444214300299">"Asistenti su aplikacije koje mogu odgovarati na glasovne komande da vam pomognu da obavite zadatke."</string>
+    <string name="role_assistant_description" msgid="837264444214300299">"تستجيب تطبيقات المساعدة لطلباتك الصوتية لمساعدتك في إنجاز المهام."</string>
 </resources>

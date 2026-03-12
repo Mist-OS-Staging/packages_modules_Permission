@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Панель управления разрешениями"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Разрешения для приложений"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"История действий агента"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Агенты не установлены"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"За 24 ч. доступ не получался"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"За 7 дн. доступ не получался"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Действия (<xliff:g id="APP_NAME">%1$s</xliff:g>)"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"За последние 24 часа"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"За последние 7 дней"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Сегодня"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Вчера"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Последний доступ: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Посмотреть"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Не было попыток доступа"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Помощь с устройством"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Посмотреть, какие приложения недавно использовали разрешения"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Использование разрешения \"<xliff:g id="PERMGROUP">%1$s</xliff:g>\""</string>
@@ -273,7 +278,7 @@
     <string name="denied_header" msgid="903209608358177654">"Запрещено"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> на устройстве \"<xliff:g id="DEVICE_NAME">%2$s</xliff:g>\""</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Ещё приложения с доступом ко всем файлам"</string>
-    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Разрешено для работы приложения&lt;/b&gt;&lt;br&gt;&lt;br&gt;Чтобы приложение работало, ему может быть разрешено получать доступ к вашей локальной сети и подключаться только к устройствам в ней.&lt;br&gt;&lt;br&gt;Приложение не сможет подключаться к устройствам с помощью Bluetooth и других технологий, если вы не разрешите ему находить все устройства поблизости и подключаться к ним."</string>
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Разрешено для работы приложения&lt;/b&gt;&lt;br&gt;&lt;br&gt;Это может означать, что приложению разрешен только доступ к локальной сети и подключение к устройствам в ней.&lt;br&gt;&lt;br&gt;Приложение не сможет подключаться к устройствам с помощью Bluetooth и других технологий, если только вы не разрешите ему находить все устройства поблизости и подключаться к ним."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 день}one{# день}few{# дня}many{# дней}other{# дня}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# час}one{# час}few{# часа}many{# часов}other{# часа}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# минута}one{# минута}few{# минуты}many{# минут}other{# минуты}}"</string>

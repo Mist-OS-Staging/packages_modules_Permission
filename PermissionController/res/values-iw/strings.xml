@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"מרכז בקרת הפרטיות"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"הרשאות שניתנות לאפליקציה"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"פעילות של הסוכן"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"לא הותקנו סוכנים"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"לא נרשמה גישה ב-24 השעות האחרונות"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"לא נרשמה גישה ב-7 הימים האחרונים"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"פעילות באפליקציה <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"ב-24 השעות האחרונות"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"ב-7 הימים האחרונים"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"היום"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"אתמול"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"גישה אחרונה: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"הצגה"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"לא נרשמה גישה"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"עזרה במכשיר"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"הצגת האפליקציות שהשתמשו לאחרונה בהרשאות"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"שימוש ב<xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
@@ -200,7 +205,7 @@
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"כן, כל הזמן"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"רק כשהאפליקציה בשימוש"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"אישור של הכול תמיד"</string>
-    <string name="app_permission_button_ask" msgid="3342950658789427">"צריך לשאול אותי בכל פעם"</string>
+    <string name="app_permission_button_ask" msgid="3342950658789427">"אני רוצה לבחור בכל פעם"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"לשאול בכל פעם או לאפשר בזמן השיתוף"</string>
     <string name="app_permission_button_deny" msgid="6016454069832050300">"אין אישור"</string>
     <string name="app_permission_button_allow_limited_access" msgid="8824410215149764113">"הרשאה לגישה מוגבלת"</string>
@@ -266,14 +271,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"יש הרשאה"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"מורשות תמיד"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"מורשות רק בזמן השימוש"</string>
-    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"יש הרשאה להמשיך להפעיל את האפליקציה"</string>
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"אפליקציות שממשיכות לפעול"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"הרשאת גישה למדיה בלבד"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"הרשאה לניהול כל הקבצים"</string>
     <string name="ask_header" msgid="2633816846459944376">"אני רוצה לבחור בכל פעם"</string>
     <string name="denied_header" msgid="903209608358177654">"אין הרשאה"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"‫<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> ב-<xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"לצפייה באפליקציות נוספות שיכולות לגשת לכל הקבצים"</string>
-    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"‏&lt;b&gt;יש הרשאה להמשיך להפעיל את האפליקציה&lt;/b&gt;&lt;br&gt;&lt;br&gt;כדי שאפליקציה תמשיך לפעול, יכול להיות שתהיה לה הרשאת גישה לרשת המקומית שלך והיא תתחבר למכשירים ברשת הזו בלבד.&lt;br&gt;&lt;br&gt;האפליקציה לא יכולה להתחבר למכשירים באמצעות Bluetooth וטכנולוגיות אחרות, אלא אם נותנים לה הרשאה לאתר את כל המכשירים בקרבת מקום ולהתחבר אליהם."</string>
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"‏&lt;b&gt;אפליקציות שממשיכות לפעול&lt;/b&gt;&lt;br&gt;&lt;br&gt;אפליקציה כזו תוכל לגשת לרשת המקומית ולהתחבר למכשירים ברשת הזו בלבד.&lt;br&gt;&lt;br&gt;האפליקציה לא תוכל להתחבר למכשירים ב-Bluetooth וטכנולוגיות אחרות, אלא אם תהיה לה הרשאה לאתר את כל המכשירים בקרבת מקום ולהתחבר אליהם."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{יום אחד}one{# ימים}two{יומיים}other{# ימים}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{שעה}one{# שעות}two{שעתיים}other{# שעות}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{דקה אחת}one{# דקות}two{# דקות}other{# דקות}}"</string>

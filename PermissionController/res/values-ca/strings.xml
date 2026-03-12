@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Tauler de privadesa"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Permisos d\'aplicacions"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Activitat de l\'agent"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Cap agent instal·lat"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Cap accés les 24 darreres hores"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Cap accés els 7 darrers dies"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Activitat de <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"En les 24 darreres hores"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"En els 7 darrers dies"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Avui"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Ahir"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Darrer accés: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Mostra"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Cap accés"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Assistència per al dispositiu"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Mostra quines aplicacions han utilitzat permisos fa poc"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Ús de: <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
@@ -266,14 +271,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"Amb permís"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Permès sempre"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Permès només mentre s\'utilitza"</string>
-    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"Permís perquè l\'app continuï funcionant"</string>
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"Permès perquè l\'app continuï funcionant"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Poden accedir només al contingut multimèdia"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Poden gestionar tots els fitxers"</string>
     <string name="ask_header" msgid="2633816846459944376">"Pregunta sempre"</string>
-    <string name="denied_header" msgid="903209608358177654">"Sense permís"</string>
+    <string name="denied_header" msgid="903209608358177654">"No permès"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> (<xliff:g id="DEVICE_NAME">%2$s</xliff:g>)"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Mostra més aplicacions que poden accedir a tots els fitxers"</string>
-    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;S\'ha permès que l\'aplicació continuï funcionant&lt;/b&gt;&lt;br&gt;&lt;br&gt;Perquè una aplicació continuï funcionant, és possible que se li permeti accedir a la xarxa local i connectar-se només amb els dispositius d\'aquesta xarxa.&lt;br&gt;&lt;br&gt;L\'aplicació no es pot connectar a dispositius mitjançant Bluetooth i altres tecnologies tret que li permetis cercar i connectar-se a tots els dispositius propers."</string>
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Permès que l\'aplicació continuï funcionant&lt;/b&gt;&lt;br&gt;&lt;br&gt;Perquè una aplicació continuï funcionant, és possible que se li permeti accedir a la xarxa local i connectar-se només amb els dispositius d\'aquesta xarxa.&lt;br&gt;&lt;br&gt;L\'aplicació no es pot connectar a dispositius mitjançant Bluetooth i altres tecnologies tret que li permetis cercar i connectar-se a tots els dispositius propers."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 dia}many{# dies}other{# dies}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# hora}many{# hores}other{# hores}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# minut}many{# minuts}other{# minuts}}"</string>
@@ -735,7 +740,7 @@
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Accés d\'agent"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agents que poden accedir a informació i dur a terme accions per tu en aquesta aplicació"</string>
     <string name="app_function_access_allowed_header" msgid="139473645426829908">"Es permet"</string>
-    <string name="app_function_access_denied_header" msgid="6934818996725728911">"No es permet"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"No permès"</string>
     <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"No es permet cap accés d\'agent"</string>
     <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"No s\'ha denegat cap accés d\'agent"</string>
     <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"No es permet cap accés a aplicacions"</string>

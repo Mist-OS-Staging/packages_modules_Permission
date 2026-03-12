@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"സ്വകാര്യതാ ഡാഷ്ബോർഡ്"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"ആപ്പ് അനുമതികൾ"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"ഏജന്റ് ആക്റ്റിവിറ്റി"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"ഏജന്റ് ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"കഴിഞ്ഞ 24 മണിക്കൂറിൽ ആക്സസ് ഒന്നുമില്ല"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"കഴിഞ്ഞ 7 ദിവസത്തിൽ ആക്സസ് ഇല്ല"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> ആക്റ്റിവിറ്റി"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"കഴിഞ്ഞ 24 മണിക്കൂറിനിടെ"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"കഴിഞ്ഞ 7 ദിവസം"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"ഇന്ന്"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"ഇന്നലെ"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"അവസാനം ആക്‌‌സസ് ചെയ്‌തത്: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"കാണുക"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"ആക്‌സസുകൾ ഒന്നുമില്ല"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"ഉപകരണ സഹായം"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ഏതെല്ലാം ആപ്പുകൾ അടുത്തിടെ അനുമതികൾ ഉപയോഗിച്ചുവെന്ന് കാണുക"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> ഉപയോഗം"</string>

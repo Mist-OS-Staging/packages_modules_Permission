@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"แดชบอร์ดความเป็นส่วนตัว"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"สิทธิ์ของแอป"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"กิจกรรมของ Agent"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"ไม่ได้ติดตั้ง Agent"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"ไม่มีการเข้าถึงในช่วง 24 ชม. ที่ผ่านมา"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"ไม่มีการเข้าถึงในช่วง 7 วันที่ผ่านมา"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"กิจกรรม <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"ในช่วง 24 ชั่วโมงที่ผ่านมา"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"ในช่วง 7 วันที่ผ่านมา"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"วันนี้"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"เมื่อวาน"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"เข้าถึงล่าสุด: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"ดู"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"ไม่มีการเข้าถึง"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"ความช่วยเหลือเกี่ยวกับอุปกรณ์"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ดูแอปที่ใช้สิทธิ์ล่าสุด"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"การใช้งาน<xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
@@ -266,14 +271,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"อนุญาต"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"อนุญาตตลอด"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"อนุญาตขณะใช้งานอยู่เท่านั้น"</string>
-    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"อนุญาตให้แอปทำงานต่อไป"</string>
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"อนุญาตแล้วเพื่อให้แอปทำงานต่อ"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"ได้รับอนุญาตให้เข้าถึงสื่อเท่านั้น"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"ได้รับอนุญาตให้จัดการไฟล์ทั้งหมด"</string>
     <string name="ask_header" msgid="2633816846459944376">"ถามทุกครั้ง"</string>
     <string name="denied_header" msgid="903209608358177654">"ไม่อนุญาต"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>ใน <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"ดูแอปอื่นๆ ที่สามารถเข้าถึงไฟล์ทั้งหมดได้"</string>
-    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;อนุญาตให้แอปทำงานต่อไป&lt;/b&gt;&lt;br&gt;&lt;br&gt;เพื่อให้แอปทำงานต่อไปได้ อาจต้องอนุญาตให้แอปเข้าถึงเครือข่ายในพื้นที่และเชื่อมต่อกับอุปกรณ์ในเครือข่ายนี้เท่านั้น&lt;br&gt;&lt;br&gt;แอปจะเชื่อมต่อกับอุปกรณ์โดยใช้บลูทูธและเทคโนโลยีอื่นๆ ไม่ได้ เว้นแต่คุณจะอนุญาตให้แอปค้นหาและเชื่อมต่อกับอุปกรณ์ที่อยู่ใกล้เคียงทั้งหมด"</string>
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;อนุญาตแล้วเพื่อให้แอปทำงานต่อ&lt;/b&gt;&lt;br&gt;&lt;br&gt;เพื่อให้แอปทำงานต่อไปได้ อาจต้องอนุญาตให้แอปเข้าถึงเครือข่ายในพื้นที่และเชื่อมต่อกับอุปกรณ์ในเครือข่ายนี้เท่านั้น&lt;br&gt;&lt;br&gt;แอปจะเชื่อมต่อกับอุปกรณ์โดยใช้บลูทูธและเทคโนโลยีอื่นๆ ไม่ได้ เว้นแต่คุณจะอนุญาตให้แอปค้นหาและเชื่อมต่อกับอุปกรณ์ที่อยู่ใกล้เคียงทั้งหมด"</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 วัน}other{# วัน}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# ชั่วโมง}other{# ชั่วโมง}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# นาที}other{# นาที}}"</string>

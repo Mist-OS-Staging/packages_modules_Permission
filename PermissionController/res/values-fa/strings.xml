@@ -51,12 +51,12 @@
     <string name="permission_revoked_all" msgid="3397649017727222283">"همه مجوزها غیرفعال است"</string>
     <string name="permission_revoked_none" msgid="9213345075484381180">"هیچ‌ موردی غیرفعال نیست"</string>
     <string name="grant_dialog_button_allow" msgid="5314677880021102550">"اجازه دادن"</string>
-    <string name="grant_dialog_button_allow_always" msgid="4485552579273565981">"همیشه مجاز"</string>
+    <string name="grant_dialog_button_allow_always" msgid="4485552579273565981">"همیشه اجازه داشتن"</string>
     <string name="grant_dialog_button_allow_foreground" msgid="501896824973636533">"هنگام استفاده از برنامه"</string>
     <string name="grant_dialog_button_change_to_precise_location" msgid="3273115879467236033">"تغییر به مکان دقیق"</string>
     <string name="grant_dialog_button_keey_approximate_location" msgid="438025182769080011">"حفظ مکان تقریبی"</string>
     <string name="grant_dialog_button_allow_one_time" msgid="2618088516449706391">"فقط این بار"</string>
-    <string name="grant_dialog_button_allow_background" msgid="8236044729434367833">"همیشه مجاز"</string>
+    <string name="grant_dialog_button_allow_background" msgid="8236044729434367833">"همیشه اجازه داشتن"</string>
     <string name="grant_dialog_button_allow_all_files" msgid="4955436994954829894">"اجازه دادن برای مدیریت همه فایل‌ها"</string>
     <string name="grant_dialog_button_allow_media_only" msgid="4832877658422573832">"اجازه دادن برای دسترسی به فایل‌های رسانه"</string>
     <string name="app_permissions_breadcrumb" msgid="5136969550489411650">"برنامه‌ها"</string>
@@ -110,7 +110,7 @@
     <!-- no translation found for background_access_chooser_dialog_choices:0 (1351721623256561996) -->
     <!-- no translation found for background_access_chooser_dialog_choices:1 (9127301153688725448) -->
     <!-- no translation found for background_access_chooser_dialog_choices:2 (4305536986042401191) -->
-    <string name="permission_access_always" msgid="1474641821883823446">"همیشه مجاز"</string>
+    <string name="permission_access_always" msgid="1474641821883823446">"همیشه اجازه داشتن"</string>
     <string name="permission_access_only_foreground" msgid="7801170728159326195">"مجاز فقط هنگام استفاده از برنامه"</string>
     <string name="permission_access_never" msgid="4647014230217936900">"اجازه ندادن"</string>
     <string name="loading" msgid="4789365003890741082">"درحال بارگیری…"</string>
@@ -128,12 +128,22 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"داشبورد حریم خصوصی"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"اجازه‌های برنامه"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"‏فعالیت Agent"</string>
+    <!-- no translation found for empty_agent_activity_preference_title (7682932823345395104) -->
+    <skip />
+    <!-- no translation found for agent_activity_preference_summary_no_accesses_24h (7194072619746100487) -->
+    <skip />
+    <!-- no translation found for agent_activity_preference_summary_no_accesses_7d (8023811607582607766) -->
+    <skip />
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"فعالیت <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"در ۲۴ ساعت گذشته"</string>
+    <!-- no translation found for agent_activity_timeline_category_title_7d (6957587886375942104) -->
+    <skip />
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"امروز"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"دیروز"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"آخرین دسترسی: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"مشاهده"</string>
+    <!-- no translation found for empty_agent_activity_timeline_preference_title (7099292969424621771) -->
+    <skip />
     <string name="device_assistance_title" msgid="1445976710214822208">"دستیار دستگاه"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"مشاهده برنامه‌هایی که اخیراً از اجازه‌ها استفاده کرده‌اند"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"استفاده از <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
@@ -197,7 +207,7 @@
     <string name="app_permission_button_allow" msgid="5808039516494774647">"اجازه دادن"</string>
     <string name="app_permission_button_allow_all_files" msgid="1792232272599018825">"اجازه دادن برای مدیریت همه فایل‌ها"</string>
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"اجازه دادن فقط برای دسترسی به رسانه‌ها"</string>
-    <string name="app_permission_button_allow_always" msgid="4573292371734011171">"همیشه مجاز"</string>
+    <string name="app_permission_button_allow_always" msgid="4573292371734011171">"همیشه اجازه داشتن"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"مجاز فقط هنگام استفاده از برنامه"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"همه همیشه اجازه داشتن"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"هربار پرسیده شود"</string>
@@ -266,14 +276,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"اجازه داشتن"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"همیشه مجاز بودن"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"مجاز فقط هنگام استفاده"</string>
-    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"مجاز به درحال کار نگه داشتن برنامه"</string>
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"اجازه داشتن برای حفظ کار کردن برنامه"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"مجاز فقط برای دسترسی به رسانه‌ها"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"مجاز برای مدیریت همه فایل‌ها"</string>
     <string name="ask_header" msgid="2633816846459944376">"هربار پرسیده شود"</string>
     <string name="denied_header" msgid="903209608358177654">"اجازه نداشتن"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> در <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"دیدن برنامه‌های دیگری که به همه فایل‌ها دسترسی دارند"</string>
-    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"‏&lt;b&gt;اجازه دارد برنامه را درحال کار نگه دارد&lt;/b&gt;&lt;br&gt;&lt;br&gt;برای اینکه برنامه درحال کار بماند، ممکن است به آن اجازه داده شود به شبکه محلی شما دسترسی داشته باشد و فقط با دستگاه‌های این شبکه متصل شود.&lt;br&gt;&lt;br&gt;برنامه نمی‌تواند بااستفاده از بلوتوث و فناوری‌های دیگر به دستگاه‌ها متصل شود، مگر اینکه به آن اجازه دهید همه دستگاه‌های اطراف را پیدا کند و به آن‌ها متصل شود."</string>
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"‏&lt;b&gt;اجازه داشتن برای حفظ کار کردن برنامه&lt;/b&gt;&lt;br&gt;&lt;br&gt;برای اینکه برنامه همچنان به کار ادامه دهد، ممکن است به آن اجازه داده شود به شبکه محلی شما دسترسی داشته باشد و فقط با دستگاه‌های این شبکه متصل شود.&lt;br&gt;&lt;br&gt;برنامه نمی‌تواند بااستفاده از بلوتوث و فناوری‌های دیگر به دستگاه‌ها متصل شود، مگر اینکه به آن اجازه دهید همه دستگاه‌های اطراف را پیدا کند و به آن‌ها متصل شود."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{یک روز}one{# روز}other{# روز}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# ساعت}one{# ساعت}other{# ساعت}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# دقیقه}one{# دقیقه}other{# دقیقه}}"</string>

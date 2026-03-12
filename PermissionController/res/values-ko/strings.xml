@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"개인 정보 대시보드"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"앱 권한"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"에이전트 활동"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"설치된 에이전트 없음"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"지난 24시간 동안 액세스 없음"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"지난 7일 동안 액세스 없음"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> 활동"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"지난 24시간"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"지난 7일 동안"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"오늘"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"어제"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"마지막 액세스: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"보기"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"액세스 기록 없음"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"기기 지원"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"최근에 권한을 사용한 앱 보기"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> 권한 사용"</string>
@@ -273,7 +278,7 @@
     <string name="denied_header" msgid="903209608358177654">"허용되지 않음"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g>의 <xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"모든 파일에 액세스할 수 있는 앱 더보기"</string>
-    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;앱이 계속 작동하도록 허용됨&lt;/b&gt;&lt;br&gt;&lt;br&gt;앱이 계속 작동하려면 앱이 로컬 네트워크에 액세스하고 이 네트워크의 기기에만 연결하도록 허용될 수 있습니다.&lt;br&gt;&lt;br&gt;앱이 모든 근처 기기를 찾고 연결하도록 허용하지 않는 한 앱은 블루투스 및 기타 기술을 사용하여 기기에 연결할 수 없습니다."</string>
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;앱이 계속 작동하도록 허용됨&lt;/b&gt;&lt;br&gt;&lt;br&gt;앱이 계속 작동하도록 하기 위해 로컬 네트워크에 액세스하고 이 네트워크의 기기에만 연결하도록 허용될 수 있습니다.&lt;br&gt;&lt;br&gt;앱이 모든 근처 기기를 찾고 연결하도록 허용해야 블루투스 및 기타 기술을 사용하여 기기에 연결할 수 있습니다."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1일}other{#일}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{#시간}other{#시간}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{#분}other{#분}}"</string>
