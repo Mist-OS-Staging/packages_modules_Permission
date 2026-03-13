@@ -37,7 +37,10 @@ class LocationButton
 constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
     FrameLayout(context, attrs, defStyleAttr) {
     private val surfaceView: SurfaceView =
-        SurfaceView(context).apply { holder.setFormat(PixelFormat.TRANSPARENT) }
+        SurfaceView(context).apply {
+            visibility = INVISIBLE
+            holder.setFormat(PixelFormat.TRANSPARENT)
+        }
     private val provider: LocationButtonProvider? = LocationButtonProviderFactory.create(context)
     private var session: LocationButtonSession? = null
     private val clientExecutor: Executor = context.mainExecutor
@@ -57,6 +60,7 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
                     session = openedSession
                     surfaceView.setZOrderOnTop(true)
                     surfaceView.setChildSurfacePackage(openedSession.surfacePackage)
+                    surfaceView.visibility = VISIBLE
                 }
             }
         }
