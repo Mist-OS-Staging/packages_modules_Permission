@@ -33,9 +33,11 @@ import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.Until
 import com.android.compatibility.common.util.CddTest
+import com.android.compatibility.common.util.SystemUtil.runShellCommand
 import com.android.interactive.Step
 import com.android.interactive.annotations.Interactive
 import com.android.interactive.annotations.NotFullyAutomated
+import com.android.interactive.steps.locationbutton.VerifyButtonShapeMorphs
 import com.android.interactive.steps.locationbutton.VerifyColorsStep
 import com.android.interactive.steps.locationbutton.VerifySharpCornersStep
 import org.junit.After
@@ -63,7 +65,7 @@ class LocationButtonInteractiveTest {
 
     @After
     fun tearDown() {
-        uiDevice.pressHome()
+        runShellCommand("am force-stop $TEST_APP_PACKAGE_NAME")
     }
 
     @Interactive
@@ -96,6 +98,19 @@ class LocationButtonInteractiveTest {
     fun verifyButtonShapeCustomization() {
         launchLocationButtonApp(cornerRadius = 0f, pressedCornerRadius = 0f)
         assertTrue(Step.execute(VerifySharpCornersStep::class.java))
+    }
+
+    @Interactive
+    @Test
+    @CddTest(requirement = "3.8.18/C-0-1")
+    @NotFullyAutomated(
+        reason =
+            "Visual properties of the Location Button are rendered remotely by SystemUI " +
+                "and cannot be reliably verified via automation."
+    )
+    fun verifyButtonShapeMorphsOnPress() {
+        launchLocationButtonApp(cornerRadius = dpToPx(30).toFloat(), pressedCornerRadius = 0f)
+        assertTrue(Step.execute(VerifyButtonShapeMorphs::class.java))
     }
 
     // TODO: Verify updating locale changes the location button labels.
