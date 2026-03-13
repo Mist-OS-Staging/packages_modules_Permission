@@ -74,13 +74,13 @@ class AllowedForCompatibilityCategoryTest : BaseUsePermissionTest() {
     @Test
     fun testCategorizationByState_permissionApps_nearbyDevices() {
         startManagePermissionAppsActivity(Manifest.permission_group.NEARBY_DEVICES)
-        clickPermissionControllerUi(TEST_APP_NAME)
+        clickPermissionControllerUi(TEST_APP_NAME, MAX_SEARCH_SWIPES)
         clicksDenyInSettings()
         clickDontAllowAnywayButton()
         startManagePermissionAppsActivity(Manifest.permission_group.NEARBY_DEVICES)
         verifyDisplayOrder(listOf(notAllowedCategory, TEST_APP_NAME))
 
-        clickPermissionControllerUi(TEST_APP_NAME)
+        clickPermissionControllerUi(TEST_APP_NAME, MAX_SEARCH_SWIPES)
         clickAllowButton()
         startManagePermissionAppsActivity(Manifest.permission_group.NEARBY_DEVICES)
         verifyDisplayOrder(listOf(allowedCategory, TEST_APP_NAME, allowedForCompatibilityCategory))
@@ -106,13 +106,13 @@ class AllowedForCompatibilityCategoryTest : BaseUsePermissionTest() {
         initialItems.add(nearbyDevicesFooterText)
         verifyDisplayOrder(initialItems)
 
-        clickPermissionControllerUi(nearbyDevicesGroupText)
+        clickPermissionControllerUi(nearbyDevicesGroupText, MAX_SEARCH_SWIPES)
         clicksDenyInSettings()
         clickDontAllowAnywayButton()
         startManageAppPermissionsActivity(TEST_APP_PACKAGE)
         verifyDisplayOrder(listOf(notAllowedCategory, nearbyDevicesGroupText))
 
-        clickPermissionControllerUi(nearbyDevicesGroupText)
+        clickPermissionControllerUi(nearbyDevicesGroupText, MAX_SEARCH_SWIPES)
         clickAllowButton()
         startManageAppPermissionsActivity(TEST_APP_PACKAGE)
         val finalItems = mutableListOf(allowedCategory, nearbyDevicesGroupText)
@@ -185,5 +185,6 @@ class AllowedForCompatibilityCategoryTest : BaseUsePermissionTest() {
         private const val TEST_APP_APK =
             "/data/local/tmp/cts-permissionui/CtsAppThatRequestsInternet36.apk"
         private const val TEST_APP_NAME = "A-CtsAppThatRequestsInternet36"
+        private const val MAX_SEARCH_SWIPES = 15
     }
 }
