@@ -2173,6 +2173,8 @@
             <permission name="android.permission.MANAGE_DEVICE_POLICY_DEBUGGING_FEATURES" />
             <permission name="android.permission.MANAGE_DEVICE_POLICY_CONTENT_PROTECTION" />
             <permission name="android.permission.MANAGE_DEVICE_POLICY_INPUT_METHODS" />
+            <permission name="android.permission.SET_TIME" />
+            <permission name="android.permission.SET_TIME_ZONE" />
         </permissions>
     </role>
 </roles>
