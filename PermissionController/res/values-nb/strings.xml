@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Personvernoversikt"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Apptillatelser"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Agentaktivitet"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Ingen agenter er installert"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Ingen bruk de siste 24 timene"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Ingen bruk de siste 7 dagene"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g>-aktivitet"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"I løpet av de siste 24 timene"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"De siste 7 dagene"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"I dag"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"I går"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Siste tilgang: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Se"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Ingen bruk"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Enhetshjelp"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Se hvilke apper som nylig har brukt tillatelser"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Bruk av <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
@@ -266,14 +271,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"Tillatt"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Tillatt hele tiden"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Tillatt bare når appen brukes"</string>
-    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"Tillatt for å holde appen i gang"</string>
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"Tillatt for at appen skal fungere"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Har bare tilgang til medier"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Kan administrere alle filer"</string>
     <string name="ask_header" msgid="2633816846459944376">"Spør hver gang"</string>
     <string name="denied_header" msgid="903209608358177654">"Ikke tillatt"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> på <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Se flere apper som kan bruke alle filer"</string>
-    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Tillatt for å holde appen i gang&lt;/b&gt;&lt;br&gt;&lt;br&gt;For at en app skal kunne fortsette å fungere, kan den få tillatelse til å bruke det lokale nettverket ditt og koble til enheter i dette nettverket.&lt;br&gt;&lt;br&gt;Appen kan ikke koble til enheter via Bluetooth og andre teknologier, med mindre du gir den tillatelse til å finne og koble til alle enheter i nærheten."</string>
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Tillatt for at appen skal fungere&lt;/b&gt;&lt;br&gt;&lt;br&gt;For å fungere som den skal, kan en app få tillatelse til å bruke det lokale nettverket og koble til enheter der.&lt;br&gt;&lt;br&gt;Appen kan ikke koble til enheter via Bluetooth eller andre teknologier, med mindre du gir den tillatelse til å finne og koble til alle enheter i nærheten."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 dag}other{# dager}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# time}other{# timer}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# minutt}other{# minutter}}"</string>

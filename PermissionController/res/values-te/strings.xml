@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"గోప్యతా డ్యాష్‌బోర్డ్"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"యాప్ అనుమతులు"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"ఏజెంట్ యాక్టివిటీ"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"ఏజెంట్‌లు ఇన్‌స్టాల్ కాలేదు"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"గత 24 గంటల్లో యాక్సెస్ చేయలేదు"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"గత 7 రోజుల్లో యాక్సెస్ చేయలేదు"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> యాక్టివిటీ"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"గత 24 గంటల్లో"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"గత 7 రోజుల్లో"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"ఈరోజు"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"నిన్న"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"చివరిసారి <xliff:g id="TIME_DATE">%1$s</xliff:g>‌కు యాక్సెస్ చేశారు"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"చూడండి"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"యాక్సెస్‌లు ఏవీ లేవు"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"డివైజ్ సహాయం"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ఇటీవల ఏ యాప్‌లు అనుమతులను ఉపయోగించాయో చూడండి"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> వినియోగం"</string>
@@ -266,7 +271,7 @@
     <string name="allowed_header" msgid="7769277978004790414">"అనుమతించినవి"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"అన్ని సమయాలలో అనుమతించబడతాయి"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"ఉపయోగించేటప్పుడు మాత్రమే అనుమతి ఇవ్వాలి"</string>
-    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"యాప్ పని చేస్తూనే ఉండటానికి అనుమతి ఉంది"</string>
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"యాప్ రన్ కావడానికి అనుమతించినవి"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"మీడియాకు మాత్రమే యాక్సెస్ అనుమతించబడినవి"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"ఫైల్స్ అన్నింటినీ మేనేజ్ చేసేందుకు అనుమతించబడినవి"</string>
     <string name="ask_header" msgid="2633816846459944376">"ప్రతిసారి అడగాలి"</string>
@@ -468,7 +473,7 @@
     <string name="home_missing_work_profile_support" msgid="1756855847669387977">"కార్యాలయ ప్రొఫైల్‌కు మద్దతు ఇవ్వదు"</string>
     <string name="home_confirmation_title" msgid="8070603501839126093">"మీ ఆటోమేటిక్ Home యాప్‌ను &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌కు మార్చాలా?"</string>
     <string name="home_confirmation_message" msgid="248811491851505593">"ఇది మీ మొదటి స్క్రీన్‌ను రీప్లేస్ చేస్తుంది, మీ డివైజ్‌లోని ఫీచర్‌లకు యాక్సెస్‌ను ప్రభావితం చేయవచ్చు.&lt;br&gt;&lt;br&gt;మీరు &lt;b&gt;ఆటోమేటిక్ Home యాప్&lt;/b&gt; సెట్టింగ్‌లలో ఎప్పుడైనా ఈ ఎంపికను మార్చవచ్చు."</string>
-    <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"చిన్న గమనిక: మీరు భద్రత కోసం స్క్రీన్ లాక్‌ని సెటప్‌ చేసి పెట్టుకున్నారు పైగా మీ పరికరాన్ని పునఃప్రారంభించినట్టున్నారు కనుక స్క్రీన్ లాక్ అయ్యిపోయింది. మీరు పాస్‌వర్డ్‌ని నమోదు చేసేవరకూ ఈ యాప్ ప్రారంభం కాదు."</string>
+    <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"గమనిక: మీరు భద్రత కోసం స్క్రీన్ లాక్‌ను సెటప్‌ చేసి పెట్టుకున్నారు, పైగా మీ డివైజ్‌ను రీస్టార్ట్ చేయాలనుకుంటున్నారు కనుక స్క్రీన్ లాక్ అయింది. మీరు పాస్‌వర్డ్‌ను ఎంటర్ చేసే వరకూ ఈ యాప్ ప్రారంభం కాదు."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"మీ స్క్రీన్‌పై కనిపించే లేదా యాప్‌లలో యాక్సెస్ చేసే సమాచారంతో పాటు మీ సిస్టమ్‌లో వినియోగంలో ఉన్న యాప్‌ల గురించిన సమాచారాన్ని Assistant చదవగలుగుతుంది."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"మీ డిజిటల్ అసిస్టెంట్ యాప్‌ను &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;‌కు మార్చాలా?"</string>
     <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"ఈ అసిస్టెంట్, మీ మెసేజ్‌ల వంటి సమాచారాన్ని యాక్సెస్ చేయగలదు. అలాగే యాప్‌లు దానితో షేర్ చేయడానికి ఎంచుకున్న డేటాను కూడా యాక్సెస్ చేయగలదు."</string>
@@ -703,7 +708,7 @@
 </xliff:g>స్కామర్‌లు మిమ్మల్ని కొత్త సోర్స్ నుండి తెలియని యాప్‌లను ఇన్‌స్టాల్ చేయమని అడగడం ద్వారా హానికరమైన యాప్‌లను ఇన్‌స్టాల్ చేయడానికి ట్రై చేయవచ్చు."</string>
     <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
 
-</xliff:g>స్కామర్‌లు మిమ్నల్ని యాప్ కోసం యాక్సెసిబిలిటీ యాక్సెస్‌ను అనుమతించమని అడగడం ద్వారా మీ పరికరాన్ని కంట్రోల్ చేసే అవకాశం ఉంది."</string>
+</xliff:g>స్కామర్‌లు యాప్ కోసం యాక్సెసిబిలిటీ యాక్సెస్‌ను అనుమతించమని అడగడం ద్వారా మీ డివైజ్‌ను కంట్రోల్ చేసే అవకాశం ఉంది."</string>
     <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"యాప్ <xliff:g id="PERMISSION_NAME">%1$s</xliff:g>‌కు యాక్సెస్ తిరస్కరించబడింది"</string>
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"మీ వ్యక్తిగత, ఆర్థిక సమాచారాన్ని ప్రమాదంలో పడేసే గోప్యమైన సమాచార యాక్సెస్ అనుమతికి యాప్ యాక్సెస్‌ను రిక్వెస్ట్ చేయడం జరిగింది.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>ఈ అదనపు అవసరాలు గల అనుమతి లేకుండా యాప్ సరిగ్గా పని చేయకపోయే అవకాశం ఉంది. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;యాక్సెస్‌ను అనుమతించడం ఎలాగో తెలుసుకోండి&lt;/a&gt;"</string>

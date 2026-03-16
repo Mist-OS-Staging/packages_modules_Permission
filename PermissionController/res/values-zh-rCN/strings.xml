@@ -128,12 +128,22 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"隐私信息中心"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"应用权限"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"智能体活动"</string>
+    <!-- no translation found for empty_agent_activity_preference_title (7682932823345395104) -->
+    <skip />
+    <!-- no translation found for agent_activity_preference_summary_no_accesses_24h (7194072619746100487) -->
+    <skip />
+    <!-- no translation found for agent_activity_preference_summary_no_accesses_7d (8023811607582607766) -->
+    <skip />
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"“<xliff:g id="APP_NAME">%1$s</xliff:g>”活动"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"过去 24 小时内"</string>
+    <!-- no translation found for agent_activity_timeline_category_title_7d (6957587886375942104) -->
+    <skip />
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"今天"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"昨天"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"上次访问时间：<xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"查看"</string>
+    <!-- no translation found for empty_agent_activity_timeline_preference_title (7099292969424621771) -->
+    <skip />
     <string name="device_assistance_title" msgid="1445976710214822208">"设备协助"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"查看最近使用过权限的应用"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>使用情况"</string>
@@ -266,14 +276,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"已允许"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"始终允许"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"仅在使用时允许"</string>
-    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"允许应用保持运行"</string>
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"以下应用获允访问本地网络，以确保应用正常运行"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"仅获准访问媒体文件"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"获准管理所有文件"</string>
     <string name="ask_header" msgid="2633816846459944376">"每次都询问"</string>
     <string name="denied_header" msgid="903209608358177654">"不允许"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g>上的<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"查看更多可以访问所有文件的应用"</string>
-    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;允许应用保持运行&lt;/b&gt;&lt;br&gt;&lt;br&gt;为了让应用保持运行，系统可能会允许其访问您的本地网络，并仅与此网络中的设备连接。&lt;br&gt;&lt;br&gt;除非您允许应用查找并连接到附近的所有设备，否则该应用无法使用蓝牙和其他技术连接到设备。"</string>
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;以下应用获允访问本地网络，以确保应用正常运行&lt;/b&gt;&lt;br&gt;&lt;br&gt;为了让应用保持运行，系统可能会允许其访问您的本地网络，并仅与此网络中的设备连接。&lt;br&gt;&lt;br&gt;除非您允许该应用查找并连接到附近的所有设备，否则该应用无法使用蓝牙和其他技术连接到设备。"</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 天}other{# 天}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# 小时}other{# 小时}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# 分钟}other{# 分钟}}"</string>

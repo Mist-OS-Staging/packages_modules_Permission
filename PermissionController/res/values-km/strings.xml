@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"ផ្ទាំងគ្រប់គ្រង​ឯកជនភាព"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"ការអនុញ្ញាតកម្មវិធី"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"សកម្មភាពភ្នាក់ងារ"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"មិនបានដំឡើងភ្នាក់ងារទេ"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"គ្មានការចូលប្រើរយៈពេល 24 ម៉ោងចុងក្រោយ"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"គ្មានការចូលប្រើរយៈពេល 7 ថ្ងៃចុងក្រោយ"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"សកម្មភាព <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"ក្នុងរយៈពេល 24 ម៉ោងចុងក្រោយ"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"ក្នុងរយៈពេល 7 ថ្ងៃចុងក្រោយ"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"ថ្ងៃនេះ"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"ម្សិលមិញ"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"ការចូលប្រើ​ចុងក្រោយម៉ោង <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"មើល"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"គ្មានការចូលប្រើ"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"ជំនួយឧបករណ៍"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"មើលកម្មវិធី​ដែលបានប្រើ​ការអនុញ្ញាតនា​ពេលថ្មីៗនេះ"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"ការប្រើប្រាស់​<xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

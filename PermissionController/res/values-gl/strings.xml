@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Panel de privacidade"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Permisos de aplicacións"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Actividade do axente"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Ningún axente instalado"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Sen accesos nas últimas 24 h"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Sen accesos nos últimos 7 días"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Actividade en <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Nas últimas 24 horas"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"Nos últimos 7 días"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Hoxe"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Onte"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Último acceso: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Ver"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Sen accesos"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Asistencia do dispositivo"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Mira as aplicacións que utilizaron permisos recentemente"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Uso do permiso (<xliff:g id="PERMGROUP">%1$s</xliff:g>)"</string>
@@ -361,7 +366,7 @@
     <string name="no_apps_allowed" msgid="7718822655254468631">"A ningunha aplicación se lle concedeu o permiso"</string>
     <string name="no_apps_allowed_full" msgid="8011716991498934104">"Non hai aplicacións permitidas para todos os ficheiros"</string>
     <string name="no_apps_allowed_scoped" msgid="4908850477787659501">"Non hai aplicacións permitidas só para ficheiros multimedia"</string>
-    <string name="no_apps_denied" msgid="7663435886986784743">"A ningunha aplicación se lle denegou o permiso"</string>
+    <string name="no_apps_denied" msgid="7663435886986784743">"Non se denegou o permiso a ningunha aplicación"</string>
     <string name="car_permission_selected" msgid="180837028920791596">"Seleccionouse"</string>
     <string name="settings" msgid="5409109923158713323">"Configuración"</string>
     <string name="accessibility_service_dialog_title_single" msgid="7956432823014102366">"<xliff:g id="SERVICE_NAME">%s</xliff:g> ten acceso total ao teu dispositivo"</string>

@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Kontrolna tabla za privatnost"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Odobrenja za aplikaciju"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Aktivnost agenta"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Nema instaliranih agenata"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Bez pristupa u zadnja 24 sata"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Bez pristupa u zadnjih 7 dana"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Aktivnost aplikacije <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"U protekla 24 sata"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"U zadnjih sedam dana"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Danas"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Jučer"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Posljednji pristup <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Pregled"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Nema pristupa"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Pomoć za uređaj"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Prikaz aplikacija koje su nedavno koristile odobrenja"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Korištenje odobrenja za: <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
@@ -759,6 +764,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Dozvolite aplikaciji <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> da pristupa informacijama i sadržaju iz aplikacije koja je otvorena na ekranu"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Dozvoli"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Nemoj dozvoliti"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Želite li aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> dopustiti da pristupa točnoj lokaciji kad je odlučite podijeliti?"</string>
-    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"Kad dijelite točnu lokaciju, ova će aplikacija imati pristup toj lokaciji dok ne zatvorite aplikaciju"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Dozvoliti aplikaciji &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; da pristupa tačnoj lokaciji kada je podijelite?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"Kada dijelite tačnu lokaciju ova aplikacija će joj imati pristup dok je ne zatvorite"</string>
 </resources>

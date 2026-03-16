@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Panel ochrany soukromí"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Oprávnění k aplikacím"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Aktivita agenta"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Žádní agenti"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Žádné přístupy za posledních 24 hodin"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Žádné přístupy za posledních 7 dní"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Aktivita aplikace <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"V posledních 24 hodinách"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"Za posledních 7 dní"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Dnes"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Včera"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Poslední přístup: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Zobrazit"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Žádné přístupy"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Asistence pro zařízení"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Zobrazit aplikace, které v poslední době využily oprávnění"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> – používání"</string>
@@ -273,7 +278,7 @@
     <string name="denied_header" msgid="903209608358177654">"Přístup zakázán"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> na <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Zobrazit další aplikace s přístupem ke všem souborům"</string>
-    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Povoleno, aby aplikace mohla fungovat&lt;/b&gt;&lt;br&gt;&lt;br&gt;Aby aplikace fungovala, může mít povoleno přistupovat k vaší místní síti a připojovat se pouze k zařízením v této síti.&lt;br&gt;&lt;br&gt;Aplikace se nemůže připojovat k zařízením pomocí Bluetooth a dalších technologií, pokud jí nepovolíte vyhledávat a připojovat se ke všem zařízením v okolí."</string>
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Povoleno, aby aplikace mohla fungovat&lt;/b&gt;&lt;br&gt;&lt;br&gt;Aby aplikace fungovala, může mít povolený přístup k vaší místní síti a připojovat se pouze k zařízením v této síti.&lt;br&gt;&lt;br&gt;Aplikace se nemůže připojovat k zařízením pomocí Bluetooth a dalších technologií, pokud jí nepovolíte vyhledávat a připojovat se ke všem zařízením v okolí."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 den}few{# dny}many{# dne}other{# dní}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# hodinu}few{# hodiny}many{# hodiny}other{# hodin}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# minuta}few{# minuty}many{# minuty}other{# minut}}"</string>
