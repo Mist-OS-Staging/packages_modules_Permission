@@ -1517,6 +1517,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
                     permission in MEDIA_PERMISSIONS
             if (shouldShowStorageWarning) {
                 if (isWatch) {
+                    scrollToBottom()
                     click(
                         By.desc(
                                 getPermissionControllerString(
