@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Painel de privacidade"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Autorizações de apps"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Atividade do agente"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Nenhum agente instalado"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Sem acessos nas últ. 24 horas"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Sem acessos nos últimos 7 dias"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Atividade da app <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Nas últimas 24 horas"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"Nos últimos 7 dias"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Hoje"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Ontem"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Último acesso: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Ver"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Sem acessos"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Assistência do dispositivo"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Veja que apps utilizaram autorizações recentemente"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Utilização de <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

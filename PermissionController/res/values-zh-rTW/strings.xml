@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"隱私資訊主頁"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"應用程式權限"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"代理程式活動"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"未安裝任何代理"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"過去 24 小時內沒有存取記錄"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"過去 7 天內沒有存取記錄"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"「<xliff:g id="APP_NAME">%1$s</xliff:g>」活動"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"過去 24 小時"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"過去 7 天內"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"今天"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"昨天"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"上次存取時間：<xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"查看"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"無存取記錄"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"裝置協助"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"查看最近曾使用權限的應用程式"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>使用情況"</string>
@@ -273,7 +278,7 @@
     <string name="denied_header" msgid="903209608358177654">"不允許"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g>上的<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"查看可存取所有檔案的其他應用程式"</string>
-    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;允許應用程式繼續運作&lt;/b&gt;&lt;br&gt;&lt;br&gt;為確保應用程式持續運作，系統可能會允許應用程式存取你的區域網路，並與該網路上的裝置連線。&lt;br&gt;&lt;br&gt;你必須允許應用程式尋找所有鄰近裝置並進行連線，應用程式才能使用藍牙和其他技術與裝置連線。"</string>
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;允許應用程式繼續運作&lt;/b&gt;&lt;br&gt;&lt;br&gt;為確保應用程式持續運作，系統可能會允許應用程式存取你的區域網路，並僅與該網路上的裝置連線。&lt;br&gt;&lt;br&gt;你必須允許應用程式尋找所有鄰近裝置並進行連線，應用程式才能使用藍牙和其他技術與裝置連線。"</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 天}other{# 天}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# 小時}other{# 小時}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# 分鐘}other{# 分鐘}}"</string>

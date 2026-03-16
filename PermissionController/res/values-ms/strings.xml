@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Papan pemuka privasi"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Kebenaran apl"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Aktiviti ejen"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Tiada ejen dipasang"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Tiada akses 24 jam yang lalu"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Tiada akses 7 hari yang lalu"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Aktiviti <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Dalam tempoh 24 jam yang lalu"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"Dalam tempoh 7 hari yang lalu"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Hari ini"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Semalam"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Akses terakhir pada <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Paparan"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Tiada akses"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Bantuan Peranti"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Lihat apl yang menggunakan kebenaran baru-baru ini"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Penggunaan <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
@@ -759,8 +764,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Benarkan <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> mengakses maklumat dan kandungan daripada apl yang dibuka pada skrin anda"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Benarkan"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Jangan benarkan"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Benarkan &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; mengakses lokasi tepat apabila anda memilih untuk berkongsi lokasi tersebut?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"Apabila anda berkongsi, apl ini akan mendapat akses kepada lokasi tepat sehingga anda menutup apl"</string>
 </resources>

@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Panel de privacidad"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Permisos de apps"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Actividad de Agent"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"No hay agentes instalados"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Sin accesos en últimas 24 h"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Sin accesos en los últimos 7 d"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Actividad en <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"En las últimas 24 horas"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"En los últimos 7 días"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Hoy"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Ayer"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Último acceso: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Ver"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Sin accesos"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Asistencia para dispositivos"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Consulta qué apps usaron permisos recientemente"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Uso de <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
@@ -266,7 +271,7 @@
     <string name="allowed_header" msgid="7769277978004790414">"Con permiso"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Con permiso permanente"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Con permiso solo durante el uso"</string>
-    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"Permite que la app siga funcionando"</string>
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"Permitido para que la app siga funcionando"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Pueden acceder solo a contenido multimedia"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Pueden administrar todos los archivos"</string>
     <string name="ask_header" msgid="2633816846459944376">"Preguntar siempre"</string>

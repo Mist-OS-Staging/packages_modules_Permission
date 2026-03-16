@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Tableau de bord Confidentialité"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Autorisations des applications"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Activité de l\'agent"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Aucun agent installé"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Aucun accès les dernières 24 h"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Aucun accès les 7 derniers jours"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Activité <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Au cours des dernières 24 heures"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"au cours des 7 derniers jours"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Aujourd\'hui"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Hier"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Dernier accès : <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Afficher"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Aucun accès"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Assistance Appareil"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Voir les applis qui ont récemment utilisé des autorisations"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Utilisation <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

@@ -128,12 +128,22 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Dashboard della privacy"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Autorizzazioni app"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Attività dell\'agente"</string>
+    <!-- no translation found for empty_agent_activity_preference_title (7682932823345395104) -->
+    <skip />
+    <!-- no translation found for agent_activity_preference_summary_no_accesses_24h (7194072619746100487) -->
+    <skip />
+    <!-- no translation found for agent_activity_preference_summary_no_accesses_7d (8023811607582607766) -->
+    <skip />
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Attività <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Nelle ultime 24 ore"</string>
+    <!-- no translation found for agent_activity_timeline_category_title_7d (6957587886375942104) -->
+    <skip />
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Oggi"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Ieri"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Ultimo accesso: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Visualizza"</string>
+    <!-- no translation found for empty_agent_activity_timeline_preference_title (7099292969424621771) -->
+    <skip />
     <string name="device_assistance_title" msgid="1445976710214822208">"Assistenza dispositivo"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Vedi quali app hanno usato le autorizzazioni di recente"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Uso di <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
@@ -263,17 +273,17 @@
     <string name="app_permission_most_recent_denied_summary" msgid="7659497197737708112">"Al momento rifiutata/Ultimo accesso: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="app_permission_never_accessed_summary" msgid="401346181461975090">"Accesso mai eseguito"</string>
     <string name="app_permission_never_accessed_denied_summary" msgid="6596000497490905146">"Rifiutata/Accesso mai effettuato"</string>
-    <string name="allowed_header" msgid="7769277978004790414">"Autorizzata"</string>
-    <string name="allowed_always_header" msgid="6455903312589013545">"Autorizzazione sempre concessa"</string>
-    <string name="allowed_foreground_header" msgid="6845655788447833353">"Autorizzazione concessa solo se in uso"</string>
+    <string name="allowed_header" msgid="7769277978004790414">"Autorizzate"</string>
+    <string name="allowed_always_header" msgid="6455903312589013545">"Sempre autorizzate"</string>
+    <string name="allowed_foreground_header" msgid="6845655788447833353">"Autorizzate solo se in uso"</string>
     <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"L\'app può continuare a funzionare"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Autorizzate solo per contenuti multimediali"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Autorizzate per gestire tutti i file"</string>
     <string name="ask_header" msgid="2633816846459944376">"Chiedi ogni volta"</string>
-    <string name="denied_header" msgid="903209608358177654">"Non autorizzata"</string>
+    <string name="denied_header" msgid="903209608358177654">"Non autorizzate"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> su <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Visualizza altre app che possono accedere a tutti i file"</string>
-    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Autorizzazione per mantenere l\'app in funzione&lt;/b&gt;&lt;br&gt;&lt;br&gt;Per continuare a funzionare, un\'app potrebbe avere l\'autorizzazione ad accedere alla tua rete locale e connettersi solo ai dispositivi su questa rete.&lt;br&gt;&lt;br&gt;L\'app non può connettersi ai dispositivi tramite Bluetooth e ad altri dispositivi tecnologici a meno che tu non le consenta di trovare e connettersi a tutti i dispositivi nelle vicinanze."</string>
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;L\'app può continuare a funzionare&lt;/b&gt;&lt;br&gt;&lt;br&gt;Per continuare a funzionare, un\'app potrebbe avere l\'autorizzazione ad accedere alla tua rete locale e connettersi solo ai dispositivi su questa rete.&lt;br&gt;&lt;br&gt;L\'app non può connettersi ai dispositivi tramite Bluetooth e altre tecnologie a meno che tu non le consenta di trovare e connettersi a tutti i dispositivi nelle vicinanze."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 giorno}many{# di giorni}other{# giorni}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# ora}many{# di ore}other{# ore}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# minuto}many{# di minuti}other{# minuti}}"</string>
@@ -525,7 +535,7 @@
     <string name="permgrouprequest_device_aware_read_media_visual" msgid="3122576538319059333">"Consentire a &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; di accedere a foto e video su &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="permgrouprequest_more_photos" msgid="128933814654231321">"Consentire all\'app &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; di accedere ad altri video e foto sul dispositivo?"</string>
     <string name="permgrouprequest_device_aware_more_photos" msgid="1703469013613723053">"Consentire a &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; di accedere ad altri video e foto su &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;?"</string>
-    <string name="permgrouprequest_microphone" msgid="2825208549114811299">"Consentire all\'app &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; di registrare audio?"</string>
+    <string name="permgrouprequest_microphone" msgid="2825208549114811299">"Consentire a &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; di registrare audio?"</string>
     <string name="permgrouprequest_device_aware_microphone" msgid="8821701550505437951">"Consentire a &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; di registrare audio su &lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;?"</string>
     <string name="permgrouprequestdetail_microphone" msgid="8510456971528228861">"L\'app potrà registrare audio soltanto quando la usi"</string>
     <string name="permgroupbackgroundrequest_microphone" msgid="8874462606796368183">"Vuoi consentire all\'app &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; di registrare audio?"</string>

@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"ແຜງໜ້າປັດຄວາມເປັນສ່ວນຕົວ"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"ການອະນຸຍາດແອັບ"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"ການເຄື່ອນໄຫວຂອງຕົວແທນ"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"ບໍ່ໄດ້ຕິດຕັ້ງ Agent"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"ບໍ່ມີການເຂົ້າເຖິງໃນຊ່ວງ 24 ຊົ່ວໂມງທີ່ຜ່ານມາ"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"ບໍ່ມີການເຂົ້າເຖິງໃນຊ່ວງ 7 ມື້ທີ່ຜ່ານມາ"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"ການເຄື່ອນໄຫວ <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"ໃນໄລຍະ 24 ຊົ່ວໂມງທີ່ຜ່ານມາ"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"ໃນຊ່ວງ 7 ມື້ທີ່ຜ່ານມາ"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"ມື້ນີ້"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"ມື້ວານ"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"ເຂົ້າເຖິງຫຼ້າສຸດ <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"ເບິ່ງ"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"ບໍ່ມີການເຂົ້າເຖິງ"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"ຄວາມຊ່ວຍເຫຼືອກ່ຽວກັບອຸປະກອນ"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ເບິ່ງວ່າແອັບໃດໃຊ້ການອະນຸຍາດຫຼ້າສຸດ"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"ການນໍາໃຊ້ <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

@@ -128,12 +128,22 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Privatlivspanel"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Apptilladelser"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Agentaktivitet"</string>
+    <!-- no translation found for empty_agent_activity_preference_title (7682932823345395104) -->
+    <skip />
+    <!-- no translation found for agent_activity_preference_summary_no_accesses_24h (7194072619746100487) -->
+    <skip />
+    <!-- no translation found for agent_activity_preference_summary_no_accesses_7d (8023811607582607766) -->
+    <skip />
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g>-aktivitet"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Inden for de seneste 24 timer"</string>
+    <!-- no translation found for agent_activity_timeline_category_title_7d (6957587886375942104) -->
+    <skip />
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"I dag"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"I går"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Seneste adgang: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Se"</string>
+    <!-- no translation found for empty_agent_activity_timeline_preference_title (7099292969424621771) -->
+    <skip />
     <string name="device_assistance_title" msgid="1445976710214822208">"Enhedshjælp"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Se, hvilke apps der har brugt tilladelser for nylig"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Brug af <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
@@ -368,8 +378,8 @@
     <string name="accessibility_service_dialog_title_multiple" msgid="5527879210683548175">"<xliff:g id="NUM_SERVICES">%s</xliff:g> apps med hjælpefunktioner har fuld adgang til din enhed"</string>
     <string name="accessibility_service_dialog_bottom_text_single" msgid="1128666197822205958">"<xliff:g id="SERVICE_NAME">%s</xliff:g> kan se din skærm, dine handlinger og dine input samt udføre handlinger og styre skærmen"</string>
     <string name="accessibility_service_dialog_bottom_text_multiple" msgid="7009848932395519852">"Disse apps kan se din skærm, dine handlinger og dine input samt udføre handlinger og styre skærmen."</string>
-    <string name="role_assistant_label" msgid="4727586018198208128">"Standardapp for digital assistent"</string>
-    <string name="role_assistant_short_label" msgid="3369003713187703399">"App for digital assistent"</string>
+    <string name="role_assistant_label" msgid="4727586018198208128">"Standardapp til digital assistent"</string>
+    <string name="role_assistant_short_label" msgid="3369003713187703399">"App til digital assistent"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"Assistanceapps kan hjælpe dig på baggrund af oplysningerne på den aktuelle skærm. Nogle apps understøtter både startertjenester og tjenester til indtaling for at give dig integreret assistance."</string>
     <string name="role_assistant_recommended_title" msgid="2093873159106905257">"Anbefalet af <xliff:g id="OEM_NAME">%s</xliff:g>"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"Standardapp til browsing"</string>

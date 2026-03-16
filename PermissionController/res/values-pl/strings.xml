@@ -128,12 +128,17 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Panel prywatności"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Uprawnienia aplikacji"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Aktywność agenta"</string>
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Brak zainstalowanych agentów"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Brak wejść w ostatnie 24 godz."</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Brak wejść w ostatnie 7 dni"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> – aktywność"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Z ostatnich 24 godzin"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"W ciągu ostatnich 7 dni"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Dzisiaj"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Wczoraj"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Ostatnie użycie: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Wyświetl"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Brak wejść"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Pomoc na urządzeniu"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Wyświetl aplikacje, które ostatnio używały uprawnień"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> – korzystanie z uprawnienia"</string>
@@ -759,8 +764,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Zezwól aplikacji <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> na dostęp do informacji i treści z aplikacji otwartej na ekranie"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Zezwól"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Nie zezwalaj"</string>
-    <!-- no translation found for request_location_button_permissions_dialog_title (1305012762950180684) -->
-    <skip />
-    <!-- no translation found for request_location_button_permissions_dialog_subtitle (4401187641885414225) -->
-    <skip />
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Zezwolić aplikacji &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; na dostęp do dokładnej lokalizacji, gdy zdecydujesz się ją udostępnić?"</string>
+    <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"Gdy włączysz udostępnianie, aplikacja będzie mieć dostęp do dokładnej lokalizacji, dopóki jej nie zamkniesz"</string>
 </resources>
