@@ -133,6 +133,10 @@ class LocationButtonViewModel(
                 LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__DIRECT_GRANT
             else LOCATION_BUTTON_REQUEST_RESULT_REPORTED__RESULT__PROMPT_GRANT
         val coarsePermission = appPermGroup.permissions[ACCESS_COARSE_LOCATION]!!
+        // Do not save Trusted UI consent if coarse is permanently granted, because in
+        // settings we don't show "... or allow when you share".
+        val shouldSetTrustedUiFlag = !coarsePermission.isGranted || coarsePermission.isOneTime
+
         // Grant coarse permission, if not granted.
         if (!coarsePermission.isGranted) {
             appPermGroup =
@@ -148,7 +152,7 @@ class LocationButtonViewModel(
             group = appPermGroup,
             filterPermissions = listOf(ACCESS_FINE_LOCATION),
             isOneTime = true,
-            isTrustedUi = true,
+            isTrustedUi = shouldSetTrustedUiFlag,
         )
 
         val bundle =

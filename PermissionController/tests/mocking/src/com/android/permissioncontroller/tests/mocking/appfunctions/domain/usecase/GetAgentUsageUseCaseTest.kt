@@ -231,6 +231,86 @@ class GetAgentUsageUseCaseTest {
         assertThat(result).hasSize(0)
     }
 
+    @Test
+    @RequiresFlagsEnabled(
+        Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED,
+        FLAG_ENABLE_APP_INTERACTION_API,
+    )
+    fun getAgentUsages_shellAgentWithNoActivity_isExcluded() = runTest {
+        assumeTrue(
+            "Skipping: Feature not supported on Auto when flag is disabled",
+            !isAutomotive() || Flags.automotivePrivacyDashboardAgentActivityEnabled(),
+        )
+        val now = System.currentTimeMillis()
+        val accessHistory =
+            listOf(
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_1,
+                    accessTime = now - TimeUnit.HOURS.toMillis(1),
+                )
+            )
+        // com.android.shell holds the permission but has no access history
+        val agents = listOf(AGENT_NAME_1, SHELL_PACKAGE_NAME)
+        val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
+        val packageRepository = FakePackageRepository(agents = agents)
+        val userRepository = FakeUserRepository(currentUserProfiles = listOf(USER_ID_1))
+        useCase =
+            GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository, userRepository)
+
+        val result = useCase(mockContext)
+
+        // Verify that the normal agent is present, but the shell agent is excluded because it has
+        // no activity.
+        assertThat(result)
+            .containsExactly(
+                AgentActivityItem(AGENT_NAME_1, USER_1, 1, 1),
+            )
+    }
+
+    @Test
+    @RequiresFlagsEnabled(
+        Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED,
+        FLAG_ENABLE_APP_INTERACTION_API,
+    )
+    fun getAgentUsages_shellAgentWithActivity_isIncluded() = runTest {
+        assumeTrue(
+            "Skipping: Feature not supported on Auto when flag is disabled",
+            !isAutomotive() || Flags.automotivePrivacyDashboardAgentActivityEnabled(),
+        )
+        val now = System.currentTimeMillis()
+        val accessHistory =
+            listOf(
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_1,
+                    accessTime = now - TimeUnit.HOURS.toMillis(1),
+                ),
+                // com.android.shell has access history
+                createAccessHistory(
+                    agentPackageName = SHELL_PACKAGE_NAME,
+                    targetPackageName = TARGET_NAME_2,
+                    accessTime = now - TimeUnit.HOURS.toMillis(2),
+                )
+            )
+        // Both agents hold the permission
+        val agents = listOf(AGENT_NAME_1, SHELL_PACKAGE_NAME)
+        val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
+        val packageRepository = FakePackageRepository(agents = agents)
+        val userRepository = FakeUserRepository(currentUserProfiles = listOf(USER_ID_1))
+        useCase =
+            GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository, userRepository)
+
+        val result = useCase(mockContext)
+
+        // Verify that both agents are present in the result, including shell.
+        assertThat(result)
+            .containsExactly(
+                AgentActivityItem(AGENT_NAME_1, USER_1, 1, 1),
+                AgentActivityItem(SHELL_PACKAGE_NAME, USER_1, 1, 1)
+            )
+    }
+
     private fun createAccessHistory(
         agentPackageName: String,
         targetPackageName: String,
@@ -246,6 +326,7 @@ class GetAgentUsageUseCaseTest {
         const val AGENT_NAME_1 = "agent1"
         const val AGENT_NAME_2 = "agent2"
         const val AGENT_NAME_3 = "agent3"
+        const val SHELL_PACKAGE_NAME = "com.android.shell"
         const val TARGET_NAME_1 = "target1"
         const val TARGET_NAME_2 = "target2"
         const val TARGET_NAME_3 = "target3"

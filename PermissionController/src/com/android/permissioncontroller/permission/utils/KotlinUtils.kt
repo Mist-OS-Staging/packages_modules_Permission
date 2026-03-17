@@ -267,7 +267,7 @@ object KotlinUtils {
 
     @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.CINNAMON_BUN, codename = "CinnamonBun")
     fun isLocationPermissionNewRadioButtonsEnabled(context: Context): Boolean {
-        return SdkLevel.isAtLeastB() &&
+        return SdkLevel.isAtLeastC() &&
             android.permission.flags.Flags.locationPermissionNewRadioButtonsEnabled() &&
             !DeviceUtils.isAuto(context) &&
             !DeviceUtils.isTelevision(context) &&
