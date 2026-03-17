@@ -22,6 +22,7 @@ import com.android.permissioncontroller.appfunctions.AppFunctionsUtil
 import com.android.permissioncontroller.appinteraction.data.repository.AppInteractionRepository
 import com.android.permissioncontroller.appinteraction.domain.model.v37.AccessHistory
 import com.android.permissioncontroller.appinteraction.domain.model.v37.AgentTimelineItem
+import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
 import java.time.Instant
 import java.util.concurrent.TimeUnit
 import kotlin.math.max
@@ -32,7 +33,10 @@ import kotlin.math.max
  *
  * @param appInteractionRepository The repository to use to get the agent usages
  */
-class GetAgentUsageDetailsUseCase(private val appInteractionRepository: AppInteractionRepository) {
+class GetAgentUsageDetailsUseCase(
+    private val appInteractionRepository: AppInteractionRepository,
+    private val packageRepository: PackageRepository,
+) {
     suspend operator fun invoke(
         context: Context,
         agentPackageName: String,
@@ -42,6 +46,7 @@ class GetAgentUsageDetailsUseCase(private val appInteractionRepository: AppInter
             return emptyMap()
         }
 
+        val agentUid = packageRepository.getPackageUid(agentPackageName, user)
         val accessHistories = appInteractionRepository.getAccessHistory(context, user)
         val deviceAssistancePackageNames =
             appInteractionRepository.getDeviceAssistancePackageNames(context).toSet()
@@ -67,11 +72,11 @@ class GetAgentUsageDetailsUseCase(private val appInteractionRepository: AppInter
                     }
                 if (accessHistory.accessTime > timeStamp24Hours) {
                     map[KEY_PAST_24_HOURS]!![agentAccessKey] =
-                        createAgentAccessInfo(accessHistory, user, isDeviceAssistance)
+                        createAgentAccessInfo(agentUid, accessHistory, user, isDeviceAssistance)
                 }
                 if (accessHistory.accessTime > timeStamp7Days) {
                     map[KEY_PAST_7_DAYS]!![agentAccessKey] =
-                        createAgentAccessInfo(accessHistory, user, isDeviceAssistance)
+                        createAgentAccessInfo(agentUid, accessHistory, user, isDeviceAssistance)
                 }
                 map
             }
@@ -79,11 +84,13 @@ class GetAgentUsageDetailsUseCase(private val appInteractionRepository: AppInter
     }
 
     private fun createAgentAccessInfo(
+        agentUid: Int,
         accessHistory: AccessHistory,
         user: UserHandle,
         isDeviceAssistance: Boolean,
     ): AgentTimelineItem =
         AgentTimelineItem(
+            agentUid,
             accessHistory.agentPackageName,
             accessHistory.targetPackageName,
             user,
