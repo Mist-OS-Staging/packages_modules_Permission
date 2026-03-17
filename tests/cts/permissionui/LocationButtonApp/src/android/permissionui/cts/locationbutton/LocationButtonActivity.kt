@@ -28,6 +28,9 @@ class LocationButtonActivity : Activity() {
         val height = intent.getIntExtra(EXTRA_HEIGHT, ViewGroup.LayoutParams.WRAP_CONTENT)
 
         val locationButton = LocationButton(this)
+        if (intent.hasExtra(EXTRA_TEXT_TYPE)) {
+            locationButton.textType = intent.getIntExtra(EXTRA_TEXT_TYPE, 0)
+        }
         val buttonParams =
             FrameLayout.LayoutParams(width, height).apply { gravity = android.view.Gravity.CENTER }
 
@@ -47,5 +50,6 @@ class LocationButtonActivity : Activity() {
     companion object {
         const val EXTRA_WIDTH = "width"
         const val EXTRA_HEIGHT = "height"
+        const val EXTRA_TEXT_TYPE = "text_type"
     }
 }
