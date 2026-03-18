@@ -35,6 +35,7 @@ import com.google.testing.junit.testparameterinjector.TestParameterInjector
 import java.util.Locale
 import org.junit.After
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Assume.assumeFalse
 import org.junit.Before
 import org.junit.Rule
@@ -216,6 +217,47 @@ class LocationButtonTest : BaseUsePermissionTest() {
 
         waitFindObject(By.clazz(SurfaceView::class.java.name))
         waitFindObject(By.text(expectedButtonLabel))
+    }
+
+    @Test
+    @CddTest(requirement = "3.8.18/C-0-1")
+    fun testLocationButton_heightGreaterThanWidth_doesGrantPermission() {
+        assertAppHasPermission(
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            false,
+            packageName = TEST_APP_PACKAGE_NAME,
+        )
+        val intent =
+            Intent().apply {
+                component =
+                    ComponentName(
+                        TEST_APP_PACKAGE_NAME,
+                        "$TEST_APP_PACKAGE_NAME.LocationButtonActivity",
+                    )
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                putExtra("width", dpToPx(80))
+                putExtra("height", dpToPx(130))
+                putExtra("text_type", LocationButtonSession.TEXT_TYPE_NONE)
+            }
+        context.startActivity(intent)
+
+        val surfaceView = waitFindObject(By.clazz(SurfaceView::class.java.name))
+        uiDevice.waitForIdle()
+        val surfaceBounds = surfaceView.visibleBounds
+        assertTrue(
+            "Button should be rendered taller than its width",
+            surfaceBounds.height() > surfaceBounds.width(),
+        )
+
+        surfaceView.click()
+        eventually { clickPermissionRequestAllowLocationButtonButton() }
+        eventually {
+            assertAppHasPermission(
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                true,
+                packageName = TEST_APP_PACKAGE_NAME,
+            )
+        }
     }
 
     @Test
