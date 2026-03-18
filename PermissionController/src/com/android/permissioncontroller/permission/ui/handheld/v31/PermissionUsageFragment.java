@@ -22,6 +22,7 @@ import static com.android.permissioncontroller.PermissionControllerStatsLog.PERM
 import static com.android.permissioncontroller.PermissionControllerStatsLog.PERMISSION_USAGE_FRAGMENT_INTERACTION__ACTION__SEE_OTHER_PERMISSIONS_CLICKED;
 import static com.android.permissioncontroller.PermissionControllerStatsLog.PERMISSION_USAGE_FRAGMENT_INTERACTION__ACTION__SHOW_7DAYS_CLICKED;
 import static com.android.permissioncontroller.PermissionControllerStatsLog.PERMISSION_USAGE_FRAGMENT_INTERACTION__ACTION__SHOW_SYSTEM_CLICKED;
+import static com.android.permissioncontroller.PermissionControllerStatsLog.PRIVACY_DASHBOARD_AGENT_ACTIVITY_VIEWED;
 import static com.android.permissioncontroller.PermissionControllerStatsLog.write;
 
 import android.Manifest;
@@ -331,6 +332,7 @@ public class PermissionUsageFragment extends SettingsWithLargeHeader {
             agentsCategory = new PreferenceCategory(context);
             agentsCategory.setTitle(R.string.permission_usage_agent_activity_title);
             screen.addPreference(agentsCategory);
+            write(PRIVACY_DASHBOARD_AGENT_ACTIVITY_VIEWED, mSessionId, show7Days);
         }
 
         addUiContent(

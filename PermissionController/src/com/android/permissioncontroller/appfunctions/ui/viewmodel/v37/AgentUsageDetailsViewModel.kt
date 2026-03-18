@@ -17,7 +17,6 @@
 package com.android.permissioncontroller.appfunctions.ui.viewmodel.v37
 
 import android.app.Application
-import android.os.Process
 import android.os.UserHandle
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.AndroidViewModel
@@ -107,8 +106,9 @@ class AgentUsageDetailsViewModel(
                 val agentUsageDetails = agentUsageDetailsState.value[show7DaysKey]
                 val agentTimelineItems = agentUsageDetails ?: emptyList()
                 return AgentUsageDetailsUiState.Success(
+                    packageRepository.getPackageUid(agentPackageName, user),
                     agentPackageName,
-                    getSettingsPackageName(Process.myUserHandle())!!,
+                    getSettingsPackageName(user)!!,
                     agentTimelineItems,
                     show7Days,
                 )
@@ -141,6 +141,7 @@ sealed class AgentUsageDetailsUiState {
     data class Failure(val throwable: Throwable) : AgentUsageDetailsUiState()
 
     data class Success(
+        val agentUid: Int,
         val agentPackageName: String,
         val settingsPackageName: String,
         val agentTimelineItems: List<AgentTimelineItem>,
@@ -158,7 +159,7 @@ class AgentUsageDetailsViewModelFactory(
     override fun <T : ViewModel> create(modelClass: Class<T>, extras: CreationExtras): T {
         val packageRepository = PackageRepository.getInstance(app)
         val appInteractionRepository = AppInteractionRepository.getInstance()
-        val useCase = GetAgentUsageDetailsUseCase(appInteractionRepository)
+        val useCase = GetAgentUsageDetailsUseCase(appInteractionRepository, packageRepository)
         return AgentUsageDetailsViewModel(
             app,
             agentPackageName,

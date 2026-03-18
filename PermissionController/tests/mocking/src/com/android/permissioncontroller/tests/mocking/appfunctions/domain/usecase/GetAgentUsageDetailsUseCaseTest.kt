@@ -34,6 +34,8 @@ import com.android.permissioncontroller.appinteraction.domain.model.v37.AccessHi
 import com.android.permissioncontroller.appinteraction.domain.model.v37.AgentTimelineItem
 import com.android.permissioncontroller.flags.Flags
 import com.android.permissioncontroller.tests.mocking.appinteraction.data.repository.FakeAppInteractionRepository
+import com.android.permissioncontroller.tests.mocking.pm.data.repository.FakePackageRepository
+import com.android.permissioncontroller.tests.mocking.pm.data.repository.FakePackageRepository.Companion.TEST_UID
 import com.google.common.truth.Truth.assertWithMessage
 import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.test.runTest
@@ -106,8 +108,9 @@ class GetAgentUsageDetailsUseCaseTest {
                     accessTime = now - TimeUnit.HOURS.toMillis(2),
                 ),
             )
-        val repository = FakeAppInteractionRepository(accessHistory)
-        useCase = GetAgentUsageDetailsUseCase(repository)
+        val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
+        val packageRepository = FakePackageRepository()
+        useCase = GetAgentUsageDetailsUseCase(appInteractionRepository, packageRepository)
 
         val result = useCase(mockContext, AGENT_NAME_1, userHandle)
         assertWithMessage("Agent 1 should have 2 accesses in the past 24 hours")
@@ -149,8 +152,9 @@ class GetAgentUsageDetailsUseCaseTest {
                     accessTime = now - TimeUnit.HOURS.toMillis(2),
                 ),
             )
-        val repository = FakeAppInteractionRepository(accessHistory)
-        useCase = GetAgentUsageDetailsUseCase(repository)
+        val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
+        val packageRepository = FakePackageRepository()
+        useCase = GetAgentUsageDetailsUseCase(appInteractionRepository, packageRepository)
 
         val result = useCase(mockContext, AGENT_NAME_1, userHandle)
         assertWithMessage("There should only be 1 access history in the past 24 hours")
@@ -160,6 +164,7 @@ class GetAgentUsageDetailsUseCaseTest {
             .that(result[KEY_PAST_24_HOURS]!!)
             .containsExactly(
                 AgentTimelineItem(
+                    TEST_UID,
                     AGENT_NAME_1,
                     TARGET_NAME_1,
                     userHandle,
@@ -202,8 +207,10 @@ class GetAgentUsageDetailsUseCaseTest {
                 ),
             )
         val deviceAssistancePackageNames = listOf(TARGET_NAME_2, TARGET_NAME_3)
-        val repository = FakeAppInteractionRepository(accessHistory, deviceAssistancePackageNames)
-        useCase = GetAgentUsageDetailsUseCase(repository)
+        val appInteractionRepository =
+            FakeAppInteractionRepository(accessHistory, deviceAssistancePackageNames)
+        val packageRepository = FakePackageRepository()
+        useCase = GetAgentUsageDetailsUseCase(appInteractionRepository, packageRepository)
 
         val result = useCase(mockContext, AGENT_NAME_1, userHandle)
         assertWithMessage("Agent 1 should have 2 accesses in the past 24 hours")
@@ -236,8 +243,9 @@ class GetAgentUsageDetailsUseCaseTest {
                     accessTime = now - TimeUnit.HOURS.toMillis(1),
                 )
             )
-        val repository = FakeAppInteractionRepository(accessHistory)
-        useCase = GetAgentUsageDetailsUseCase(repository)
+        val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
+        val packageRepository = FakePackageRepository()
+        useCase = GetAgentUsageDetailsUseCase(appInteractionRepository, packageRepository)
 
         val result = useCase(mockContext, AGENT_NAME_1, userHandle)
         assertWithMessage("Result should be empty when the feature flag is off")
