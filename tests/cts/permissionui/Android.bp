@@ -30,6 +30,7 @@ android_test {
     static_libs: [
         "kotlin-stdlib",
         "androidx.test.rules",
+        "TestParameterInjector",
         "compatibility-device-util-axt",
         "ctstestrunner-axt",
         "bluetooth-test-util-lib",

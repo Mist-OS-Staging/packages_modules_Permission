@@ -45,6 +45,8 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
     private var session: LocationButtonSession? = null
     private val clientExecutor: Executor = context.mainExecutor
 
+    var textType: Int? = null
+
     private val clientCallback =
         object : LocationButtonClient {
             override fun onPermissionResult(granted: Boolean) {
@@ -100,7 +102,7 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
                     .setStrokeWidth((1 * density).toInt())
                     .setCornerRadius(4 * density)
                     .setPressedCornerRadius(20 * density)
-                    .setTextType(LocationButtonSession.TEXT_TYPE_PRECISE_LOCATION)
+                    .setTextType(textType ?: LocationButtonSession.TEXT_TYPE_PRECISE_LOCATION)
                     .build()
 
             provider?.openSession(

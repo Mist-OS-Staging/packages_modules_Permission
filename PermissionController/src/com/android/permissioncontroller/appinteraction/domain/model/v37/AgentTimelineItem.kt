@@ -21,6 +21,7 @@ import android.os.UserHandle
 /**
  * Data class for the agent access entries on the agent timeline dashboard
  *
+ * @param agentUid The UID of the agent app
  * @param agentPackageName The package name of the agent app
  * @param targetPackageName The package name of the target app
  * @param user The UserHandle for the agent timeline
@@ -29,6 +30,7 @@ import android.os.UserHandle
  * @param isDeviceAssistanceAccess Whether the target app is a device assistance
  */
 data class AgentTimelineItem(
+    val agentUid: Int,
     val agentPackageName: String,
     val targetPackageName: String,
     val user: UserHandle,

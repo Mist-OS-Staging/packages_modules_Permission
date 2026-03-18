@@ -154,7 +154,10 @@ class AgentUsageDetailsViewModelTest {
         savedStateHandle: SavedStateHandle = SavedStateHandle(emptyMap()),
     ): AgentUsageDetailsViewModel {
         val getAppFunctionAgentUsageDetailsUseCase =
-            GetAgentUsageDetailsUseCase(FakeAppInteractionRepository(accessHistory))
+            GetAgentUsageDetailsUseCase(
+                FakeAppInteractionRepository(accessHistory),
+                FakePackageRepository(),
+            )
         return AgentUsageDetailsViewModel(
             application,
             AGENT_NAME_1,

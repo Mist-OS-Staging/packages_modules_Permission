@@ -24,6 +24,7 @@ import com.android.permissioncontroller.appfunctions.ui.handheld.v37.AgentUsageD
 import com.android.permissioncontroller.common.ui.SettingsActivity
 import com.android.permissioncontroller.permission.ui.ManagePermissionsActivity.EXTRA_SHOW_7_DAYS
 import com.android.permissioncontroller.permission.ui.ManagePermissionsActivity.EXTRA_SHOW_SYSTEM
+import kotlin.random.Random
 
 /** Activity for reviewing the timeline history of the agent */
 class AgentUsageDetailsActivity : SettingsActivity() {
@@ -45,8 +46,10 @@ class AgentUsageDetailsActivity : SettingsActivity() {
             val user = intent.getParcelableExtra(Intent.EXTRA_USER, UserHandle::class.java)!!
             val showSystem = intent.getBooleanExtra(EXTRA_SHOW_SYSTEM, false)
             val show7Days = intent.getBooleanExtra(EXTRA_SHOW_7_DAYS, false)
+            val sessionId = Random.nextLong()
             val fragment =
                 AgentUsageDetailsWrapperFragment.newInstance(
+                    sessionId,
                     agentPackageName,
                     user,
                     showSystem,

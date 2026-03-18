@@ -34,8 +34,12 @@ import com.android.permissioncontroller.appinteraction.domain.model.v37.AccessHi
 import com.android.permissioncontroller.appinteraction.domain.model.v37.AgentTimelineItem
 import com.android.permissioncontroller.flags.Flags
 import com.android.permissioncontroller.tests.mocking.appinteraction.data.repository.FakeAppInteractionRepository
+import com.android.permissioncontroller.tests.mocking.pm.data.repository.FakePackageRepository
+import com.android.permissioncontroller.tests.mocking.pm.data.repository.FakePackageRepository.Companion.TEST_UID
 import com.google.common.truth.Truth.assertWithMessage
-import java.util.concurrent.TimeUnit
+import java.time.ZoneId
+import java.time.ZonedDateTime
+import java.time.temporal.ChronoUnit
 import kotlinx.coroutines.test.runTest
 import org.junit.Assume.assumeFalse
 import org.junit.Before
@@ -58,6 +62,8 @@ class GetAgentUsageDetailsUseCaseTest {
     private lateinit var useCase: GetAgentUsageDetailsUseCase
     private val instrumentation = InstrumentationRegistry.getInstrumentation()!!
     private val instrumentationContext = instrumentation.targetContext!!
+    private val zoneId = ZoneId.systemDefault()
+    private val now = ZonedDateTime.now(zoneId)
 
     @Before
     fun setUp() {
@@ -76,7 +82,7 @@ class GetAgentUsageDetailsUseCaseTest {
     )
     fun getAgentUsages_success() = runTest {
         assumeFalse(isAutomotive() || isTv() || isWatch())
-        val now = System.currentTimeMillis()
+
         val accessHistory =
             listOf(
                 // Agent 1: 2 accesses in last 24 hours, 1 in last 7 days
@@ -84,39 +90,44 @@ class GetAgentUsageDetailsUseCaseTest {
                     agentPackageName = AGENT_NAME_1,
                     targetPackageName = TARGET_NAME_1,
                     interactionUri = INTERACTION_URI_1,
-                    accessTime = now - TimeUnit.HOURS.toMillis(1),
+                    accessTime = now.minusHours(1).toInstant().toEpochMilli(),
                 ),
                 createAccessHistory(
                     agentPackageName = AGENT_NAME_1,
                     targetPackageName = TARGET_NAME_2,
                     interactionUri = INTERACTION_URI_2,
-                    accessTime = now - TimeUnit.HOURS.toMillis(2),
+                    accessTime = now.minusHours(2).toInstant().toEpochMilli(),
                 ),
                 createAccessHistory(
                     agentPackageName = AGENT_NAME_1,
                     targetPackageName = TARGET_NAME_3,
                     interactionUri = INTERACTION_URI_3,
-                    accessTime = now - TimeUnit.DAYS.toMillis(3),
+                    accessTime = now.minusDays(3).toInstant().toEpochMilli(),
                 ),
                 // Agent 2: 1 access in last 24 hours, 0 in last 7 days
                 createAccessHistory(
                     agentPackageName = AGENT_NAME_2,
                     targetPackageName = TARGET_NAME_1,
                     interactionUri = INTERACTION_URI_1,
-                    accessTime = now - TimeUnit.HOURS.toMillis(2),
+                    accessTime = now.minusHours(2).toInstant().toEpochMilli(),
                 ),
             )
-        val repository = FakeAppInteractionRepository(accessHistory)
-        useCase = GetAgentUsageDetailsUseCase(repository)
+        val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
+        val packageRepository = FakePackageRepository()
+        useCase = GetAgentUsageDetailsUseCase(appInteractionRepository, packageRepository)
 
         val result = useCase(mockContext, AGENT_NAME_1, userHandle)
+        val past24Hours = result[KEY_PAST_24_HOURS]!!
+        val past7Days = result[KEY_PAST_7_DAYS]!!
+
         assertWithMessage("Agent 1 should have 2 accesses in the past 24 hours")
-            .that(result[KEY_PAST_24_HOURS]!!.size)
+            .that(past24Hours.size)
             .isEqualTo(2)
-        assertWithMessage("Agent 1 should have 2 accesses in the past 7 days")
-            .that(result[KEY_PAST_7_DAYS]!!.size)
+        assertWithMessage("Agent 1 should have 3 accesses in the past 7 days")
+            .that(past7Days.size)
             .isEqualTo(3)
-        result[KEY_PAST_7_DAYS]!!.forEach { accessHistory ->
+
+        past7Days.forEach { accessHistory ->
             assertWithMessage(
                     "The result should only contain access history for agent 1, but" +
                         " instead found: $accessHistory"
@@ -133,37 +144,42 @@ class GetAgentUsageDetailsUseCaseTest {
     )
     fun getAgentUsages_showsOnlyLastAccess() = runTest {
         assumeFalse(isAutomotive() || isTv() || isWatch())
-        val now = System.currentTimeMillis()
+
         val accessHistory =
             listOf(
                 createAccessHistory(
                     agentPackageName = AGENT_NAME_1,
                     targetPackageName = TARGET_NAME_1,
                     interactionUri = INTERACTION_URI_1,
-                    accessTime = now - TimeUnit.HOURS.toMillis(1),
+                    accessTime = now.minusHours(1).toInstant().toEpochMilli(),
                 ),
                 createAccessHistory(
                     agentPackageName = AGENT_NAME_1,
                     targetPackageName = TARGET_NAME_1,
                     interactionUri = INTERACTION_URI_1,
-                    accessTime = now - TimeUnit.HOURS.toMillis(2),
+                    accessTime = now.minusHours(2).toInstant().toEpochMilli(),
                 ),
             )
-        val repository = FakeAppInteractionRepository(accessHistory)
-        useCase = GetAgentUsageDetailsUseCase(repository)
+        val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
+        val packageRepository = FakePackageRepository()
+        useCase = GetAgentUsageDetailsUseCase(appInteractionRepository, packageRepository)
 
         val result = useCase(mockContext, AGENT_NAME_1, userHandle)
+        val past24Hours = result[KEY_PAST_24_HOURS]!!
+
         assertWithMessage("There should only be 1 access history in the past 24 hours")
-            .that(result[KEY_PAST_24_HOURS]!!.size)
+            .that(past24Hours.size)
             .isEqualTo(1)
+
         assertWithMessage("Only the last access should be returned")
-            .that(result[KEY_PAST_24_HOURS]!!)
+            .that(past24Hours)
             .containsExactly(
                 AgentTimelineItem(
+                    TEST_UID,
                     AGENT_NAME_1,
                     TARGET_NAME_1,
                     userHandle,
-                    now - TimeUnit.HOURS.toMillis(1),
+                    now.minusHours(1).toInstant().toEpochMilli(),
                     INTERACTION_URI_1,
                     false,
                 )
@@ -175,9 +191,122 @@ class GetAgentUsageDetailsUseCaseTest {
         Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED,
         FLAG_ENABLE_APP_INTERACTION_API,
     )
+    fun getAgentUsages_resultIsInDescendingAccessTime() = runTest {
+        assumeFalse(isAutomotive() || isTv() || isWatch())
+
+        val accessHistory =
+            listOf(
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_1,
+                    interactionUri = INTERACTION_URI_1,
+                    accessTime = now.minusHours(4).toInstant().toEpochMilli(),
+                ),
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_2,
+                    interactionUri = INTERACTION_URI_2,
+                    accessTime = now.minusHours(1).toInstant().toEpochMilli(),
+                ),
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_3,
+                    interactionUri = INTERACTION_URI_3,
+                    accessTime = now.minusHours(2).toInstant().toEpochMilli(),
+                ),
+            )
+        val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
+        val packageRepository = FakePackageRepository()
+        useCase = GetAgentUsageDetailsUseCase(appInteractionRepository, packageRepository)
+
+        val result = useCase(mockContext, AGENT_NAME_1, userHandle)
+        val past24Hours = result[KEY_PAST_24_HOURS]!!
+
+        assertWithMessage("Should contain exactly 3 items for the 3 distinct packages")
+            .that(past24Hours.size)
+            .isEqualTo(3)
+
+        assertWithMessage("Index 0 should be the newest access (TARGET 2)")
+            .that(past24Hours[0].targetPackageName)
+            .isEqualTo(TARGET_NAME_2)
+        assertWithMessage("Index 1 should be the middle access (TARGET 3)")
+            .that(past24Hours[1].targetPackageName)
+            .isEqualTo(TARGET_NAME_3)
+        assertWithMessage("Index 2 should be the oldest access (TARGET 1)")
+            .that(past24Hours[2].targetPackageName)
+            .isEqualTo(TARGET_NAME_1)
+    }
+
+    @Test
+    @RequiresFlagsEnabled(
+        Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED,
+        FLAG_ENABLE_APP_INTERACTION_API,
+    )
+    fun getAgentUsages_past7DaysKeepsLastAccessPerDayPerPackage() = runTest {
+        assumeFalse(isAutomotive() || isTv() || isWatch())
+
+        val twoDaysAgoBase = now.minusDays(2).truncatedTo(ChronoUnit.DAYS)
+        val twoDaysAgoOlder = twoDaysAgoBase.plusHours(10).toInstant().toEpochMilli() // 10:00 AM
+        val twoDaysAgoNewer = twoDaysAgoBase.plusHours(14).toInstant().toEpochMilli() // 2:00 PM
+
+        val fourDaysAgoBase = now.minusDays(4).truncatedTo(ChronoUnit.DAYS)
+        val fourDaysAgoOlder = fourDaysAgoBase.plusHours(10).toInstant().toEpochMilli() // 10:00 AM
+        val fourDaysAgoNewer = fourDaysAgoBase.plusHours(14).toInstant().toEpochMilli() // 2:00 PM
+
+        val accessHistory =
+            listOf(
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_1,
+                    interactionUri = INTERACTION_URI_1,
+                    accessTime = twoDaysAgoOlder,
+                ),
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_1,
+                    interactionUri = INTERACTION_URI_1,
+                    accessTime = twoDaysAgoNewer,
+                ),
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_1,
+                    interactionUri = INTERACTION_URI_1,
+                    accessTime = fourDaysAgoOlder,
+                ),
+                createAccessHistory(
+                    agentPackageName = AGENT_NAME_1,
+                    targetPackageName = TARGET_NAME_1,
+                    interactionUri = INTERACTION_URI_1,
+                    accessTime = fourDaysAgoNewer,
+                ),
+            )
+        val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
+        val packageRepository = FakePackageRepository()
+        useCase = GetAgentUsageDetailsUseCase(appInteractionRepository, packageRepository)
+
+        val result = useCase(mockContext, AGENT_NAME_1, userHandle)
+        val past7Days = result[KEY_PAST_7_DAYS]!!
+
+        assertWithMessage("Should keep exactly 1 access per distinct day (total 2)")
+            .that(past7Days.size)
+            .isEqualTo(2)
+
+        assertWithMessage("First item should be the newest access from 2 days ago")
+            .that(past7Days[0].lastAccessTime)
+            .isEqualTo(twoDaysAgoNewer)
+        assertWithMessage("Second item should be the newest access from 4 days ago")
+            .that(past7Days[1].lastAccessTime)
+            .isEqualTo(fourDaysAgoNewer)
+    }
+
+    @Test
+    @RequiresFlagsEnabled(
+        Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED,
+        FLAG_ENABLE_APP_INTERACTION_API,
+    )
     fun getAgentUsages_deviceAssistanceAccessesAreGrouped() = runTest {
         assumeFalse(isAutomotive() || isTv() || isWatch())
-        val now = System.currentTimeMillis()
+
         val accessHistory =
             listOf(
                 // Agent 1: 1 normal app function access, 2 device assistance accesses in last 24
@@ -186,33 +315,39 @@ class GetAgentUsageDetailsUseCaseTest {
                     agentPackageName = AGENT_NAME_1,
                     targetPackageName = TARGET_NAME_1,
                     interactionUri = INTERACTION_URI_1,
-                    accessTime = now - TimeUnit.HOURS.toMillis(1),
+                    accessTime = now.minusHours(1).toInstant().toEpochMilli(),
                 ),
                 createAccessHistory(
                     agentPackageName = AGENT_NAME_1,
                     targetPackageName = TARGET_NAME_2,
                     interactionUri = INTERACTION_URI_2,
-                    accessTime = now - TimeUnit.HOURS.toMillis(2),
+                    accessTime = now.minusHours(2).toInstant().toEpochMilli(),
                 ),
                 createAccessHistory(
                     agentPackageName = AGENT_NAME_1,
                     targetPackageName = TARGET_NAME_3,
                     interactionUri = INTERACTION_URI_3,
-                    accessTime = now - TimeUnit.HOURS.toMillis(3),
+                    accessTime = now.minusHours(3).toInstant().toEpochMilli(),
                 ),
             )
         val deviceAssistancePackageNames = listOf(TARGET_NAME_2, TARGET_NAME_3)
-        val repository = FakeAppInteractionRepository(accessHistory, deviceAssistancePackageNames)
-        useCase = GetAgentUsageDetailsUseCase(repository)
+        val appInteractionRepository =
+            FakeAppInteractionRepository(accessHistory, deviceAssistancePackageNames)
+        val packageRepository = FakePackageRepository()
+        useCase = GetAgentUsageDetailsUseCase(appInteractionRepository, packageRepository)
 
         val result = useCase(mockContext, AGENT_NAME_1, userHandle)
+        val past24Hours = result[KEY_PAST_24_HOURS]!!
+        val past7Days = result[KEY_PAST_7_DAYS]!!
+
         assertWithMessage("Agent 1 should have 2 accesses in the past 24 hours")
-            .that(result[KEY_PAST_24_HOURS]!!.size)
+            .that(past24Hours.size)
             .isEqualTo(2)
         assertWithMessage("Agent 1 should have 2 accesses in the past 7 days")
-            .that(result[KEY_PAST_7_DAYS]!!.size)
+            .that(past7Days.size)
             .isEqualTo(2)
-        result[KEY_PAST_7_DAYS]!!.forEach { accessHistory ->
+
+        past7Days.forEach { accessHistory ->
             assertWithMessage(
                     "target3 is a device assistance target app and should be grouped with the other" +
                         " device assistance target app target2, but instead found: $accessHistory"
@@ -226,20 +361,22 @@ class GetAgentUsageDetailsUseCaseTest {
     @RequiresFlagsDisabled(Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED)
     fun getAgentUsages_flagOff_emptyResult() = runTest {
         assumeFalse(isAutomotive() || isTv() || isWatch())
-        val now = System.currentTimeMillis()
+
         val accessHistory =
             listOf(
                 createAccessHistory(
                     agentPackageName = AGENT_NAME_1,
                     targetPackageName = TARGET_NAME_1,
                     interactionUri = INTERACTION_URI_1,
-                    accessTime = now - TimeUnit.HOURS.toMillis(1),
+                    accessTime = now.minusHours(1).toInstant().toEpochMilli(),
                 )
             )
-        val repository = FakeAppInteractionRepository(accessHistory)
-        useCase = GetAgentUsageDetailsUseCase(repository)
+        val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
+        val packageRepository = FakePackageRepository()
+        useCase = GetAgentUsageDetailsUseCase(appInteractionRepository, packageRepository)
 
         val result = useCase(mockContext, AGENT_NAME_1, userHandle)
+
         assertWithMessage("Result should be empty when the feature flag is off")
             .that(result)
             .isEmpty()

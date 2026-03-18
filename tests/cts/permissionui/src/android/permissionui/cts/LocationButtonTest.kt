@@ -20,7 +20,6 @@ import android.app.permissionui.LocationButtonRequest
 import android.app.permissionui.LocationButtonSession
 import android.content.ComponentName
 import android.content.Intent
-import android.content.res.Configuration
 import android.os.Build
 import android.permission.flags.Flags
 import android.platform.test.annotations.RequiresFlagsEnabled
@@ -29,21 +28,27 @@ import android.platform.test.flag.junit.DeviceFlagsValueProvider
 import android.view.SurfaceView
 import androidx.test.filters.SdkSuppress
 import androidx.test.uiautomator.By
+import com.android.compatibility.common.util.CddTest
 import com.android.compatibility.common.util.SystemUtil.eventually
+import com.google.testing.junit.testparameterinjector.TestParameter
+import com.google.testing.junit.testparameterinjector.TestParameterInjector
+import java.util.Locale
 import org.junit.After
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Assume.assumeFalse
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+import org.junit.runner.RunWith
 
 /** Tests for the Location Button UI and functionality. */
 @SdkSuppress(minSdkVersion = Build.VERSION_CODES.CINNAMON_BUN, codeName = "CinnamonBun")
 @RequiresFlagsEnabled(Flags.FLAG_LOCATION_BUTTON_ENABLED)
+@RunWith(TestParameterInjector::class)
 class LocationButtonTest : BaseUsePermissionTest() {
 
-    @get:Rule
-    val checkFlagsRule: CheckFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
+    @get:Rule val checkFlagsRule: CheckFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule()
 
     @Before
     fun setup() {
@@ -185,6 +190,77 @@ class LocationButtonTest : BaseUsePermissionTest() {
     }
 
     @Test
+    @CddTest(requirement = "3.8.18/C-0-1")
+    fun testLocationButton_withTextType_rendersExpectedButtonLabel(
+        @TestParameter textType: TextType
+    ) {
+        assertEquals(
+            "CTS tests must be run in the en-US locale",
+            "en-US",
+            Locale.getDefault().toLanguageTag(),
+        )
+        val expectedButtonLabel = textType.expectedText
+
+        val intent =
+            Intent().apply {
+                component =
+                    ComponentName(
+                        TEST_APP_PACKAGE_NAME,
+                        "$TEST_APP_PACKAGE_NAME.LocationButtonActivity",
+                    )
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                putExtra("width", dpToPx(300))
+                putExtra("height", dpToPx(56))
+                putExtra("text_type", textType.value)
+            }
+        context.startActivity(intent)
+
+        waitFindObject(By.clazz(SurfaceView::class.java.name))
+        waitFindObject(By.text(expectedButtonLabel))
+    }
+
+    @Test
+    @CddTest(requirement = "3.8.18/C-0-1")
+    fun testLocationButton_heightGreaterThanWidth_doesGrantPermission() {
+        assertAppHasPermission(
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            false,
+            packageName = TEST_APP_PACKAGE_NAME,
+        )
+        val intent =
+            Intent().apply {
+                component =
+                    ComponentName(
+                        TEST_APP_PACKAGE_NAME,
+                        "$TEST_APP_PACKAGE_NAME.LocationButtonActivity",
+                    )
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                putExtra("width", dpToPx(80))
+                putExtra("height", dpToPx(130))
+                putExtra("text_type", LocationButtonSession.TEXT_TYPE_NONE)
+            }
+        context.startActivity(intent)
+
+        val surfaceView = waitFindObject(By.clazz(SurfaceView::class.java.name))
+        uiDevice.waitForIdle()
+        val surfaceBounds = surfaceView.visibleBounds
+        assertTrue(
+            "Button should be rendered taller than its width",
+            surfaceBounds.height() > surfaceBounds.width(),
+        )
+
+        surfaceView.click()
+        eventually { clickPermissionRequestAllowLocationButtonButton() }
+        eventually {
+            assertAppHasPermission(
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                true,
+                packageName = TEST_APP_PACKAGE_NAME,
+            )
+        }
+    }
+
+    @Test
     fun testLocationButtonRequestBuilder() {
         val builder =
             LocationButtonRequest.Builder(200, 80, context.resources.configuration)
@@ -222,6 +298,26 @@ class LocationButtonTest : BaseUsePermissionTest() {
     private fun dpToPx(dp: Int): Int {
         val density = context.resources.displayMetrics.density
         return (dp * density).toInt()
+    }
+
+    enum class TextType(val value: Int, val expectedText: String) {
+        PRECISE_LOCATION(LocationButtonSession.TEXT_TYPE_PRECISE_LOCATION, "Precise location"),
+        USE_PRECISE_LOCATION(
+            LocationButtonSession.TEXT_TYPE_USE_PRECISE_LOCATION,
+            "Use precise location",
+        ),
+        SHARE_PRECISE_LOCATION(
+            LocationButtonSession.TEXT_TYPE_SHARE_PRECISE_LOCATION,
+            "Share precise location",
+        ),
+        NEAR_MY_PRECISE_LOCATION(
+            LocationButtonSession.TEXT_TYPE_NEAR_MY_PRECISE_LOCATION,
+            "Near my precise location",
+        ),
+        NEAR_YOUR_PRECISE_LOCATION(
+            LocationButtonSession.TEXT_TYPE_NEAR_YOUR_PRECISE_LOCATION,
+            "Near your precise location",
+        ),
     }
 
     companion object {
