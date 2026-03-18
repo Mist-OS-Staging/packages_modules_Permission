@@ -174,6 +174,7 @@ class AppPermissionViewModel(
 
     private val mediaStorageSupergroupPermGroups = mutableMapOf<String, LightAppPermGroup>()
 
+    // TODO(b/494002924): shouldShowLocationAccuracy should reflect updated packages.
     /* Whether the current ViewModel is Location permission with both Coarse and Fine */
     private var shouldShowLocationAccuracy: Boolean? = null
 
@@ -728,8 +729,9 @@ class AppPermissionViewModel(
 
     private fun isFineLocationChecked(group: LightAppPermGroup): Boolean {
         if (shouldShowLocationAccuracy == true) {
-            val coarseLocation = group.permissions[ACCESS_COARSE_LOCATION]!!
-            val fineLocation = group.permissions[ACCESS_FINE_LOCATION]!!
+            // If permission is missing during package update, return instead of crashing
+            val coarseLocation = group.permissions[ACCESS_COARSE_LOCATION] ?: return false
+            val fineLocation = group.permissions[ACCESS_FINE_LOCATION] ?: return false
             // Steps to decide location accuracy toggle state
             // 1. If FINE or COARSE are granted, then return true if FINE is granted.
             // 2. Else if FINE or COARSE have the isSelectedLocationAccuracy flag set, then return
