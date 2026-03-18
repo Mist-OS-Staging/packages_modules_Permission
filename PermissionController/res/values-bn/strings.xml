@@ -139,6 +139,10 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"শেষবার অ্যাক্সেস করা হয়েছে: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"দেখুন"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"কোনও অ্যাক্সেস নেই"</string>
+    <!-- no translation found for agent_activity_timeline_top_intro_title (3069765762733650044) -->
+    <skip />
+    <!-- no translation found for agent_activity_timeline_footer_title (6959375013990594999) -->
+    <skip />
     <string name="device_assistance_title" msgid="1445976710214822208">"ডিভাইস অ্যাসিস্ট্যান্স"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"সম্প্রতি কোন কোন অ্যাপ অনুমতি ব্যবহার করেছে দেখুন"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> ব্যবহার"</string>
