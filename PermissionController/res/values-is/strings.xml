@@ -128,21 +128,20 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Persónuverndarstjórnborð"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Heimildir forrits"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Virkni fulltrúa"</string>
-    <!-- no translation found for empty_agent_activity_preference_title (7682932823345395104) -->
-    <skip />
-    <!-- no translation found for agent_activity_preference_summary_no_accesses_24h (7194072619746100487) -->
-    <skip />
-    <!-- no translation found for agent_activity_preference_summary_no_accesses_7d (8023811607582607766) -->
-    <skip />
+    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Engir fulltrúar uppsettir"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Enginn aðgangur síðasta sólarhringinn"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Enginn aðgangur síðustu sjö daga"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> virkni"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Síðasta sólarhringinn"</string>
-    <!-- no translation found for agent_activity_timeline_category_title_7d (6957587886375942104) -->
-    <skip />
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"Undanfarna sjö daga"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Í dag"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Í gær"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Síðast notað <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Skoða"</string>
-    <!-- no translation found for empty_agent_activity_timeline_preference_title (7099292969424621771) -->
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Enginn aðgangur"</string>
+    <!-- no translation found for agent_activity_timeline_top_intro_title (3069765762733650044) -->
+    <skip />
+    <!-- no translation found for agent_activity_timeline_footer_title (6959375013990594999) -->
     <skip />
     <string name="device_assistance_title" msgid="1445976710214822208">"Tækjaaðstoð"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Skoða hvaða forrit notuðu heimildir nýlega"</string>
