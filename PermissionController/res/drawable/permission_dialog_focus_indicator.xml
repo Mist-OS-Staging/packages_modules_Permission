@@ -18,9 +18,9 @@
     <item android:state_focused="true">
         <inset
             android:insetLeft="3dp"
-            android:insetTop="3dp"
+            android:insetTop="6dp"
             android:insetRight="3dp"
-            android:insetBottom="3dp">
+            android:insetBottom="6dp">
             <shape android:shape="rectangle">
                 <corners android:radius="28dp" />
                 <stroke android:width="3dp" android:color="?android:attr/colorPrimary" />
