@@ -199,3 +199,13 @@ flag {
     description: "Migrates permission module functionality to better support latest Safety Center UI in the Settings app"
     bug: "424092847"
 }
+
+flag {
+    name: "better_safety_center_source_tracking_on_refresh"
+    namespace: "safety_center"
+    description: "Calculates untracked sources based on internal data presence for refresh broadcasts"
+    bug: "465410831"
+    metadata {
+        purpose: PURPOSE_BUGFIX
+    }
+}

@@ -41,14 +41,18 @@ import android.os.UserHandle;
 import android.safetycenter.SafetyCenterManager;
 import android.safetycenter.SafetyCenterManager.RefreshReason;
 import android.safetycenter.SafetySourceData;
+import android.util.ArrayMap;
 import android.util.ArraySet;
 import android.util.Log;
 import android.util.SparseArray;
+import android.util.SparseBooleanArray;
 
 import androidx.annotation.Nullable;
 
+import com.android.permission.flags.Flags;
 import com.android.permission.util.PackageUtils;
 import com.android.safetycenter.SafetyCenterConfigReader.Broadcast;
+import com.android.safetycenter.SafetyCenterConfigReader.ExternalSafetySource;
 import com.android.safetycenter.UserProfileGroup.ProfileType;
 import com.android.safetycenter.data.SafetyCenterDataManager;
 
@@ -102,9 +106,20 @@ final class SafetyCenterBroadcastDispatcher {
         List<Broadcast> broadcasts = mSafetyCenterConfigReader.getBroadcasts();
         BroadcastOptions broadcastOptions = createBroadcastOptions();
 
+        ArraySet<String> untrackedSourceIds = SafetyCenterFlags.getUntrackedSourceIds();
+        if (Flags.betterSafetyCenterSourceTrackingOnRefresh()) {
+            int profileParentUserId = userProfileGroup.getProfileParentUserId();
+            boolean hasSentUserInitiatedRefresh =
+                    mSafetyCenterRefreshTracker.hasUserInitiatedRefreshCompleted(
+                            profileParentUserId);
+            if (hasSentUserInitiatedRefresh) {
+                untrackedSourceIds.addAll(getUntrackedSourceIds(userProfileGroup));
+            }
+        }
+
         String broadcastId =
                 mSafetyCenterRefreshTracker.reportRefreshInProgress(
-                        refreshReason, userProfileGroup);
+                        refreshReason, userProfileGroup, untrackedSourceIds);
         boolean hasSentAtLeastOneBroadcast = false;
 
         for (int i = 0; i < broadcasts.size(); i++) {
@@ -126,6 +141,31 @@ final class SafetyCenterBroadcastDispatcher {
         }
 
         return broadcastId;
+    }
+
+    private ArraySet<String> getUntrackedSourceIds(UserProfileGroup userProfileGroup) {
+        ArraySet<String> untrackedSourceIds = new ArraySet<>();
+        int[] userIds = userProfileGroup.getAllProfilesUserIds();
+        ArrayMap<String, ExternalSafetySource> externalSources =
+                mSafetyCenterConfigReader.getExternalSafetySources();
+
+        for (int i = 0; i < externalSources.size(); i++) {
+            String sourceId = externalSources.keyAt(i);
+            if (!hasInternalDataForAnyUser(sourceId, userIds)) {
+                untrackedSourceIds.add(sourceId);
+            }
+        }
+        return untrackedSourceIds;
+    }
+
+    private boolean hasInternalDataForAnyUser(String sourceId, int[] userIds) {
+        for (int i = 0; i < userIds.length; i++) {
+            SafetySourceKey key = SafetySourceKey.of(sourceId, userIds[i]);
+            if (mSafetyCenterDataManager.getSafetySourceDataInternal(key) != null) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private boolean sendRefreshSafetySourcesBroadcast(

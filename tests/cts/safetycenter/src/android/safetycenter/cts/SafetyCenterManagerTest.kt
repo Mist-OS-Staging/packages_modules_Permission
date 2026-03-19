@@ -45,6 +45,7 @@ import androidx.test.core.app.ApplicationProvider.getApplicationContext
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
 import androidx.test.platform.app.InstrumentationRegistry
+import com.android.permission.flags.Flags as MainlineFlags
 import com.android.safetycenter.resources.SafetyCenterResourcesApk
 import com.android.safetycenter.testing.Coroutines.TIMEOUT_LONG
 import com.android.safetycenter.testing.Coroutines.TIMEOUT_SHORT
@@ -1326,6 +1327,172 @@ class SafetyCenterManagerTest {
         )
 
         listener.waitForSafetyCenterRefresh(withErrorEntry = false)
+    }
+
+    @Test
+    @RequiresFlagsEnabled(MainlineFlags.FLAG_BETTER_SAFETY_CENTER_SOURCE_TRACKING_ON_REFRESH)
+    fun refreshSafetySources_withCalculatedUntrackedSourceThatTimesOut_doesNotTimeOut() {
+        SafetyCenterFlags.setAllRefreshTimeoutsTo(TIMEOUT_SHORT)
+        safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.multipleSourcesConfig)
+        val listener = safetyCenterTestHelper.addListener()
+        // Seed SOURCE_ID_1 with data during a user initiated refresh.
+        SafetySourceReceiver.setResponse(
+            Request.Rescan(SOURCE_ID_1),
+            Response.SetData(safetySourceTestData.information),
+        )
+        // Initial user initiated refresh
+        safetyCenterManager.refreshSafetySourcesWithReceiverPermissionAndWait(
+            REFRESH_REASON_RESCAN_BUTTON_CLICK
+        )
+        listener.waitForSafetyCenterRefresh(withErrorEntry = true)
+        // Reset the responses for the second refresh
+        SafetySourceReceiver.clearResponses()
+        safetyCenterTestHelper.setData(SOURCE_ID_2, null)
+        safetyCenterTestHelper.setData(SOURCE_ID_3, null)
+
+        // SOURCE_ID_2 and SOURCE_ID_3 have no data, therefore they are untracked.
+        // SOURCE_ID_2 will timeout
+        for (sourceId in listOf(SOURCE_ID_1, SOURCE_ID_3)) {
+            SafetySourceReceiver.setResponse(
+                Request.Rescan(sourceId),
+                Response.SetData(safetySourceTestData.information),
+            )
+        }
+
+        safetyCenterManager.refreshSafetySourcesWithReceiverPermissionAndWait(
+            REFRESH_REASON_RESCAN_BUTTON_CLICK
+        )
+
+        listener.waitForSafetyCenterRefresh(withErrorEntry = false)
+    }
+
+    @Test
+    @RequiresFlagsEnabled(MainlineFlags.FLAG_BETTER_SAFETY_CENTER_SOURCE_TRACKING_ON_REFRESH)
+    fun refreshSafetySources_refreshCompletionMarksUserInitiatedRefreshComplete_doesNotTimeOut() {
+        SafetyCenterFlags.setAllRefreshTimeoutsTo(TIMEOUT_SHORT)
+        safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.multipleSourcesConfig)
+        val listener = safetyCenterTestHelper.addListener()
+
+        // Set SOURCE_ID_3 as untracked via flag. Give data to SOURCE_ID_1 and SOURCE_ID_2.
+        SafetyCenterFlags.untrackedSources = setOf(SOURCE_ID_3)
+        for (sourceId in listOf(SOURCE_ID_1, SOURCE_ID_2)) {
+            SafetySourceReceiver.setResponse(
+                Request.Rescan(sourceId),
+                Response.SetData(safetySourceTestData.information),
+            )
+        }
+        safetyCenterManager.refreshSafetySourcesWithReceiverPermissionAndWait(
+            REFRESH_REASON_RESCAN_BUTTON_CLICK
+        )
+        // No error entry because SOURCE_ID_3 was explicitly untracked.
+        listener.waitForSafetyCenterRefresh(withErrorEntry = false)
+
+        // Clear flag. Now SOURCE_ID_3 still untracked because no data, and 1st
+        // user initiated refresh is completed.
+        SafetyCenterFlags.untrackedSources = emptySet()
+        SafetySourceReceiver.clearResponses()
+        for (sourceId in listOf(SOURCE_ID_1, SOURCE_ID_2)) {
+            SafetySourceReceiver.setResponse(
+                Request.Rescan(sourceId),
+                Response.SetData(safetySourceTestData.information),
+            )
+        }
+        safetyCenterManager.refreshSafetySourcesWithReceiverPermissionAndWait(
+            REFRESH_REASON_RESCAN_BUTTON_CLICK
+        )
+
+        listener.waitForSafetyCenterRefresh(withErrorEntry = false)
+    }
+
+    @Test
+    @RequiresFlagsEnabled(MainlineFlags.FLAG_BETTER_SAFETY_CENTER_SOURCE_TRACKING_ON_REFRESH)
+    fun refreshSafetySources_refreshCompletionDoesntMarkUserInitiatedRefreshComplete_timesOut() {
+        SafetyCenterFlags.setAllRefreshTimeoutsTo(TIMEOUT_SHORT)
+        safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.multipleSourcesConfig)
+        val listener = safetyCenterTestHelper.addListener()
+        // Seed SOURCE_ID_1 with data during a user initiated refresh.
+        SafetySourceReceiver.setResponse(
+            Request.Refresh(SOURCE_ID_1),
+            Response.SetData(safetySourceTestData.information),
+        )
+        // Initial user initiated refresh
+        safetyCenterManager.refreshSafetySourcesWithReceiverPermissionAndWait(
+            REFRESH_REASON_PERIODIC
+        )
+        listener.waitForSafetyCenterRefresh(withErrorEntry = false)
+        // Reset the responses for the second refresh
+        SafetySourceReceiver.clearResponses()
+        safetyCenterTestHelper.setData(SOURCE_ID_2, null)
+        safetyCenterTestHelper.setData(SOURCE_ID_3, null)
+
+        // SOURCE_ID_2 and SOURCE_ID_3 have no data, therefore they are untracked.
+        // SOURCE_ID_2 will timeout
+        for (sourceId in listOf(SOURCE_ID_1, SOURCE_ID_3)) {
+            SafetySourceReceiver.setResponse(
+                Request.Rescan(sourceId),
+                Response.SetData(safetySourceTestData.information),
+            )
+        }
+
+        safetyCenterManager.refreshSafetySourcesWithReceiverPermissionAndWait(
+            REFRESH_REASON_RESCAN_BUTTON_CLICK
+        )
+
+        // Times out because the first refresh was not user initiated.
+        listener.waitForSafetyCenterRefresh(withErrorEntry = true)
+    }
+
+    @Test
+    @RequiresFlagsEnabled(MainlineFlags.FLAG_BETTER_SAFETY_CENTER_SOURCE_TRACKING_ON_REFRESH)
+    fun refreshSafetySources_withCalculatedTrackedSourceThatTimesOut_timesOut() {
+        SafetyCenterFlags.setAllRefreshTimeoutsTo(TIMEOUT_SHORT)
+        safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.multipleSourcesConfig)
+        val listener = safetyCenterTestHelper.addListener()
+        // Seed SOURCE_ID_1 and SOURCE_ID_2 with data during a user initiated refresh.
+        for (sourceId in listOf(SOURCE_ID_1, SOURCE_ID_2)) {
+            SafetySourceReceiver.setResponse(
+                Request.Rescan(sourceId),
+                Response.SetData(safetySourceTestData.information),
+            )
+        }
+        // Initial user initiated refresh
+        safetyCenterManager.refreshSafetySourcesWithReceiverPermissionAndWait(
+            REFRESH_REASON_RESCAN_BUTTON_CLICK
+        )
+        listener.waitForSafetyCenterRefresh(withErrorEntry = true)
+        // Reset the responses for the second refresh
+        SafetySourceReceiver.clearResponses()
+        safetyCenterTestHelper.setData(SOURCE_ID_3, null)
+
+        // SOURCE_ID_1 and SOURCE_ID_2 are tracked because they have data.
+        // SOURCE_ID_1 will timeout
+        for (sourceId in listOf(SOURCE_ID_2, SOURCE_ID_3)) {
+            SafetySourceReceiver.setResponse(
+                Request.Rescan(sourceId),
+                Response.SetData(safetySourceTestData.information),
+            )
+        }
+
+        safetyCenterManager.refreshSafetySourcesWithReceiverPermissionAndWait(
+            REFRESH_REASON_RESCAN_BUTTON_CLICK
+        )
+
+        listener.waitForSafetyCenterRefresh(withErrorEntry = true)
+    }
+
+    @Test
+    @RequiresFlagsEnabled(MainlineFlags.FLAG_BETTER_SAFETY_CENTER_SOURCE_TRACKING_ON_REFRESH)
+    fun refreshSafetySources_initialRefresh_usesFlagUntrackedSources() {
+        SafetyCenterFlags.setAllRefreshTimeoutsTo(TIMEOUT_SHORT)
+        safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.singleSourceConfig)
+        // SINGLE_SOURCE_ID will timeout
+        val listener = safetyCenterTestHelper.addListener()
+
+        safetyCenterManager.refreshSafetySourcesWithReceiverPermissionAndWait(
+            REFRESH_REASON_RESCAN_BUTTON_CLICK
+        )
+
+        listener.waitForSafetyCenterRefresh(withErrorEntry = true)
     }
 
     @Test
