@@ -139,10 +139,9 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Imefikiwa mwisho: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Angalia"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Hakuna ufikiaji"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3069765762733650044) -->
+    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
     <skip />
-    <!-- no translation found for agent_activity_timeline_footer_title (6959375013990594999) -->
-    <skip />
+    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Dashibodi ya faragha huonyesha tu programu zinapofikiwa kwa kutumia vipengele vya Android vya mifumo tekelezi."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Usaidizi wa Kifaa"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Angalia programu zilizotumia ruhusa hivi majuzi"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Matumizi ya <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

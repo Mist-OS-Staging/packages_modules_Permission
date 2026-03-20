@@ -139,10 +139,9 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"上次访问时间：<xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"查看"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"无访问权限"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3069765762733650044) -->
+    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
     <skip />
-    <!-- no translation found for agent_activity_timeline_footer_title (6959375013990594999) -->
-    <skip />
+    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"只有在使用 Android 代理功能访问应用时，隐私信息中心才会显示。"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"设备协助"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"查看最近使用过权限的应用"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>使用情况"</string>
@@ -516,7 +515,7 @@
     <string name="permgroupupgraderequestdetail_nearby_devices" msgid="6877531270654738614">"要允许&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;查找、连接附近设备以及确定附近设备的相对位置吗？"<annotation id="link">"您可以在“设置”中允许。"</annotation></string>
     <string name="permgrouprequest_fineupgrade" msgid="2334242928821697672">"要将“<xliff:g id="APP_NAME">&lt;b&gt;%1$s&lt;/b&gt;</xliff:g>”可以使用的位置信息从大致位置改为精确位置吗？"</string>
     <string name="permgrouprequest_device_aware_fineupgrade" msgid="4453775952305587571">"要将<xliff:g id="APP_NAME">&lt;b&gt;%1$s&lt;/b&gt;</xliff:g>在&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;上的位置信息访问权限从大致位置信息改为精确位置信息吗？"</string>
-    <string name="permgrouprequest_coarselocation" msgid="7244605063736425232">"要允许 &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; 获取此设备的大致位置信息吗？"</string>
+    <string name="permgrouprequest_coarselocation" msgid="7244605063736425232">"要允许“&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;”获取此设备的大致位置信息吗？"</string>
     <string name="permgrouprequest_device_aware_coarselocation" msgid="8367540370912066757">"要允许&lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;获取&lt;b&gt;<xliff:g id="DEVICE_NAME">%2$s</xliff:g>&lt;/b&gt;的大致位置信息吗？"</string>
     <string name="permgrouprequest_finelocation_imagetext" msgid="1313062433398914334">"精确位置"</string>
     <string name="permgrouprequest_coarselocation_imagetext" msgid="8650605041483025297">"大致位置"</string>
@@ -723,7 +722,7 @@
     <string name="enhanced_confirmation_dialog_learn_more" msgid="5226619861379095709">"了解详情"</string>
     <string name="enhanced_confirmation_dialog_ok" msgid="8560373821598619924">"确定"</string>
     <string name="permission_grant_dialog_streaming_blocked_title" msgid="8905241017017043649">"权限请求被阻止"</string>
-    <string name="permission_grant_dialog_streaming_blocked_description" msgid="838165608934085319">"此应用请求获得额外的权限，但在流式传输会话期间无法授予权限。请先在手机上授予相应权限。"</string>
+    <string name="permission_grant_dialog_streaming_blocked_description" msgid="838165608934085319">"此应用请求获得额外的权限，但在串流会话期间无法授予权限。请先在手机上授予相应权限。"</string>
     <string name="privacy_dashboard_emergency_location_enforced_attribution_label" msgid="5702912511473457693">"用于紧急呼叫或发送紧急短信"</string>
     <string name="privacy_dashboard_emergency_location_dialog_title" msgid="849723944428031911">"已向应急服务发送位置信息"</string>
     <string name="privacy_dashboard_emergency_location_dialog_description" msgid="5815970230573483329">"在向紧急电话号码致电或发短信期间，此应用会获取您设备的位置信息。即使此应用没有位置信息权限或设备位置信息服务已关闭，也可能发生此情况。"<a href="https://support.google.com/android/answer/9319337">"了解详情"</a></string>
