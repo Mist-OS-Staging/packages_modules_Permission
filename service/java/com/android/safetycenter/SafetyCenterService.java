@@ -1374,7 +1374,7 @@ public final class SafetyCenterService extends SystemService {
     private void clearDataLocked() {
         mSafetyCenterDataManager.clear();
         mSafetyCenterTimeouts.clear();
-        mSafetyCenterRefreshTracker.clearRefresh();
+        mSafetyCenterRefreshTracker.clear();
         mNotificationSender.cancelAllNotifications();
     }
 
