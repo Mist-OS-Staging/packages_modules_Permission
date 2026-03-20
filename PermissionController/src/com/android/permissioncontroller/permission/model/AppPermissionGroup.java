@@ -57,7 +57,6 @@ import androidx.annotation.StringRes;
 import com.android.modules.utils.build.SdkLevel;
 import com.android.permissioncontroller.PermissionControllerApplication;
 import com.android.permissioncontroller.R;
-import com.android.permissioncontroller.permission.data.LightPackageInfoLiveData;
 import com.android.permissioncontroller.permission.service.LocationAccessCheck;
 import com.android.permissioncontroller.permission.utils.ArrayUtils;
 import com.android.permissioncontroller.permission.utils.ContextCompat;
@@ -226,11 +225,8 @@ public final class AppPermissionGroup implements Comparable<AppPermissionGroup> 
     public static AppPermissionGroup create(Application app, String packageName,
             String permissionGroupName, UserHandle user, boolean delayChanges) {
         try {
-            PackageManager pm = Utils.getUserContext(app, user).getPackageManager();
-            int flags = PackageManager.GET_PERMISSIONS;
-            PackageInfo packageInfo = pm.getPackageInfo(packageName, flags);
-            PackageInfo mergedPackageInfo = LightPackageInfoLiveData.mergePermissionsInSharedUid(
-                    packageInfo, flags, pm);
+            PackageInfo packageInfo = Utils.getUserContext(app, user).getPackageManager()
+                    .getPackageInfo(packageName, PackageManager.GET_PERMISSIONS);
             PackageItemInfo groupInfo = Utils.getGroupInfo(permissionGroupName, app);
             if (groupInfo == null) {
                 return null;
@@ -241,7 +237,7 @@ public final class AppPermissionGroup implements Comparable<AppPermissionGroup> 
                 permissionInfos = Utils.getPermissionInfosForGroup(app.getPackageManager(),
                             groupInfo.name);
             }
-            return create(app, mergedPackageInfo, groupInfo, permissionInfos, delayChanges);
+            return create(app, packageInfo, groupInfo, permissionInfos, delayChanges);
         } catch (PackageManager.NameNotFoundException e) {
             return null;
         }
