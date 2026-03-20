@@ -414,7 +414,7 @@
     <string name="empty_agent_activity_timeline_preference_title">No accesses</string>
 
     <!-- Top intro text for the agent activity timeline [CHAR LIMIT=30] -->
-    <string name="agent_activity_timeline_top_intro_title">This agent accessed these apps to get info or take actions for you.</string>
+    <string name="agent_activity_timeline_top_intro_title">This agent accessed these apps to get info or take actions for you. You can change this access anytime in <xliff:g id="app_name" example="Example Agent App">%1$s</xliff:g> settings.</string>
 
     <!-- Footer text for the agent activity timeline [CHAR LIMIT=30] -->
     <string name="agent_activity_timeline_footer_title">Privacy dashboard only shows when apps are accessed using Android features for agents.</string>
