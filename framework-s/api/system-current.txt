@@ -1,7 +1,6 @@
 // Signature format: 6.0
 // - style=java
 // - overloaded-method-order=source
-// - strip-java-lang-prefix=legacy
 package android.app.ecm {
 
   @FlaggedApi("android.permission.flags.enhanced_confirmation_mode_apis_enabled") public final class EnhancedConfirmationManager {
@@ -26,7 +25,7 @@ package android.app.role {
     method @Deprecated @WorkerThread public abstract boolean onAddRoleHolder(@NonNull String, @NonNull String, int);
     method @Deprecated @Nullable public final android.os.IBinder onBind(@Nullable android.content.Intent);
     method @Deprecated @WorkerThread public abstract boolean onClearRoleHolders(@NonNull String, int);
-    method @Deprecated @FlaggedApi("android.permission.flags.system_server_role_controller_enabled") @NonNull public java.util.List<java.lang.String> onGetLegacyFallbackDisabledRoles();
+    method @Deprecated @FlaggedApi("android.permission.flags.system_server_role_controller_enabled") @NonNull public java.util.List<String> onGetLegacyFallbackDisabledRoles();
     method @Deprecated @WorkerThread public abstract boolean onGrantDefaultRoles();
     method @Deprecated public abstract boolean onIsApplicationQualifiedForRole(@NonNull String, @NonNull String);
     method @Deprecated public boolean onIsApplicationVisibleForRole(@NonNull String, @NonNull String);
@@ -37,29 +36,29 @@ package android.app.role {
 
   public final class RoleManager {
     method @RequiresPermission(android.Manifest.permission.OBSERVE_ROLE_HOLDERS) public void addOnRoleHoldersChangedListenerAsUser(@NonNull java.util.concurrent.Executor, @NonNull android.app.role.OnRoleHoldersChangedListener, @NonNull android.os.UserHandle);
-    method @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public void addRoleHolderAsUser(@NonNull String, @NonNull String, int, @NonNull android.os.UserHandle, @NonNull java.util.concurrent.Executor, @NonNull java.util.function.Consumer<java.lang.Boolean>);
+    method @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public void addRoleHolderAsUser(@NonNull String, @NonNull String, int, @NonNull android.os.UserHandle, @NonNull java.util.concurrent.Executor, @NonNull java.util.function.Consumer<Boolean>);
     method @Deprecated @RequiresPermission("com.android.permissioncontroller.permission.MANAGE_ROLES_FROM_CONTROLLER") public boolean addRoleHolderFromController(@NonNull String, @NonNull String);
-    method @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public void clearRoleHoldersAsUser(@NonNull String, int, @NonNull android.os.UserHandle, @NonNull java.util.concurrent.Executor, @NonNull java.util.function.Consumer<java.lang.Boolean>);
+    method @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public void clearRoleHoldersAsUser(@NonNull String, int, @NonNull android.os.UserHandle, @NonNull java.util.concurrent.Executor, @NonNull java.util.function.Consumer<Boolean>);
     method @FlaggedApi("com.android.permission.flags.cross_user_role_enabled") @Nullable @RequiresPermission(allOf={android.Manifest.permission.INTERACT_ACROSS_USERS_FULL, android.Manifest.permission.MANAGE_ROLE_HOLDERS, android.Manifest.permission.MANAGE_DEFAULT_APPLICATIONS}, conditional=true) public android.os.UserHandle getActiveUserForRole(@NonNull String);
     method @Nullable @RequiresPermission(android.Manifest.permission.MANAGE_DEFAULT_APPLICATIONS) public String getDefaultApplication(@NonNull String);
-    method @FlaggedApi("com.android.permission.flags.cross_user_role_enabled") @NonNull @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public java.util.List<java.lang.String> getDefaultHoldersForTest(@NonNull String);
-    method @Deprecated @NonNull @RequiresPermission("com.android.permissioncontroller.permission.MANAGE_ROLES_FROM_CONTROLLER") public java.util.List<java.lang.String> getHeldRolesFromController(@NonNull String);
-    method @NonNull @RequiresPermission(anyOf={android.Manifest.permission.MANAGE_ROLE_HOLDERS, android.Manifest.permission.GET_ROLE_HOLDERS}) public java.util.List<java.lang.String> getRoleHolders(@NonNull String);
-    method @NonNull @RequiresPermission(anyOf={android.Manifest.permission.MANAGE_ROLE_HOLDERS, android.Manifest.permission.GET_ROLE_HOLDERS}) public java.util.List<java.lang.String> getRoleHoldersAsUser(@NonNull String, @NonNull android.os.UserHandle);
-    method @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public void isApplicationVisibleForRole(@NonNull String, @NonNull String, @NonNull java.util.concurrent.Executor, @NonNull java.util.function.Consumer<java.lang.Boolean>);
+    method @FlaggedApi("com.android.permission.flags.cross_user_role_enabled") @NonNull @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public java.util.List<String> getDefaultHoldersForTest(@NonNull String);
+    method @Deprecated @NonNull @RequiresPermission("com.android.permissioncontroller.permission.MANAGE_ROLES_FROM_CONTROLLER") public java.util.List<String> getHeldRolesFromController(@NonNull String);
+    method @NonNull @RequiresPermission(anyOf={android.Manifest.permission.MANAGE_ROLE_HOLDERS, android.Manifest.permission.GET_ROLE_HOLDERS}) public java.util.List<String> getRoleHolders(@NonNull String);
+    method @NonNull @RequiresPermission(anyOf={android.Manifest.permission.MANAGE_ROLE_HOLDERS, android.Manifest.permission.GET_ROLE_HOLDERS}) public java.util.List<String> getRoleHoldersAsUser(@NonNull String, @NonNull android.os.UserHandle);
+    method @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public void isApplicationVisibleForRole(@NonNull String, @NonNull String, @NonNull java.util.concurrent.Executor, @NonNull java.util.function.Consumer<Boolean>);
     method @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public boolean isBypassingRoleQualification();
     method @FlaggedApi("android.permission.flags.system_server_role_controller_enabled") @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public boolean isRoleFallbackEnabled(@NonNull String);
-    method @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public void isRoleVisible(@NonNull String, @NonNull java.util.concurrent.Executor, @NonNull java.util.function.Consumer<java.lang.Boolean>);
+    method @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public void isRoleVisible(@NonNull String, @NonNull java.util.concurrent.Executor, @NonNull java.util.function.Consumer<Boolean>);
     method @FlaggedApi("com.android.permission.flags.cross_user_role_enabled") @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public boolean isRoleVisibleForTest(@NonNull String);
     method @RequiresPermission(android.Manifest.permission.OBSERVE_ROLE_HOLDERS) public void removeOnRoleHoldersChangedListenerAsUser(@NonNull android.app.role.OnRoleHoldersChangedListener, @NonNull android.os.UserHandle);
-    method @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public void removeRoleHolderAsUser(@NonNull String, @NonNull String, int, @NonNull android.os.UserHandle, @NonNull java.util.concurrent.Executor, @NonNull java.util.function.Consumer<java.lang.Boolean>);
+    method @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public void removeRoleHolderAsUser(@NonNull String, @NonNull String, int, @NonNull android.os.UserHandle, @NonNull java.util.concurrent.Executor, @NonNull java.util.function.Consumer<Boolean>);
     method @Deprecated @RequiresPermission("com.android.permissioncontroller.permission.MANAGE_ROLES_FROM_CONTROLLER") public boolean removeRoleHolderFromController(@NonNull String, @NonNull String);
     method @FlaggedApi("com.android.permission.flags.cross_user_role_enabled") @RequiresPermission(allOf={android.Manifest.permission.INTERACT_ACROSS_USERS_FULL, android.Manifest.permission.MANAGE_ROLE_HOLDERS, android.Manifest.permission.MANAGE_DEFAULT_APPLICATIONS}, conditional=true) public void setActiveUserForRole(@NonNull String, @NonNull android.os.UserHandle, int);
     method @RequiresPermission(android.Manifest.permission.BYPASS_ROLE_QUALIFICATION) public void setBypassingRoleQualification(boolean);
-    method @RequiresPermission(android.Manifest.permission.MANAGE_DEFAULT_APPLICATIONS) public void setDefaultApplication(@NonNull String, @Nullable String, int, @NonNull java.util.concurrent.Executor, @NonNull java.util.function.Consumer<java.lang.Boolean>);
-    method @FlaggedApi("com.android.permission.flags.cross_user_role_enabled") @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public void setDefaultHoldersForTest(@NonNull String, @NonNull java.util.List<java.lang.String>);
+    method @RequiresPermission(android.Manifest.permission.MANAGE_DEFAULT_APPLICATIONS) public void setDefaultApplication(@NonNull String, @Nullable String, int, @NonNull java.util.concurrent.Executor, @NonNull java.util.function.Consumer<Boolean>);
+    method @FlaggedApi("com.android.permission.flags.cross_user_role_enabled") @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public void setDefaultHoldersForTest(@NonNull String, @NonNull java.util.List<String>);
     method @FlaggedApi("android.permission.flags.system_server_role_controller_enabled") @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public void setRoleFallbackEnabled(@NonNull String, boolean);
-    method @Deprecated @RequiresPermission("com.android.permissioncontroller.permission.MANAGE_ROLES_FROM_CONTROLLER") public void setRoleNamesFromController(@NonNull java.util.List<java.lang.String>);
+    method @Deprecated @RequiresPermission("com.android.permissioncontroller.permission.MANAGE_ROLES_FROM_CONTROLLER") public void setRoleNamesFromController(@NonNull java.util.List<String>);
     method @FlaggedApi("com.android.permission.flags.cross_user_role_enabled") @RequiresPermission(android.Manifest.permission.MANAGE_ROLE_HOLDERS) public void setRoleVisibleForTest(@NonNull String, boolean);
     field public static final int MANAGE_HOLDERS_FLAG_DONT_KILL_APP = 1; // 0x1
     field @FlaggedApi("android.permission.flags.device_controller_role_api_enabled") public static final String ROLE_DEVICE_CONTROLLER = "android.app.role.DEVICE_CONTROLLER";
@@ -213,7 +212,7 @@ package android.safetycenter {
     method @Nullable public String getGroupId();
     method @NonNull public String getId();
     method @FlaggedApi("android.permission.flags.open_safety_center_apis") @Nullable public String getIssueTypeId();
-    method @FlaggedApi("android.permission.flags.open_safety_center_apis") @NonNull public java.util.Set<java.lang.String> getSafetySourceIds();
+    method @FlaggedApi("android.permission.flags.open_safety_center_apis") @NonNull public java.util.Set<String> getSafetySourceIds();
     method @FlaggedApi("android.permission.flags.open_safety_center_apis") @Nullable public String getSafetySourceIssueId();
     method public int getSeverityLevel();
     method @Nullable public CharSequence getSubtitle();
@@ -268,7 +267,7 @@ package android.safetycenter {
 
   public static final class SafetyCenterIssue.Builder {
     ctor @Deprecated @FlaggedApi("android.permission.flags.open_safety_center_apis") public SafetyCenterIssue.Builder(@NonNull String, @NonNull CharSequence, @NonNull CharSequence);
-    ctor @FlaggedApi("android.permission.flags.open_safety_center_apis") public SafetyCenterIssue.Builder(@NonNull String, @NonNull CharSequence, @NonNull CharSequence, @NonNull android.os.UserHandle, @NonNull java.util.Set<java.lang.String>, @NonNull String, @NonNull String);
+    ctor @FlaggedApi("android.permission.flags.open_safety_center_apis") public SafetyCenterIssue.Builder(@NonNull String, @NonNull CharSequence, @NonNull CharSequence, @NonNull android.os.UserHandle, @NonNull java.util.Set<String>, @NonNull String, @NonNull String);
     ctor public SafetyCenterIssue.Builder(@NonNull android.safetycenter.SafetyCenterIssue);
     method @NonNull public android.safetycenter.SafetyCenterIssue build();
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setActions(@NonNull java.util.List<android.safetycenter.SafetyCenterIssue.Action>);
@@ -277,7 +276,7 @@ package android.safetycenter {
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setGroupId(@Nullable String);
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setId(@NonNull String);
     method @FlaggedApi("android.permission.flags.open_safety_center_apis") @NonNull public android.safetycenter.SafetyCenterIssue.Builder setIssueTypeId(@NonNull String);
-    method @FlaggedApi("android.permission.flags.open_safety_center_apis") @NonNull public android.safetycenter.SafetyCenterIssue.Builder setSafetySourceIds(@NonNull java.util.Set<java.lang.String>);
+    method @FlaggedApi("android.permission.flags.open_safety_center_apis") @NonNull public android.safetycenter.SafetyCenterIssue.Builder setSafetySourceIds(@NonNull java.util.Set<String>);
     method @FlaggedApi("android.permission.flags.open_safety_center_apis") @NonNull public android.safetycenter.SafetyCenterIssue.Builder setSafetySourceIssueId(@NonNull String);
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setSeverityLevel(int);
     method @NonNull public android.safetycenter.SafetyCenterIssue.Builder setShouldConfirmDismissal(boolean);
@@ -299,7 +298,7 @@ package android.safetycenter {
     method @Nullable @RequiresPermission(android.Manifest.permission.SEND_SAFETY_CENTER_UPDATE) public android.safetycenter.SafetySourceData getSafetySourceData(@NonNull String);
     method @RequiresPermission(anyOf={android.Manifest.permission.READ_SAFETY_CENTER_STATUS, android.Manifest.permission.SEND_SAFETY_CENTER_UPDATE}) public boolean isSafetyCenterEnabled();
     method @RequiresPermission(android.Manifest.permission.MANAGE_SAFETY_CENTER) public void refreshSafetySources(int);
-    method @RequiresPermission(android.Manifest.permission.MANAGE_SAFETY_CENTER) public void refreshSafetySources(int, @NonNull java.util.List<java.lang.String>);
+    method @RequiresPermission(android.Manifest.permission.MANAGE_SAFETY_CENTER) public void refreshSafetySources(int, @NonNull java.util.List<String>);
     method @RequiresPermission(android.Manifest.permission.MANAGE_SAFETY_CENTER) public void removeOnSafetyCenterDataChangedListener(@NonNull android.safetycenter.SafetyCenterManager.OnSafetyCenterDataChangedListener);
     method @RequiresPermission(android.Manifest.permission.SEND_SAFETY_CENTER_UPDATE) public void reportSafetySourceError(@NonNull String, @NonNull android.safetycenter.SafetySourceErrorDetails);
     method @RequiresPermission(android.Manifest.permission.MANAGE_SAFETY_CENTER) public void setSafetyCenterConfigForTests(@NonNull android.safetycenter.config.SafetyCenterConfig);
@@ -603,7 +602,7 @@ package android.safetycenter.config {
     method @Nullable public String getIntentAction();
     method public int getMaxSeverityLevel();
     method @Nullable public String getOptionalPackageName();
-    method @NonNull public java.util.Set<java.lang.String> getPackageCertificateHashes();
+    method @NonNull public java.util.Set<String> getPackageCertificateHashes();
     method @NonNull public String getPackageName();
     method public int getProfile();
     method @StringRes public int getSearchTermsResId();
