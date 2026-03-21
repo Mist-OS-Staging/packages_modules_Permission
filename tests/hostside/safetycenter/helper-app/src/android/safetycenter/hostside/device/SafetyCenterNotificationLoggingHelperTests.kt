@@ -22,6 +22,7 @@ import android.safetycenter.SafetySourceData
 import android.safetycenter.SafetySourceIssue
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.android.modules.utils.build.SdkLevel
 import com.android.safetycenter.pendingintents.PendingIntentSender
 import com.android.safetycenter.testing.NotificationCharacteristics
 import com.android.safetycenter.testing.SafetyCenterActivityLauncher
@@ -66,7 +67,12 @@ class SafetyCenterNotificationLoggingHelperTests {
         SafetyCenterFlags.notificationsEnabled = true
         SafetyCenterFlags.notificationsAllowedSources = setOf(SINGLE_SOURCE_ID)
         SafetyCenterFlags.allowStatsdLogging = true
-        safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.singleSourceConfig)
+        if (SdkLevel.isAtLeastC()) {
+            safetyCenterTestHelper.setConfig(
+                safetyCenterTestConfigs.singleSourceWithNotificationsConfig)
+        } else {
+            safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.singleSourceConfig)
+        }
     }
 
     @Test
