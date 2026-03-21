@@ -79,8 +79,6 @@ android_test {
         ":CtsAppThatAccessesLocationPermission",
         ":CtsUsePermissionAppStorage33",
         ":CtsAppThatMakesTwoPermRequests",
-        ":CtsAppWithSharedUidNoPerms",
-        ":CtsAppWithSharedUidWithPerms",
         ":CtsLocationButtonApp",
         ":CtsAppThatRequestsInternet36",
     ],

@@ -76,8 +76,6 @@
         <option name="push" value="CtsAppThatAccessesLocationPermission.apk->/data/local/tmp/cts-permissionui/CtsAppThatAccessesLocationPermission.apk" />
         <option name="push" value="CtsUsePermissionAppStorage33.apk->/data/local/tmp/cts-permissionui/CtsUsePermissionAppStorage33.apk" />
         <option name="push" value="CtsAppThatMakesTwoPermRequests.apk->/data/local/tmp/cts-permissionui/CtsAppThatMakesTwoPermRequests.apk" />
-        <option name="push" value="CtsAppWithSharedUidNoPerms.apk->/data/local/tmp/cts-permissionui/CtsAppWithSharedUidNoPerms.apk" />
-        <option name="push" value="CtsAppWithSharedUidWithPerms.apk->/data/local/tmp/cts-permissionui/CtsAppWithSharedUidWithPerms.apk" />
         <option name="push" value="CtsLocationButtonApp.apk->/data/local/tmp/cts-permissionui/CtsLocationButtonApp.apk" />
         <option name="push" value="CtsAppThatRequestsInternet36.apk->/data/local/tmp/cts-permissionui/CtsAppThatRequestsInternet36.apk" />
     </target_preparer>

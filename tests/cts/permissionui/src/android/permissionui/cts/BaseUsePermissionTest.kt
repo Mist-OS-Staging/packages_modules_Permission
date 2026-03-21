@@ -104,16 +104,9 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
         const val APP_APK_PATH_OTHER_APP = "$APK_DIRECTORY/CtsDifferentPkgNameApp.apk"
         const val APP_APK_PATH_TWO_PERM_REQUESTS =
             "$APK_DIRECTORY/CtsAppThatMakesTwoPermRequests.apk"
-        const val APP_APK_PATH_SHARED_UID_NO_PERMS = "$APK_DIRECTORY/CtsAppWithSharedUidNoPerms.apk"
-        const val APP_APK_PATH_SHARED_UID_WITH_PERMS =
-            "$APK_DIRECTORY/CtsAppWithSharedUidWithPerms.apk"
         const val APP_PACKAGE_NAME = "android.permissionui.cts.usepermission"
         const val OTHER_APP_PACKAGE_NAME = "android.permissionui.cts.usepermissionother"
         const val TEST_INSTALLER_PACKAGE_NAME = "android.permissionui.cts"
-        const val SHARED_UID_NO_PERMS_PACKAGE_NAME =
-            "android.permissionui.cts.appwithshareduidnoperms"
-        const val SHARED_UID_WITH_PERMS_PACKAGE_NAME =
-            "android.permissionui.cts.appwithshareduidwithperms"
 
         const val LOCATION_BUTTON_ALLOW_BUTTON = "com.android.permissioncontroller:id/allow"
         const val ALLOW_ALL_BUTTON =
@@ -1198,7 +1191,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
         )
     }
 
-    private fun navigateToAppPermissionSettings(packageName: String = APP_PACKAGE_NAME) {
+    private fun navigateToAppPermissionSettings() {
         if (isTv) {
             clearTargetSdkWarning(1000L)
             pressHome()
@@ -1216,7 +1209,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
                     doAndWaitForWindowTransition {
                         context.startActivity(
                             Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
-                                data = Uri.fromParts("package", packageName, null)
+                                data = Uri.fromParts("package", APP_PACKAGE_NAME, null)
                                 addCategory(Intent.CATEGORY_DEFAULT)
                                 addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                                 addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
@@ -1264,7 +1257,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
     ) {
         val useLegacyNavigation = isWatch || isAutomotive || manuallyNavigate
         if (useLegacyNavigation) {
-            navigateToAppPermissionSettings(packageName)
+            navigateToAppPermissionSettings()
             val permissionLabel = getPermissionLabel(permission)
             if (isWatch) {
                 clickAndWaitForWindowTransition(

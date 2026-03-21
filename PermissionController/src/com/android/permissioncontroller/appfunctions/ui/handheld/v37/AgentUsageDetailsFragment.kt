@@ -388,7 +388,15 @@ class AgentUsageDetailsFragment : SettingsWithLargeHeader() {
     fun addTopIntro(preferenceScreen: PreferenceScreen) {
         val topIntroPreference =
             TopIntroPreference(requireContext()).apply {
-                title = resources.getString(R.string.agent_activity_timeline_top_intro_title)
+                title =
+                    resources.getString(
+                        R.string.agent_activity_timeline_top_intro_title,
+                        KotlinUtils.getPackageLabel(
+                            requireActivity().application,
+                            agentPackageName,
+                            user,
+                        ),
+                    )
             }
         preferenceScreen.addPreference(topIntroPreference)
     }
