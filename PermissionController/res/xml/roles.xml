@@ -1615,9 +1615,6 @@
                         featureFlag="android.permission.flags.Flags.devicePolicyManagementRoleSplitCreateManagedProfileEnabled" />
             <permission name="android.permission.ACCESS_BIOMETRIC_SENSOR_STRENGTHS"
                 featureFlag="android.hardware.biometrics.Flags.getBiometricSensorStrengths" />
-            <permission
-                name="android.permission.FORCE_USE_LOOPBACK_INTERFACE"
-                featureFlag="android.permission.flags.Flags.useLoopbackInterfacePermissionEnabled" />
         </permissions>
     </role>
 
