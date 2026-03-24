@@ -141,8 +141,7 @@
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"לא נרשמה גישה"</string>
     <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
     <skip />
-    <!-- no translation found for agent_activity_timeline_footer_title (6959375013990594999) -->
-    <skip />
+    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"‏מרכז הבקרה להגדרות הפרטיות מוצג רק כשהגישה לאפליקציות היא באמצעות תכונות Android לסוכנים."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"עזרה במכשיר"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"הצגת האפליקציות שהשתמשו לאחרונה בהרשאות"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"שימוש ב<xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

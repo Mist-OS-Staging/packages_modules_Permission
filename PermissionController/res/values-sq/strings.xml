@@ -141,8 +141,7 @@
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Nuk ka qasje"</string>
     <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
     <skip />
-    <!-- no translation found for agent_activity_timeline_footer_title (6959375013990594999) -->
-    <skip />
+    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Paneli i privatësisë shfaqet vetëm kur qasja në aplikacione kryhet duke përdorur veçoritë e Android për agjentët."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Ndihma për pajisjen"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Shiko se cilat aplikacione kanë përdorur së fundi leje"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Përdorimi i lejeve: <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
