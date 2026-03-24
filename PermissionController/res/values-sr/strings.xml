@@ -139,8 +139,7 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Последњи приступ: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Прикажи"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Нема приступа"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
-    <skip />
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Агент је приступио апликацијама ради информација или радњи за вас. Тај приступ можете у сваком тренутку да промените у подешавањима апликације <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Таблу за приватност видите само за приступ апликацијама уз Android функције за агенте."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Помоћ за уређај"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Прегледајте које су апликације недавно користиле дозволе"</string>

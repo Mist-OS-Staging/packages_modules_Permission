@@ -139,8 +139,7 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"<xliff:g id="TIME_DATE">%1$s</xliff:g> वाजता शेवटचे अ‍ॅक्सेस केले"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"पहा"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"कोणतेही अ‍ॅक्सेस नाहीत"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
-    <skip />
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"या एजंटने तुमच्यासाठी माहिती मिळवण्यासाठी किंवा कृती करण्यासाठी ही अ‍ॅप्स अ‍ॅक्सेस केली आहेत. तुम्ही हे <xliff:g id="APP_NAME">%1$s</xliff:g> सेटिंग्जमध्ये कधीही बदलू शकता."</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"एजंटसाठीची Android वैशिष्ट्ये वापरून अ‍ॅप्स अ‍ॅक्सेस केली जातात, तेव्हाच गोपनीयता डॅशबोर्ड दाखवला जातो."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"डिव्हाइससंबंधित साहाय्य"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"कोणत्या ॲप्सनी अलीकडे परवानग्या वापरल्या ते पहा"</string>

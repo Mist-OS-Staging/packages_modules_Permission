@@ -129,8 +129,8 @@
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Қолданба рұқсаттары"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Агенттің әрекеті"</string>
     <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Ешқандай агент орнатылмаған"</string>
-    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Соңғы 24 сағатта кірмегендер"</string>
-    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Соңғы 7 күнде кірмегендер"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Соңғы 24 сағатта кірмеген"</string>
+    <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Соңғы 7 күнде кірмеген"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> әрекеті"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Соңғы 24 сағатта"</string>
     <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"Соңғы 7 күн"</string>
@@ -138,7 +138,7 @@
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Кеше"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Соңғы рет пайдаланған уақыты: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Көру"</string>
-    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Кірмегендер"</string>
+    <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Кірмеген"</string>
     <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
     <skip />
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Құпиялық тақтасы қолданбалар агенттерге арналған Android функциялары арқылы ашылғанда ғана көрінеді."</string>
