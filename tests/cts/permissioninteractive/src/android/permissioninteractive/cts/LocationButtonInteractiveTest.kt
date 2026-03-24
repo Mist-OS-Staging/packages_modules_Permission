@@ -40,6 +40,7 @@ import com.android.interactive.annotations.NotFullyAutomated
 import com.android.interactive.steps.locationbutton.VerifyButtonShapeMorphs
 import com.android.interactive.steps.locationbutton.VerifyColorsStep
 import com.android.interactive.steps.locationbutton.VerifyIconOnlyStep
+import com.android.interactive.steps.locationbutton.VerifyPaddingsStep
 import com.android.interactive.steps.locationbutton.VerifyRtlLanguageStep
 import com.android.interactive.steps.locationbutton.VerifySharpCornersStep
 import org.junit.After
@@ -141,7 +142,27 @@ class LocationButtonInteractiveTest {
         assertTrue(Step.execute(VerifyRtlLanguageStep::class.java))
     }
 
-    // TODO: Verify multiple width / height configurations.
+    @Interactive
+    @Test
+    @CddTest(requirement = "3.8.18/C-0-1")
+    @NotFullyAutomated(
+        reason =
+            "Visual properties of the Location Button are rendered remotely by SystemUI " +
+                "and cannot be reliably verified via automation."
+    )
+    fun verifyButtonPaddingCustomization() {
+        launchLocationButtonApp(
+            width = dpToPx(48),
+            height = dpToPx(48),
+            textType = LocationButtonSession.TEXT_TYPE_NONE,
+            paddingLeft = dpToPx(8),
+            paddingTop = dpToPx(8),
+            paddingRight = dpToPx(8),
+            paddingBottom = dpToPx(8),
+            showReferenceButton = true,
+        )
+        assertTrue(Step.execute(VerifyPaddingsStep::class.java))
+    }
 
     private fun launchLocationButtonApp(
         width: Int = dpToPx(250),
@@ -155,6 +176,11 @@ class LocationButtonInteractiveTest {
         cornerRadius: Float = dpToPx(28).toFloat(),
         pressedCornerRadius: Float = dpToPx(28).toFloat(),
         languageTag: String? = null,
+        paddingLeft: Int = 0,
+        paddingTop: Int = 0,
+        paddingRight: Int = 0,
+        paddingBottom: Int = 0,
+        showReferenceButton: Boolean = false,
     ) {
         val intent =
             Intent().apply {
@@ -175,6 +201,11 @@ class LocationButtonInteractiveTest {
                 putExtra(EXTRA_CORNER_RADIUS, cornerRadius)
                 putExtra(EXTRA_PRESSED_CORNER_RADIUS, pressedCornerRadius)
                 languageTag?.let { putExtra(EXTRA_LANGUAGE_TAG, it) }
+                putExtra(EXTRA_PADDING_LEFT, paddingLeft)
+                putExtra(EXTRA_PADDING_TOP, paddingTop)
+                putExtra(EXTRA_PADDING_RIGHT, paddingRight)
+                putExtra(EXTRA_PADDING_BOTTOM, paddingBottom)
+                putExtra(EXTRA_SHOW_REFERENCE_BUTTON, showReferenceButton)
             }
         context.startActivity(intent)
         assertTrue(
@@ -211,6 +242,11 @@ class LocationButtonInteractiveTest {
         private const val EXTRA_PRESSED_CORNER_RADIUS = "pressed_corner_radius"
         private const val EXTRA_TEXT_TYPE = "text_type"
         private const val EXTRA_LANGUAGE_TAG = "language_tag"
+        private const val EXTRA_PADDING_LEFT = "padding_left"
+        private const val EXTRA_PADDING_TOP = "padding_top"
+        private const val EXTRA_PADDING_RIGHT = "padding_right"
+        private const val EXTRA_PADDING_BOTTOM = "padding_bottom"
+        private const val EXTRA_SHOW_REFERENCE_BUTTON = "show_reference_button"
         private const val LOCATION_BUTTON_CONTENT_DESCRIPTION = "location_button"
     }
 }
