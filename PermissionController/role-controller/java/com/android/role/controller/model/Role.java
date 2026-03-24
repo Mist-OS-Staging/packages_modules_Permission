@@ -650,6 +650,12 @@ public class Role {
     public boolean isPackageQualifiedAsUser(@NonNull String packageName, @NonNull UserHandle user,
             @NonNull Context context) {
         if (isBypassingQualification(context)) {
+            if (mBehavior != null) {
+                boolean isPackageAllowedToBypassQualification =
+                        mBehavior.isPackageAllowedToBypassQualificationAsUser(packageName, user,
+                                context);
+                return isPackageAllowedToBypassQualification;
+            }
             return true;
         }
 

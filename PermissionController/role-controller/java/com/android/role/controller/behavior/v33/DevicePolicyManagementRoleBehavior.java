@@ -17,7 +17,6 @@
 package com.android.role.controller.behavior.v33;
 
 import android.app.admin.DevicePolicyManager;
-import android.app.role.RoleManager;
 import android.content.Context;
 import android.os.Build;
 import android.os.UserHandle;
@@ -27,7 +26,6 @@ import androidx.annotation.RequiresApi;
 
 import com.android.role.controller.model.Role;
 import com.android.role.controller.model.RoleBehavior;
-import com.android.role.controller.util.RoleManagerCompat;
 import com.android.role.controller.util.UserUtils;
 
 /**
@@ -39,41 +37,27 @@ public class DevicePolicyManagementRoleBehavior implements RoleBehavior {
     @Override
     public Boolean shouldAllowBypassingQualification(@NonNull Role role,
             @NonNull Context context) {
-        if (android.app.admin.flags.Flags.secureAdbRoleBypassing()) {
-            return null;
-        }
         DevicePolicyManager devicePolicyManager =
                 context.getSystemService(DevicePolicyManager.class);
         return devicePolicyManager.shouldAllowBypassingDevicePolicyManagementRoleQualification();
     }
 
     /**
-     * Checks if the package having {@code packageName} is qualified for the Device Policy
-     * Management Role.
+     * Checks if the package having {@code packageName} is allowed to bypass the Device Policy
+     * Management Role qualification checks.
      *
-     * @return {@code false} if the package having {@code packageName} does not pass all the checks
-     * for becoming a Device Policy Management Role Holder. {@code true} if the package passes the
-     * checks and the bypassing role qualification flags is enabled. {@code null} otherwise.
+     * @return {@code true} if the package is allowed, {@code false} otherwise.
      */
-    @Override
-    public Boolean isPackageQualifiedAsUser(@NonNull Role role, @NonNull String packageName,
+    public boolean isPackageAllowedToBypassQualificationAsUser(@NonNull String packageName,
             @NonNull UserHandle user, @NonNull Context context) {
-        if (android.app.admin.flags.Flags.secureAdbRoleBypassing()) {
+        if (android.app.admin.flags.Flags.secureAdbRoleBypassing()
+                && Build.VERSION.SDK_INT >= Build.VERSION_CODES.CINNAMON_BUN) {
             Context userContext = UserUtils.getUserContext(context, user);
             DevicePolicyManager userDevicePolicyManager =
                     userContext.getSystemService(DevicePolicyManager.class);
-            boolean isQualified = userDevicePolicyManager
-                    .isPackageQualifiedForDevicePolicyManagementRole(packageName);
-            if (!isQualified) {
-                return false;
-            }
-            RoleManager userRoleManager = userContext.getSystemService(RoleManager.class);
-            if (RoleManagerCompat.isBypassingRoleQualification(userRoleManager)) {
-                return true;
-            }
-            // If the role bypassing is not enabled, the standard qualification checks are performed
-            return null;
+            return userDevicePolicyManager
+                    .isPackageAllowedToBypassDevicePolicyManagementRoleQualification(packageName);
         }
-        return null;
+        return true;
     }
 }
