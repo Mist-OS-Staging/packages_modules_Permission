@@ -139,10 +139,9 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"ಕೊನೆಯ ಆ್ಯಕ್ಸೆಸ್‌ <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"ವೀಕ್ಷಿಸಿ"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"ಯಾವುದೇ ಆ್ಯಕ್ಸೆಸ್‌ಗಳಿಲ್ಲ"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3069765762733650044) -->
+    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
     <skip />
-    <!-- no translation found for agent_activity_timeline_footer_title (6959375013990594999) -->
-    <skip />
+    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"ಏಜೆಂಟ್‌ಗಳಿಗಾಗಿ Android ಫೀಚರ್‌ಗಳನ್ನು ಬಳಸಿ ಆ್ಯಪ್‌ಗಳನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಿದಾಗ ಮಾತ್ರ ಗೌಪ್ಯತೆ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ತೋರಿಸುತ್ತದೆ."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"ಸಾಧನ ಸಹಾಯ"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ಯಾವ ಆ್ಯಪ್‌ಗಳು ಇತ್ತೀಚೆಗೆ ಅನುಮತಿಗಳನ್ನು ಬಳಸಿವೆ ಎಂದು ವೀಕ್ಷಿಸಿ"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> ಬಳಕೆ"</string>

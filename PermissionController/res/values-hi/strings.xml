@@ -139,10 +139,9 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"पिछली बार <xliff:g id="TIME_DATE">%1$s</xliff:g> पर ऐक्सेस किया गया"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"देखें"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"कोई ऐक्सेस नहीं दिया गया है"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3069765762733650044) -->
+    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
     <skip />
-    <!-- no translation found for agent_activity_timeline_footer_title (6959375013990594999) -->
-    <skip />
+    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"प्राइवसी डैशबोर्ड सिर्फ़ तब दिखता है, जब एजेंट Android की सुविधाओं का इस्तेमाल करके ऐप्लिकेशन ऐक्सेस करते हैं."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"डिवाइस से जुड़ी सहायता वाले ऐप"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"देखें कि हाल ही में, किन ऐप ने अनुमतियों का इस्तेमाल किया है"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> का इस्तेमाल"</string>

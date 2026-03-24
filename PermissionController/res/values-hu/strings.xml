@@ -139,10 +139,9 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Legutóbbi hozzáférés: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Megtekintés"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Nem volt hozzáférés"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3069765762733650044) -->
+    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
     <skip />
-    <!-- no translation found for agent_activity_timeline_footer_title (6959375013990594999) -->
-    <skip />
+    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Az adatvédelmi irányítópult csak akkor jelenik meg, ha az appokhoz az ügynöki Android-funkciókkal férnek hozzá."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Eszközsegítség"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"A közelmúltban engedélyeket használó appok megjelenítése"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> használata"</string>
@@ -768,6 +767,6 @@
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Engedélyezi a(z) <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> számára a képernyőn megnyitott alkalmazás információihoz és tartalmához való hozzáférést"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Engedélyezés"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Tiltás"</string>
-    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Engedélyezi a(z) &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; számára, hogy hozzáférjen az ezsköz pontos helyéhez, amikor Ön ennek megosztása mellett dönt?"</string>
+    <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Engedélyezi a(z) &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; számára, hogy hozzáférjen az eszköz pontos helyéhez, amikor Ön ennek megosztása mellett dönt?"</string>
     <string name="request_location_button_permissions_dialog_subtitle" msgid="4401187641885414225">"Megosztáskor ez az alkalmazás hozzáfér az eszköz pontos helyéhez, amíg Ön be nem zárja az alkalmazást."</string>
 </resources>

@@ -139,10 +139,9 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"آخرین دسترسی: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"مشاهده"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"دسترسی وجود ندارد"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3069765762733650044) -->
+    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
     <skip />
-    <!-- no translation found for agent_activity_timeline_footer_title (6959375013990594999) -->
-    <skip />
+    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"‏داشبورد حریم خصوصی فقط زمانی نشان داده می‌شود که دسترسی یافتن به برنامه‌ها بااستفاده از ویژگی‌های Android برای نمایندگان باشد."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"دستیار دستگاه"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"مشاهده برنامه‌هایی که اخیراً از اجازه‌ها استفاده کرده‌اند"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"استفاده از <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

@@ -139,10 +139,9 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"ເຂົ້າເຖິງຫຼ້າສຸດ <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"ເບິ່ງ"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"ບໍ່ມີການເຂົ້າເຖິງ"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3069765762733650044) -->
+    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
     <skip />
-    <!-- no translation found for agent_activity_timeline_footer_title (6959375013990594999) -->
-    <skip />
+    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"ແຜງໜ້າປັດຄວາມເປັນສ່ວນຕົວຈະສະແດງເມື່ອມີການເຂົ້າເຖິງແອັບໂດຍໃຊ້ຄຸນສົມບັດ Android ສຳລັບຕົວແທນເທົ່ານັ້ນ."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"ຄວາມຊ່ວຍເຫຼືອກ່ຽວກັບອຸປະກອນ"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ເບິ່ງວ່າແອັບໃດໃຊ້ການອະນຸຍາດຫຼ້າສຸດ"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"ການນໍາໃຊ້ <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
