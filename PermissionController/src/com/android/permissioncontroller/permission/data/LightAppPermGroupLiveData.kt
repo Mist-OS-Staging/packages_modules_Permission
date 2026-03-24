@@ -16,11 +16,7 @@
 
 package com.android.permissioncontroller.permission.data
 
-import android.Manifest.permission_group.READ_MEDIA_VISUAL
-import android.Manifest.permission_group.STORAGE
 import android.app.AppOpsManager
-import android.app.AppOpsManager.MODE_ALLOWED
-import android.app.AppOpsManager.OPSTR_WRITE_MEDIA_IMAGES
 import android.app.Application
 import android.app.role.RoleManager
 import android.content.pm.PackageManager
@@ -28,7 +24,9 @@ import android.content.pm.PermissionInfo
 import android.os.Build
 import android.os.UserHandle
 import android.permission.PermissionManager
+import android.permission.flags.Flags
 import android.util.Log
+import com.android.permissioncontroller.DeviceUtils
 import com.android.permissioncontroller.PermissionControllerApplication
 import com.android.permissioncontroller.permission.model.livedatatypes.LightAppPermGroup
 import com.android.permissioncontroller.permission.model.livedatatypes.LightPackageInfo
@@ -36,7 +34,6 @@ import com.android.permissioncontroller.permission.model.livedatatypes.LightPerm
 import com.android.permissioncontroller.permission.utils.KotlinUtils
 import com.android.permissioncontroller.permission.utils.LocationUtils
 import com.android.permissioncontroller.permission.utils.Utils
-import com.android.permissioncontroller.permission.utils.Utils.OS_PKG
 
 /**
  * A LiveData which represents the permissions for one package and permission group.
@@ -113,7 +110,7 @@ private constructor(
         // Do not allow toggling pre-M custom perm groups
         if (
             packageInfo.targetSdkVersion < Build.VERSION_CODES.M &&
-                permGroup.groupInfo.packageName != OS_PKG
+                permGroup.groupInfo.packageName != Utils.OS_PKG
         ) {
             value = LightAppPermGroup(packageInfo, permGroup.groupInfo, emptyMap())
             return
@@ -136,6 +133,7 @@ private constructor(
                 hasInstallToRuntimeSplit,
                 isSpecialLocationGranted(app, packageName, permGroupName, user),
                 isSpecialFixedStorageGranted(app, packageName, permGroupName, packageInfo.uid),
+                isAllowedForCompatibility(permGroupName, permissionMap),
             )
     }
 
@@ -275,7 +273,10 @@ private constructor(
             permGroupName: String,
             uid: Int,
         ): Boolean {
-            if (permGroupName != READ_MEDIA_VISUAL && permGroupName != STORAGE) {
+            if (
+                permGroupName != android.Manifest.permission_group.READ_MEDIA_VISUAL &&
+                    permGroupName != android.Manifest.permission_group.STORAGE
+            ) {
                 return false
             }
             if (packageName !in systemGalleryApps) {
@@ -283,7 +284,48 @@ private constructor(
             }
             // This is the storage group, and the gallery app. Check the write media app op
             val appOps = app.getSystemService(AppOpsManager::class.java)
-            return appOps.checkOpNoThrow(OPSTR_WRITE_MEDIA_IMAGES, uid, packageName) == MODE_ALLOWED
+            return appOps.checkOpNoThrow(
+                AppOpsManager.OPSTR_WRITE_MEDIA_IMAGES,
+                uid,
+                packageName,
+            ) == AppOpsManager.MODE_ALLOWED
         }
+
+        // LINT.IfChange
+        fun isAllowedForCompatibility(
+            permGroupName: String,
+            permissionMap: Map<String, LightPermission>,
+        ): Boolean {
+            // At the moment there's only ACCESS_LOCAL_NETWORK / NEARBY_DEVICES group that has this
+            // special compatibility grant situation. However, in the future when there's other
+            // permissions that are split this way, we should change this if condition to apply for
+            // those permissions as well
+            if (
+                !Flags.accessLocalNetworkPermissionEnabled() ||
+                    permGroupName != android.Manifest.permission_group.NEARBY_DEVICES
+            ) {
+                return false
+            }
+
+            // TODO(b/479613003): Support Auto form factor
+            // TODO(b/479895707): Support Wear form factor
+            // TODO(b/479896440): Support TV form factor
+            if (!DeviceUtils.isHandheld()) {
+                return false
+            }
+
+            val flags = permissionMap[android.Manifest.permission.ACCESS_LOCAL_NETWORK]?.flags ?: 0
+            val isImplicitGrant =
+                (flags and PackageManager.FLAG_PERMISSION_REVOKE_WHEN_REQUESTED) != 0
+            if (!isImplicitGrant) {
+                return false
+            }
+
+            return permissionMap.none { (permissionName, lightPermission) ->
+                permissionName != android.Manifest.permission.ACCESS_LOCAL_NETWORK &&
+                    lightPermission.isGranted
+            }
+        }
+        // LINT.ThenChange(./AppPermGroupUiInfoLiveData.kt)
     }
 }
