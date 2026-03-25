@@ -31,8 +31,10 @@ import com.android.permissioncontroller.wear.permission.components.material3.Wea
 import com.android.permissioncontroller.wear.permission.components.material3.WearPermissionTextProvider
 
 @Composable
-fun CompatibilityFooter() {
-    val footerText = stringResource(R.string.allowed_for_compatibility_nearby_devices_footer)
+fun CompatibilityFooter(
+    footerLabelId: Int = R.string.allowed_for_compatibility_nearby_devices_footer
+) {
+    val footerText = stringResource(footerLabelId)
     val compatibilityFooterString = remember(footerText) { AnnotatedString.fromHtml(footerText) }
     val iconBuilder = remember {
         WearPermissionIconBuilder.builder(R.drawable.ic_info_outline)
