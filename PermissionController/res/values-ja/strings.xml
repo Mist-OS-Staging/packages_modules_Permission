@@ -139,8 +139,7 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"最終アクセス <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"表示"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"アクセスなし"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
-    <skip />
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"このエージェントは、これらのアプリにアクセスして、情報の取得や操作を行いました。これは <xliff:g id="APP_NAME">%1$s</xliff:g> の設定でいつでも変更できます。"</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"プライバシー ダッシュボードは、エージェント向けの Android 機能を使用してアプリにアクセスした場合にのみ表示されます。"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"デバイス アシスタンス"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"権限を最近使用したアプリを表示します"</string>

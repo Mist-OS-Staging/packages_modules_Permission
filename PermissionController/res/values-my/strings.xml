@@ -139,8 +139,7 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"နောက်ဆုံး အသုံးပြုချိန် <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"ကြည့်ရန်"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"သုံးမထားပါ"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
-    <skip />
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"အေးဂျင့်သည် သင့်အတွက် အချက်အလက်ရယူရန်/လုပ်ဆောင်ရန် ဤအက်ပ်များ သုံးထားသည်။ ၎င်းကို <xliff:g id="APP_NAME">%1$s</xliff:g> ဆက်တင်များတွင် အချိန်မရွေးပြောင်းနိုင်သည်။"</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"ကိုယ်ရေးအချက်အလက်လုံခြုံမှုဒက်ရှ်ဘုတ်ကို အေးဂျင့်အတွက် Android တူးလ်သုံး၍ အက်ပ်သုံးသည့်အခါ၌သာ ပြသည်။"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"စက်ပစ္စည်း အကူအညီ"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ခွင့်ပြုချက်များ လတ်တလောသုံးထားသည့် အက်ပ်ကိုကြည့်နိုင်သည်"</string>
