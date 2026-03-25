@@ -139,10 +139,9 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"마지막 액세스: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"보기"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"액세스 기록 없음"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3069765762733650044) -->
+    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
     <skip />
-    <!-- no translation found for agent_activity_timeline_footer_title (6959375013990594999) -->
-    <skip />
+    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"개인 정보 대시보드는 에이전트용 Android 기능을 사용하여 앱에 액세스할 때만 표시됩니다"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"기기 지원"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"최근에 권한을 사용한 앱 보기"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> 권한 사용"</string>

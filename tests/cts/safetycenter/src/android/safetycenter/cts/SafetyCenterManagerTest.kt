@@ -16,9 +16,11 @@
 
 package android.safetycenter.cts
 
+import android.app.privatecompute.flags.Flags as PccFlags
 import android.content.Context
 import android.content.Intent
 import android.os.Build.VERSION_CODES.BAKLAVA
+import android.os.Build.VERSION_CODES.CINNAMON_BUN
 import android.os.Build.VERSION_CODES.TIRAMISU
 import android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE
 import android.os.UserHandle.USER_NULL
@@ -2582,5 +2584,29 @@ class SafetyCenterManagerTest {
 
         launchedTestActivity.finish()
         blankActivity.finish()
+    }
+
+    @Test
+    @RequiresFlagsEnabled(PccFlags.FLAG_ENABLE_PCC_FRAMEWORK_SUPPORT)
+    @SdkSuppress(minSdkVersion = CINNAMON_BUN, codeName = "CinnamonBun")
+    fun setSafetySourceData_withPccFlagEnabled_exercisesEnforcePackage() {
+        safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.singleSourceConfig)
+
+        val dataToSet = safetySourceTestData.unspecified
+        safetyCenterTestHelper.setData(SINGLE_SOURCE_ID, dataToSet)
+
+        val apiSafetySourceData =
+            safetyCenterManager.getSafetySourceDataWithPermission(SINGLE_SOURCE_ID)
+
+        assertThat(apiSafetySourceData).isEqualTo(dataToSet)
+    }
+
+    @Test
+    @RequiresFlagsEnabled(PccFlags.FLAG_ENABLE_PCC_FRAMEWORK_SUPPORT)
+    @SdkSuppress(minSdkVersion = CINNAMON_BUN, codeName = "CinnamonBun")
+    fun getSafetyCenterData_withPccFlagEnabled_exercisesEnforcePackage() {
+        val safetyCenterData = safetyCenterManager.getSafetyCenterDataWithPermission()
+
+        assertThat(safetyCenterData).isNotNull()
     }
 }

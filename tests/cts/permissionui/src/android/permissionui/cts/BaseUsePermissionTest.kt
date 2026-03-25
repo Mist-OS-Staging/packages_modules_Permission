@@ -1192,7 +1192,7 @@ abstract class BaseUsePermissionTest : BasePermissionTest() {
     }
 
     private fun navigateToAppPermissionSettings() {
-        if (isTv) {
+        if (isTv || isAutomotive) {
             clearTargetSdkWarning(1000L)
             pressHome()
         } else {

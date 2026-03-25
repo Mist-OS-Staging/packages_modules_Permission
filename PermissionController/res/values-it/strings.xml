@@ -102,7 +102,7 @@
     <string name="permission_summary_disabled_by_policy_background_only" msgid="221995005556362660">"Accesso in background disattivato in base alla norma"</string>
     <string name="permission_summary_enabled_by_policy_background_only" msgid="8287675974767104279">"Accesso in background attivato in base alla norma"</string>
     <string name="permission_summary_enabled_by_policy_foreground_only" msgid="3844582916889767831">"Accesso in primo piano attivato in base alla norma"</string>
-    <string name="permission_summary_enforced_by_admin" msgid="822702574117248700">"Gestita dall\'amministratore"</string>
+    <string name="permission_summary_enforced_by_admin" msgid="822702574117248700">"Impostazione gestita dall\'amministratore"</string>
     <string name="permission_summary_disabled_by_admin_background_only" msgid="3127091456731845646">"Accesso in background disattivato dall\'amministratore"</string>
     <string name="permission_summary_enabled_by_admin_background_only" msgid="9132423838440275757">"Accesso in background attivato dall\'amministratore"</string>
     <string name="permission_summary_enabled_by_admin_foreground_only" msgid="1298432715610745358">"Accesso in primo piano attivato dall\'amministratore"</string>
@@ -139,10 +139,9 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Ultimo accesso: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Visualizza"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Nessun accesso"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3069765762733650044) -->
+    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
     <skip />
-    <!-- no translation found for agent_activity_timeline_footer_title (6959375013990594999) -->
-    <skip />
+    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"La dashboard della privacy viene mostrata solo quando si accede alle app utilizzando le funzionalità di Android per gli agenti."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Assistenza dispositivo"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Vedi quali app hanno usato le autorizzazioni di recente"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Uso di <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

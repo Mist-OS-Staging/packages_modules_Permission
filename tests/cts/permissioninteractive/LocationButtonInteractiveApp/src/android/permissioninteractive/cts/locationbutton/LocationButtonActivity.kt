@@ -19,8 +19,9 @@ package android.permissioninteractive.cts.locationbutton
 import android.app.Activity
 import android.app.permissionui.LocationButtonRequest
 import android.os.Bundle
+import android.view.Gravity
 import android.view.ViewGroup
-import android.widget.FrameLayout
+import android.widget.LinearLayout
 
 class LocationButtonActivity : Activity() {
 
@@ -29,11 +30,9 @@ class LocationButtonActivity : Activity() {
 
         val width = intent.getIntExtra(EXTRA_WIDTH, ViewGroup.LayoutParams.WRAP_CONTENT)
         val height = intent.getIntExtra(EXTRA_HEIGHT, ViewGroup.LayoutParams.WRAP_CONTENT)
-
         val locationButton = LocationButton(this)
         val buttonParams =
-            FrameLayout.LayoutParams(width, height).apply {
-                gravity = android.view.Gravity.BOTTOM or android.view.Gravity.CENTER_HORIZONTAL
+            LinearLayout.LayoutParams(width, height).apply {
                 bottomMargin = (resources.displayMetrics.density * 16).toInt()
             }
         locationButton.layoutParams = buttonParams
@@ -58,12 +57,19 @@ class LocationButtonActivity : Activity() {
                 EXTRA_PRESSED_CORNER_RADIUS ->
                     requestBuilder.setPressedCornerRadius(extras.getFloat(key))
                 EXTRA_TEXT_TYPE -> requestBuilder.setTextType(extras.getInt(key))
+                EXTRA_PADDING_LEFT -> requestBuilder.setPaddingLeft(extras.getInt(key))
+                EXTRA_PADDING_TOP -> requestBuilder.setPaddingTop(extras.getInt(key))
+                EXTRA_PADDING_RIGHT -> requestBuilder.setPaddingRight(extras.getInt(key))
+                EXTRA_PADDING_BOTTOM -> requestBuilder.setPaddingBottom(extras.getInt(key))
             }
         }
+
         locationButton.setRequest(requestBuilder.build())
 
         val container =
-            FrameLayout(this).apply {
+            LinearLayout(this).apply {
+                orientation = LinearLayout.VERTICAL
+                gravity = Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL
                 layoutParams =
                     ViewGroup.LayoutParams(
                         ViewGroup.LayoutParams.MATCH_PARENT,
@@ -71,6 +77,15 @@ class LocationButtonActivity : Activity() {
                     )
                 fitsSystemWindows = true
             }
+
+        if (intent.getBooleanExtra(EXTRA_SHOW_REFERENCE_BUTTON, false)) {
+            val referenceButton = LocationButton(this)
+            requestBuilder.setPaddingLeft(0).setPaddingTop(0).setPaddingRight(0).setPaddingBottom(0)
+            referenceButton.setRequest(requestBuilder.build())
+            referenceButton.layoutParams = LinearLayout.LayoutParams(buttonParams)
+            container.addView(referenceButton)
+        }
+
         container.addView(locationButton)
         setContentView(container)
     }
@@ -87,6 +102,11 @@ class LocationButtonActivity : Activity() {
         const val EXTRA_PRESSED_CORNER_RADIUS = "pressed_corner_radius"
         const val EXTRA_TEXT_TYPE = "text_type"
         const val EXTRA_LANGUAGE_TAG = "language_tag"
+        const val EXTRA_PADDING_LEFT = "padding_left"
+        const val EXTRA_PADDING_TOP = "padding_top"
+        const val EXTRA_PADDING_RIGHT = "padding_right"
+        const val EXTRA_PADDING_BOTTOM = "padding_bottom"
+        const val EXTRA_SHOW_REFERENCE_BUTTON = "show_reference_button"
         const val LOCATION_BUTTON_CONTENT_DESCRIPTION = "location_button"
     }
 }
