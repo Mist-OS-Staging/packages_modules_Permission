@@ -72,6 +72,12 @@ class PermissionControllerServiceModel(private val service: PermissionController
         onChangedFun: (t: T?) -> Unit,
     ) {
         GlobalScope.launch(Main.immediate) {
+            // GlobalScope coroutines are not bound to the service's lifecycle, a race condition
+            // occurs if the service is destroyed while the coroutine is queued on the main thread.
+            if (service.lifecycle.currentState == Lifecycle.State.DESTROYED) {
+                return@launch
+            }
+
             if (service.lifecycle.currentState != Lifecycle.State.STARTED) {
                 service.setLifecycleToStarted()
             }
