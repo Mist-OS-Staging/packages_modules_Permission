@@ -119,17 +119,6 @@ class ManageCustomPermissionsFragmentTest : BaseHandheldPermissionUiTest() {
     }
 
     @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
-    @RequiresFlagsDisabled(Flags.FLAG_REPLACE_BODY_SENSOR_PERMISSION_ENABLED)
-    @Test
-    fun testFindBodySensor_replaceBodySensorFlagDisabled_labelDisplayed() {
-        if (waitFindObjectOrNull(By.textContains(BODY_SENSORS_LABEL)) == null) {
-            waitFindObject(By.textContains(ADDITIONAL_PERMISSIONS_LABEL)).click()
-            assertNotNull(waitFindObjectOrNull(By.textContains(BODY_SENSORS_LABEL)))
-        }
-    }
-
-    @SdkSuppress(minSdkVersion = Build.VERSION_CODES.BAKLAVA)
-    @RequiresFlagsEnabled(Flags.FLAG_REPLACE_BODY_SENSOR_PERMISSION_ENABLED)
     @Test
     fun testFindBodySensor_replaceBodySensorFlagEnabled_labelNotDisplayed() {
         install(ONE_PERMISSION_DEFINER_APK)
