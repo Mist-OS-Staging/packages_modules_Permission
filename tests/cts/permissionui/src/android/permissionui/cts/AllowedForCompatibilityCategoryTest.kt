@@ -106,13 +106,13 @@ class AllowedForCompatibilityCategoryTest : BaseUsePermissionTest() {
         initialItems.add(nearbyDevicesFooterText)
         verifyDisplayOrder(initialItems)
 
-        clickPermissionControllerUi(nearbyDevicesGroupText, MAX_SEARCH_SWIPES)
+        clickTextWithFallback(nearbyDevicesGroupText)
         clicksDenyInSettings()
         clickDontAllowAnywayButton()
         startManageAppPermissionsActivity(TEST_APP_PACKAGE)
         verifyDisplayOrder(listOf(notAllowedCategory, nearbyDevicesGroupText))
 
-        clickPermissionControllerUi(nearbyDevicesGroupText, MAX_SEARCH_SWIPES)
+        clickTextWithFallback(nearbyDevicesGroupText)
         clickAllowButton()
         startManageAppPermissionsActivity(TEST_APP_PACKAGE)
         val finalItems = mutableListOf(allowedCategory, nearbyDevicesGroupText)
@@ -120,6 +120,15 @@ class AllowedForCompatibilityCategoryTest : BaseUsePermissionTest() {
             finalItems.add(notAllowedCategory)
         }
         verifyDisplayOrder(finalItems)
+    }
+
+    // Fallback performs advanced scrolling which may be required in certain devices
+    private fun clickTextWithFallback(groupText: String) {
+        try {
+            waitFindObject(By.text(groupText)).click()
+        } catch (ignored: Throwable) {
+            clickPermissionControllerUi(groupText, MAX_SEARCH_SWIPES)
+        }
     }
 
     private fun clickAllowButton() {
