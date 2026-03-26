@@ -3802,7 +3802,7 @@
         android:permissionFlags="allowedInPrivateComputeCore" />
 
     <!-- Required to be able to interact with other applications over loopback interface.
-         @FlaggedApi(android.permission.flags.Flags.FLAG_USE_LOOPBACK_INTERFACE_PERMISSION_ENABLED)
+         @FlaggedApi(android.permission.flags.Flags.FLAG_FULL_LOOPBACK_PROTECTIONS_ENABLED)
          <p>Protection level: normal -->
     <permission
         android:name="android.permission.USE_LOOPBACK_INTERFACE"
