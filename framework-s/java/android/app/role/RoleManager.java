@@ -223,7 +223,6 @@ public final class RoleManager {
      * @hide
      */
     @SystemApi
-    @FlaggedApi(com.android.permission.flags.Flags.FLAG_SYSTEM_FINANCED_DEVICE_CONTROLLER)
     public static final String ROLE_SYSTEM_FINANCED_DEVICE_CONTROLLER =
             "android.app.role.SYSTEM_FINANCED_DEVICE_CONTROLLER";
 
