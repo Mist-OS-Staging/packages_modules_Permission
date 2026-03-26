@@ -139,8 +139,7 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"上次访问时间：<xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"查看"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"无访问权限"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
-    <skip />
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"此代理访问了这些应用，以便为您获取信息或执行操作。您随时可以在“<xliff:g id="APP_NAME">%1$s</xliff:g>设置中更改此访问权限。"</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"只有在使用 Android 代理功能访问应用时，隐私信息中心才会显示。"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"设备协助"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"查看最近使用过权限的应用"</string>

@@ -139,8 +139,7 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"கடைசியாக அணுகியது: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"காட்டு"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"அணுகல்கள் இல்லை"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
-    <skip />
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"உங்களுக்காகத் தகவல்களைப் பெறவோ செயல்களைச் செய்யவோ ஏஜெண்ட் இந்த ஆப்ஸை அணுகியுள்ளது. அணுகலை <xliff:g id="APP_NAME">%1$s</xliff:g> அமைப்புகளில் எப்போது வேண்டுமானாலும் மாற்றிக்கொள்ளலாம்."</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"ஏஜெண்ட்டுகளுக்கான Android அம்சங்கள் மூலம் ஆப்ஸை அணுகும்போது மட்டுமே தனியுரிமை டாஷ்போர்டு காட்டப்படும்.ம்"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"சாதன உதவி"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"சமீபத்தில் அனுமதிகளைப் பயன்படுத்திய ஆப்ஸைக் காட்டும்"</string>
