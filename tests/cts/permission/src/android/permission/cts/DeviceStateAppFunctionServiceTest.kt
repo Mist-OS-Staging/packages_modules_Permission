@@ -218,12 +218,12 @@ class DeviceStateAppFunctionServiceTest {
         screenValidations: MutableMap<String, Boolean>,
     ) {
         val description = screen.getPropertyString("description")
-        val regex = """the intent uri is (.*)""".toRegex()
-        val matchResult = regex.find(description!!)
-        val intentUri = matchResult!!.groups[1]!!.value
+        assertThat(description)
+            .contains("substitute \${package} with the package name in the intent uri")
+        val intentUri = screen.getPropertyString("intentUri")
         val intent = Intent.parseUri(intentUri, 0)
         assertThat(intent.action).isEqualTo(ACTION_MANAGE_APP_PERMISSIONS)
-        assertThat(intent.getStringExtra(Intent.EXTRA_PACKAGE_NAME)).isEqualTo("\$packageName")
+        assertThat(intent.getStringExtra(Intent.EXTRA_PACKAGE_NAME)).isEqualTo("\${package}")
         assertThat(intent.getStringExtra(EXTRA_DEVICE_STATE_KEY)).isNotNull()
 
         screenValidations.putIfAbsent("AppPermissionsScreen", true)
@@ -234,12 +234,12 @@ class DeviceStateAppFunctionServiceTest {
         screenValidations: MutableMap<String, Boolean>,
     ) {
         val description = screen.getPropertyString("description")
-        val regex = """The intent uri is (.*)""".toRegex()
-        val matchResult = regex.find(description!!)
-        val intentUri = matchResult!!.groups[1]!!.value
+        assertThat(description)
+            .contains("substitute \${package} with the package name in the intent uri")
+        val intentUri = screen.getPropertyString("intentUri")
         val intent = Intent.parseUri(intentUri, 0)
         assertThat(intent.action).isEqualTo(ACTION_MANAGE_APP_PERMISSION)
-        assertThat(intent.getStringExtra(Intent.EXTRA_PACKAGE_NAME)).isEqualTo("\$packageName")
+        assertThat(intent.getStringExtra(Intent.EXTRA_PACKAGE_NAME)).isEqualTo("\${package}")
         assertThat(intent.getStringExtra(Intent.EXTRA_PERMISSION_GROUP_NAME)).isNotNull()
         assertThat(intent.getStringExtra(EXTRA_DEVICE_STATE_KEY)).isNotNull()
 
