@@ -1007,7 +1007,6 @@ object KotlinUtils {
                 } else {
                     newFlags.clearFlag(PackageManager.FLAG_PERMISSION_REVOKED_COMPAT)
                 }
-            newFlags = newFlags.clearFlag(PackageManager.FLAG_PERMISSION_REVOKE_WHEN_REQUESTED)
 
             // If this permission affects an app op, ensure the permission app op is enabled
             // before the permission grant.
@@ -1020,6 +1019,7 @@ object KotlinUtils {
         // Granting a permission explicitly means the user already
         // reviewed it so clear the review flag on every grant.
         newFlags = newFlags.clearFlag(FLAG_PERMISSION_REVIEW_REQUIRED)
+        newFlags = newFlags.clearFlag(FLAG_PERMISSION_REVOKE_WHEN_REQUESTED)
 
         // Update the permission flags
         if (!withoutAppOps && !userFixed) {
@@ -1333,7 +1333,6 @@ object KotlinUtils {
                 isGranted = false
             }
 
-            newFlags = newFlags.clearFlag(PackageManager.FLAG_PERMISSION_REVOKE_WHEN_REQUESTED)
             if (affectsAppOp) {
                 // TODO: Update this method once AppOp is device aware
                 disallowAppOp(app, perm, group)
@@ -1353,6 +1352,7 @@ object KotlinUtils {
             else newFlags.clearFlag(PackageManager.FLAG_PERMISSION_ONE_TIME)
         newFlags = newFlags.clearFlag(PackageManager.FLAG_PERMISSION_AUTO_REVOKED)
         newFlags = newFlags.clearFlag(PackageManager.FLAG_PERMISSION_REVIEW_REQUIRED)
+        newFlags = newFlags.clearFlag(PackageManager.FLAG_PERMISSION_REVOKE_WHEN_REQUESTED)
         newFlags = newFlags.clearFlag(PackageManager.FLAG_PERMISSION_TRUSTED_UI_SHOWN)
         newFlags = newFlags.clearFlag(PackageManager.FLAG_PERMISSION_TRUSTED_UI_CONSENTED)
 
