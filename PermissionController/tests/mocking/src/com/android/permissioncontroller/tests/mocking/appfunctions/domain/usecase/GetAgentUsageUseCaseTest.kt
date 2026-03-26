@@ -33,7 +33,6 @@ import com.android.permissioncontroller.appinteraction.domain.model.v37.AccessHi
 import com.android.permissioncontroller.flags.Flags
 import com.android.permissioncontroller.tests.mocking.appinteraction.data.repository.FakeAppInteractionRepository
 import com.android.permissioncontroller.tests.mocking.pm.data.repository.FakePackageRepository
-import com.android.permissioncontroller.tests.mocking.user.data.repository.FakeUserRepository
 import com.google.common.truth.Truth.assertThat
 import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.test.runTest
@@ -105,9 +104,7 @@ class GetAgentUsageUseCaseTest {
         val agents = listOf(AGENT_NAME_1)
         val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
         val packageRepository = FakePackageRepository(agents = agents)
-        val userRepository = FakeUserRepository(currentUserProfiles = listOf(USER_ID_0))
-        useCase =
-            GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository, userRepository)
+        useCase = GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository)
 
         val result = useCase(mockContext)
         assertThat(result)
@@ -151,9 +148,7 @@ class GetAgentUsageUseCaseTest {
         val agents = listOf(AGENT_NAME_1)
         val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
         val packageRepository = FakePackageRepository(agents = agents)
-        val userRepository = FakeUserRepository(currentUserProfiles = listOf(USER_ID_0))
-        useCase =
-            GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository, userRepository)
+        useCase = GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository)
 
         val result = useCase(mockContext)
         assertThat(result).containsExactly(AgentActivityItem(AGENT_NAME_1, USER_0, 2, 2))
@@ -195,9 +190,7 @@ class GetAgentUsageUseCaseTest {
         val appInteractionRepository =
             FakeAppInteractionRepository(accessHistory, deviceAssistancePackageNames)
         val packageRepository = FakePackageRepository(agents = agents)
-        val userRepository = FakeUserRepository(currentUserProfiles = listOf(USER_ID_0))
-        useCase =
-            GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository, userRepository)
+        useCase = GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository)
 
         val result = useCase(mockContext)
         assertThat(result).containsExactly(AgentActivityItem(AGENT_NAME_1, USER_0, 2, 2))
@@ -223,9 +216,7 @@ class GetAgentUsageUseCaseTest {
         val agents = listOf(AGENT_NAME_1)
         val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
         val packageRepository = FakePackageRepository(agents = agents)
-        val userRepository = FakeUserRepository(currentUserProfiles = listOf(USER_ID_0))
-        useCase =
-            GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository, userRepository)
+        useCase = GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository)
 
         val result = useCase(mockContext)
         assertThat(result).hasSize(0)
@@ -254,9 +245,7 @@ class GetAgentUsageUseCaseTest {
         val agents = listOf(AGENT_NAME_1, SHELL_PACKAGE_NAME)
         val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
         val packageRepository = FakePackageRepository(agents = agents)
-        val userRepository = FakeUserRepository(currentUserProfiles = listOf(USER_ID_0))
-        useCase =
-            GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository, userRepository)
+        useCase = GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository)
 
         val result = useCase(mockContext)
 
@@ -294,9 +283,7 @@ class GetAgentUsageUseCaseTest {
         val agents = listOf(AGENT_NAME_1, SHELL_PACKAGE_NAME)
         val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
         val packageRepository = FakePackageRepository(agents = agents)
-        val userRepository = FakeUserRepository(currentUserProfiles = listOf(USER_ID_0))
-        useCase =
-            GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository, userRepository)
+        useCase = GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository)
 
         val result = useCase(mockContext)
 
@@ -305,43 +292,6 @@ class GetAgentUsageUseCaseTest {
             .containsExactly(
                 AgentActivityItem(AGENT_NAME_1, USER_0, 1, 1),
                 AgentActivityItem(SHELL_PACKAGE_NAME, USER_0, 1, 1),
-            )
-    }
-
-    @Test
-    @RequiresFlagsEnabled(
-        Flags.FLAG_PRIVACY_DASHBOARD_AGENT_ACTIVITY_ENABLED,
-        FLAG_ENABLE_APP_INTERACTION_API,
-    )
-    fun getAgentUsages_zeroStateExcludedForProfileUsers() = runTest {
-        assumeTrue(
-            "Skipping: Feature not supported on Auto when flag is disabled",
-            !isAutomotive() || Flags.automotivePrivacyDashboardAgentActivityEnabled(),
-        )
-        val now = System.currentTimeMillis()
-        val accessHistory =
-            listOf(
-                createAccessHistory(
-                    agentPackageName = AGENT_NAME_1,
-                    targetPackageName = TARGET_NAME_1,
-                    accessTime = now - TimeUnit.HOURS.toMillis(1),
-                )
-            )
-        val agents = listOf(AGENT_NAME_1, AGENT_NAME_2)
-        val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
-        val packageRepository = FakePackageRepository(agents = agents)
-        val userRepository =
-            FakeUserRepository(currentUserProfiles = listOf(CURRENT_USER.identifier, USER_ID_10))
-        useCase =
-            GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository, userRepository)
-
-        val result = useCase(mockContext)
-
-        assertThat(result)
-            .containsExactly(
-                AgentActivityItem(AGENT_NAME_1, CURRENT_USER, 1, 1),
-                AgentActivityItem(AGENT_NAME_2, CURRENT_USER, 0, 0),
-                AgentActivityItem(AGENT_NAME_1, USER_10, 1, 1),
             )
     }
 
@@ -365,10 +315,7 @@ class GetAgentUsageUseCaseTest {
         const val TARGET_NAME_2 = "target2"
         const val TARGET_NAME_3 = "target3"
         const val USER_ID_0 = 0
-        const val USER_ID_10 = 10
-        val CURRENT_USER = android.os.Process.myUserHandle()
         val USER_0 = UserHandle.of(USER_ID_0)
-        val USER_10 = UserHandle.of(USER_ID_10)
 
         const val FLAG_ENABLE_APP_INTERACTION_API =
             "com.android.permissioncontroller.jarjar.${android.app.appfunctions.flags.Flags.FLAG_ENABLE_APP_INTERACTION_API}"

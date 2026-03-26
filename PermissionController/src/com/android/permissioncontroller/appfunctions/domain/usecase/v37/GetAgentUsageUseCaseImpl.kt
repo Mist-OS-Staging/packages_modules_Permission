@@ -17,14 +17,11 @@ package com.android.permissioncontroller.appfunctions.domain.usecase.v37
 
 import android.content.Context
 import android.os.Process
-import android.os.UserHandle
 import com.android.permissioncontroller.appfunctions.AppFunctionsUtil
 import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAgentUsageUseCase
 import com.android.permissioncontroller.appinteraction.data.repository.AppInteractionRepository
 import com.android.permissioncontroller.appinteraction.domain.model.v31.AgentActivityItem
-import com.android.permissioncontroller.permission.domain.usecase.v31.filterUsersToShowInQuietMode
 import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
-import com.android.permissioncontroller.user.data.repository.v31.UserRepository
 import java.time.Instant
 import java.util.concurrent.TimeUnit
 import kotlin.math.max
@@ -39,32 +36,33 @@ import kotlin.math.max
 class GetAgentUsageUseCaseImpl(
     private val appInteractionRepository: AppInteractionRepository,
     private val packageRepository: PackageRepository,
-    private val userRepository: UserRepository,
 ) : GetAgentUsageUseCase {
     override suspend operator fun invoke(context: Context): List<AgentActivityItem> {
         if (!AppFunctionsUtil.isPrivacyDashboardAgentActivityEnabled(context)) {
             return emptyList()
         }
 
-        val profiles =
-            userRepository
-                .getUserProfilesIncludingCurrentUser()
-                .filterUsersToShowInQuietMode(userRepository)
-                .map { UserHandle.of(it) }
+        /*
+         * Currently we don't support execution of app function for profile users. Hence, we only
+         * fetch access histories for the current user. Once we start supporting profile users, we
+         * should do the below to fetch profile user usages
+         *
+         * val profiles =
+         *     userRepository
+         *         .getUserProfilesIncludingCurrentUser()
+         *         .filterUsersToShowInQuietMode(userRepository)
+         *         .filter { userRepository.isUserUnlocked(it) }
+         *         .map { UserHandle.of(it) }
+         */
+        val profiles = listOf(Process.myUserHandle())
         val deviceAssistancePackageNames =
             appInteractionRepository.getDeviceAssistancePackageNames(context).toSet()
         val agentUsages = mutableListOf<AgentActivityItem>()
 
         profiles.forEach { user ->
-            // App function execution is currently unsupported for profile users. Hence, not showing
-            // these entries when they have no access histories
             val agents =
-                if (user == Process.myUserHandle()) {
-                    packageRepository
-                        .getPackagesHoldingPermissions(AGENT_PERMISSIONS, user)
-                        .filter { it !in HIDDEN_WHEN_NO_ACTIVITIES_PACKAGES }
-                } else {
-                    emptyList()
+                packageRepository.getPackagesHoldingPermissions(AGENT_PERMISSIONS, user).filter {
+                    it !in HIDDEN_WHEN_NO_ACTIVITIES_PACKAGES
                 }
             val accessHistories = appInteractionRepository.getAccessHistory(context, user)
             val userAgentUsages =
