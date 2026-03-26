@@ -139,9 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Lần truy cập gần đây nhất: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Xem"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Không có lượt truy cập nào"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
-    <skip />
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Bảng tổng quan về quyền riêng tư chỉ hiện khi các ứng dụng được truy cập qua các tính năng của Android dành cho tác nhân."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Tác nhân này đã truy cập vào các ứng dụng này để lấy thông tin hoặc thực hiện thao tác cho bạn. Bạn có thể thay đổi chế độ này bất cứ lúc nào trong phần cài đặt <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Bảng tổng quan về quyền riêng tư chỉ xuất hiện khi các ứng dụng được truy cập qua các tính năng của Android dành cho tác nhân."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Trợ giúp về thiết bị"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Xem những ứng dụng nào gần đây đã sử dụng các quyền"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Hoạt động sử dụng <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

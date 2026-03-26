@@ -139,8 +139,7 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Апошні доступ: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Прагляд"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Няма спроб доступу"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
-    <skip />
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Агент звяртаўся да гэтых праграм, каб атрымаць інфармацыю ці выканаць дзеянні ад вашага імені. Вы можаце змяніць параметры такога доступу ў любы час у наладах праграмы \"<xliff:g id="APP_NAME">%1$s</xliff:g>\"."</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Панэль кіравання доступам паказваецца толькі пры доступе да праграм праз выкарыстанне функцый Android для агентаў."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Памочнік па прыладзе"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Прагляд праграм, якія нядаўна выкарыстоўвалі дазволы"</string>

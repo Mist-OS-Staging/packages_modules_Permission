@@ -16,6 +16,7 @@
 package com.android.permissioncontroller.appfunctions.domain.usecase.v37
 
 import android.content.Context
+import android.os.Process
 import android.os.UserHandle
 import com.android.permissioncontroller.appfunctions.AppFunctionsUtil
 import com.android.permissioncontroller.appfunctions.domain.usecase.v31.GetAgentUsageUseCase
@@ -55,9 +56,15 @@ class GetAgentUsageUseCaseImpl(
         val agentUsages = mutableListOf<AgentActivityItem>()
 
         profiles.forEach { user ->
+            // App function execution is currently unsupported for profile users. Hence, not showing
+            // these entries when they have no access histories
             val agents =
-                packageRepository.getPackagesHoldingPermissions(AGENT_PERMISSIONS, user).filter {
-                    it !in HIDDEN_WHEN_NO_ACTIVITIES_PACKAGES
+                if (user == Process.myUserHandle()) {
+                    packageRepository
+                        .getPackagesHoldingPermissions(AGENT_PERMISSIONS, user)
+                        .filter { it !in HIDDEN_WHEN_NO_ACTIVITIES_PACKAGES }
+                } else {
+                    emptyList()
                 }
             val accessHistories = appInteractionRepository.getAccessHistory(context, user)
             val userAgentUsages =
