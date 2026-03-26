@@ -139,8 +139,7 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Viimane juurdepääs: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Kuva"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Juurdepääse pole"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
-    <skip />
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"See agent pääses nendele rakendustele juurde, et teie eest teavet hankida või toiminguid teha. Saate seda alati muuta rakenduse <xliff:g id="APP_NAME">%1$s</xliff:g> seadetes."</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Privaatsuse juhtpaneel kuvatakse ainult siis, kui rakendustele pääsetakse juurde Androidi agentide funktsioonide abil."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Seadme abi"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Vaadake, millised rakendused hiljuti lube kasutasid"</string>

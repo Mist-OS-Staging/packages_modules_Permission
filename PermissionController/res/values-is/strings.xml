@@ -139,8 +139,7 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Síðast notað <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Skoða"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Enginn aðgangur"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
-    <skip />
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Þessi fulltrúi fékk aðgang að þessum forritum til að sjá upplýsingar eða framkvæma aðgerðir fyrir þína hönd. Þú getur breytt þessum aðgangi hvenær sem er í stillingum <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Persónuverndarstjórnborðið birtist aðeins þegar forrit eru opnuð með því að nota Android-eiginleika fyrir fulltrúa."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Tækjaaðstoð"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Skoða hvaða forrit notuðu heimildir nýlega"</string>

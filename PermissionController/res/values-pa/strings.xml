@@ -139,8 +139,7 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"ਪਿਛਲੀ ਵਾਰ <xliff:g id="TIME_DATE">%1$s</xliff:g> ਨੂੰ ਪਹੁੰਚ ਕੀਤੀ ਗਈ"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"ਦੇਖੋ"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"ਕੋਈ ਪਹੁੰਚ ਨਹੀਂ"</string>
-    <!-- no translation found for agent_activity_timeline_top_intro_title (3996188348469089545) -->
-    <skip />
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"ਇਸ ਏਜੰਟ ਨੇ ਤੁਹਾਡੇ ਲਈ ਜਾਣਕਾਰੀ ਪ੍ਰਾਪਤ ਕਰਨ ਜਾਂ ਕਾਰਵਾਈਆਂ ਕਰਨ ਵਾਸਤੇ ਇਨ੍ਹਾਂ ਐਪਾਂ ਤੱਕ ਪਹੁੰਚ ਕੀਤੀ। ਤੁਸੀਂ ਕਿਸੇ ਵੇਲੇ ਵੀ <xliff:g id="APP_NAME">%1$s</xliff:g> ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਜਾ ਕੇ ਇਸ ਪਹੁੰਚ ਨੂੰ ਬਦਲ ਸਕਦੇ ਹੋ।"</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"ਪਰਦੇਦਾਰੀ ਸੰਬੰਧੀ ਡੈਸ਼ਬੋਰਡ ਸਿਰਫ਼ ਉਦੋਂ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ, ਜਦੋਂ ਏਜੰਟ Android ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰ ਕੇ ਐਪਾਂ ਤੱਕ ਪਹੁੰਚ ਕਰਦੇ ਹਨ।"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"ਡੀਵਾਈਸ ਸੰਬੰਧੀ ਸਹਾਇਤਾ"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ਦੇਖੋ ਕਿ ਕਿਹੜੀਆਂ ਐਪਾਂ ਨੇ ਹਾਲ ਹੀ ਵਿੱਚ ਇਜਾਜ਼ਤਾਂ ਵਰਤੀਆਂ ਹਨ"</string>
