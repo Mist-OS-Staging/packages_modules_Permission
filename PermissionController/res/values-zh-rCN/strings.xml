@@ -273,14 +273,14 @@
     <string name="allowed_header" msgid="7769277978004790414">"已允许"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"始终允许"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"仅在使用时允许"</string>
-    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"以下应用获允访问本地网络，以确保应用正常运行"</string>
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"已允许以确保应用正常运行"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"仅获准访问媒体文件"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"获准管理所有文件"</string>
     <string name="ask_header" msgid="2633816846459944376">"每次都询问"</string>
     <string name="denied_header" msgid="903209608358177654">"不允许"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g>上的<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"查看更多可以访问所有文件的应用"</string>
-    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;以下应用获允访问本地网络，以确保应用正常运行&lt;/b&gt;&lt;br&gt;&lt;br&gt;为了让应用保持运行，系统可能会允许其访问您的本地网络，并仅与此网络中的设备连接。&lt;br&gt;&lt;br&gt;除非您允许该应用查找并连接到附近的所有设备，否则该应用无法使用蓝牙和其他技术连接到设备。"</string>
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;已允许以确保应用正常运行&lt;/b&gt;&lt;br&gt;&lt;br&gt;为了让应用保持运行，系统可能会允许其访问您的本地网络，并仅与此网络中的设备连接。&lt;br&gt;&lt;br&gt;除非您允许该应用查找并连接到附近的所有设备，否则该应用无法使用蓝牙和其他技术连接到设备。"</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 天}other{# 天}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# 小时}other{# 小时}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# 分钟}other{# 分钟}}"</string>
