@@ -16,9 +16,10 @@
 package com.android.permissioncontroller.permission.ui.auto.dashboard
 
 import android.Manifest
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.os.Process
+import android.os.UserHandle
 import android.util.Log
 import androidx.annotation.ChecksSdkIntAtLeast
 import androidx.annotation.RequiresApi
@@ -31,6 +32,7 @@ import com.android.permissioncontroller.PermissionControllerStatsLog
 import com.android.permissioncontroller.PermissionControllerStatsLog.PERMISSION_USAGE_FRAGMENT_INTERACTION
 import com.android.permissioncontroller.PermissionControllerStatsLog.PERMISSION_USAGE_FRAGMENT_INTERACTION__ACTION__SHOW_SYSTEM_CLICKED
 import com.android.permissioncontroller.R
+import com.android.permissioncontroller.appfunctions.ui.v37.AgentUsageDetailsActivity
 import com.android.permissioncontroller.auto.AutoSettingsFrameFragment
 import com.android.permissioncontroller.flags.Flags
 import com.android.permissioncontroller.permission.ui.model.v31.PermissionUsageControlPreferenceUtils
@@ -184,7 +186,12 @@ class AutoPermissionUsageFragment : AutoSettingsFrameFragment() {
                 }
 
             for (entry in sortedAgents) {
-                addAgentPreference(entry.agentPackageName, entry.accessCount24Hours, agentsCategory)
+                addAgentPreference(
+                    entry.agentPackageName,
+                    entry.userHandle,
+                    entry.accessCount24Hours,
+                    agentsCategory,
+                )
             }
         }
 
@@ -221,19 +228,16 @@ class AutoPermissionUsageFragment : AutoSettingsFrameFragment() {
         category.addPreference(expandPreference)
     }
 
-    @RequiresApi(Build.VERSION_CODES.BAKLAVA)
+    @RequiresApi(Build.VERSION_CODES.CINNAMON_BUN)
     private fun addAgentPreference(
         packageName: String,
+        user: UserHandle,
         accessCount: Int,
         category: PreferenceCategory,
     ) {
         val agentUsagePreference = CarUiPreference(requireContext())
         agentUsagePreference.icon =
-            KotlinUtils.getBadgedPackageIcon(
-                requireActivity().application,
-                packageName,
-                Process.myUserHandle(),
-            )
+            KotlinUtils.getBadgedPackageIcon(requireActivity().application, packageName, user)
         agentUsagePreference.title =
             mViewModel.getAppFunctionAgentLabel(requireContext(), packageName)
         agentUsagePreference.summary =
@@ -242,12 +246,20 @@ class AutoPermissionUsageFragment : AutoSettingsFrameFragment() {
                 R.string.agent_usage_preference_label,
                 accessCount,
             )
+        agentUsagePreference.onPreferenceClickListener =
+            Preference.OnPreferenceClickListener {
+                val intent = Intent(requireContext(), AgentUsageDetailsActivity::class.java)
+                intent.putExtra(Intent.EXTRA_PACKAGE_NAME, packageName)
+                intent.putExtra(Intent.EXTRA_USER, user)
+                requireContext().startActivity(intent)
+                true
+            }
         category.addPreference(agentUsagePreference)
     }
 
-    @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.BAKLAVA)
+    @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.CINNAMON_BUN)
     private fun agentActivityUiEnabled(): Boolean {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.BAKLAVA &&
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.CINNAMON_BUN &&
             Flags.automotivePrivacyDashboardAgentActivityEnabled() &&
             android.app.appfunctions.flags.Flags.enableAppInteractionApi()
     }
