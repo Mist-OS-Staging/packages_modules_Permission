@@ -159,6 +159,7 @@ private constructor(
         return AppPermGroupUiInfo(shouldShow, permGrantState, isSystemApp, isUserSet)
     }
 
+    // LINT.IfChange
     private fun isAllowedForCompatibilityCategoryInNearbyDevicesGroup(
         groupName: String,
         permissionState: Map<String, PermState>,
@@ -183,6 +184,8 @@ private constructor(
             permission != Manifest.permission.ACCESS_LOCAL_NETWORK && state.granted
         }
     }
+
+    // LINT.ThenChange(./LightAppPermGroupLiveData.kt)
 
     /**
      * Determines if a package permission group is able to be granted, and whether or not it is a
