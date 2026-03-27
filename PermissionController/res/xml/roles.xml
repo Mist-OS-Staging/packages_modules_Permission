@@ -2166,13 +2166,14 @@
         featureFlag="android.app.admin.flags.Flags.multiUserManagementDeviceProvisioning"
         visible="false">
         <permissions>
-            <permission name="android.permission.MANAGE_DEVICE_POLICY_SAFE_BOOT" />
-            <permission name="android.permission.MANAGE_DEVICE_POLICY_DEBUGGING_FEATURES" />
             <permission name="android.permission.MANAGE_DEVICE_POLICY_CONTENT_PROTECTION" />
+            <permission name="android.permission.MANAGE_DEVICE_POLICY_DEBUGGING_FEATURES" />
             <permission name="android.permission.MANAGE_DEVICE_POLICY_INPUT_METHODS" />
             <permission
                 name="android.permission.MANAGE_DEVICE_POLICY_LOCKSCREEN_MESSAGE"
                 featureFlag="android.app.admin.flags.Flags.lockscreenInfoCoexistence" />
+            <permission name="android.permission.MANAGE_DEVICE_POLICY_ORGANIZATION_IDENTITY" />
+            <permission name="android.permission.MANAGE_DEVICE_POLICY_SAFE_BOOT" />
             <permission name="android.permission.SET_TIME" />
             <permission name="android.permission.SET_TIME_ZONE" />
         </permissions>
