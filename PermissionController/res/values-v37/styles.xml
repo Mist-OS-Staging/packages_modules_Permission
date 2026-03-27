@@ -186,6 +186,7 @@
         <item name="android:textColor">@color/location_radio_button_text_color</item>
         <item name="android:textAppearance">@style/TextAppearance.SettingsLib.LabelMedium.Emphasized</item>
         <item name="android:gravity">center_vertical|start</item>
+        <item name="android:hyphenationFrequency">normalFast</item>
     </style>
 
     <style name="PermissionLocationAccuracyRadioFineNewLocationDesign" parent="PermissionLocationAccuracyRadioNewLocationDesign">
