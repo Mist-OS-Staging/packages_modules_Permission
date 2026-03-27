@@ -49,7 +49,6 @@ import com.android.permissioncontroller.permission.domain.usecase.v31.GetPermiss
 import com.android.permissioncontroller.permission.ui.model.v31.PermissionUsageDetailsViewModel.Companion.SHOULD_SHOW_7_DAYS_KEY
 import com.android.permissioncontroller.permission.ui.model.v31.PermissionUsageDetailsViewModel.Companion.SHOULD_SHOW_SYSTEM_KEY
 import com.android.permissioncontroller.pm.data.repository.v31.PackageRepository
-import com.android.permissioncontroller.user.data.repository.v31.UserRepository
 import java.time.Instant
 import java.util.concurrent.TimeUnit
 import kotlin.math.max
@@ -96,12 +95,8 @@ class PermissionUsageViewModel(
 
     private val agentUsageUiStateFlow: StateFlow<Stateful<List<AgentActivityItem>>> by lazy {
         coroutineScope.launch(defaultDispatcher) {
-            try {
-                val agentUsageUseCase = getAppFunctionAgentUsageUseCase(app.applicationContext)
-                agentUsageStateFlow.value = Stateful.Success(agentUsageUseCase)
-            } catch (e: Exception) {
-                agentUsageStateFlow.value = Stateful.Failure(throwable = e)
-            }
+            val agentUsageUseCase = getAppFunctionAgentUsageUseCase(app.applicationContext)
+            agentUsageStateFlow.value = Stateful.Success(agentUsageUseCase)
         }
         agentUsageStateFlow
     }
@@ -254,12 +249,7 @@ class PermissionUsageViewModelFactory(private val app: Application) : ViewModelP
             if (AppFunctionsUtil.isPrivacyDashboardAgentActivityEnabled(app.applicationContext)) {
                 val appInteractionRepository = AppInteractionRepository.getInstance()
                 val packageRepository = PackageRepository.getInstance(app)
-                val userRepository = UserRepository.getInstance(app)
-                GetAgentUsageUseCaseImpl(
-                    appInteractionRepository,
-                    packageRepository,
-                    userRepository,
-                )
+                GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository)
             } else {
                 NoOpAgentUsageUseCase()
             }
