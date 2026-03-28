@@ -885,6 +885,7 @@ class SafetyCenterManagerTest {
         }
     }
 
+    @RequiresFlagsDisabled(Flags.FLAG_BETTER_SAFETY_CENTER_SOURCE_TRACKING_ON_REFRESH)
     @Test
     fun refreshSafetySources_timeout_keepsShowingErrorUntilClearedBySource() {
         SafetyCenterFlags.setAllRefreshTimeoutsTo(TIMEOUT_SHORT)
@@ -910,6 +911,46 @@ class SafetyCenterManagerTest {
         val safetyCenterDataWhenTryingAgain = listener.receiveSafetyCenterData()
         assertThat(safetyCenterDataWhenTryingAgain)
             .isEqualTo(safetyCenterDataUnknownScanningWithError)
+        val safetyCenterDataWhenFinishingRefresh = listener.receiveSafetyCenterData()
+        assertThat(safetyCenterDataWhenFinishingRefresh).isEqualTo(safetyCenterDataOk)
+    }
+
+    @RequiresFlagsEnabled(Flags.FLAG_BETTER_SAFETY_CENTER_SOURCE_TRACKING_ON_REFRESH)
+    @Test
+    fun refreshSafetySources_timeout_withBetterTracking_keepsShowingErrorUntilClearedBySource() {
+        SafetyCenterFlags.setAllRefreshTimeoutsTo(TIMEOUT_SHORT)
+        safetyCenterTestHelper.setConfig(safetyCenterTestConfigs.singleSourceConfig)
+        val listener = safetyCenterTestHelper.addListener()
+
+        // 1. Initial refresh that times out, putting the source into an error state.
+        safetyCenterManager.refreshSafetySourcesWithReceiverPermissionAndWait(
+            REFRESH_REASON_RESCAN_BUTTON_CLICK
+        )
+        val scanningData = listener.receiveSafetyCenterData()
+        checkState(scanningData == safetyCenterDataFromConfigScanning)
+        val initialData = listener.receiveSafetyCenterData()
+        checkState(initialData == safetyCenterDataUnknownReviewError)
+
+        // 2. Intermediate refresh. The source is now "untracked" because its data was cleared.
+        // There's no tracked sources, so refresh terminates instantaneously.
+        // The error state persists, data isn't updated as there's no data change whatsoever (even
+        // "Scanning" won't be shown since no tracked sources").
+        SafetyCenterFlags.setAllRefreshTimeoutsTo(TIMEOUT_LONG)
+        safetyCenterManager.refreshSafetySourcesWithReceiverPermissionAndWait(
+            REFRESH_REASON_RESCAN_BUTTON_CLICK
+        )
+        val apiSafetyCenterData = safetyCenterManager.getSafetyCenterDataWithPermission()
+        assertThat(apiSafetyCenterData).isEqualTo(safetyCenterDataUnknownReviewError)
+
+        // 3. Refresh where the source clears the error by responding with data.
+        // Again, no "Scanning" intermediate data change, because no tracked sources.
+        SafetySourceReceiver.setResponse(
+            Request.Rescan(SINGLE_SOURCE_ID),
+            Response.SetData(safetySourceTestData.information),
+        )
+        safetyCenterManager.refreshSafetySourcesWithReceiverPermissionAndWait(
+            REFRESH_REASON_RESCAN_BUTTON_CLICK
+        )
         val safetyCenterDataWhenFinishingRefresh = listener.receiveSafetyCenterData()
         assertThat(safetyCenterDataWhenFinishingRefresh).isEqualTo(safetyCenterDataOk)
     }

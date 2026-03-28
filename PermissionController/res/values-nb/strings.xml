@@ -132,14 +132,14 @@
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Ingen bruk de siste 24 timene"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Ingen bruk de siste 7 dagene"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g>-aktivitet"</string>
-    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"I løpet av de siste 24 timene"</string>
+    <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"De siste 24 timene"</string>
     <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"De siste 7 dagene"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"I dag"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"I går"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Siste tilgang: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Se"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Ingen bruk"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Agenten brukte appene for å hente info eller utføre handlinger. Du kan endre denne tilgangen når som helst i <xliff:g id="APP_NAME">%1$s</xliff:g>-innstillingene."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Agenten brukte disse appene for å hente info eller utføre handlinger for deg. Du kan endre denne tilgangen når som helst i <xliff:g id="APP_NAME">%1$s</xliff:g>-innstillingene."</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Personvernoversikten vises bare når apper åpnes via Android-funksjoner for agenter."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Enhetshjelp"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Se hvilke apper som nylig har brukt tillatelser"</string>

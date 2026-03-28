@@ -38,6 +38,8 @@ import com.android.permissioncontroller.permission.utils.Utils
  * @param specialFixedStorageGrant If this package holds the SYSTEM_GALLERY role, and has the
  *   WRITE_MEDIA_IMAGES app op granted, then we should show the grant state of the storage
  *   permissions as system fixed and granted.
+ * @param specialCompatibilityGrant This permission is split from another permission in a different
+ *   permission group and is granted for compatibility.
  */
 data class LightAppPermGroup(
     val packageInfo: LightPackageInfo,
@@ -46,6 +48,7 @@ data class LightAppPermGroup(
     val hasInstallToRuntimeSplit: Boolean,
     val specialLocationGrant: Boolean?,
     val specialFixedStorageGrant: Boolean,
+    val specialCompatibilityGrant: Boolean = false,
 ) {
     constructor(
         pI: LightPackageInfo,

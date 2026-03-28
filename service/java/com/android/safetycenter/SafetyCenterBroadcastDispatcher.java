@@ -40,12 +40,12 @@ import android.os.Binder;
 import android.os.UserHandle;
 import android.safetycenter.SafetyCenterManager;
 import android.safetycenter.SafetyCenterManager.RefreshReason;
+import android.safetycenter.SafetyCenterStatus;
 import android.safetycenter.SafetySourceData;
 import android.util.ArrayMap;
 import android.util.ArraySet;
 import android.util.Log;
 import android.util.SparseArray;
-import android.util.SparseBooleanArray;
 
 import androidx.annotation.Nullable;
 
@@ -93,7 +93,7 @@ final class SafetyCenterBroadcastDispatcher {
      * Triggers a refresh of safety sources by sending them broadcasts with action {@link
      * SafetyCenterManager#ACTION_REFRESH_SAFETY_SOURCES}, and returns the associated broadcast id.
      *
-     * <p>Returns {@code null} if no broadcast was sent.
+     * <p>Returns {@code null} if no broadcast was sent or the refresh finish instantaneously.
      *
      * @param safetySourceIds list of IDs to specify the safety sources to be refreshed or a {@code
      *     null} value to refresh all safety sources.
@@ -135,7 +135,10 @@ final class SafetyCenterBroadcastDispatcher {
                             safetySourceIds);
         }
 
-        if (!hasSentAtLeastOneBroadcast) {
+        if (!hasSentAtLeastOneBroadcast
+                || (Flags.betterSafetyCenterSourceTrackingOnRefresh()
+                       && mSafetyCenterRefreshTracker.getRefreshStatus()
+                          == SafetyCenterStatus.REFRESH_STATUS_NONE)) {
             mSafetyCenterRefreshTracker.clearRefresh(broadcastId);
             return null;
         }

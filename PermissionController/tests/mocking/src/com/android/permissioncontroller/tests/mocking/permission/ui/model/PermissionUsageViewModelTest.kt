@@ -457,8 +457,7 @@ class PermissionUsageViewModelTest {
     ): GetAgentUsageUseCase {
         val appInteractionRepository = FakeAppInteractionRepository(accessHistory)
         val packageRepository = FakePackageRepository(agents = agents)
-        val userRepository = FakeUserRepository(listOf(currentUser.identifier))
-        return GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository, userRepository)
+        return GetAgentUsageUseCaseImpl(appInteractionRepository, packageRepository)
     }
 
     private fun getAppFunctionPackageInfoUseCase(): GetAppFunctionPackageInfoUseCase {

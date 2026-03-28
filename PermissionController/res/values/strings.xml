@@ -653,6 +653,9 @@
     <!-- Title for the settings radio button to allow a permission grant only when the app is in the foreground. [CHAR LIMIT=60] -->
     <string name="app_permission_button_allow_foreground">Allow only while using the app</string>
 
+    <!-- Title for the settings radio button to allow a permission grant to keep app working. [CHAR LIMIT=60] [SCREENSHOT=screen/ATXndkdevKtpssc] -->
+    <string name="app_permission_button_allow_for_compatibility">Allow to keep app working</string>
+
     <!-- Title for the settings radio button to allow the user to always allow access to all resources guarded by a permission. [CHAR LIMIT=60] -->
     <string name="app_permission_button_always_allow_all">Always allow all</string>
 
@@ -879,7 +882,10 @@
     <!-- Text of hyperlink shown in storage_footer [CHAR LIMIT=60] -->
     <string name="storage_footer_hyperlink_text">See more apps that can access all files</string>
 
-    <!-- Info text shown as a footer in "NearBy Devices" permission group [CHAR LIMIT=None] -->
+    <!-- Info text shown as a footer in App Permission page for "NearBy Devices" permission group [CHAR LIMIT=None] [SCREENSHOT=screen/ATXndkdevKtpssc] -->
+    <string name="allow_for_compatibility_nearby_devices_footer">&lt;b>Allow to keep app working&lt;/b>&lt;br>&lt;br>For an app to keep working, it may be allowed to access your local network and connect with devices on this network only.&lt;br>&lt;br>The app can\u2019t connect to devices using Bluetooth and other technologies unless you allow it to find and connect to all nearby devices.</string>
+
+    <!-- Info text shown as a footer in "NearBy Devices" permission group [CHAR LIMIT=None] [SCREENSHOT=screen/BkRpY3g9Yd79MJh] -->
     <string name="allowed_for_compatibility_nearby_devices_footer">&lt;b>Allowed to keep app working&lt;/b>&lt;br>&lt;br>For an app to keep working, it may be allowed to access your local network and connect with devices on this network only.&lt;br>&lt;br>The app can\u2019t connect to devices using Bluetooth and other technologies unless you allow it to find and connect to all nearby devices.</string>
 
     <!-- Time in days -->
