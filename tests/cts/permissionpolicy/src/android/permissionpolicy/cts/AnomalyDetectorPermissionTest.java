@@ -45,7 +45,7 @@ import java.util.stream.Collectors;
  * {@link android.Manifest.permission.CONFIGURE_ANOMALY_DETECTOR} permission.
  */
 @RunWith(AndroidJUnit4.class)
-@RequiresFlagsEnabled(Flags.FLAG_ANOMALY_DETECTOR_CORE)
+@RequiresFlagsEnabled(Flags.FLAG_ANOMALY_DETECTOR_CORE_C)
 public final class AnomalyDetectorPermissionTest {
     @Rule
     public final CheckFlagsRule mCheckFlagsRule = DeviceFlagsValueProvider.createCheckFlagsRule();
