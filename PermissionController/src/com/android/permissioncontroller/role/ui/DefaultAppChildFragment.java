@@ -26,11 +26,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Process;
 import android.os.UserHandle;
 import android.util.ArrayMap;
 
+import androidx.annotation.ChecksSdkIntAtLeast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.content.res.AppCompatResources;
@@ -546,6 +548,9 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
             preference.setSummary(context.getString(
                     R.string.read_screen_context_setting_description, appLabel));
             preference.setOnPreferenceClickListener(preference2 -> {
+                if (!isAssistSettingsPrivacyImprovementsEnabled()) {
+                    return true;
+                }
                 SwitchPreferenceCompat switchPreference = (SwitchPreferenceCompat) preference2;
                 boolean isChecked = switchPreference.isChecked();
                 mViewModel.setReadScreenContextSettingEnabled(holderApplicationItem,
@@ -564,8 +569,10 @@ public class DefaultAppChildFragment<PF extends PreferenceFragmentCompat
         preferenceGroup.addPreference(preference);
     }
 
+    @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.CINNAMON_BUN)
     private static boolean isAssistSettingsPrivacyImprovementsEnabled() {
-        return android.permission.flags.Flags.assistSettingsPrivacyImprovementsEnabled();
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.CINNAMON_BUN
+                && android.permission.flags.Flags.assistSettingsPrivacyImprovementsEnabled();
     }
 
     private void addDescriptionPreference(@NonNull PreferenceScreen preferenceScreen,
