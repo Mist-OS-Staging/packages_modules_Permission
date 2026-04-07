@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Permite accesul numai la fișierele media"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Permite întotdeauna"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Permite numai când folosești aplicația"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"Permite ca aplicația să funcționeze"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Permite-le întotdeauna pe toate"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Întreabă de fiecare dată"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Întreabă de fiecare dată sau permite când trimiți"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"Nepermise"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> pe <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Vezi mai multe aplicații care pot accesa toate fișierele"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;Permite ca aplicația să funcționeze&lt;/b&gt;&lt;br&gt;&lt;br&gt;Pentru ca o aplicație să funcționeze în continuare, i se poate permite să acceseze rețeaua locală și să se conecteze numai la dispozitivele din această rețea.&lt;br&gt;&lt;br&gt;Aplicația nu se poate conecta la dispozitive folosind Bluetooth și alte tehnologii decât dacă îi permiți să găsească și să se conecteze la toate dispozitivele din apropiere."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Permisiune acordată pentru ca aplicația să funcționeze&lt;/b&gt;&lt;br&gt;&lt;br&gt;Pentru ca o aplicație să funcționeze în continuare, i se poate permite să acceseze rețeaua locală și să se conecteze numai la dispozitivele din această rețea.&lt;br&gt;&lt;br&gt;Aplicația nu se poate conecta la dispozitive folosind Bluetooth și alte tehnologii decât dacă îi permiți să găsească și să se conecteze la toate dispozitivele din apropiere."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{O zi}few{# zile}other{# de zile}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# oră}few{# ore}other{# de ore}}"</string>

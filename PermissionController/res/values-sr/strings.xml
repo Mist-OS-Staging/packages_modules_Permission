@@ -139,7 +139,7 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Последњи приступ: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Прикажи"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Нема приступа"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Агент је приступио апликацијама ради информација или радњи за вас. Тај приступ можете у сваком тренутку да промените у подешавањима апликације <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Овај агент је приступио апликацијама ради информација или радњи за вас. Тај приступ можете у сваком тренутку да промените у подешавањима апликације <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Таблу за приватност видите само за приступ апликацијама уз Android функције за агенте."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Помоћ за уређај"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Прегледајте које су апликације недавно користиле дозволе"</string>
@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Дозволи само приступ медијима"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Дозволи увек"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Дозв. само док се апл. користи"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"Дозволи да би апликација наставила да ради"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Увек дозволи све"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Питај сваки пут"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Питај сваки пут или дозволи када делиш"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"Није дозвољено"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> на уређају <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Погледајте још апликација које имају приступ свим фајловима"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;Дозволи да би апликација наставила да ради&lt;/b&gt;&lt;br&gt;&lt;br&gt;Да би апликација наставила да ради, може јој бити дозвољено да приступа локалној мрежи и повезује се само са уређајима на тој мрежи.&lt;br&gt;&lt;br&gt;Апликација не може да се повезује са уређајима помоћу Bluetooth-а и других технологија ако јој не дозволите да проналази све уређаје у близини и повезује се са њима."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Дозвољено је да би апликација наставила да ради&lt;/b&gt;&lt;br&gt;&lt;br&gt;Да би апликација наставила да ради, може јој бити дозвољено да приступа локалној мрежи и повезује се само са уређајима на тој мрежи.&lt;br&gt;&lt;br&gt;Апликација не може да се повезује са уређајима помоћу Bluetooth-а и других технологија ако јој не дозволите да проналази све уређаје у близини и повезује се са њима."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 дан}one{# дан}few{# дана}other{# дана}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# сат}one{# сат}few{# сата}other{# сати}}"</string>
@@ -600,7 +602,7 @@
     <string name="safety_center_dashboard_page_title" msgid="2810774008694315854">"Безбедност и приватност"</string>
     <string name="safety_center_rescan_button" msgid="4517514567809409596">"Скенирај уређај"</string>
     <string name="safety_center_issue_card_dismiss_button" msgid="5113965506144222402">"Одбаци"</string>
-    <string name="safety_center_issue_card_dismiss_confirmation_title" msgid="2734809473425036382">"Желите да одбаците ово обавештење?"</string>
+    <string name="safety_center_issue_card_dismiss_confirmation_title" msgid="2734809473425036382">"Желите да одбаците ово упозорење?"</string>
     <string name="safety_center_issue_card_dismiss_confirmation_message" msgid="3775418736671093563">"Увек прегледајте подешавања безбедности и приватности да бисте додали још заштите"</string>
     <string name="safety_center_issue_card_confirm_dismiss_button" msgid="5884137843083634556">"Одбаци"</string>
     <string name="safety_center_issue_card_cancel_dismiss_button" msgid="2874578798877712346">"Откажи"</string>

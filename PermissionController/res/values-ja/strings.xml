@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"アクセスのみ許可"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"常に許可"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"アプリの使用中のみ許可"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"アプリの動作を維持するために許可"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"常にすべて許可"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"毎回確認する"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"毎回確認するか、共有時に許可する"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"許可しない"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>（<xliff:g id="DEVICE_NAME">%2$s</xliff:g>）"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"すべてのファイルにアクセスできるアプリをもっと見る"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;アプリの動作を維持するために許可&lt;/b&gt;&lt;br&gt;&lt;br&gt;アプリは、動作を維持するため、ローカル ネットワークへのアクセスとそのネットワーク上のデバイスとの接続のみが許可されることがあります。&lt;br&gt;&lt;br&gt;付近のすべてのデバイスの検出と接続を許可しない限り、アプリは Bluetooth などの技術を使ってデバイスに接続することはできません。"</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;アプリの動作を維持するために許可&lt;/b&gt;&lt;br&gt;&lt;br&gt;アプリは、動作を維持するため、ローカル ネットワークへのアクセスとそのネットワーク上のデバイスとの接続のみが許可されることがあります。&lt;br&gt;&lt;br&gt;付近のすべてのデバイスの検出と接続を許可しない限り、アプリは Bluetooth などの技術を使ってデバイスに接続することはできません。"</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 日}other{# 日}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# 時間}other{# 時間}}"</string>
@@ -428,7 +430,7 @@
     <string name="role_notes_short_label" msgid="8796604147546125285">"メモアプリ"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"デバイスでメモの作成に使うアプリ"</string>
     <string name="role_notes_search_keywords" msgid="7710756695666744631">"メモ"</string>
-    <string name="role_wallet_label" msgid="3719419175656204207">"デフォルトのウォレット アプリ"</string>
+    <string name="role_wallet_label" msgid="3719419175656204207">"デフォルトのウ⁠ォ⁠レ⁠ッ⁠ト⁠ ⁠ア⁠プ⁠リ"</string>
     <string name="role_wallet_short_label" msgid="6521288403762457452">"ウォレット アプリ"</string>
     <string name="role_wallet_description" msgid="3726535836165949838">"ウォレット アプリにクレジット カード、ポイントカード、車のキーなどの情報を保存して、さまざまな取引に対応できます。"</string>
     <string name="role_wallet_request_title" msgid="4770217108262737093">"<xliff:g id="APP_NAME">%1$s</xliff:g> をデフォルトのウォレット アプリに設定しますか？"</string>

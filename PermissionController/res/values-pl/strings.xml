@@ -136,10 +136,10 @@
     <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"W ciągu ostatnich 7 dni"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Dzisiaj"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Wczoraj"</string>
-    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Ostatnie użycie: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Ostatni dostęp: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Wyświetl"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Brak wejść"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Ten agent uzyskał dostęp do tych aplikacji, aby uzyskać informacje lub wykonać za Ciebie działania. W każdej chwili możesz to zmienić w ustawieniach aplikacji <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Agent uzyskał dostęp do tych aplikacji, aby zdobyć informacje lub wykonać za Ciebie działania. W każdej chwili możesz to zmienić w ustawieniach aplikacji <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Panel prywatności wyświetla się tylko wtedy, gdy dostęp do aplikacji odbywa się przy użyciu funkcji Androida dla agentów."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Pomoc na urządzeniu"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Wyświetl aplikacje, które ostatnio używały uprawnień"</string>
@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Pozwól na dostęp tylko do multimediów"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Zawsze zezwalaj"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Zezwalaj tylko podczas używania aplikacji"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"Zezwalaj na ciągłe działanie aplikacji"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Zawsze zezwalaj na wszystko"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Zawsze pytaj"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Pytaj za każdym razem lub zezwalaj, gdy udostępniasz"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"Nie mają dostępu"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> na tym urządzeniu: <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Zobacz więcej aplikacji z dostępem do wszystkich plików"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;Zezwalaj na ciągłe działanie aplikacji&lt;/b&gt;&lt;br&gt;&lt;br&gt;Aby aplikacja mogła działać, może mieć zezwolenie na dostęp do sieci lokalnej i łączenie się tylko z urządzeniami w tej sieci.&lt;br&gt;&lt;br&gt;Aplikacja nie może łączyć się z urządzeniami przez Bluetooth ani inne technologie, chyba że zezwolisz jej na znajdowanie wszystkich urządzeń w pobliżu i łączenie się z nimi."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Zezwolono na ciągłe działanie aplikacji&lt;/b&gt;&lt;br&gt;&lt;br&gt;Aby aplikacja mogła działać, może mieć zezwolenie na dostęp do sieci lokalnej i łączenie się tylko z urządzeniami w tej sieci.&lt;br&gt;&lt;br&gt;Aplikacja nie może łączyć się z urządzeniami przez Bluetooth ani inne technologie, chyba że zezwolisz jej na znajdowanie wszystkich urządzeń w pobliżu i łączenie się z nimi."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 dzień}few{# dni}many{# dni}other{# dnia}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# godzina}few{# godziny}many{# godzin}other{# godziny}}"</string>

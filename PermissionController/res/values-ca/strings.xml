@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Darrer accés: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Mostra"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Cap accés"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"L\'agent ha accedit a les apps per rebre dades o fer accions per tu. Pots canviar-ne l\'accés a la configuració de <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"El tauler de privadesa es mostra en accedir a apps amb funcions Android per a agents."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"L\'agent ha accedit a les aplicacions per obtenir informació o fer accions per tu. Pots canviar-ne l\'accés en qualsevol moment a la configuració de <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"El tauler de privadesa es mostra en accedir a aplicacions amb funcions d\'Android per a agents."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Assistència per al dispositiu"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Mostra quines aplicacions han utilitzat permisos fa poc"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Ús de: <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Permet l\'accés només als fitxers multimèdia"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Permet sempre"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Permet només mentre s\'utilitza l\'aplicació"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"Permet perquè l\'aplicació continuï funcionant"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Permet sempre tot"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Pregunta sempre"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Pregunta cada vegada o permet quan comparteixis"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"No permès"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> (<xliff:g id="DEVICE_NAME">%2$s</xliff:g>)"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Mostra més aplicacions que poden accedir a tots els fitxers"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;Permet perquè l\'aplicació continuï funcionant&lt;/b&gt;&lt;br&gt;&lt;br&gt;Perquè una aplicació continuï funcionant, és possible que se li permeti accedir a la xarxa local i connectar-se només amb els dispositius d\'aquesta xarxa.&lt;br&gt;&lt;br&gt;L\'aplicació no es pot connectar a dispositius mitjançant Bluetooth i altres tecnologies tret que li permetis cercar i connectar-se a tots els dispositius propers."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Permès que l\'aplicació continuï funcionant&lt;/b&gt;&lt;br&gt;&lt;br&gt;Perquè una aplicació continuï funcionant, és possible que se li permeti accedir a la xarxa local i connectar-se només amb els dispositius d\'aquesta xarxa.&lt;br&gt;&lt;br&gt;L\'aplicació no es pot connectar a dispositius mitjançant Bluetooth i altres tecnologies tret que li permetis cercar i connectar-se a tots els dispositius propers."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 dia}many{# dies}other{# dies}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# hora}many{# hores}other{# hores}}"</string>

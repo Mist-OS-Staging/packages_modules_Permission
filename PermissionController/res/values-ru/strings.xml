@@ -140,7 +140,7 @@
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Посмотреть"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Не было попыток доступа"</string>
     <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Агент использовал эти приложения, чтобы найти сведения или выполнить действия по вашему запросу. Параметры доступа можно изменить в настройках приложения \"<xliff:g id="APP_NAME">%1$s</xliff:g>\"."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Панель управления разрешениями показывается, когда приложения используются с помощью функций Android для агентов."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Информация на панели управления доступом появляется, только если к приложениям обращаются через функции Android для агентов."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Помощь с устройством"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Посмотреть, какие приложения недавно использовали разрешения"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Использование разрешения \"<xliff:g id="PERMGROUP">%1$s</xliff:g>\""</string>
@@ -180,7 +180,7 @@
     <string name="permission_usage_bar_chart_title_last_minute" msgid="820450867183487607">"Разрешения, использованные за последнюю минуту"</string>
     <string name="permission_usage_preference_summary_not_used_in_past_n_days" msgid="4771868094611359651">"{count,plural, =1{С момента последнего использования прошел # день}one{С момента последнего использования прошел # день}few{С момента последнего использования прошло # дня}many{С момента последнего использования прошло # дней}other{С момента последнего использования прошло # дня}}"</string>
     <string name="permission_usage_preference_summary_not_used_in_past_n_hours" msgid="3828973177433435742">"{count,plural, =1{С момента последнего использования прошел # час}one{С момента последнего использования прошел # час}few{С момента последнего использования прошло # часа}many{С момента последнего использования прошло # часов}other{С момента последнего использования прошло # часа}}"</string>
-    <string name="permission_usage_preference_label" msgid="8343167938128676378">"{count,plural, =1{Использовано 1 приложением}one{Использовано # приложением}few{Использовано # приложениями}many{Использовано # приложениями}other{Использовано # приложения}}"</string>
+    <string name="permission_usage_preference_label" msgid="8343167938128676378">"{count,plural, =1{Использовалось 1 приложением}one{Использовалось # приложением}few{Использовалось # приложениями}many{Использовалось # приложениями}other{Использовалось # приложения}}"</string>
     <string name="agent_usage_preference_label" msgid="3123976176446237103">"{count,plural, =1{Получен доступ к 1 приложению}one{Получен доступ к # приложению}few{Получен доступ к # приложениям}many{Получен доступ к # приложениям}other{Получен доступ к # приложения}}"</string>
     <string name="permission_usage_view_details" msgid="6675335735468752787">"Показать все в панели управления"</string>
     <string name="app_permission_usage_filter_label" msgid="7182861154638631550">"Фильтр: <xliff:g id="PERM">%1$s</xliff:g>"</string>
@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Разрешить доступ только к медиафайлам"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Разрешить в любом режиме"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Разрешить только во время использования приложения"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"Разрешить для работы приложения"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Постоянный полный доступ"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Спрашивать каждый раз"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Спрашивать каждый раз или разрешать при отправке"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"Запрещено"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> на устройстве \"<xliff:g id="DEVICE_NAME">%2$s</xliff:g>\""</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Ещё приложения с доступом ко всем файлам"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;Разрешить для работы приложения&lt;/b&gt;&lt;br&gt;&lt;br&gt;Для корректной работы приложения вы можете разрешить ему доступ к вашей локальной сети и подключение к устройствам в ней.&lt;br&gt;&lt;br&gt;Приложение не сможет подключаться к устройствам с помощью Bluetooth и других технологий, если вы не разрешите ему находить все устройства поблизости и подключаться к ним."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Разрешено для работы приложения&lt;/b&gt;&lt;br&gt;&lt;br&gt;Это может означать, что приложению разрешен только доступ к локальной сети и подключение к устройствам в ней.&lt;br&gt;&lt;br&gt;Приложение не сможет подключаться к устройствам с помощью Bluetooth и других технологий, если только вы не разрешите ему находить все устройства поблизости и подключаться к ним."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 день}one{# день}few{# дня}many{# дней}other{# дня}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# час}one{# час}few{# часа}many{# часов}other{# часа}}"</string>
@@ -601,7 +603,7 @@
     <string name="safety_center_rescan_button" msgid="4517514567809409596">"Сканировать устройство"</string>
     <string name="safety_center_issue_card_dismiss_button" msgid="5113965506144222402">"Закрыть"</string>
     <string name="safety_center_issue_card_dismiss_confirmation_title" msgid="2734809473425036382">"Закрыть оповещение?"</string>
-    <string name="safety_center_issue_card_dismiss_confirmation_message" msgid="3775418736671093563">"Проверить и изменить настройки защиты и конфиденциальности можно в любое время."</string>
+    <string name="safety_center_issue_card_dismiss_confirmation_message" msgid="3775418736671093563">"Вы в любое время можете проверить настройки безопасности и конфиденциальности, чтобы усилить защиту."</string>
     <string name="safety_center_issue_card_confirm_dismiss_button" msgid="5884137843083634556">"Закрыть"</string>
     <string name="safety_center_issue_card_cancel_dismiss_button" msgid="2874578798877712346">"Отмена"</string>
     <string name="safety_center_entries_category_title" msgid="34356964062813115">"Настройки"</string>
@@ -686,8 +688,8 @@
     <string name="app_location_permission_rationale_subtitle" msgid="6986985722752868692">"Это приложение уведомило, что оно может передавать данные о вашем местоположении третьим лицам."</string>
     <string name="data_sharing_updates_title" msgid="7996933386875213859">"Изменения в передаче геоданных"</string>
     <string name="data_sharing_updates_summary" msgid="764113985772233889">"Проверить приложения, в которых изменились разрешения на передачу геоданных"</string>
-    <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"В этих приложениях изменились разрешения на передачу геоданных. Возможно, эти данные ранее не передавались вообще или теперь передаются в рекламных или маркетинговых целях."</string>
-    <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Разработчики этих приложений указали в магазине приложений, как их приложения передают данные. Эта информация может изменяться.\n\nРазрешения на передачу данных могут зависеть от версии приложения, способа его использования, а также от вашего региона и возраста."</string>
+    <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"В этих приложениях изменились условия передачи геоданных. Возможно, эти данные ранее не передавались вообще или теперь передаются в рекламных или маркетинговых целях."</string>
+    <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Разработчики этих приложений указали в магазине приложений, как их приложения передают данные. Эта информация может изменяться.\n\nУсловия передачи данных могут зависеть от версии приложения, способа его использования, а также от вашего региона и возраста."</string>
     <string name="learn_about_data_sharing" msgid="4200480587079488045">"Сведения о передаче данных"</string>
     <string name="shares_location_with_third_parties" msgid="2278051743742057767">"Теперь данные о вашем местоположении передаются третьим лицам."</string>
     <string name="shares_location_with_third_parties_for_advertising" msgid="1918588064014480513">"Теперь данные о вашем местоположении передаются третьим лицам в рекламных или маркетинговых целях."</string>

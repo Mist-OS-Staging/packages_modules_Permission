@@ -88,8 +88,8 @@
     <string name="app_permissions_group_summary2" msgid="4329922444840521150">"<xliff:g id="COUNT_1">%2$d</xliff:g>/<xliff:g id="COUNT_0">%1$d</xliff:g> alkalmazás engedélyezve"</string>
     <string name="menu_show_system" msgid="4254021607027872504">"Rendszer megjelenítése"</string>
     <string name="menu_hide_system" msgid="3855390843744028465">"Rendszer elrejtése"</string>
-    <string name="menu_show_7_days_data" msgid="8979611198508523706">"Az elmúlt 7 nap mutatása"</string>
-    <string name="menu_show_24_hours_data" msgid="8228054833323380780">"Az elmúlt 24 óra mutatása"</string>
+    <string name="menu_show_7_days_data" msgid="8979611198508523706">"Az elmúlt 7 nap"</string>
+    <string name="menu_show_24_hours_data" msgid="8228054833323380780">"Az elmúlt 24 óra"</string>
     <string name="manage_permission" msgid="2895385393037061964">"Engedély kezelése"</string>
     <string name="no_apps" msgid="2412612731628386816">"Nincsenek alkalmazások"</string>
     <string name="location_settings" msgid="3624412509133422562">"Helybeállítások"</string>
@@ -127,11 +127,11 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Ismeretlen"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Adatvédelmi irányítópult"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Alkalmazásengedélyek"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Agent-tevékenység"</string>
+    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Ügynöki tevékenység"</string>
     <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Nincs telepítve ügynök"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"0 hozzáférés az elmúlt napban"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"0 hozzáférés az előző 7 napban"</string>
-    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> tevékenység"</string>
+    <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g>-tevékenység"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Az elmúlt 24 órában"</string>
     <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"Az elmúlt 7 napban"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Ma"</string>
@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Csak a médiatartalmakhoz való hozzáférés engedélyezése"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Mindig engedélyezett"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Csak az alkalmazás használatakor engedélyezett"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"Alkalmazás további működésének engedélyezése"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Összes engedélyezése mindig"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Mindig kérdezzen rá"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Mindig kérdezzen rá, vagy engedélyezés megosztáskor"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"Nem engedélyezett"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>, <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"További, minden fájlhoz hozzáférő alkalmazások megtekintése"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;Az alkalmazás további működésének engedélyezése&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ahhoz, hogy egy alkalmazás továbbra is működhessen, engedélyezhető számára a helyi hálózathoz való hozzáférés és a csak az ezen a hálózaton lévő eszközökhöz való csatlakozás.&lt;br&gt;&lt;br&gt;Az alkalmazás nem tud Bluetooth és más technológiai megoldások használatával csatlakozni az eszközökhöz, hacsak nem engedélyezi számára az összes közeli eszköz megkeresését és a hozzájuk való csatlakozást."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Az alkalmazás további működésének engedélyezése&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ahhoz, hogy egy alkalmazás továbbra is működhessen, engedélyezhető számára a helyi hálózathoz való hozzáférés és a csak az ezen a hálózaton lévő eszközökhöz való csatlakozás.&lt;br&gt;&lt;br&gt;Az alkalmazás nem tud Bluetooth és más technológiák használatával csatlakozni az eszközökhöz, hacsak nem engedélyezi számára az összes közeli eszköz megkeresését és a hozzájuk való csatlakozást."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 nap}other{# nap}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# óra}other{# óra}}"</string>
@@ -601,7 +603,7 @@
     <string name="safety_center_rescan_button" msgid="4517514567809409596">"Eszközvizsgálat"</string>
     <string name="safety_center_issue_card_dismiss_button" msgid="5113965506144222402">"Elvetés"</string>
     <string name="safety_center_issue_card_dismiss_confirmation_title" msgid="2734809473425036382">"Elveti ezt az értesítést?"</string>
-    <string name="safety_center_issue_card_dismiss_confirmation_message" msgid="3775418736671093563">"Bármikor áttekintheti biztonsági és adatvédelmi beállításait, és fokozhatja a védelmet"</string>
+    <string name="safety_center_issue_card_dismiss_confirmation_message" msgid="3775418736671093563">"Bármikor áttekintheti biztonsági és adatvédelmi beállításait, és fokozhatja a védelmet."</string>
     <string name="safety_center_issue_card_confirm_dismiss_button" msgid="5884137843083634556">"Bezárás"</string>
     <string name="safety_center_issue_card_cancel_dismiss_button" msgid="2874578798877712346">"Mégse"</string>
     <string name="safety_center_entries_category_title" msgid="34356964062813115">"Beállítások"</string>
@@ -660,7 +662,7 @@
     <string name="mic_toggle_description" msgid="9163104307990677157">"Alkalmazásoknál és szolgáltatásoknál. Ha ki van kapcsolva ez a beállítás, segélyhívó szám hívásakor a rendszer továbbra is megoszthatja a mikrofonadatokat."</string>
     <string name="location_settings_subtitle" msgid="2328360561197430695">"A helyadatokhoz hozzáférő alkalmazások és szolgáltatások megtekintése"</string>
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"Vágólap-hozzáférés megjelenítése"</string>
-    <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"Üzenet megjelenítése, amikor alkalmazások férnek hozzá a vágólapra másolt szövegekhez, képekhez vagy más tartalmakhoz"</string>
+    <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"Üzenet megjelenítése, amikor alkalmazások férnek hozzá a vágólapra másolt szövegekhez, képekhez vagy más tartalmakhoz."</string>
     <string name="show_password_title" msgid="2877269286984684659">"Jelszavak mutatása"</string>
     <string name="show_password_summary" msgid="1110166488865981610">"Gépelés közben rövid ideig megjeleníti a karaktereket"</string>
     <string name="permission_rationale_message_location" msgid="2153841534298068414">"Az alkalmazás jelezte, hogy megoszthat helyadatokat harmadik felekkel"</string>

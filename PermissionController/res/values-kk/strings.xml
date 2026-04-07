@@ -129,7 +129,7 @@
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Қолданба рұқсаттары"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Агенттің әрекеті"</string>
     <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Ешқандай агент орнатылмаған"</string>
-    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Соңғы 24 сағатта кірмеген"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Соңғы 24 сағатта кірмеген."</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Соңғы 7 күнде кірмеген"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> әрекеті"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"Соңғы 24 сағатта"</string>
@@ -139,7 +139,7 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Соңғы рет пайдаланған уақыты: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Көру"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Кірмеген"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Осы қолданбалар пайдаланылды. <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Ақпарат алу немесе сіз үшін қандай да бір әрекеттерді орындау үшін агент осы қолданбаларға кірген. <xliff:g id="APP_NAME">%1$s</xliff:g> параметрлері арқылы бұл рұқсатты кез келген уақытта өзгерте аласыз."</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Құпиялық тақтасы қолданбалар агенттерге арналған Android функциялары арқылы ашылғанда ғана көрінеді."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Құрылғыға арналған көмек"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Қандай қолданбалар рұқсаттарды пайдаланғанын көріңіз."</string>
@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Тек медиафайлдарды пайдалануға рұқсат беру"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Біржола рұқсат ету"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Қолданбаны пайдаланғанда ғана рұқсат беру"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"Қолданба жұмысын жалғастыруға рұқсат ету"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Барлығына әрқашан рұқсат ету"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Әрдайым сұрау"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Әр жолы сұрау немесе бөліскен кезде рұқсат беру"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"Рұқсат берілмегендер"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>: <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Барлық файлды пайдалана алатын тағы басқа қолданбаларды көру"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;Қолданба жұмысын жалғастыруға рұқсат ету&lt;/b&gt;&lt;br&gt;&lt;br&gt;Қолданбаның жұмысын жалғастыру үшін оған жергілікті желіні пайдалануға және осы желідегі құрылғыларға ғана қосылуға рұқсат етілуі мүмкін.&lt;br&gt;&lt;br&gt;Қолданбаға маңайдағы барлық құрылғыны тауып алуға және оларға қосылуға рұқсат бермесеңіз, ол Bluetooth және басқа технологиялар арқылы құрылғыларға қосыла алмайды."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Қолданба жұмысына рұқсат етілген&lt;/b&gt;&lt;br&gt;&lt;br&gt;Қолданбаның жұмысын жалғастыру үшін оған жергілікті желіні пайдалануға және осы желідегі құрылғыларға ғана қосылуға рұқсат етілуі мүмкін.&lt;br&gt;&lt;br&gt;Қолданбаға маңайдағы барлық құрылғыны тауып алуға және оларға қосылуға рұқсат бермесеңіз, ол Bluetooth және басқа технологиялар арқылы құрылғыларға қосыла алмайды."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 күн}other{# күн}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# сағат}other{# сағат}}"</string>

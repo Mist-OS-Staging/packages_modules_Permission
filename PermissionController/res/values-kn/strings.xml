@@ -139,7 +139,7 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"ಕೊನೆಯ ಆ್ಯಕ್ಸೆಸ್‌ <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"ವೀಕ್ಷಿಸಿ"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"ಯಾವುದೇ ಆ್ಯಕ್ಸೆಸ್‌ಗಳಿಲ್ಲ"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"ನಿಮಗಾಗಿ ಮಾಹಿತಿ ಪಡೆಯಲು ಅಥವಾ ಕ್ರಮ ತೆಗೆದುಕೊಳ್ಳಲು ಈ ಏಜೆಂಟ್ ಈ ಆ್ಯಪ್‌ಗಳನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಿದ್ದಾರೆ. ನೀವು ಇದನ್ನು ಯಾವುದೇ ಸಮಯದಲ್ಲಿಯೂ <xliff:g id="APP_NAME">%1$s</xliff:g> ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಆ್ಯಕ್ಸೆಸ್ ಅನ್ನು ಬದಲಿಸಬಹುದು."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"ನಿಮಗಾಗಿ ಮಾಹಿತಿ ಪಡೆಯಲು ಅಥವಾ ಕ್ರಮ ತೆಗೆದುಕೊಳ್ಳಲು ಈ ಏಜೆಂಟ್ ಈ ಆ್ಯಪ್‌ಗಳನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಿದ್ದಾರೆ. ನೀವು ಯಾವುದೇ ಸಮಯದಲ್ಲಿಯೂ <xliff:g id="APP_NAME">%1$s</xliff:g> ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಆ್ಯಕ್ಸೆಸ್ ಅನ್ನು ಬದಲಿಸಬಹುದು."</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"ಏಜೆಂಟ್‌ಗಳಿಗಾಗಿ Android ಫೀಚರ್‌ಗಳನ್ನು ಬಳಸಿ ಆ್ಯಪ್‌ಗಳನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಿದಾಗ ಮಾತ್ರ ಗೌಪ್ಯತೆ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ತೋರಿಸುತ್ತದೆ."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"ಸಾಧನ ಸಹಾಯ"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ಯಾವ ಆ್ಯಪ್‌ಗಳು ಇತ್ತೀಚೆಗೆ ಅನುಮತಿಗಳನ್ನು ಬಳಸಿವೆ ಎಂದು ವೀಕ್ಷಿಸಿ"</string>
@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"ಮಾಧ್ಯಮಕ್ಕೆ ಮಾತ್ರ ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು ಅನುಮತಿಸಿ"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"ಎಲ್ಲಾ ಸಮಯದಲ್ಲೂ ಅನುಮತಿಸಿ"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"ಆ್ಯಪ್ ಬಳಸುವಾಗ ಮಾತ್ರ ಅನುಮತಿಸಿ"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"ಆ್ಯಪ್ ಕಾರ್ಯನಿರ್ವಹಿಸುವುದನ್ನು ಮುಂದುವರಿಸಲು ಅನುಮತಿಸಿ"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"ಯಾವಾಗಲೂ ಎಲ್ಲವನ್ನೂ ಅನುಮತಿಸಿ"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"ಪ್ರತಿ ಬಾರಿ ಕೇಳಿ"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"ಪ್ರತಿ ಬಾರಿ ಕೇಳಿ ಅಥವಾ ನೀವು ಹಂಚಿಕೊಂಡಾಗ ಅನುಮತಿಸಿ"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"ಅನುಮತಿಸಿಲ್ಲದಿರುವುದು"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g> ನಲ್ಲಿನ <xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"ಎಲ್ಲಾ ಫೈಲ್‌ಗಳನ್ನು ಪ್ರವೇಶಿಸಬಹುದಾದ ಇನ್ನಷ್ಟು ಆ್ಯಪ್‌ಗಳನ್ನು ನೋಡಿ"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;ಆ್ಯಪ್ ಕಾರ್ಯನಿರ್ವಹಿಸುವುದನ್ನು ಮುಂದುವರಿಸಲು ಅನುಮತಿಸಿ&lt;/b&gt;&lt;br&gt;&lt;br&gt;ಆ್ಯಪ್ ಕಾರ್ಯನಿರ್ವಹಿಸುವುದನ್ನು ಮುಂದುವರಿಸಲು, ನಿಮ್ಮ ಸ್ಥಳೀಯ ನೆಟ್‌ವರ್ಕ್ ಅನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು ಮತ್ತು ಈ ನೆಟ್‌ವರ್ಕ್‌ನಲ್ಲಿರುವ ಸಾಧನಗಳೊಂದಿಗೆ ಮಾತ್ರ ಕನೆಕ್ಟ್ ಮಾಡಲು ಅದನ್ನು ಅನುಮತಿಸಬಹುದು.&lt;br&gt;&lt;br&gt;ನೀವು ಎಲ್ಲಾ ಸಮೀಪದ ಸಾಧನಗಳನ್ನು ಹುಡುಕಲು ಮತ್ತು ಕನೆಕ್ಟ್ ಮಾಡಲು ಅನುಮತಿಸದ ಹೊರತು, ಆ್ಯಪ್ ಬ್ಲೂಟೂತ್ ಮತ್ತು ಇತರ ತಂತ್ರಜ್ಞಾನಗಳನ್ನು ಬಳಸಿಕೊಂಡು ಸಾಧನಗಳಿಗೆ ಕನೆಕ್ಟ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;ಆ್ಯಪ್ ಕಾರ್ಯನಿರ್ವಹಿಸುವುದನ್ನು ಮುಂದುವರಿಸಲು ಅನುಮತಿಸಲಾಗಿದೆ&lt;/b&gt;&lt;br&gt;&lt;br&gt;ಆ್ಯಪ್ ಕಾರ್ಯನಿರ್ವಹಿಸುವುದನ್ನು ಮುಂದುವರಿಸಲು, ನಿಮ್ಮ ಸ್ಥಳೀಯ ನೆಟ್‌ವರ್ಕ್ ಅನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು ಮತ್ತು ಈ ನೆಟ್‌ವರ್ಕ್‌ನಲ್ಲಿರುವ ಸಾಧನಗಳೊಂದಿಗೆ ಮಾತ್ರ ಕನೆಕ್ಟ್ ಮಾಡಲು ಅದನ್ನು ಅನುಮತಿಸಬಹುದು.&lt;br&gt;&lt;br&gt;ನೀವು ಎಲ್ಲಾ ಸಮೀಪದ ಸಾಧನಗಳನ್ನು ಹುಡುಕಲು ಮತ್ತು ಕನೆಕ್ಟ್ ಮಾಡಲು ಅನುಮತಿಸದ ಹೊರತು ಆ್ಯಪ್ ಬ್ಲೂಟೂತ್ ಮತ್ತು ಇತರ ತಂತ್ರಜ್ಞಾನಗಳನ್ನು ಬಳಸಿಕೊಂಡು ಸಾಧನಗಳಿಗೆ ಕನೆಕ್ಟ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 ದಿನ}one{# ದಿನಗಳು}other{# ದಿನಗಳು}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# ಗಂಟೆ}one{# ಗಂಟೆಗಳು}other{# ಗಂಟೆಗಳು}}"</string>

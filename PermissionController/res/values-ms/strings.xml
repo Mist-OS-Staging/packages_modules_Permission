@@ -137,10 +137,10 @@
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Hari ini"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Semalam"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Akses terakhir pada <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
-    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Paparan"</string>
+    <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Lihat"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Tiada akses"</string>
     <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Ejen ini mengakses apl ini untuk mendapatkan maklumat atau mengambil tindakan bagi pihak anda. Anda boleh menukar akses ini pada bila-bila masa dalam tetapan <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Papan privasi: Ejen akses apl."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Papan pemuka privasi hanya dipaparkan apabila apl diakses menggunakan ciri Android untuk ejen."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Bantuan Peranti"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Lihat apl yang menggunakan kebenaran baru-baru ini"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Penggunaan <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Benarkan akses kepada media sahaja"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Benarkan sepanjang masa"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Benarkan hanya semasa menggunakan apl"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"Benarkan untuk memastikan apl terus berfungsi"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Sentiasa benarkan semua"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Tanya setiap kali"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Tanya setiap kali atau benarkan apabila anda berkongsi"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"Tidak dibenarkan"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> pada <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Lihat lagi apl yang boleh mengakses semua fail"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;Benarkan untuk memastikan apl terus berfungsi&lt;/b&gt;&lt;br&gt;&lt;br&gt;Untuk memastikan apl terus berfungsi, apl mungkin dibenarkan untuk mengakses rangkaian setempat anda dan menyambung kepada peranti pada rangkaian ini sahaja.&lt;br&gt;&lt;br&gt;Apl ini tidak boleh disambungkan kepada peranti menggunakan Bluetooth dan teknologi lain melainkan anda membenarkan apl tersebut menemukan dan menyambung kepada semua peranti berdekatan."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Dibenarkan untuk memastikan apl terus berfungsi&lt;/b&gt;&lt;br&gt;&lt;br&gt;Untuk memastikan apl terus berfungsi, apl mungkin dibenarkan untuk mengakses rangkaian setempat anda dan menyambung kepada peranti pada rangkaian ini sahaja.&lt;br&gt;&lt;br&gt;Apl tidak boleh disambungkan kepada peranti menggunakan Bluetooth dan teknologi lain melainkan anda membenarkan apl tersebut menemukan dan menyambung kepada semua peranti berdekatan."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 hari}other{# hari}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# jam}other{# jam}}"</string>

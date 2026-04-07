@@ -139,7 +139,7 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Dernier accès : <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Afficher"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Aucun accès"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Cet agent a accédé à ces applis pour obtenir des infos ou effectuer des actions pour vous. Vous pouvez modifier cela à tout moment dans les paramètres <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Cet agent a accédé aux applis ci-dessous pour obtenir des infos ou effectuer des actions pour vous. Vous pouvez modifier ces accès à tout moment dans les paramètres <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Le tableau de bord Confidentialité ne s\'affiche que lorsque les applis sont consultées via des fonctionnalités Android pour les agents."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Assistance Appareil"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Voir les applis qui ont récemment utilisé des autorisations"</string>
@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Autoriser l\'accès aux fichiers multimédias uniquement"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Toujours autoriser"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Autoriser seulement lorsque l\'appli est utilisée"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"Autoriser pour assurer le fonctionnement de l\'appli"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Toujours autoriser"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Toujours demander"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Demander à chaque fois ou autoriser lorsque vous partagez"</string>
@@ -273,14 +274,15 @@
     <string name="allowed_header" msgid="7769277978004790414">"Autorisé"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Toujours autorisé"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"Autorisé seulement pendant l\'utilisation"</string>
-    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"Autorisée pour assurer le fonctionnement"</string>
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"Accès autorisé pour le fonctionnement de l\'appli"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Autorisées à gérer les fichiers multimédias"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Autorisées à gérer tous les fichiers"</string>
     <string name="ask_header" msgid="2633816846459944376">"Toujours demander"</string>
     <string name="denied_header" msgid="903209608358177654">"Non autorisé"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> sur <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Voir plus d\'applis pouvant accéder à tous les fichiers"</string>
-    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Autorisée pour assurer le fonctionnement&lt;/b&gt;&lt;br&gt;&lt;br&gt;Pour qu\'une appli continue de fonctionner, elle peut être autorisée à accéder à votre réseau local et à se connecter uniquement aux appareils de ce réseau.&lt;br&gt;&lt;br&gt;L\'appli ne peut pas se connecter aux appareils à l\'aide de Bluetooth ni d\'autres technologies, sauf si vous l\'autorisez à rechercher tous les appareils à proximité et à s\'y connecter."</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;Autoriser pour assurer le fonctionnement de l\'appli&lt;/b&gt;&lt;br&gt;&lt;br&gt;Pour qu\'une appli continue de fonctionner, elle peut être autorisée à accéder à votre réseau local et à se connecter uniquement aux appareils de ce réseau.&lt;br&gt;&lt;br&gt;L\'appli ne peut pas se connecter aux appareils à l\'aide de Bluetooth ni d\'autres technologies, sauf si vous l\'autorisez à rechercher tous les appareils à proximité et à s\'y connecter."</string>
+    <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Accès autorisé pour le fonctionnement de l\'appli&lt;/b&gt;&lt;br&gt;&lt;br&gt;Pour qu\'une appli continue de fonctionner, elle peut être autorisée à accéder à votre réseau local et à se connecter uniquement aux appareils de ce réseau.&lt;br&gt;&lt;br&gt;L\'appli ne peut pas se connecter aux appareils à l\'aide du Bluetooth ni d\'autres technologies, sauf si vous l\'autorisez à rechercher tous les appareils à proximité et à s\'y connecter."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 jour}one{# jour}many{# jours}other{# jours}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# heure}one{# heure}many{# heures}other{# heures}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# minute}one{# minute}many{# minutes}other{# minutes}}"</string>
@@ -717,7 +719,7 @@
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"L\'accès au statut <xliff:g id="ROLE_NAME">%1$s</xliff:g> par défaut a été refusé à l\'appli"</string>
     <string name="enhanced_confirmation_dialog_desc_role" msgid="6369601947905234551">"Cette appli a demandé l\'accès à des autorisations sensibles susceptibles d\'exposer vos informations financières et personnelles à un risque.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>L\'appli risque de ne pas fonctionner correctement si elle ne dispose pas d\'un accès à ces autorisations restreintes.  &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Découvrez comment autoriser l\'accès&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_settings_default" msgid="1858092969721041576">"L\'accès a été refusé à cette appli"</string>
-    <string name="enhanced_confirmation_dialog_desc_settings_default" msgid="6911632348359332981">"L\'accès à cette autorisation peut exposer vos informations financières et personnelles à un risque.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>L\'appli risque de ne pas fonctionner correctement si elle ne dispose pas d\'un accès à cette autorisation restreinte. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Découvrez comment autoriser l\'accès&lt;/a&gt;"</string>
+    <string name="enhanced_confirmation_dialog_desc_settings_default" msgid="6911632348359332981">"L\'accès à cette autorisation peut exposer vos informations financières et personnelles à un risque.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>L\'appli risque de ne pas fonctionner correctement si elle ne dispose pas de cette autorisation restreinte. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Découvrez comment autoriser l\'accès&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_learn_more" msgid="5226619861379095709">"En savoir plus"</string>
     <string name="enhanced_confirmation_dialog_ok" msgid="8560373821598619924">"OK"</string>
     <string name="permission_grant_dialog_streaming_blocked_title" msgid="8905241017017043649">"Demande d\'autorisation supprimée"</string>
@@ -742,7 +744,7 @@
     <string name="app_function_target_access_title" msgid="7415628605578155761">"Accès des agents"</string>
     <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agents pouvant accéder aux informations et effectuer des actions pour vous dans cette appli"</string>
     <string name="app_function_access_allowed_header" msgid="139473645426829908">"Autorisé"</string>
-    <string name="app_function_access_denied_header" msgid="6934818996725728911">"Non autorisé"</string>
+    <string name="app_function_access_denied_header" msgid="6934818996725728911">"Accès non autorisé"</string>
     <string name="app_function_agent_access_none_allowed_title" msgid="4922794509336759858">"Aucun accès d\'agent autorisé"</string>
     <string name="app_function_agent_access_none_denied_title" msgid="5745249773152088458">"Aucun accès d\'agent refusé"</string>
     <string name="app_function_target_access_none_allowed_title" msgid="5994321178244800275">"Aucun accès à l\'appli autorisé"</string>

@@ -89,7 +89,7 @@
     <string name="menu_show_system" msgid="4254021607027872504">"சிஸ்டம் ஆப்ஸைக் காட்டு"</string>
     <string name="menu_hide_system" msgid="3855390843744028465">"சிஸ்டம் ஆப்ஸை மறை"</string>
     <string name="menu_show_7_days_data" msgid="8979611198508523706">"7 நாட்களைக் காட்டு"</string>
-    <string name="menu_show_24_hours_data" msgid="8228054833323380780">"24 மணிநேரத்தில் காட்டு"</string>
+    <string name="menu_show_24_hours_data" msgid="8228054833323380780">"24 மணிநேரத்தைக் காட்டு"</string>
     <string name="manage_permission" msgid="2895385393037061964">"அனுமதியை நிர்வகி"</string>
     <string name="no_apps" msgid="2412612731628386816">"எந்த ஆப்ஸிற்கும் தேவையில்லை"</string>
     <string name="location_settings" msgid="3624412509133422562">"இருப்பிட அமைப்புகள்"</string>
@@ -140,7 +140,7 @@
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"காட்டு"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"அணுகல்கள் இல்லை"</string>
     <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"உங்களுக்காகத் தகவல்களைப் பெறவோ செயல்களைச் செய்யவோ ஏஜெண்ட் இந்த ஆப்ஸை அணுகியுள்ளது. அணுகலை <xliff:g id="APP_NAME">%1$s</xliff:g> அமைப்புகளில் எப்போது வேண்டுமானாலும் மாற்றிக்கொள்ளலாம்."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"ஏஜெண்ட்டுகளுக்கான Android அம்சங்கள் மூலம் ஆப்ஸை அணுகும்போது மட்டுமே தனியுரிமை டாஷ்போர்டு காட்டப்படும்.ம்"</string>
+    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"ஏஜெண்ட்டுகளுக்கான Android அம்சங்கள் மூலம் ஆப்ஸை அணுகும்போது மட்டுமே தனியுரிமை டாஷ்போர்டு காட்டப்படும்."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"சாதன உதவி"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"சமீபத்தில் அனுமதிகளைப் பயன்படுத்திய ஆப்ஸைக் காட்டும்"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> உபயோகம்"</string>
@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"மீடியா ஃபைல்களை மட்டும் அணுக அனுமதி"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"எப்போதும் அனுமதி"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"ஆப்ஸை உபயோகிக்கும்போது மட்டும் அனுமதி"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"ஆப்ஸ் தொடர்ந்து இயங்க அனுமதித்தல்"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"எப்போதும் அனைத்தையும் அனுமதி"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"ஒவ்வொரு முறையும் கேள்"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"ஒவ்வொரு முறையும் கேள் அல்லது பகிரும்போது அனுமதி"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"அனுமதிக்கப்படாதவை"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g> சாதனத்தில் <xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"அனைத்து ஃபைல்களையும் அணுகக்கூடிய கூடுதல் ஆப்ஸைப் பாருங்கள்"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;ஆப்ஸ் தொடர்ந்து இயங்க அனுமதித்தல்&lt;/b&gt;&lt;br&gt;&lt;br&gt;ஆப்ஸ் தொடர்ந்து இயங்க, உங்கள் லோக்கல் நெட்வொர்க்கை அணுகவும் இந்த நெட்வொர்க்கில் உள்ள சாதனங்களுடன் மட்டுமே இணைக்கவும் அதற்கு அனுமதி வழங்கப்படலாம்.&lt;br&gt;&lt;br&gt;அருகிலுள்ள அனைத்துச் சாதனங்களையும் கண்டறிந்து அவற்றுடன் இணைக்க நீங்கள் ஆப்ஸை அனுமதிக்காத வரை புளூடூத்தையும் பிற தொழில்நுட்பங்களையும் பயன்படுத்திச் சாதனங்களுடன் ஆப்ஸால் இணைக்க முடியாது."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;ஆப்ஸ் தொடர்ந்து இயங்க அனுமதிக்கப்பட்டது&lt;/b&gt;&lt;br&gt;&lt;br&gt;ஆப்ஸ் தொடர்ந்து இயங்க, உங்கள் லோக்கல் நெட்வொர்க்கை அணுகவும் இந்த நெட்வொர்க்கில் உள்ள சாதனங்களுடன் மட்டுமே இணைக்கவும் அதற்கு அனுமதி வழங்கப்படலாம்.&lt;br&gt;&lt;br&gt;அருகிலுள்ள அனைத்துச் சாதனங்களையும் கண்டறிந்து அவற்றுடன் இணைக்க நீங்கள் ஆப்ஸை அனுமதிக்காத வரை புளூடூத்தையும் பிற தொழில்நுட்பங்களையும் பயன்படுத்திச் சாதனங்களுடன் ஆப்ஸால் இணைக்க முடியாது."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 நாள்}other{# நாட்கள்}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# மணிநேரம்}other{# மணிநேரம்}}"</string>

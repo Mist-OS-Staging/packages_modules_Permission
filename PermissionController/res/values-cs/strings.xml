@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Povolit pouze přístup k médiím"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Povolit vždy"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Povolit jen při používání aplikace"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"Povolit, aby aplikace mohla fungovat"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Vždy povolit vše"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Pokaždé se zeptat"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Pokaždé se zeptat nebo povolit při sdílení"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"Přístup zakázán"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> na <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Zobrazit další aplikace s přístupem ke všem souborům"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;Povolit, aby aplikace mohla fungovat&lt;/b&gt;&lt;br&gt;&lt;br&gt;Aby aplikace mohla dál fungovat, může jí být povolen přístup k místní síti a připojení k zařízením pouze v této síti.&lt;br&gt;&lt;br&gt;Přes Bluetooth a pomocí dalších technologií se aplikace může k zařízením připojovat pouze v případě, že jí povolíte vyhledávat všechna zařízení v okolí a připojovat se k nim."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Povoleno, aby aplikace mohla fungovat&lt;/b&gt;&lt;br&gt;&lt;br&gt;Aby aplikace fungovala, může mít povolený přístup k vaší místní síti a připojovat se pouze k zařízením v této síti.&lt;br&gt;&lt;br&gt;Aplikace se nemůže připojovat k zařízením pomocí Bluetooth a dalších technologií, pokud jí nepovolíte vyhledávat a připojovat se ke všem zařízením v okolí."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 den}few{# dny}many{# dne}other{# dní}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# hodinu}few{# hodiny}many{# hodiny}other{# hodin}}"</string>
@@ -686,8 +688,8 @@
     <string name="app_location_permission_rationale_subtitle" msgid="6986985722752868692">"Tato aplikace uvedla, že může sdílet údaje o vaší poloze se třetími stranami"</string>
     <string name="data_sharing_updates_title" msgid="7996933386875213859">"Aktualizace sdílení údajů o poloze"</string>
     <string name="data_sharing_updates_summary" msgid="764113985772233889">"Kontrola aplikací, které změnily způsob, jakým mohou sdílet údaje o vaší poloze"</string>
-    <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"Tyto aplikace změnily způsob, jakým mohou sdílet údaje o vaší poloze. Buď je dříve nesdílely, nebo je nyní mohou sdílet pro reklamní nebo marketingové účely."</string>
-    <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Vývojáři těchto aplikací poskytli obchodu s aplikacemi informace o svých postupech sdílení dat. Tyto informace mohou průběžně aktualizovat.\n\nPostupy sdílení dat se mohou lišit v závislosti na verzi aplikace, použití, oblasti a věku uživatele."</string>
+    <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"Tyto aplikace změnily způsob, jakým můžou sdílet údaje o vaší poloze. Buď je dříve nesdílely, nebo je teď můžou sdílet pro reklamní nebo marketingové účely."</string>
+    <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Vývojáři těchto aplikací poskytli obchodu s aplikacemi informace o svých postupech sdílení dat. Tyto informace můžou průběžně aktualizovat.\n\nPostupy sdílení dat se můžou lišit v závislosti na verzi aplikace, použití, oblasti a věku uživatele."</string>
     <string name="learn_about_data_sharing" msgid="4200480587079488045">"Informace o sdílení dat"</string>
     <string name="shares_location_with_third_parties" msgid="2278051743742057767">"Údaje o vaší poloze jsou nyní sdíleny se třetími stranami"</string>
     <string name="shares_location_with_third_parties_for_advertising" msgid="1918588064014480513">"Údaje o vaší poloze jsou nyní sdíleny se třetími stranami pro inzertní a marketingové účely"</string>

@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"只允許存取媒體檔案"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"一律允許"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"僅在使用該應用程式時允許"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"允許應用程式繼續運作"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"一律全部允許"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"每次都詢問"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"每次都要詢問，或在分享時允許"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"不允許"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g>上的<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"查看可存取所有檔案的其他應用程式"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;允許應用程式繼續運作&lt;/b&gt;&lt;br&gt;&lt;br&gt;為確保應用程式持續運作，系統可能會允許應用程式存取你的區域網路，並僅與該網路上的裝置連線。&lt;br&gt;&lt;br&gt;你必須允許應用程式尋找所有鄰近裝置並進行連線，應用程式才能使用藍牙和其他技術與裝置連線。"</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;允許應用程式繼續運作&lt;/b&gt;&lt;br&gt;&lt;br&gt;為確保應用程式持續運作，系統可能會允許應用程式存取你的區域網路，並僅與該網路上的裝置連線。&lt;br&gt;&lt;br&gt;你必須允許應用程式尋找所有鄰近裝置並進行連線，應用程式才能使用藍牙和其他技術與裝置連線。"</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 天}other{# 天}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# 小時}other{# 小時}}"</string>
@@ -345,7 +347,7 @@
     <string name="permission_subtitle_background" msgid="8916750995309083180">"一律允許"</string>
     <string name="app_perms_24h_access" msgid="99069906850627181">"上次存取時間：<xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="app_perms_24h_access_yest" msgid="5411926024794555022">"上次存取時間：昨天<xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
-    <string name="app_perms_7d_access" msgid="4945055548894683751">"上次存取時間：<xliff:g id="TIME_DATE_0">%1$s</xliff:g><xliff:g id="TIME_DATE_1">%2$s</xliff:g>"</string>
+    <string name="app_perms_7d_access" msgid="4945055548894683751">"上次存取時間：<xliff:g id="TIME_DATE_0">%1$s</xliff:g> <xliff:g id="TIME_DATE_1">%2$s</xliff:g>"</string>
     <string name="app_perms_content_provider_24h" msgid="1055526027667508972">"上次存取時間：過去 24 小時內"</string>
     <string name="app_perms_content_provider_7d" msgid="3215454898257814868">"上次存取時間：過去 7 天內"</string>
     <string name="app_perms_24h_access_background" msgid="3413674718969576843">"上次存取時間：<xliff:g id="TIME_DATE">%1$s</xliff:g> • 一律允許"</string>

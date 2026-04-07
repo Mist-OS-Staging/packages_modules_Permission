@@ -139,7 +139,7 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Акыркы жолу качан колдонулду: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Көрүү"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Мүмкүнчүлүк жок"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Маалымат алуу же атыңыздан аракет кылуу үчүн бул агент ушул колдонмолорго кирди. Кирүүнү <xliff:g id="APP_NAME">%1$s</xliff:g>Параметрлерден каалаган убакта өзгөртө аласыз."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Агент маалымат табуу же сиз айткан нерсени жасоо үчүн ушул колдонмолорго кирди. Кирүү мүмкүнчүлүгүн <xliff:g id="APP_NAME">%1$s</xliff:g> колдонмосунун Параметрлеринен каалаган убакта өзгөртө аласыз."</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Купуялык тактасы колдонмолор агенттерге арналган Android функциялары аркылуу ачылганда гана көрсөтүлөт."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Түзмөк боюнча жардам"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Уруксаттарды жакында кайсы колдонмолор колдонгонун көрө аласыз"</string>
@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Медиа файлдарга гана уруксат берүү"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Бардык учурда уруксат берилет"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Колдонмо колдонулуп жатканда гана уруксат берилет"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"Колдонмо иштеши үчүн уруксат берүү"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Ар дайым баарына уруксат берүү"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Ар дайым суралсын"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Ар дайым сурап туруу же бөлүшкөндө уруксат берүү"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"Тыюу салынган"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>–<xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Дагы кайсы колдонмолорго бардык файлдар жеткиликтүү?"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;Колдонмо иштеши үчүн уруксат берүү&lt;/b&gt;&lt;br&gt;&lt;br&gt;Колдонмо иштеши үчүн, ага жергиликтүү тармакка кирүүгө жана ушул тармактагы түзмөктөргө гана туташууга уруксат берилиши мүмкүн.&lt;br&gt;&lt;br&gt;Эгер колдонмого жакын жердеги бардык түзмөктөрдү таап, аларга туташууга уруксат бербесеңиз, ал Bluetooth жана башка технологиялар аркылуу түзмөктөргө туташа албайт."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Колдонмо иштеши үчүн уруксат берилди&lt;/b&gt;&lt;br&gt;&lt;br&gt;Колдонмо иштеши үчүн, ага жергиликтүү тармакка кирүүгө жана ушул тармактагы түзмөктөргө гана туташууга уруксат берилиши мүмкүн.&lt;br&gt;&lt;br&gt;Эгер колдонмого жакын жердеги бардык түзмөктөрдү таап, аларга туташууга уруксат бербесеңиз, ал Bluetooth жана башка технологиялар аркылуу түзмөктөргө туташа албайт."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 күн}other{# күн}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# саат}other{# саат}}"</string>
