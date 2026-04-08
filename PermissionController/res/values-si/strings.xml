@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"මාධ්‍ය වෙත ප්‍රවේශය පමණක් ඉඩ දෙන්න"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"සැම විටම ඉඩ දෙන්න"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"යෙදුම භාවිතයේදී පමණක් ඉඩ දෙන්න"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"යෙදුම ක්‍රියාත්මකව තබා ගැනීමට ඉඩ දෙන්න"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"සැම විටම සියල්ලට ඉඩ දෙන්න"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"සෑම විටම ඉල්ලන්න"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"සෑම විට ම අසන්න හෝ ඔබ බෙදා ගන්නා විට ඉඩ දෙන්න"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"ඉඩ නොදේ"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g> මත <xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"සියලු ගොනු වෙත ප්‍රවේශ විය හැකි තව යෙදුම් බලන්න"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;යෙදුම ක්‍රියාත්මකව තබා ගැනීමට ඉඩ දෙන්න&lt;/b&gt;&lt;br&gt;&lt;br&gt;යෙදුමක් ක්‍රියාත්මකව තබා ගැනීමට, එයට ඔබේ දේශීය ජාලයට ප්‍රවේශ වීමට සහ මෙම ජාලයේ උපාංග සමග පමණක් සම්බන්ධ වීමට ඉඩ දිය හැක.&lt;br&gt;&lt;br&gt;ඔබ එයට අවට ඇති සියලු උපාංග සොයා ගැනීමට සහ සම්බන්ධ වීමට ඉඩ නොදෙන්නේ නම් යෙදුමට බ්ලූටූත් සහ වෙනත් තාක්ෂණයන් භාවිතයෙන් උපාංග වෙත සම්බන්ධ විය නොහැක."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;යෙදුම ක්‍රියාත්මකව තබා ගැනීමට ඉඩ දී ඇත&lt;/b&gt;&lt;br&gt;&lt;br&gt;යෙදුමක් ක්‍රියාත්මකව තබා ගැනීමට, එයට ඔබේ දේශීය ජාලයට ප්‍රවේශ වීමට සහ මෙම ජාලයේ උපාංග සමග පමණක් සම්බන්ධ වීමට ඉඩ දිය හැක.&lt;br&gt;&lt;br&gt;ඔබ එයට අවට ඇති සියලු උපාංග සොයා ගැනීමට සහ සම්බන්ධ වීමට ඉඩ නොදෙන්නේ නම් යෙදුමට බ්ලූටූත් සහ වෙනත් තාක්ෂණයන් භාවිතයෙන් උපාංග වෙත සම්බන්ධ විය නොහැක."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{දින 1ක්}one{දින #ක්}other{දින #ක්}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{පැය #ක්}one{පැය #ක්}other{පැය #ක්}}"</string>

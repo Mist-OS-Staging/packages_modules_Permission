@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Chỉ cho phép truy cập vào nội dung nghe nhìn"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Luôn cho phép"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Chỉ cho phép khi dùng ứng dụng"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"Cho phép để ứng dụng tiếp tục hoạt động"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Luôn cho phép tất cả"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Luôn hỏi"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Luôn hỏi hoặc cho phép khi bạn chia sẻ"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"Không được phép"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> trên <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Xem thêm ứng dụng có thể truy cập tất cả các tệp"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;Cho phép để ứng dụng tiếp tục hoạt động&lt;/b&gt;&lt;br&gt;&lt;br&gt;Để tiếp tục hoạt động, ứng dụng có thể được phép truy cập vào mạng cục bộ của bạn và chỉ kết nối với các thiết bị trên mạng này.&lt;br&gt;&lt;br&gt;Ứng dụng này không thể kết nối với các thiết bị bằng Bluetooth và công nghệ khác, trừ phi bạn cho phép ứng dụng tìm và kết nối với mọi thiết bị ở gần."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Được phép để tiếp tục chạy ứng dụng&lt;/b&gt;&lt;br&gt;&lt;br&gt;Để một ứng dụng tiếp tục chạy, ứng dụng đó có thể được phép truy cập vào mạng cục bộ của bạn và chỉ kết nối với các thiết bị trên mạng này.&lt;br&gt;&lt;br&gt;Ứng dụng này không thể kết nối với các thiết bị bằng Bluetooth và các công nghệ khác, trừ phi bạn cho phép ứng dụng này tìm và kết nối với mọi thiết bị ở gần."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 ngày}other{# ngày}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# giờ}other{# giờ}}"</string>

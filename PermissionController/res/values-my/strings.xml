@@ -89,7 +89,7 @@
     <string name="menu_show_system" msgid="4254021607027872504">"စနစ်ကိုပြရန်"</string>
     <string name="menu_hide_system" msgid="3855390843744028465">"စနစ်ကို ဖျောက်ရန်"</string>
     <string name="menu_show_7_days_data" msgid="8979611198508523706">"၇ ရက်စာ ပြရန်"</string>
-    <string name="menu_show_24_hours_data" msgid="8228054833323380780">"၂၄ နာရီအတွက် ပြရန်"</string>
+    <string name="menu_show_24_hours_data" msgid="8228054833323380780">"၂၄ နာရီစာ ပြရန်"</string>
     <string name="manage_permission" msgid="2895385393037061964">"ခွင့်ပြုချက် စီမံရန်"</string>
     <string name="no_apps" msgid="2412612731628386816">"အက်ပ် မရှိပါ"</string>
     <string name="location_settings" msgid="3624412509133422562">"တည်နေရာ ဆက်တင်များ"</string>
@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"မီဒီယာကိုသာ သုံးခွင့်ပြုရန်"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"အမြဲ ခွင့်ပြုရန်"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"အက်ပ်ကိုသုံးစဉ်သာ ခွင့်ပြုရန်"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"အက်ပ်ဆက်လုပ်ဆောင်ရန် ခွင့်ပြုပါ"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"အားလုံးကို အမြဲခွင့်ပြုရန်"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"အမြဲမေးရန်"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"အကြိမ်တိုင်း မေးရန် (သို့) သင်မျှဝေသည့်အခါ ခွင့်ပြုရန်"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"ခွင့်ပြုမထားသည်များ"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g> ရှိ <xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"ဖိုင်အားလုံးသုံးနိုင်သည့် နောက်ထပ်အက်ပ်များ ကြည့်ရန်"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;အက်ပ် ဆက်လက်လုပ်ဆောင်ရန် ခွင့်ပြုပါ&lt;/b&gt;&lt;br&gt;&lt;br&gt;အက်ပ် ဆက်လက်လုပ်ဆောင်နိုင်ရန် ၎င်းကို သင့်အိမ်သုံးကွန်ရက် သုံးခွင့်ပြုပြီး ဤကွန်ရက်ရှိ စက်များနှင့်သာ ချိတ်ဆက်ခွင့်ပြုနိုင်သည်။&lt;br&gt;&lt;br&gt;အနီးတစ်ဝိုက်ရှိ စက်အားလုံးကို ရှာဖွေပြီး ချိတ်ဆက်ရန် အက်ပ်အား ခွင့်မပြုပါက ၎င်းသည် ဘလူးတုသ်နှင့် အခြားနည်းပညာများသုံး၍ စက်များနှင့် ချိတ်ဆက်၍မရပါ။"</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;အက်ပ် ဆက်လက်လုပ်ဆောင်ရန် ခွင့်ပြုထားသည်&lt;/b&gt;&lt;br&gt;&lt;br&gt;အက်ပ် ဆက်လက်လုပ်ဆောင်နိုင်ရန် ၎င်းကို သင့်ဒေသတွင်းကွန်ရက် သုံးခွင့်ပြုပြီး ဤကွန်ရက်ရှိ စက်များနှင့်သာ ချိတ်ဆက်ခွင့်ပြုနိုင်သည်။&lt;br&gt;&lt;br&gt;အနီးတစ်ဝိုက်ရှိ စက်အားလုံးကို ရှာဖွေပြီး ချိတ်ဆက်ရန် အက်ပ်အား ခွင့်မပြုပါက ၎င်းသည် ဘလူးတုသ်နှင့် အခြားနည်းပညာများသုံး၍ စက်များနှင့် ချိတ်ဆက်၍မရပါ။"</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 ရက်}other{# ရက်}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# နာရီ}other{# နာရီ}}"</string>

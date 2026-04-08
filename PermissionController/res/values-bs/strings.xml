@@ -136,7 +136,7 @@
     <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"U zadnjih 7 dana"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Danas"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Jučer"</string>
-    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Posljednji pristup <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Posljednji pristup: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Pregled"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Nema pristupa"</string>
     <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Ovaj agent je pristupio ovim aplikacijama da dobije informacije ili poduzme radnje za vas. Možete promijeniti ovaj pristup bilo kada u postavkama aplikacije <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Dozvoli pristup samo medijima"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Dozvoli sve vrijeme"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Dozvoli samo dok se aplikacija koristi"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"Dozvoli da aplikacija nastavi raditi"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Uvijek dozvoli sve"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Pitaj svaki put"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Pitaj svaki put ili dozvoli prilikom dijeljenja"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"Nije dozvoljeno"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> na uređaju \"<xliff:g id="DEVICE_NAME">%2$s</xliff:g>\""</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Pogledajte više aplikacija koje imaju pristup svim fajlovima"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;Dozvolite da aplikacija nastavi raditi&lt;/b&gt;&lt;br&gt;&lt;br&gt;Da aplikacija nastavi raditi, može joj se dozvoliti da pristupa lokalnoj mreži i povezuje se samo s uređajima na toj mreži.&lt;br&gt;&lt;br&gt;Aplikacija se ne može povezivati s uređajima putem Bluetootha i drugih tehnologija ako joj ne dozvolite da pronalazi sve uređaje u blizini i povezuje se s njima."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Dozvoljeno je da bi aplikacija nastavila raditi&lt;/b&gt;&lt;br&gt;&lt;br&gt;Da aplikacija nastavi raditi, može joj se dozvoliti da pristupa lokalnoj mreži i povezuje se samo s uređajima na toj mreži.&lt;br&gt;&lt;br&gt;Aplikacija se ne može povezivati s uređajima putem Bluetootha i drugih tehnologija ako joj ne dozvolite da pronalazi sve uređaje u blizini i povezuje se s njima."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 dan}one{# dan}few{# dana}other{# dana}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# h}one{# h}few{# h}other{# h}}"</string>

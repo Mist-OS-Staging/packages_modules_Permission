@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Izinkan akses hanya ke media"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Selalu izinkan"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Izinkan saat aplikasi digunakan"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"Izinkan agar aplikasi tetap berjalan"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Selalu izinkan semua"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Selalu tanya"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Tanya setiap kali atau izinkan saat Anda berbagi"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"Tidak diizinkan"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> di <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Lihat aplikasi lain yang dapat mengakses semua file"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;Izinkan agar aplikasi tetap berjalan&lt;/b&gt;&lt;br&gt;&lt;br&gt;Agar aplikasi dapat terus berjalan, aplikasi tersebut mungkin diizinkan untuk mengakses jaringan lokal Anda dan terhubung dengan perangkat di jaringan ini saja.&lt;br&gt;&lt;br&gt;Aplikasi tidak dapat terhubung ke perangkat menggunakan Bluetooth dan teknologi lainnya kecuali jika Anda mengizinkannya menemukan dan terhubung ke semua perangkat di sekitar."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Diizinkan agar aplikasi tetap berjalan&lt;/b&gt;&lt;br&gt;&lt;br&gt;Agar dapat terus berjalan, aplikasi mungkin diizinkan untuk mengakses jaringan lokal Anda dan terhubung dengan perangkat di jaringan ini saja.&lt;br&gt;&lt;br&gt;Aplikasi tidak dapat terhubung ke perangkat menggunakan Bluetooth dan teknologi lainnya kecuali jika Anda mengizinkannya menemukan dan terhubung ke semua perangkat di sekitar."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 hari}other{# hari}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# jam}other{# jam}}"</string>
@@ -684,7 +686,7 @@
     <string name="app_permission_rationale_message" msgid="8511466916077100713">"Keamanan data"</string>
     <string name="app_location_permission_rationale_title" msgid="925420340572401350">"Data lokasi mungkin dibagikan"</string>
     <string name="app_location_permission_rationale_subtitle" msgid="6986985722752868692">"Aplikasi ini menyatakan bahwa aplikasi mungkin membagikan data lokasi Anda kepada pihak ketiga"</string>
-    <string name="data_sharing_updates_title" msgid="7996933386875213859">"Pembaruan berbagi data lokasi"</string>
+    <string name="data_sharing_updates_title" msgid="7996933386875213859">"Perubahan cara berbagi data lokasi"</string>
     <string name="data_sharing_updates_summary" msgid="764113985772233889">"Tinjau aplikasi yang mengubah caranya berbagi data lokasi Anda"</string>
     <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"Aplikasi ini telah mengubah caranya berbagi data lokasi Anda. Aplikasi mungkin sebelumnya tidak membagikan data, atau mungkin kini membagikan data untuk tujuan iklan atau pemasaran."</string>
     <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Developer aplikasi ini memberikan info tentang praktik berbagi data mereka kepada app store. Developer mungkin memperbaruinya dari waktu ke waktu.\n\nPraktik berbagi data mungkin berbeda-beda berdasarkan versi aplikasi, penggunaan, wilayah, dan usia Anda."</string>

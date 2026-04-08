@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"फक्त मीडिया ॲक्सेस करण्यासाठी अनुमती द्या"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"सर्व वेळी अनुमती द्या"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"फक्त अ‍ॅप वापरत असताना अनुमती द्या"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"ॲपला काम करत राहण्यासाठी अनुमती द्या"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"सर्वांना नेहमी अनुमती द्या"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"प्रत्येक वेळी विचारा"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"तुम्ही शेअर करता, तेव्हा दर वेळी विचारा किंवा अनुमती द्या"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"अनुमती नाही"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="DEVICE_NAME">%2$s</xliff:g> वरील <xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"सर्व फाइलचा ॲक्सेस असलेली आणखी ॲप्स पहा"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;ॲपला काम करत राहण्यासाठी अनुमती द्या&lt;/b&gt;&lt;br&gt;&lt;br&gt;ॲपला काम करत राहता यावे, यासाठी त्याला तुमचे स्थानिक नेटवर्क अ‍ॅक्सेस करण्याची आणि फक्त या नेटवर्कवरील डिव्हाइसशी कनेक्ट करण्याची अनुमती दिली जाऊ शकते.&lt;br&gt;&lt;br&gt;तुम्ही ॲपला जवळपासची सर्व डिव्हाइस शोधण्याची आणि त्यांच्याशी कनेक्ट करण्याची अनुमती देत नाही, तोपर्यंत ते ब्लूटूथ व इतर तंत्रज्ञाने वापरून डिव्हाइसशी कनेक्ट करू शकत नाही."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;ॲपला काम करत राहण्यासाठी अनुमती दिली आहे&lt;/b&gt;&lt;br&gt;&lt;br&gt;ॲपला काम करत राहता यावे, यासाठी त्याला तुमचे स्थानिक नेटवर्क अ‍ॅक्सेस करण्याची आणि फक्त या नेटवर्कवरील डिव्हाइसशी कनेक्ट करण्याची अनुमती दिली जाऊ शकते.&lt;br&gt;&lt;br&gt;तुम्ही ॲपला जवळपासची सर्व डिव्हाइस शोधण्याची आणि त्यांच्याशी कनेक्ट करण्याची अनुमती देत नाही, तोपर्यंत ते ब्लूटूथ व इतर तंत्रज्ञाने वापरून डिव्हाइसशी कनेक्ट करू शकत नाही."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{एक दिवस}other{# दिवस}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# तास}other{# तास}}"</string>

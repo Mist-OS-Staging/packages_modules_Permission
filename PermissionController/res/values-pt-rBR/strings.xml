@@ -139,7 +139,7 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Último acesso: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Ver"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Nenhum acesso"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Este agente acessou esses apps para receber informações ou realizar ações para você. Você pode mudar essa seleção a qualquer momento nas configurações do <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"O agente acessou estes apps para receber informações ou realizar ações para você. Você pode mudar essa seleção a qualquer momento nas configurações do app <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"O painel de privacidade só aparece quando os apps são acessados usando recursos do Android para agentes."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Assistência do dispositivo"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Ver quais apps usaram as permissões recentemente"</string>
@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Permitir acesso apenas a arquivos de mídia"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Permitir o tempo todo"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Permitir durante o uso do app"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"Permitir para manter o app funcionando"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Sempre permitir tudo"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Perguntar sempre"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Perguntar sempre ou permitir quando você compartilhar"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"Sem permissão"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> no <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Veja mais apps que têm acesso a todos os arquivos"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;Permitir para manter o app funcionando&lt;/b&gt;&lt;br&gt;&lt;br&gt;Para que um app continue funcionando, ele pode ter permissão para acessar sua rede local e se conectar apenas a dispositivos dessa rede.&lt;br&gt;&lt;br&gt;O app não pode se conectar a dispositivos via Bluetooth e outras tecnologias, a menos que você permita que ele encontre e se conecte a todos os dispositivos próximos."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Permitido para manter o app funcionando&lt;/b&gt;&lt;br&gt;&lt;br&gt;Para que um app continue funcionando, ele pode ter permissão para acessar sua rede local e se conectar apenas a dispositivos dessa rede.&lt;br&gt;&lt;br&gt;O app não pode se conectar a dispositivos via Bluetooth e outras tecnologias, a menos que você permita que ele encontre e se conecte a todos os dispositivos próximos."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 dia}one{# dia}many{# dias}other{# dias}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# hora}one{# hora}many{# de horas}other{# horas}}"</string>

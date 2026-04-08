@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Permitir acceso só a ficheiros multimedia"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Permitir sempre"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Permitir só mentres se use a aplicación"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"Permitir para que a aplicación siga funcionando"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Permitir todo sempre"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Preguntar sempre"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Preguntar cada vez ou permitir cando se comparta contido"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"Permiso non concedido"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> en <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Ver máis aplicacións con acceso a todos os ficheiros"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;Permitir para que a aplicación siga funcionando&lt;/b&gt;&lt;br&gt;&lt;br&gt;Para que unha aplicación siga funcionando, é posible que se lle permita acceder á túa rede local e conectarse só cos dispositivos desta rede.&lt;br&gt;&lt;br&gt;A aplicación non se pode conectar a dispositivos mediante o Bluetooth nin outras tecnoloxías a menos que lle permitas detectar todos os dispositivos próximos e conectarse a eles."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Permitido para que a aplicación siga funcionando&lt;/b&gt;&lt;br&gt;&lt;br&gt;Para que unha aplicación siga funcionando, é posible que se lle permita acceder á túa rede local e conectarse só cos dispositivos desta rede.&lt;br&gt;&lt;br&gt;A aplicación non se pode conectar a dispositivos mediante o Bluetooth nin outras tecnoloxías a menos que lle permitas detectar todos os dispositivos próximos e conectarse a eles."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 día}other{# días}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# hora}other{# horas}}"</string>

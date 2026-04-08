@@ -133,14 +133,14 @@
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Sin accesos en los últimos 7 d"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Actividad de <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"En las últimas 24 horas"</string>
-    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"En los últimos 7 d"</string>
+    <string name="agent_activity_timeline_category_title_7d" msgid="6957587886375942104">"En los últimos 7 días"</string>
     <string name="agent_activity_timeline_category_title_today" msgid="557030782460256459">"Hoy"</string>
     <string name="agent_activity_timeline_category_title_yesterday" msgid="8330670564653939302">"Ayer"</string>
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Último acceso: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Ver"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Sin accesos"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"El agente accedió a estas apps para obtener datos o actuar por ti. Puedes cambiarlo cuando quieras en los ajustes de <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"El panel de privacidad aparece al acceder a apps con funciones de Android para agentes."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"El agente accedió a estas aplicaciones para obtener datos o actuar por ti. Puedes cambiarlo cuando quieras en los ajustes de <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"El panel de privacidad aparece al acceder a aplicaciones con funciones de Android para agentes."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Asistencia para dispositivos"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Consulta qué aplicaciones han usado permisos recientemente"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Uso de <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Permitir acceso solo al contenido multimedia"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Permitir siempre"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Permitir solo mientras se usa la app"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"Permitir para que la aplicación siga funcionando"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Permitir todo siempre"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Preguntar siempre"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Preguntar siempre o permitir al compartir"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"Sin permiso"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> en <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Ver más aplicaciones que pueden acceder a todos los archivos"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;Permitir para que la aplicación siga funcionando&lt;/b&gt;&lt;br&gt;&lt;br&gt;Para que la aplicación siga funcionando, se le puede permitir acceder a tu red local y conectarse solo con dispositivos de esta red.&lt;br&gt;&lt;br&gt;La aplicación no puede conectarse a dispositivos mediante Bluetooth ni otras tecnologías a menos que le permitas buscar y conectarse a todos los dispositivos cercanos."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Permitido para que la app siga funcionando&lt;/b&gt;&lt;br&gt;&lt;br&gt;Para que una aplicación siga funcionando, se le puede permitir acceder a tu red local y conectarse solo con dispositivos de esta red.&lt;br&gt;&lt;br&gt;La aplicación no puede conectarse a dispositivos mediante Bluetooth ni otras tecnologías a menos que le permitas buscar y conectarse a todos los dispositivos cercanos."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 día}many{# días}other{# días}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# hora}many{# horas}other{# horas}}"</string>
@@ -365,10 +367,10 @@
     <string name="app_perms_content_provider_7d_all_files" msgid="7962416229708835558">"Acceso durante los últimos 7 días • Todos los archivos"</string>
     <string name="no_permissions_allowed" msgid="6081976856354669209">"No se ha concedido ningún permiso"</string>
     <string name="no_permissions_denied" msgid="8159923922804043282">"No se ha denegado ningún permiso"</string>
-    <string name="no_apps_allowed" msgid="7718822655254468631">"No hay apps permitidas"</string>
+    <string name="no_apps_allowed" msgid="7718822655254468631">"No hay aplicaciones"</string>
     <string name="no_apps_allowed_full" msgid="8011716991498934104">"Ninguna aplicación tiene permiso para acceder a todos los archivos"</string>
     <string name="no_apps_allowed_scoped" msgid="4908850477787659501">"Ninguna aplicación tiene permiso para acceder solo a archivos multimedia"</string>
-    <string name="no_apps_denied" msgid="7663435886986784743">"No hay apps denegadas"</string>
+    <string name="no_apps_denied" msgid="7663435886986784743">"No hay aplicaciones"</string>
     <string name="car_permission_selected" msgid="180837028920791596">"Seleccionado"</string>
     <string name="settings" msgid="5409109923158713323">"Ajustes"</string>
     <string name="accessibility_service_dialog_title_single" msgid="7956432823014102366">"<xliff:g id="SERVICE_NAME">%s</xliff:g> tiene acceso completo a tu dispositivo"</string>

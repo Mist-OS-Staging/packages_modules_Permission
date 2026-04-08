@@ -129,7 +129,7 @@
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Apptoestemmings"</string>
     <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Agentaktiwiteit"</string>
     <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Geen agente geïnstalleer nie"</string>
-    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Geen toegang die laaste 24 uur nie"</string>
+    <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Geen toegang die afgelope 24 uur nie"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Geen toegang die laaste 7 dae nie"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g>-aktiwiteit"</string>
     <string name="agent_activity_timeline_category_title_24h" msgid="6534067957142090358">"In die afgelope 24 uur"</string>
@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"Laat net toegang tot media toe"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"Laat altyd toe"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"Laat net toe terwyl jy app gebruik"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"Laat toe om app aan die gang te hou"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"Laat altyd alles toe"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"Vra elke keer"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"Vra elke keer of laat toe wanneer jy deel"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"Nie toegelaat nie"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> op <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Sien meer apps wat toegang tot alle lêers het"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"&lt;b&gt;Laat toe om app aan die gang hou&lt;/b&gt;&lt;br&gt;&lt;br&gt;’n App kan toegelaat word om toegang tot jou plaaslike netwerk te kry en net met toestelle op hierdie netwerk te koppel om aan die gang te bly.&lt;br&gt;&lt;br&gt;Die app kan nie met Bluetooth en ander tegnologieë aan toestelle koppel nie, tensy jy dit toelaat om alle toestelle in die omtrek te vind en daaraan te koppel."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"&lt;b&gt;Kan app aan die gang hou&lt;/b&gt;&lt;br&gt;&lt;br&gt;’n App kan toegelaat word om toegang tot jou plaaslike netwerk te kry en net met toestelle op hierdie netwerk te koppel om aan die gang te bly.&lt;br&gt;&lt;br&gt;Die app kan nie met Bluetooth en ander tegnologieë aan toestelle koppel nie, tensy jy dit toelaat om alle toestelle in die omtrek te vind en daaraan te koppel."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 dag}other{# dae}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# uur}other{# uur}}"</string>

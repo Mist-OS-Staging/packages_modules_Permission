@@ -127,7 +127,7 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"نامشخص"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"داشبورد حریم خصوصی"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"اجازه‌های برنامه"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"‏فعالیت Agent"</string>
+    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"فعالیت نماینده"</string>
     <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"هیچ عاملی نصب نشده است"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"در ۲۴ ساعت گذشته دسترسی نداشته است"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"دسترسی در ۷ روز گذشته وجود ندارد"</string>
@@ -206,6 +206,7 @@
     <string name="app_permission_button_allow_media_only" msgid="2834282724426046154">"اجازه دادن فقط برای دسترسی به رسانه‌ها"</string>
     <string name="app_permission_button_allow_always" msgid="4573292371734011171">"همیشه اجازه داشتن"</string>
     <string name="app_permission_button_allow_foreground" msgid="1991570451498943207">"مجاز فقط هنگام استفاده از برنامه"</string>
+    <string name="app_permission_button_allow_for_compatibility" msgid="3337157819467626432">"اجازه دادن به ادامه کار برنامه"</string>
     <string name="app_permission_button_always_allow_all" msgid="4905699259378428855">"همه همیشه اجازه داشتن"</string>
     <string name="app_permission_button_ask" msgid="3342950658789427">"هربار پرسیده شود"</string>
     <string name="app_permission_button_ask_or_when_you_share" msgid="5609521340593096465">"هربار پرسیده شود یا هنگام هم‌رسانی اجازه داده شود"</string>
@@ -280,6 +281,7 @@
     <string name="denied_header" msgid="903209608358177654">"اجازه نداشتن"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> در <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
     <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"دیدن برنامه‌های دیگری که به همه فایل‌ها دسترسی دارند"</string>
+    <string name="allow_for_compatibility_nearby_devices_footer" msgid="4788336711372843546">"‏&lt;b&gt;اجازه دادن به برنامه برای ادامه کار&lt;/b&gt;&lt;br&gt;&lt;br&gt;برای اینکه برنامه همچنان به کار ادامه دهد، ممکن است به آن اجازه داده شود به شبکه محلی شما دسترسی داشته باشد و فقط با دستگاه‌های این شبکه متصل شود.&lt;br&gt;&lt;br&gt;برنامه نمی‌تواند بااستفاده از بلوتوث و فناوری‌های دیگر به دستگاه‌ها متصل شود، مگر اینکه به آن اجازه دهید همه دستگاه‌های اطراف را پیدا کند و به آن‌ها متصل شود."</string>
     <string name="allowed_for_compatibility_nearby_devices_footer" msgid="75018894064754943">"‏&lt;b&gt;اجازه داشتن برای حفظ کار کردن برنامه&lt;/b&gt;&lt;br&gt;&lt;br&gt;برای اینکه برنامه همچنان به کار ادامه دهد، ممکن است به آن اجازه داده شود به شبکه محلی شما دسترسی داشته باشد و فقط با دستگاه‌های این شبکه متصل شود.&lt;br&gt;&lt;br&gt;برنامه نمی‌تواند بااستفاده از بلوتوث و فناوری‌های دیگر به دستگاه‌ها متصل شود، مگر اینکه به آن اجازه دهید همه دستگاه‌های اطراف را پیدا کند و به آن‌ها متصل شود."</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{یک روز}one{# روز}other{# روز}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# ساعت}one{# ساعت}other{# ساعت}}"</string>
@@ -660,7 +662,7 @@
     <string name="mic_toggle_description" msgid="9163104307990677157">"برای برنامه‌ها و سرویس‌ها. اگر این تنظیم خاموش باشد، ممکن است وقتی که با شماره تلفنی اضطراری تماس می‌گیرید داده‌های میکروفون همچنان هم‌رسانی شود."</string>
     <string name="location_settings_subtitle" msgid="2328360561197430695">"برنامه‌ها و سرویس‌هایی را که به مکان دسترسی دارند ببینید"</string>
     <string name="show_clip_access_notification_title" msgid="5168467637351109096">"نشان دادن دسترسی به بریده‌دان"</string>
-    <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"وقتی برنامه‌ها به نوشتار، تصویر، یا محتوای دیگری که کپی کرده‌اید دسترسی پیدا می‌کنند، پیامی نشان داده می‌شود"</string>
+    <string name="show_clip_access_notification_summary" msgid="3532020182782112687">"وقتی که برنامه‌ها به نوشتار، تصویر، یا محتوای دیگری که کپی کرده‌اید دسترسی پیدا می‌کنند، پیامی نشان داده می‌شود"</string>
     <string name="show_password_title" msgid="2877269286984684659">"نمایش گذرواژه‌ها"</string>
     <string name="show_password_summary" msgid="1110166488865981610">"همان‌طور که تایپ می‌کنید، نویسه‌ها را برای مدت کوتاهی نشان داده می‌شوند"</string>
     <string name="permission_rationale_message_location" msgid="2153841534298068414">"این برنامه اعلام کرده است که ممکن است داده‌های مکان را با اشخاص ثالث هم‌رسانی کند"</string>
