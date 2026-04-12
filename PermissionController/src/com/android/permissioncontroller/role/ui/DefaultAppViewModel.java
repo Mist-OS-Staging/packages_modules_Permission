@@ -21,10 +21,12 @@ import android.app.Application;
 import android.app.role.RoleManager;
 import android.app.voiceinteraction.VoiceInteractionManager;
 import android.content.Context;
+import android.os.Build;
 import android.os.UserHandle;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Transformations;
@@ -69,7 +71,9 @@ public class DefaultAppViewModel extends AndroidViewModel {
         super(application);
 
         mAppOpsManager = application.getSystemService(AppOpsManager.class);
-        mVoiceInteractionManager = application.getSystemService(VoiceInteractionManager.class);
+        mVoiceInteractionManager =
+                android.permission.flags.Flags.assistSettingsPrivacyImprovementsEnabled()
+                        ? application.getSystemService(VoiceInteractionManager.class) : null;
 
         mRole = role;
         // If EXCLUSIVITY_PROFILE_GROUP this user should be profile parent
@@ -149,6 +153,7 @@ public class DefaultAppViewModel extends AndroidViewModel {
     }
 
     /** Sets read screen context enabled for specified application */
+    @RequiresApi(Build.VERSION_CODES.CINNAMON_BUN)
     public void setReadScreenContextSettingEnabled(RoleApplicationItem holderApplicationItem,
             boolean enabled) {
         int appOpMode = enabled ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_IGNORED;

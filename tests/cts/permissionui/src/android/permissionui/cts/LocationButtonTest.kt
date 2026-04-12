@@ -174,7 +174,11 @@ class LocationButtonTest : BaseUsePermissionTest() {
                     )
                 addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 // Too large width cause clipping, and location button won't work.
-                putExtra("width", dpToPx(2000))
+                val displayMetrics = context.resources.displayMetrics
+                val maxScreenDimensionPx =
+                    maxOf(displayMetrics.widthPixels, displayMetrics.heightPixels)
+                val guaranteedClippingWidthPx = maxScreenDimensionPx + dpToPx(200)
+                putExtra("width", guaranteedClippingWidthPx)
                 putExtra("height", dpToPx(200)) // height is clamped down to max 136 dp.
             }
         context.startActivity(intent)
