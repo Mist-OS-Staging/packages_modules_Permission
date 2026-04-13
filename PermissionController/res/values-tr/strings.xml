@@ -763,7 +763,7 @@
     <string name="request_read_screen_context_dialog_description" msgid="627006720540705018">"Bu asistan, ekranınızda açık olan uygulamanın bilgi ve içeriğine erişebilir"</string>
     <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"İzin ver"</string>
     <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"İzin verme"</string>
-    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Ekran ve uygulama verilerini kullanın"</string>
+    <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Ekran ve uygulama verilerini kullan"</string>
     <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Asistanın, ekranınızda açık olan uygulamadaki bilgi ve içeriklere erişmesine izin verin"</string>
     <string name="read_screen_context_setting_description" msgid="3610476260828196298">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> uygulamasının, ekranınızda açık olan uygulamadaki bilgi ve içeriklere erişmesine izin verin"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"İzin ver"</string>

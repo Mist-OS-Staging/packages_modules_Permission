@@ -481,7 +481,7 @@
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"सहायकले तपाईंको स्क्रिनमा देखिने वा अनुप्रयोगभित्रबाट पहुँच राख्न सकिने जानकारीलगायत तपाईंको प्रणालीमा प्रयोगमा रहेका एपसम्बन्धी जानकारी पढ्न सक्ने छ।"</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"आफ्नो डिजिटल एसिस्टेन्ट एप परिवर्तन गरी &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; बनाउने हो?"</string>
     <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"यो एसिस्टेन्टले तपाईंका म्यासेज र एपहरूले तपाईंको एसिस्टेन्टसँग सेयर गरेका जानकारी जस्ता कुरा एक्सेस गर्न सक्ने छ।"</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"यो एसिस्टेन्टले तपाईंका म्यासेज र एपहरूले तपाईंको एसिस्टेन्टसँग सेयर गरेका डेटा जस्ता जानकारी एक्सेस गर्न सक्ने छ।&lt;br&gt;&lt;br&gt;तपाईंले यसअघि <xliff:g id="APP_NAME">%1$s</xliff:g> लाई स्क्रिन तथा एपसम्बन्धी डेटा अन गर्नुभएकाले यसलाई तपाईंको स्क्रिनमा खोलिएको एपमा भएको सामग्री एक्सेस गर्ने अनुमति पनि दिइने छ।"</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"यो एसिस्टेन्टले तपाईंका म्यासेज र एपहरूले तपाईंको एसिस्टेन्टसँग सेयर गरेका डेटा जस्ता जानकारी एक्सेस गर्न सक्ने छ।&lt;br&gt;&lt;br&gt;तपाईंले यसअघि <xliff:g id="APP_NAME">%1$s</xliff:g> लाई स्क्रिन तथा एपसम्बन्धी डेटा अन गर्नुभएकाले यसलाई तपाईंको स्क्रिनमा खोलिएको एपमा भएको कन्टेन्ट एक्सेस गर्ने अनुमति पनि दिइने छ।"</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"डिबग प्रक्रियासम्बन्धी डेटा सेयर गर्नुहोस्"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"डिबग प्रक्रियाको विस्तृत डेटा आदान प्रदान गर्ने?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> डिबग प्रक्रियासम्बन्धी जानकारी अपलोड गर्न चाहन्छ।"</string>
@@ -764,8 +764,8 @@
     <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"अनुमति दिनुहोस्"</string>
     <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"अनुमति नदिनुहोस्"</string>
     <string name="read_screen_context_setting_title" msgid="5557279099665174872">"स्क्रिन तथा एपसम्बन्धी डेटा प्रयोग गर्नुहोस्"</string>
-    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"एसिस्टेन्टलाई तपाईंको स्क्रिनमा खोलिएको एपमा भएको जानकारी र सामग्री एक्सेस गर्ने अनुमति दिनुहोस्"</string>
-    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> लाई तपाईंको स्क्रिनमा खोलिएको एपमा भएको जानकारी र सामग्री एक्सेस गर्ने अनुमति दिनुहोस्"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"एसिस्टेन्टलाई तपाईंको स्क्रिनमा खोलिएको एपमा भएको जानकारी र कन्टेन्ट एक्सेस गर्ने अनुमति दिनुहोस्"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> लाई तपाईंको स्क्रिनमा खोलिएको एपमा भएको जानकारी र कन्टेन्ट एक्सेस गर्ने अनुमति दिनुहोस्"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"अनुमति दिनुहोस्"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"अनुमति नदिनुहोस्"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"तपाईंले सटीक लोकेसन सेयर गर्ने विकल्प छनौट गर्दा &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; लाई सटीक लोकेसन एक्सेस गर्ने अनुमति दिने हो?"</string>

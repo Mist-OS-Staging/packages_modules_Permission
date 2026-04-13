@@ -52,7 +52,7 @@
     <string name="permission_revoked_none" msgid="9213345075484381180">"均未停用"</string>
     <string name="grant_dialog_button_allow" msgid="5314677880021102550">"允许"</string>
     <string name="grant_dialog_button_allow_always" msgid="4485552579273565981">"始终允许"</string>
-    <string name="grant_dialog_button_allow_foreground" msgid="501896824973636533">"仅在使用该应用时允许"</string>
+    <string name="grant_dialog_button_allow_foreground" msgid="501896824973636533">"使用应用时"</string>
     <string name="grant_dialog_button_change_to_precise_location" msgid="3273115879467236033">"更改为确切位置"</string>
     <string name="grant_dialog_button_keey_approximate_location" msgid="438025182769080011">"继续使用大致位置"</string>
     <string name="grant_dialog_button_allow_one_time" msgid="2618088516449706391">"仅限这一次"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"上次访问时间：<xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"查看"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"无访问记录"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"此代理访问了这些应用，以便为您获取信息或执行操作。您可随时前往“<xliff:g id="APP_NAME">%1$s</xliff:g>”设置更改此访问权限。"</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"只有在使用 Android 代理功能访问应用时，隐私信息中心才会显示。"</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"此智能体访问了这些应用，以便获取信息或替您执行操作。您可随时前往“<xliff:g id="APP_NAME">%1$s</xliff:g>”设置更改访问权限。"</string>
+    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"只有在使用 Android 智能体功能访问应用时，隐私信息中心才会显示。"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"设备协助"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"查看最近使用过权限的应用"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>使用情况"</string>
@@ -274,7 +274,7 @@
     <string name="allowed_header" msgid="7769277978004790414">"已允许"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"始终允许"</string>
     <string name="allowed_foreground_header" msgid="6845655788447833353">"仅在使用时允许"</string>
-    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"已允许以确保应用正常运行"</string>
+    <string name="allowed_for_compatibility_header" msgid="9184156612214246427">"已允许（以便应用正常运行）"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"仅获准访问媒体文件"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"获准管理所有文件"</string>
     <string name="ask_header" msgid="2633816846459944376">"每次都询问"</string>
@@ -347,7 +347,7 @@
     <string name="permission_subtitle_background" msgid="8916750995309083180">"始终允许"</string>
     <string name="app_perms_24h_access" msgid="99069906850627181">"上次访问时间：<xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="app_perms_24h_access_yest" msgid="5411926024794555022">"上次访问时间：昨天<xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
-    <string name="app_perms_7d_access" msgid="4945055548894683751">"上次访问时间：<xliff:g id="TIME_DATE_0">%1$s</xliff:g>, <xliff:g id="TIME_DATE_1">%2$s</xliff:g>"</string>
+    <string name="app_perms_7d_access" msgid="4945055548894683751">"上次访问时间：<xliff:g id="TIME_DATE_0">%1$s</xliff:g>，<xliff:g id="TIME_DATE_1">%2$s</xliff:g>"</string>
     <string name="app_perms_content_provider_24h" msgid="1055526027667508972">"上次访问时间：过去 24 小时内"</string>
     <string name="app_perms_content_provider_7d" msgid="3215454898257814868">"上次访问时间：过去 7 天内"</string>
     <string name="app_perms_24h_access_background" msgid="3413674718969576843">"上次授予时间：<xliff:g id="TIME_DATE">%1$s</xliff:g> • 一律允许"</string>

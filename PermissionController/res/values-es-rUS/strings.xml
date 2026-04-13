@@ -139,7 +139,7 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Último acceso: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Ver"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Sin accesos"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"El agente accedió para obtener datos o realizar acciones por ti. Puedes cambiar esto cuando quieras en la configuración de <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"El agente accedió a estas apps para obtener datos o realizar acciones por ti. Puedes cambiar esto cuando quieras en la configuración de <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
     <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"El panel de privacidad se ve si accedes a apps con funciones de Android para agentes."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Asistencia para dispositivos"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Consulta qué apps usaron permisos recientemente"</string>

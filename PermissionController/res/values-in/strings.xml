@@ -466,7 +466,7 @@
     <string name="default_app_system_default" msgid="6218386768175513760">"(Default sistem)"</string>
     <string name="default_app_no_apps" msgid="115720991680586885">"Tidak ada aplikasi"</string>
     <string name="default_app_confirmation_positive_button" msgid="7870227561758833590">"Ubah"</string>
-    <string name="default_app_confirmation_negative_button" msgid="2564849389728106051">"Tetap gunakan apl ini"</string>
+    <string name="default_app_confirmation_negative_button" msgid="2564849389728106051">"Jangan ubah"</string>
     <string name="default_payment_app_other_nfc_services" msgid="5957633798695758917">"Layanan NFC lainnya"</string>
     <string name="car_default_app_selected" msgid="5416420830430644174">"Dipilih"</string>
     <string name="car_default_app_selected_with_info" msgid="1932204186080593500">"Dipilih - <xliff:g id="ADDITIONAL_INFO">%1$s</xliff:g>"</string>
@@ -479,9 +479,9 @@
     <string name="home_confirmation_message" msgid="248811491851505593">"Tindakan ini akan mengganti layar utama dan dapat memengaruhi akses ke fitur di perangkat Anda.&lt;br&gt;&lt;br&gt;Anda dapat mengubah pilihan ini kapan saja di setelan &lt;b&gt;Aplikasi layar utama default&lt;/b&gt;."</string>
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Catatan: Jika Anda memulai ulang perangkat dan menyetel kunci layar, aplikasi ini tidak dapat dimulai hingga Anda membuka kunci perangkat Anda."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Asisten dapat membaca informasi tentang aplikasi yang sedang digunakan di sistem, termasuk informasi yang terlihat di layar atau dapat diakses dalam aplikasi."</string>
-    <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Ubah aplikasi asisten digital Anda menjadi &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Asisten ini akan dapat mengakses info seperti pesan Anda, dan data yang dipilih aplikasi untuk dibagikan kepada asisten Anda."</string>
-    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"Asisten ini akan dapat mengakses info seperti pesan Anda, dan data yang telah dipilih aplikasi untuk dibagikan kepada asisten Anda.&lt;br&gt;&lt;br&gt;Selain itu, karena Anda telah mengaktifkan data layar dan aplikasi untuk <xliff:g id="APP_NAME">%1$s</xliff:g> sebelumnya, asisten akan diizinkan mengakses konten dari aplikasi yang terbuka di layar Anda."</string>
+    <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Ubah aplikasi asisten digital menjadi &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Asisten ini akan dapat mengakses info seperti pesan, dan data yang dipilih aplikasi untuk dibagikan kepada asisten."</string>
+    <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"Asisten ini akan dapat mengakses info seperti pesan, dan data yang telah dipilih aplikasi untuk dibagikan kepada asisten.&lt;br&gt;&lt;br&gt;Selain itu, karena Anda telah mengaktifkan data layar dan aplikasi untuk <xliff:g id="APP_NAME">%1$s</xliff:g> sebelumnya, asisten akan diizinkan mengakses konten dari aplikasi yang terbuka di layar."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Bagikan Data Proses Debug"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Bagikan data proses debug yang mendetail?"</string>
     <string name="incident_report_notification_text" msgid="3376480583513587923">"<xliff:g id="APP_NAME">%1$s</xliff:g> ingin mengupload informasi proses debug."</string>
@@ -764,8 +764,8 @@
     <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Izinkan"</string>
     <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Jangan izinkan"</string>
     <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Gunakan data layar dan aplikasi"</string>
-    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Izinkan asisten mengakses info dan konten dari aplikasi yang terbuka di layar Anda"</string>
-    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Izinkan <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> mengakses info dan konten dari aplikasi yang terbuka di layar Anda"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Izinkan asisten mengakses info dan konten dari aplikasi yang terbuka di layar"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Izinkan <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> mengakses info dan konten dari aplikasi yang terbuka di layar"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Izinkan"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Jangan izinkan"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Izinkan &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; mengakses lokasi presisi saat Anda memilih untuk membagikannya?"</string>
