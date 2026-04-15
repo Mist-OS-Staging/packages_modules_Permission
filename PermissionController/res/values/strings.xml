@@ -377,11 +377,11 @@
     <!-- Title for app permissions category in privacy dashboard [CHAR LIMIT=30] -->
     <string name="permission_usage_app_permissions_title">App permissions</string>
 
-    <!-- Title for agent activity category in privacy dashboard [CHAR LIMIT=30] -->
-    <string name="permission_usage_agent_activity_title">Agent activity</string>
+    <!-- Title for agent activity category in privacy dashboard [CHAR LIMIT=30] [SCREENSHOT=screen/9fW4XJSjGe8wQqY] -->
+    <string name="permission_usage_agent_activity_title">AI assistant activity</string>
 
-    <!-- Preference title for the agent activity when there's no agents installed on the device [CHAR LIMIT=30] -->
-    <string name="empty_agent_activity_preference_title">No agents installed</string>
+    <!-- Preference title for the agent activity when there's no agents installed on the device [CHAR LIMIT=30] [SCREENSHOT=screen/9fW4XJSjGe8wQqY] -->
+    <string name="empty_agent_activity_preference_title">No AI assistants installed</string>
 
     <!-- Preference summary for the agent in agent activity when there's no target accesses in past 24 hours [CHAR LIMIT=30] -->
     <string name="agent_activity_preference_summary_no_accesses_24h">No accesses in past 24 hours</string>
@@ -390,7 +390,7 @@
     <string name="agent_activity_preference_summary_no_accesses_7d">No accesses in past 7 days</string>
 
     <!-- Title for agent activity timeline [CHAR LIMIT=30] -->
-    <string name="agent_activity_timeline_title"><xliff:g id="app_name" example="Example Agent App">%1$s</xliff:g> activity</string>
+    <string name="agent_activity_timeline_title"><xliff:g id="app_name" example="Example AI assistant App">%1$s</xliff:g> activity</string>
 
     <!-- Category title for the past 24 hours agent activity timeline [CHAR LIMIT=30] -->
     <string name="agent_activity_timeline_category_title_24h">In the past 24 hours</string>
@@ -413,11 +413,11 @@
     <!-- Preference title for the agent activity timeline when there's no target accesses [CHAR LIMIT=30] -->
     <string name="empty_agent_activity_timeline_preference_title">No accesses</string>
 
-    <!-- Top intro text for the agent activity timeline [CHAR LIMIT=30] -->
-    <string name="agent_activity_timeline_top_intro_title">This agent accessed these apps to get info or take actions for you. You can change this access anytime in <xliff:g id="app_name" example="Example Agent App">%1$s</xliff:g> settings.</string>
+    <!-- Top intro text for the agent activity timeline [CHAR LIMIT=30] [SCREENSHOT=screen/4rus3vLNMCEppr7] -->
+    <string name="agent_activity_timeline_top_intro_title">This AI assistant accessed these apps to get info or take actions for you. You can change this access anytime in <xliff:g id="app_name" example="Example AI assistant App">%1$s</xliff:g> settings.</string>
 
-    <!-- Footer text for the agent activity timeline [CHAR LIMIT=30] -->
-    <string name="agent_activity_timeline_footer_title">Privacy dashboard only shows when apps are accessed using Android features for agents.</string>
+    <!-- Footer text for the agent activity timeline [CHAR LIMIT=30] [SCREENSHOT=screen/4rus3vLNMCEppr7] -->
+    <string name="agent_activity_timeline_footer_title">Privacy dashboard only shows when apps are accessed using Android features for AI assistants.</string>
 
     <!-- The title for the device assistance apps [CHAR LIMIT=30] -->
     <string name="device_assistance_title">Device Assistance</string>
