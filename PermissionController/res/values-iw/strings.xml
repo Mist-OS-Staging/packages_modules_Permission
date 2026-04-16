@@ -379,7 +379,7 @@
     <string name="accessibility_service_dialog_bottom_text_multiple" msgid="7009848932395519852">"האפליקציות האלה יכולות להציג את המסך, הפעולות והקלט שלך, וכן לבצע פעולות ולשלוט בתצוגה."</string>
     <string name="role_assistant_label" msgid="4727586018198208128">"עוזר אישי כברירת המחדל"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"אפליקציית עוזר דיגיטלי"</string>
-    <string name="role_assistant_description" msgid="6622458130459922952">"אפליקציות של עוזרים אישיים יכולות לסייע לפי המידע שמופיע על במסך. יש אפליקציות שתומכות גם בשירותי מרכז אפליקציות וגם בקלט קולי כדי לספק סיוע משולב."</string>
+    <string name="role_assistant_description" msgid="6622458130459922952">"אפליקציות עזרה יכולות לסייע לפי המידע שמופיע על המסך. יש אפליקציות שמעניקות סיוע משולב דרך שירותי מרכז האפליקציות וקלט קולי."</string>
     <string name="role_assistant_recommended_title" msgid="2093873159106905257">"בהמלצת <xliff:g id="OEM_NAME">%s</xliff:g>"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"אפליקציית ברירת מחדל לדפדפן"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"אפליקציית דפדפן"</string>
@@ -765,7 +765,7 @@
     <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"אין אישור"</string>
     <string name="read_screen_context_setting_title" msgid="5557279099665174872">"שימוש בנתונים מהמסך ומהאפליקציה"</string>
     <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"מתן הרשאה לעוזר האישי לגשת למידע ולתוכן מהאפליקציה שפתוחה במסך"</string>
-    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"מתן הרשאה לאפליקציה <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> לגשת למידע ולתוכן מהאפליקציה שפתוחה במסך"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"מתן הרשאה ל-<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> לגשת למידע ולתוכן מהאפליקציה שפתוחה במסך"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"אישור"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"אין אישור"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"‏לתת לאפליקציה &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; הרשאת גישה למיקום המדויק כשהוא משותף על ידך?"</string>

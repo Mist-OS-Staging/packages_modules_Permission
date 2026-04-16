@@ -217,9 +217,9 @@
     <string name="app_permission_location_accuracy" msgid="7166912915040018669">"Utiliser la position exacte"</string>
     <string name="app_permission_location_accuracy_subtitle" msgid="2654077606404987210">"Si la position exacte est désactivée, les applis ont accès à votre position approximative"</string>
     <string name="app_permission_title" msgid="2090897901051370711">"Autorisation – <xliff:g id="PERM">%1$s</xliff:g>"</string>
-    <string name="app_permission_header" msgid="2951363137032603806">"Accès pour cette appli : <xliff:g id="PERM">%1$s</xliff:g>"</string>
+    <string name="app_permission_header" msgid="2951363137032603806">"<xliff:g id="PERM">%1$s</xliff:g> : accès pour cette appli"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"Accès <xliff:g id="PERM">%1$s</xliff:g> pour cette appli sur <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
-    <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"Afficher toutes les autorisations pour <xliff:g id="APP">%1$s</xliff:g>"</string>
+    <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"<xliff:g id="APP">%1$s</xliff:g> : afficher toutes les autorisations"</string>
     <string name="app_permission_footer_permission_apps_link" msgid="3941988129992794327">"Afficher toutes les applis qui possèdent cette autorisation"</string>
     <string name="app_permission_info_button" msgid="8973692370208562556">"Renseignements"</string>
     <string name="app_permission_settings_button" msgid="4582916817451973752">"Paramètres"</string>
@@ -578,7 +578,7 @@
     <string name="additional_permissions_description" msgid="2186611950890732112">"Autorisations définies par les applis."</string>
     <string name="privdash_label_camera" msgid="1426440033626198096">"Appareil photo"</string>
     <string name="privdash_label_microphone" msgid="8415035835803511693">"Microphone"</string>
-    <string name="privdash_label_location" msgid="6882400763866489291">"Position"</string>
+    <string name="privdash_label_location" msgid="6882400763866489291">"Localisation"</string>
     <string name="privdash_label_other" msgid="3710394147423236033">"Autre"</string>
     <string name="privdash_label_none" msgid="5991866260360484858">"Aucun"</string>
     <string name="privdash_label_24h" msgid="1512532123865375319">"Dernières\n24 heures"</string>

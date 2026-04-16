@@ -480,7 +480,7 @@
     <string name="encryption_unaware_confirmation_message" msgid="8274491794636402484">"Примечание. Если у вас установлена блокировка экрана, после перезагрузки вам потребуется разблокировать устройство, чтобы запустить приложение."</string>
     <string name="assistant_confirmation_message" msgid="7476540402884416212">"Ассистент сможет получать данные об используемых в вашей системе приложениях, в том числе сведения с экрана и из самих приложений."</string>
     <string name="assistant_confirmation_title_v37" msgid="4998437583005547092">"Изменить выбранного цифрового помощника на приложение &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt;?"</string>
-    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Новому помощнику будут доступны ваши сообщения и прочая информация, а также данные, которыми с ним делятся другие приложения."</string>
+    <string name="assistant_confirmation_message_v37" msgid="4763150587952308197">"Новому помощнику будут доступны ваши сообщения и другая информация, а также данные, которыми с ним делятся другие приложения."</string>
     <string name="assistant_confirmation_message_access_restored_v37" msgid="2731391781319881100">"Новому помощнику будут доступны ваши сообщения и прочая информация, а также данные, которыми с ним делятся другие приложения.&lt;br&gt;&lt;br&gt;Поскольку вы уже разрешили сервису \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" обращаться к данным экрана и приложений, ему также будет доступен контент приложения, открытого на экране."</string>
     <string name="incident_report_channel_name" msgid="3144954065936288440">"Отправка данных об отладке"</string>
     <string name="incident_report_notification_title" msgid="4635984625656519773">"Отправка детализированных данных об отладке"</string>
@@ -764,8 +764,8 @@
     <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Разрешить"</string>
     <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Не разрешать"</string>
     <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Доступ к данным экрана и приложений"</string>
-    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Разрешите помощнику доступ к данным и контенту из приложения, открытого на экране."</string>
-    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Разрешите приложению \"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>\" доступ к данным и контенту из приложения, открытого на экране."</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Разрешите помощнику доступ к данным и контенту приложения, открытого на экране"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Разрешить приложению \"<xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g>\" доступ к данным и контенту приложения, открытого на экране"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Разрешить"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Запретить"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Разрешить приложению &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; доступ к данным о точном местоположении, когда вы ими делитесь?"</string>

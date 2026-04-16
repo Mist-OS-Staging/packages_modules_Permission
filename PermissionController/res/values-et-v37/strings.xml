@@ -17,5 +17,5 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="role_assistant_description" msgid="837264444214300299">"Assistendid on rakendused, mis suudavad vastavad häälkäsklustele, et aidata teil toiminguid teha."</string>
+    <string name="role_assistant_description" msgid="837264444214300299">"Assistendid on rakendused, mis suudavad vastata häälkäsklustele, et aidata teil toiminguid teha."</string>
 </resources>

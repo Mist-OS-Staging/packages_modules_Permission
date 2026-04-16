@@ -764,8 +764,8 @@
     <string name="request_read_screen_context_dialog_button_allow" msgid="5664102873265905702">"Povoliť"</string>
     <string name="request_read_screen_context_dialog_button_dont_allow" msgid="582852715625937711">"Nepovoliť"</string>
     <string name="read_screen_context_setting_title" msgid="5557279099665174872">"Používať údaje z obrazovky a aplikácie"</string>
-    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Povoľte asistentovi prístup k informáciám a obsahu z aplikácie otvorenej na obrazovke"</string>
-    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Povoľte aplikácii <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> prístup k informáciám a obsahu z aplikácie otvorenej na obrazovke"</string>
+    <string name="read_screen_context_setting_default_description" msgid="4349794650902006368">"Povoliť asistentovi prístup k informáciám a obsahu z aplikácie otvorenej na obrazovke"</string>
+    <string name="read_screen_context_setting_description" msgid="3610476260828196298">"Povoliť aplikácii <xliff:g id="ASSISTANT_APP_NAME">%1$s</xliff:g> prístup k informáciám a obsahu z aplikácie otvorenej na obrazovke"</string>
     <string name="request_location_button_permissions_dialog_button_allow" msgid="3422800468376317863">"Povoliť"</string>
     <string name="request_location_button_permissions_dialog_button_dont_allow" msgid="3273946372861701473">"Nepovoliť"</string>
     <string name="request_location_button_permissions_dialog_title" msgid="1305012762950180684">"Chcete povoliť aplikácii &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; prístup k presnej polohe, keď sa ju rozhodnete zdieľať?"</string>

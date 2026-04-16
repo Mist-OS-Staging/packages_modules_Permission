@@ -17,5 +17,5 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="role_assistant_description" msgid="837264444214300299">"Ассистенты – это приложения, которые могут отвечать на голосовые команды и помогать вам выполнять задачи."</string>
+    <string name="role_assistant_description" msgid="837264444214300299">"Помощники – это приложения, которые могут отвечать на голосовые команды и выполнять для вас различные задачи."</string>
 </resources>

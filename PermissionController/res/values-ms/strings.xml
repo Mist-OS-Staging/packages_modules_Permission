@@ -466,7 +466,7 @@
     <string name="default_app_system_default" msgid="6218386768175513760">"(Ciri lalai sistem)"</string>
     <string name="default_app_no_apps" msgid="115720991680586885">"Tiada apl"</string>
     <string name="default_app_confirmation_positive_button" msgid="7870227561758833590">"Tukar"</string>
-    <string name="default_app_confirmation_negative_button" msgid="2564849389728106051">"Kekalkan versi semasa"</string>
+    <string name="default_app_confirmation_negative_button" msgid="2564849389728106051">"Jangan tukar"</string>
     <string name="default_payment_app_other_nfc_services" msgid="5957633798695758917">"Perkhidmatan NFC yang lain"</string>
     <string name="car_default_app_selected" msgid="5416420830430644174">"Dipilih"</string>
     <string name="car_default_app_selected_with_info" msgid="1932204186080593500">"Dipilih - <xliff:g id="ADDITIONAL_INFO">%1$s</xliff:g>"</string>
