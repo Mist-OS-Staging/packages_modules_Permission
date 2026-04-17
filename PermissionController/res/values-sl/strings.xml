@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Neznano"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Nadzorna plošča za zasebnost"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Dovoljenja za aplikacije"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Dejavnost zastopnika"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Noben agent ni nameščen"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"Dejavnost v pomočniku z umetno inteligenco"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Ni nameščenih pomočnikov z umetno inteligenco"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Ni bilo dostopov v zadnjih 24 urah"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Ni bilo dostopov v zadnjih 7 dneh"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Dejavnost agenta <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Zadnji dostop: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Ogled"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Ni dostopov"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Ta agent je dostopal do teh aplikacij, da je pridobil informacije ali izvedel dejanja za vas. To lahko kadar koli spremenite v nastavitvah aplikacije <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Nadzorna plošča za zasebnost je prikazana samo, ko se do aplikacij dostopa z uporabo funkcij Androida za agente."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"Ta pomočnik z umetno inteligenco je dostopal do teh aplikacij, da je pridobil informacije ali izvedel dejanja za vas. To lahko kadar koli spremenite v nastavitvah aplikacije <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Nadzorna plošča za zasebnost je prikazana samo, ko se do aplikacij dostopa z uporabo funkcij Androida za pomočnike z umetno inteligenco."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Pomoč za naprave"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Prikaz aplikacij, ki so pred kratkim uporabile dovoljenja."</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Uporaba dovoljenja »<xliff:g id="PERMGROUP">%1$s</xliff:g>«"</string>

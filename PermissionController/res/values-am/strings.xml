@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"ያልታወቀ"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"የግላዊነት ዳሽቦርድ"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"የመተግበሪያ ፈቃዶች"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"የተወካይ እንቅስቃሴ"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"ምንም ወኪሎች አልተጫኑም"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"የሰው ሠራሽ አስተውሎት ረዳት እንቅስቃሴ"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"ምንም ሰው ሠራሽ አስተውሎት ረዳቶች አልተጫኑም"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"ባለፉት 24 ሰዓታት ውስጥ ምንም መዳረሻዎች የሉም"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"ባለፉት 7 ቀናት ውስጥ ምንም መዳረሻዎች የሉም"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> እንቅስቃሴ"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"የመጨረሻ መዳረሻ <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"ይመልከቱ"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"ምንም መዳረሻዎች የሉም"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"ይህ ወኪል መረጃ ለማግኘት ወይም ለእርስዎ እርምጃዎችን ለመውሰድ እነዚህን መተግበሪያዎች ደርሷል። ይህን በማንኛውም ጊዜ በ<xliff:g id="APP_NAME">%1$s</xliff:g> ቅንብሮች ውስጥ መድረስ ይችላሉ።"</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"የግላዊነት ዳሽቦርድ የሚታየው መተግበሪያዎች ለወኪሎች የAndroid ባህሪያትን በመጠቀም ሲደረስባቸው ብቻ ነው።"</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"ይህ የሰው ሠራሽ አስተውሎት ረዳት መረጃ ለማግኘት ወይም ለእርስዎ እርምጃዎችን ለመውሰድ እነዚህን መተግበሪያዎች ደርሷል። ይህን በማንኛውም ጊዜ በ<xliff:g id="APP_NAME">%1$s</xliff:g> ቅንብሮች ውስጥ መድረስ ይችላሉ።"</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"የግላዊነት ዳሽቦርድ የሚታየው መተግበሪያዎች ለሰው ሠራሽ አስተውሎት ረዳቶች የAndroid ባህሪያትን በመጠቀም ሲደረስባቸው ብቻ ነው።"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"የመሣሪያ እርዳታ"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"የትኛዎቹ መተግበሪያዎች ፈቃዶችን በቅርቡ እንደተጠቀሙ ይመልከቱ"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"የ<xliff:g id="PERMGROUP">%1$s</xliff:g> አጠቃቀም"</string>

@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Невідомо"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Панель керування дозволами"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Дозволи для додатків"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Дії агента"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Агентів не встановлено"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"Дії помічників на основі ШІ"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Помічників на основі ШІ немає"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Без спроб доступу за останні 24 год"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Без спроб доступу за останні 7 дн."</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Дії (<xliff:g id="APP_NAME">%1$s</xliff:g>)"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Останній доступ: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Переглянути"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Не було спроб доступу"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Цей агент отримував інформацію або виконував потрібні вам дії в цих додатках. Такий доступ можна будь-коли змінити в налаштуваннях додатка <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Панель керування дозволами відображається лише тоді, коли додатки відкриваються за допомогою функцій Android для агентів."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"Цей помічник на основі ШІ отримував інформацію або виконував потрібні вам дії в цих додатках. Відповідні права доступу можна будь-коли змінити в налаштуваннях додатка <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Панель керування дозволами відображається лише тоді, коли додатки відкриваються за допомогою функцій Android для помічників на основі ШІ."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Допомога з пристроєм"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Показувати додатки, які нещодавно використовували дозволи"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>: використання"</string>

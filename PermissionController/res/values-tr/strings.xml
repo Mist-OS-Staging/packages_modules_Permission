@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Bilinmiyor"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Gizlilik kontrol paneli"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Uygulama izinleri"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Temsilci etkinliği"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Hiçbir ajan yüklenmedi"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"Yapay zeka asistanı etkinliği"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Yüklü yapay zeka asistanı yok"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Son 24 saatte erişim yok"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Son 7 gün içinde erişim yok"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> etkinliği"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Son erişim: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Görüntüle"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Erişim yapılmadı"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Bu ajan, bilgi almak veya sizin adınıza işlem yapmak için bu uygulamalara erişti. Bunu istediğiniz zaman <xliff:g id="APP_NAME">%1$s</xliff:g> ayarlarından değiştirebilirsiniz."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Gizlilik kontrol paneli, yalnızca ajanlar için Android özellikleri kullanılarak uygulamalara erişildiğinde gösterilir."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"Bu yapay zeka asistanı, bilgi almak veya sizin adınıza işlem yapmak için bu uygulamalara erişti. Bunu istediğiniz zaman <xliff:g id="APP_NAME">%1$s</xliff:g> ayarlarından değiştirebilirsiniz."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Gizlilik kontrol paneli, uygulamalara yalnızca yapay zeka asistanları için Android özellikleri kullanılarak erişildiğinde gösterilir."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Cihaz Yardımı"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"İzinleri son kullanan uygulamaları görüntüleyin"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> kullanımı"</string>

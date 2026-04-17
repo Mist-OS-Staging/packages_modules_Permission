@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"အမည်မသိ"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"ကိုယ်ရေးဒေတာ ဒက်ရှ်ဘုတ်"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"အက်ပ်ခွင့်ပြုချက်များ"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"အေးဂျင့် လုပ်ဆောင်ချက်"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"အေးဂျင့် ထည့်သွင်းမထားပါ"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"AI လက်ထောက် လုပ်ဆောင်ချက်"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"AI လက်ထောက် ထည့်သွင်းမထားပါ"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"ပြီးခဲ့သော ၂၄ နာရီအတွင်း သုံးမထားပါ"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"ပြီးခဲ့သော ၇ ရက်အတွင်း သုံးမထားပါ"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> လုပ်ဆောင်ချက်"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"နောက်ဆုံး အသုံးပြုချိန် <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"ကြည့်ရန်"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"သုံးမထားပါ"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"အေးဂျင့်သည် သင့်အတွက် အချက်အလက်ရယူရန်/လုပ်ဆောင်ရန် ဤအက်ပ်များ သုံးထားသည်။ ၎င်းကို <xliff:g id="APP_NAME">%1$s</xliff:g> ဆက်တင်များတွင် အချိန်မရွေးပြောင်းနိုင်သည်။"</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"ကိုယ်ရေးအချက်အလက်လုံခြုံမှုဒက်ရှ်ဘုတ်ကို အေးဂျင့်အတွက် Android တူးလ်သုံး၍ အက်ပ်သုံးသည့်အခါ၌သာ ပြသည်။"</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"ဤ AI လက်ထောက်သည် သင့်အတွက် အချက်အလက်ရယူရန်/လုပ်ဆောင်ရန် ဤအက်ပ်များ သုံးထားသည်။ ၎င်းကို <xliff:g id="APP_NAME">%1$s</xliff:g> ဆက်တင်၌ အချိန်မရွေးပြောင်းနိုင်သည်။"</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"ကိုယ်ရေးအချက်အလက်လုံခြုံမှုဒက်ရှ်ဘုတ်ကို AI လက်ထောက်အတွက် Android အင်္ဂါရပ်သုံး၍ အက်ပ်သုံးချိန်၌သာပြသည်။"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"စက်ပစ္စည်း အကူအညီ"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ခွင့်ပြုချက်များ လတ်တလောသုံးထားသည့် အက်ပ်ကိုကြည့်နိုင်သည်"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> အသုံးပြုမှု"</string>

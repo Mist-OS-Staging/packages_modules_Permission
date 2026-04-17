@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"తెలియదు"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"గోప్యతా డ్యాష్‌బోర్డ్"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"యాప్ అనుమతులు"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"ఏజెంట్ యాక్టివిటీ"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"ఏజెంట్‌లు ఇన్‌స్టాల్ కాలేదు"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"AI అసిస్టెంట్ యాక్టివిటీ"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"AI అసిస్టెంట్‌లు ఏవీ ఇన్‌స్టాల్ చేయబడలేదు"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"గత 24 గంటల్లో యాక్సెస్ చేయలేదు"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"గత 7 రోజుల్లో యాక్సెస్ చేయలేదు"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> యాక్టివిటీ"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"చివరిసారి <xliff:g id="TIME_DATE">%1$s</xliff:g>‌కు యాక్సెస్ చేశారు"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"చూడండి"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"యాక్సెస్‌లు ఏవీ లేవు"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"సమాచారం లేదా చర్యల కోసం ఈ యాప్‌లను ఈ ఏజెంట్ యాక్సెస్ చేసింది. మీరు దీన్ని ఎప్పుడైనా <xliff:g id="APP_NAME">%1$s</xliff:g> సెట్టింగ్స్‌లో మార్చుకోవచ్చు."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"ఏజెంట్‌ల కోసం Android ఫీచర్‌లను ఉపయోగించి యాప్‌లను యాక్సెస్ చేసినప్పుడే గోప్యతా డ్యాష్‌బోర్డ్ కనిపిస్తుంది."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"సమాచారం లేదా చర్యల కోసం ఈ యాప్‌లను ఈ AI అసిస్టెంట్ యాక్సెస్ చేసింది. మీరు దీన్ని ఎప్పుడైనా <xliff:g id="APP_NAME">%1$s</xliff:g> సెట్టింగ్‌లలో మార్చుకోవచ్చు."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"AI అసిస్టెంట్‌ల కోసం Android ఫీచర్‌లను ఉపయోగించి యాప్‌లను యాక్సెస్ చేసినప్పుడే గోప్యతా డ్యాష్‌బోర్డ్ కనిపిస్తుంది."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"డివైజ్ సహాయం"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ఇటీవల ఏ యాప్‌లు అనుమతులను ఉపయోగించాయో చూడండి"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> వినియోగం"</string>

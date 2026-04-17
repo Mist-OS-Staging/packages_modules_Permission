@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Akwaziwa"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Ideshibhodi yobumfihlo"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Izimvume ze-app"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Umsebenzi we-ejenti"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Awekho ama-ejenti afakiwe"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"Umsebenzi wokusiza i-AI"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Akukho okusiza i-AI okufakiwe"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Akukho ukufinyelela emahoreni angama-24 adlule"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Akukho ukufinyelela ezinsukwini eziyi-7 ezedlule"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Umsebenzi we-<xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Kugcine ukufinyelelwa mhla ka-<xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Buka"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Akukho ukufinyelela"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Ufinyelele ama-app. Shintsha <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Ideshibhodi yobumfihlo ibonisa kuphela uma ama-app afinyelelwa kusetshenziswa izakhi ze-Android zama-ejenti."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"Lo Umsizi we-AI ufinyelele kulawa ma-app ukuze ithole ulwazi noma ikuthathele izinyathelo. Shintsha kumasethingi e-<xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Ideshibhodi yobumfihlo ibonisa ama-app afinyelelwe nge-Android."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Usizo Lwedivayisi"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Buka ukuthi yimaphi ama-app asanda kusebenzisa izimvume"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> ukusetshenziswa"</string>

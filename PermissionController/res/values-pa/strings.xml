@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"ਅਗਿਆਤ"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"ਪਰਦੇਦਾਰੀ ਸੰਬੰਧੀ ਡੈਸ਼ਬੋਰਡ"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"ਐਪ ਇਜਾਜ਼ਤਾਂ"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"ਏਜੰਟ ਦੀ ਸਰਗਰਮੀ"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"ਕੋਈ ਏਜੰਟ ਸਥਾਪਤ ਨਹੀਂ ਕੀਤਾ ਗਿਆ"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"AI ਅਸਿਸਟੈਂਟ ਸੰਬੰਧੀ ਸਰਗਰਮੀ"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"ਕੋਈ AI ਅਸਿਸਟੈਂਟ ਸਥਾਪਤ ਨਹੀਂ ਕੀਤਾ ਗਿਆ"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"ਪਿਛਲੇ 24 ਘੰਟਿਆਂ ਵਿੱਚ ਕੋਈ ਪਹੁੰਚ ਨਹੀਂ"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"ਪਿਛਲੇ 7 ਦਿਨਾਂ ਵਿੱਚ ਕੋਈ ਪਹੁੰਚ ਨਹੀਂ"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> ਸਰਗਰਮੀ"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"ਪਿਛਲੀ ਵਾਰ <xliff:g id="TIME_DATE">%1$s</xliff:g> ਨੂੰ ਪਹੁੰਚ ਕੀਤੀ ਗਈ"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"ਦੇਖੋ"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"ਕੋਈ ਪਹੁੰਚ ਨਹੀਂ"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"ਇਸ ਏਜੰਟ ਨੇ ਤੁਹਾਡੇ ਲਈ ਜਾਣਕਾਰੀ ਪ੍ਰਾਪਤ ਕਰਨ ਜਾਂ ਕਾਰਵਾਈਆਂ ਕਰਨ ਵਾਸਤੇ ਇਨ੍ਹਾਂ ਐਪਾਂ ਤੱਕ ਪਹੁੰਚ ਕੀਤੀ। ਤੁਸੀਂ ਕਿਸੇ ਵੇਲੇ ਵੀ <xliff:g id="APP_NAME">%1$s</xliff:g> ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਜਾ ਕੇ ਇਸ ਪਹੁੰਚ ਨੂੰ ਬਦਲ ਸਕਦੇ ਹੋ।"</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"ਪਰਦੇਦਾਰੀ ਸੰਬੰਧੀ ਡੈਸ਼ਬੋਰਡ ਸਿਰਫ਼ ਉਦੋਂ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ, ਜਦੋਂ ਏਜੰਟ Android ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰ ਕੇ ਐਪਾਂ ਤੱਕ ਪਹੁੰਚ ਕਰਦੇ ਹਨ।"</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"ਇਸ AI ਅਸਿਸਟੈਂਟ ਨੇ ਤੁਹਾਡੇ ਲਈ ਜਾਣਕਾਰੀ ਪ੍ਰਾਪਤ ਕਰਨ ਜਾਂ ਕਾਰਵਾਈਆਂ ਕਰਨ ਵਾਸਤੇ ਇਨ੍ਹਾਂ ਐਪਾਂ ਤੱਕ ਪਹੁੰਚ ਕੀਤੀ। ਤੁਸੀਂ ਕਿਸੇ ਵੇਲੇ ਵੀ <xliff:g id="APP_NAME">%1$s</xliff:g> ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਜਾ ਕੇ ਇਸ ਪਹੁੰਚ ਨੂੰ ਬਦਲ ਸਕਦੇ ਹੋ।"</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"ਪਰਦੇਦਾਰੀ ਸੰਬੰਧੀ ਡੈਸ਼ਬੋਰਡ ਸਿਰਫ਼ ਉਦੋਂ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ, ਜਦੋਂ AI ਅਸਿਸਟੈਂਟਾਂ ਲਈ Android ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਵਰਤ ਕੇ ਐਪਾਂ ਤੱਕ ਪਹੁੰਚ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"ਡੀਵਾਈਸ ਸੰਬੰਧੀ ਸਹਾਇਤਾ"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ਦੇਖੋ ਕਿ ਕਿਹੜੀਆਂ ਐਪਾਂ ਨੇ ਹਾਲ ਹੀ ਵਿੱਚ ਇਜਾਜ਼ਤਾਂ ਵਰਤੀਆਂ ਹਨ"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> ਵਰਤੋਂ"</string>

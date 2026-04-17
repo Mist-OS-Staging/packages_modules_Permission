@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"לא ידוע"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"מרכז בקרת הפרטיות"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"הרשאות שניתנות לאפליקציה"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"פעילות של הסוכן"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"לא הותקנו סוכנים"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"‏הפעילות בעוזר מבוסס ה-AI"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"‏לא הותקן עוזר אישי מבוסס-AI"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"לא נרשמה גישה ב-24 השעות האחרונות"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"לא נרשמה גישה ב-7 הימים האחרונים"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"פעילות ב-<xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"גישה אחרונה: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"הצגה"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"לא נרשמה גישה"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"הסוכן ניגש לאפליקציות הבאות כדי לקבל מידע או לבצע פעולות בשבילך. תמיד אפשר לשנות את הרשאות הגישה שלו בהגדרות של <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"‏מרכז הבקרה להגדרות הפרטיות מוצג רק כשהגישה לאפליקציות היא באמצעות תכונות Android לסוכנים."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"‏העוזר האישי מבוסס ה-AI ניגש לאפליקציות הבאות כדי לקבל מידע או לבצע פעולות בשבילך. תמיד אפשר לשנות את הרשאות הגישה שלו בהגדרות של <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"‏מרכז הבקרה להגדרות הפרטיות מוצג רק כשהגישה לאפליקציות היא באמצעות תכונות Android לעוזרים אישיים מבוססי-AI."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"עזרה במכשיר"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"הצגת האפליקציות שהשתמשו לאחרונה בהרשאות"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"שימוש ב<xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

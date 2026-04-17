@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"不明"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"隱私資訊主頁"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"應用程式權限"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"代理程式活動"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"未安裝任何代理"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"AI 助理活動"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"未安裝 AI 助理"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"過去 24 小時內沒有存取記錄"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"過去 7 天內沒有存取記錄"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"「<xliff:g id="APP_NAME">%1$s</xliff:g>」活動"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"上次存取時間：<xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"查看"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"無存取記錄"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"這個代理存取了下列應用程式，以取得資訊或代表你執行動作。你隨時可以前往「<xliff:g id="APP_NAME">%1$s</xliff:g>」設定變更這項存取權限。"</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"只有在代理透過 Android 功能存取應用程式時，記錄才會顯示在隱私資訊主頁。"</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"這個 AI 助理存取了下列應用程式，以取得資訊或代表你執行動作。你隨時可以前往「<xliff:g id="APP_NAME">%1$s</xliff:g>」設定變更這項存取權限。"</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"只有在 AI 助理透過 Android 功能存取應用程式時，記錄才會顯示在隱私資訊主頁。"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"裝置協助"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"查看最近曾使用權限的應用程式"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>使用情況"</string>

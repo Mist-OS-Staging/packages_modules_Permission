@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"ไม่ทราบ"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"แดชบอร์ดความเป็นส่วนตัว"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"สิทธิ์ของแอป"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"กิจกรรมของ Agent"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"ไม่ได้ติดตั้ง Agent"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"กิจกรรมของผู้ช่วย AI"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"ไม่ได้ติดตั้งผู้ช่วย AI"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"ไม่มีการเข้าถึงในช่วง 24 ชม. ที่ผ่านมา"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"ไม่มีการเข้าถึงในช่วง 7 วันที่ผ่านมา"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"กิจกรรม <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"เข้าถึงล่าสุด: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"ดู"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"ไม่มีการเข้าถึง"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"ตัวแทนนี้เข้าถึงแอปเพื่อดูข้อมูลหรือดำเนินการให้คุณ เปลี่ยนแปลงการเข้าถึงนี้ได้ทุกเมื่อในการตั้งค่า <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"แดชบอร์ดความเป็นส่วนตัวจะแสดงเมื่อมีการเข้าถึงแอปโดยใช้ฟีเจอร์ Android สำหรับตัวแทนเท่านั้น"</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"ผู้ช่วย AI นี้เข้าถึงแอปเหล่านี้เพื่อดูข้อมูลหรือดำเนินการให้คุณ เปลี่ยนแปลงการเข้าถึงนี้ได้ทุกเมื่อในการตั้งค่า <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"แดชบอร์ดความเป็นส่วนตัวจะแสดงเมื่อมีการเข้าถึงแอปโดยใช้ฟีเจอร์ Android สำหรับผู้ช่วย AI เท่านั้น"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"ความช่วยเหลือเกี่ยวกับอุปกรณ์"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ดูแอปที่ใช้สิทธิ์ล่าสุด"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"การใช้งาน<xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

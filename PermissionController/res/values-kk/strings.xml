@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Белгісіз"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Құпиялық тақтасы"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Қолданба рұқсаттары"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Агенттің әрекеті"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Ешқандай агент орнатылмаған"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"AI көмекшісін пайдалану тарихы"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"AI көмекшілері орнатылмаған"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Соңғы 24 сағатта кірмеген."</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Соңғы 7 күнде кірмеген"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> әрекеті"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Соңғы рет пайдаланған уақыты: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Көру"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Кірмеген"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Ақпарат алу немесе сіз үшін қандай да бір әрекеттерді орындау үшін агент осы қолданбаларға кірген. <xliff:g id="APP_NAME">%1$s</xliff:g> параметрлері арқылы бұл рұқсатты кез келген уақытта өзгерте аласыз."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Құпиялық тақтасы қолданбалар агенттерге арналған Android функциялары арқылы ашылғанда ғана көрінеді."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"AI көмекшісі сізге көмектесу үшін осы қолданбаларға кірді. Рұқсатты <xliff:g id="APP_NAME">%1$s</xliff:g> параметрлері арқылы кез келген уақытта өзгерте аласыз."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Құпиялық тақтасы қолданбалар AI көмекшісі функцияларымен ашылғанда ғана көрсетіледі."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Құрылғыға арналған көмек"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Қандай қолданбалар рұқсаттарды пайдаланғанын көріңіз."</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> рұқсатының пайдаланылуы"</string>

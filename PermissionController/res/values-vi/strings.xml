@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Không xác định"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Bảng tổng quan về quyền riêng tư"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Quyền cho ứng dụng"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Hoạt động của tác nhân"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Chưa cài đặt tác nhân nào"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"Hoạt động của trợ lý AI"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Chưa cài đặt trợ lý AI nào"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Không có lượt truy cập trong 24 giờ qua"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Không có lượt truy cập trong 7 ngày qua"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Hoạt động trên <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Lần truy cập gần đây nhất: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Xem"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Không có lượt truy cập nào"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Tác nhân này đã truy cập vào các ứng dụng này để lấy thông tin hoặc thực hiện thao tác cho bạn. Bạn có thể thay đổi chế độ này bất cứ lúc nào trong phần cài đặt <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Bảng tổng quan về quyền riêng tư chỉ xuất hiện khi các ứng dụng được truy cập qua các tính năng của Android dành cho tác nhân."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"Trợ lý AI này đã truy cập vào những ứng dụng này để lấy thông tin hoặc thực hiện thao tác cho bạn. Bạn có thể thay đổi chế độ này bất cứ lúc nào trong phần cài đặt <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Bảng tổng quan về quyền riêng tư chỉ xuất hiện khi các ứng dụng được truy cập qua các tính năng của Android dành cho trợ lý AI."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Trợ giúp về thiết bị"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Xem những ứng dụng nào gần đây đã sử dụng các quyền"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Hoạt động sử dụng <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

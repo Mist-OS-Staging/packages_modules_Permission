@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Tundmatu"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Privaatsuse juhtpaneel"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Rakenduse load"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Agenti tegevus"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Ühtegi agenti pole installitud"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"AI-assistendi tegevus"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"AI-assistente pole installitud"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"24 tundi pole juurdepääse"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"7 päeva pole juurdepääse"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Rakenduse <xliff:g id="APP_NAME">%1$s</xliff:g> tegevus"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Viimane juurdepääs: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Kuva"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Juurdepääse pole"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"See agent pääses nendele rakendustele juurde, et teie eest teavet hankida või toiminguid teha. Saate seda alati muuta rakenduse <xliff:g id="APP_NAME">%1$s</xliff:g> seadetes."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Privaatsuse juhtpaneel kuvatakse ainult siis, kui rakendustele pääsetakse juurde Androidi agentide funktsioonide abil."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"AI-assistent pääses rakendustele juurde, et teie eest teavet hankida või toiminguid teha. Saate seda alati muuta rakenduse <xliff:g id="APP_NAME">%1$s</xliff:g> seadetes."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Privaatsuse juhtpaneel kuvatakse ainult, kui rakendustele pääseb juurde AI-assistentide funktsioonide abil."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Seadme abi"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Vaadake, millised rakendused hiljuti lube kasutasid"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Loa <xliff:g id="PERMGROUP">%1$s</xliff:g> kasutus"</string>

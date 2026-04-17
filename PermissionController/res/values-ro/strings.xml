@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Necunoscut"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Tablou de bord de confidențialitate"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Permisiuni pentru aplicație"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Activitatea agentului"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Niciun agent instalat"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"Activitatea asistentului AI"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Nu sunt instalați asistenți AI"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Nicio accesare în ultimele 24 h"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Nicio accesare în ultimele 7 zile"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Activitate <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Ultima accesare: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Afișează"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Nicio accesare"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Agentul a accesat aceste aplicații ca să obțină informații sau să acționeze pentru tine. Poți modifica oricând opțiunea din setările aplicației <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Tabloul de bord de confidențialitate se afișează numai atunci când aplicațiile sunt accesate folosind funcțiile Android pentru agenți."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"Asistentul AI a accesat aceste aplicații ca să obțină informații sau să acționeze pentru tine. Poți modifica oricând opțiunea din setările aplicației <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Tabloul de bord de confidențialitate se afișează numai atunci când aplicațiile sunt accesate folosind funcțiile Android pentru asistenți AI."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Asistență pentru dispozitive"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Vezi aplicațiile care au folosit recent permisiuni"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Folosirea permisiunii pentru <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

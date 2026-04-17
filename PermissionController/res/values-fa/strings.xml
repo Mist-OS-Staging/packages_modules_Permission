@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"نامشخص"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"داشبورد حریم خصوصی"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"اجازه‌های برنامه"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"فعالیت نماینده"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"هیچ عاملی نصب نشده است"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"فعالیت دستیار هوشواره‌ای"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"هیچ دستیار هوشواره‌ای نصب نشده است"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"در ۲۴ ساعت گذشته دسترسی نداشته است"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"دسترسی در ۷ روز گذشته وجود ندارد"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"فعالیت <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"آخرین دسترسی: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"مشاهده"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"دسترسی وجود ندارد"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"این نماینده برای دریافت اطلاعات یا اقدام ازطرف شما به این برنامه‌ها دسترسی پیدا کرده است. می‌توانید این را در تنظیمات <xliff:g id="APP_NAME">%1$s</xliff:g> تغییر دهید"</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"‏داشبورد حریم خصوصی فقط زمانی نشان داده می‌شود که دسترسی یافتن به برنامه‌ها بااستفاده از ویژگی‌های Android برای نمایندگان باشد."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"این دستیار هوشواره‌ای برای دریافت اطلاعات یا اقدام ازطرف شما به این برنامه‌ها دسترسی دارد. می‌توانید این دسترسی را در تنظیمات <xliff:g id="APP_NAME">%1$s</xliff:g> تغییر دهید"</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"‏داشبورد حریم خصوصی فقط زمانی نشان داده می‌شود که برنامه بااستفاده از ویژگی Android برای دستیار هوشواره‌ای دردسترس باشد."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"دستیار دستگاه"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"مشاهده برنامه‌هایی که اخیراً از اجازه‌ها استفاده کرده‌اند"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"استفاده از <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

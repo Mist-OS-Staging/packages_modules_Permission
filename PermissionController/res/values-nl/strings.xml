@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Onbekend"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Privacydashboard"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"App-rechten"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Agent-activiteit"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Geen agents geïnstalleerd"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"AI-assistentactiviteit"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Geen AI-assistenten geïnstalleerd"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Geen toegang in de afgelopen 24 uur"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Geen toegang in de afgelopen 7 dagen"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g>-activiteit"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Laatste keer geopend: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Bekijken"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Geen toegang"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Deze agent heeft deze apps geopend om informatie op te halen of acties uit te voeren voor jou. Je kunt dit op elk moment wijzigen in de <xliff:g id="APP_NAME">%1$s</xliff:g>-instellingen."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Het privacydashboard wordt alleen getoond als apps worden geopend via Android-functies voor agents."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"Deze AI-assistent heeft deze apps geopend om informatie op te halen of acties uit te voeren voor jou. Je kunt dit op elk moment wijzigen in de <xliff:g id="APP_NAME">%1$s</xliff:g>-instellingen."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Het privacydashboard toont alleen wanneer apps zijn geopend via Android-functies voor AI-assistenten."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Apparaathulp"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Bekijken welke apps onlangs rechten hebben gebruikt"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Gebruik van <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Անհայտ"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Հասանելիության կառավարման վահանակ"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Հավելվածների թույլտվություններ"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Գործակալի պատմությունը"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Գործակալներ տեղադրված չեն"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"ԱԲ օգնականների պատմություն"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"ԱԲ օգնականներ տեղադրված չեն"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Վերջին 24 ժամում չի օգտագործվել"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Վերջին 7 օրում չի օգտագործվել"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Գործողություններ (<xliff:g id="APP_NAME">%1$s</xliff:g>)"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Վերջին մուտքը՝ <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Դիտել"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Օգտագործում չկա"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Գործակալն օգտագործել է այս հավելվածները՝ ստանալու տվյալներ կամ կատարելու գործողություններ ձեզ համար։ Օգտագործման թույլտվությունը կարող եք փոխել <xliff:g id="APP_NAME">%1$s</xliff:g>-ի կարգավորումներում։"</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Թույլտվությունների կառավարման վահանակը ցուցադրվում է միայն այն ժամանակ, երբ հավելվածներ են օգտագործվում Android-ի՝ գործակալների համար նախատեսված գործառույթների օգնությամբ։"</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"ԱԲ գործակալն օգտագործել է այս հավելվածները՝ ստանալու տվյալներ կամ կատարելու գործողություններ ձեզ համար։ Օգտագործման թույլտվությունը կարող եք փոխել <xliff:g id="APP_NAME">%1$s</xliff:g>-ի կարգավորումներում։"</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Թույլտվությունների կառավարման վահանակը ցուցադրվում է միայն այն ժամանակ, երբ հավելվածներ են օգտագործվում Android-ի՝ ԱԲ օգնականների համար նախատեսված գործառույթների օգնությամբ։"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Սարքի հետ կապված օգնություն"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Տեսեք՝ որ հավելվածներն են վերջերս թույլտվություն օգտագործել"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"«<xliff:g id="PERMGROUP">%1$s</xliff:g>» թույլտվության օգտագործում"</string>

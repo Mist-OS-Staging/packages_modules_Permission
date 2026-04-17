@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Тодорхойгүй"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Нууцлалын хяналтын самбар"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Аппын зөвшөөрөл"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Агентын үйл ажиллагаа"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Ямар ч агент суулгаагүй"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"ХОУ-ы туслахын үйл ажиллагаа"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Ямар ч ХОУ-ы туслах суулгаагүй"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Сүүлийн 24 цагт хандаагүй"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Сүүлийн 7 хоногт хандаагүй"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g>-н үйл ажиллагаа"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Хамгийн сүүлд <xliff:g id="TIME_DATE">%1$s</xliff:g>-нд хандсан"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Харах"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Хандаагүй"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Энэ агент таны өмнөөс мэдээлэл авах эсвэл үйлдэл хийхийн тулд эдгээр аппад хандсан. Та хүссэн үедээ үүнийг <xliff:g id="APP_NAME">%1$s</xliff:g>-н тохиргооноос өөрчлөх боломжтой."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Нууцлалын хяналтын самбарыг агентуудад зориулсан Android-н онцлогуудыг ашиглан аппад хандахад л харуулдаг."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"Энэ ХОУ-ы туслах таны өмнөөс мэдээлэл авах эсвэл үйлдэл хийхийн тулд эдгээр аппад хандсан. Та үүнийг <xliff:g id="APP_NAME">%1$s</xliff:g>-н тохиргооноос хүссэн үедээ өөрчлөх боломжтой."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Нууцлалын хяналтын самбарыг ХОУ-ы туслахад зориулсан Android-н онцлогуудыг ашиглан аппад хандахад л харуулдаг."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Төхөөрөмжийн тусламж"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Зөвшөөрлийг саяхан аль аппууд ашигласан болохыг харна уу"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>-н ашиглалт"</string>
