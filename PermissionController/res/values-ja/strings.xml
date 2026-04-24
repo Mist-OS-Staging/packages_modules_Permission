@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"不明"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"プライバシー ダ⁠ッ⁠シ⁠ュ⁠ボ⁠ー⁠ド"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"アプリの権限"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"エージェントのアクティビティ"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"インストール済みエージェントなし"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"AI アシスタントのアクティビティ"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"AI アシスタントが未インストール"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"過去 24 時間にアクセスなし"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"過去 7 日間にアクセスなし"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> のアクティビティ"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"最終アクセス <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"表示"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"アクセスなし"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"このエージェントは、これらのアプリにアクセスして、情報の取得や操作を行いました。これは <xliff:g id="APP_NAME">%1$s</xliff:g> の設定でいつでも変更できます。"</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"プライバシー ダッシュボードは、エージェント向けの Android 機能を使用してアプリにアクセスした場合にのみ表示されます。"</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"この AI アシスタントは、これらのアプリにアクセスして、情報の取得や操作を行いました。これは <xliff:g id="APP_NAME">%1$s</xliff:g> の設定でいつでも変更できます。"</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"プライバシー ダッシュボードは、AI アシスタント向けの Android 機能を使用してアプリにアクセスした場合にのみ表示されます。"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"デバイス アシスタンス"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"権限を最近使用したアプリを表示します"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>の使用状況"</string>

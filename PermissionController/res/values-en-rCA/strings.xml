@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Unknown"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Privacy dashboard"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"App permissions"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Agent activity"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"No agents installed"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"AI assistant activity"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"No AI assistants installed"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"No accesses in past 24 hours"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"No accesses in past 7 days"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> activity"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Last access <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"View"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"No accesses"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"This agent accessed these apps to get info or take actions for you. You can change this access anytime in <xliff:g id="APP_NAME">%1$s</xliff:g> settings."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Privacy dashboard only shows when apps are accessed using Android features for agents."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"This AI assistant accessed these apps to get info or take actions for you. You can change this access anytime in <xliff:g id="APP_NAME">%1$s</xliff:g> settings."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Privacy dashboard only shows when apps are accessed using Android features for AI assistants."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Device Assistance"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"View which apps recently used permissions"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> usage"</string>

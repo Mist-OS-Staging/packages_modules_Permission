@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Неизвестное приложение"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Панель управления разрешениями"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Разрешения для приложений"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"История действий агента"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Агенты не установлены"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"История ИИ-помощников"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"ИИ-помощники не установлены"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"За 24 ч. доступ не получался"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"За 7 дн. доступ не получался"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Действия (<xliff:g id="APP_NAME">%1$s</xliff:g>)"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Последний доступ: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Посмотреть"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Не было попыток доступа"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Агент использовал эти приложения, чтобы найти сведения или выполнить действия по вашему запросу. Параметры доступа можно изменить в настройках приложения \"<xliff:g id="APP_NAME">%1$s</xliff:g>\"."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Информация на панели управления доступом появляется, только если к приложениям обращаются через функции Android для агентов."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"ИИ-помощник использовал эти приложения, чтобы найти сведения или выполнить действия по вашему запросу. Параметры доступа можно изменить в настройках приложения \"<xliff:g id="APP_NAME">%1$s</xliff:g>\"."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Информация на панели управления разрешениями появляется, только если к приложениям обращаются через функции Android для ИИ-помощников."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Помощь с устройством"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Посмотреть, какие приложения недавно использовали разрешения"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Использование разрешения \"<xliff:g id="PERMGROUP">%1$s</xliff:g>\""</string>

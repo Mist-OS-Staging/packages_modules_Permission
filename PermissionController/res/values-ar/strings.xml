@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"غير معروف"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"لوحة بيانات الخصوصية"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"أذونات التطبيقات"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"نشاط الوكيل"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"لم يتم تثبيت أي وكلاء"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"نشاط المساعد المستند إلى الذكاء الاصطناعي"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"ما مِن مساعد مستنِد إلى الذكاء الاصطناعي تم تثبيته"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"لا محاولات وصول في آخر 24 ساعة"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"ما مِن عمليات وصول بآخر 7 أيام"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"نشاط \"<xliff:g id="APP_NAME">%1$s</xliff:g>\""</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"تاريخ آخر وصول: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"عرض"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"ما مِن عمليات وصول"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"وصل هذا الوكيل إلى هذه التطبيقات للحصول على معلومات أو اتّخاذ إجراءات نيابةً عنك. يمكنك تغيير ذلك متى شئت من إعدادات \"<xliff:g id="APP_NAME">%1$s</xliff:g>\"."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"‏لا تظهر \"لوحة بيانات الخصوصية\" إلا عند الوصول إلى التطبيقات بميزات Android للوكلاء."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"وصل هذا المساعد المستند إلى الذكاء الاصطناعي إلى هذه التطبيقات للحصول على معلومات أو اتّخاذ إجراءات نيابةً عنك. يمكنك تغيير ذلك متى شئت من إعدادات \"<xliff:g id="APP_NAME">%1$s</xliff:g>\"."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"‏تظهر \"لوحة بيانات الخصوصية\" فقط عند الوصول إلى التطبيقات بميزات Android للمساعد المستند إلى الذكاء الاصطناعي."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"مساعدة بشأن الجهاز"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"الاطّلاع على التطبيقات التي استخدمت أذونات مؤخرًا"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"استخدام <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Inconnu"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Tableau de bord de confidentialité"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Autorisations de l\'appli"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Activité de l\'agent"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Aucun agent installé"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"Activité de l\'assistant IA"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Aucun assistant IA installé"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Aucun accès pendant 24 heures"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Aucun accès pendant 7 jours"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Activité : <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Dernier accès : <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Afficher"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Aucun accès"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Cet agent a accédé aux applis pour obtenir des infos ou effectuer des actions pour vous. Vous pouvez modifier cela à tout moment dans les paramètres <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Tableau de bord de confid. seulement affiché lorsque applis accessibles avec des fonct. Android pour les agents."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"Assist. IA a accédé à ces applis pour obtenir des infos ou agir pour vous. Modifiez cela à tout moment dans paramètres de <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Tableau de bord de conf. ne s\'affiche que quand applis accédées avec fonct. Android pour assist. IA."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Assistance pour les appareils"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Voir les applis qui ont récemment utilisé des autorisations"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Utilisation de votre <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
@@ -718,7 +718,7 @@
     <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"L\'appli a demandé l\'accès à une autorisation sensible qui pose un risque pour vos renseignements personnels et financiers.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Il est possible que l\'appli ne fonctionne pas correctement sans cette autorisation limitée. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Découvrir comment autoriser l\'accès&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"L\'appli n\'a pas obtenu l\'accès pour avoir le rôle <xliff:g id="ROLE_NAME">%1$s</xliff:g> par défaut"</string>
     <string name="enhanced_confirmation_dialog_desc_role" msgid="6369601947905234551">"L\'appli a demandé l\'accès à des autorisations sensibles qui posent un risque pour vos renseignements personnels et financiers.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Il est possible que l\'appli ne fonctionne pas correctement sans ces autorisations limitées. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Découvrir comment autoriser l\'accès&lt;/a&gt;"</string>
-    <string name="enhanced_confirmation_dialog_title_settings_default" msgid="1858092969721041576">"L\'appli n\'a pas obtenu l\'accès"</string>
+    <string name="enhanced_confirmation_dialog_title_settings_default" msgid="1858092969721041576">"L\'accès a été refusé à l\'appli"</string>
     <string name="enhanced_confirmation_dialog_desc_settings_default" msgid="6911632348359332981">"L\'accès à cette autorisation pose un risque pour vos renseignements personnels et financiers.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>Il est possible que l\'appli ne fonctionne pas correctement sans cette autorisation limitée. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Découvrir comment autoriser l\'accès&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_learn_more" msgid="5226619861379095709">"En savoir plus"</string>
     <string name="enhanced_confirmation_dialog_ok" msgid="8560373821598619924">"OK"</string>

@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Непознато"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Контролна табла за приватност"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Дозволе за апликације"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Активности агента"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Није инсталиран ниједан агент"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"Активности AI помоћника"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Није инсталиран ниједан AI помоћник"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Нема приступа у протекла 24 сата"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Нема приступа у протеклих 7 дана"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Активност апликације <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Последњи приступ: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Прикажи"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Нема приступа"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Овај агент је приступио апликацијама ради информација или радњи за вас. Тај приступ можете у сваком тренутку да промените у подешавањима апликације <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Таблу за приватност видите само за приступ апликацијама уз Android функције за агенте."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"Овај AI помоћник је приступио апликацијама ради информација или радњи за вас. Тај приступ можете у сваком тренутку да промените у подешавањима апликације <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Контролна табла за приватност се приказује само за приступ апликацијама уз Android функције за AI помоћнике."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Помоћ за уређај"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Прегледајте које су апликације недавно користиле дозволе"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Коришћење дозволе <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

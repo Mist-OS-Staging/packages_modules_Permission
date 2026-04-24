@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"अज्ञात"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"गोपनीयतासम्बन्धी ड्यासबोर्ड"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"एपलाई दिइएका अनुमति"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"एजेन्टले गरेका गतिविधि"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"कुनै पनि एजेन्ट इन्स्टल गरिएको छैन"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"AI एसिस्टेन्टसम्बन्धी गतिविधि"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"कुनै पनि AI एसिस्टेन्ट इन्स्टल गरिएको छैन"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"विगत २४ घण्टामा एक्सेस गरिएको छैन"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"विगत ७ दिनमा एक्सेस गरिएको छैन"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> मा गरिएको गतिविधि"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"पछिल्लो पटक <xliff:g id="TIME_DATE">%1$s</xliff:g> मा एक्सेस गरिएको"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"हेर्नुहोस्"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"एक्सेस गरिएको छैन"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"यो एजेन्टले जानकारी प्राप्त गर्न वा तपाईंका तर्फबाट कारबाहीहरू गरिदिनका निम्ति यी एपहरू एक्सेस गरेको छ। तपाईं जुनसुकै बेला <xliff:g id="APP_NAME">%1$s</xliff:g> का सेटिङमा गई यसलाई परिवर्तन गर्न सक्नुहुन्छ।"</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"एजेन्टहरूका लागि उपलब्ध Android का सुविधाहरू प्रयोग गरी एपहरू एक्सेस गरेका बेला मात्र गोपनीयतासम्बन्धी ड्यासबोर्ड देखिन्छ।"</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"यो AI एसिस्टेन्टले जानकारी प्राप्त गर्न वा तपाईंका तर्फबाट कारबाहीहरू गर्नका निम्ति यी एपहरू एक्सेस गरेको छ। तपाईं जुनसुकै बेला <xliff:g id="APP_NAME">%1$s</xliff:g> का सेटिङमा गई यसलाई परिवर्तन गर्न सक्नुहुन्छ।"</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"AI एसिस्टेन्टहरूका लागि उपलब्ध Android का सुविधाहरू प्रयोग गरी एपहरू एक्सेस गरेका बेला मात्र गोपनीयतासम्बन्धी ड्यासबोर्ड देखिन्छ।"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"डिभाइससम्बन्धी सहायता"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"हालै कुन कुन एपले अनुमति प्रयोग गरेका छन् हेर्नुहोस्"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> को प्रयोग"</string>

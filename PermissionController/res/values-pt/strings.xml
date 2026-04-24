@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Desconhecido"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Painel de privacidade"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Permissões do app"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Atividade do agente"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Nenhum agente instalado"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"Atividade do assistente de IA"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Nenhum assist. de IA instalado"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Nenhum acesso nas últimas 24h"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Sem acesso nos últimos 7 dias"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Atividade do app <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Último acesso: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Ver"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Nenhum acesso"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"O agente acessou estes apps para receber informações ou realizar ações para você. Você pode mudar essa seleção a qualquer momento nas configurações do app <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"O painel de privacidade só aparece quando os apps são acessados usando recursos do Android para agentes."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"O assistente de IA acessou estes apps para ver informações ou realizar ações para você. Você pode mudar essa seleção a qualquer momento nas configurações do app <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"O Painel de Privacidade só aparece quando os apps são acessados usando recursos do Android para assistentes de IA."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Assistência do dispositivo"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Ver quais apps usaram as permissões recentemente"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Uso de <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
@@ -715,11 +715,11 @@
 </xliff:g>Golpistas podem pedir que você autorize recursos de acessibilidade em um app para tentar controlar seu dispositivo."</string>
     <string name="enhanced_confirmation_phone_state_dialog_generic_desc" msgid="158278816955957088"></string>
     <string name="enhanced_confirmation_dialog_title_permission" msgid="2149144789394238266">"O app não recebeu a seguinte permissão de acesso: <xliff:g id="PERMISSION_NAME">%1$s</xliff:g>"</string>
-    <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"O app solicitou acesso a uma permissão sensível que pode colocar suas informações pessoais e financeiras em risco.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>É possível que o app não funcione corretamente sem essa permissão restrita. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Aprenda a conceder acesso&lt;/a&gt;"</string>
+    <string name="enhanced_confirmation_dialog_desc_permission" msgid="3150778951946468945">"O app solicitou acesso a uma permissão sensível que pode colocar suas informações pessoais e financeiras em risco.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>É possível que o app não funcione corretamente sem essa permissão restrita. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Saiba como conceder acesso&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_title_role" msgid="1737023798483772780">"O app não recebeu o acesso para ser a escolha padrão de: <xliff:g id="ROLE_NAME">%1$s</xliff:g>"</string>
-    <string name="enhanced_confirmation_dialog_desc_role" msgid="6369601947905234551">"O app solicitou acesso a permissões sensíveis que podem colocar suas informações pessoais e financeiras em risco.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>É possível que o app não funcione corretamente sem essas permissões restritas. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Aprenda a conceder acesso&lt;/a&gt;"</string>
-    <string name="enhanced_confirmation_dialog_title_settings_default" msgid="1858092969721041576">"O app não recebeu a permissão de acesso"</string>
-    <string name="enhanced_confirmation_dialog_desc_settings_default" msgid="6911632348359332981">"O acesso a essa permissão pode colocar suas informações pessoais e financeiras em risco.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>É possível que o app não funcione corretamente sem essa permissão restrita. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Aprenda a conceder acesso&lt;/a&gt;"</string>
+    <string name="enhanced_confirmation_dialog_desc_role" msgid="6369601947905234551">"O app solicitou acesso a permissões sensíveis que podem colocar suas informações pessoais e financeiras em risco.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>É possível que o app não funcione corretamente sem essas permissões restritas. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Saiba como conceder acesso&lt;/a&gt;"</string>
+    <string name="enhanced_confirmation_dialog_title_settings_default" msgid="1858092969721041576">"Acesso negado ao app"</string>
+    <string name="enhanced_confirmation_dialog_desc_settings_default" msgid="6911632348359332981">"O acesso a essa permissão pode colocar suas informações pessoais e financeiras em risco.<xliff:g id="ID_1">&lt;br&gt;&lt;br&gt;</xliff:g>É possível que o app não funcione corretamente sem essa permissão restrita. &lt;a href=<xliff:g id="LEARN_MORE_LINK">%1$s</xliff:g>&gt;Saiba como conceder acesso&lt;/a&gt;"</string>
     <string name="enhanced_confirmation_dialog_learn_more" msgid="5226619861379095709">"Saiba mais"</string>
     <string name="enhanced_confirmation_dialog_ok" msgid="8560373821598619924">"OK"</string>
     <string name="permission_grant_dialog_streaming_blocked_title" msgid="8905241017017043649">"Solicitação de permissão suprimida"</string>

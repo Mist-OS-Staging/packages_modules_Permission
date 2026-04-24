@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Nome descoñecido"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Panel de privacidade"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Permisos de aplicacións"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Actividade do axente"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Ningún axente instalado"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"Actividade do asistente de IA"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Sen asistente de IA instalado"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Sen accesos nas últimas 24 h"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Sen accesos nos últimos 7 días"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Actividade en <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Último acceso: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Ver"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Sen accesos"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Este axente accedeu a estas aplicacións para obter información ou realizar accións por ti. Podes cambiar este permiso de acceso cando queiras na configuración de <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"O panel de privacidade só se mostra cando se accede ás aplicacións mediante as funcións de Android para axentes."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"O asistente de IA accedeu a estas apps para obter datos ou facer cousas por ti. Cambia o permiso de acceso nas opcións de <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"O panel de privacidade sae ao acceder ás apps coas funcións de Android para asistentes de IA."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Asistencia do dispositivo"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Mira as aplicacións que utilizaron permisos recentemente"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Uso do permiso (<xliff:g id="PERMGROUP">%1$s</xliff:g>)"</string>

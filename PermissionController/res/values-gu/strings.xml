@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"અજાણ"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"પ્રાઇવસી ડૅશબોર્ડ"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"ઍપ પરવાનગીઓ"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"એજન્ટ ઍક્ટિવિટી"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"કોઈ એજન્ટ ઇન્સ્ટૉલ કરેલા નથી"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"AI આસિસ્ટન્ટની ઍક્ટિવિટી"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"કોઈ AI આસિસ્ટન્ટ ઇન્સ્ટૉલ નથી"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"છેલ્લા 24 કલાકમાં કોઈ ઍક્સેસ નથી"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"છેલ્લા 7 દિવસમાં કોઈ ઍક્સેસ નથી"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g>ની ઍક્ટિવિટી"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"છેલ્લે ઍક્સેસ કર્યાનો સમય: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"જુઓ"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"કોઈ ઍક્સેસ નથી"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"માહિતી મેળવવા અથવા તમારા માટે ઍક્શન લેવા માટે આ એજન્ટ દ્વારા આ ઍપ ઍક્સેસ કરવામાં આવી. <xliff:g id="APP_NAME">%1$s</xliff:g>ના સેટિંગમાં તમે આને કોઈપણ સમયે બદલી શકો છો."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"જ્યારે એજન્ટ માટેની Android સુવિધાઓનો ઉપયોગ કરીને ઍપ ઍક્સેસ કરવામાં આવે, ત્યારે જ પ્રાઇવસી ડૅશબોર્ડ બતાવવામાં આવે છે."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"માહિતી મેળવવા કે તમારા માટે ઍક્શન લેવા, આ AI આસિસ્ટન્ટે આ ઍપ ઍક્સેસ કરી. <xliff:g id="APP_NAME">%1$s</xliff:g>ના સેટિંગમાં તમે આને કોઈપણ સમયે બદલી શકો છો."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"AI આસિસ્ટન્ટ માટેની Android સુવિધાઓ વાપરીને ઍપ ઍક્સેસ કરવામાં આવે, ત્યારે જ પ્રાઇવસી ડૅશબોર્ડ બતાવવામાં આવે છે."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"ડિવાઇસ આસિસ્ટન્સ"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"કઈ ઍપ દ્વારા તાજેતરમાં પરવાનગીઓનો ઉપયોગ થયો તે જુઓ"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>નો ઉપયોગ"</string>

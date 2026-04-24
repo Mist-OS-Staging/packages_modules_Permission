@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Haijulikani"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Dashibodi ya faragha"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Ruhusa za programu"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Shughuli za mwakilishi"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Hujaweka mifumo tekelezi kwenye kifaa"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"Shughuli za kiratibu kinachotumia AI"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Hakuna viratibu vinavyotumia AI vilivyowekwa"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Hakujakuwa na ufikiaji katika saa 24 zilizopita"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Hakujakuwa na ufikiaji katika siku 7 zilizopita"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Shughuli za <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Imefikiwa mwisho: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Angalia"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Hakuna ufikiaji"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Mfumo huu tekelezi umefikia programu hizi ili upate maelezo au uchukue hatua kwa niaba yako. Unaweza kuondoa idhini ya ufikiaji wakati wowote katika mipangilio ya <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Dashibodi ya faragha huonyesha tu programu zinapofikiwa kwa kutumia vipengele vya Android vya mifumo tekelezi."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"Kiratibu hiki kinachotumia AI kimefikia programu hizi ili kupata maelezo au kuchukua hatua kwa niaba yako. Unaweza kuondoa idhini ya ufikiaji wakati wowote katika mipangilio ya <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Dashibodi ya faragha huonyesha tu programu zinapofikiwa kwa kutumia vipengele vya Android vya viratibu vinavyotumia AI."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Usaidizi wa Kifaa"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Angalia programu zilizotumia ruhusa hivi majuzi"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Matumizi ya <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

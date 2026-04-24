@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Neznáme"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Panel ochrany súkromia"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Povolenia aplikácií"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Aktivita v režime Agent"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Žiadni nainštalovaní agenti"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"Aktivita asistenta s umelou inteligenciou"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Nie sú nainštalovaní žiadni asistenti s umelou inteligenciou"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Žiadne prístupy za 24 hodín"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Žiadne prístupy za 7 dní"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Aktivita aplikácie <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Posledný prístup: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Zobraziť"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Žiadne prístupy"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Tento agent získal prístup k týmto aplikáciám, aby pre vás mohol získavať informácie alebo vykonávať akcie. Tento prístup môžete kedykoľvek zmeniť v nastaveniach aplikácie <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Panel ochrany súkromia sa zobrazuje iba vtedy, keď sa k aplikáciám pristupuje pomocou funkcií Androidu pre agentov."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"Tento asistent s umelou inteligenciou získal prístup k týmto aplikáciám, aby pre vás získal informácie alebo vykonal akcie. Tento prístup môžete kedykoľvek zmeniť v nastaveniach aplikácie <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Panel ochrany súkromia sa zobrazuje iba vtedy, keď sa k aplikáciám získava prístup pomocou funkcií Androidu pre asistentov s umelou inteligenciou."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Asistencia so zariadením"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Pozrite si, ktoré aplikácie nedávno použili povolenia"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> – používanie"</string>

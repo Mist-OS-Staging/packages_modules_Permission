@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"தெரியாதது"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"தனியுரிமை டாஷ்போர்டு"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"ஆப்ஸ் அனுமதிகள்"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"ஏஜெண்ட் செயல்பாடு"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"ஏஜெண்ட்டுகள் நிறுவப்படவில்லை"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"AI அசிஸ்டண்ட் செயல்பாடு"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"AI அசிஸ்டண்ட்டுகள் நிறுவவில்லை"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"24 மணிநேரமாக அணுகல்கள் இல்லை"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"7 நாட்களாக அணுகல்கள் இல்லை"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> செயல்பாடு"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"கடைசியாக அணுகியது: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"காட்டு"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"அணுகல்கள் இல்லை"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"உங்களுக்காகத் தகவல்களைப் பெறவோ செயல்களைச் செய்யவோ ஏஜெண்ட் இந்த ஆப்ஸை அணுகியுள்ளது. அணுகலை <xliff:g id="APP_NAME">%1$s</xliff:g> அமைப்புகளில் எப்போது வேண்டுமானாலும் மாற்றிக்கொள்ளலாம்."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"ஏஜெண்ட்டுகளுக்கான Android அம்சங்கள் மூலம் ஆப்ஸை அணுகும்போது மட்டுமே தனியுரிமை டாஷ்போர்டு காட்டப்படும்."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"உங்களுக்காகத் தகவல்களைப் பெறவோ செயல்களைச் செய்யவோ AI அசிஸ்டண்ட் இந்த ஆப்ஸை அணுகியுள்ளது. அணுகலை <xliff:g id="APP_NAME">%1$s</xliff:g> அமைப்புகளில் எப்போது வேண்டுமானாலும் மாற்றிக்கொள்ளலாம்."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"AI அசிஸ்டண்ட்டுகளுக்கான Android அம்சங்களைப் பயன்படுத்தி ஆப்ஸை அணுகும்போது மட்டுமே தனியுரிமை டாஷ்போர்டு காட்டப்படும்."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"சாதன உதவி"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"சமீபத்தில் அனுமதிகளைப் பயன்படுத்திய ஆப்ஸைக் காட்டும்"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> உபயோகம்"</string>

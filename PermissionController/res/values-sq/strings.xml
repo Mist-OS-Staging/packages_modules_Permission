@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"I panjohur"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Paneli i privatësisë"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Lejet e aplikacionit"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Aktiviteti i agjentit"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Nuk është instaluar asnjë agjent"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"Aktiviteti i asistentit me IA"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Asnjë asistent IA i instaluar"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Nuk ka pasur qasje në 24 orët e fundit"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Nuk ka pasur qasje në 7 ditët e fundit"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Aktiviteti i <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Qasja e fundit: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Shiko"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Nuk ka qasje"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Ky agjent u qas në këto aplikacione për të marrë informacione ose për të ndërmarrë veprime për ty. Këtë qasje mund ta ndryshosh në çdo kohë te cilësimet e <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Paneli i privatësisë shfaqet vetëm kur qasja në aplikacione kryhet duke përdorur veçoritë e Android për agjentët."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"Ky asistent me IA u qas në këto aplikacione për të marrë informacione ose për të ndërmarrë veprime për ty. Këtë qasje mund ta ndryshosh në çdo kohë te cilësimet e <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Paneli i privatësisë shfaqet vetëm kur qasja në aplikacione kryhet duke përdorur veçoritë e Android për asistentët me IA."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Ndihma për pajisjen"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Shiko se cilat aplikacione kanë përdorur së fundi leje"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Përdorimi i lejeve: <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

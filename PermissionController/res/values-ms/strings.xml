@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Tidak diketahui"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Papan pemuka privasi"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Kebenaran apl"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Aktiviti ejen"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Tiada ejen dipasang"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"Aktiviti pembantu AI"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Tiada pembantu AI dipasang"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Tiada akses 24 jam yang lalu"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Tiada akses 7 hari yang lalu"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Aktiviti <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Akses terakhir pada <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Lihat"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Tiada akses"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Ejen ini mengakses apl ini untuk mendapatkan maklumat atau mengambil tindakan bagi pihak anda. Anda boleh menukar akses ini pada bila-bila masa dalam tetapan <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Papan pemuka privasi hanya dipaparkan apabila apl diakses menggunakan ciri Android untuk ejen."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"AI ini mengakses apl untuk maklumat/tindakan bagi anda. Ubah akses dalam tetapan <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Papan pemuka privasi hanya dipaparkan jika apl diakses melalui ciri AI Android."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Bantuan Peranti"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Lihat apl yang menggunakan kebenaran baru-baru ini"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Penggunaan <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

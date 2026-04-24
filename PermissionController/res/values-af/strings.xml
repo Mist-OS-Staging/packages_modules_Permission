@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Onbekend"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Privaatheidkontroleskerm"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Apptoestemmings"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Agentaktiwiteit"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Geen agente geïnstalleer nie"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"KI-assistentaktiwiteit"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Geen KI-assistente geïnstalleer nie"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Geen toegang die afgelope 24 uur nie"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Geen toegang die laaste 7 dae nie"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g>-aktiwiteit"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Jongste toegang <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Bekyk"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Geen toegang nie"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Hierdie agent het toegang tot hierdie apps gekry om inligting te kry of handelinge vir jou uit te voer. Jy kan hierdie toegang enige tyd in <xliff:g id="APP_NAME">%1$s</xliff:g>-instellings verander."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Die privaatheidkontroleskerm wys net wanneer toegang tot apps gekry word deur Android-kenmerke vir agente te gebruik."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"Hierdie KI-assistent het toegang tot hierdie apps gekry om inligting te kry of handelinge vir jou uit te voer. Jy kan hierdie toegang enige tyd in <xliff:g id="APP_NAME">%1$s</xliff:g>-instellings verander."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Privaatheidkontroleskerm wys net as toegang tot apps gekry word met Android-kenmerke vir KI-assistente."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Toestelhulp"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Bekyk watter programme onlangs toestemmings gebruik het"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>-gebruik"</string>

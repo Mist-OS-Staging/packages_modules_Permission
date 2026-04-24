@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"ಅಪರಿಚಿತ"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"ಗೌಪ್ಯತೆ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"ಆ್ಯಪ್ ಅನುಮತಿಗಳು"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"ಏಜೆಂಟ್ ಚಟುವಟಿಕೆ"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"ಯಾವುದೇ ಏಜೆಂಟ್‌ಗಳನ್ನು ಇನ್‌ಸ್ಟಾಲ್‌ ಮಾಡಲಾಗಿಲ್ಲ"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"AI ಅಸಿಸ್ಟೆಂಟ್ ಚಟುವಟಿಕೆ"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"ಯಾವುದೇ AI ಅಸಿಸ್ಟೆಂಟ್ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿಲ್ಲ"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"ಕಳೆದ 24 ಗಂಟೆಗಳಲ್ಲಿ ಯಾವುದೇ ಆ್ಯಕ್ಸೆಸ್‌ಗಳಿಲ್ಲ"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"ಕಳೆದ 7 ದಿನಗಳಲ್ಲಿ ಯಾವುದೇ ಆ್ಯಕ್ಸೆಸ್‌ಗಳಿಲ್ಲ"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> ಚಟುವಟಿಕೆ"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"ಕೊನೆಯ ಆ್ಯಕ್ಸೆಸ್‌ <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"ವೀಕ್ಷಿಸಿ"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"ಯಾವುದೇ ಆ್ಯಕ್ಸೆಸ್‌ಗಳಿಲ್ಲ"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"ನಿಮಗಾಗಿ ಮಾಹಿತಿ ಪಡೆಯಲು ಅಥವಾ ಕ್ರಮ ತೆಗೆದುಕೊಳ್ಳಲು ಈ ಏಜೆಂಟ್ ಈ ಆ್ಯಪ್‌ಗಳನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಿದ್ದಾರೆ. ನೀವು ಯಾವುದೇ ಸಮಯದಲ್ಲಿಯೂ <xliff:g id="APP_NAME">%1$s</xliff:g> ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಆ್ಯಕ್ಸೆಸ್ ಅನ್ನು ಬದಲಿಸಬಹುದು."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"ಏಜೆಂಟ್‌ಗಳಿಗಾಗಿ Android ಫೀಚರ್‌ಗಳನ್ನು ಬಳಸಿ ಆ್ಯಪ್‌ಗಳನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಿದಾಗ ಮಾತ್ರ ಗೌಪ್ಯತೆ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ತೋರಿಸುತ್ತದೆ."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"ನಿಮ್ಮ ಪರವಾಗಿ ಮಾಹಿತಿ ಪಡೆಯಲು ಅಥವಾ ಕ್ರಮ ತೆಗೆದುಕೊಳ್ಳಲು ಈ AI ಅಸಿಸ್ಟೆಂಟ್ ಈ ಆ್ಯಪ್‌ಗಳನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಿದೆ. ನೀವು ಈ ಆ್ಯಕ್ಸೆಸ್ ಅನ್ನು <xliff:g id="APP_NAME">%1$s</xliff:g> ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಬದಲಾಯಿಸಬಹುದು."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"AI ಅಸಿಸ್ಟೆಂಟ್‌ಗೆ ಸಂಬಂಧಿಸಿದ Android ಫೀಚರ್ ಬಳಸಿ ಆ್ಯಪ್‌ಗಳನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಿದಾಗ ಮಾತ್ರ ಗೌಪ್ಯತೆ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ಕಾಣಿಸುತ್ತದೆ."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"ಸಾಧನ ಸಹಾಯ"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ಯಾವ ಆ್ಯಪ್‌ಗಳು ಇತ್ತೀಚೆಗೆ ಅನುಮತಿಗಳನ್ನು ಬಳಸಿವೆ ಎಂದು ವೀಕ್ಷಿಸಿ"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> ಬಳಕೆ"</string>

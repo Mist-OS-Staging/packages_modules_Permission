@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"未知"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"隐私信息中心"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"应用权限"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"智能体活动"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"未安装代理"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"AI 助理活动记录"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"未安装任何 AI 助理"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"过去 24 小时内无访问记录"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"过去 7 天内无访问记录"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"“<xliff:g id="APP_NAME">%1$s</xliff:g>”活动"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"上次访问时间：<xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"查看"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"无访问记录"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"此智能体访问了这些应用，以便获取信息或替您执行操作。您可随时前往“<xliff:g id="APP_NAME">%1$s</xliff:g>”设置更改访问权限。"</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"只有在使用 Android 智能体功能访问应用时，隐私信息中心才会显示。"</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"此 AI 助理访问了这些应用，以便获取信息或替您执行操作。您可随时前往“<xliff:g id="APP_NAME">%1$s</xliff:g>”设置更改此访问权限。"</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"只有在使用 Android AI 助理功能访问应用时，隐私信息中心才会显示。"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"设备协助"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"查看最近使用过权限的应用"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>使用情况"</string>

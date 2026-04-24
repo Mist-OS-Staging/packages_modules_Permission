@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Óþekkt"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Persónuverndarstjórnborð"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Heimildir forrits"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Virkni fulltrúa"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Engir fulltrúar uppsettir"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"Virkni gervigreindarhjálpara"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Engir gervigreindarhjálparar uppsettir"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Enginn aðgangur síðasta sólarhringinn"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Enginn aðgangur síðustu sjö daga"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> virkni"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Síðast notað <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Skoða"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Enginn aðgangur"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Þessi fulltrúi fékk aðgang að þessum forritum til að sjá upplýsingar eða framkvæma aðgerðir fyrir þína hönd. Þú getur breytt þessum aðgangi hvenær sem er í stillingum <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Persónuverndarstjórnborðið birtist aðeins þegar forrit eru opnuð með því að nota Android-eiginleika fyrir fulltrúa."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"Þessi gervigreindarhjálpari fékk aðgang að þessum forritum til að sjá upplýsingar eða framkvæma aðgerðir fyrir þína hönd. Þú getur breytt þessum aðgangi hvenær sem er í stillingum <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Persónuverndarstjórnborðið birtist aðeins þegar forrit eru opnuð með því að nota Android-eiginleika fyrir gervigreindarhjálpara."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Tækjaaðstoð"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Skoða hvaða forrit notuðu heimildir nýlega"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g>: notkun"</string>

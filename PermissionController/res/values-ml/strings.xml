@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"അജ്ഞാതം"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"സ്വകാര്യതാ ഡാഷ്ബോർഡ്"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"ആപ്പ് അനുമതികൾ"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"ഏജന്റ് ആക്റ്റിവിറ്റി"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"ഏജന്റ് ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"AI അസിസ്‌റ്റന്റ് ആക്റ്റിവിറ്റി"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"AI അസിസ്‌റ്റന്റുകളൊന്നും ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"കഴിഞ്ഞ 24 മണിക്കൂറിൽ ആക്സസ് ഒന്നുമില്ല"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"കഴിഞ്ഞ 7 ദിവസത്തിൽ ആക്സസ് ഇല്ല"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> ആക്റ്റിവിറ്റി"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"അവസാനം ആക്‌‌സസ് ചെയ്‌തത്: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"കാണുക"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"ആക്‌സസുകൾ ഒന്നുമില്ല"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"നിങ്ങൾക്കായി വിവരങ്ങൾ നേടാനോ പ്രവർത്തനങ്ങൾ നടത്താനോ ഈ ഏജന്റ് ഈ ആപ്പുകൾ ആക്‌സസ് ചെയ്‌തു. നിങ്ങൾക്കിത് <xliff:g id="APP_NAME">%1$s</xliff:g> ക്രമീകരണത്തിൽ ഏതുസമയത്തും മാറ്റാം."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"ഏജന്റുമാർക്കായി Android ഫീച്ചറുകൾ ഉപയോഗിച്ച് ആപ്പുകൾ ആക്‌സസ് ചെയ്യുമ്പോൾ മാത്രമേ സ്വകാര്യതാ ഡാഷ്‌ബോർഡ് കാണിക്കൂ."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"വിവരങ്ങൾ നേടാനോ നിങ്ങൾക്കായി പ്രവർത്തനങ്ങൾ നടത്താനോ ഈ AI അസിസ്‌റ്റന്റ് ഈ ആപ്പുകൾ ആക്‌സസ് ചെയ്‌തു. നിങ്ങൾക്കിത് <xliff:g id="APP_NAME">%1$s</xliff:g> ക്രമീകരണത്തിൽ ഏതുസമയത്തും മാറ്റാം."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"AI അസിസ്റ്റന്റുകൾക്കുള്ള Android ഫീച്ചറുകൾ ഉപയോഗിച്ച് ആപ്പുകൾ ആക്‌സസ് ചെയ്യുമ്പോൾ മാത്രമേ സ്വകാര്യതാ ഡാഷ്‌ബോർഡ് കാണിക്കൂ."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"ഉപകരണ സഹായം"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"ഏതെല്ലാം ആപ്പുകൾ അടുത്തിടെ അനുമതികൾ ഉപയോഗിച്ചുവെന്ന് കാണുക"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> ഉപയോഗം"</string>

@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"Непознатo"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"Контролна табла за приватност"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"Дозволи за апликацијата"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"Активност на агентот"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"Не се инсталирани агенти"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"Активност на AI-помошникот"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"Не се инсталирани AI-помошници"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"Нема пристапи минатите 24 ч."</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"Нема пристапи минатите 7 д."</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"Активност во <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"Последен пристап: <xliff:g id="TIME_DATE">%1$s</xliff:g>"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"Прегледајте"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"Нема пристапи"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"Агентов пристапил до апликацииве за да добие податоци или да преземе дејства во ваше име. Ова може да го промените во секое време во поставките на <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"Контролната табла за приватност се прикажува само кога до апликацијата се пристапува со функциите на Android за агенти."</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"AI-помошников пристапил до апликацииве за да добие податоци или да преземе дејства во ваше име. Ова може да го промените во секое време во поставките за <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"Контролната табла за приватност се прикажува само кога до апликациите се пристапува со функциите на Android за AI-помошници."</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"Помош со уредот"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"да прегледува кои апликации користеле дозволи неодамна"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Користење <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>

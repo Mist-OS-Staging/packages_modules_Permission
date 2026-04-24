@@ -127,8 +127,8 @@
     <string name="app_name_unknown" msgid="1319665005754048952">"ଅଜଣା"</string>
     <string name="permission_usage_title" msgid="1568233336351734538">"ଗୋପନୀୟତା ଡେସବୋର୍ଡ"</string>
     <string name="permission_usage_app_permissions_title" msgid="7238764049615371525">"ଆପ ଅନୁମତି"</string>
-    <string name="permission_usage_agent_activity_title" msgid="8169150514365050522">"ଏଜେଣ୍ଟ କାର୍ଯ୍ୟକଳାପ"</string>
-    <string name="empty_agent_activity_preference_title" msgid="7682932823345395104">"କୌଣସି ଏଜେଣ୍ଟ ଇନଷ୍ଟଲ ହୋଇନାହିଁ"</string>
+    <string name="permission_usage_agent_activity_title" msgid="1638779122738460526">"AI ଆସିଷ୍ଟାଣ୍ଟର କାର୍ଯ୍ୟକଳାପ"</string>
+    <string name="empty_agent_activity_preference_title" msgid="8561407829155181686">"କୌଣସି AI ଆସିଷ୍ଟାଣ୍ଟ ଇନଷ୍ଟଲ କରାଯାଇନାହିଁ"</string>
     <string name="agent_activity_preference_summary_no_accesses_24h" msgid="7194072619746100487">"ଗତ 24 ଘଣ୍ଟାରେ କୌଣସି ଆକ୍ସେସ ନାହିଁ"</string>
     <string name="agent_activity_preference_summary_no_accesses_7d" msgid="8023811607582607766">"ଗତ 7 ଦିନରେ କୌଣସି ଆକ୍ସେସ ନାହିଁ"</string>
     <string name="agent_activity_timeline_title" msgid="5946267721775302726">"<xliff:g id="APP_NAME">%1$s</xliff:g> କାର୍ଯ୍ୟକଳାପ"</string>
@@ -139,8 +139,8 @@
     <string name="agent_activity_timeline_activity_summary" msgid="8865161887228114724">"ଗତଥର <xliff:g id="TIME_DATE">%1$s</xliff:g>ରେ ଆକ୍ସେସ କରାଯାଇଛି"</string>
     <string name="agent_activity_timeline_preference_widget" msgid="8771365108648764365">"ଭ୍ୟୁ କରନ୍ତୁ"</string>
     <string name="empty_agent_activity_timeline_preference_title" msgid="7099292969424621771">"କୌଣସି ଆକ୍ସେସ ନାହିଁ"</string>
-    <string name="agent_activity_timeline_top_intro_title" msgid="3996188348469089545">"ଆପଣଙ୍କ ପାଇଁ ସୂଚନା ପାଇବା ବା ପଦକ୍ଷେପ ନେବାକୁ ଏହି ଏଜେଣ୍ଟ ଏହି ଆପ୍ସକୁ ଆକ୍ସେସ କରିଛନ୍ତି। ଆପଣ ଯେ କୌଣସି ସମୟରେ <xliff:g id="APP_NAME">%1$s</xliff:g> ସେଟିଂସରେ ଏହାକୁ ପରିବର୍ତ୍ତନ କରିପାରିବେ।"</string>
-    <string name="agent_activity_timeline_footer_title" msgid="6959375013990594999">"ଏଜେଣ୍ଟଙ୍କ ପାଇଁ Android ଫିଚର ବ୍ୟବହାର କରି ଆପ୍ସକୁ ଆକ୍ସେସ କରାଗଲେ କେବଳ ଗୋପନୀୟତା ଡେସବୋର୍ଡ ଦେଖାଯାଏ।"</string>
+    <string name="agent_activity_timeline_top_intro_title" msgid="7546537264364923134">"ଆପଣଙ୍କ ପାଇଁ ସୂଚନା ପାଇବା ବା ପଦକ୍ଷେପ ନେବାକୁ ଏହି AI ଆସିଷ୍ଟାଣ୍ଟ ଏହି ଆପ୍ସକୁ ଆକ୍ସେସ କରିଛି। ଆପଣ ଯେ କୌଣସି ସମୟରେ <xliff:g id="APP_NAME">%1$s</xliff:g> ସେଟିଂସରେ ଏହାକୁ ପରିବର୍ତ୍ତନ କରିପାରିବେ।"</string>
+    <string name="agent_activity_timeline_footer_title" msgid="3409102224958679323">"AI ଆସିଷ୍ଟାଣ୍ଟଙ୍କ ପାଇଁ Android ଫିଚର ବ୍ୟବହାର କରି ଆପ୍ସକୁ ଆକ୍ସେସ କରାଗଲେ କେବଳ ଗୋପନୀୟତା ଡେସବୋର୍ଡ ଦେଖାଯାଏ।"</string>
     <string name="device_assistance_title" msgid="1445976710214822208">"ଡିଭାଇସ ସହାୟତା"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"କେଉଁ ଆପଗୁଡ଼ିକ ଏବେ ଅନୁମତିଗୁଡ଼ିକ ବ୍ୟବହାର କରିଛି ତାହା ଦେଖନ୍ତୁ"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"<xliff:g id="PERMGROUP">%1$s</xliff:g> ବ୍ୟବହାର"</string>
