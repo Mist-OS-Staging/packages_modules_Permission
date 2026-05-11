@@ -1783,7 +1783,7 @@ object KotlinUtils {
     ): Int {
         val dpm = app.getSystemService(DevicePolicyManager::class.java)!!
         val permissionPolicy = dpm.getPermissionPolicy(null)
-        when (permissionPolicy) {
+        return when (permissionPolicy) {
             DevicePolicyManager.PERMISSION_POLICY_AUTO_GRANT -> {
                 if (
                     AdminRestrictedPermissionsUtils.mayAdminGrantPermission(
@@ -1813,6 +1813,9 @@ object KotlinUtils {
                         FLAG_PERMISSION_USER_FIXED to false,
                         filterPermissions = listOf(permission),
                     )
+                    DevicePolicyManager.PERMISSION_POLICY_AUTO_GRANT
+                } else {
+                    DevicePolicyManager.PERMISSION_POLICY_PROMPT
                 }
             }
 
@@ -1827,9 +1830,11 @@ object KotlinUtils {
                         filterPermissions = listOf(permission),
                     )
                 }
+                DevicePolicyManager.PERMISSION_POLICY_AUTO_DENY
             }
+
+            else -> permissionPolicy
         }
-        return permissionPolicy
     }
 }
 
